@@ -82,6 +82,18 @@ cc.Class({
         mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_south");
         mahjongSprites.push("wind_north");
+        
+        //春夏秋冬
+        mahjongSprites.push("spring");
+        mahjongSprites.push("summer");
+        mahjongSprites.push("autumn");
+        mahjongSprites.push("winter");
+         
+        //梅兰竹菊 
+        mahjongSprites.push("plum");
+        mahjongSprites.push("orchid");
+        mahjongSprites.push("bamboo");
+        mahjongSprites.push("chrysanthemum");
     },
     
     getMahjongSpriteByID:function(id){

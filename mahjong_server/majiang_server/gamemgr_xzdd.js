@@ -85,6 +85,21 @@ function shuffle(game) {
         }
     }
 
+    //东南西北中发白
+    for(var i = 27; i < 34; ++i){
+        for(var c = 0; c < 4; ++c){
+            mahjongs[index] = i;
+            index++;
+        }
+    }
+
+    //春夏秋冬梅兰竹菊
+    for(var i = 34; i < 42; ++i){
+        mahjongs[index] = i;
+        index++;
+    }
+
+
     for(var i = 0; i < mahjongs.length; ++i){
         var lastIndex = mahjongs.length - 1 - i;
         var index = Math.floor(Math.random() * lastIndex);
@@ -1465,70 +1480,6 @@ exports.huanSanZhang = function(userId,p1,p2,p3){
     }
 };
 
-exports.dingQue = function(userId,type){
-    var seatData = gameSeatsOfUsers[userId];
-    if(seatData == null){
-        console.log("can't find user game data.");
-        return;
-    }
-
-    var game = seatData.game;
-    if(game.state != "dingque"){
-        console.log("can't recv dingQue when game.state == " + game.state);
-        return;
-    }
-
-    if(seatData.que < 0){
-        game.numOfQue++;    
-    }
-
-    seatData.que = type;
-    
-
-    //检查玩家可以做的动作
-    //如果4个人都定缺了，通知庄家出牌
-    if(game.numOfQue == 4){
-        construct_game_base_info(game);
-        var arr = [1,1,1,1];
-        for(var i = 0; i < game.gameSeats.length; ++i){
-            arr[i] = game.gameSeats[i].que;
-        }
-        userMgr.broacastInRoom('game_dingque_finish_push',arr,seatData.userId,true);
-        userMgr.broacastInRoom('game_playing_push',null,seatData.userId,true);
-
-        //进行听牌检查
-        for(var i = 0; i < game.gameSeats.length; ++i){
-            var duoyu = -1;
-            var gs = game.gameSeats[i];
-            if(gs.holds.length == 14){
-                duoyu = gs.holds.pop();
-                gs.countMap[duoyu] -= 1;
-            }
-            checkCanTingPai(game,gs);
-            if(duoyu >= 0){
-                gs.holds.push(duoyu);
-                gs.countMap[duoyu] ++;
-            }
-        }
-        
-        var turnSeat = game.gameSeats[game.turn];
-        game.state = "playing";
-        //通知玩家出牌方
-        turnSeat.canChuPai = true;
-        userMgr.broacastInRoom('game_chupai_push',turnSeat.userId,turnSeat.userId,true);
-        //检查是否可以暗杠或者胡
-        //直杠
-        checkCanAnGang(game,turnSeat);
-        //检查胡 用最后一张来检查
-        checkCanHu(game,turnSeat,turnSeat.holds[turnSeat.holds.length - 1]);
-        //通知前端
-        sendOperations(game,turnSeat,game.chuPai);
-    }
-    else{
-        userMgr.broacastInRoom('game_dingque_notify_push',seatData.userId,seatData.userId,true);
-    }
-};
-
 exports.chuPai = function(userId,pai){
 
     pai = Number.parseInt(pai);
@@ -2085,18 +2036,18 @@ exports.hu = function(userId){
     }
 
     //如果只有一家没有胡，则结束
-    var numOfHued = 0;
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        var ddd = game.gameSeats[i];
-        if(ddd.hued){
-            numOfHued ++;
-        }
-    }
-    //和了三家
-    if(numOfHued == 3){
+    // var numOfHued = 0;
+    // for(var i = 0; i < game.gameSeats.length; ++i){
+    //     var ddd = game.gameSeats[i];
+    //     if(ddd.hued){
+    //         numOfHued ++;
+    //     }
+    // }
+    // //和了三家
+    // if(numOfHued == 3){
         doGameOver(game,seatData.userId);
         return;
-    }
+    //}
 
     //清空所有非胡牌操作
     for(var i = 0; i < game.gameSeats.length; ++i){
