@@ -1297,6 +1297,41 @@ exports.begin = function(roomId) {
         //通知游戏开始
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
     }
+
+    ////
+    var seatData = gameSeatsOfUsers[seats[1].userId];
+    console.log(seatData);
+    construct_game_base_info(game);
+    userMgr.broacastInRoom('game_playing_push',null,seatData.userId,true);
+
+    //进行听牌检查
+    for(var i = 0; i < game.gameSeats.length; ++i){
+        var duoyu = -1;
+        var gs = game.gameSeats[i];
+        if(gs.holds.length == 14){
+            duoyu = gs.holds.pop();
+            gs.countMap[duoyu] -= 1;
+        }
+        checkCanTingPai(game,gs);
+        if(duoyu >= 0){
+            gs.holds.push(duoyu);
+            gs.countMap[duoyu] ++;
+        }
+    }
+    
+    var turnSeat = game.gameSeats[game.turn];
+    game.state = "playing";
+    //通知玩家出牌方
+    turnSeat.canChuPai = true;
+    console.log(trunSeat);
+    userMgr.broacastInRoom('game_chupai_push',turnSeat.userId,turnSeat.userId,true);
+    //检查是否可以暗杠或者胡
+    //直杠
+    checkCanAnGang(game,turnSeat);
+    //检查胡 用最后一张来检查
+    checkCanHu(game,turnSeat,turnSeat.holds[turnSeat.holds.length - 1]);
+    //通知前端
+    sendOperations(game,turnSeat,game.chuPai);
 };
 
 exports.huanSanZhang = function(userId,p1,p2,p3){
