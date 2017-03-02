@@ -333,11 +333,6 @@ cc.Class({
            }
         });
         
-        cc.vv.net.addHandler("game_dingque_push",function(data){
-            self.isDingQueing = true;
-            self.isHuanSanZhang = false;
-            self.dispatchEvent('game_dingque');
-        });
         
         cc.vv.net.addHandler("game_huanpai_push",function(data){
             self.isHuanSanZhang = true;

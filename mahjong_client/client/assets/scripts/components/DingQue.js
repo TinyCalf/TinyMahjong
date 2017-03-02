@@ -54,9 +54,6 @@ cc.Class({
     
     initEventHandlers:function(){
         var self = this;
-        this.node.on('game_dingque',function(data){
-            self.showDingQueChoice();
-        });
         
         this.node.on('game_dingque_notify',function(data){
             var seatIndex = cc.vv.gameNetMgr.getSeatIndexByID(data.detail);

@@ -1296,17 +1296,6 @@ exports.begin = function(roomId) {
         userMgr.sendMsg(s.userId,'game_num_push',roomInfo.numOfGames);
         //通知游戏开始
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
-
-        if(huansanzhang == true){
-            game.state = "huanpai";
-            //通知准备换牌
-            userMgr.sendMsg(s.userId,'game_huanpai_push');
-        }
-        else{
-            game.state = "dingque";
-            //通知准备定缺
-            userMgr.sendMsg(s.userId,'game_dingque_push');
-        }
     }
 };
 
