@@ -34,7 +34,7 @@ function shuffle(game) {
     
     var mahjongs = game.mahjongs;
 
-	/*
+    /*
     var idx = 0;
     for(var i = 0; i < 12; ++i){
         game.mahjongs[idx++] = 0;
@@ -153,13 +153,52 @@ function deal(game){
 
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
-    if(getMJType(targetPai) == seatData.que){
-        return;
-    }
     var count = seatData.countMap[targetPai];
     if(count != null && count >= 2){
         seatData.canPeng = true;
     }
+}
+
+//检查是否可以吃
+function checkCanChi(game,seatData,targetPai) {
+    console.log("检测是否可以吃");
+    //当前出牌位置
+    var turn = game.turn;
+    console.log("当前出牌位置为="+turn);
+    //被检测位置
+    var seat_index_now = seatData.seatIndex;
+    //检测是否是下家（只有下家可以吃）
+    if(turn == 3 && seat_index_now != 0) return;
+    if(turn != 3 && seat_index_now != turn+1) return;
+
+    var holds = seatData.holds;
+    //判断某牌是否在手牌中的函数
+    var ifHas = function(holds,pai,type){
+        for(var i=0; i<holds.length; i++){
+            if(type==0){
+                if(pai==holds[i] && pai>=0 && pai<9 ) return true;
+            }else if(type==1){
+                if(pai==holds[i] && pai>=9 && pai<18 ) return true;
+            }else if(type==2){
+                if(pai==holds[i] && pai>=18 && pai<27 ) return true;
+            }
+        }
+        return false;  
+    }
+    //判断出牌的类型 同 万 条
+    var type = getMJType(targetPai);
+    //判断是否可以吃
+    var aax = ifHas(holds,targetPai-2,type);
+    var ax = ifHas(holds,targetPai-1,type);
+    var xa = ifHas(holds,targetPai+1,type);
+    var xaa = ifHas(holds,targetPai+2,type);
+    console.log("the chupai is "+targetPai);
+    console.log("this holds are ");
+    console.log(holds);
+    if(aax && ax) {seatData.canChi = true;console.log("can chi");return;}
+    if(ax && xa) {seatData.canChi = true;console.log("can chi");return;}
+    if(xa && xaa) {seatData.canChi = true;console.log("can chi");return;}
+    return;
 }
 
 //检查是否可以点杠
@@ -1199,7 +1238,7 @@ exports.begin = function(roomId) {
         gameIndex:roomInfo.numOfGames,
 
         button:roomInfo.nextButton,
-        mahjongs:new Array(108),
+        mahjongs:new Array(144),
         currentIndex:0,
         gameSeats:new Array(4),
 
@@ -1226,7 +1265,7 @@ exports.begin = function(roomId) {
 
         data.userId = seats[i].userId;
         //持有的牌
-        data.holds = [];
+        data.holds= [];
         //打出的牌
         data.folds = [];
         //暗杠的牌
@@ -1236,7 +1275,11 @@ exports.begin = function(roomId) {
         //弯杠的牌
         data.wangangs = [];
         //碰了的牌
-        data.pengs = [];
+        data.pengs  = [];
+        //吃了的牌
+        data.chis   =   [];
+        //拿到的花
+        data.huas = [];
         //缺一门
         data.que = -1;
 
@@ -1258,6 +1301,9 @@ exports.begin = function(roomId) {
         data.canPeng = false;
         //是否可以胡
         data.canHu = false;
+
+        //是否可以吃
+        data.canChi = false;
         //是否可以出牌
         data.canChuPai = false;
 
@@ -1560,6 +1606,7 @@ exports.chuPai = function(userId,pai){
         }
         checkCanPeng(game,ddd,pai);
         checkCanDianGang(game,ddd,pai);
+        checkCanChi(game,ddd,pai);
         if(hasOperations(ddd)){
             sendOperations(game,ddd,game.chuPai);
             hasActions = true;    
