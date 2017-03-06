@@ -43,6 +43,7 @@ cc.Class({
             this.seats[i].holds = [];
             this.seats[i].folds = [];
             this.seats[i].pengs = [];
+            this.seats[i].chis = [];
             this.seats[i].angangs = [];
             this.seats[i].diangangs = [];
             this.seats[i].wangangs = [];
@@ -110,6 +111,7 @@ cc.Class({
             s.score = null;
             s.holds = baseInfo.game_seats[i];
             s.pengs = [];
+            s.chis = [];
             s.angangs = [];
             s.diangangs = [];
             s.wangangs = [];
@@ -275,6 +277,9 @@ cc.Class({
                 if(s.diangangs == null){
                     s.diangangs = [];
                 }
+                if(s.chis == null){
+                    s.chis = [];
+                }
                 if(s.wangangs == null){
                     s.wangangs = [];
                 }
@@ -322,6 +327,7 @@ cc.Class({
                 seat.diangangs = sd.diangangs;
                 seat.wangangs = sd.wangangs;
                 seat.pengs = sd.pengs;
+                seat.chis = sd.chis;
                 seat.dingque = sd.que;
                 seat.hued = sd.hued; 
                 seat.iszimo = sd.iszimo;
@@ -465,6 +471,16 @@ cc.Class({
             self.doGang(si,pai,data.gangtype);
         });
         
+        cc.vv.net.addHandler("chi_notify_push",function(data){
+            console.log('chi_notify_push');
+            console.log(data);
+            var userId = data.userid;
+            var pai = data.pai;
+            var chigroup = data.chigroup;
+            var si = self.getSeatIndexByID(userId);
+            self.doChi(si,data.pai,chigroup);
+        });
+        
         cc.vv.net.addHandler("game_dingque_notify_push",function(data){
             self.dispatchEvent('game_dingque_notify',data);
         });
@@ -546,6 +562,25 @@ cc.Class({
         pengs.push(pai);
             
         this.dispatchEvent('peng_notify',seatData);
+    },
+    
+    doChi:function(seatIndex,pai,chigroup){
+        console.log("dochi");
+        var seatData = this.seats[seatIndex];
+        //移除手牌
+        if(seatData.holds){
+            for(var i = 0; i < 3; ++i){
+                if(pai == chigroup[i]) continue;
+                var idx = seatData.holds.indexOf(chigroup[i]);
+                seatData.holds.splice(idx,1);
+            }                
+        }
+            
+        //更新吃牌数据
+        var chis = seatData.chis;
+        chis.push(chigroup);
+            
+        this.dispatchEvent('chi_notify',seatData);
     },
     
     getGangType:function(seatData,pai){

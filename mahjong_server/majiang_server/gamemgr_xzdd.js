@@ -10,6 +10,7 @@ var ACTION_CHUPAI = 1;
 var ACTION_MOPAI = 2;
 var ACTION_PENG = 3;
 var ACTION_GANG = 4;
+var ACTION_CHI =7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
 
@@ -195,9 +196,25 @@ function checkCanChi(game,seatData,targetPai) {
     console.log("the chupai is "+targetPai);
     console.log("this holds are ");
     console.log(holds);
-    if(aax && ax) {seatData.canChi = true;console.log("can chi");return;}
-    if(ax && xa) {seatData.canChi = true;console.log("can chi");return;}
-    if(xa && xaa) {seatData.canChi = true;console.log("can chi");return;}
+    var chitype= {
+        left     : false,    //XAA
+        mid      : false,    //AXA
+        right   : false     //AAX
+    };
+    if(aax && ax) {
+        seatData.canChi = true;
+        chitype.right = true;
+    }
+    if(ax && xa) {
+        seatData.canChi = true;
+        chitype.mid = true;
+    }
+    if(xa && xaa) {
+        seatData.canChi = true;
+        chitype.left = true;
+    }
+    seatData.chitype = chitype;
+
     return;
 }
 
@@ -272,6 +289,7 @@ function clearAllOptions(game,seatData){
     var fnClear = function(sd){
         sd.canPeng = false;
         sd.canGang = false;
+        sd.canChi = false;
         sd.gangPai = [];
         sd.canHu = false;
         sd.lastFangGangSeat = -1;    
@@ -411,13 +429,15 @@ function getGameByUserID(userId){
 }
 
 function hasOperations(seatData){
-    if(seatData.canGang || seatData.canPeng || seatData.canHu){
+    if(seatData.canGang || seatData.canPeng || seatData.canHu || seatData.canChi){
         return true;
     }
     return false;
 }
 
 function sendOperations(game,seatData,pai) {
+    console.log("sendOperations");
+    console.log(hasOperations(seatData));
     if(hasOperations(seatData)){
         if(pai == -1){
             pai = seatData.holds[seatData.holds.length - 1];
@@ -428,11 +448,15 @@ function sendOperations(game,seatData,pai) {
             hu:seatData.canHu,
             peng:seatData.canPeng,
             gang:seatData.canGang,
-            gangpai:seatData.gangPai
+            gangpai:seatData.gangPai,
+            chi:seatData.canChi,
+            chitype:seatData.chitype
         };
 
         //如果可以有操作，则进行操作
         userMgr.sendMsg(seatData.userId,'game_action_push',data);
+        console.log("game_action_pushing"); 
+        console.log(data);
 
         data.si = seatData.seatIndex;
     }
@@ -1145,6 +1169,7 @@ exports.setReady = function(userId,callback){
                 userid:sd.userId,
                 folds:sd.folds,
                 angangs:sd.angangs,
+                chis:sd.chis,
                 diangangs:sd.diangangs,
                 wangangs:sd.wangangs,
                 pengs:sd.pengs,
@@ -1304,6 +1329,12 @@ exports.begin = function(roomId) {
 
         //是否可以吃
         data.canChi = false;
+        //吃牌类型
+        data.chitype = {
+            left : false,
+            mid : false,
+            right : false
+        };
         //是否可以出牌
         data.canChuPai = false;
 
@@ -1384,7 +1415,6 @@ exports.begin = function(roomId) {
     game.state = "playing";
     //通知玩家出牌方
     turnSeat.canChuPai = true;
-    console.log(trunSeat);
     userMgr.broacastInRoom('game_chupai_push',turnSeat.userId,turnSeat.userId,true);
     //检查是否可以暗杠或者胡
     //直杠
@@ -1554,6 +1584,7 @@ exports.chuPai = function(userId,pai){
     }
 
     if(hasOperations(seatData)){
+        console.log(seatData);
         console.log('plz guo before you chupai.');
         return;
     }
@@ -1607,6 +1638,7 @@ exports.chuPai = function(userId,pai){
         checkCanPeng(game,ddd,pai);
         checkCanDianGang(game,ddd,pai);
         checkCanChi(game,ddd,pai);
+        console.log("判断是否有动作"+pai);
         if(hasOperations(ddd)){
             sendOperations(game,ddd,game.chuPai);
             hasActions = true;    
@@ -1706,6 +1738,113 @@ exports.peng = function(userId){
     //广播通知玩家出牌方
     seatData.canChuPai = true;
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+};
+
+exports.chi = function(userId,data){
+    console.log(userId);
+    console.log(data);
+    var seatData = gameSeatsOfUsers[userId];
+    if(seatData == null){
+        console.log("can't find user game data.");
+        return;
+    }
+
+    var game = seatData.game;
+
+    //如果是他出的牌，则忽略
+    if(game.turn == seatData.seatIndex){
+        console.log("it's your turn.");
+        return;
+    }
+
+    //如果没有碰的机会，则不能再吃
+    if(seatData.canChi == false){
+        console.log("seatData.chi == false");
+        return;
+    }
+    //和的了，就不要再来了
+    if(seatData.hued){
+        console.log('you have already hued. no kidding plz.');
+        return;
+    }
+    //如果有人可以胡牌，碰或杠，则需要等待
+    var i = game.turn;
+    while(true){
+        var i = (i + 1)%4;
+        if(i == game.turn){
+            break;
+        }
+        else{
+            var ddd = game.gameSeats[i];
+            if(ddd.canPeng && i != seatData.seatIndex){
+                return;    
+            }
+            if(ddd.canGang && i != seatData.seatIndex){
+                return;    
+            }
+            if(ddd.canHu && i != seatData.seatIndex){
+                return;    
+            }
+        }
+    }
+
+    
+
+    clearAllOptions(game);
+
+    //验证手上的牌的数目
+    var pai = game.chuPai;
+    //吃牌数组
+    var chigroup = new Array(2);
+    if(data == "left"){
+        chigroup[0] = pai+1;
+        chigroup[1] = pai+2;
+    }else if(data == "mid"){
+        chigroup[0] = pai-1;
+        chigroup[1] = pai+1;
+    }else if(data == "right"){
+        chigroup[0] = pai-2;
+        chigroup[1] = pai-1;
+    }
+    var holds = seatData.holds;
+    var ifHas = function(holds,pai){
+        for(var i=0; i<holds.length; i++){
+            if(holds[i] == pai) return true;
+        }
+        return false;  
+    }
+    if(!ifHas(holds,chigroup[0]) || !ifHas(holds,chigroup[1])){
+        return;
+    }
+    
+    
+    //进行吃牌处理
+    //扣掉手上的牌
+    //从此人牌中扣除
+    for(var i = 0; i < 2; ++i){
+        var index = seatData.holds.indexOf(chigroup[i]);
+        if(index == -1){
+            console.log("can't find mj.");
+            return;
+        }
+        seatData.holds.splice(index,1);
+    }
+    chigroup[2] = pai;
+    seatData.chis.push(chigroup);
+    game.chuPai = -1;
+
+
+
+    recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai);
+    //广播通知其它玩家
+    userMgr.broacastInRoom('chi_notify_push',{userid:seatData.userId,pai:pai,chigroup:chigroup},seatData.userId,true);
+    //吃的玩家打牌
+    moveToNextUser(game,seatData.seatIndex);   
+    //广播通知玩家出牌方
+    seatData.canChuPai = true;
+    userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+
+
 };
 
 exports.isPlaying = function(userId){

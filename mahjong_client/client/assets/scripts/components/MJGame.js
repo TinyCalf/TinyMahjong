@@ -164,6 +164,7 @@ cc.Class({
         
         this.node.on('game_action',function(data){
             self.showAction(data.detail);
+            console.log("game_action");
         });
         
         this.node.on('hupai',function(data){
@@ -274,6 +275,28 @@ cc.Class({
             self.hideChupai();
             
             var seatData = data.detail;
+            console.log('peng_notify');
+            console.log(data);
+            if(seatData.seatindex == cc.vv.gameNetMgr.seatIndex){
+                self.initMahjongs();                
+            }
+            else{
+                self.initOtherMahjongs(seatData);
+            }
+            var localIndex = self.getLocalIndex(seatData.seatindex);
+            self.playEfx(localIndex,"play_peng");
+            cc.vv.audioMgr.playSFX("nv/peng.mp3");
+            self.hideOptions();
+        });
+        
+        this.node.on('chi_notify',function(data){    
+            console.log('chi_notify');
+            console.log(data);
+            self.hideChupai();
+            
+            var seatData = data.detail;
+            
+            console.log(data);
             if(seatData.seatindex == cc.vv.gameNetMgr.seatIndex){
                 self.initMahjongs();                
             }
@@ -329,7 +352,44 @@ cc.Class({
         }
     },
     
-    addOption:function(btnName,pai){
+    addOption:function(btnName,pai,chitype){
+        console.log("弹出操作框");
+        console.log(btnName);
+        console.log(pai);
+        //添加吃牌的三种方式
+        //var str = pai.split("_");
+        //var painame = str[0];
+       //var painum = str[1];
+        if(chitype && chitype.left == true){
+            var op = this._options.getChildByName("chiop").getChildByName("left");
+            op.active = true;
+            var sprite = op.children[0].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai);
+            var sprite = op.children[1].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+1);
+            var sprite = op.children[2].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+2);
+        }else if(chitype && chitype.mid == true){
+            var op = this._options.getChildByName("chiop").getChildByName("mid");
+            op.active = true;
+            var sprite = op.children[0].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai-1);
+            var sprite = op.children[1].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai);
+            var sprite = op.children[2].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+1);
+        }
+        else if(chitype && chitype.right == true){
+            var op = this._options.getChildByName("chiop").getChildByName("right");
+            op.active = true;
+            var sprite = op.children[0].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai-2);
+            var sprite = op.children[1].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai-1);
+            var sprite = op.children[2].getComponent(cc.Sprite);
+            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai);
+        }
+        //其他
         for(var i = 0; i < this._options.childrenCount; ++i){
             var child = this._options.children[i]; 
             if(child.name == "op" && child.active == false){
@@ -348,21 +408,31 @@ cc.Class({
         this._options.active = false;
         for(var i = 0; i < this._options.childrenCount; ++i){
             var child = this._options.children[i]; 
-            if(child.name == "op"){
+            if(child.name == "op" ){
                 child.active = false;
                 child.getChildByName("btnPeng").active = false;
                 child.getChildByName("btnGang").active = false;
                 child.getChildByName("btnHu").active = false;
+                child.getChildByName("btnChi").active = false;
+            }
+            if(child.name == "chiop" ){
+                child.active = false;
+                child.getChildByName("left").active = false;
+                child.getChildByName("mid").active = false;
+                child.getChildByName("right").active = false;
             }
         }
     },
     
     showAction:function(data){
+        console.log("show action");
+        console.log(this._options.active);
         if(this._options.active){
             this.hideOptions();
         }
         
-        if(data && (data.hu || data.gang || data.peng)){
+        if(data && (data.hu || data.gang || data.peng || data.chi)){
+            console.log(data.chi);
             this._options.active = true;
             if(data.hu){
                 this.addOption("btnHu",data.pai);
@@ -376,8 +446,13 @@ cc.Class({
                     var gp = data.gangpai[i];
                     this.addOption("btnGang",gp);
                 }
-            }   
+            } 
+            
+            if(data.chi){
+                this.addOption("btnChi",data.pai,data.chitype);
+            }
         }
+        console.log(data.chi);
     },
     
     initWanfaLabel:function(){
@@ -597,7 +672,7 @@ cc.Class({
         var game = this.node.getChildByName("game");
         var sideRoot = game.getChildByName(side);
         var sideHolds = sideRoot.getChildByName("holds");
-        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length;
+        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length + seatData.chis.length;
         num *= 3;
         for(var i = 0; i < num; ++i){
             var idx = this.getMJIndex(side,i);
@@ -654,9 +729,9 @@ cc.Class({
         if(holds == null){
             return;
         }
-        
+        console.log(seats);
         //初始化手牌
-        var lackingNum = (seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length)*3;
+        var lackingNum = (seatData.chis.length + seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length)*3;
         for(var i = 0; i < holds.length; ++i){
             var mjid = holds[i];
             var sprite = this._myMJArr[i + lackingNum];
@@ -745,7 +820,7 @@ cc.Class({
     },
     
     onOptionClicked:function(event){
-        console.log(event.target.pai);
+        console.log(event.target.name);
         if(event.target.name == "btnPeng"){
             cc.vv.net.send("peng");
         }
@@ -754,6 +829,29 @@ cc.Class({
         }
         else if(event.target.name == "btnHu"){
             cc.vv.net.send("hu");
+        }
+        //打开吃菜单
+        else if(event.target.name == "btnChi"){
+            this._options.getChildByName("chiop").active = true;
+            
+            for(var i = 0; i < this._options.childrenCount; ++i){
+                var child = this._options.children[i]; 
+                if(child.name == "op" ){
+                    child.active = false;
+                }
+            }
+        }
+        //左吃
+        else if(event.target.name == "left"){
+            cc.vv.net.send("chi","left");
+        }
+        //中吃
+        else if(event.target.name == "mid"){
+            cc.vv.net.send("chi","mid");
+        }
+        //右吃
+        else if(event.target.name == "right"){
+            cc.vv.net.send("chi","right");
         }
         else if(event.target.name == "btnGuo"){
             cc.vv.net.send("guo");

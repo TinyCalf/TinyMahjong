@@ -42,6 +42,14 @@ cc.Class({
             self.onPengGangChanged(data.seatData);
         });
         
+        this.node.on('chi_notify',function(data){
+            //刷新所有的牌
+            console.log("penggang plat");
+            console.log(data.detail);
+            var data = data.detail;
+            self.onPengGangChanged(data.seatData);
+        });
+        
         this.node.on('game_begin',function(data){
             self.onGameBein();
         });
@@ -72,7 +80,7 @@ cc.Class({
     
     onPengGangChanged:function(seatData){
         
-        if(seatData.angangs == null && seatData.diangangs == null && seatData.wangangs == null && seatData.pengs == null){
+        if(seatData.angangs == null && seatData.diangangs == null && seatData.wangangs == null && seatData.pengs == null && seatData.chis == null){
             return;
         }
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(seatData.seatindex);
@@ -119,7 +127,19 @@ cc.Class({
                 this.initPengAndGangs(pengangroot,side,pre,index,mjid,"peng");
                 index++;    
             }    
-        }        
+        }  
+        
+        //初始化吃牌
+        console.log("初始化吃牌");
+        console.log(seatData);
+        var chis = seatData.chis;
+        if(chis){
+            for(var i = 0; i < chis.length; ++i){
+                var mjid = chis[i];
+                this.initPengAndGangs(pengangroot,side,pre,index,mjid,"chi");
+                index++;    
+            }    
+        }  
     },
     
     initPengAndGangs:function(pengangroot,side,pre,index,mjid,flag){
@@ -154,6 +174,7 @@ cc.Class({
         }
 
         var sprites = pgroot.getComponentsInChildren(cc.Sprite);
+        console.log(sprites);
         for(var s = 0; s < sprites.length; ++s){
             var sprite = sprites[s];
             if(sprite.node.name == "gang"){

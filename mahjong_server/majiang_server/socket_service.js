@@ -195,6 +195,18 @@ exports.start = function(config,mgr){
 			}
 			socket.gameMgr.gang(socket.userId,pai);
 		});
+
+		//吃
+		socket.on('chi',function(data){
+			if(socket.userId == null || data == null){
+				return;
+			}
+			if(typeof(data) != "string"){
+				console.log("chi:invalid param");
+				return;
+			}
+			socket.gameMgr.chi(socket.userId,data);
+		});
 		
 		//胡
 		socket.on('hu',function(data){
