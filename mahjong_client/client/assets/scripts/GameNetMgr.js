@@ -567,6 +567,7 @@ cc.Class({
     doChi:function(seatIndex,pai,chigroup){
         console.log("dochi");
         var seatData = this.seats[seatIndex];
+        console.log(seatData);
         //移除手牌
         if(seatData.holds){
             for(var i = 0; i < 3; ++i){

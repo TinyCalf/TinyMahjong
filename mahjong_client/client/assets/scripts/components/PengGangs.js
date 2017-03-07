@@ -30,7 +30,8 @@ cc.Class({
         var self = this;
         this.node.on('peng_notify',function(data){
             //刷新所有的牌
-            //console.log(data.detail);
+            console.log("penggang plat");
+            console.log(data.detail);
             var data = data.detail;
             self.onPengGangChanged(data);
         });
@@ -47,7 +48,7 @@ cc.Class({
             console.log("penggang plat");
             console.log(data.detail);
             var data = data.detail;
-            self.onPengGangChanged(data.seatData);
+            self.onPengGangChanged(data);
         });
         
         this.node.on('game_begin',function(data){
@@ -86,7 +87,10 @@ cc.Class({
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(seatData.seatindex);
         var side = cc.vv.mahjongmgr.getSide(localIndex);
         var pre = cc.vv.mahjongmgr.getFoldPre(localIndex);
-       
+        
+        console.log("localIndex = " + localIndex);
+        console.log("side = " + side);
+        console.log("pre = " + pre);
         console.log("onPengGangChanged" + localIndex);
             
         var gameChild = this.node.getChildByName("game");
@@ -174,9 +178,22 @@ cc.Class({
         }
 
         var sprites = pgroot.getComponentsInChildren(cc.Sprite);
-        console.log(sprites);
+        // if(flag == "chi"){
+        //     console.log("排列吃！");
+        //     console.log(mjid);
+        //     for(var s = 0; s < 3; s++){
+        //         var sprite = sprites[s];
+        //         sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid[s]);
+        //     }
+        //     return;
+        // }
+        if(flag == "chi"){
+            mjid.sort();
+        }
         for(var s = 0; s < sprites.length; ++s){
             var sprite = sprites[s];
+            console.log("sprites");
+            console.log(sprites);
             if(sprite.node.name == "gang"){
                 var isGang = flag != "peng";
                 sprite.node.active = isGang;
@@ -193,10 +210,15 @@ cc.Class({
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid);    
                 }
             }
-            else{ 
-                sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid);
+            else { 
+                if ( flag == "peng") {
+                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid);
+                }else if (flag == "chi") {
+                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid[s]);
+                }
             }
         }
+        
     },
 
     // called every frame, uncomment this function to activate update callback
