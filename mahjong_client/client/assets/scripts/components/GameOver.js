@@ -266,7 +266,7 @@ cc.Class({
                 n.active = false;
             }
            
-            var lackingNum = (userData.pengs.length + numOfGangs)*3; 
+            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length)*3; 
             //显示相关的牌
             for(var k = 0; k < userData.holds.length; ++k){
                 var pai = userData.holds[k];
@@ -310,6 +310,16 @@ cc.Class({
                 for(var k = 0; k < pengs.length; ++k){
                     var mjid = pengs[k];
                     this.initPengAndGangs(seatView,index,mjid,"peng");
+                    index++;    
+                }    
+            }
+            
+            //初始化吃牌
+            var chis = userData.chis 
+            if(chis){
+                for(var k = 0; k < chis.length; ++k){
+                    var mjid = chis[k];
+                    this.initPengAndGangs(seatView,index,mjid,"chi");
                     index++;    
                 }    
             }
@@ -597,8 +607,14 @@ cc.Class({
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("B_",mjid);    
                 }
             }
-            else{ 
+            else{
+                if(flag=="peng")
                 sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("B_",mjid);
+                else if (flag=="chi"){
+                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("B_",mjid[s]);
+                }else{
+                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("B_",mjid);
+                }
             }
         }
         pgroot.x = index * 55 * 3 + index * 10;

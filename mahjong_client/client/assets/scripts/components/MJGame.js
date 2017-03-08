@@ -560,6 +560,8 @@ cc.Class({
     },
     
     onMJClicked:function(event){
+        console.log("event");
+        console.log(event);
         if(cc.vv.gameNetMgr.isHuanSanZhang){
             this.node.emit("mj_clicked",event.target);
             return;
@@ -588,6 +590,11 @@ cc.Class({
                 return;
             }
         }
+    },
+    
+    //如果摸到的牌是花，则会调用这个函数
+    chuhua:function(mjid){
+        console.log(chuhua);
     },
     
     //出牌

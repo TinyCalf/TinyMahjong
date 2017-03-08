@@ -117,6 +117,14 @@ function mopai(game,seatIndex) {
     var data = game.gameSeats[seatIndex];
     var mahjongs = data.holds;
     var pai = game.mahjongs[game.currentIndex];
+    //补花
+    while ( pai >= 34 && pai < 42) {
+        game.gameSeats[seatIndex].huas.push(pai);
+        //通知有人抓到花
+        userMgr.broacastInRoom('gethua_notify_push',{userid:data.userId,pai:pai},data.userId,true);
+        game.currentIndex ++;
+        pai = game.mahjongs[game.currentIndex];
+    }
     mahjongs.push(pai);
 
     //统计牌的数目 ，用于快速判定（空间换时间）
@@ -148,9 +156,11 @@ function deal(game){
 
     //庄家多摸最后一张
     mopai(game,game.button);
+
     //当前轮设置为庄家
     game.turn = game.button;
 }
+
 
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
@@ -978,7 +988,7 @@ function doGameOver(game,userId,forceEnd){
         //如果局数已够，则进行整体结算，并关闭房间
         if(isEnd){
             setTimeout(function(){
-                if(roomInfo.numOfGames > 1){
+                if (roomInfo.numOfGames > 1) {
                     store_history(roomInfo);    
                 }
                 
@@ -1010,6 +1020,8 @@ function doGameOver(game,userId,forceEnd){
             var userRT = {
                 userId:sd.userId,
                 pengs:sd.pengs,
+                chis:sd.chis,
+                huas:sd.huas,
                 actions:[],
                 wangangs:sd.wangangs,
                 diangangs:sd.diangangs,
@@ -1170,6 +1182,7 @@ exports.setReady = function(userId,callback){
                 folds:sd.folds,
                 angangs:sd.angangs,
                 chis:sd.chis,
+                huas:sd.huas,
                 diangangs:sd.diangangs,
                 wangangs:sd.wangangs,
                 pengs:sd.pengs,
@@ -1371,11 +1384,18 @@ exports.begin = function(roomId) {
     shuffle(game);
     //发牌
     deal(game);
+    console.log(game.gameSeats[0].huas);
+    console.log(game.gameSeats[1].huas);
+    console.log(game.gameSeats[2].huas);
+    console.log(game.gameSeats[3].huas);
 
     
 
     var numOfMJ = game.mahjongs.length - game.currentIndex;
     var huansanzhang = roomInfo.conf.hsz;
+
+    
+
 
     for(var i = 0; i < seats.length; ++i){
         //开局时，通知前端必要的数据
@@ -1390,7 +1410,9 @@ exports.begin = function(roomId) {
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
     }
 
-    ////
+
+
+    //
     var seatData = gameSeatsOfUsers[seats[1].userId];
     console.log(seatData);
     construct_game_base_info(game);
@@ -1822,13 +1844,17 @@ exports.chi = function(userId,data){
     //扣掉手上的牌
     //从此人牌中扣除
     for(var i = 0; i < 2; ++i){
+        console.log("删除手牌"+chigroup[i]);
         var index = seatData.holds.indexOf(chigroup[i]);
         if(index == -1){
             console.log("can't find mj.");
             return;
         }
         seatData.holds.splice(index,1);
+        seatData.countMap[pai] --;
     }
+    console.log("删除手牌后");
+    console.log(seatData.holds);
     chigroup[2] = pai;
     seatData.chis.push(chigroup);
     game.chuPai = -1;
@@ -2270,7 +2296,7 @@ exports.guo = function(userId){
     var game = seatData.game;
 
     //如果玩家没有对应的操作，则也认为是非法消息
-    if((seatData.canGang || seatData.canPeng || seatData.canHu) == false){
+    if((seatData.canGang || seatData.canPeng || seatData.canHu || seatData.canChi) == false){
         console.log("no need guo.");
         return;
     }

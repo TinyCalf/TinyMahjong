@@ -44,6 +44,7 @@ cc.Class({
             this.seats[i].folds = [];
             this.seats[i].pengs = [];
             this.seats[i].chis = [];
+            this.seats[i].huas = [];
             this.seats[i].angangs = [];
             this.seats[i].diangangs = [];
             this.seats[i].wangangs = [];
@@ -112,6 +113,7 @@ cc.Class({
             s.holds = baseInfo.game_seats[i];
             s.pengs = [];
             s.chis = [];
+            s.huas = [];
             s.angangs = [];
             s.diangangs = [];
             s.wangangs = [];
@@ -280,6 +282,9 @@ cc.Class({
                 if(s.chis == null){
                     s.chis = [];
                 }
+                if(s.huas == null){
+                    s.huas = [];
+                }
                 if(s.wangangs == null){
                     s.wangangs = [];
                 }
@@ -287,6 +292,7 @@ cc.Class({
             }
             self.dispatchEvent('game_holds');
         });
+        
          
         cc.vv.net.addHandler("game_begin_push",function(data){
             console.log('game_action_push');
@@ -328,6 +334,7 @@ cc.Class({
                 seat.wangangs = sd.wangangs;
                 seat.pengs = sd.pengs;
                 seat.chis = sd.chis;
+                seat.huas = sd.huas;
                 seat.dingque = sd.que;
                 seat.hued = sd.hued; 
                 seat.iszimo = sd.iszimo;
@@ -481,6 +488,14 @@ cc.Class({
             self.doChi(si,data.pai,chigroup);
         });
         
+        cc.vv.net.addHandler("gethua_notify_push",function(data){
+            console.log('gethua_notify_push');
+            var userId = data.userid;
+            var pai = data.pai;
+            var si = self.getSeatIndexByID(userId);
+            self.doHua(si,data.pai);
+        });
+        
         cc.vv.net.addHandler("game_dingque_notify_push",function(data){
             self.dispatchEvent('game_dingque_notify',data);
         });
@@ -548,7 +563,14 @@ cc.Class({
     },
     
     doPeng:function(seatIndex,pai){
+        console.log(seatIndex);
         var seatData = this.seats[seatIndex];
+        console.log(this.seats[seatIndex]);
+        console.log(this.seats[0]);
+        console.log(this.seats["0"]);
+        console.log(seatData);
+        console.log(seatData.huas);
+        console.log(seatData.userid);
         //移除手牌
         if(seatData.holds){
             for(var i = 0; i < 2; ++i){
@@ -582,6 +604,17 @@ cc.Class({
         chis.push(chigroup);
             
         this.dispatchEvent('chi_notify',seatData);
+    },
+    
+    doHua:function(seatIndex,pai){
+        var seatData = this.seats[seatIndex];
+        //更新花牌数据
+        if(seatData.huas == undefined || seatData.huas == null) {
+            seatData.huas = [];
+        }
+        var huas = seatData.huas;
+        huas.push(pai);
+        this.dispatchEvent('gethua_notify',seatData);
     },
     
     getGangType:function(seatData,pai){
