@@ -125,7 +125,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 					var roomInfo = {
 						uuid:"",
 						id:roomId,
-						numOfGames:0,
+						numOfGames:1,
 						createTime:createTime,
 						nextButton:0,
 						seats:[],

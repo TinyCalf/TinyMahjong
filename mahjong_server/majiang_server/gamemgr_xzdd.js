@@ -165,6 +165,8 @@ function deal(game){
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
     var count = seatData.countMap[targetPai];
+    console.log("map");
+    console.log(seatData.countMap);
     if(count != null && count >= 2){
         seatData.canPeng = true;
     }
@@ -1057,15 +1059,22 @@ function doGameOver(game,userId,forceEnd){
         delete games[roomId];
         
         var old = roomInfo.nextButton;
-        if(game.yipaoduoxiang >= 0){
-            roomInfo.nextButton = game.yipaoduoxiang;
+        //正常的庄家逻辑 、谁赢谁做庄
+        // if(game.yipaoduoxiang >= 0){
+        //     roomInfo.nextButton = game.yipaoduoxiang;
+        // }
+        // else if(game.firstHupai >= 0){
+        //     roomInfo.nextButton = game.firstHupai;
+        // }
+        // else{
+        //     roomInfo.nextButton = (game.turn + 1) % 4;
+        // }
+        //沈家门庄家逻辑 庄家不赢就给下一家坐庄。
+        if (game.firstHupai != old){
+            roomInfo.nextButton = (old+1)%4;
+            roomInfo.numOfGames++;
         }
-        else if(game.firstHupai >= 0){
-            roomInfo.nextButton = game.firstHupai;
-        }
-        else{
-            roomInfo.nextButton = (game.turn + 1) % 4;
-        }
+
 
         if(old != roomInfo.nextButton){
             db.update_next_button(roomId,roomInfo.nextButton);
@@ -1176,6 +1185,7 @@ exports.setReady = function(userId,callback){
         var seatData = null;
         for(var i = 0; i < 4; ++i){
             var sd = game.gameSeats[i];
+
 
             var s = {
                 userid:sd.userId,
@@ -1292,7 +1302,7 @@ exports.begin = function(roomId) {
         chupaiCnt:0,
     };
 
-    roomInfo.numOfGames++;
+    //roomInfo.numOfGames++;
 
     for(var i = 0; i < 4; ++i){
         var data = game.gameSeats[i] = {};
@@ -1851,7 +1861,7 @@ exports.chi = function(userId,data){
             return;
         }
         seatData.holds.splice(index,1);
-        seatData.countMap[pai] --;
+        seatData.countMap[chigroup[i]] --;
     }
     console.log("删除手牌后");
     console.log(seatData.holds);
