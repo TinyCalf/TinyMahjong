@@ -745,7 +745,7 @@ function calculateResult(game,roomInfo){
         sd.numAnGang = sd.angangs.length;
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         
-        //对所有胡牌的玩家进行统计
+        //对胡牌玩家进行统计
         if(isTinged(sd)){
             //统计自己的番子和分数
             //基础番(平胡0番，对对胡1番、七对2番) + 清一色2番 + 杠+1番
@@ -999,7 +999,7 @@ function doGameOver(game,userId,forceEnd){
                 db.archive_games(roomInfo.uuid);            
             },1500);
         }
-    }
+    };
 
     if(game != null){
         if(!forceEnd){
@@ -1044,6 +1044,13 @@ function doGameOver(game,userId,forceEnd){
                 dihu:sd.isDiHu,
                 huorder:game.hupaiList.indexOf(i),
             };
+
+            //推入庄
+            if(roomInfo.nextButton == i){
+                userRT.button = true ;
+            }else{
+                userRT.button = false ;
+            }
             
             for(var k in sd.actions){
                 userRT.actions[k] = {
@@ -1289,7 +1296,6 @@ exports.begin = function(roomId) {
         mahjongs:new Array(144),
         currentIndex:0,
         gameSeats:new Array(4),
-
         numOfQue:0,
         turn:0,
         chuPai:-1,
@@ -1879,8 +1885,6 @@ exports.chi = function(userId,data){
     //广播通知玩家出牌方
     seatData.canChuPai = true;
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
-
-
 };
 
 exports.isPlaying = function(userId){

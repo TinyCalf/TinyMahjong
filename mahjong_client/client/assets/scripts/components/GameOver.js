@@ -35,6 +35,13 @@ cc.Class({
             this._gameover = this.node.getChildByName("game_over_xlch");
         }
         
+        for(var n = 0; n < 4; n++){
+            var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(n+1)).getChildByName("huas");
+            for(var m = 0 ; m < hua_node.childrenCount ; m++) {
+                hua_node.children[m].active = false;
+            }
+        }
+        
         this._gameover.active = false;
         
         this._pingju = this._gameover.getChildByName("pingju");
@@ -322,6 +329,37 @@ cc.Class({
                     this.initPengAndGangs(seatView,index,mjid,"chi");
                     index++;    
                 }    
+            }
+            
+            //初始化花牌
+            var huas = userData.huas; 
+            var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(i+1)).getChildByName("huas");
+            if(huas){
+                for(var k = 0; k < huas.length; ++k){
+                    var mjid = huas[k];
+                    hua_node.children[k].active = true;
+                    var sp = hua_node.children[k].getComponent(cc.Sprite);
+                    sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mjid);
+                }    
+            }
+            
+            //判断东南西北
+            if(userData.button){
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(i%4+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",30);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+1)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",32);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+2)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",31);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+3)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",33);
             }
         }
     },
@@ -619,6 +657,7 @@ cc.Class({
         }
         pgroot.x = index * 55 * 3 + index * 10;
     },
+
     
     onBtnReadyClicked:function(){
         console.log("onBtnReadyClicked");
