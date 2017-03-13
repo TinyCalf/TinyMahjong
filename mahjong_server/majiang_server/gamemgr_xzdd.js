@@ -10,7 +10,7 @@ var ACTION_CHUPAI = 1;
 var ACTION_MOPAI = 2;
 var ACTION_PENG = 3;
 var ACTION_GANG = 4;
-var ACTION_CHI =7;
+var ACTION_CHI = 7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
 
@@ -724,6 +724,8 @@ function chaJiao(game){
 }
 
 function calculateResult(game,roomInfo){
+
+    console.log("calculateResult");
     
     var isNeedChaDaJia = needChaDaJiao(game);
     if(isNeedChaDaJia){
@@ -731,6 +733,9 @@ function calculateResult(game,roomInfo){
     }
     
     var baseScore = game.conf.baseScore;
+    console.log("basescore:"+ baseScore);
+
+
     var numOfHued = 0;
     for(var i = 0; i < game.gameSeats.length; ++i){
         if(game.gameSeats[i].hued == true){
@@ -755,7 +760,7 @@ function calculateResult(game,roomInfo){
                 sd.qingyise = true;
                 fan += 2;
             }
-            
+
             var numOfGangs = sd.diangangs.length + sd.wangangs.length + sd.angangs.length;
             for(var j = 0; j < sd.pengs.length; ++j){
                 var pai = sd.pengs[j];
@@ -769,17 +774,17 @@ function calculateResult(game,roomInfo){
                 }
             }
             sd.numofgen = numOfGangs;
-            
+
             //金钩胡
             if(sd.holds.length == 1 || sd.holds.length == 2){
                 fan += 1;
                 sd.isJinGouHu = true;
             }
-            
+
             if(sd.isHaiDiHu){
                 fan += 1;
             }
-            
+
             if(game.conf.tiandihu){
                 if(sd.isTianHu){
                     fan += 3;
@@ -788,7 +793,7 @@ function calculateResult(game,roomInfo){
                     fan += 2;
                 }
             }
-            
+
             var isjiangdui = false;
             if(game.conf.jiangdui){
                 if(sd.pattern == "7pairs"){
@@ -798,8 +803,8 @@ function calculateResult(game,roomInfo){
                         isjiangdui = isJiangDui(sd);
                         if(isjiangdui){
                             sd.pattern == "j7paris";
-                            fan += 2;    
-                        }   
+                            fan += 2;
+                        }
                         else{
                             fan += 1;
                         }
@@ -809,26 +814,26 @@ function calculateResult(game,roomInfo){
                     isjiangdui = isJiangDui(sd);
                     if(isjiangdui){
                         sd.pattern = "jiangdui";
-                        fan += 2;   
+                        fan += 2;
                     }
-                }   
+                }
             }
-            
+
             if(game.conf.menqing){
                 //不是将对，才检查中张
                 if(!isjiangdui){
                     sd.isZhongZhang = isZhongZhang(sd);
                     if(sd.isZhongZhang){
                         fan += 1;
-                    }                
+                    }
                 }
-                
+
                 sd.isMenQing = isMenQing(sd);
                 if(sd.isMenQing){
                     fan += 1;
-                }                
+                }
             }
-            
+
             fan += sd.numofgen;
             if(sd.isGangHu){
                 fan += 1;
@@ -856,7 +861,7 @@ function calculateResult(game,roomInfo){
                         for(var t = 0; t < ac.targets.length; ++t){
                             var six = ac.targets[t];
                             game.gameSeats[six].score -= acscore * baseScore;
-                        }                   
+                        }
                     }
                 }
                 else if(ac.type == "maozhuanyu"){
@@ -872,7 +877,7 @@ function calculateResult(game,roomInfo){
                             for(var t = 0; t < ref.targets.length; ++t){
                                 var six = ref.targets[t];
                                 game.gameSeats[six].score -= acscore * baseScore;
-                            }                            
+                            }
                         }
                         else{
                             //如果已经被扣过一次了，则由杠牌这家赔
@@ -903,13 +908,13 @@ function calculateResult(game,roomInfo){
                             sd.numJiePao ++;
                         }
                     }
-                    
+
                     var score = computeFanScore(game,fan) + extraScore;
                     sd.score += score * ac.targets.length;
 
                     for(var t = 0; t < ac.targets.length; ++t){
                         var six = ac.targets[t];
-                        var td = game.gameSeats[six]; 
+                        var td = game.gameSeats[six];
                         td.score -= score;
                         if(td != sd){
                             if(ac.type == "chadajiao"){
@@ -917,7 +922,7 @@ function calculateResult(game,roomInfo){
                             }
                             else if(!ac.iszimo){
                                 td.numDianPao ++;
-                            }                            
+                            }
                         }
                     }
                 }
@@ -938,7 +943,7 @@ function calculateResult(game,roomInfo){
                 if(ac.type == "angang" || ac.type == "wangang" || ac.type == "diangang"){
                     //如果3家都胡牌，则需要结算。否则认为是查叫
                     if(numOfHued < 3){
-                        sd.actions.splice(a,1);                        
+                        sd.actions.splice(a,1);
                     }
                     else{
                         if(ac.state != "nop"){
@@ -948,8 +953,8 @@ function calculateResult(game,roomInfo){
                             for(var t = 0; t < ac.targets.length; ++t){
                                 var six = ac.targets[t];
                                 game.gameSeats[six].score -= acscore * baseScore;
-                            }                   
-                        }   
+                            }
+                        }
                     }
                 }
             }
