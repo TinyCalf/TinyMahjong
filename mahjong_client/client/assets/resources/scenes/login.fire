@@ -230,12 +230,12 @@
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.8,
-    "_scaleY": 0.79,
+    "_scaleX": 1.1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -67
+      "y": -82
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -244,7 +244,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "3472ebVhP1LhqxOvdUhBWzX",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 6
@@ -380,8 +380,8 @@
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 1.1,
+    "_scaleY": 1.1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,

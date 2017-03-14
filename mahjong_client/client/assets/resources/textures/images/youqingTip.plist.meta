@@ -69,7 +69,7 @@
       "rawHeight": 380,
       "borderTop": 0,
       "borderBottom": 0,
-      "borderLeft": 0,
+      "borderLeft": 6,
       "borderRight": 0,
       "spriteType": "normal",
       "subMetas": {}

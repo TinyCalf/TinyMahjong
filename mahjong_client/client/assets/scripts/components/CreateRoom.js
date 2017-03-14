@@ -147,12 +147,13 @@ cc.Class({
             }     
         }
         
-        if(type == 0){
-            type = "xzdd";
-        }
-        else{
-            type = "xlch";
-        }
+        // if(type == 0){
+        //     type = "xzdd";
+        // }
+        // else{
+        //     type = "xlch";
+        // }
+        type= "xzdd";
         
         var zuidafanshu = 0;
         for(var i = 0; i < self._zuidafanshu.length; ++i){
