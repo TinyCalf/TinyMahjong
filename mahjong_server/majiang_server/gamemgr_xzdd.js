@@ -1629,7 +1629,7 @@ exports.isPlaying = function(userId){
         return false;
     }
     return true;
-}
+};
 
 function checkCanQiangGang(game,turnSeat,seatData,pai){
     var hasActions = false;
