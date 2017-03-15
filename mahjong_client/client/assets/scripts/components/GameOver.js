@@ -226,6 +226,22 @@ cc.Class({
                 if(ischadajiao){
                     actionArr.push("查大叫");
                 }
+                
+                if(userData.hunyise){
+                    actionArr.push("混一色");
+                }
+                
+                if(userData.duiduihu){
+                    actionArr.push("对对胡");
+                }
+                
+                if(userData.paihu){
+                    actionArr.push("排胡");
+                }
+                
+                if(userData.gangshanghua){
+                    actionArr.push("杠上花");
+                }
             }
             
             for(var o = 0; o < 3;++o){
