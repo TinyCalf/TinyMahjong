@@ -599,7 +599,6 @@ function isHunYiSe(seatData){
     else return false;
 }
 
-
 //判断是否听
 function isTinged(seatData){
     for(var k in seatData.tingMap){
@@ -1068,6 +1067,116 @@ function construct_game_base_info(game){
 function store_game(game,callback){
     db.create_game(game.roomInfo.uuid,game.gameIndex,game.baseInfoJson,callback);
 }
+
+function checkCanQiangGang(game,turnSeat,seatData,pai){
+    var hasActions = false;
+    for(var i = 0; i < game.gameSeats.length; ++i){
+        //杠牌者不检查
+        if(seatData.seatIndex == i){
+            continue;
+        }
+        var ddd = game.gameSeats[i];
+        //已经和牌的不再检查
+        if(ddd.hued){
+            continue;
+        }
+
+        checkCanHu(game,ddd,pai);
+        if(ddd.canHu){
+            sendOperations(game,ddd,pai);
+            hasActions = true;
+        }
+    }
+    if(hasActions){
+        game.qiangGangContext = {
+            turnSeat:turnSeat,
+            seatData:seatData,
+            pai:pai,
+            isValid:true,
+        }
+    }
+    else{
+        game.qiangGangContext = null;
+    }
+    return game.qiangGangContext != null;
+}
+
+function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
+    var seatIndex = seatData.seatIndex;
+    var gameTurn = turnSeat.seatIndex;
+
+    var isZhuanShouGang = false;
+    if(gangtype == "wangang"){
+        var idx = seatData.pengs.indexOf(pai);
+        if(idx >= 0){
+            seatData.pengs.splice(idx,1);
+        }
+
+        //如果最后一张牌不是杠的牌，则认为是转手杠
+        if(seatData.holds[seatData.holds.length - 1] != pai){
+            isZhuanShouGang = true;
+        }
+    }
+    //进行碰牌处理
+    //扣掉手上的牌
+    //从此人牌中扣除
+    for(var i = 0; i < numOfCnt; ++i){
+        var index = seatData.holds.indexOf(pai);
+        if(index == -1){
+            console.log(seatData.holds);
+            console.log("can't find mj.");
+            return;
+        }
+        seatData.holds.splice(index,1);
+        seatData.countMap[pai] --;
+    }
+
+    recordGameAction(game,seatData.seatIndex,ACTION_GANG,pai);
+
+    //记录下玩家的杠牌
+    if(gangtype == "angang"){
+        seatData.angangs.push(pai);
+        var ac = recordUserAction(game,seatData,"angang");
+        ac.score = game.conf.baseScore*2;
+    }
+    else if(gangtype == "diangang"){
+        seatData.diangangs.push(pai);
+        var ac = recordUserAction(game,seatData,"diangang",gameTurn);
+        ac.score = game.conf.baseScore*2;
+        var fs = turnSeat;
+        recordUserAction(game,fs,"fanggang",seatIndex);
+    }
+    else if(gangtype == "wangang"){
+        seatData.wangangs.push(pai);
+        if(isZhuanShouGang == false){
+            var ac = recordUserAction(game,seatData,"wangang");
+            ac.score = game.conf.baseScore;
+        }
+        else{
+            recordUserAction(game,seatData,"zhuanshougang");
+        }
+    }
+
+    checkCanTingPai(game,seatData);
+    //通知其他玩家，有人杠了牌
+    userMgr.broacastInRoom('gang_notify_push',{userid:seatData.userId,pai:pai,gangtype:gangtype},seatData.userId,true);
+
+    //变成自己的轮子
+    moveToNextUser(game,seatIndex);
+    //再次摸牌
+    doUserMoPai(game);
+
+    //只能放在这里。因为过手就会清除杠牌标记
+    seatData.lastFangGangSeat = gameTurn;
+}
+
+
+
+/***********************************************************************
+ *
+ *  客户端发送事件侦听
+ *
+ * *************************************************************************/
 
 //开始新的一局
 exports.begin = function(roomId) {
@@ -1692,108 +1801,6 @@ exports.isPlaying = function(userId){
     return true;
 };
 
-function checkCanQiangGang(game,turnSeat,seatData,pai){
-    var hasActions = false;
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        //杠牌者不检查
-        if(seatData.seatIndex == i){
-            continue;
-        }
-        var ddd = game.gameSeats[i];
-        //已经和牌的不再检查
-        if(ddd.hued){
-            continue;
-        }
-
-        checkCanHu(game,ddd,pai);
-        if(ddd.canHu){
-            sendOperations(game,ddd,pai);
-            hasActions = true;
-        }
-    }
-    if(hasActions){
-        game.qiangGangContext = {
-            turnSeat:turnSeat,
-            seatData:seatData,
-            pai:pai,
-            isValid:true,
-        }
-    }
-    else{
-        game.qiangGangContext = null;
-    }
-    return game.qiangGangContext != null;
-}
-
-function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
-    var seatIndex = seatData.seatIndex;
-    var gameTurn = turnSeat.seatIndex;
-    
-    var isZhuanShouGang = false;
-    if(gangtype == "wangang"){
-        var idx = seatData.pengs.indexOf(pai);
-        if(idx >= 0){
-            seatData.pengs.splice(idx,1);
-        }
-        
-        //如果最后一张牌不是杠的牌，则认为是转手杠
-        if(seatData.holds[seatData.holds.length - 1] != pai){
-            isZhuanShouGang = true;
-        }
-    }
-    //进行碰牌处理
-    //扣掉手上的牌
-    //从此人牌中扣除
-    for(var i = 0; i < numOfCnt; ++i){
-        var index = seatData.holds.indexOf(pai);
-        if(index == -1){
-            console.log(seatData.holds);
-            console.log("can't find mj.");
-            return;
-        }
-        seatData.holds.splice(index,1);
-        seatData.countMap[pai] --;
-    }
-
-    recordGameAction(game,seatData.seatIndex,ACTION_GANG,pai);
-
-    //记录下玩家的杠牌
-    if(gangtype == "angang"){
-        seatData.angangs.push(pai);
-        var ac = recordUserAction(game,seatData,"angang");
-        ac.score = game.conf.baseScore*2;
-    }
-    else if(gangtype == "diangang"){
-        seatData.diangangs.push(pai);
-        var ac = recordUserAction(game,seatData,"diangang",gameTurn);
-        ac.score = game.conf.baseScore*2;
-        var fs = turnSeat;
-        recordUserAction(game,fs,"fanggang",seatIndex);
-    }
-    else if(gangtype == "wangang"){
-        seatData.wangangs.push(pai);
-        if(isZhuanShouGang == false){
-            var ac = recordUserAction(game,seatData,"wangang");
-            ac.score = game.conf.baseScore;            
-        }
-        else{
-            recordUserAction(game,seatData,"zhuanshougang");
-        }
-    }
-
-    checkCanTingPai(game,seatData);
-    //通知其他玩家，有人杠了牌
-    userMgr.broacastInRoom('gang_notify_push',{userid:seatData.userId,pai:pai,gangtype:gangtype},seatData.userId,true);
-
-    //变成自己的轮子
-    moveToNextUser(game,seatIndex);
-    //再次摸牌
-    doUserMoPai(game);   
-    
-    //只能放在这里。因为过手就会清除杠牌标记
-    seatData.lastFangGangSeat = gameTurn;
-}
-
 exports.gang = function(userId,pai){
     var seatData = gameSeatsOfUsers[userId];
     if(seatData == null){
@@ -2164,7 +2171,6 @@ exports.hasBegan = function(roomId){
     return false;
 };
 
-
 var dissolvingList = [];
 
 exports.doDissolve = function(roomId){
@@ -2231,6 +2237,11 @@ exports.dissolveAgree = function(roomId,userId,agree){
     return roomInfo;
 };
 
+/***********************************************************************
+*
+*
+*
+* *************************************************************************/
 
 
 function update() {

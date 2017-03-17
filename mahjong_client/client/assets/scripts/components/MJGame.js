@@ -305,7 +305,7 @@ cc.Class({
             }
             var localIndex = self.getLocalIndex(seatData.seatindex);
             self.playEfx(localIndex,"play_peng");
-            cc.vv.audioMgr.playSFX("nv/peng.mp3");
+            //cc.vv.audioMgr.playSFX("nv/peng.mp3");
             self.hideOptions();
         });
         
@@ -369,7 +369,9 @@ cc.Class({
             sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+1);
             var sprite = op.children[2].getComponent(cc.Sprite);
             sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+2);
-        }else if(chitype && chitype.mid == true){
+        }
+        
+        if(chitype && chitype.mid == true){
             var op = this._options.getChildByName("chiop").getChildByName("mid");
             op.active = true;
             var sprite = op.children[0].getComponent(cc.Sprite);
@@ -379,7 +381,7 @@ cc.Class({
             var sprite = op.children[2].getComponent(cc.Sprite);
             sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",pai+1);
         }
-        else if(chitype && chitype.right == true){
+        if(chitype && chitype.right == true){
             var op = this._options.getChildByName("chiop").getChildByName("right");
             op.active = true;
             var sprite = op.children[0].getComponent(cc.Sprite);

@@ -24,8 +24,8 @@
       <file leaf-file-name="gamemgr_xzdd.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_xzdd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="708" column="30" selection-start-line="708" selection-start-column="30" selection-end-line="708" selection-end-column="30" />
+            <state relative-caret-position="449">
+              <caret line="555" column="1" selection-start-line="555" selection-start-column="1" selection-end-line="555" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#getMJType#0" expanded="false" />
                 <element signature="n#!!block;n#shuffle#0" expanded="false" />
@@ -47,6 +47,7 @@
                 <element signature="n#!!block;n#doUserMoPai#0" expanded="false" />
                 <element signature="n#!!block;n#isSameType#0" expanded="false" />
                 <element signature="n#!!block;n#isQingYiSe#0" expanded="false" />
+                <element signature="n#!!block;n#isHunYiSe#0" expanded="false" />
                 <element signature="n#!!block;n#isTinged#0" expanded="false" />
                 <element signature="n#!!block;n#isPaiHu#0" expanded="false" />
                 <element signature="n#!!block;n#isDuiDuiHu#0" expanded="false" />
@@ -56,35 +57,35 @@
                 <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
                 <element signature="n#!!block;n#calculateResult#0" expanded="false" />
                 <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-                <element signature="e#18262#19287#0" expanded="false" />
-                <element signature="e#19310#22009#0" expanded="false" />
-                <element signature="e#22096#22921#0" expanded="false" />
+                <element signature="e#18261#19286#0" expanded="false" />
+                <element signature="e#19309#22008#0" expanded="false" />
+                <element signature="e#22095#22920#0" expanded="false" />
                 <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
                 <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-                <element signature="e#23697#25669#0" expanded="false" />
+                <element signature="e#23696#25668#0" expanded="false" />
                 <element signature="n#!!block;n#store_single_history#0" expanded="false" />
                 <element signature="n#!!block;n#store_history#0" expanded="false" />
                 <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
                 <element signature="n#!!block;n#store_game#0" expanded="false" />
-                <element signature="e#27068#31270#0" expanded="false" />
-                <element signature="e#31321#34599#0" expanded="false" />
-                <element signature="e#34639#37383#0" expanded="false" />
-                <element signature="e#37417#39300#0" expanded="false" />
-                <element signature="e#37488#37562#0" expanded="false" />
-                <element signature="e#37652#37715#0" expanded="false" />
-                <element signature="e#39338#42013#0" expanded="false" />
-                <element signature="e#42052#42261#0" expanded="false" />
                 <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
                 <element signature="n#!!block;n#doGang#0" expanded="false" />
-                <element signature="e#45092#46817#0" expanded="false" />
-                <element signature="e#46849#52999#0" expanded="false" />
-                <element signature="e#53032#54633#0" expanded="false" />
-                <element signature="e#54671#54887#0" expanded="false" />
-                <element signature="e#54954#55137#0" expanded="false" />
-                <element signature="e#55189#55653#0" expanded="false" />
-                <element signature="e#55709#56239#0" expanded="false" />
+                <element signature="e#30003#34205#0" expanded="false" />
+                <element signature="e#34256#37534#0" expanded="false" />
+                <element signature="e#37574#40318#0" expanded="false" />
+                <element signature="e#40352#42235#0" expanded="false" />
+                <element signature="e#40423#40497#0" expanded="false" />
+                <element signature="e#40587#40650#0" expanded="false" />
+                <element signature="e#42273#44948#0" expanded="false" />
+                <element signature="e#44987#45196#0" expanded="false" />
+                <element signature="e#45234#46959#0" expanded="false" />
+                <element signature="e#46991#53141#0" expanded="false" />
+                <element signature="e#53174#54775#0" expanded="false" />
+                <element signature="e#54813#55029#0" expanded="false" />
+                <element signature="e#55095#55278#0" expanded="false" />
+                <element signature="e#55330#55794#0" expanded="false" />
+                <element signature="e#55850#56380#0" expanded="false" />
                 <element signature="n#!!block;n#update#0" expanded="false" />
-                <element signature="e#56788#57407#0" expanded="false" />
+                <element signature="e#57085#57704#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -204,6 +205,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="majiang_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -279,12 +294,12 @@
       <option name="presentableId" value="Default" />
       <updated>1489116793845</updated>
       <workItem from="1489116797037" duration="4704000" />
-      <workItem from="1489374519830" duration="30965000" />
+      <workItem from="1489374519830" duration="32065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35669000" />
+    <option name="totallyTimeSpent" value="36769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,7 +318,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.337132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953465" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27771854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -331,7 +346,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -361,6 +376,7 @@
             <element signature="n#!!block;n#doUserMoPai#0" expanded="false" />
             <element signature="n#!!block;n#isSameType#0" expanded="false" />
             <element signature="n#!!block;n#isQingYiSe#0" expanded="false" />
+            <element signature="n#!!block;n#isHunYiSe#0" expanded="false" />
             <element signature="n#!!block;n#isTinged#0" expanded="false" />
             <element signature="n#!!block;n#isPaiHu#0" expanded="false" />
             <element signature="n#!!block;n#isDuiDuiHu#0" expanded="false" />
@@ -370,35 +386,35 @@
             <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
             <element signature="n#!!block;n#calculateResult#0" expanded="false" />
             <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-            <element signature="e#18262#19287#0" expanded="false" />
-            <element signature="e#19310#22009#0" expanded="false" />
-            <element signature="e#22096#22921#0" expanded="false" />
+            <element signature="e#18261#19286#0" expanded="false" />
+            <element signature="e#19309#22008#0" expanded="false" />
+            <element signature="e#22095#22920#0" expanded="false" />
             <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
             <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-            <element signature="e#23697#25669#0" expanded="false" />
+            <element signature="e#23696#25668#0" expanded="false" />
             <element signature="n#!!block;n#store_single_history#0" expanded="false" />
             <element signature="n#!!block;n#store_history#0" expanded="false" />
             <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
             <element signature="n#!!block;n#store_game#0" expanded="false" />
-            <element signature="e#27068#31270#0" expanded="false" />
-            <element signature="e#31321#34599#0" expanded="false" />
-            <element signature="e#34639#37383#0" expanded="false" />
-            <element signature="e#37417#39300#0" expanded="false" />
-            <element signature="e#37488#37562#0" expanded="false" />
-            <element signature="e#37652#37715#0" expanded="false" />
-            <element signature="e#39338#42013#0" expanded="false" />
-            <element signature="e#42052#42261#0" expanded="false" />
             <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
             <element signature="n#!!block;n#doGang#0" expanded="false" />
-            <element signature="e#45092#46817#0" expanded="false" />
-            <element signature="e#46849#52999#0" expanded="false" />
-            <element signature="e#53032#54633#0" expanded="false" />
-            <element signature="e#54671#54887#0" expanded="false" />
-            <element signature="e#54954#55137#0" expanded="false" />
-            <element signature="e#55189#55653#0" expanded="false" />
-            <element signature="e#55709#56239#0" expanded="false" />
+            <element signature="e#30003#34205#0" expanded="false" />
+            <element signature="e#34256#37534#0" expanded="false" />
+            <element signature="e#37574#40318#0" expanded="false" />
+            <element signature="e#40352#42235#0" expanded="false" />
+            <element signature="e#40423#40497#0" expanded="false" />
+            <element signature="e#40587#40650#0" expanded="false" />
+            <element signature="e#42273#44948#0" expanded="false" />
+            <element signature="e#44987#45196#0" expanded="false" />
+            <element signature="e#45234#46959#0" expanded="false" />
+            <element signature="e#46991#53141#0" expanded="false" />
+            <element signature="e#53174#54775#0" expanded="false" />
+            <element signature="e#54813#55029#0" expanded="false" />
+            <element signature="e#55095#55278#0" expanded="false" />
+            <element signature="e#55330#55794#0" expanded="false" />
+            <element signature="e#55850#56380#0" expanded="false" />
             <element signature="n#!!block;n#update#0" expanded="false" />
-            <element signature="e#56788#57407#0" expanded="false" />
+            <element signature="e#57085#57704#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -453,8 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_xzdd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="708" column="30" selection-start-line="708" selection-start-column="30" selection-end-line="708" selection-end-column="30" />
+        <state relative-caret-position="449">
+          <caret line="555" column="1" selection-start-line="555" selection-start-column="1" selection-end-line="555" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#getMJType#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0" expanded="false" />
@@ -476,6 +492,7 @@
             <element signature="n#!!block;n#doUserMoPai#0" expanded="false" />
             <element signature="n#!!block;n#isSameType#0" expanded="false" />
             <element signature="n#!!block;n#isQingYiSe#0" expanded="false" />
+            <element signature="n#!!block;n#isHunYiSe#0" expanded="false" />
             <element signature="n#!!block;n#isTinged#0" expanded="false" />
             <element signature="n#!!block;n#isPaiHu#0" expanded="false" />
             <element signature="n#!!block;n#isDuiDuiHu#0" expanded="false" />
@@ -485,35 +502,35 @@
             <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
             <element signature="n#!!block;n#calculateResult#0" expanded="false" />
             <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-            <element signature="e#18262#19287#0" expanded="false" />
-            <element signature="e#19310#22009#0" expanded="false" />
-            <element signature="e#22096#22921#0" expanded="false" />
+            <element signature="e#18261#19286#0" expanded="false" />
+            <element signature="e#19309#22008#0" expanded="false" />
+            <element signature="e#22095#22920#0" expanded="false" />
             <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
             <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-            <element signature="e#23697#25669#0" expanded="false" />
+            <element signature="e#23696#25668#0" expanded="false" />
             <element signature="n#!!block;n#store_single_history#0" expanded="false" />
             <element signature="n#!!block;n#store_history#0" expanded="false" />
             <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
             <element signature="n#!!block;n#store_game#0" expanded="false" />
-            <element signature="e#27068#31270#0" expanded="false" />
-            <element signature="e#31321#34599#0" expanded="false" />
-            <element signature="e#34639#37383#0" expanded="false" />
-            <element signature="e#37417#39300#0" expanded="false" />
-            <element signature="e#37488#37562#0" expanded="false" />
-            <element signature="e#37652#37715#0" expanded="false" />
-            <element signature="e#39338#42013#0" expanded="false" />
-            <element signature="e#42052#42261#0" expanded="false" />
             <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
             <element signature="n#!!block;n#doGang#0" expanded="false" />
-            <element signature="e#45092#46817#0" expanded="false" />
-            <element signature="e#46849#52999#0" expanded="false" />
-            <element signature="e#53032#54633#0" expanded="false" />
-            <element signature="e#54671#54887#0" expanded="false" />
-            <element signature="e#54954#55137#0" expanded="false" />
-            <element signature="e#55189#55653#0" expanded="false" />
-            <element signature="e#55709#56239#0" expanded="false" />
+            <element signature="e#30003#34205#0" expanded="false" />
+            <element signature="e#34256#37534#0" expanded="false" />
+            <element signature="e#37574#40318#0" expanded="false" />
+            <element signature="e#40352#42235#0" expanded="false" />
+            <element signature="e#40423#40497#0" expanded="false" />
+            <element signature="e#40587#40650#0" expanded="false" />
+            <element signature="e#42273#44948#0" expanded="false" />
+            <element signature="e#44987#45196#0" expanded="false" />
+            <element signature="e#45234#46959#0" expanded="false" />
+            <element signature="e#46991#53141#0" expanded="false" />
+            <element signature="e#53174#54775#0" expanded="false" />
+            <element signature="e#54813#55029#0" expanded="false" />
+            <element signature="e#55095#55278#0" expanded="false" />
+            <element signature="e#55330#55794#0" expanded="false" />
+            <element signature="e#55850#56380#0" expanded="false" />
             <element signature="n#!!block;n#update#0" expanded="false" />
-            <element signature="e#56788#57407#0" expanded="false" />
+            <element signature="e#57085#57704#0" expanded="false" />
           </folding>
         </state>
       </provider>
