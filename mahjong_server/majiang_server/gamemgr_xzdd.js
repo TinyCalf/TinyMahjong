@@ -145,8 +145,6 @@ function deal(game){
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
     var count = seatData.countMap[targetPai];
-    console.log("map");
-    console.log(seatData.countMap);
     if(count != null && count >= 2){
         seatData.canPeng = true;
     }
@@ -1176,7 +1174,7 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
  *
  *  客户端发送事件侦听
  *
- * *************************************************************************/
+ * ********************************************************************/
 
 //开始新的一局
 exports.begin = function(roomId) {

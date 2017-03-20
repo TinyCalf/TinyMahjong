@@ -2,22 +2,17 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //    default: null,
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
-        _difenxuanze:null,
-        _zimo:null,
-        _wanfaxuanze:null,
-        _zuidafanshu:null,
-        _jushuxuanze:null,
-        _dianganghua:null,
+        //_difenxuanze:null,
+        // _zimo:null,
+        // _zuidafanshu:null,
+        // _jushuxuanze:null,
+        // _dianganghua:null,
+         
         _leixingxuanze:null,
+        _koufei:null,
+        _quanshu:null,
+        _jiesuan:null,
+        _wanfaxuanze:null,
     },
 
     // use this for initialization
@@ -31,25 +26,32 @@ cc.Class({
             }
         }
         
-        this._difenxuanze = [];
-        var t = this.node.getChildByName("difenxuanze");
+        this._koufen = [];
+        var t = this.node.getChildByName("koufen");
         for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
+            var n = t.children[i].getComponent("CheckBox");
             if(n != null){
-                this._difenxuanze.push(n);
+                this._koufen.push(n);
             }
         }
-        //console.log(this._difenxuanze);
         
-        this._zimo = [];
-        var t = this.node.getChildByName("zimojiacheng");
+        this._quanshu = [];
+        var t = this.node.getChildByName("quanshu");
         for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
+            var n = t.children[i].getComponent("CheckBox");
             if(n != null){
-                this._zimo.push(n);
+                this._quanshu.push(n);
             }
         }
-        //console.log(this._zimo);
+        
+        this._jiesuan = [];
+        var t = this.node.getChildByName("jiesuan");
+        for(var i = 0; i < t.childrenCount; ++i){
+            var n = t.children[i].getComponent("CheckBox");
+            if(n != null){
+                this._jiesuan.push(n);
+            }
+        }
         
         this._wanfaxuanze = [];
         var t = this.node.getChildByName("wanfaxuanze");
@@ -59,35 +61,57 @@ cc.Class({
                 this._wanfaxuanze.push(n);
             }
         }
+        
+        // this._dianganghua = [];
+        // var t = this.node.getChildByName("dianganghua");
+        // for(var i = 0; i < t.childrenCount; ++i){
+        //     var n = t.children[i].getComponent("RadioButton");
+        //     if(n != null){
+        //         this._dianganghua.push(n);
+        //     }
+        // }
+        
+        // this._jushuxuanze = [];
+        // var t = this.node.getChildByName("xuanzejushu");
+        // for(var i = 0; i < t.childrenCount; ++i){
+        //     var n = t.children[i].getComponent("RadioButton");
+        //     if(n != null){
+        //         this._jushuxuanze.push(n);
+        //     }
+        // }
+        
+        // this._difenxuanze = [];
+        // var t = this.node.getChildByName("difenxuanze");
+        // for(var i = 0; i < t.childrenCount; ++i){
+        //     var n = t.children[i].getComponent("RadioButton");
+        //     if(n != null){
+        //         this._difenxuanze.push(n);
+        //     }
+        // }
+        //console.log(this._difenxuanze);
+        
+        // this._zimo = [];
+        // var t = this.node.getChildByName("zimojiacheng");
+        // for(var i = 0; i < t.childrenCount; ++i){
+        //     var n = t.children[i].getComponent("RadioButton");
+        //     if(n != null){
+        //         this._zimo.push(n);
+        //     }
+        // }
+        //console.log(this._zimo);
+        
+        
         //console.log(this._wanfaxuanze);
         
-        this._zuidafanshu = [];
-        var t = this.node.getChildByName("zuidafanshu");
-        for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
-            if(n != null){
-                this._zuidafanshu.push(n);
-            }
-        }
+        // this._zuidafanshu = [];
+        // var t = this.node.getChildByName("zuidafanshu");
+        // for(var i = 0; i < t.childrenCount; ++i){
+        //     var n = t.children[i].getComponent("RadioButton");
+        //     if(n != null){
+        //         this._zuidafanshu.push(n);
+        //     }
+        // }
         //console.log(this._zuidafanshu);
-        
-        this._jushuxuanze = [];
-        var t = this.node.getChildByName("xuanzejushu");
-        for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
-            if(n != null){
-                this._jushuxuanze.push(n);
-            }
-        }
-        
-        this._dianganghua = [];
-        var t = this.node.getChildByName("dianganghua");
-        for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
-            if(n != null){
-                this._dianganghua.push(n);
-            }
-        }
         //console.log(this._jushuxuanze);
     },
     

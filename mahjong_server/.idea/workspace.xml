@@ -24,8 +24,8 @@
       <file leaf-file-name="gamemgr_xzdd.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_xzdd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="555" column="1" selection-start-line="555" selection-start-column="1" selection-end-line="555" selection-end-column="1" />
+            <state relative-caret-position="523">
+              <caret line="1877" column="2" selection-start-line="1877" selection-start-column="2" selection-end-line="1877" selection-end-column="2" />
               <folding>
                 <element signature="n#!!block;n#getMJType#0" expanded="false" />
                 <element signature="n#!!block;n#shuffle#0" expanded="false" />
@@ -57,35 +57,35 @@
                 <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
                 <element signature="n#!!block;n#calculateResult#0" expanded="false" />
                 <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-                <element signature="e#18261#19286#0" expanded="false" />
-                <element signature="e#19309#22008#0" expanded="false" />
-                <element signature="e#22095#22920#0" expanded="false" />
+                <element signature="e#18201#19226#0" expanded="false" />
+                <element signature="e#19249#21948#0" expanded="false" />
+                <element signature="e#22035#22860#0" expanded="false" />
                 <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
                 <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-                <element signature="e#23696#25668#0" expanded="false" />
+                <element signature="e#23636#25608#0" expanded="false" />
                 <element signature="n#!!block;n#store_single_history#0" expanded="false" />
                 <element signature="n#!!block;n#store_history#0" expanded="false" />
                 <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
                 <element signature="n#!!block;n#store_game#0" expanded="false" />
                 <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
                 <element signature="n#!!block;n#doGang#0" expanded="false" />
-                <element signature="e#30003#34205#0" expanded="false" />
-                <element signature="e#34256#37534#0" expanded="false" />
-                <element signature="e#37574#40318#0" expanded="false" />
-                <element signature="e#40352#42235#0" expanded="false" />
-                <element signature="e#40423#40497#0" expanded="false" />
-                <element signature="e#40587#40650#0" expanded="false" />
-                <element signature="e#42273#44948#0" expanded="false" />
-                <element signature="e#44987#45196#0" expanded="false" />
-                <element signature="e#45234#46959#0" expanded="false" />
-                <element signature="e#46991#53141#0" expanded="false" />
-                <element signature="e#53174#54775#0" expanded="false" />
-                <element signature="e#54813#55029#0" expanded="false" />
-                <element signature="e#55095#55278#0" expanded="false" />
-                <element signature="e#55330#55794#0" expanded="false" />
-                <element signature="e#55850#56380#0" expanded="false" />
+                <element signature="e#29938#34140#0" expanded="false" />
+                <element signature="e#34191#37469#0" expanded="false" />
+                <element signature="e#37509#40253#0" expanded="false" />
+                <element signature="e#40287#42170#0" expanded="false" />
+                <element signature="e#40358#40432#0" expanded="false" />
+                <element signature="e#40522#40585#0" expanded="false" />
+                <element signature="e#42208#44883#0" expanded="false" />
+                <element signature="e#44922#45131#0" expanded="false" />
+                <element signature="e#45169#46894#0" expanded="false" />
+                <element signature="e#46926#53076#0" expanded="false" />
+                <element signature="e#53109#54710#0" expanded="false" />
+                <element signature="e#54748#54964#0" expanded="false" />
+                <element signature="e#55030#55213#0" expanded="false" />
+                <element signature="e#55265#55729#0" expanded="false" />
+                <element signature="e#55785#56315#0" expanded="false" />
                 <element signature="n#!!block;n#update#0" expanded="false" />
-                <element signature="e#57085#57704#0" expanded="false" />
+                <element signature="e#57020#57639#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,11 +117,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mjutils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/mjutils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!block;n#matchSingle#0" expanded="false" />
+                <element signature="n#!!block;n#checkSingle#0" expanded="false" />
+                <element signature="n#!!block;n#checkCanHu#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="roommgr.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="-2412">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usermgr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/usermgr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-668">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -140,6 +174,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/majiang_server/app.js" />
         <option value="$PROJECT_DIR$/majiang_server/gamemgr_xzdd.js" />
       </list>
     </option>
@@ -202,6 +237,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahjong_server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,12 +357,12 @@
       <option name="presentableId" value="Default" />
       <updated>1489116793845</updated>
       <workItem from="1489116797037" duration="4704000" />
-      <workItem from="1489374519830" duration="32065000" />
+      <workItem from="1489374519830" duration="37245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36769000" />
+    <option name="totallyTimeSpent" value="41949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,7 +377,7 @@
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11140725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.337132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -386,35 +449,35 @@
             <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
             <element signature="n#!!block;n#calculateResult#0" expanded="false" />
             <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-            <element signature="e#18261#19286#0" expanded="false" />
-            <element signature="e#19309#22008#0" expanded="false" />
-            <element signature="e#22095#22920#0" expanded="false" />
+            <element signature="e#18201#19226#0" expanded="false" />
+            <element signature="e#19249#21948#0" expanded="false" />
+            <element signature="e#22035#22860#0" expanded="false" />
             <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
             <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-            <element signature="e#23696#25668#0" expanded="false" />
+            <element signature="e#23636#25608#0" expanded="false" />
             <element signature="n#!!block;n#store_single_history#0" expanded="false" />
             <element signature="n#!!block;n#store_history#0" expanded="false" />
             <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
             <element signature="n#!!block;n#store_game#0" expanded="false" />
             <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
             <element signature="n#!!block;n#doGang#0" expanded="false" />
-            <element signature="e#30003#34205#0" expanded="false" />
-            <element signature="e#34256#37534#0" expanded="false" />
-            <element signature="e#37574#40318#0" expanded="false" />
-            <element signature="e#40352#42235#0" expanded="false" />
-            <element signature="e#40423#40497#0" expanded="false" />
-            <element signature="e#40587#40650#0" expanded="false" />
-            <element signature="e#42273#44948#0" expanded="false" />
-            <element signature="e#44987#45196#0" expanded="false" />
-            <element signature="e#45234#46959#0" expanded="false" />
-            <element signature="e#46991#53141#0" expanded="false" />
-            <element signature="e#53174#54775#0" expanded="false" />
-            <element signature="e#54813#55029#0" expanded="false" />
-            <element signature="e#55095#55278#0" expanded="false" />
-            <element signature="e#55330#55794#0" expanded="false" />
-            <element signature="e#55850#56380#0" expanded="false" />
+            <element signature="e#29938#34140#0" expanded="false" />
+            <element signature="e#34191#37469#0" expanded="false" />
+            <element signature="e#37509#40253#0" expanded="false" />
+            <element signature="e#40287#42170#0" expanded="false" />
+            <element signature="e#40358#40432#0" expanded="false" />
+            <element signature="e#40522#40585#0" expanded="false" />
+            <element signature="e#42208#44883#0" expanded="false" />
+            <element signature="e#44922#45131#0" expanded="false" />
+            <element signature="e#45169#46894#0" expanded="false" />
+            <element signature="e#46926#53076#0" expanded="false" />
+            <element signature="e#53109#54710#0" expanded="false" />
+            <element signature="e#54748#54964#0" expanded="false" />
+            <element signature="e#55030#55213#0" expanded="false" />
+            <element signature="e#55265#55729#0" expanded="false" />
+            <element signature="e#55785#56315#0" expanded="false" />
             <element signature="n#!!block;n#update#0" expanded="false" />
-            <element signature="e#57085#57704#0" expanded="false" />
+            <element signature="e#57020#57639#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -427,10 +490,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.game_server.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/mjutils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#matchSingle#0" expanded="false" />
+            <element signature="n#!!block;n#checkSingle#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanHu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="-2412">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/usermgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-668">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/db_ddmj.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31356">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/http_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -459,18 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_xzdd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="555" column="1" selection-start-line="555" selection-start-column="1" selection-end-line="555" selection-end-column="1" />
+        <state relative-caret-position="523">
+          <caret line="1877" column="2" selection-start-line="1877" selection-start-column="2" selection-end-line="1877" selection-end-column="2" />
           <folding>
             <element signature="n#!!block;n#getMJType#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0" expanded="false" />
@@ -502,35 +633,35 @@
             <element signature="n#!!block;n#findUnTingedPlayers#0" expanded="false" />
             <element signature="n#!!block;n#calculateResult#0" expanded="false" />
             <element signature="n#!!block;n#doGameOver#0" expanded="false" />
-            <element signature="e#18261#19286#0" expanded="false" />
-            <element signature="e#19309#22008#0" expanded="false" />
-            <element signature="e#22095#22920#0" expanded="false" />
+            <element signature="e#18201#19226#0" expanded="false" />
+            <element signature="e#19249#21948#0" expanded="false" />
+            <element signature="e#22035#22860#0" expanded="false" />
             <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
             <element signature="n#!!block;n#recordGameAction#0" expanded="false" />
-            <element signature="e#23696#25668#0" expanded="false" />
+            <element signature="e#23636#25608#0" expanded="false" />
             <element signature="n#!!block;n#store_single_history#0" expanded="false" />
             <element signature="n#!!block;n#store_history#0" expanded="false" />
             <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
             <element signature="n#!!block;n#store_game#0" expanded="false" />
             <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
             <element signature="n#!!block;n#doGang#0" expanded="false" />
-            <element signature="e#30003#34205#0" expanded="false" />
-            <element signature="e#34256#37534#0" expanded="false" />
-            <element signature="e#37574#40318#0" expanded="false" />
-            <element signature="e#40352#42235#0" expanded="false" />
-            <element signature="e#40423#40497#0" expanded="false" />
-            <element signature="e#40587#40650#0" expanded="false" />
-            <element signature="e#42273#44948#0" expanded="false" />
-            <element signature="e#44987#45196#0" expanded="false" />
-            <element signature="e#45234#46959#0" expanded="false" />
-            <element signature="e#46991#53141#0" expanded="false" />
-            <element signature="e#53174#54775#0" expanded="false" />
-            <element signature="e#54813#55029#0" expanded="false" />
-            <element signature="e#55095#55278#0" expanded="false" />
-            <element signature="e#55330#55794#0" expanded="false" />
-            <element signature="e#55850#56380#0" expanded="false" />
+            <element signature="e#29938#34140#0" expanded="false" />
+            <element signature="e#34191#37469#0" expanded="false" />
+            <element signature="e#37509#40253#0" expanded="false" />
+            <element signature="e#40287#42170#0" expanded="false" />
+            <element signature="e#40358#40432#0" expanded="false" />
+            <element signature="e#40522#40585#0" expanded="false" />
+            <element signature="e#42208#44883#0" expanded="false" />
+            <element signature="e#44922#45131#0" expanded="false" />
+            <element signature="e#45169#46894#0" expanded="false" />
+            <element signature="e#46926#53076#0" expanded="false" />
+            <element signature="e#53109#54710#0" expanded="false" />
+            <element signature="e#54748#54964#0" expanded="false" />
+            <element signature="e#55030#55213#0" expanded="false" />
+            <element signature="e#55265#55729#0" expanded="false" />
+            <element signature="e#55785#56315#0" expanded="false" />
             <element signature="n#!!block;n#update#0" expanded="false" />
-            <element signature="e#57085#57704#0" expanded="false" />
+            <element signature="e#57020#57639#0" expanded="false" />
           </folding>
         </state>
       </provider>
