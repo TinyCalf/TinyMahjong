@@ -2,12 +2,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        //_difenxuanze:null,
-        // _zimo:null,
-        // _zuidafanshu:null,
-        // _jushuxuanze:null,
-        // _dianganghua:null,
-         
         _leixingxuanze:null,
         _koufei:null,
         _quanshu:null,
@@ -26,19 +20,19 @@ cc.Class({
             }
         }
         
-        this._koufen = [];
-        var t = this.node.getChildByName("koufen");
+        this._koufei = [];
+        var t = this.node.getChildByName("koufei");
         for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("CheckBox");
+            var n = t.children[i].getComponent("RadioButton");
             if(n != null){
-                this._koufen.push(n);
+                this._koufei.push(n);
             }
         }
         
         this._quanshu = [];
         var t = this.node.getChildByName("quanshu");
         for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("CheckBox");
+            var n = t.children[i].getComponent("RadioButton");
             if(n != null){
                 this._quanshu.push(n);
             }
@@ -47,7 +41,7 @@ cc.Class({
         this._jiesuan = [];
         var t = this.node.getChildByName("jiesuan");
         for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("CheckBox");
+            var n = t.children[i].getComponent("RadioButton");
             if(n != null){
                 this._jiesuan.push(n);
             }
@@ -62,57 +56,7 @@ cc.Class({
             }
         }
         
-        // this._dianganghua = [];
-        // var t = this.node.getChildByName("dianganghua");
-        // for(var i = 0; i < t.childrenCount; ++i){
-        //     var n = t.children[i].getComponent("RadioButton");
-        //     if(n != null){
-        //         this._dianganghua.push(n);
-        //     }
-        // }
-        
-        // this._jushuxuanze = [];
-        // var t = this.node.getChildByName("xuanzejushu");
-        // for(var i = 0; i < t.childrenCount; ++i){
-        //     var n = t.children[i].getComponent("RadioButton");
-        //     if(n != null){
-        //         this._jushuxuanze.push(n);
-        //     }
-        // }
-        
-        // this._difenxuanze = [];
-        // var t = this.node.getChildByName("difenxuanze");
-        // for(var i = 0; i < t.childrenCount; ++i){
-        //     var n = t.children[i].getComponent("RadioButton");
-        //     if(n != null){
-        //         this._difenxuanze.push(n);
-        //     }
-        // }
-        //console.log(this._difenxuanze);
-        
-        // this._zimo = [];
-        // var t = this.node.getChildByName("zimojiacheng");
-        // for(var i = 0; i < t.childrenCount; ++i){
-        //     var n = t.children[i].getComponent("RadioButton");
-        //     if(n != null){
-        //         this._zimo.push(n);
-        //     }
-        // }
-        //console.log(this._zimo);
-        
-        
-        //console.log(this._wanfaxuanze);
-        
-        // this._zuidafanshu = [];
-        // var t = this.node.getChildByName("zuidafanshu");
-        // for(var i = 0; i < t.childrenCount; ++i){
-        //     var n = t.children[i].getComponent("RadioButton");
-        //     if(n != null){
-        //         this._zuidafanshu.push(n);
-        //     }
-        // }
-        //console.log(this._zuidafanshu);
-        //console.log(this._jushuxuanze);
+       
     },
     
     onBtnBack:function(){
@@ -141,27 +85,8 @@ cc.Class({
                 cc.vv.gameNetMgr.connectGameServer(ret);
             }
         };
-        
-        var difen = 0;
-        for(var i = 0; i < self._difenxuanze.length; ++i){
-            if(self._difenxuanze[i].checked){
-                difen = i;
-                break;
-            }
-        }
-        
-        var zimo = 0;
-        for(var i = 0; i < self._zimo.length; ++i){
-            if(self._zimo[i].checked){
-                zimo = i;
-                break;
-            }     
-        }
 
-        var huansanzhang = self._wanfaxuanze[0].checked;        
-        var jiangdui = self._wanfaxuanze[1].checked;
-        var menqing = self._wanfaxuanze[2].checked;
-        var tiandihu = self._wanfaxuanze[3].checked;
+        var hongzhongdanghua = self._wanfaxuanze[0].checked;     
         
         var type = 0;
         for(var i = 0; i < self._leixingxuanze.length; ++i){
@@ -171,50 +96,50 @@ cc.Class({
             }     
         }
         
+        //TODO：把三种游戏的不同类型加上
         // if(type == 0){
-        //     type = "xzdd";
+        //     type = "sjmmj";
+        // }
+        // else if(type == 1){
+        //     type = "dhmj";
         // }
         // else{
-        //     type = "xlch";
+        //     type = "tdh";
         // }
         type= "xzdd";
         
-        var zuidafanshu = 0;
-        for(var i = 0; i < self._zuidafanshu.length; ++i){
-            if(self._zuidafanshu[i].checked){
-                zuidafanshu = i;
+
+        
+        var koufei = 0;
+        for(var i = 0; i < self._koufei.length; ++i){
+            if(self._koufei[i].checked){
+                koufei = i;
                 break;
             }     
         }
         
-        
-        var jushuxuanze = 0;
-        for(var i = 0; i < self._jushuxuanze.length; ++i){
-            if(self._jushuxuanze[i].checked){
-                jushuxuanze = i;
+        var quanshu = 0;
+        for(var i = 0; i < self._quanshu.length; ++i){
+            if(self._quanshu[i].checked){
+                quanshu = i;
                 break;
             }     
         }
         
-        var dianganghua = 0;
-        for(var i = 0; i < self._dianganghua.length; ++i){
-            if(self._dianganghua[i].checked){
-                dianganghua = i;
+        var jiesuan = 0;
+        for(var i = 0; i < self._jiesuan.length; ++i){
+            if(self._jiesuan[i].checked){
+                jiesuan = i;
                 break;
             }     
         }
         
         var conf = {
             type:type,
-            difen:difen,
-            zimo:zimo,
-            jiangdui:jiangdui,
-            huansanzhang:huansanzhang,
-            zuidafanshu:zuidafanshu,
-            jushuxuanze:jushuxuanze,
-            dianganghua:dianganghua,
-            menqing:menqing,
-            tiandihu:tiandihu,   
+            hongzhongdanghua: hongzhongdanghua,
+            koufei:koufei,
+            quanshu:quanshu,
+            jiesuan:jiesuan
         }; 
         
         var data = {
@@ -227,8 +152,4 @@ cc.Class({
         cc.vv.http.sendRequest("/create_private_room",data,onCreate);   
     }
 
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 });

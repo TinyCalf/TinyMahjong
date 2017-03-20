@@ -113,6 +113,8 @@ app.get('/create_user',function(req,res){
 });
 
 app.get('/create_private_room',function(req,res){
+
+	
 	//验证参数合法性
 	var data = req.query;
 	//验证玩家身份
