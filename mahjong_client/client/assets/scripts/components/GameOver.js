@@ -28,11 +28,10 @@ cc.Class({
         if(cc.vv.gameNetMgr.conf == null){
             return;
         }
-        if(cc.vv.gameNetMgr.conf.type == "xzdd"){
+        //TODO:可能出现不同的计分板
+        if(1){
+        //if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
             this._gameover = this.node.getChildByName("game_over");
-        }
-        else{
-            this._gameover = this.node.getChildByName("game_over_xlch");
         }
         
         for(var n = 0; n < 4; n++){

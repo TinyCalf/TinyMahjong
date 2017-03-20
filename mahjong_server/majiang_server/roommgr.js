@@ -6,9 +6,13 @@ var creatingRooms = {};
 var userLocation = {};
 var totalRooms = 0;
 
-var DI_FEN = [1,2,5];
-var MAX_FAN = [3,4,5];
-var JU_SHU = [4,8];
+var KOUFEI = [0,1]; // 房主出资 和 玩家平分
+var QUANSHU = [0,1]; // 8局 和 一圈 TODO:区分
+var JIESUAN = [0,1,2]; //幺半 一二 二四
+
+
+
+var JU_SHU = [8,8];	// 8局 和 一圈 TODO:区分
 var JU_SHU_COST = [2,3];
 
 function generateRoomId(){
@@ -68,44 +72,36 @@ function constructRoomFromDb(dbdata){
 exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	if(
 		roomConf.type == null
-		|| roomConf.difen == null
-		|| roomConf.zimo == null
-		|| roomConf.jiangdui == null
-		|| roomConf.huansanzhang == null
-		|| roomConf.zuidafanshu == null
-		|| roomConf.jushuxuanze == null
-		|| roomConf.dianganghua == null
-		|| roomConf.menqing == null
-		|| roomConf.tiandihu == null){
+		|| roomConf.hongzhongdanghua == null
+		|| roomConf.koufei == null
+		|| roomConf.quanshu == null
+		|| roomConf.jiesuan == null){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.difen < 0 || roomConf.difen > DI_FEN.length){
+
+
+	if(roomConf.koufei < 0 || roomConf.zimo > KOUFEI.length){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.zimo < 0 || roomConf.zimo > 2){
+	if(roomConf.quanshu < 0 || roomConf.zimo > QUANSHU.length){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.zuidafanshu < 0 || roomConf.zuidafanshu > MAX_FAN.length){
+	if(roomConf.jiesuan < 0 || roomConf.zimo > JIESUAN.length){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.jushuxuanze < 0 || roomConf.jushuxuanze > JU_SHU.length){
-		callback(1,null);
-		return;
-	}
-	
-	var cost = JU_SHU_COST[roomConf.jushuxuanze];
-	if(cost > gems){
-		callback(2222,null);
-		return;
-	}
+	// var cost = JU_SHU_COST[roomConf.jushuxuanze];
+	// if(cost > gems){
+	// 	callback(2222,null);
+	// 	return;
+	// }
 
 	var fnCreate = function(){
 		var roomId = generateRoomId();
@@ -131,24 +127,26 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						seats:[],
 						conf:{
 							type:roomConf.type,
-							baseScore:DI_FEN[roomConf.difen],
-						    zimo:roomConf.zimo,
-						    jiangdui:roomConf.jiangdui,
-						    hsz:roomConf.huansanzhang,
-						    dianganghua:parseInt(roomConf.dianganghua),
-						    menqing:roomConf.menqing,
-						    tiandihu:roomConf.tiandihu,
-						    maxFan:MAX_FAN[roomConf.zuidafanshu],
-						    maxGames:JU_SHU[roomConf.jushuxuanze],
+							hongzhongdanghua:roomConf.hongzhongdanghua,
+							koufei:roomConf.koufei,
+							quanshu:roomConf.quanshu,
+							jiesuan:roomConf.jiesuan,
+
+							//TODO:把下面的属性也去掉
+							baseScore:20,
+						    maxFan:10000,
+						    maxGames:8,
 						    creator:creator,
 						}
 					};
 					
-					if(roomConf.type == "xlch"){
-						roomInfo.gameMgr = require("./gamemgr_xlch");
+					if(roomConf.type == "sjmmj"){
+						roomInfo.gameMgr = require("./gamemgr_sjmmj");
 					}
-					else{
-						roomInfo.gameMgr = require("./gamemgr_xzdd");
+					else if(roomConf.type == "dhmj"){
+						roomInfo.gameMgr = require("./gamemgr_dhmj");
+					}else {
+						roomInfo.gameMgr = require("./gamemgr_tdh");
 					}
 					console.log(roomInfo.conf);
 					

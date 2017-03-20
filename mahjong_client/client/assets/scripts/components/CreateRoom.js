@@ -97,16 +97,16 @@ cc.Class({
         }
         
         //TODO：把三种游戏的不同类型加上
-        // if(type == 0){
-        //     type = "sjmmj";
-        // }
-        // else if(type == 1){
-        //     type = "dhmj";
-        // }
-        // else{
-        //     type = "tdh";
-        // }
-        type= "xzdd";
+        if(type == 0){
+            type = "sjmmj";
+        }
+        else if(type == 1){
+            type = "dhmj";
+        }
+        else{
+            type = "tdh";
+        }
+        //type= "xzdd";
         
 
         

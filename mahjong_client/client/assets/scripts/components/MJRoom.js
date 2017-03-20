@@ -6,15 +6,6 @@ cc.Class({
             default:null,
             type:cc.Label
         },
-        // foo: {
-        //    default: null,
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
         _seats:[],
         _seats2:[],
         _timeLabel:null,
@@ -67,12 +58,12 @@ cc.Class({
         }
         
         if(cc.vv.gameNetMgr.conf){
-            var type = cc.vv.gameNetMgr.conf.type;
-            if(type == null || type == ""){
-                type = "xzdd";
-            }
-            
-            titles.getChildByName(type).active = true;   
+            //TODO:换成相应字样
+            // var type = cc.vv.gameNetMgr.conf.type;
+            // if(type == null || type == ""){
+            //     type = "xzdd";
+            // }
+            // titles.getChildByName(type).active = true;   
         }
     },
     

@@ -73480,8 +73480,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 141,
-      "height": 77
+      "width": 134,
+      "height": 71
     },
     "_children": [],
     "_rotationX": 0,
@@ -73558,7 +73558,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 135,
+      "width": 126,
       "height": 72
     },
     "_children": [],
@@ -73636,7 +73636,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 139,
+      "width": 131,
       "height": 72
     },
     "_children": [],
