@@ -82,11 +82,12 @@ cc.Class({
     },
     
     onGameOver(data){
-        if(cc.vv.gameNetMgr.conf.type == "xzdd"){
+        //TODO:多种判定
+        if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
             this.onGameOver_XZDD(data);
         }
         else{
-            this.onGameOver_XLCH(data);
+            this.onGameOver_XZDD(data);
         }
     },
     
