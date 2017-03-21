@@ -7,7 +7,7 @@ var userLocation = {};
 var totalRooms = 0;
 
 var KOUFEI = [0,1]; // 房主出资 和 玩家平分
-var QUANSHU = [0,1]; // 8局 和 一圈 TODO:区分
+var QUANSHU = [8,1]; // 8局 和 一圈 TODO:区分
 var JIESUAN = [0,1,2]; //幺半 一二 二四
 
 
@@ -102,6 +102,8 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	// 	callback(2222,null);
 	// 	return;
 	// }
+	var maxgames = 0;
+	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 4;
 
 	var fnCreate = function(){
 		var roomId = generateRoomId();
@@ -131,19 +133,19 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 							koufei:roomConf.koufei,
 							quanshu:roomConf.quanshu,
 							jiesuan:roomConf.jiesuan,
+							maxGames:maxgames,
 
 							//TODO:把下面的属性也去掉
 							baseScore:20,
 						    maxFan:10000,
-						    maxGames:8,
+
 						    creator:creator,
 						}
 					};
 					
 					if(roomConf.type == "sjmmj"){
 						roomInfo.gameMgr = require("./gamemgr_sjmmj");
-					}
-					else if(roomConf.type == "dhmj"){
+					}else if(roomConf.type == "dhmj"){
 						roomInfo.gameMgr = require("./gamemgr_dhmj");
 					}else {
 						roomInfo.gameMgr = require("./gamemgr_tdh");

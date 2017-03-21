@@ -96,13 +96,24 @@ function mopai(game,seatIndex) {
     var pai = game.mahjongs[game.currentIndex];
     data.mopais.push(pai);
     //补花
-    while ( pai >= 34 && pai < 42) {
-        game.gameSeats[seatIndex].huas.push(pai);
-        //通知有人抓到花
-        userMgr.broacastInRoom('gethua_notify_push',{userid:data.userId,pai:pai},data.userId,true);
-        game.currentIndex ++;
-        pai = game.mahjongs[game.currentIndex];
-        data.mopais.push(pai);
+    if(!game.conf.hongzhongdanghua) {
+        while (pai >= 34 && pai < 42) {
+            game.gameSeats[seatIndex].huas.push(pai);
+            //通知有人抓到花
+            userMgr.broacastInRoom('gethua_notify_push', {userid: data.userId, pai: pai}, data.userId, true);
+            game.currentIndex++;
+            pai = game.mahjongs[game.currentIndex];
+            data.mopais.push(pai);
+        }
+    }else{
+        while (pai >= 34 && pai < 42 || pai == 27) {
+            game.gameSeats[seatIndex].huas.push(pai);
+            //通知有人抓到花
+            userMgr.broacastInRoom('gethua_notify_push', {userid: data.userId, pai: pai}, data.userId, true);
+            game.currentIndex++;
+            pai = game.mahjongs[game.currentIndex];
+            data.mopais.push(pai);
+        }
     }
     mahjongs.push(pai);
 
@@ -671,38 +682,6 @@ function isGangShangHua (seatData) {
  *
  * ********************************************************************/
 
-function computeFanScore(game,fan){
-    if(fan > game.conf.maxFan){
-        fan = game.conf.maxFan;
-    }
-    return (1 << fan) * game.conf.baseScore;
-}
-
-function findMaxFanTingPai(ts){
-    //找出最大番
-    var cur = null;
-    for(var k in ts.tingMap){
-        var tpai = ts.tingMap[k];
-        if(cur == null || tpai.fan > cur.fan){
-            cur = tpai;
-        }
-    }
-    return cur;
-}
-
-function findUnTingedPlayers(game){
-    var arr = [];
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        var ts = game.gameSeats[i];
-        //如果没有胡，且没有听牌
-        if(!ts.hued && !isTinged(ts)){
-            arr.push(i);
-            recordUserAction(game,ts,"beichadajiao",-1);
-        }
-    }
-    return arr;
-}
-
 function calculateResult(game){
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
@@ -864,8 +843,19 @@ function doGameOver(game,userId,forceEnd){
         //     roomInfo.nextButton = (game.turn + 1) % 4;
         // }
         //沈家门庄家逻辑 庄家不赢就给下一家坐庄。
-        if (game.firstHupai != old){
-            roomInfo.nextButton = (old+1)%4;
+        var quanshu = game.conf.quanshu;
+        //如果打一圈：
+        if(quanshu==1) {
+            if (game.firstHupai != old) {
+                roomInfo.nextButton = (old + 1) % 4;
+                roomInfo.numOfGames++;
+            }
+        }
+        //如果打8局
+        else if(quanshu==0){
+            if (game.firstHupai != old) {
+                roomInfo.nextButton = (old + 1) % 4;
+            }
             roomInfo.numOfGames++;
         }
 
@@ -1303,13 +1293,7 @@ exports.begin = function(roomId) {
     console.log(game.gameSeats[2].huas);
     console.log(game.gameSeats[3].huas);
 
-    
-
     var numOfMJ = game.mahjongs.length - game.currentIndex;
-    var huansanzhang = roomInfo.conf.hsz;
-
-    
-
 
     for(var i = 0; i < seats.length; ++i){
         //开局时，通知前端必要的数据
