@@ -10,8 +10,8 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "com.vivigames.scmj",
+  "packageName": "com.deepblue.zsmj",
   "startScene": "4a1acad9-ce88-4334-aa62-bf23a5ccc79e",
-  "title": "DDMJ",
+  "title": "ZSMJ",
   "webOrientation": "landscape"
 }

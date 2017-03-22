@@ -1,7 +1,9 @@
-//var URL = "http://139.129.247.226:9000";
-//var URL = "http://120.24.181.145:9000";
-//var URL = "http://120.24.59.70:9000";
-var URL = "http://192.168.1.121:9000";
+//local
+//var URL = "http://192.168.1.121:9000";
+//DEV SERVER
+var URL = "http://139.219.224.143:9000";
+//FORMAL SERVER
+//var URL = "http://192.168.1.121:9000";
 
 cc.VERSION = 20161227;
 var HTTP = cc.Class({

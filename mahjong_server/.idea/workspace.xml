@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gamemgr_sjmmj.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gamemgr_sjmmj.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="18">
               <caret line="858" column="34" selection-start-line="858" selection-start-column="34" selection-end-line="858" selection-end-column="34" />
               <folding>
                 <element signature="n#!!block;n#getMJType#0" expanded="false" />
@@ -100,10 +100,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="configs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/configs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="roommgr.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="1494">
               <caret line="133" column="35" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="35" />
               <folding>
                 <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
@@ -144,6 +154,7 @@
         <option value="$PROJECT_DIR$/majiang_server/usermgr.js" />
         <option value="$PROJECT_DIR$/majiang_server/roommgr.js" />
         <option value="$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js" />
+        <option value="$PROJECT_DIR$/configs.js" />
       </list>
     </option>
   </component>
@@ -188,6 +199,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,8 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,12 +324,13 @@
       <workItem from="1489116797037" duration="4704000" />
       <workItem from="1489374519830" duration="37245000" />
       <workItem from="1489993918006" duration="6769000" />
-      <workItem from="1490061411726" duration="3499000" />
+      <workItem from="1490061411726" duration="4097000" />
+      <workItem from="1490084793263" duration="143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52217000" />
+    <option name="totallyTimeSpent" value="52958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,10 +342,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1186" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1186" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15298508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.337132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -370,6 +382,103 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/majiang_server/socket_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="171" column="11" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
+          <folding>
+            <element signature="e#368#2727#0" expanded="false" />
+            <element signature="e#2765#2962#0" expanded="false" />
+            <element signature="e#3009#3384#0" expanded="false" />
+            <element signature="e#3431#3548#0" expanded="false" />
+            <element signature="e#3594#3710#0" expanded="false" />
+            <element signature="e#3755#3846#0" expanded="false" />
+            <element signature="e#3891#4207#0" expanded="false" />
+            <element signature="e#4249#4448#0" expanded="false" />
+            <element signature="e#4491#4580#0" expanded="false" />
+            <element signature="e#4640#4730#0" expanded="false" />
+            <element signature="e#4776#4957#0" expanded="false" />
+            <element signature="e#5011#5188#0" expanded="false" />
+            <element signature="e#5241#5422#0" expanded="false" />
+            <element signature="e#5469#5641#0" expanded="false" />
+            <element signature="e#5710#6228#0" expanded="false" />
+            <element signature="e#6280#6756#0" expanded="false" />
+            <element signature="e#6814#7479#0" expanded="false" />
+            <element signature="e#7526#8223#0" expanded="false" />
+            <element signature="e#8271#8591#0" expanded="false" />
+            <element signature="e#8643#8909#0" expanded="false" />
+            <element signature="e#8953#9082#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#getMJType#0" expanded="false" />
+            <element signature="n#!!block;n#shuffle#0" expanded="false" />
+            <element signature="n#!!block;n#mopai#0" expanded="false" />
+            <element signature="n#!!block;n#deal#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanDianGang#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanAnGang#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanWanGang#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanHu#0" expanded="false" />
+            <element signature="n#!!block;n#clearAllOptions#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanTingPai#0" expanded="false" />
+            <element signature="n#!!block;n#getSeatIndex#0" expanded="false" />
+            <element signature="n#!!block;n#getGameByUserID#0" expanded="false" />
+            <element signature="n#!!block;n#hasOperations#0" expanded="false" />
+            <element signature="n#!!block;n#sendOperations#0" expanded="false" />
+            <element signature="n#!!block;n#moveToNextUser#0" expanded="false" />
+            <element signature="n#!!block;n#doUserMoPai#0" expanded="false" />
+            <element signature="n#!!block;n#isQingYiSe#0" expanded="false" />
+            <element signature="n#!!block;n#isHunYiSe#0" expanded="false" />
+            <element signature="n#!!block;n#isTinged#0" expanded="false" />
+            <element signature="n#!!block;n#isPaiHu#0" expanded="false" />
+            <element signature="n#!!block;n#isDuiDuiHu#0" expanded="false" />
+            <element signature="n#!!block;n#isGangShangHua#0" expanded="false" />
+            <element signature="n#!!block;n#calculateResult#0" expanded="false" />
+            <element signature="n#!!block;n#recordUserAction#0" expanded="false" />
+            <element signature="e#23701#25673#0" expanded="false" />
+            <element signature="n#!!block;n#store_single_history#0" expanded="false" />
+            <element signature="n#!!block;n#store_history#0" expanded="false" />
+            <element signature="n#!!block;n#construct_game_base_info#0" expanded="false" />
+            <element signature="n#!!block;n#store_game#0" expanded="false" />
+            <element signature="n#!!block;n#checkCanQiangGang#0" expanded="false" />
+            <element signature="n#!!block;n#doGang#0" expanded="false" />
+            <element signature="e#30145#30588#0" expanded="false" />
+            <element signature="e#30651#32391#0" expanded="false" />
+            <element signature="e#42218#44893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1494">
+          <caret line="133" column="35" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
+            <element signature="n#!!block;n#constructRoomFromDb#0" expanded="false" />
+            <element signature="e#3963#4266#0" expanded="false" />
+            <element signature="e#4302#4325#0" expanded="false" />
+            <element signature="e#4361#4387#0" expanded="false" />
+            <element signature="e#4433#4550#0" expanded="false" />
+            <element signature="e#4614#5430#0" expanded="false" />
+            <element signature="e#5474#5759#0" expanded="false" />
+            <element signature="e#5795#6080#0" expanded="false" />
+            <element signature="e#6121#6228#0" expanded="false" />
+            <element signature="e#6269#6417#0" expanded="false" />
+            <element signature="e#6457#6482#0" expanded="false" />
+            <element signature="e#6520#7066#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/socket_service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -449,14 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="e#360#662#0" expanded="false" />
-            <element signature="e#710#1274#0" expanded="false" />
-            <element signature="e#2060#2808#0" expanded="false" />
-            <element signature="e#2845#2977#0" expanded="false" />
-            <element signature="e#3024#3387#0" expanded="false" />
-            <element signature="n#!!block;n#update#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -467,7 +568,6 @@
           <folding>
             <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
             <element signature="n#!!block;n#constructRoomFromDb#0" expanded="false" />
-            <element signature="e#1420#3926#0" expanded="false" />
             <element signature="e#3963#4266#0" expanded="false" />
             <element signature="e#4302#4325#0" expanded="false" />
             <element signature="e#4361#4387#0" expanded="false" />
@@ -487,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -507,7 +606,6 @@
           <folding>
             <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
             <element signature="n#!!block;n#constructRoomFromDb#0" expanded="false" />
-            <element signature="e#1420#3926#0" expanded="false" />
             <element signature="e#3963#4266#0" expanded="false" />
             <element signature="e#4302#4325#0" expanded="false" />
             <element signature="e#4361#4387#0" expanded="false" />
@@ -527,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -546,7 +643,6 @@
           <folding>
             <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
             <element signature="n#!!block;n#constructRoomFromDb#0" expanded="false" />
-            <element signature="e#1420#3926#0" expanded="false" />
             <element signature="e#3963#4266#0" expanded="false" />
             <element signature="e#4302#4325#0" expanded="false" />
             <element signature="e#4361#4387#0" expanded="false" />
@@ -580,13 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -631,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,14 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="e#360#662#0" expanded="false" />
-            <element signature="e#710#1274#0" expanded="false" />
-            <element signature="e#2060#2808#0" expanded="false" />
-            <element signature="e#2845#2977#0" expanded="false" />
-            <element signature="e#3024#3387#0" expanded="false" />
-            <element signature="n#!!block;n#update#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
+        <state relative-caret-position="1494">
           <caret line="133" column="35" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="35" />
           <folding>
             <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
@@ -704,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="18">
           <caret line="858" column="34" selection-start-line="858" selection-start-column="34" selection-end-line="858" selection-end-column="34" />
           <folding>
             <element signature="n#!!block;n#getMJType#0" expanded="false" />
@@ -744,6 +824,14 @@
             <element signature="e#30651#32391#0" expanded="false" />
             <element signature="e#42218#44893#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
