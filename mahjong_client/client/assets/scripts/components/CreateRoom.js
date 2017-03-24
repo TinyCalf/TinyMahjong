@@ -150,6 +150,32 @@ cc.Class({
         console.log(data);
         cc.vv.wc.show("正在创建房间");
         cc.vv.http.sendRequest("/create_private_room",data,onCreate);   
+    },
+    
+    //点击沈家门麻将
+    onSJMMJClicked:function(event){
+        return;
+    },
+    
+    //点击定海麻将
+    onDHMJClicked:function(event){
+        console.log("onDHMJClicked");
+        var jiesuan = this.node.getChildByName("jiesuan");
+        for(var i=1 ; i<4 ; i++ ) {
+            jiesuan.children[i].active = false;
+        }
+        for(var i=4; i<6 ; i++) {
+            jiesuan.children[i].active = true;
+        }
+        jiesuan.children[4].checked = true;
+        
+        this.node.getChildByName("wanfaxuanze").active = false;
+        this.node.getChildByName("wanfaxuanze").children[1].getComponent("CheckBox").check= false;
+    },
+    
+    //点击推到胡门麻将
+    onTDHClicked:function(event){
+        
     }
 
 });
