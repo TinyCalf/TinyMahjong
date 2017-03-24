@@ -7,21 +7,59 @@ cc.Class({
         _quanshu:null,
         _jiesuan:null,
         _wanfaxuanze:null,
+        _types:[],//定义多种游戏类型 
     },
 
     // use this for initialization
     onLoad: function () {
-        this._leixingxuanze = [];
-        var t = this.node.getChildByName("leixingxuanze");
-        for(var i = 0; i < t.childrenCount; ++i){
-            var n = t.children[i].getComponent("RadioButton");
-            if(n != null){
-                this._leixingxuanze.push(n);
-            }
+        //有多种玩法，沈家门麻将 定海麻将 推到胡麻将
+        this._types = ["SJMMJ","DHMJ","TDH"];
+        
+        //隐藏除第一种外的其他玩法 界面
+        for(var i = 1 ; i < this._types.length ; i++) {
+            this.node.getChildByName(this._types[i]).active = false;
         }
+    },
+    
+    onBtnBack:function(){
+        this.node.active = false;
+    },
+    
+    onBtnOK:function(event){
+        this.node.active = false;
+        //确定游戏类型
+        var type = event.target.parent.name;
+        //分别进入不同的创建逻辑
+        //TODO：让添加一个游戏和规则更加方便
+        if(type=="SJMMJ"){
+            this.createRoomSJMMJ();
+        }else if(type=="DHMJ"){
+            //this.createRoomDHMJ();
+        }else if(type=="TDH"){
+            //this.createRoomTDH();
+        }
+    },
+    
+    onTypeClicked:function(event){
+        this.switchType(event.target.parent.children[1].name);
+    },
+    
+    //tab界面切换
+    switchType:function(type) {
+        for(var i = 0 ; i < this._types.length ; i++) {
+            this.node.getChildByName(this._types[i]).active = false;
+        }
+        this.node.getChildByName(type).active = true;
+    },
+
+    createRoomSJMMJ:function(){
+        
+        //获取需要的所有选项
+        
+        var type = "SJMMJ";
         
         this._koufei = [];
-        var t = this.node.getChildByName("koufei");
+        var t = this.node.getChildByName(type).getChildByName("koufei");
         for(var i = 0; i < t.childrenCount; ++i){
             var n = t.children[i].getComponent("RadioButton");
             if(n != null){
@@ -30,7 +68,7 @@ cc.Class({
         }
         
         this._quanshu = [];
-        var t = this.node.getChildByName("quanshu");
+        var t = this.node.getChildByName(type).getChildByName("quanshu");
         for(var i = 0; i < t.childrenCount; ++i){
             var n = t.children[i].getComponent("RadioButton");
             if(n != null){
@@ -39,7 +77,7 @@ cc.Class({
         }
         
         this._jiesuan = [];
-        var t = this.node.getChildByName("jiesuan");
+        var t = this.node.getChildByName(type).getChildByName("jiesuan");
         for(var i = 0; i < t.childrenCount; ++i){
             var n = t.children[i].getComponent("RadioButton");
             if(n != null){
@@ -48,7 +86,7 @@ cc.Class({
         }
         
         this._wanfaxuanze = [];
-        var t = this.node.getChildByName("wanfaxuanze");
+        var t = this.node.getChildByName(type).getChildByName("wanfaxuanze");
         for(var i = 0; i < t.childrenCount; ++i){
             var n = t.children[i].getComponent("CheckBox");
             if(n != null){
@@ -56,19 +94,7 @@ cc.Class({
             }
         }
         
-       
-    },
-    
-    onBtnBack:function(){
-        this.node.active = false;
-    },
-    
-    onBtnOK:function(){
-        this.node.active = false;
-        this.createRoom();
-    },
-    
-    createRoom:function(){
+
         var self = this;
         var onCreate = function(ret){
             if(ret.errcode !== 0){
@@ -87,28 +113,6 @@ cc.Class({
         };
 
         var hongzhongdanghua = self._wanfaxuanze[0].checked;     
-        
-        var type = 0;
-        for(var i = 0; i < self._leixingxuanze.length; ++i){
-            if(self._leixingxuanze[i].checked){
-                type = i;
-                break;
-            }     
-        }
-        
-        //TODO：把三种游戏的不同类型加上
-        if(type == 0){
-            type = "sjmmj";
-        }
-        else if(type == 1){
-            type = "dhmj";
-        }
-        else{
-            type = "tdh";
-        }
-        //type= "xzdd";
-        
-
         
         var koufei = 0;
         for(var i = 0; i < self._koufei.length; ++i){
@@ -152,30 +156,9 @@ cc.Class({
         cc.vv.http.sendRequest("/create_private_room",data,onCreate);   
     },
     
-    //点击沈家门麻将
-    onSJMMJClicked:function(event){
-        return;
-    },
     
-    //点击定海麻将
-    onDHMJClicked:function(event){
-        console.log("onDHMJClicked");
-        var jiesuan = this.node.getChildByName("jiesuan");
-        for(var i=1 ; i<4 ; i++ ) {
-            jiesuan.children[i].active = false;
-        }
-        for(var i=4; i<6 ; i++) {
-            jiesuan.children[i].active = true;
-        }
-        jiesuan.children[4].checked = true;
-        
-        this.node.getChildByName("wanfaxuanze").active = false;
-        this.node.getChildByName("wanfaxuanze").children[1].getComponent("CheckBox").check= false;
-    },
+
     
-    //点击推到胡门麻将
-    onTDHClicked:function(event){
-        
-    }
+    
 
 });
