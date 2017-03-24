@@ -680,7 +680,7 @@ function isGangShangHua (seatData) {
  *
  *
  *
- * ********************************************************************/
+ * ******************************************************************/
 
 function calculateResult(game){
     var baseScore = game.conf.baseScore;
@@ -844,18 +844,33 @@ function doGameOver(game,userId,forceEnd){
         // }
         //沈家门庄家逻辑 庄家不赢就给下一家坐庄。
         var quanshu = game.conf.quanshu;
+        //判断有没有打完一个风向，打完则改变风向
+
         //如果打一圈：
+        console.log("开始dogameover");
+        console.log(old);
+        console.log(roomInfo.nextButton);
+        console.log(game.firstHupai);
         if(quanshu==1) {
+            console.log("圈数1");
             if (game.firstHupai != old) {
                 roomInfo.nextButton = (old + 1) % 4;
-                roomInfo.numOfGames++;
+                if(roomInfo.nextButton==0){
+                    roomInfo.fengxiang = (roomInfo.quan+1)%4;
+                    roomInfo.numOfGames++;
+                }
             }
+
         }
         //如果打8局
         else if(quanshu==0){
             if (game.firstHupai != old) {
                 roomInfo.nextButton = (old + 1) % 4;
+                if(roomInfo.nextButton==0){
+                    roomInfo.fengxiang = (roomInfo.quan+1)%4;
+                }
             }
+
             roomInfo.numOfGames++;
         }
 
@@ -1111,7 +1126,6 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
     for(var i = 0; i < numOfCnt; ++i){
         var index = seatData.holds.indexOf(pai);
         if(index == -1){
-            console.log(seatData.holds);
             console.log("can't find mj.");
             return;
         }
@@ -1288,10 +1302,6 @@ exports.begin = function(roomId) {
     shuffle(game);
     //发牌
     deal(game);
-    console.log(game.gameSeats[0].huas);
-    console.log(game.gameSeats[1].huas);
-    console.log(game.gameSeats[2].huas);
-    console.log(game.gameSeats[3].huas);
 
     var numOfMJ = game.mahjongs.length - game.currentIndex;
 
@@ -1312,7 +1322,6 @@ exports.begin = function(roomId) {
 
     //
     var seatData = gameSeatsOfUsers[seats[1].userId];
-    console.log(seatData);
     construct_game_base_info(game);
     userMgr.broacastInRoom('game_playing_push',null,seatData.userId,true);
 
@@ -1504,7 +1513,6 @@ exports.chuPai = function(userId,pai){
     }
 
     if(hasOperations(seatData)){
-        console.log(seatData);
         console.log('plz guo before you chupai.');
         return;
     }
@@ -1512,7 +1520,6 @@ exports.chuPai = function(userId,pai){
     //从此人牌中扣除
     var index = seatData.holds.indexOf(pai);
     if(index == -1){
-        console.log("holds:" + seatData.holds);
         console.log("can't find mj." + pai);
         return;
     }
@@ -1558,7 +1565,6 @@ exports.chuPai = function(userId,pai){
         checkCanPeng(game,ddd,pai);
         checkCanDianGang(game,ddd,pai);
         checkCanChi(game,ddd,pai);
-        console.log("判断是否有动作"+pai);
         if(hasOperations(ddd)){
             sendOperations(game,ddd,game.chuPai);
             hasActions = true;    
@@ -1626,8 +1632,6 @@ exports.peng = function(userId){
     var pai = game.chuPai;
     var c = seatData.countMap[pai];
     if(c == null || c < 2){
-        console.log("pai:" + pai + ",count:" + c);
-        console.log(seatData.holds);
         console.log("lack of mj.");
         return;
     }
@@ -1661,8 +1665,6 @@ exports.peng = function(userId){
 };
 
 exports.chi = function(userId,data){
-    console.log(userId);
-    console.log(data);
     var seatData = gameSeatsOfUsers[userId];
     if(seatData == null){
         console.log("can't find user game data.");
@@ -2246,39 +2248,3 @@ function update() {
 
 setInterval(update,1000);
 
-/*
-var mokgame = {
-    gameSeats:[{folds:[]}],
-    mahjongs:[],
-    currentIndex:-1,
-    conf:{
-        wz_yaojidai:2,
-    }
-}
-var mokseat = {
-    holds:[9,9,9,9,1,2,3,3,4,5,18,18,18,18],
-    isBaoTing:true,
-    countMap:{},
-    pengs:[],
-    feis:[],
-    diangangs:[],
-    angangs:[],
-    wangangs:[],
-    diansuos:[],
-    wansuos:[],
-    ansuos:[],
-    gangPai:[]
-}
-
-for(var k in mokseat.holds){
-    var pai = mokseat.holds[k];
-    if(mokseat.countMap[pai]){
-        mokseat.countMap[pai] ++;
-    }
-    else{
-        mokseat.countMap[pai] = 1;
-    }
-}
-checkCanAnGang(mokgame,mokseat);
-console.log(mokseat.gangPai);
-*/

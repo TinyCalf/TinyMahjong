@@ -124,6 +124,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						uuid:"",
 						id:roomId,
 						numOfGames:1,
+						fengxiang:0,//风向 0123 东南西北
 						createTime:createTime,
 						nextButton:0,
 						seats:[],
@@ -143,9 +144,9 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						}
 					};
 					
-					if(roomConf.type == "sjmmj"){
+					if(roomConf.type == "SJMMJ"){
 						roomInfo.gameMgr = require("./gamemgr_sjmmj");
-					}else if(roomConf.type == "dhmj"){
+					}else if(roomConf.type == "DHMJ"){
 						roomInfo.gameMgr = require("./gamemgr_dhmj");
 					}else {
 						roomInfo.gameMgr = require("./gamemgr_tdh");
