@@ -395,9 +395,6 @@ function checkCanTingPai(game,seatData){
         }
     }
 
-    //console.log(seatData.holds);
-    //console.log(seatData.countMap);
-    //console.log("singleCount:" + singleCount + ",colCount:" + colCount + ",pairCount:" + pairCount);
     //检查是不是平胡
     if(seatData.que != 0){
         mjutils.checkTingPai(seatData,0,9);        
@@ -437,8 +434,6 @@ function hasOperations(seatData){
 }
 
 function sendOperations(game,seatData,pai) {
-    console.log("sendOperations");
-    console.log(hasOperations(seatData));
     if(hasOperations(seatData)){
         if(pai == -1){
             pai = seatData.holds[seatData.holds.length - 1];
@@ -456,8 +451,7 @@ function sendOperations(game,seatData,pai) {
 
         //如果可以有操作，则进行操作
         userMgr.sendMsg(seatData.userId,'game_action_push',data);
-        console.log("game_action_pushing"); 
-        console.log(data);
+        console.log("game_action_pushing");
 
         data.si = seatData.seatIndex;
     }
@@ -618,7 +612,6 @@ function isTinged(seatData){
 
 //判断是否为排胡
 function isPaiHu(seatData){
-    console.log("判断排胡");
 
     if (seatData.pengs.length > 0 ||
         seatData.angangs.length > 0 ||
@@ -631,7 +624,6 @@ function isPaiHu(seatData){
     holds.sort(function(a,b){
         return parseInt(a-b);
     });
-    console.log(holds);
     for (var i = 0; i < holds.length ; i++){
         var nowhold = holds[i];
         if(nowhold == holds[i+1]){
@@ -697,12 +689,12 @@ function calculateResult(game){
         thisseat.hunyise = false;
         thisseat.qingyise = false;
         thisseat.gangshanghua = false;
+        thisseat.score = 0;
 
     }
     
     for(var i = 0; i < game.gameSeats.length; ++i){
         var sd = game.gameSeats[i];
-        console.log(sd);
         //统计杠的数目
         sd.numAnGang = sd.angangs.length;
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
@@ -714,7 +706,464 @@ function calculateResult(game){
             if(isGangShangHua(sd)) sd.gangshanghua = true;
         }
 
+        //沈家门麻将积分逻辑 TODO: 坎边单逻辑 分数追加到前端
+
+
+
+
+        //当前风圈 0123 东南西北
+        var nowfeng = game.roomInfo.fengxiang;
+        //当前坐位 0123 东南西北
+        var nowseat = (i+game.button)%4;
+        console.log("player " + i + " is culculate score");
+
+        //台数：
+        var TAI = 0;
+        //每只坐花算一台
+        TAI += sd.huas.length;
+        //坐花如果对应风向则加一台 东：春梅 南：夏兰 西：秋菊 北：冬竹
+        for(var n=0 ; n< sd.huas.length; n++) {
+            var nowhua = sd.huas[n];
+            switch(nowseat)
+            {
+                case 0:
+                    (nowhua==34 || nowhua==38) ? TAI++ : {};
+                    break;
+                case 1:
+                    (nowhua==35 || nowhua==39) ? TAI++ : {};
+                    break;
+                case 2:
+                    (nowhua==36 || nowhua==41) ? TAI++ : {};
+                    break;
+                case 3:
+                    (nowhua==37 || nowhua==40) ? TAI++ : {};
+                    break;
+                default:
+
+            }
+        }
+
+        //判断是否对应大风 大风加一台
+        var judgebigwind = function(nowfeng,nowseat,pai){
+            if(nowfeng == nowseat){
+                switch (nowfeng) {
+                    case 0: if(pai == 30)  return true ; break;
+                    case 1: if(pai == 32)  return true ; break;
+                    case 2: if(pai == 31)  return true ; break;
+                    case 3: if(pai == 33)  return true ; break;
+                }
+            }
+            return false;
+        };
+        //东南西北中发白 碰 杠 暗刻 均为一台
+        sd.pengs.forEach(function(pai){
+            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+        });
+        sd.angangs.forEach(function(pai){
+            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+        });
+        sd.wangangs.forEach(function(pai){
+            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+        });
+        sd.diangangs.forEach(function(pai){
+            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+        });
+        for ( var n = 27 ; n < 34 ; n++) {
+            (sd.countMap[n] >=3) ? TAI++ : {};
+        }
+        for ( var n = 30 ; n < 34 ; n++) {
+            if(judgebigwind(nowfeng,nowseat,n)) TAI++;
+        }
+
+        //其他胡法加台
+        if(sd.iszimo) TAI++;
+        if(sd.iszimo) TAI++;
+        if(sd.gangshanghua) TAI++;
+        if(sd.duiduihu) TAI += 2;
+        if(sd.hunyise) TAI += 2;
+        if(sd.qingyise) TAI += 4;
+        console.log("finish cuculate tai , tai is "+ TAI);
+
+        //丝数：
+        var SI = 0 ;
+
+        //每只坐花算一丝
+        SI += sd.huas.length;
+
+        //一九大幺和字碰出算一丝，其他为半丝 （即碰出算半丝，一九大幺和字再加半丝）
+        var needed = [0,8,9,17,18,26,27,28,29,30,31,32,33];
+        SI += sd.pengs.length/2;
+        for ( var n = 0 ; n < sd.pengs.length ; n++) {
+            for ( var m = 0 ; m < needed.length ; m++) {
+                if ( needed[m] == sd.pengs[n]) SI += 0.5;
+            }
+        }
+
+        //暗刻为1丝 一九大幺和字再加1丝
+        for ( var n = 0 ; n < needed.length ; n++) {
+            (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
+        }
+        for ( var n = 0 ; n < 26 ; n++) {
+            (sd.countMap[n] >=3) ? SI += 1 : {};
+        }
+
+        //明杠出为2丝 一九大幺和字再加2丝
+        SI += sd.wangangs.length*2;
+        SI += sd.diangangs.length*2;
+        for ( var n = 0 ; n < sd.wangangs.length ; n++) {
+            for ( var m = 0 ; m < needed.length ; m++) {
+                if ( needed[m] == sd.wangangs[n]) SI += 2;
+            }
+        }
+        for ( var n = 0 ; n < sd.diangangs.length ; n++) {
+            for ( var m = 0 ; m < needed.length ; m++) {
+                if ( needed[m] == sd.diangangs[n]) SI += 2;
+            }
+        }
+
+        console.log("finish culculate SI ,SI is now "+ SI);
+
+        //TODO:胡的是对倒、单吊、坎挡或边档，则胡数加半丝
+
+        //n模取整函数
+        var moquzheng = function(num,mo) {
+            var res=0;
+            if(num % mo >0) {
+                res = (parseInt( num / mo ) + 1 ) * mo;
+            } else {
+                res = parseInt( num / mo ) * mo ;
+            }
+            return res;
+        };
+
+        //最终胡数计算。
+        if(sd.hued) {
+            sd.fan = ( SI * 4 + 30 ) * Math.pow(2,TAI) ;
+            //胡的人50摸向上取整
+            sd.fan = moquzheng(sd.fan,50);
+            if(sd.fan>500) sd.fan=500;
+            sd.tai = TAI;
+            sd.si  = SI;
+        }else {
+            sd.fan = SI * 4  * Math.pow(2,TAI) ;
+            //边家10摸向上取整
+            sd.fan = moquzheng(sd.fan,10);
+            if(sd.fan>500) sd.fan=500;
+            sd.tai = TAI;
+            sd.si  = SI;
+        }
+        console.log("si is " + SI + " and tai is " + TAI + " and hu is "+ sd.fan);
     }
+
+    //计算最终每家得分
+
+    //做头的位置
+    var headindex = game.button;
+    //边家的位置 和 胡的人的位置
+    var bianindex = [];
+    var huedindex = 0;
+    for(var i = 0; i < game.gameSeats.length; ++i){
+        if(game.gameSeats[i].hued == true) {
+            huedindex = i;
+        }else if (game.gameSeats[i].hued != true && i!=headindex) {
+            bianindex.push(i);
+        }
+    }
+
+    var seats = game.gameSeats;
+
+    //胡的人先节分 TODO:杠开还没算进去
+    var huseat = seats[huedindex];
+    //幺半算法
+    if(game.conf.jiesuan==0) {
+        if(huseat.iszimo) {
+            switch(huseat.fan) {
+                case 50:  huseat.score = 60 ; break;
+                case 100: huseat.score = 60 ; break;
+                case 150: huseat.score = 75 ; break;
+                case 200: huseat.score = 90 ; break;
+                case 250: huseat.score = 105 ; break;
+                case 300: huseat.score = 120 ; break;
+                case 350: huseat.score = 135 ; break;
+                case 400: huseat.score = 150 ; break;
+                case 450: huseat.score = 165 ; break;
+                case 500: huseat.score = 180 ; break;
+            }
+            //TODO:杠开辣子
+            //计算其余人的分数
+            var s = huseat.score/3;
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    seats[n].score -= s;
+                }
+            }
+        }
+        else{
+            switch(huseat.fan) {
+                case 50:  huseat.score = 10 + 5 * 2 ; break;
+                case 100: huseat.score = 15 + 5 * 2 ; break;
+                case 150: huseat.score = 15 + 10 * 2 ; break;
+                case 200: huseat.score = 25 + 10 * 2 ; break;
+                case 250: huseat.score = 30 + 15 * 2 ; break;
+                case 300: huseat.score = 35 + 15 * 2 ; break;
+                case 350: huseat.score = 40 + 20 * 2 ; break;
+                case 400: huseat.score = 45 + 20 * 2 ; break;
+                case 450: huseat.score = 50 + 25 * 2 ; break;
+                case 500: huseat.score = 55 + 25 * 2 ; break;
+            }
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    if( game.fangpaoindex == n ) {
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 10; break;
+                            case 100: seats[n].score -= 15; break;
+                            case 150: seats[n].score -= 15; break;
+                            case 200: seats[n].score -= 25; break;
+                            case 250: seats[n].score -= 30; break;
+                            case 300: seats[n].score -= 35; break;
+                            case 350: seats[n].score -= 40; break;
+                            case 400: seats[n].score -= 45; break;
+                            case 450: seats[n].score -= 50; break;
+                            case 500: seats[n].score -= 55; break;
+                        }
+                    }else{
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 5; break;
+                            case 100: seats[n].score -= 5; break;
+                            case 150: seats[n].score -= 10; break;
+                            case 200: seats[n].score -= 10; break;
+                            case 250: seats[n].score -= 15; break;
+                            case 300: seats[n].score -= 15; break;
+                            case 350: seats[n].score -= 20; break;
+                            case 400: seats[n].score -= 20; break;
+                            case 450: seats[n].score -= 25; break;
+                            case 500: seats[n].score -= 25; break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else if(game.conf.jiesuan==1) {
+        if(huseat.iszimo) {
+            switch(huseat.fan) {
+                case 50:  huseat.score = 120 ; break;
+                case 100: huseat.score = 120 ; break;
+                case 150: huseat.score = 150 ; break;
+                case 200: huseat.score = 180 ; break;
+                case 250: huseat.score = 210 ; break;
+                case 300: huseat.score = 240 ; break;
+                case 350: huseat.score = 270 ; break;
+                case 400: huseat.score = 300 ; break;
+                case 450: huseat.score = 330 ; break;
+                case 500: huseat.score = 360 ; break;
+            }
+            //TODO:杠开辣子
+            //计算其余人的分数
+            var s = huseat.score/3;
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    seats[n].score -= s;
+                }
+            }
+        }
+        else{
+            switch(huseat.fan) {
+                case 50:  huseat.score = 20 + 10 * 2 ; break;
+                case 100: huseat.score = 30 + 10 * 2 ; break;
+                case 150: huseat.score = 40 + 20 * 2 ; break;
+                case 200: huseat.score = 50 + 20 * 2 ; break;
+                case 250: huseat.score = 60 + 30 * 2 ; break;
+                case 300: huseat.score = 70 + 30 * 2 ; break;
+                case 350: huseat.score = 80 + 40 * 2 ; break;
+                case 400: huseat.score = 90 + 40 * 2 ; break;
+                case 450: huseat.score = 100 + 50 * 2 ; break;
+                case 500: huseat.score = 110 + 50 * 2 ; break;
+            }
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    if( game.fangpaoindex == n ) {
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 20; break;
+                            case 100: seats[n].score -= 30; break;
+                            case 150: seats[n].score -= 40; break;
+                            case 200: seats[n].score -= 50; break;
+                            case 250: seats[n].score -= 60; break;
+                            case 300: seats[n].score -= 70; break;
+                            case 350: seats[n].score -= 80; break;
+                            case 400: seats[n].score -= 90; break;
+                            case 450: seats[n].score -= 100; break;
+                            case 500: seats[n].score -= 110; break;
+                        }
+                    }else{
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 10; break;
+                            case 100: seats[n].score -= 10; break;
+                            case 150: seats[n].score -= 20; break;
+                            case 200: seats[n].score -= 20; break;
+                            case 250: seats[n].score -= 30; break;
+                            case 300: seats[n].score -= 30; break;
+                            case 350: seats[n].score -= 40; break;
+                            case 400: seats[n].score -= 40; break;
+                            case 450: seats[n].score -= 50; break;
+                            case 500: seats[n].score -= 50; break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else if(game.conf.jiesuan==2) {
+        if(huseat.iszimo) {
+            switch(huseat.fan) {
+                case 50:  huseat.score = 240 ; break;
+                case 100: huseat.score = 240 ; break;
+                case 150: huseat.score = 300 ; break;
+                case 200: huseat.score = 360 ; break;
+                case 250: huseat.score = 420 ; break;
+                case 300: huseat.score = 480 ; break;
+                case 350: huseat.score = 540 ; break;
+                case 400: huseat.score = 600 ; break;
+                case 450: huseat.score = 660 ; break;
+                case 500: huseat.score = 720 ; break;
+            }
+            //TODO:杠开辣子
+            //计算其余人的分数
+            var s = huseat.score/3;
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    seats[n].score -= s;
+                }
+            }
+        }
+        else{
+            switch(huseat.fan) {
+                case 50:  huseat.score = 20 + 10 * 2 ; break;
+                case 100: huseat.score = 30 + 10 * 2 ; break;
+                case 150: huseat.score = 40 + 20 * 2 ; break;
+                case 200: huseat.score = 50 + 20 * 2 ; break;
+                case 250: huseat.score = 60 + 30 * 2 ; break;
+                case 300: huseat.score = 70 + 30 * 2 ; break;
+                case 350: huseat.score = 80 + 40 * 2 ; break;
+                case 400: huseat.score = 90 + 40 * 2 ; break;
+                case 450: huseat.score = 100 + 50 * 2 ; break;
+                case 500: huseat.score = 110 + 50 * 2 ; break;
+            }
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    if( game.fangpaoindex == n ) {
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 40; break;
+                            case 100: seats[n].score -= 60; break;
+                            case 150: seats[n].score -= 80; break;
+                            case 200: seats[n].score -= 100; break;
+                            case 250: seats[n].score -= 120; break;
+                            case 300: seats[n].score -= 140; break;
+                            case 350: seats[n].score -= 160; break;
+                            case 400: seats[n].score -= 180; break;
+                            case 450: seats[n].score -= 200; break;
+                            case 500: seats[n].score -= 220; break;
+                        }
+                    }else{
+                        switch(huseat.fan) {
+                            case 50:  seats[n].score -= 10; break;
+                            case 100: seats[n].score -= 20; break;
+                            case 150: seats[n].score -= 30; break;
+                            case 200: seats[n].score -= 40; break;
+                            case 250: seats[n].score -= 50; break;
+                            case 300: seats[n].score -= 60; break;
+                            case 350: seats[n].score -= 70; break;
+                            case 400: seats[n].score -= 80; break;
+                            case 450: seats[n].score -= 100; break;
+                            case 500: seats[n].score -= 100; break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    console.log("算完胡的人以后，每个人的分数");
+    for (var m=0; m <4; m++){
+        console.log(seats[m].score);
+    }
+
+
+    //两人节分算法
+    var culscore = function(player1,player2,factor,mo) {
+        var s = (player1.fan - player2.fan) * factor ;
+        s = moquzheng(s,mo);
+        player1.score += s;
+        player2.score -= s;
+    };
+
+
+    if(game.conf.jiesuan==0){
+        //
+        //如果有三家都是边家 即做头和胡是一个人
+        if( bianindex.length == 3 ) {
+            //边家一和边家二
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.05,5);
+            //边家二和边家三
+            culscore(seats[bianindex[1]],seats[bianindex[2]],0.05,5);
+            //边家一和边家三
+            culscore(seats[bianindex[0]],seats[bianindex[2]],0.05,5);
+        }
+        //有做头和两个边家
+        else{
+            culscore(seats[bianindex[0]],seats[headindex],0.1,5);
+            culscore(seats[bianindex[1]],seats[headindex],0.1,5);
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.05,5);
+        }
+    }
+    //12算法
+    else if ( game.conf.jiesuan == 1 ){
+        //胡的人分数就是胡数
+        seats[huedindex].score = seats[huedindex].fan;
+        //如果有三家都是边家 即做头和胡是一个人
+        if( bianindex.length == 3 ) {
+            //边家一和边家二
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.1,10);
+            //边家二和边家三
+            culscore(seats[bianindex[1]],seats[bianindex[2]],0.1,10);
+            //边家一和边家三
+            culscore(seats[bianindex[0]],seats[bianindex[2]],0.1,10);
+        }
+        //有做头和两个边家
+        else{
+            culscore(seats[bianindex[0]],seats[headindex],0.2,10);
+            culscore(seats[bianindex[1]],seats[headindex],0.2,10);
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.1,10);
+        }
+    }
+    //24算法
+    else{
+        //如果有三家都是边家 即做头和胡是一个人
+        if( bianindex.length == 3 ) {
+            //边家一和边家二
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.2,10);
+            //边家二和边家三
+            culscore(seats[bianindex[1]],seats[bianindex[2]],0.2,10);
+            //边家一和边家三
+            culscore(seats[bianindex[0]],seats[bianindex[2]],0.2,10);
+        }
+        //有做头和两个边家
+        else{
+            culscore(seats[bianindex[0]],seats[headindex],0.4,10);
+            culscore(seats[bianindex[1]],seats[headindex],0.4,10);
+            culscore(seats[bianindex[0]],seats[bianindex[1]],0.2,10);
+        }
+    }
+
+    console.log("全部算完以后，每个人的分数");
+    for (var m=0; m <4; m++){
+        console.log(seats[m].score);
+    }
+
 }
 
 function doGameOver(game,userId,forceEnd){
@@ -770,6 +1219,8 @@ function doGameOver(game,userId,forceEnd){
             var rs = roomInfo.seats[i];
             var sd = game.gameSeats[i];
 
+
+            //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
             rs.score += sd.score;
             rs.numZiMo += sd.numZiMo;
@@ -790,16 +1241,16 @@ function doGameOver(game,userId,forceEnd){
                 angangs:sd.angangs,
                 numofgen:sd.numofgen,
                 holds:sd.holds,
-                fan:sd.fan,
+                fan:sd.fan,//胡数
+                tai:sd.tai,//
+                si:sd.si,
                 score:sd.score,
                 totalscore:rs.score,
-
                 qingyise:sd.qingyise,
                 paihu :sd.paihu,
                 duiduihu:sd.duiduihu,
                 hunyise:sd.hunyise,
                 gangshanghua:sd.gangshanghua,
-
                 pattern:sd.pattern,
                 isganghu:sd.isGangHu,
                 menqing:sd.isMenQing,
@@ -847,12 +1298,7 @@ function doGameOver(game,userId,forceEnd){
         //判断有没有打完一个风向，打完则改变风向
 
         //如果打一圈：
-        console.log("开始dogameover");
-        console.log(old);
-        console.log(roomInfo.nextButton);
-        console.log(game.firstHupai);
         if(quanshu==1) {
-            console.log("圈数1");
             if (game.firstHupai != old) {
                 roomInfo.nextButton = (old + 1) % 4;
                 if(roomInfo.nextButton==0){
@@ -1206,6 +1652,7 @@ exports.begin = function(roomId) {
         actionList:[],
         hupaiList:[],
         chupaiCnt:0,
+        fangpaoindex:-1,
     };
 
     //roomInfo.numOfGames++;
@@ -1283,6 +1730,9 @@ exports.begin = function(roomId) {
         //
         data.actions = [];
 
+        //丝数 台数 胡数（翻） 分数
+        data.si = 0;
+        data.tai = 0;
         data.fan = 0;
         data.score = 0;
         data.lastFangGangSeat = -1;
@@ -1290,6 +1740,7 @@ exports.begin = function(roomId) {
         //统计信息
         data.numZiMo = 0;
         data.numJiePao = 0;
+        //需要留着，记录是否点炮
         data.numDianPao = 0;
         data.numAnGang = 0;
         data.numMingGang = 0;
@@ -1744,7 +2195,6 @@ exports.chi = function(userId,data){
     //扣掉手上的牌
     //从此人牌中扣除
     for(var i = 0; i < 2; ++i){
-        console.log("删除手牌"+chigroup[i]);
         var index = seatData.holds.indexOf(chigroup[i]);
         if(index == -1){
             console.log("can't find mj.");
@@ -1753,8 +2203,6 @@ exports.chi = function(userId,data){
         seatData.holds.splice(index,1);
         seatData.countMap[chigroup[i]] --;
     }
-    console.log("删除手牌后");
-    console.log(seatData.holds);
     chigroup[2] = pai;
     seatData.chis.push(chigroup);
     game.chuPai = -1;
@@ -1993,6 +2441,8 @@ exports.hu = function(userId){
 
         //记录玩家放炮信息
         var fs = game.gameSeats[game.turn];
+        //记录点炮的玩家：
+        game.fangpaoindex = game.turn;
         recordUserAction(game,fs,"fangpao",seatIndex);
 
         recordGameAction(game,seatIndex,ACTION_HU,hupai);

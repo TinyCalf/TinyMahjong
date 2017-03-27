@@ -151,7 +151,6 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 					}else {
 						roomInfo.gameMgr = require("./gamemgr_tdh");
 					}
-					console.log(roomInfo.conf);
 					
 					for(var i = 0; i < 4; ++i){
 						roomInfo.seats.push({
@@ -244,7 +243,6 @@ exports.enterRoom = function(roomId,userId,userName,callback){
 					roomId:roomId,
 					seatIndex:i
 				};
-				//console.log(userLocation[userId]);
 				db.update_seat_info(roomId,i,seat.userId,"",seat.name);
 				//正常
 				return 0;
@@ -326,7 +324,6 @@ exports.getUserRoom = function(userId){
 
 exports.getUserSeat = function(userId){
 	var location = userLocation[userId];
-	//console.log(userLocation[userId]);
 	if(location != null){
 		return location.seatIndex;
 	}

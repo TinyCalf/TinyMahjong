@@ -56,9 +56,11 @@ cc.Class({
         for(var i = 1; i <= 4; ++i){
             var s = "s" + i;
             var sn = listRoot.getChildByName(s);
+            //整理所有需要显示在计分板上的信息的节点
             var viewdata = {};
             viewdata.username = sn.getChildByName('username').getComponent(cc.Label);
             viewdata.reason = sn.getChildByName('reason').getComponent(cc.Label);
+            viewdata.taisi = sn.getChildByName('taisi').getComponent(cc.Label);
             
             var f = sn.getChildByName('fan');
             if(f != null){
@@ -71,6 +73,7 @@ cc.Class({
             viewdata.zhuang = sn.getChildByName('zhuang');
             viewdata.hupai = sn.getChildByName('hupai');
             viewdata._pengandgang = [];
+            
             this._seats.push(viewdata);
         }
         
@@ -84,14 +87,14 @@ cc.Class({
     onGameOver(data){
         //TODO:多种判定
         if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
-            this.onGameOver_XZDD(data);
+            this.onGameOver_SJMMJ(data);
         }
         else{
-            this.onGameOver_XZDD(data);
+            this.onGameOver_SJMMJ(data);
         }
     },
     
-    onGameOver_XZDD(data){
+    onGameOver_SJMMJ(data){
         console.log(data);
         if(data.length == 0){
             this._gameresult.active = true;
@@ -255,12 +258,17 @@ cc.Class({
             seatView.zhuang.active = cc.vv.gameNetMgr.button == i;
             seatView.reason.string = actionArr.join("、");
             
-            //胡牌的玩家才有番
+            //显示丝数台数
+            console.log("显示台和丝");
+            console.log(userData.tai);
+            console.log(userData.si);
+            console.log( seatView.taisi.string);
+            seatView.taisi.string = userData.tai + "台" + userData.si + "丝";
+            
+            //显示胡数
             var fan = 0;
-            if(hued){
-                fan = userData.fan;
-            }
-            seatView.fan.string = fan + "番";
+            fan = userData.fan;
+            seatView.fan.string = fan + "胡";
             
             //
             if(userData.score > 0){
