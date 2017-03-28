@@ -1087,10 +1087,10 @@ function calculateResult(game){
         }
     }
 
-    console.log("算完胡的人以后，每个人的分数");
-    for (var m=0; m <4; m++){
-        console.log(seats[m].score);
-    }
+    // console.log("算完胡的人以后，每个人的分数");
+    // for (var m=0; m <4; m++){
+    //     console.log(seats[m].score);
+    // }
 
 
     //两人节分算法
@@ -1159,10 +1159,10 @@ function calculateResult(game){
         }
     }
 
-    console.log("全部算完以后，每个人的分数");
-    for (var m=0; m <4; m++){
-        console.log(seats[m].score);
-    }
+    // console.log("全部算完以后，每个人的分数");
+    // for (var m=0; m <4; m++){
+    //     console.log(seats[m].score);
+    // }
 
 }
 
