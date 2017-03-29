@@ -245,6 +245,22 @@ cc.Class({
                 if(userData.gangshanghua){
                     actionArr.push("杠上花");
                 }
+                
+                if(userData.kan){
+                    actionArr.push("坎档");
+                }
+                
+                if(userData.bian){
+                    actionArr.push("边档");
+                }
+                
+                if(userData.dan){
+                    actionArr.push("单吊");
+                }
+                
+                if(userData.duidao){
+                    actionArr.push("对倒");
+                }
             }
             
             for(var o = 0; o < 3;++o){

@@ -223,12 +223,10 @@ function checkCanHu(seatData){
 		var ret = checkSingle(seatData);
 		seatData.countMap[k] += 2;
 		if(ret){
-			//kanzi.push(k);
-			//kanzi.push(k);
-			//console.log(kanzi);
 			return true;
 		}
 	}
+	return false;
 }
 
 /*
@@ -247,6 +245,30 @@ for(k in seatData.tingMap){
 */
 
 exports.checkTingPai = checkTingPai;
+
+exports.canHu = function (seatData) {
+	for(var k in seatData.countMap){
+		k = parseInt(k);
+		var c = seatData.countMap[k];
+		if(c < 2){
+			continue;
+		}
+		//如果当前牌大于等于２，则将它选为将牌
+		seatData.countMap[k] -= 2;
+		//逐个判定剩下的牌是否满足　３Ｎ规则,一个牌会有以下几种情况
+		//1、0张，则不做任何处理
+		//2、2张，则只可能是与其它牌形成匹配关系
+		//3、3张，则可能是单张形成 A-2,A-1,A  A-1,A,A+1  A,A+1,A+2，也可能是直接成为一坎
+		//4、4张，则只可能是一坎+单张
+		kanzi = [];
+		var ret = checkSingle(seatData);
+		seatData.countMap[k] += 2;
+		if(ret){
+			return true;
+		}
+	}
+	return false;
+};
 
 exports.getMJType = function(pai){
       if(id >= 0 && id < 9){
