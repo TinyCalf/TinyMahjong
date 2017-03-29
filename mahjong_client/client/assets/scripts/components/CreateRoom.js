@@ -156,9 +156,4 @@ cc.Class({
         cc.vv.http.sendRequest("/create_private_room",data,onCreate);   
     },
     
-    
-
-    
-    
-
 });

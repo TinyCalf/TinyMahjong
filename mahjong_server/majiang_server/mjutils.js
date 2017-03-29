@@ -246,6 +246,7 @@ for(k in seatData.tingMap){
 
 exports.checkTingPai = checkTingPai;
 
+//複製了一下checkcanhu函數，防止遞歸調用
 exports.canHu = function (seatData) {
 	for(var k in seatData.countMap){
 		k = parseInt(k);

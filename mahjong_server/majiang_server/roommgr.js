@@ -35,11 +35,14 @@ function constructRoomFromDb(dbdata){
 	};
 
 
-	if(roomInfo.conf.type == "xlch"){
-		roomInfo.gameMgr = require("./gamemgr_xlch");
+	if(roomInfo.conf.type == "SJMMJ"){
+		roomInfo.gameMgr = require("./gamemgr_sjmmj");
 	}
-	else{
-		roomInfo.gameMgr = require("./gamemgr_xzdd");
+	else if(roomInfo.conf.type == "DHMJ"){
+		roomInfo.gameMgr = require("./gamemgr_dhmj");
+	}
+	else  if(roomInfo.conf.type == "TDH"){
+		roomInfo.gameMgr = require("./gamemgr_tdh");
 	}
 	var roomId = roomInfo.id;
 
@@ -97,11 +100,24 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 		return;
 	}
 
-	// var cost = JU_SHU_COST[roomConf.jushuxuanze];
-	// if(cost > gems){
-	// 	callback(2222,null);
-	// 	return;
-	// }
+	//房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
+	console.log(roomConf.koufei);
+	console.log(roomConf.quanshu);
+	//房主出資
+	if( roomConf.koufei == 0 ) {
+		//8盤
+		if(roomConf.quanshu == 0 && gems < 3) {callback( 2222 , null );return;}
+		//一圈
+		if(roomConf.quanshu == 1 && gems < 6) {callback( 2222 , null );return;}
+	}
+	//玩家平分
+	else if ( roomConf.koufei == 1 ) {
+		//8盤
+		if(roomConf.quanshu == 0 && gems < 1) {callback( 2222 , null );return;}
+		//一圈
+		if(roomConf.quanshu == 1 && gems < 2) {callback( 2222 , null );return;}
+	}
+
 	var maxgames = 0;
 	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 4;
 
@@ -128,6 +144,8 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						createTime:createTime,
 						nextButton:0,
 						seats:[],
+						//標記是否結算：
+						ifPayed: false,
 						conf:{
 							type:roomConf.type,
 							hongzhongdanghua:roomConf.hongzhongdanghua,
@@ -138,9 +156,9 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 
 							//TODO:把下面的属性也去掉
 							baseScore:20,
-						    maxFan:10000,
+							maxFan:10000,
 
-						    creator:creator,
+							creator:creator,
 						}
 					};
 					

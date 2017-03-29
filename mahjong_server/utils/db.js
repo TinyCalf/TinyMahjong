@@ -409,6 +409,7 @@ exports.is_room_exist = function(roomId,callback){
 };
 
 exports.cost_gems = function(userid,cost,callback){
+    console.log("is costing " + cost + " gems of " + userid);
     callback = callback == null? nop:callback;
     var sql = 'UPDATE t_users SET gems = gems -' + cost + ' WHERE userid = ' + userid;
     console.log(sql);

@@ -57,6 +57,11 @@ app.get('/create_room',function(req,res){
 		return;
 	}
 
+	// //磚石不足
+	// if( gems < 0){
+	// 	http.send(res,2222,"not enough gems");
+	// }
+
 	var md5 = crypto.md5(userId + conf + gems + config.ROOM_PRI_KEY);
 	if(md5 != req.query.sign){
 		console.log("invalid reuqest.");

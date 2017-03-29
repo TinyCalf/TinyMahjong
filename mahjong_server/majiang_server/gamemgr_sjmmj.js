@@ -1487,6 +1487,10 @@ function doGameOver(game,userId,forceEnd){
             db.update_next_button(roomId,roomInfo.nextButton);
         }
     }
+
+
+
+
     
     if(forceEnd || game == null){
         fnNoticeResult(true);   
@@ -1505,12 +1509,44 @@ function doGameOver(game,userId,forceEnd){
             db.update_num_of_turns(roomId,roomInfo.numOfGames);
             
             //如果是第一次，并且不是强制解散 则扣除房卡
-            if(roomInfo.numOfGames == 1){
-                var cost = 2;
-                if(roomInfo.conf.maxGames == 8){
-                    cost = 3;
+            // if(roomInfo.numOfGames == 1){
+            //     var cost = 2;
+            //     if(roomInfo.conf.maxGames == 8){
+            //         cost = 3;
+            //     }
+            //     db.cost_gems(game.gameSeats[0].userId,cost);
+            // }
+            //扣除鑽石
+            console.log("正在釦鉆。。。。。。");
+            if(roomInfo.ifPayed == false) {
+                roomInfo.ifPayed = true;
+                //房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
+                //房主出資
+                if (roomInfo.conf.koufei == 0) {
+                    //8盤 房主扣3鉆
+                    if (roomInfo.conf.quanshu == 0) {
+                        db.cost_gems(roomInfo.creator, 3);
+                    }
+                    //一圈
+                    if (roomInfo.conf.quanshu == 1) {
+                        db.cost_gems(roomInfo.creator, 6);
+                    }
                 }
-                db.cost_gems(game.gameSeats[0].userId,cost);
+                //玩家平分
+                else if (roomInfo.conf.koufei == 1) {
+                    //8盤 每位1鉆
+                    if (roomInfo.conf.quanshu == 0) {
+                        for (var i = 0; i < 4; i++) {
+                            db.cost_gems(game.gameSeats[i].userId, 1);
+                        }
+                    }
+                    //一圈 每位2鉆
+                    if (roomInfo.conf.quanshu == 1) {
+                        for (var i = 0; i < 4; i++) {
+                            db.cost_gems(game.gameSeats[i].userId, 2);
+                        }
+                    }
+                }
             }
 
             var isEnd = (roomInfo.numOfGames >= roomInfo.conf.maxGames);
