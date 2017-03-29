@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_search_dealer",
+    "texture": "4350bf41-5a67-4643-9b1f-7c290fb3ec5e",
+    "atlas": "",
+    "rect": [
+      8,
+      12,
+      113,
+      108
+    ],
+    "offset": [
+      0.5,
+      -2
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

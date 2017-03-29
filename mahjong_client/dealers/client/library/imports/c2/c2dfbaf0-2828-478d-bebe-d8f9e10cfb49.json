@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_bule",
+    "texture": "72097c32-99df-40c5-8a7d-38b465c2a6f1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      480,
+      66
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      480,
+      66
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_kpi",
+    "texture": "a8279f2a-fc58-4eb4-9f70-41926ad165e7",
+    "atlas": "",
+    "rect": [
+      12,
+      24,
+      109,
+      85
+    ],
+    "offset": [
+      2.5,
+      -2.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

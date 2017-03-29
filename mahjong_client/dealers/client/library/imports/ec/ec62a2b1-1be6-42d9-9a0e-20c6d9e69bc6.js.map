@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,aAAK,EAAC,EAAE,CAAC,KAAK;AACd,eAAO,EAAC,EAAE,CAAC,QAAQ;AACnB,YAAI,EAAC,EAAE,CAAC,KAAK;KAChB;;;AAGD,UAAM,EAAE,kBAAY,EAEnB;;AAED,YAAQ,EAAE,kBAAU,IAAI,EAAE;AACtB,YAAI,CAAC,IAAI,EACL,OAAQ;AACZ,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,CAAC,KAAK,CAAC;AAC/B,YAAI,CAAC,OAAO,CAAC,MAAM,GAAG,IAAI,CAAC,OAAO,CAAC;;AAEnC,YAAI,CAAC,GAAG,IAAI,IAAI,EAAE,CAAC;AACnB,SAAC,CAAC,OAAO,CAAC,IAAI,CAAC,QAAQ,CAAC,CAAC;AACzB,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,CAAC,CAAC,cAAc,EAAE,CAAC;KACzC;CACJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        title:cc.Label,\r\n        content:cc.RichText,\r\n        time:cc.Label\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    showInfo: function (info) {\r\n        if( !info )\r\n            return ;\r\n        this.title.string = info.title;\r\n        this.content.string = info.content;\r\n\r\n        var t = new Date();\r\n        t.setTime(info.act_time);\r\n        this.time.string = t.toLocaleString();\r\n    }\r\n});\r\n"
+  ]
+}

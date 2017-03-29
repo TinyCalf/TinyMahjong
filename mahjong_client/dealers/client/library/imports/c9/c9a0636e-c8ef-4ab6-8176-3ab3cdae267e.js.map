@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,aAAK,EAAC,EAAE,CAAC,KAAK;AACd,YAAI,EAAC,EAAE,CAAC,KAAK;AACb,aAAK,EAAC,EAAE,CAAC,KAAK;AACd,YAAI,EAAC,EAAE,CAAC,KAAK;KAChB;;;AAGD,UAAM,EAAE,kBAAY;;KAEnB;;AAED,YAAQ,EAAE,kBAAU,IAAI,EAAE;AACtB,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,EAAE,IAAI,IAAI,CAAC,KAAK,GAAG,CAAC,CAAA,AAAC,CAAC;AAC1C,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,IAAI,CAAC,IAAI,CAAC;AAC7B,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,CAAC,KAAK,CAAC;AAC/B,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,IAAI,CAAC,IAAI,CAAC;KAChC;;AAED,aAAS,EAAE,qBAAY;AACnB,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,EAAE,CAAC;AACvB,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,EAAE,CAAC;AACtB,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,EAAE,CAAC;AACvB,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,EAAE,CAAC;KACzB;;CAEJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        month:cc.Label,\r\n        gems:cc.Label,\r\n        score:cc.Label,\r\n        subs:cc.Label\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        // this.cleanInfo();\r\n    }, \r\n\r\n    showInfo: function (data) {\r\n        this.month.string = \"\" + (data.month + 1);\r\n        this.gems.string = data.gems;\r\n        this.score.string = data.score;\r\n        this.subs.string = data.subs;\r\n    },\r\n\r\n    cleanInfo: function () {\r\n        this.month.string = \"\";\r\n        this.gems.string = \"\";\r\n        this.score.string = \"\";\r\n        this.subs.string = \"\";\r\n    }\r\n\r\n});\r\n"
+  ]
+}

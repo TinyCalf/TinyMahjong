@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_sell_on",
+    "texture": "c9297320-7d29-4818-8059-b97aa88e8a2d",
+    "atlas": "",
+    "rect": [
+      4,
+      6,
+      57,
+      51
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      64,
+      64
+    ]
+  }
+}

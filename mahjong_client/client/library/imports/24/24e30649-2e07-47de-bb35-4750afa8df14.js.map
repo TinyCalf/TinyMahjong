@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,IAAI,MAAM,GAAG,EAAE,CAAC,KAAK,CAAC;AAClB,eAAS,EAAE,CAAC,SAAS;AACrB,WAAO,EAAE;AACL,iBAAS,EAAC,KAAK;AACf,iBAAS,EAAC,KAAK;AACf,gBAAQ,EAAC,CAAC;AACV,gBAAQ,EAAC,EAAE;AACX,aAAK,EAAC,CAAC;AACP,UAAE,EAAC,CAAC;AACJ,cAAM,EAAC,CAAC;KACX;CACJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "var Global = cc.Class({\n    extends: cc.Component,\n    statics: {\n        isstarted:false,\n        netinited:false,\n        userguid:0,\n        nickname:\"\",\n        money:0,\n        lv:0,\n        roomId:0,\n    },\n});"
+  ]
+}

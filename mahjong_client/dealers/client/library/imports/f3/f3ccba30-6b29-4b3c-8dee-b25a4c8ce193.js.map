@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,aAAK,EAAC;AACF,uBAAQ,EAAE;AACV,gBAAI,EAAC,EAAE,CAAC,WAAW;SACtB;AACD,YAAI,EAAC,EAAE,CAAC,MAAM;AACd,aAAK,EAAC,EAAE,CAAC,KAAK;AACd,mBAAW,EAAC,IAAI;KACnB;;;AAGD,UAAM,EAAE,kBAAY,EAEnB;;AAED,YAAQ,EAAE,kBAAU,IAAI,EACxB;AACI,YAAI,CAAC,WAAW,GAAG,IAAI,CAAC;AACxB,YAAI,CAAC,IAAI,CAAC,WAAW,GAAG,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;AAC9C,YAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,CAAC,WAAW,CAAC,IAAI,CAAC;KAC7C;;AAED,gBAAY,EAAE,wBAAY;AACtB,UAAE,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC;AAClB,UAAE,CAAC,GAAG,CAAC,QAAQ,CAAC,IAAI,CAAC,WAAW,CAAC,MAAM,EAAC,IAAI,CAAC,WAAW,CAAC,SAAS,EAClD,IAAI,CAAC,WAAW,CAAC,QAAQ,EAAC,IAAI,CAAC,WAAW,CAAC,QAAQ,EACnD,IAAI,CAAC,WAAW,CAAC,UAAU,EAAC,IAAI,CAAC,WAAW,CAAC,MAAM,EACnD,IAAI,CAAC,WAAW,CAAC,MAAM,EACvB,IAAI,CAAC,WAAW,CAAC,KAAK,CAAC,CAAC;;;KAG3C;;;;;;;;;CAUJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        icons:{\r\n            default:[],\r\n            type:cc.SpriteFrame\r\n        },\r\n        icon:cc.Sprite,\r\n        iname:cc.Label,\r\n        _optionInfo:null\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    showInfo: function (info)\r\n    {\r\n        this._optionInfo = info;\r\n        this.icon.spriteFrame = this.icons[info.icon];\r\n        this.iname.string = this._optionInfo.name;\r\n    },\r\n\r\n    onEnterClick: function () {\r\n        cc.log(\"选择了。。。。\");\r\n        cc.app.showPage(this._optionInfo.prefab,this._optionInfo.layerIndx,\r\n                        this._optionInfo.showBack,this._optionInfo.backName,\r\n                        this._optionInfo.scriptName,this._optionInfo.detail,\r\n                        this._optionInfo.single,\r\n                        this._optionInfo.store);\r\n\r\n        // cc.app.showPage(\"prefabes/page_dealer/page_create_dealer\",0,true,\"代理\");//\"page_charge_user_script\",{account:cc.user.account,target:123456}\r\n    }\r\n\r\n\r\n    // name:name,icon:icon,\r\n    // prefab:prefab,\r\n    // layerIndx:layerIndx,\r\n    // showBack:showBack,backName:backName,\r\n    // scriptName:scriptName,detail:detail,\r\n    // single:single,\r\n    // store:store\r\n});\r\n"
+  ]
+}

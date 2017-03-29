@@ -1,0 +1,16 @@
+{
+  "androidStudio": false,
+  "apiLevel": "android-20",
+  "buildPath": "./build",
+  "debug": false,
+  "keystoreAlias": "scmj",
+  "keystoreAliasPassword": "123456",
+  "keystorePassword": "123456",
+  "keystorePath": "D:\\fkmj\\ddmj_20161230\\client\\boyue.keystore",
+  "platform": "android",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "sourceMaps": false,
+  "template": "binary",
+  "useDebugKeystore": true
+}

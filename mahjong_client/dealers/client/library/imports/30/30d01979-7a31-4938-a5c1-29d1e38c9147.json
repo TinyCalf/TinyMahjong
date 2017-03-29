@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_change_pwd",
+    "texture": "ece5110f-e46a-4fe2-98a0-85979c21ac23",
+    "atlas": "",
+    "rect": [
+      0,
+      11,
+      126,
+      106
+    ],
+    "offset": [
+      -1,
+      0
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

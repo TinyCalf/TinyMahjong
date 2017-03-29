@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,eAAO,EAAC,EAAE,CAAC,KAAK;AAChB,kBAAU,EAAC,EAAE,CAAC,KAAK;AACnB,eAAO,EAAC,EAAE,CAAC,KAAK;AAChB,eAAO,EAAC,EAAE,CAAC,KAAK;AAChB,gBAAQ,EAAC,IAAI;KAChB;;;AAGD,UAAM,EAAE,kBAAY,EAEnB;;AAED,YAAQ,EAAE,kBAAU,SAAS,EAAE;AAC3B,YAAI,CAAC,SAAS,EACd;AACI,mBAAQ;SACX;;AAED,YAAI,CAAC,QAAQ,GAAG,SAAS,CAAC;AAC1B,YAAI,CAAC,OAAO,CAAC,MAAM,GAAI,SAAS,CAAC,OAAO,CAAC;AACzC,YAAI,CAAC,UAAU,CAAC,MAAM,GAAI,SAAS,CAAC,IAAI,CAAC;AACzC,YAAI,CAAC,OAAO,CAAC,MAAM,GAAI,SAAS,CAAC,IAAI,CAAC;AACtC,YAAI,CAAC,OAAO,CAAC,MAAM,GAAI,SAAS,CAAC,QAAQ,CAAC;KAC7C;;AAEA,eAAW,EAAE,uBACb;AACI,YAAI,IAAI,CAAC,QAAQ,EACd,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,kBAAkB,EAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,CAAC;KAC/D;CACL,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        account:cc.Label,\r\n        dealerName:cc.Label,\r\n        curGems:cc.Label,\r\n        curSubs:cc.Label,\r\n        _curInfo:null\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    showInfo: function (infovalue) {\r\n        if( !infovalue )\r\n        {\r\n            return ;\r\n        }\r\n\r\n        this._curInfo = infovalue;\r\n        this.account.string =  infovalue.account;\r\n        this.dealerName.string =  infovalue.name;\r\n        this.curGems.string =  infovalue.gems;\r\n        this.curSubs.string =  infovalue.all_subs;\r\n    },\r\n\r\n     onEnterInto: function ()\r\n     {\r\n         if( this._curInfo )\r\n            this.node.emit(\"showDealerDetail\",this._curInfo.account);\r\n     }\r\n});\r\n"
+  ]
+}

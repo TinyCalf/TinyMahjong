@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_freshen",
+    "texture": "b1a3db95-99d4-474b-9f20-1685a845957c",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      30,
+      31
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      32,
+      32
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE,EAEX;;;AAGD,UAAM,EAAE,kBAAY,EAEnB;;;AAGD,gBAAY,EAAE,wBACd;AACI,UAAE,CAAC,GAAG,CAAC,QAAQ,CAAC,qCAAqC,EAAC,CAAC,EAAC,IAAI,EAAC,IAAI,CAAC,CAAC;KACtE;;AAED,kBAAc,EAAE,0BAAW;AACvB,UAAE,CAAC,GAAG,CAAC,QAAQ,CAAC,uCAAuC,EAAC,CAAC,EAAC,IAAI,EAAC,IAAI,CAAC,CAAC;KACxE;;AAED,eAAW,EAAE,uBAAY,EAExB;;CAGJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n       \r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    /**prefab,index,showBack,name,scriptName,detail,single,store*/\r\n    onChargeUser: function ()\r\n    {\r\n        cc.app.showPage(\"prefabes/page_sell/page_charge_user\",0,true,\"售卡\");\r\n    },\r\n\r\n    onChargeDealer: function (){\r\n        cc.app.showPage(\"prefabes/page_sell/page_charge_dealer\",0,true,\"售卡\");//\"page_charge_user_script\",{account:cc.user.account,target:123456}\r\n    },\r\n\r\n    onFreshInfo: function () {\r\n\r\n    }\r\n\r\n\r\n});\r\n"
+  ]
+}

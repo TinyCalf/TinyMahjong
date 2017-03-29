@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "db9455c4-89b6-4104-b7fc-4081dbdc672e",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "db9455c4-89b6-4104-b7fc-4081dbdc672e" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "db9455c4-89b6-4104-b7fc-4081dbdc672e" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4D1E290D-B89A-4DAA-BFC1-3683695EB623",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "db9455c4-89b6-4104-b7fc-4081dbdc672e" : "scmj\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SCMJ",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "branches\/ddmj\/client\/build\/jsb-binary\/frameworks\/runtime-src\/proj.ios_mac\/SCMJ.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/120.24.181.145\/scmj",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "db9455c4-89b6-4104-b7fc-4081dbdc672e"
+    }
+  ]
+}

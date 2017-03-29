@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_home_off",
+    "texture": "c162dac3-3f1f-4345-8fbc-9bc9f2390c3a",
+    "atlas": "",
+    "rect": [
+      2,
+      4,
+      60,
+      54
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      64,
+      64
+    ]
+  }
+}

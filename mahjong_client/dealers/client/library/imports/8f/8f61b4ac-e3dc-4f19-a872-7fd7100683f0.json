@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon_sell_off",
+    "texture": "18fed13e-47c7-46ac-acd7-e407a549f099",
+    "atlas": "",
+    "rect": [
+      4,
+      6,
+      57,
+      51
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      64,
+      64
+    ]
+  }
+}

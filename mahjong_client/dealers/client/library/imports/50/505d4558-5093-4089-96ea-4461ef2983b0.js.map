@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE,EAEX;;AAED,UAAM,EAAE,kBAAY,EAEnB;;AAED,kBAAc,EAAE,0BAChB;AACI,UAAE,CAAC,GAAG,CAAC,QAAQ,CAAC,yCAAyC,EAAC,CAAC,EAAC,IAAI,EAAC,IAAI,CAAC,CAAC;KAC1E;;AAED,kBAAc,EAAE,0BAAW;AACvB,UAAE,CAAC,GAAG,CAAC,QAAQ,CAAC,yCAAyC,EAAC,CAAC,EAAC,IAAI,EAAC,IAAI,CAAC,CAAC;KAC1E;;CAEJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n         \r\n    },\r\n\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    onSearchDealer: function ()\r\n    {\r\n        cc.app.showPage(\"prefabes/page_dealer/page_search_dealer\",0,true,\"代理\");\r\n    },\r\n\r\n    onCreateDealer: function (){\r\n        cc.app.showPage(\"prefabes/page_dealer/page_create_dealer\",0,true,\"代理\");//\"page_charge_user_script\",{account:cc.user.account,target:123456}\r\n    },\r\n     \r\n});\r\n"
+  ]
+}

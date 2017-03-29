@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "annoucement",
+    "texture": "36925689-74e4-464e-9dab-f6d9e99fd586",
+    "atlas": "",
+    "rect": [
+      4,
+      0,
+      65,
+      72
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      72,
+      72
+    ]
+  }
+}

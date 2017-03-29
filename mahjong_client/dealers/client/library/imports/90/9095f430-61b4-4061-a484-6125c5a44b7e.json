@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_search",
+    "texture": "cb98601e-af1c-47f2-bda4-72197e6136c1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      698,
+      108
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      698,
+      108
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;;;;;;;;;;AAUR,cAAM,EAAC,EAAE,CAAC,IAAI;AACd,cAAM,EAAC,EAAE,CAAC,WAAW;AACrB,qBAAa,EAAC,EAAE,CAAC,WAAW;AAC5B,eAAO,EAAC,KAAK;KAChB;;;AAGD,UAAM,EAAE,kBAAY;AAChB,YAAI,CAAC,OAAO,EAAE,CAAC;KAClB;;AAED,aAAS,EAAC,qBAAU;AAChB,YAAI,CAAC,OAAO,GAAG,CAAC,IAAI,CAAC,OAAO,CAAC;AAC7B,YAAI,CAAC,OAAO,EAAE,CAAC;KAClB;;AAED,WAAO,EAAC,mBAAU;AACd,YAAI,YAAY,GAAG,IAAI,CAAC,MAAM,CAAC,YAAY,CAAC,EAAE,CAAC,MAAM,CAAC,CAAC;AACvD,YAAG,IAAI,CAAC,OAAO,EAAC;AACZ,wBAAY,CAAC,WAAW,GAAG,IAAI,CAAC,aAAa,CAAC;SACjD,MACG;AACA,wBAAY,CAAC,WAAW,GAAG,IAAI,CAAC,MAAM,CAAC;SAC1C;KACJ;;;;;;CAQJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        // foo: {\r\n        //    default: null,\r\n        //    url: cc.Texture2D,  // optional, default is typeof default\r\n        //    serializable: true, // optional, default is true\r\n        //    visible: true,      // optional, default is true\r\n        //    displayName: 'Foo', // optional\r\n        //    readonly: false,    // optional, default is false\r\n        // },\r\n        // ...\r\n        target:cc.Node,\r\n        sprite:cc.SpriteFrame,\r\n        checkedSprite:cc.SpriteFrame,\r\n        checked:false,\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n        this.refresh();\r\n    },\r\n    \r\n    onClicked:function(){\r\n        this.checked = !this.checked;\r\n        this.refresh();\r\n    },\r\n    \r\n    refresh:function(){\r\n        var targetSprite = this.target.getComponent(cc.Sprite);\r\n        if(this.checked){\r\n            targetSprite.spriteFrame = this.checkedSprite;\r\n        }\r\n        else{\r\n            targetSprite.spriteFrame = this.sprite;\r\n        }\r\n    }\r\n    \r\n    \r\n\r\n    // called every frame, uncomment this function to activate update callback\r\n    // update: function (dt) {\r\n\r\n    // },\r\n});\r\n"
+  ]
+}

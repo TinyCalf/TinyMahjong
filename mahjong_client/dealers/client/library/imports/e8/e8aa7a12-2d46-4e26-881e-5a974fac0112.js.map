@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "unknown"
+  ],
+  "names": [],
+  "mappings": "AAAA,EAAE,CAAC,KAAK,CAAC;AACL,eAAS,EAAE,CAAC,SAAS;;AAErB,cAAU,EAAE;AACR,YAAI,EAAC,EAAE,CAAC,KAAK;AACb,aAAK,EAAC,EAAE,CAAC,KAAK;AACd,aAAK,EAAC,EAAE,CAAC,KAAK;KACjB;;;AAGD,UAAM,EAAE,kBAAY,EAEnB;;AAED,YAAQ,EAAC,kBAAU,IAAI,EAAE;AACrB,YAAG,CAAC,IAAI,EAAE,OAAQ;AAClB,YAAI,CAAC,GAAG,IAAI,IAAI,EAAE,CAAC;AACnB,SAAC,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;AACrB,YAAI,CAAC,IAAI,CAAC,MAAM,GAAG,CAAC,CAAC,cAAc,EAAE,CAAC;;AAEtC,YAAI,IAAI,CAAC,UAAU,IAAI,CAAC,EAAC;AACrB,gBAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,GAAG,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC;SACpD,MAAK,IAAG,IAAI,CAAC,UAAU,IAAI,CAAC,EAAC;AAC3B,gBAAI,CAAE,KAAK,CAAC,MAAM,GAAG,IAAI,GAAG,IAAI,CAAC,SAAS,GAAG,IAAI,CAAC;SACpD;;AAED,YAAI,IAAI,CAAC,UAAU,IAAI,CAAC,EAAC;AACrB,gBAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,GAAG,IAAI,CAAC,WAAW,GAAG,IAAI,CAAC;SACtD,MAAK,IAAG,IAAI,CAAC,UAAU,IAAI,CAAC,EAAC;AAC1B,gBAAI,CAAC,KAAK,CAAC,MAAM,GAAG,IAAI,GAAG,IAAI,CAAC,WAAW,GAAG,IAAI,CAAC;SACtD;KACJ;CACJ,CAAC,CAAC",
+  "file": "unknown",
+  "sourcesContent": [
+    "cc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        time:cc.Label,\r\n        goods:cc.Label,\r\n        price:cc.Label\r\n    },\r\n\r\n    // use this for initialization\r\n    onLoad: function () {\r\n\r\n    },\r\n\r\n    showInfo:function (item) {\r\n        if(!item) return ;\r\n        var t = new Date();\r\n        t.setTime(item.time);\r\n        this.time.string = t.toLocaleString();\r\n\r\n        if( item.goods_type == 1){\r\n            this.goods.string = \"+ \" + item.goods_num + \"房卡\";\r\n        }else if(item.goods_type == 2){\r\n           this. goods.string = \"+ \" + item.goods_num + \"金币\";\r\n        }\r\n\r\n        if( item.price_type == 1){\r\n            this.price.string = \"- \" + item.goods_price + \"积分\";\r\n        }else if(item.goods_type == 2){\r\n            this.price.string = \"- \" + item.goods_price + \"房卡\";\r\n        }\r\n    }\r\n});\r\n"
+  ]
+}
