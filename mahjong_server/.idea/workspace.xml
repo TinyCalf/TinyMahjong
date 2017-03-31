@@ -24,7 +24,7 @@
       <file leaf-file-name="gamemgr_sjmmj.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
+            <state relative-caret-position="826">
               <caret line="1504" column="102" selection-start-line="1504" selection-start-column="98" selection-end-line="1504" selection-end-column="102" />
               <folding>
                 <element signature="n#!!block;n#getMJType#0" expanded="false" />
@@ -487,8 +487,8 @@
                 <element signature="e#80150#80368#0" expanded="false" />
                 <element signature="e#80200#80358#0" expanded="false" />
                 <element signature="e#80381#80432#0" expanded="false" />
-                <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-                <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+                <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+                <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1019,12 +1019,12 @@
       <workItem from="1490084793263" duration="143000" />
       <workItem from="1490342131725" duration="4464000" />
       <workItem from="1490347591413" duration="21082000" />
-      <workItem from="1490579809347" duration="81474000" />
+      <workItem from="1490579809347" duration="82030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159978000" />
+    <option name="totallyTimeSpent" value="160534000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1541,8 +1541,8 @@
             <element signature="e#80150#80368#0" expanded="false" />
             <element signature="e#80200#80358#0" expanded="false" />
             <element signature="e#80381#80432#0" expanded="false" />
-            <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-            <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2041,8 +2041,8 @@
             <element signature="e#80150#80368#0" expanded="false" />
             <element signature="e#80200#80358#0" expanded="false" />
             <element signature="e#80381#80432#0" expanded="false" />
-            <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-            <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2548,8 +2548,8 @@
             <element signature="e#80150#80368#0" expanded="false" />
             <element signature="e#80200#80358#0" expanded="false" />
             <element signature="e#80381#80432#0" expanded="false" />
-            <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-            <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3048,8 +3048,8 @@
             <element signature="e#80150#80368#0" expanded="false" />
             <element signature="e#80200#80358#0" expanded="false" />
             <element signature="e#80381#80432#0" expanded="false" />
-            <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-            <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3862,7 +3862,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
+        <state relative-caret-position="826">
           <caret line="1504" column="102" selection-start-line="1504" selection-start-column="98" selection-end-line="1504" selection-end-column="102" />
           <folding>
             <element signature="n#!!block;n#getMJType#0" expanded="false" />
@@ -4325,8 +4325,8 @@
             <element signature="e#80150#80368#0" expanded="false" />
             <element signature="e#80200#80358#0" expanded="false" />
             <element signature="e#80381#80432#0" expanded="false" />
-            <marker date="1490936216324" expanded="false" signature="27543:28393" ph="{...}" />
-            <marker date="1490936216324" expanded="false" signature="30835:34132" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="27543:28393" ph="{...}" />
+            <marker date="1490938705591" expanded="false" signature="30835:34132" ph="{...}" />
           </folding>
         </state>
       </provider>
