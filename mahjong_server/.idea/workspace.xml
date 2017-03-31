@@ -24,8 +24,8 @@
       <file leaf-file-name="gamemgr_sjmmj.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="103" column="4" selection-start-line="103" selection-start-column="7" selection-end-line="110" selection-end-column="8" />
+            <state relative-caret-position="108">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
                 <element signature="n#!!block;n#getMJType#0" expanded="false" />
                 <element signature="e#445#482#0" expanded="false" />
@@ -44,7 +44,6 @@
                 <element signature="e#1496#1561#0" expanded="false" />
                 <element signature="e#1616#1669#0" expanded="false" />
                 <element signature="e#1726#1954#0" expanded="false" />
-                <element signature="n#!!block;n#mopai#0" expanded="false" />
                 <element signature="e#2441#2467#0" expanded="false" />
                 <element signature="e#2634#3018#0" expanded="false" />
                 <element signature="e#2674#3012#0" expanded="false" />
@@ -53,7 +52,6 @@
                 <element signature="e#3521#3543#0" expanded="false" />
                 <element signature="e#3781#4045#0" expanded="false" />
                 <element signature="e#3867#3961#0" expanded="false" />
-                <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
                 <element signature="e#4280#4320#0" expanded="false" />
                 <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
                 <element signature="e#4759#5148#0" expanded="false" />
@@ -1019,12 +1017,12 @@
       <workItem from="1490084793263" duration="143000" />
       <workItem from="1490342131725" duration="4464000" />
       <workItem from="1490347591413" duration="21082000" />
-      <workItem from="1490579809347" duration="82553000" />
+      <workItem from="1490579809347" duration="83819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161057000" />
+    <option name="totallyTimeSpent" value="162323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1098,7 +1096,6 @@
             <element signature="e#1496#1561#0" expanded="false" />
             <element signature="e#1616#1669#0" expanded="false" />
             <element signature="e#1726#1954#0" expanded="false" />
-            <element signature="n#!!block;n#mopai#0" expanded="false" />
             <element signature="e#2441#2467#0" expanded="false" />
             <element signature="e#2634#3018#0" expanded="false" />
             <element signature="e#2674#3012#0" expanded="false" />
@@ -1107,7 +1104,6 @@
             <element signature="e#3521#3543#0" expanded="false" />
             <element signature="e#3781#4045#0" expanded="false" />
             <element signature="e#3867#3961#0" expanded="false" />
-            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
             <element signature="e#4280#4320#0" expanded="false" />
             <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
             <element signature="e#4759#5148#0" expanded="false" />
@@ -1598,7 +1594,6 @@
             <element signature="e#1496#1561#0" expanded="false" />
             <element signature="e#1616#1669#0" expanded="false" />
             <element signature="e#1726#1954#0" expanded="false" />
-            <element signature="n#!!block;n#mopai#0" expanded="false" />
             <element signature="e#2441#2467#0" expanded="false" />
             <element signature="e#2634#3018#0" expanded="false" />
             <element signature="e#2674#3012#0" expanded="false" />
@@ -1607,7 +1602,6 @@
             <element signature="e#3521#3543#0" expanded="false" />
             <element signature="e#3781#4045#0" expanded="false" />
             <element signature="e#3867#3961#0" expanded="false" />
-            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
             <element signature="e#4280#4320#0" expanded="false" />
             <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
             <element signature="e#4759#5148#0" expanded="false" />
@@ -2105,7 +2099,6 @@
             <element signature="e#1496#1561#0" expanded="false" />
             <element signature="e#1616#1669#0" expanded="false" />
             <element signature="e#1726#1954#0" expanded="false" />
-            <element signature="n#!!block;n#mopai#0" expanded="false" />
             <element signature="e#2441#2467#0" expanded="false" />
             <element signature="e#2634#3018#0" expanded="false" />
             <element signature="e#2674#3012#0" expanded="false" />
@@ -2114,7 +2107,6 @@
             <element signature="e#3521#3543#0" expanded="false" />
             <element signature="e#3781#4045#0" expanded="false" />
             <element signature="e#3867#3961#0" expanded="false" />
-            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
             <element signature="e#4280#4320#0" expanded="false" />
             <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
             <element signature="e#4759#5148#0" expanded="false" />
@@ -2605,7 +2597,6 @@
             <element signature="e#1496#1561#0" expanded="false" />
             <element signature="e#1616#1669#0" expanded="false" />
             <element signature="e#1726#1954#0" expanded="false" />
-            <element signature="n#!!block;n#mopai#0" expanded="false" />
             <element signature="e#2441#2467#0" expanded="false" />
             <element signature="e#2634#3018#0" expanded="false" />
             <element signature="e#2674#3012#0" expanded="false" />
@@ -2614,7 +2605,6 @@
             <element signature="e#3521#3543#0" expanded="false" />
             <element signature="e#3781#4045#0" expanded="false" />
             <element signature="e#3867#3961#0" expanded="false" />
-            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
             <element signature="e#4280#4320#0" expanded="false" />
             <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
             <element signature="e#4759#5148#0" expanded="false" />
@@ -3862,8 +3852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="7" selection-end-line="110" selection-end-column="8" />
+        <state relative-caret-position="108">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="n#!!block;n#getMJType#0" expanded="false" />
             <element signature="e#445#482#0" expanded="false" />
@@ -3882,7 +3872,6 @@
             <element signature="e#1496#1561#0" expanded="false" />
             <element signature="e#1616#1669#0" expanded="false" />
             <element signature="e#1726#1954#0" expanded="false" />
-            <element signature="n#!!block;n#mopai#0" expanded="false" />
             <element signature="e#2441#2467#0" expanded="false" />
             <element signature="e#2634#3018#0" expanded="false" />
             <element signature="e#2674#3012#0" expanded="false" />
@@ -3891,7 +3880,6 @@
             <element signature="e#3521#3543#0" expanded="false" />
             <element signature="e#3781#4045#0" expanded="false" />
             <element signature="e#3867#3961#0" expanded="false" />
-            <element signature="n#!!block;n#checkCanPeng#0" expanded="false" />
             <element signature="e#4280#4320#0" expanded="false" />
             <element signature="n#!!block;n#checkCanChi#0" expanded="false" />
             <element signature="e#4759#5148#0" expanded="false" />
