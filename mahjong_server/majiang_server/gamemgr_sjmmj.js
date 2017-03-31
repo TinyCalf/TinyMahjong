@@ -101,14 +101,14 @@ function shuffle(game) {
     //var mjs = [34,35,36,37,38,39,40,41];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    var index = 0 ;
-    var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
-    for (var i =0 ; i < mjs.length ; i++) {
-        for (var j = 0 ; j < 4 ; j++) {
-            game.mahjongs[index] = mjs[i];
-            index++;
-        }
-    }
+    // var index = 0 ;
+    // var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
+    // for (var i =0 ; i < mjs.length ; i++) {
+    //     for (var j = 0 ; j < 4 ; j++) {
+    //         game.mahjongs[index] = mjs[i];
+    //         index++;
+    //     }
+    // }
 
 
 }
