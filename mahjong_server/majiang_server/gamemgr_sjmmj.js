@@ -34,6 +34,16 @@ function getMJType(id){
 }
 
 function shuffle(game) {
+
+    /*
+    * 0-8 為一到九筒
+    * 9-17為一到九條
+    * 18-26為一到九萬
+    * 27、28、29為 中 發 白
+    * 30 31 32 33 為 東 西 南 北 （是 東西南北 不是 東南西北！）
+    * 34 35 36 37 為 春 夏 秋 冬
+    * 38 39 40 41 為 梅 蘭 竹 菊
+    * */
     
     var mahjongs = game.mahjongs;
 
@@ -77,7 +87,7 @@ function shuffle(game) {
         index++;
     }
 
-
+    //打亂順序
     for(var i = 0; i < mahjongs.length; ++i){
         var lastIndex = mahjongs.length - 1 - i;
         var index = Math.floor(Math.random() * lastIndex);
@@ -85,6 +95,22 @@ function shuffle(game) {
         mahjongs[index] = mahjongs[lastIndex];
         mahjongs[lastIndex] = t;
     }
+
+    //這裡可輸入測試牌型如果不需要則注釋以下代碼
+    //測試 找出不顯示的花
+    //var mjs = [34,35,36,37,38,39,40,41];
+    // game.mahjongs = mjs.concat(mahjongs);
+    //直接胡
+    var index = 0 ;
+    var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for (var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
+
+
 }
 
 function mopai(game,seatIndex) {
@@ -1363,6 +1389,9 @@ function doGameOver(game,userId,forceEnd){
                 
                 userMgr.kickAllInRoom(roomId);
                 roomMgr.destroy(roomId);
+
+                //
+                console.log("正在執行archive_games!");
                 db.archive_games(roomInfo.uuid);            
             },1500);
         }
@@ -1459,28 +1488,27 @@ function doGameOver(game,userId,forceEnd){
         var quanshu = game.conf.quanshu;
         //判断有没有打完一个风向，打完则改变风向
 
+        roomInfo.numOfGames++;
+        //判斷是否打完一局
+        var isEnd = false;
+
+        //風圈 風向變化
+        if (game.firstHupai != old) {
+            roomInfo.nextButton = (old + 1) % 4;
+            if(roomInfo.nextButton==0){
+                roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
+            }
+        }
+
         //如果打一圈：
         if(quanshu==1) {
-            if (game.firstHupai != old) {
-                roomInfo.nextButton = (old + 1) % 4;
-                if(roomInfo.nextButton==0){
-                    roomInfo.fengxiang = (roomInfo.quan+1)%4;
-                    roomInfo.numOfGames++;
-                }
-            }
-
+            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==0) isEnd = true;
         }
         //如果打8局
         else if(quanshu==0){
-            if (game.firstHupai != old) {
-                roomInfo.nextButton = (old + 1) % 4;
-                if(roomInfo.nextButton==0){
-                    roomInfo.fengxiang = (roomInfo.quan+1)%4;
-                }
-            }
-
-            roomInfo.numOfGames++;
+            if(roomInfo.numOfGames >= roomInfo.conf.maxGames) isEnd = true;
         }
+
 
 
         if(old != roomInfo.nextButton){
@@ -1507,17 +1535,8 @@ function doGameOver(game,userId,forceEnd){
         
             //保存游戏局数
             db.update_num_of_turns(roomId,roomInfo.numOfGames);
-            
-            //如果是第一次，并且不是强制解散 则扣除房卡
-            // if(roomInfo.numOfGames == 1){
-            //     var cost = 2;
-            //     if(roomInfo.conf.maxGames == 8){
-            //         cost = 3;
-            //     }
-            //     db.cost_gems(game.gameSeats[0].userId,cost);
-            // }
+
             //扣除鑽石
-            console.log("正在釦鉆。。。。。。");
             if(roomInfo.ifPayed == false) {
                 roomInfo.ifPayed = true;
                 //房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
@@ -1525,11 +1544,11 @@ function doGameOver(game,userId,forceEnd){
                 if (roomInfo.conf.koufei == 0) {
                     //8盤 房主扣3鉆
                     if (roomInfo.conf.quanshu == 0) {
-                        db.cost_gems(roomInfo.creator, 3);
+                        db.cost_gems(roomInfo.conf.creator, 3);
                     }
                     //一圈
                     if (roomInfo.conf.quanshu == 1) {
-                        db.cost_gems(roomInfo.creator, 6);
+                        db.cost_gems(roomInfo.conf.creator, 6);
                     }
                 }
                 //玩家平分
@@ -1549,7 +1568,7 @@ function doGameOver(game,userId,forceEnd){
                 }
             }
 
-            var isEnd = (roomInfo.numOfGames >= roomInfo.conf.maxGames);
+            //var isEnd = (roomInfo.numOfGames >= roomInfo.conf.maxGames);
             fnNoticeResult(isEnd);
         });   
     }
@@ -2866,7 +2885,6 @@ exports.dissolveAgree = function(roomId,userId,agree){
 *
 *
 * *************************************************************************/
-
 
 function update() {
     for(var i = dissolvingList.length - 1; i >= 0; --i){

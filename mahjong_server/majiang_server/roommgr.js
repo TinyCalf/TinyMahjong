@@ -119,7 +119,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	}
 
 	var maxgames = 0;
-	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 4;
+	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 100;
 
 	var fnCreate = function(){
 		var roomId = generateRoomId();

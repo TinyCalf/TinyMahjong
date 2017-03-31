@@ -2,10 +2,10 @@
   "version": "1.1.0",
   "windows": {
     "main": {
-      "x": -8,
-      "y": -8,
-      "width": 1936,
-      "height": 1186,
+      "x": 85,
+      "y": 98,
+      "width": 974,
+      "height": 592,
       "layout": {
         "children": [
           {
@@ -15,23 +15,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 528,
+                "height": 524,
                 "type": "panel",
-                "width": 347
+                "width": 392
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 527,
+                "height": 531,
                 "type": "panel",
-                "width": 347
+                "width": 392
               }
             ],
             "height": 1058,
             "type": "dock-v",
-            "width": 347
+            "width": 392
           },
           {
             "children": [
@@ -40,9 +40,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 643,
+                "height": 732,
                 "type": "panel",
-                "width": 1110
+                "width": 1031
               },
               {
                 "active": 1,
@@ -50,14 +50,14 @@
                   "console",
                   "timeline"
                 ],
-                "height": 412,
+                "height": 323,
                 "type": "panel",
-                "width": 1110
+                "width": 1031
               }
             ],
             "height": 1058,
             "type": "dock-v",
-            "width": 1110
+            "width": 1031
           },
           {
             "active": 0,
@@ -66,24 +66,18 @@
             ],
             "height": 1058,
             "type": "panel",
-            "width": 451
+            "width": 485
           }
         ],
         "snapshot": true,
         "type": "dock-h"
       }
     },
-    "window-1490593056630": {
-      "x": 217,
-      "y": 75,
+    "window-1490870099147": {
+      "x": 334,
+      "y": 33,
       "width": 1310,
       "height": 1007
-    },
-    "worker": {
-      "x": 760,
-      "y": 435,
-      "width": 400,
-      "height": 300
     }
   }
 }
