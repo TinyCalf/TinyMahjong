@@ -371,15 +371,20 @@ cc.Class({
                 }    
             }
             
-            //初始化花牌
+            //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
+             
             var huas = userData.huas; 
             var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(i+1)).getChildByName("huas");
+            for(var k = 0; k < hua_node.childrenCount; ++k){
+                hua_node.children[k].active = false;
+            }  
             if(huas){
                 for(var k = 0; k < huas.length; ++k){
                     var mjid = huas[k];
                     hua_node.children[k].active = true;
                     var sp = hua_node.children[k].getComponent(cc.Sprite);
                     sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mjid);
+                    
                 }    
             }
             

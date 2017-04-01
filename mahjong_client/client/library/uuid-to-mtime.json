@@ -430,8 +430,8 @@
     "relativePath": "resources\\textures\\MJ"
   },
   "c78eb4b1-033c-41b0-b0c4-ff36c198b6dd": {
-    "asset": 1489393116021,
-    "meta": 1489393993957,
+    "asset": 1490848512067,
+    "meta": 1490950717192,
     "relativePath": "resources\\textures\\MJ\\bottom"
   },
   "4be58b20-1dc8-422a-94b2-b4d3882f7133": {
@@ -485,8 +485,8 @@
     "relativePath": "resources\\textures\\MJ\\left\\Z_left.png"
   },
   "c80b7e7a-e243-44d6-9fde-f78bef49e696": {
-    "asset": 1489393116065,
-    "meta": 1489393993959,
+    "asset": 1490938686054,
+    "meta": 1490950717193,
     "relativePath": "resources\\textures\\MJ\\my"
   },
   "347575c5-fc00-4b99-9cca-1c89f8e39415": {
@@ -810,8 +810,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1490341818447,
-    "meta": 1490341887851,
+    "asset": 1490781179858,
+    "meta": 1490950717693,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -840,8 +840,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1490341818449,
-    "meta": 1490341887853,
+    "asset": 1490781179879,
+    "meta": 1490950717694,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -1290,8 +1290,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1490341818444,
-    "meta": 1490341887846,
+    "asset": 1490950677200,
+    "meta": 1490950717190,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -2330,8 +2330,8 @@
     "relativePath": "resources\\scenes\\createrole.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
-    "asset": 1489720011555,
-    "meta": 1489720011572,
+    "asset": 1490950677200,
+    "meta": 1490950717691,
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
@@ -2410,8 +2410,8 @@
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1489459342356,
-    "meta": 1489459353594,
+    "asset": 1491023219154,
+    "meta": 1491023219325,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
@@ -2465,23 +2465,23 @@
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1490781179856,
-    "meta": 1490842302670,
+    "asset": 1491023379523,
+    "meta": 1491023379613,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
-    "asset": 1490781179871,
-    "meta": 1490842302840,
+    "asset": 1491013078146,
+    "meta": 1491013079595,
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1490781179816,
-    "meta": 1490842303077,
+    "asset": 1490955875501,
+    "meta": 1490955875535,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1490781179879,
-    "meta": 1490842303129,
+    "asset": 1491032104430,
+    "meta": 1491032104698,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
@@ -2490,8 +2490,8 @@
     "relativePath": "scripts\\HTTP.js"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {
-    "asset": 1490848417578,
-    "meta": 1490848519792,
+    "asset": 1490938686054,
+    "meta": 1490950717713,
     "relativePath": "resources\\textures\\MJ\\my\\M_spring.png"
   }
 }

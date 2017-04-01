@@ -47,8 +47,9 @@ function shuffle(game) {
     
     var mahjongs = game.mahjongs;
 
-    //筒 (0 ~ 8 表示筒子
     var index = 0;
+
+    //筒 (0 ~ 8 表示筒子
     for(var i = 0; i < 9; ++i){
         for(var c = 0; c < 4; ++c){
             mahjongs[index] = i;
@@ -87,6 +88,7 @@ function shuffle(game) {
         index++;
     }
 
+
     //打亂順序
     for(var i = 0; i < mahjongs.length; ++i){
         var lastIndex = mahjongs.length - 1 - i;
@@ -95,6 +97,8 @@ function shuffle(game) {
         mahjongs[index] = mahjongs[lastIndex];
         mahjongs[lastIndex] = t;
     }
+
+
 
     //這裡可輸入測試牌型如果不需要則注釋以下代碼
     //測試 找出不顯示的花
@@ -160,7 +164,7 @@ function deal(game){
 
     //每人13张 一共 13*4 ＝ 52张 庄家多一张 53张
     var seatIndex = game.button;
-    for(var i = 0; i < 52; ++i){
+    for(var i = 0; i < 52; ++i) {
         var mahjongs = game.gameSeats[seatIndex].holds;
         if(mahjongs == null){
             mahjongs = [];
@@ -732,11 +736,11 @@ function isBian (seatData) {
     var holds = seatData.holds;
     var hupai = holds[holds.length-1];
     if(hupai != 2
-        ||hupai != 11
-        ||hupai != 20
-        ||hupai != 6
-        ||hupai != 15
-        ||hupai != 24) {
+        &&hupai != 11
+        &&hupai != 20
+        &&hupai != 6
+        &&hupai != 15
+        &&hupai != 24) {
         return false;
     }
 
@@ -872,6 +876,9 @@ function calculateResult(game){
 
     //计算每家的台数丝数胡数
     for(var i = 0; i < game.gameSeats.length; ++i){
+
+        console.log("玩家"+i+"开始计算台数");
+
         var sd = game.gameSeats[i];
         //统计杠的数目
         sd.numAnGang = sd.angangs.length;
@@ -894,15 +901,16 @@ function calculateResult(game){
         var nowfeng = game.roomInfo.fengxiang;
         //当前坐位 0123 东南西北
         var nowseat = (i+game.button)%4;
-        console.log("player " + i + " is culculate score");
 
         //台数：
         var TAI = 0;
-        //每只坐花算一台
-        TAI += sd.huas.length;
-        //坐花如果对应风向则加一台 东：春梅 南：夏兰 西：秋菊 北：冬竹
+        //花如果对应风向则加一台 东：春梅 南：夏兰 西：秋菊 北：冬竹
         for(var n=0 ; n< sd.huas.length; n++) {
+
             var nowhua = sd.huas[n];
+            //红中当花
+            if(nowhua==27) {TAI++; continue;}
+            //其他
             switch(nowseat)
             {
                 case 0:
@@ -921,6 +929,10 @@ function calculateResult(game){
 
             }
         }
+        console.log("玩家当前拥有花：");
+        console.log(sd.huas);
+        console.log("计算花色完成，当前台数为：" + TAI);
+
 
         //判断是否对应大风 大风加一台
         var judgebigwind = function(nowfeng,nowseat,pai){
@@ -939,24 +951,34 @@ function calculateResult(game){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
             if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
         });
+        //console.log("正在计算字，当前台数为：" + TAI);
+
         sd.angangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
             if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
         });
+        //console.log("正在计算字，当前台数为：" + TAI);
+
         sd.wangangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
             if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
         });
+        //console.log("正在计算字，当前台数为：" + TAI);
+
         sd.diangangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
             if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
         });
+        //console.log("正在计算字，当前台数为：" + TAI);
+
         for ( var n = 27 ; n < 34 ; n++) {
             (sd.countMap[n] >=3) ? TAI++ : {};
         }
-        for ( var n = 30 ; n < 34 ; n++) {
-            if(judgebigwind(nowfeng,nowseat,n)) TAI++;
-        }
+        // console.log("正在计算字，当前台数为：" + TAI);
+        //
+        // console.log("正在计算字，当前台数为：" + TAI);
+        //
+        // console.log("计算字完成，当前台数为：" + TAI);
 
         //其他胡法加台
         if(sd.iszimo) TAI++;
@@ -965,8 +987,9 @@ function calculateResult(game){
         if(sd.duiduihu) TAI += 2;
         if(sd.hunyise) TAI += 2;
         if(sd.qingyise) TAI += 4;
-        console.log("finish cuculate tai , tai is "+ TAI);
 
+        console.log("计算胡法加成完成，当前台数为：" + TAI);
+        console.log("开始计算丝数");
         //丝数：
         var SI = 0 ;
 
@@ -1004,13 +1027,15 @@ function calculateResult(game){
             }
         }
 
-        console.log("finish culculate SI ,SI is now "+ SI);
+        console.log("计算碰杠完成，当前丝数为：" + SI);
 
         //胡的是对倒、单吊、坎挡或边档，则胡数加半丝 自摸再加0.5絲
         if (sd.kan || sd.bian || sd.dan || sd.duidao) {
             SI += 0.5;
             if (sd.iszimo || sd.gangshanghua) SI+=0.5;
         }
+
+        console.log("计算胡法加成完成，当前丝数为：" + SI);
 
 
         //n模取整函数
@@ -1040,7 +1065,6 @@ function calculateResult(game){
             sd.tai = TAI;
             sd.si  = SI;
         }
-        console.log("si is " + SI + " and tai is " + TAI + " and hu is "+ sd.fan);
     }
 
     //计算最终每家得分
@@ -1271,11 +1295,6 @@ function calculateResult(game){
         }
     }
 
-    // console.log("算完胡的人以后，每个人的分数");
-    // for (var m=0; m <4; m++){
-    //     console.log(seats[m].score);
-    // }
-
 
     //两人节分算法
     var culscore = function(player1,player2,factor,mo) {
@@ -1306,8 +1325,6 @@ function calculateResult(game){
     }
     //12算法
     else if ( game.conf.jiesuan == 1 ){
-        //胡的人分数就是胡数
-        seats[huedindex].score = seats[huedindex].fan;
         //如果有三家都是边家 即做头和胡是一个人
         if( bianindex.length == 3 ) {
             //边家一和边家二
@@ -1342,11 +1359,6 @@ function calculateResult(game){
             culscore(seats[bianindex[0]],seats[bianindex[1]],0.2,10);
         }
     }
-
-    // console.log("全部算完以后，每个人的分数");
-    // for (var m=0; m <4; m++){
-    //     console.log(seats[m].score);
-    // }
 
 }
 

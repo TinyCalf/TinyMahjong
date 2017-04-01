@@ -35,15 +35,17 @@ function constructRoomFromDb(dbdata){
 	};
 
 
-	if(roomInfo.conf.type == "SJMMJ"){
-		roomInfo.gameMgr = require("./gamemgr_sjmmj");
-	}
-	else if(roomInfo.conf.type == "DHMJ"){
-		roomInfo.gameMgr = require("./gamemgr_dhmj");
-	}
-	else  if(roomInfo.conf.type == "TDH"){
-		roomInfo.gameMgr = require("./gamemgr_tdh");
-	}
+	// if(roomInfo.conf.type == "sjmmj"){
+	// 	roomInfo.gameMgr = require("./gamemgr_sjmmj");
+	// }
+	// else if(roomInfo.conf.type == "dhmj"){
+	// 	roomInfo.gameMgr = require("./gamemgr_dhmj");
+	// }
+	// else  if(roomInfo.conf.type == "tdh"){
+	// 	roomInfo.gameMgr = require("./gamemgr_tdh");
+	// }
+
+	roomInfo.gameMgr = require("./gamemgr_" + roomInfo.conf.type);
 	var roomId = roomInfo.id;
 
 	for(var i = 0; i < 4; ++i){
@@ -73,29 +75,54 @@ function constructRoomFromDb(dbdata){
 }
 
 exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
-	if(
-		roomConf.type == null
-		|| roomConf.hongzhongdanghua == null
-		|| roomConf.koufei == null
-		|| roomConf.quanshu == null
-		|| roomConf.jiesuan == null){
+	//验证创建房间参数合法性 每个游戏需要的选项不一样
+	switch(roomConf.type) {
+		case "sjmmj":
+			if(
+				roomConf.type == null
+				|| roomConf.hongzhongdanghua == null
+				|| roomConf.koufei == null
+				|| roomConf.quanshu == null
+				|| roomConf.jiesuan == null){
+				callback(1,null);
+				return;
+			}
+			break;
+		case "dhmj":
+			if(
+				roomConf.type == null
+				|| roomConf.koufei == null
+				|| roomConf.quanshu == null
+				|| roomConf.jiesuan == null){
+				callback(1,null);
+				return;
+			}
+			break;
+		//TODO：推倒胡
+	}
+	// if(
+	// 	roomConf.type == null
+	// 	|| roomConf.hongzhongdanghua == null
+	// 	|| roomConf.koufei == null
+	// 	|| roomConf.quanshu == null
+	// 	|| roomConf.jiesuan == null){
+	// 	callback(1,null);
+	// 	return;
+	// }
+
+
+
+	if(roomConf.koufei < 0 || roomConf.koufei > KOUFEI.length){
 		callback(1,null);
 		return;
 	}
 
-
-
-	if(roomConf.koufei < 0 || roomConf.zimo > KOUFEI.length){
+	if(roomConf.quanshu < 0 || roomConf.quanshu > QUANSHU.length){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.quanshu < 0 || roomConf.zimo > QUANSHU.length){
-		callback(1,null);
-		return;
-	}
-
-	if(roomConf.jiesuan < 0 || roomConf.zimo > JIESUAN.length){
+	if(roomConf.jiesuan < 0 || roomConf.quanshu > JIESUAN.length){
 		callback(1,null);
 		return;
 	}
@@ -118,6 +145,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 		if(roomConf.quanshu == 1 && gems < 2) {callback( 2222 , null );return;}
 	}
 
+	//
 	var maxgames = 0;
 	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 100;
 
@@ -162,13 +190,16 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						}
 					};
 					
-					if(roomConf.type == "SJMMJ"){
-						roomInfo.gameMgr = require("./gamemgr_sjmmj");
-					}else if(roomConf.type == "DHMJ"){
-						roomInfo.gameMgr = require("./gamemgr_dhmj");
-					}else {
-						roomInfo.gameMgr = require("./gamemgr_tdh");
-					}
+					// if(roomConf.type == "sjmmj"){
+					// 	roomInfo.gameMgr = require("./gamemgr_sjmmj");
+					// }else if(roomConf.type == "dhmj"){
+					// 	roomInfo.gameMgr = require("./gamemgr_dhmj");
+					// }else {
+					// 	roomInfo.gameMgr = require("./gamemgr_tdh");
+					// }
+
+					//所需文件 gamemagr_XXXX , XXXXX为游戏简称 如沈家门麻将，使用 gamemgr_sjmmj.js 作为游戏逻辑
+					roomInfo.gameMgr = require("./gamemgr_"+roomConf.type);
 					
 					for(var i = 0; i < 4; ++i){
 						roomInfo.seats.push({
