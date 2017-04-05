@@ -29,10 +29,7 @@ cc.Class({
             return;
         }
         //TODO:可能出现不同的计分板
-        if(1){
-        //if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
-            this._gameover = this.node.getChildByName("game_over");
-        }
+        this._gameover = this.node.getChildByName("game_over_"+cc.vv.gameNetMgr.conf.type);
         
         for(var n = 0; n < 4; n++){
             var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(n+1)).getChildByName("huas");
@@ -89,8 +86,8 @@ cc.Class({
         if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
             this.onGameOver_SJMMJ(data);
         }
-        else{
-            this.onGameOver_SJMMJ(data);
+        else if(cc.vv.gameNetMgr.conf.type == "dhmj") {
+            this.onGameOver_DHMJ(data);
         }
     },
     
@@ -408,7 +405,7 @@ cc.Class({
             }
         }
     },
-    onGameOver_XLCH:function(data){
+    onGameOver_DHMJ:function(data){
         console.log(data);
         if(data.length == 0){
             this._gameresult.active = true;
@@ -429,169 +426,173 @@ cc.Class({
         else{
             this._pingju.active = true;
         }
+        
             
         //显示玩家信息
         for(var i = 0; i < 4; ++i){
             var seatView = this._seats[i];
             var userData = data[i];
             var hued = false;
+            //胡牌的玩家才显示 是否清一色 根xn的字样
+            var numOfGangs = userData.angangs.length + userData.wangangs.length + userData.diangangs.length;
+            var numOfGen = userData.numofgen;
             var actionArr = [];
             var is7pairs = false;
             var ischadajiao = false;
-            var hupaiRoot = seatView.hupai;
-            
-            for(var j = 0; j < hupaiRoot.children.length; ++j){
-                hupaiRoot.children[j].active = false;
-            }
-            
-            var hi = 0;
-            for(var j = 0; j < userData.huinfo.length; ++j){
-                var info = userData.huinfo[j];
-                hued = hued || info.ishupai;
-                if(info.ishupai){
-                    if(hi < hupaiRoot.children.length){
-                        var hupaiView = hupaiRoot.children[hi]; 
-                        hupaiView.active = true;
-                        hupaiView.getComponent(cc.Sprite).spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("B_",info.pai);
-                        hi++;   
+            for(var j = 0; j < userData.actions.length; ++j){
+                var ac = userData.actions[j];
+                if(ac.type == "zimo" || ac.type == "ganghua" || ac.type == "dianganghua" || ac.type == "hu" || ac.type == "gangpaohu" || ac.type == "qiangganghu" || ac.type == "chadajiao"){
+                    if(userData.pattern == "7pairs"){
+                        actionArr.push("七对");
                     }
-                }
-                
-                var str = ""
-                var sep = "";
-                
-                var dataseat = userData;
-                if(!info.ishupai){
-                    if(info.action == "fangpao"){
-                        str = "放炮";
+                    else if(userData.pattern == "l7pairs"){
+                        actionArr.push("龙七对");
                     }
-                    else if(info.action == "gangpao"){
-                        str = "杠上炮";
+                    else if(userData.pattern == "j7pairs"){
+                        actionArr.push("将七对");
                     }
-                    else if(info.action == "beiqianggang"){
-                        str = "被抢杠";
+                    else if(userData.pattern == "duidui"){
+                        actionArr.push("碰碰胡");
                     }
-                    else{
-                        str = "被查大叫";
+                    else if(userData.pattern == "jiangdui"){
+                        actionArr.push("将对");
                     }
                     
-                    dataseat = data[info.target]; 
-                    info = dataseat.huinfo[info.index];
-                }
-                else{
-                    if(info.action == "hu"){
-                        str = "接炮胡"
+                    if(ac.type == "zimo"){
+                        actionArr.push("自摸");
                     }
-                    else if(info.action == "zimo"){
-                        str = "自摸";
+                    else if(ac.type == "ganghua"){
+                        actionArr.push("杠上花");
                     }
-                    else if(info.action == "ganghua"){
-                        str = "杠上花";
+                    else if(ac.type == "dianganghua"){
+                        actionArr.push("点杠花");
                     }
-                    else if(info.action == "dianganghua"){
-                        str = "点杠花";
+                    else if(ac.type == "gangpaohu"){
+                        actionArr.push("杠炮胡");
                     }
-                    else if(info.action == "gangpaohu"){
-                        str = "杠炮胡";
+                    else if(ac.type == "qiangganghu"){
+                        actionArr.push("抢杠胡");
                     }
-                    else if(info.action == "qiangganghu"){
-                        str = "抢杠胡";
+                    else if(ac.type == "chadajiao"){
+                        ischadajiao = true;
                     }
-                    else if(info.action == "chadajiao"){
-                        str = "查大叫";
-                    }   
+                    hued = true;
                 }
-                
-                str += "(";
-                
-                if(info.pattern == "7pairs"){
-                    str += "七对";
-                    sep = "、"
+                else if(ac.type == "fangpao"){
+                    actionArr.push("放炮");
                 }
-                else if(info.pattern == "l7pairs"){
-                    str += "龙七对";
-                    sep = "、"
+                else if(ac.type == "angang"){
+                    actionArr.push("暗杠");
                 }
-                else if(info.pattern == "j7pairs"){
-                    str += "将七对";
-                    sep = "、"
+                else if(ac.type == "diangang"){
+                    actionArr.push("明杠");
                 }
-                else if(info.pattern == "duidui"){
-                    str += "碰碰胡";
-                    sep = "、"
+                else if(ac.type == "wangang"){
+                    actionArr.push("弯杠");
                 }
-                else if(info.pattern == "jiangdui"){
-                    str += "将对";
-                    sep = "、"
+                else if(ac.type == "fanggang"){
+                   actionArr.push("放杠");
                 }
-                    
-                if(info.haidihu){
-                    str += sep + "海底胡";
-                    sep = "、";
+                else if(ac.type == "zhuanshougang"){
+                    actionArr.push("转手杠");
                 }
-                
-                if(info.tianhu){
-                    str += sep + "天胡";
-                    sep = "、";
+                else if(ac.type == "beiqianggang"){
+                    actionArr.push("被抢杠");
                 }
-                
-                if(info.dihu){
-                    str += sep + "地胡";
-                    sep = "、";
+                else if(ac.type == "beichadajiao"){
+                    actionArr.push("被查叫");
                 }
-                
-                if(dataseat.qingyise){
-                    str += sep + "清一色";
-                    sep = "、";
+                else if(ac.type == "sanchisanpeng"){
+                    actionArr.push("三吃三碰");
                 }
-                
-                if(dataseat.menqing){
-                    str += sep + "门清";
-                    sep = "、";
-                }
-                
-                if(dataseat.jingouhu){
-                    str += sep + "金钩胡";
-                    sep = "、";
-                }
-                         
-                if(dataseat.zhongzhang){
-                    str += sep + "中张";
-                    sep = "、";
-                }
-            
-                if(info.numofgen > 0){
-                    str += sep + "根x" + info.numofgen;
-                    sep = "、"; 
-                }
-                
-                if(sep == ""){
-                    str += "平胡";
-                }
-                
-                str += "、" + info.fan + "番";
-                
-                str += ")";
-                actionArr.push(str);
             }
             
-            seatView.hu.active = hued;
+            if(hued){
+                if(userData.qingyise){
+                    actionArr.push("清一色");
+                }
+                
+                if(userData.menqing){
+                    actionArr.push("门清");
+                }
+                
+                if(userData.zhongzhang){
+                    actionArr.push("中张");
+                }
+                
+                if(userData.jingouhu){
+                    actionArr.push("金钩胡");
+                }
+                                
+                if(userData.haidihu){
+                    actionArr.push("海底胡");
+                }
+                
+                if(userData.tianhu){
+                    actionArr.push("天胡");
+                }
+                
+                if(userData.dihu){
+                    actionArr.push("地胡");
+                }
             
-            if(userData.angangs.length){
-                actionArr.push("暗杠x" + userData.angangs.length);
+                if(numOfGen > 0){
+                    actionArr.push("根x" + numOfGen); 
+                }                
+                
+                if(ischadajiao){
+                    actionArr.push("查大叫");
+                }
+                
+                if(userData.hunyise){
+                    actionArr.push("混一色");
+                }
+                
+                if(userData.duiduihu){
+                    actionArr.push("对对胡");
+                }
+                
+                if(userData.paihu){
+                    actionArr.push("排胡");
+                }
+                
+                if(userData.gangshanghua){
+                    actionArr.push("杠上花");
+                }
+                
+                if(userData.kan){
+                    actionArr.push("坎档");
+                }
+                
+                if(userData.bian){
+                    actionArr.push("边档");
+                }
+                
+                if(userData.dan){
+                    actionArr.push("单吊");
+                }
+                
+                if(userData.duidao){
+                    actionArr.push("对倒");
+                }
+                
+                
             }
             
-            if(userData.diangangs.length){
-                actionArr.push("明杠x" + userData.diangangs.length);
+            for(var o = 0; o < 3;++o){
+                seatView.hu.children[o].active = false;    
             }
-            
-            if(userData.wangangs.length){
-                actionArr.push("巴杠x" + userData.wangangs.length);
+            if(userData.huorder >= 0){
+                seatView.hu.children[userData.huorder].active = true;    
             }
 
             seatView.username.string = cc.vv.gameNetMgr.seats[i].name;
             seatView.zhuang.active = cc.vv.gameNetMgr.button == i;
             seatView.reason.string = actionArr.join("、");
+            
+            //显示丝数台数
+            if(userData.tai == -1) seatView.taisi.string = "";
+            else seatView.taisi.string = userData.tai + "台";
             
             //
             if(userData.score > 0){
@@ -601,17 +602,26 @@ cc.Class({
                 seatView.score.string = userData.score;
             }
            
+            
+            var hupai = -1;
+            if(hued){
+                hupai = userData.holds.pop();
+            }
+            
+            cc.vv.mahjongmgr.sortMJ(userData.holds,userData.dingque);
+            
+            //胡牌不参与排序
+            if(hued){
+                userData.holds.push(hupai);
+            }
+            
             //隐藏所有牌
             for(var k = 0; k < seatView.mahjongs.childrenCount; ++k){
                 var n = seatView.mahjongs.children[k];
                 n.active = false;
             }
-            
-            cc.vv.mahjongmgr.sortMJ(userData.holds,userData.dingque);
-            
-            var numOfGangs = userData.angangs.length + userData.wangangs.length + userData.diangangs.length;
            
-            var lackingNum = (userData.pengs.length + numOfGangs)*3; 
+            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length)*3; 
             //显示相关的牌
             for(var k = 0; k < userData.holds.length; ++k){
                 var pai = userData.holds[k];
@@ -657,6 +667,52 @@ cc.Class({
                     this.initPengAndGangs(seatView,index,mjid,"peng");
                     index++;    
                 }    
+            }
+            
+            //初始化吃牌
+            var chis = userData.chis 
+            if(chis){
+                for(var k = 0; k < chis.length; ++k){
+                    var mjid = chis[k];
+                    this.initPengAndGangs(seatView,index,mjid,"chi");
+                    index++;    
+                }    
+            }
+            
+            //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
+             
+            var huas = userData.huas; 
+            var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(i+1)).getChildByName("huas");
+            for(var k = 0; k < hua_node.childrenCount; ++k){
+                hua_node.children[k].active = false;
+            }  
+            if(huas){
+                for(var k = 0; k < huas.length; ++k){
+                    var mjid = huas[k];
+                    hua_node.children[k].active = true;
+                    var sp = hua_node.children[k].getComponent(cc.Sprite);
+                    sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mjid);
+                    
+                }    
+            }
+            
+            //判断东南西北
+            if(userData.button){
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(i%4+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",30);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+1)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",32);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+2)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",31);
+                
+                var direction = this._gameover.getChildByName("result_list").getChildByName("s"+(((i+3)%4)+1)).getChildByName("direction");
+                var sp = direction.getComponent(cc.Sprite);
+                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",33);
             }
         }
     },

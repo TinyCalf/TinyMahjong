@@ -100,16 +100,6 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 			break;
 		//TODO：推倒胡
 	}
-	// if(
-	// 	roomConf.type == null
-	// 	|| roomConf.hongzhongdanghua == null
-	// 	|| roomConf.koufei == null
-	// 	|| roomConf.quanshu == null
-	// 	|| roomConf.jiesuan == null){
-	// 	callback(1,null);
-	// 	return;
-	// }
-
 
 
 	if(roomConf.koufei < 0 || roomConf.koufei > KOUFEI.length){
@@ -181,11 +171,9 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 							quanshu:roomConf.quanshu,
 							jiesuan:roomConf.jiesuan,
 							maxGames:maxgames,
-
 							//TODO:把下面的属性也去掉
 							baseScore:20,
 							maxFan:10000,
-
 							creator:creator,
 						}
 					};
@@ -361,7 +349,6 @@ exports.isReady = function(userId){
 	var s = room.seats[seatIndex];
 	return s.ready;	
 }
-
 
 exports.getUserRoom = function(userId){
 	var location = userLocation[userId];

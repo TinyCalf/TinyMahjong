@@ -10,22 +10,61 @@ cc.Class({
         _koufei: null,
         _quanshu: null,
         _jiesuan: null,
-        _wanfaxuanze: null
-    },
+        _wanfaxuanze: null,
+        _types: [] },
 
+    //定义多种游戏类型
     // use this for initialization
     onLoad: function onLoad() {
-        this._leixingxuanze = [];
-        var t = this.node.getChildByName("leixingxuanze");
-        for (var i = 0; i < t.childrenCount; ++i) {
-            var n = t.children[i].getComponent("RadioButton");
-            if (n != null) {
-                this._leixingxuanze.push(n);
-            }
+        //有多种玩法，沈家门麻将 定海麻将 推到胡麻将
+        this._types = ["sjmmj", "dhmj", "tdh"];
+
+        //隐藏除第一种外的其他玩法 界面
+        for (var i = 1; i < this._types.length; i++) {
+            this.node.getChildByName(this._types[i]).active = false;
         }
+    },
+
+    onBtnBack: function onBtnBack() {
+        this.node.active = false;
+    },
+
+    onBtnOK: function onBtnOK(event) {
+        this.node.active = false;
+        //确定游戏类型
+        var type = event.target.parent.name;
+        //分别进入不同的创建逻辑
+        //TODO：让添加一个游戏和规则更加方便
+        if (type == "sjmmj") {
+            this.createRoomSJMMJ();
+        } else if (type == "dhmj") {
+            this.createRoomDHMJ();
+        } else if (type == "tdh") {
+            //this.createRoomTDH();
+        }
+    },
+
+    onTypeClicked: function onTypeClicked(event) {
+        this.switchType(event.target.parent.children[1].name);
+    },
+
+    //tab界面切换
+    switchType: function switchType(type) {
+        for (var i = 0; i < this._types.length; i++) {
+            this.node.getChildByName(this._types[i]).active = false;
+        }
+        this.node.getChildByName(type).active = true;
+    },
+
+    createRoomSJMMJ: function createRoomSJMMJ() {
+
+        //获取需要的所有选项
+
+        //这里一定要小写，后端会直接拼接这个字符串
+        var type = "sjmmj";
 
         this._koufei = [];
-        var t = this.node.getChildByName("koufei");
+        var t = this.node.getChildByName(type).getChildByName("koufei");
         for (var i = 0; i < t.childrenCount; ++i) {
             var n = t.children[i].getComponent("RadioButton");
             if (n != null) {
@@ -34,7 +73,7 @@ cc.Class({
         }
 
         this._quanshu = [];
-        var t = this.node.getChildByName("quanshu");
+        var t = this.node.getChildByName(type).getChildByName("quanshu");
         for (var i = 0; i < t.childrenCount; ++i) {
             var n = t.children[i].getComponent("RadioButton");
             if (n != null) {
@@ -43,7 +82,7 @@ cc.Class({
         }
 
         this._jiesuan = [];
-        var t = this.node.getChildByName("jiesuan");
+        var t = this.node.getChildByName(type).getChildByName("jiesuan");
         for (var i = 0; i < t.childrenCount; ++i) {
             var n = t.children[i].getComponent("RadioButton");
             if (n != null) {
@@ -52,25 +91,14 @@ cc.Class({
         }
 
         this._wanfaxuanze = [];
-        var t = this.node.getChildByName("wanfaxuanze");
+        var t = this.node.getChildByName(type).getChildByName("wanfaxuanze");
         for (var i = 0; i < t.childrenCount; ++i) {
             var n = t.children[i].getComponent("CheckBox");
             if (n != null) {
                 this._wanfaxuanze.push(n);
             }
         }
-    },
 
-    onBtnBack: function onBtnBack() {
-        this.node.active = false;
-    },
-
-    onBtnOK: function onBtnOK() {
-        this.node.active = false;
-        this.createRoom();
-    },
-
-    createRoom: function createRoom() {
         var self = this;
         var onCreate = function onCreate(ret) {
             if (ret.errcode !== 0) {
@@ -87,24 +115,6 @@ cc.Class({
         };
 
         var hongzhongdanghua = self._wanfaxuanze[0].checked;
-
-        var type = 0;
-        for (var i = 0; i < self._leixingxuanze.length; ++i) {
-            if (self._leixingxuanze[i].checked) {
-                type = i;
-                break;
-            }
-        }
-
-        //TODO：把三种游戏的不同类型加上
-        if (type == 0) {
-            type = "sjmmj";
-        } else if (type == 1) {
-            type = "dhmj";
-        } else {
-            type = "tdh";
-        }
-        //type= "xzdd";
 
         var koufei = 0;
         for (var i = 0; i < self._koufei.length; ++i) {
@@ -133,6 +143,98 @@ cc.Class({
         var conf = {
             type: type,
             hongzhongdanghua: hongzhongdanghua,
+            koufei: koufei,
+            quanshu: quanshu,
+            jiesuan: jiesuan
+        };
+
+        var data = {
+            account: cc.vv.userMgr.account,
+            sign: cc.vv.userMgr.sign,
+            conf: JSON.stringify(conf)
+        };
+        cc.vv.wc.show("正在创建房间");
+        cc.vv.http.sendRequest("/create_private_room", data, onCreate);
+    },
+
+    createRoomDHMJ: function createRoomDHMJ() {
+
+        //获取需要的所有选项
+        //这里一定要小写，后端会直接拼接这个字符串
+        var type = "dhmj";
+
+        this._koufei = [];
+        var t = this.node.getChildByName(type).getChildByName("koufei");
+        for (var i = 0; i < t.childrenCount; ++i) {
+            var n = t.children[i].getComponent("RadioButton");
+            if (n != null) {
+                this._koufei.push(n);
+            }
+        }
+
+        this._quanshu = [];
+        var t = this.node.getChildByName(type).getChildByName("quanshu");
+        for (var i = 0; i < t.childrenCount; ++i) {
+            var n = t.children[i].getComponent("RadioButton");
+            if (n != null) {
+                this._quanshu.push(n);
+            }
+        }
+
+        this._jiesuan = [];
+        var t = this.node.getChildByName(type).getChildByName("jiesuan");
+        for (var i = 0; i < t.childrenCount; ++i) {
+            var n = t.children[i].getComponent("RadioButton");
+            if (n != null) {
+                this._jiesuan.push(n);
+            }
+        }
+
+        var self = this;
+        var onCreate = function onCreate(ret) {
+            if (ret.errcode !== 0) {
+                cc.vv.wc.hide();
+                if (ret.errcode == 2222) {
+                    cc.vv.alert.show("提示", "房卡不足，创建房间失败!");
+                } else {
+                    cc.vv.alert.show("提示", "创建房间失败,错误码:" + ret.errcode);
+                }
+            } else {
+                cc.vv.gameNetMgr.connectGameServer(ret);
+            }
+        };
+
+        //判断用户做了哪些选择
+        //扣费 0 房主出资 1 玩家平分
+        //圈数 0 8盘 1 一圈
+        //结算 0 50  1 120
+
+        var koufei = 0;
+        for (var i = 0; i < self._koufei.length; ++i) {
+            if (self._koufei[i].checked) {
+                koufei = i;
+                break;
+            }
+        }
+
+        var quanshu = 0;
+        for (var i = 0; i < self._quanshu.length; ++i) {
+            if (self._quanshu[i].checked) {
+                quanshu = i;
+                break;
+            }
+        }
+
+        var jiesuan = 0;
+        for (var i = 0; i < self._jiesuan.length; ++i) {
+            if (self._jiesuan[i].checked) {
+                jiesuan = i;
+                break;
+            }
+        }
+
+        var conf = {
+            type: type,
             koufei: koufei,
             quanshu: quanshu,
             jiesuan: jiesuan

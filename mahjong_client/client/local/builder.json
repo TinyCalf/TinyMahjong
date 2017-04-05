@@ -7,7 +7,7 @@
   "keystoreAliasPassword": "123456",
   "keystorePassword": "123456",
   "keystorePath": "D:\\fkmj\\ddmj_20161230\\client\\boyue.keystore",
-  "platform": "android",
+  "platform": "web-mobile",
   "previewHeight": "720",
   "previewWidth": "1280",
   "sourceMaps": false,
