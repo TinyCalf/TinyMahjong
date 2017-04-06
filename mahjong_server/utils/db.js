@@ -529,7 +529,6 @@ exports.update_num_of_turns = function(roomId,numOfTurns,callback){
     });
 };
 
-
 exports.update_next_button = function(roomId,nextButton,callback){
     callback = callback == null? nop:callback;
     var sql = 'UPDATE t_rooms SET next_button = {0} WHERE id = "{1}"'

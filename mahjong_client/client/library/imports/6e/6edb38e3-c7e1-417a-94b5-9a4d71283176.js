@@ -33,7 +33,7 @@ cc.Class({
     },
 
     onShare: function onShare() {
-        cc.vv.anysdkMgr.share("达达麻将", "达达麻将，包含了血战到底、血流成河等多种四川流行麻将玩法。");
+        cc.vv.anysdkMgr.share("舟山麻将", "舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种四川流行麻将玩法。");
     },
 
     // use this for initialization

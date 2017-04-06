@@ -875,8 +875,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1482851488000,
-    "meta": 1484735050752,
+    "asset": 1491443080167,
+    "meta": 1491443080683,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2465,8 +2465,8 @@
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1491375778466,
-    "meta": 1491375778639,
+    "asset": 1491444251249,
+    "meta": 1491444251391,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
