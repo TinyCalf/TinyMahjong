@@ -35,16 +35,6 @@ function constructRoomFromDb(dbdata){
 	};
 
 
-	// if(roomInfo.conf.type == "sjmmj"){
-	// 	roomInfo.gameMgr = require("./gamemgr_sjmmj");
-	// }
-	// else if(roomInfo.conf.type == "dhmj"){
-	// 	roomInfo.gameMgr = require("./gamemgr_dhmj");
-	// }
-	// else  if(roomInfo.conf.type == "tdh"){
-	// 	roomInfo.gameMgr = require("./gamemgr_tdh");
-	// }
-
 	roomInfo.gameMgr = require("./gamemgr_" + roomInfo.conf.type);
 	var roomId = roomInfo.id;
 
@@ -98,7 +88,17 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 				return;
 			}
 			break;
-		//TODO：推倒胡
+		case "tdh":
+			if(
+				roomConf.type == null
+				|| roomConf.koufei == null //(房主出资 平摊)
+				|| roomConf.quanshu == null// 8局 一圈
+				|| roomConf.jiesuan == null // 平摊 包
+			){
+				callback(1,null);
+				return;
+			}
+			break;
 	}
 
 

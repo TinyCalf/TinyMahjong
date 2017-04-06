@@ -900,7 +900,7 @@ function calculateResult(game){
         //当前风圈 0123 东南西北
         var nowfeng = game.roomInfo.fengxiang;
         //当前坐位 0123 东南西北
-        var nowseat = (i+game.button)%4;
+        var nowseat = (i-game.button+4)%4;
 
         //台数：
         var TAI = 0;

@@ -18395,7 +18395,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "wanfaxuanze",
+    "_name": "jiesuan",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -18891,8 +18891,8 @@
     "checkedSprite": {
       "__uuid__": "55830f4d-a21d-4a98-a7c4-a3fb006c3d42"
     },
-    "checked": false,
-    "groupId": 3
+    "checked": true,
+    "groupId": 4
   },
   {
     "__type__": "cc.Node",
@@ -19255,7 +19255,7 @@
       "__uuid__": "55830f4d-a21d-4a98-a7c4-a3fb006c3d42"
     },
     "checked": false,
-    "groupId": 3
+    "groupId": 4
   },
   {
     "__type__": "cc.Node",

@@ -114,7 +114,7 @@ function shuffle(game) {
     // var mjs2 = [0,1,3,4,5,6,7,8,9,10,11,12,13,14];
     // var mjs3 = [0,1,3,4,5,6,7,8,9,10,11,12,13,14];
     // var mjs4 = [0,1,3,4,5,6,7,8,9,10,11,12,13,14];
-    // var mjs = [];
+    // var mjs =  [19,35,39];
     // for (var i = 0 ; i < 14 ; i++) {
     //     mjs.push(mjs1[i]);
     //     mjs.push(mjs2[i]);
@@ -126,8 +126,6 @@ function shuffle(game) {
     //         game.mahjongs[index] = mjs[i];
     //         index++;
     // }
-
-
 }
 
 function mopai(game,seatIndex) {
@@ -903,7 +901,7 @@ function calculateResult(game){
             //当前风圈 0123 东南西北
             var nowfeng = game.roomInfo.fengxiang;
             // 0123 东南西北
-            var nowseat = (i+game.button)%4;
+            var nowseat = (i-game.button+4)%4;
             //中发白东南西北碰出杠出暗刻为一台
             //东、南、西、北坐着碰出杠出暗刻加一台
             sd.pengs.forEach(function(pai){
@@ -976,6 +974,8 @@ function calculateResult(game){
             });
             if(seasons > 3 || flowers > 3) TAI++;
 
+            console.log(sd.huas);
+            console.log(nowseat);
             console.log("3 tai="+TAI);
 
 
