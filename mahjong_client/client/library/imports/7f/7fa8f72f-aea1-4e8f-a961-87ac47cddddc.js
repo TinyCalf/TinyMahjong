@@ -127,11 +127,12 @@ cc.Class({
         });
 
         this.node.on('game_begin', function (data) {
-            self.onGameBeign();
+            self.playShazi();
+            self.onGameBeign(data);
         });
 
         this.node.on('game_sync', function (data) {
-            self.onGameBeign();
+            self.onGameBeign(data);
         });
 
         this.node.on('game_chupai', function (data) {
@@ -469,6 +470,13 @@ cc.Class({
     playEfx: function playEfx(index, name) {
         this._playEfxs[index].node.active = true;
         this._playEfxs[index].play(name);
+    },
+
+    playShazi: function playShazi() {
+        var anim1 = this.node.getChildByName("game").getChildByName("shaizi").getChildByName("shaizi1").getComponent(cc.Animation);
+        anim1.play("shaizi");
+        var anim2 = this.node.getChildByName("game").getChildByName("shaizi").getChildByName("shaizi2").getComponent(cc.Animation);
+        anim2.play("shaizi2");
     },
 
     onGameBeign: function onGameBeign() {

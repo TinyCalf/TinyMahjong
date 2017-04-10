@@ -37,7 +37,7 @@
       "id": "5f41e8be-3282-4aa5-818c-70d7d8a6b0bf"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "700defc7-ee0a-4150-a166-60291a50e358"
     },
     {
@@ -129,7 +129,7 @@
       "id": "7fbf12b6-5e14-4014-9c2c-a5abf220f6e5"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "8ef50f39-a422-4106-b3db-752100f6fcac"
     },
     {
@@ -169,7 +169,7 @@
       "id": "347575c5-fc00-4b99-9cca-1c89f8e39415"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "2f4197dc-da64-4a36-9782-3c92d0de282d"
     },
     {
@@ -1067,10 +1067,6 @@
     {
       "folded": true,
       "id": "d9fdfb5f-1f60-4026-bc3a-980e1659e417"
-    },
-    {
-      "folded": true,
-      "id": "1aa1eae2-22a6-4a46-985a-071d51439651"
     },
     {
       "folded": true,

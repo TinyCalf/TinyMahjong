@@ -66,7 +66,7 @@ cc.Class({
         this._btnYXOpen.active = !this._btnYXClose.active;
 
         var yx = this.node.getChildByName("yinxiao");
-        var width = 430 * cc.vv.audioMgr.sfxVolume;
+        var width = 368 * cc.vv.audioMgr.sfxVolume;
         var progress = yx.getChildByName("progress");
         progress.getComponent(cc.Slider).progress = cc.vv.audioMgr.sfxVolume;
         progress.getChildByName("progress").width = width;
@@ -75,7 +75,7 @@ cc.Class({
         this._btnYYClose.active = cc.vv.audioMgr.bgmVolume > 0;
         this._btnYYOpen.active = !this._btnYYClose.active;
         var yy = this.node.getChildByName("yinyue");
-        var width = 430 * cc.vv.audioMgr.bgmVolume;
+        var width = 368 * cc.vv.audioMgr.bgmVolume;
         var progress = yy.getChildByName("progress");
         progress.getComponent(cc.Slider).progress = cc.vv.audioMgr.bgmVolume;
 

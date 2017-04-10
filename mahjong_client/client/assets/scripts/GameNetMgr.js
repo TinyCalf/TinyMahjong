@@ -686,6 +686,7 @@ cc.Class({
         this.dispatchEvent('game_chupai',data);
     },
     
+    
     connectGameServer:function(data){
         this.dissoveData = null;
         cc.vv.net.ip = data.ip + ":" + data.port;

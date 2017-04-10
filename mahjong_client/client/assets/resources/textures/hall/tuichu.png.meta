@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "82a55f93-1198-4c2d-a942-6774a9609e92",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tuichu": {
+      "ver": "1.0.3",
+      "uuid": "252dd8eb-21ae-4221-918a-3d9cfdb3af18",
+      "rawTextureUuid": "82a55f93-1198-4c2d-a942-6774a9609e92",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 222,
+      "height": 74,
+      "rawWidth": 222,
+      "rawHeight": 74,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

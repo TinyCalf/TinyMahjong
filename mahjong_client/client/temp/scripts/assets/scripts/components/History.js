@@ -42,7 +42,7 @@ cc.Class({
         this._viewitemTemp = this._content.children[0];
         this._content.removeChild(this._viewitemTemp);
 
-        var node = cc.find("Canvas/btn_zhanji");
+        var node = cc.find("Canvas/right_bottom/btn_zhanji");
         this.addClickEvent(node, this.node, "History", "onBtnHistoryClicked");
 
         var node = cc.find("Canvas/history/btn_back");

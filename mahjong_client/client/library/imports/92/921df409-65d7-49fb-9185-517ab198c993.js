@@ -35,8 +35,8 @@ cc.Class({
 
         this.refreshBtns();
 
-        this.lblRoomNo = cc.find("Canvas/infobar/Z_room_txt/New Label").getComponent(cc.Label);
-        this._timeLabel = cc.find("Canvas/infobar/time").getComponent(cc.Label);
+        this.lblRoomNo = cc.find("Canvas/infobar/shijian/Z_room_txt/New Label").getComponent(cc.Label);
+        this._timeLabel = cc.find("Canvas/infobar/shijian/time").getComponent(cc.Label);
         this.lblRoomNo.string = cc.vv.gameNetMgr.roomId;
         var gameChild = this.node.getChildByName("game");
         var sides = ["myself", "right", "up", "left"];
