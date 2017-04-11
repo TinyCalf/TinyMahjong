@@ -1463,6 +1463,10 @@ function doGameOver(game,userId,forceEnd){
                 tianhu:sd.isTianHu,
                 dihu:sd.isDiHu,
                 huorder:game.hupaiList.indexOf(i),
+
+                //舟山麻将需要发送当前局数 和 圈数
+                gameindex:game.gameIndex,
+                fengxiang:game.conf.fengxiang,
             };
 
             //推入庄

@@ -300,7 +300,7 @@ cc.Class({
                 self.initOtherMahjongs(seatData);
             }
             var localIndex = self.getLocalIndex(seatData.seatindex);
-            self.playEfx(localIndex, "play_peng");
+            self.playEfx(localIndex, "play_chi");
             //cc.vv.audioMgr.playSFX("nv/peng.mp3");
             self.hideOptions();
         });

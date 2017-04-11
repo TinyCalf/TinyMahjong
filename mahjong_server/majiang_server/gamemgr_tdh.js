@@ -754,6 +754,7 @@ function doGameOver(game,userId,forceEnd){
                 tianhu:sd.isTianHu,
                 dihu:sd.isDiHu,
                 huorder:game.hupaiList.indexOf(i),
+
             };
 
             //推入庄
