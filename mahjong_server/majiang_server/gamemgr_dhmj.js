@@ -101,14 +101,14 @@ function shuffle(game) {
     //var mjs = [34,35,36,37,38,39,40,41];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    // var index = 0 ;
-    // var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for (var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
+    var index = 0 ;
+    var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for (var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
     //三吃三碰
     // var mjs1 = [0,0,1,1,2,2,3,3,4,4,5,5,6,6];
     // var mjs2 = [0,1,3,4,5,6,7,8,9,10,11,12,13,14];
@@ -1398,12 +1398,11 @@ function doGameOver(game,userId,forceEnd){
             //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
             rs.score += sd.score;
-            rs.numZiMo += sd.numZiMo;
-            rs.numJiePao += sd.numJiePao;
-            rs.numDianPao += sd.numDianPao;
-            rs.numAnGang += sd.numAnGang;
-            rs.numMingGang += sd.numMingGang;
-            rs.numChaJiao += sd.numChaJiao;
+            (sd.iszimo) ? rs.numZiMo ++ :{};
+            (sd.hued && !sd.iszimo) ? rs.numJiePao ++ : {};
+            (sd.game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
+            rs.numAnGang += sd.angangs.length;
+            rs.numMingGang += sd.diangangs.length + sd.wangangs.length;
 
             var userRT = {
                 userId:sd.userId,
@@ -1437,6 +1436,10 @@ function doGameOver(game,userId,forceEnd){
                 tianhu:sd.isTianHu,
                 dihu:sd.isDiHu,
                 huorder:game.hupaiList.indexOf(i),
+
+                //舟山麻将需要发送当前局数 和 圈数
+                gameindex:game.gameIndex,
+                fengxiang:game.conf.fengxiang,
             };
 
             //推入庄
@@ -1474,7 +1477,7 @@ function doGameOver(game,userId,forceEnd){
         var quanshu = game.conf.quanshu;
         //判断有没有打完一个风向，打完则改变风向
 
-        roomInfo.numOfGames++;
+
         //判斷是否打完一局
         var isEnd = false;
 
@@ -1495,7 +1498,7 @@ function doGameOver(game,userId,forceEnd){
             if(roomInfo.numOfGames >= roomInfo.conf.maxGames) isEnd = true;
         }
 
-
+        roomInfo.numOfGames++;
 
         if(old != roomInfo.nextButton){
             db.update_next_button(roomId,roomInfo.nextButton);

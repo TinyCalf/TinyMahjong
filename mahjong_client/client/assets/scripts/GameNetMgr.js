@@ -18,6 +18,11 @@ cc.Class({
         gamestate:"",
         isOver:false,
         dissoveData:null,
+        
+        //舟山麻将额外属性
+        fengxiang:null,
+        
+        
         // foo: {
         //    default: null,
         //    url: cc.Texture2D,  // optional, default is typeof default
@@ -62,7 +67,7 @@ cc.Class({
             this.seats = null;
             this.roomId = null;
             this.maxNumOfGames = 0;
-            this.numOfGames = 0;        
+            this.numOfGames = 0; 
         }
     },
     
@@ -176,6 +181,7 @@ cc.Class({
                 self.conf = data.conf;
                 self.maxNumOfGames = data.conf.maxGames;
                 self.numOfGames = data.numofgames;
+                self.fengxiang = data.fengxiang;
                 self.seats = data.seats;
                 self.seatIndex = self.getSeatIndexByID(cc.vv.userMgr.userId);
                 self.isOver = false;

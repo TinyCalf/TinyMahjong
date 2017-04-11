@@ -5921,3 +5921,58 @@
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
 2017-04-11T02:10:52.187Z - normal: Compiled successfully
+2017-04-11T02:38:19.826Z - normal: Compiled successfully
+2017-04-11T03:07:41.124Z - normal: Compiled successfully
+2017-04-11T05:14:29.557Z - normal: Compiled successfully
+2017-04-11T05:17:45.298Z - normal: Compiled successfully
+2017-04-11T05:22:13.686Z - normal: Compiled successfully
+2017-04-11T05:23:24.105Z - normal: Compiled successfully
+2017-04-11T05:28:11.002Z - normal: Compiled successfully
+2017-04-11T05:28:41.329Z - normal: Compiled successfully
+2017-04-11T05:40:03.017Z - error: Failed to update asset db://assets/scripts/components/MJGame.js, messages: Compile error: SyntaxError: unknown: Unexpected token (260:9)
+                    this._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局 " + "北风圈";
+            }
+        });
+        
+        this.node.on('game_over',function(data){
+            self.gameRoot.active = false;
+    at Parser.pp.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\location.js:24:13)
+    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\util.js:82:8)
+    at Parser.pp.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:425:12)
+    at Parser.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\jsx\index.js:412:22)
+    at Parser.pp.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:236:19)
+    at Parser.pp.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:217:19)
+    at Parser.pp.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:163:19)
+    at Parser.pp.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:145:19)
+    at Parser.pp.parseMaybeAssign (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:112:19)
+    at Parser.pp.parseExpression (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:79:19)
+    at Parser.pp.parseStatement (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:137:23)
+    at Parser.parseStatement (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseBlock (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:442:21)
+    at Parser.pp.parseFunctionBody (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:747:22)
+    at Parser.parseFunctionBody (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:643:20)
+    at Parser.pp.parseFunction (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:524:8)
+    at e.AssetDB.error (D:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2582)
+    at Object.callback (D:\CocosCreator\resources\app.asar\asset-db\core\ipc.js:1:4434)
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at e.<anonymous> (D:\CocosCreator\resources\app.asar\asset-db\index.js:1:1633)
+    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:20698
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:696:30
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:167:37
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:1209:30
+    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:5473
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:726:13
+    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+2017-04-11T05:40:29.589Z - normal: Compiled successfully
+2017-04-11T05:44:39.220Z - normal: Compiled successfully
+2017-04-11T05:50:44.492Z - normal: Compiled successfully
+2017-04-11T05:52:42.470Z - normal: Compiled successfully
+2017-04-11T05:56:45.548Z - normal: Compiled successfully
+2017-04-11T05:58:25.006Z - normal: Compiled successfully
+2017-04-11T06:03:08.690Z - normal: Compiled successfully
+2017-04-11T06:08:35.878Z - normal: Compiled successfully
+2017-04-11T06:17:53.902Z - normal: Compiled successfully

@@ -160,7 +160,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 						numOfGames:1,
 						fengxiang:0,//风向 0123 东南西北
 						createTime:createTime,
-						nextButton:0,
+						nextButton:parseInt(Math.random()*4),
 						seats:[],
 						//標記是否結算：
 						ifPayed: false,

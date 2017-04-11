@@ -17,7 +17,11 @@ cc.Class({
         isHuanSanZhang: false,
         gamestate: "",
         isOver: false,
-        dissoveData: null
+        dissoveData: null,
+
+        //舟山麻将额外属性
+        fengxiang: null
+
     },
 
     // foo: {
@@ -173,6 +177,7 @@ cc.Class({
                 self.conf = data.conf;
                 self.maxNumOfGames = data.conf.maxGames;
                 self.numOfGames = data.numofgames;
+                self.fengxiang = data.fengxiang;
                 self.seats = data.seats;
                 self.seatIndex = self.getSeatIndexByID(cc.vv.userMgr.userId);
                 self.isOver = false;

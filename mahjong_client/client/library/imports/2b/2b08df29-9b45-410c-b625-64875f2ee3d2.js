@@ -54,7 +54,7 @@ cc.Class({
         seat.node.getChildByName("dianpaocishu").getComponent(cc.Label).string = info.numdianpao;
         seat.node.getChildByName("angangcishu").getComponent(cc.Label).string = info.numangang;
         seat.node.getChildByName("minggangcishu").getComponent(cc.Label).string = info.numminggang;
-        seat.node.getChildByName("chajiaocishu").getComponent(cc.Label).string = info.numchadajiao;
+        //seat.node.getChildByName("chajiaocishu").getComponent(cc.Label).string = info.numchadajiao;
     },
 
     onGameEnd: function onGameEnd(endinfo) {

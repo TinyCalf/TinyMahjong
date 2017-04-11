@@ -93,6 +93,7 @@ exports.start = function(config,mgr){
 					roomid:roomInfo.id,
 					conf:roomInfo.conf,
 					numofgames:roomInfo.numOfGames,
+					fengxiang:roomInfo.fengxiang,
 					seats:seats
 				}
 			};

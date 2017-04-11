@@ -40,7 +40,7 @@
                 "children": [
                   "scene"
                 ],
-                "height": 805,
+                "height": 855,
                 "type": "panel",
                 "width": 1188
               },
@@ -50,7 +50,7 @@
                   "console",
                   "timeline"
                 ],
-                "height": 250,
+                "height": 200,
                 "type": "panel",
                 "width": 1188
               }
@@ -72,12 +72,6 @@
         "snapshot": true,
         "type": "dock-h"
       }
-    },
-    "window-1491828002361": {
-      "x": 438,
-      "y": 176,
-      "width": 1239,
-      "height": 874
     }
   }
 }
