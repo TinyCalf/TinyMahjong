@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.WindowManager;
-
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendAuth;
 import com.tencent.mm.sdk.openapi.SendMessageToWX;
@@ -34,12 +33,12 @@ public class WXAPI {
 	
 	public static void Login(){
 		System.out.println("login...");
-//		isLogin = true;
-//		final SendAuth.Req req = new SendAuth.Req();
-//		req.scope = "snsapi_userinfo";
-//		req.state = "carjob_wx_login";
-//		boolean flag = api.sendReq(req);
-//		System.out.println(flag);
+		isLogin = true;
+		final SendAuth.Req req = new SendAuth.Req();
+		req.scope = "snsapi_userinfo";
+		req.state = "carjob_wx_login";
+		boolean flag = api.sendReq(req);
+		System.out.println(flag);
 		
 	}
 	

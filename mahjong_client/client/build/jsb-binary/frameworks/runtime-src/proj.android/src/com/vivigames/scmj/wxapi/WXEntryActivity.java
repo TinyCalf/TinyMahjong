@@ -16,7 +16,7 @@ import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.vivigames.scmj.Constants;
 import com.vivigames.scmj.WXAPI;
 
-public abstract class WXEntryActivity extends Activity implements IWXAPIEventHandler{
+public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 	
 	// IWXAPI
     private IWXAPI _api;
@@ -58,10 +58,10 @@ public abstract class WXEntryActivity extends Activity implements IWXAPIEventHan
 	}
 
 	
-	//@Override
-	public void com(BaseResp resp) {
+	@Override
+	public void onResp(BaseResp resp) {
 		System.out.println("onResp++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		System.out.println(resp);
+		System.out.println(resp.errCode);
 		int result = 0;
 		switch (resp.errCode) {
 		case BaseResp.ErrCode.ERR_OK:
@@ -83,7 +83,13 @@ public abstract class WXEntryActivity extends Activity implements IWXAPIEventHan
 			break;
 		}
 		this.finish();
-		
 		//Toast.makeText(this, result, Toast.LENGTH_LONG).show();
 	}
+
+	//@Override
+//	public void onResp(BaseResp arg0) {
+//		// TODO Auto-generated method stub
+//		System.out.println("onResp++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//		
+//	}
 }
