@@ -45,7 +45,7 @@
                 "width": 1188
               },
               {
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline"
@@ -72,6 +72,24 @@
         "snapshot": true,
         "type": "dock-h"
       }
+    },
+    "window-1491905627306": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 1058,
+      "y": 155,
+      "width": 516,
+      "height": 739
     }
   }
 }

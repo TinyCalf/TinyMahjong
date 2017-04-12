@@ -16,7 +16,7 @@ import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.vivigames.scmj.Constants;
 import com.vivigames.scmj.WXAPI;
 
-public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
+public abstract class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 	
 	// IWXAPI
     private IWXAPI _api;
@@ -58,7 +58,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 	}
 
 	
-	@Override
+	//@Override
 	public void com(BaseResp resp) {
 		System.out.println("onResp++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.println(resp);

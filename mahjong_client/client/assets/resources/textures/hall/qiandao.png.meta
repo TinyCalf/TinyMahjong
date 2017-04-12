@@ -5,7 +5,7 @@
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "组 2": {
+    "qiandao": {
       "ver": "1.0.3",
       "uuid": "7b55910f-f278-4274-b024-7b150d05624e",
       "rawTextureUuid": "eb06336c-973b-4221-8961-4fa276383c56",
@@ -16,10 +16,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 0,
-      "height": 0,
-      "rawWidth": 0,
-      "rawHeight": 0,
+      "width": 88,
+      "height": 90,
+      "rawWidth": 88,
+      "rawHeight": 90,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

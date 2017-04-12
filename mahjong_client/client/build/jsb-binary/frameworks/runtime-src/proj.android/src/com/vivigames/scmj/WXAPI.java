@@ -34,12 +34,12 @@ public class WXAPI {
 	
 	public static void Login(){
 		System.out.println("login...");
-		isLogin = true;
-		final SendAuth.Req req = new SendAuth.Req();
-		req.scope = "snsapi_userinfo";
-		req.state = "carjob_wx_login";
-		boolean flag = api.sendReq(req);
-		System.out.println(flag);
+//		isLogin = true;
+//		final SendAuth.Req req = new SendAuth.Req();
+//		req.scope = "snsapi_userinfo";
+//		req.state = "carjob_wx_login";
+//		boolean flag = api.sendReq(req);
+//		System.out.println(flag);
 		
 	}
 	

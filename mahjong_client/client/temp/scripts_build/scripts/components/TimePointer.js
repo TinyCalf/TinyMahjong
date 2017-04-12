@@ -46,9 +46,11 @@ cc.Class({
     },
 
     initPointer: function initPointer() {
+
         if (cc.vv == null) {
             return;
         }
+
         this._arrow.active = cc.vv.gameNetMgr.gamestate == "playing";
         if (!this._arrow.active) {
             return;
@@ -58,6 +60,13 @@ cc.Class({
         for (var i = 0; i < this._pointer.children.length; ++i) {
             this._pointer.children[i].active = i == localIndex;
         }
+
+        //旋转风向
+        var button = cc.vv.gameNetMgr.button;
+        var seatindex = cc.vv.gameNetMgr.seatIndex;
+        var arrow_frame = this._arrow.getChildByName("Z_arrow_frame");
+        var dis = seatindex - button;
+        arrow_frame.rotation = dis * 90;
     },
 
     // called every frame, uncomment this function to activate update callback

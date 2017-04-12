@@ -25,7 +25,8 @@ cc.Class({
         _hupaiTips: [],
         _hupaiLists: [],
         _playEfxs: [],
-        _opts: []
+        _opts: [],
+        _gametype: null
     },
 
     onLoad: function onLoad() {
@@ -72,7 +73,26 @@ cc.Class({
         this._mjcount = gameChild.getChildByName('mjcount').getComponent(cc.Label);
         this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
         this._gamecount = gameChild.getChildByName('gamecount').getComponent(cc.Label);
-        this._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
+        switch (cc.vv.gameNetMgr.fengxiang) {
+            case 0:
+                this._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局" + "东风圈";break;
+            case 1:
+                this._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局" + "南风圈";break;
+            case 2:
+                this._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局" + "西风圈";break;
+            case 3:
+                this._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局" + "北风圈";break;
+        }
+
+        this._gametype = gameChild.getChildByName('gametype');
+        switch (cc.vv.gameNetMgr.conf.type) {
+            case "sjmmj":
+                this._gametype.getComponent(cc.Label).string = "沈家门麻将";break;
+            case "dhmj":
+                this._gametype.getComponent(cc.Label).string = "定海麻将";break;
+            case "tdh":
+                this._gametype.getComponent(cc.Label).string = "推到胡";break;
+        }
 
         var myselfChild = gameChild.getChildByName("myself");
         var myholds = myselfChild.getChildByName("holds");
@@ -131,11 +151,12 @@ cc.Class({
         });
 
         this.node.on('game_begin', function (data) {
-            self.onGameBeign();
+            self.playShazi();
+            self.onGameBeign(data);
         });
 
         this.node.on('game_sync', function (data) {
-            self.onGameBeign();
+            self.onGameBeign(data);
         });
 
         this.node.on('game_chupai', function (data) {
@@ -227,7 +248,18 @@ cc.Class({
         });
 
         this.node.on('game_num', function (data) {
-            self._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
+            //self._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
+            switch (cc.vv.gameNetMgr.fengxiang) {
+                case 0:
+                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "东风圈";break;
+                case 1:
+                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "南风圈";break;
+                case 2:
+                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "西风圈";break;
+                case 3:
+                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "北风圈";break;
+
+            }
         });
 
         this.node.on('game_over', function (data) {
@@ -299,7 +331,7 @@ cc.Class({
                 self.initOtherMahjongs(seatData);
             }
             var localIndex = self.getLocalIndex(seatData.seatindex);
-            self.playEfx(localIndex, "play_peng");
+            self.playEfx(localIndex, "play_chi");
             //cc.vv.audioMgr.playSFX("nv/peng.mp3");
             self.hideOptions();
         });
@@ -317,10 +349,10 @@ cc.Class({
 
             var localIndex = self.getLocalIndex(seatData.seatindex);
             if (gangtype == "wangang") {
-                self.playEfx(localIndex, "play_guafeng");
+                self.playEfx(localIndex, "play_gang");
                 cc.vv.audioMgr.playSFX("guafeng.mp3");
             } else {
-                self.playEfx(localIndex, "play_xiayu");
+                self.playEfx(localIndex, "play_gang");
                 cc.vv.audioMgr.playSFX("rain.mp3");
             }
         });
@@ -473,6 +505,13 @@ cc.Class({
     playEfx: function playEfx(index, name) {
         this._playEfxs[index].node.active = true;
         this._playEfxs[index].play(name);
+    },
+
+    playShazi: function playShazi() {
+        var anim1 = this.node.getChildByName("game").getChildByName("shaizi").getChildByName("shaizi1").getComponent(cc.Animation);
+        anim1.play("shaizi");
+        var anim2 = this.node.getChildByName("game").getChildByName("shaizi").getChildByName("shaizi2").getComponent(cc.Animation);
+        anim2.play("shaizi2");
     },
 
     onGameBeign: function onGameBeign() {

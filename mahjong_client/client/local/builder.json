@@ -1,5 +1,5 @@
 {
-  "androidStudio": false,
+  "androidStudio": true,
   "apiLevel": "android-20",
   "buildPath": "./build",
   "debug": false,
@@ -7,7 +7,7 @@
   "keystoreAliasPassword": "123456",
   "keystorePassword": "123456",
   "keystorePath": "D:\\fkmj\\ddmj_20161230\\client\\boyue.keystore",
-  "platform": "web-mobile",
+  "platform": "android",
   "previewHeight": "720",
   "previewWidth": "1280",
   "sourceMaps": false,

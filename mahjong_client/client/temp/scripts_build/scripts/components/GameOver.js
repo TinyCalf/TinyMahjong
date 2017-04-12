@@ -370,23 +370,42 @@ cc.Class({
                 }
             }
 
+            //东南西北小旗子转换
+            var switchFengFlag = function switchFengFlag(direction, dir_str) {
+                for (var k = 0; k < 4; k++) {
+                    direction.children[k].active = false;
+                }
+                direction.getChildByName(dir_str).active = true;
+            };
+
+            //显示当前风圈和局数
+            var numofgames = this._gameover.getChildByName("numofgames");
+            var fengquan = "东风圈";
+            switch (userData.fengxiang) {
+                case 0:
+                    fengquan = "东风圈";break;
+                case 1:
+                    fengquan = "南风圈";break;
+                case 2:
+                    fengquan = "西风圈";break;
+                case 3:
+                    fengquan = "北风圈";break;
+            }
+            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+
             //判断东南西北
             if (userData.button) {
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + (i % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 30);
+                switchFengFlag(direction, "dong");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 1) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 32);
+                switchFengFlag(direction, "nan");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 2) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 31);
+                switchFengFlag(direction, "xi");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 3) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 33);
+                switchFengFlag(direction, "bei");
             }
         }
     },
@@ -653,23 +672,42 @@ cc.Class({
                 }
             }
 
+            //东南西北小旗子转换
+            var switchFengFlag = function switchFengFlag(direction, dir_str) {
+                for (var k = 0; k < 4; k++) {
+                    direction.children[k].active = false;
+                }
+                direction.getChildByName(dir_str).active = true;
+            };
+
+            //显示当前风圈和局数
+            var numofgames = this._gameover.getChildByName("numofgames");
+            var fengquan = "东风圈";
+            switch (userData.fengxiang) {
+                case 0:
+                    fengquan = "东风圈";break;
+                case 1:
+                    fengquan = "南风圈";break;
+                case 2:
+                    fengquan = "西风圈";break;
+                case 3:
+                    fengquan = "北风圈";break;
+            }
+            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+
             //判断东南西北
             if (userData.button) {
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + (i % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 30);
+                switchFengFlag(direction, "dong");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 1) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 32);
+                switchFengFlag(direction, "nan");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 2) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 31);
+                switchFengFlag(direction, "xi");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 3) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 33);
+                switchFengFlag(direction, "bei");
             }
         }
     },
@@ -934,23 +972,42 @@ cc.Class({
                 }
             }
 
+            //东南西北小旗子转换
+            var switchFengFlag = function switchFengFlag(direction, dir_str) {
+                for (var k = 0; k < 4; k++) {
+                    direction.children[k].active = false;
+                }
+                direction.getChildByName(dir_str).active = true;
+            };
+
+            //显示当前风圈和局数
+            var numofgames = this._gameover.getChildByName("numofgames");
+            var fengquan = "东风圈";
+            switch (userData.fengxiang) {
+                case 0:
+                    fengquan = "东风圈";break;
+                case 1:
+                    fengquan = "南风圈";break;
+                case 2:
+                    fengquan = "西风圈";break;
+                case 3:
+                    fengquan = "北风圈";break;
+            }
+            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+
             //判断东南西北
             if (userData.button) {
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + (i % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 30);
+                switchFengFlag(direction, "dong");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 1) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 32);
+                switchFengFlag(direction, "nan");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 2) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 31);
+                switchFengFlag(direction, "xi");
 
                 var direction = this._gameover.getChildByName("result_list").getChildByName("s" + ((i + 3) % 4 + 1)).getChildByName("direction");
-                var sp = direction.getComponent(cc.Sprite);
-                sp.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", 33);
+                switchFengFlag(direction, "bei");
             }
         }
     },
