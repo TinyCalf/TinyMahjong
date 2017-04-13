@@ -39,7 +39,6 @@ public class WXAPI {
 		req.state = "carjob_wx_login";
 		boolean flag = api.sendReq(req);
 		System.out.println(flag);
-		
 	}
 	
 	public static void Share(String url,String title,String desc){

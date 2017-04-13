@@ -117,12 +117,12 @@ app.get('/auth',function(req,res){
 
 var appInfo = {
 	Android:{
-		appid:"wxe39f08522d35c80c",
-		secret:"fa88e3a3ca5a11b06499902cea4b9c01",
+		appid:"wxc3bbc4c270d6a0ba",
+		secret:"88fd68a1f77ee031c5493b760663c0f1",
 	},
 	iOS:{
-		appid:"wxcb508816c5c4e2a4",
-		secret:"7de38489ede63089269e3410d5905038",		
+		appid:"wxc3bbc4c270d6a0ba",
+		secret:"88fd68a1f77ee031c5493b760663c0f1",
 	}
 };
 

@@ -795,8 +795,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1491894462867,
-    "meta": 1491895029793,
+    "asset": 1491991729953,
+    "meta": 1492051360006,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -1635,8 +1635,8 @@
     "relativePath": "resources\\sounds\\win.mp3"
   },
   "700defc7-ee0a-4150-a166-60291a50e358": {
-    "asset": 1491894462777,
-    "meta": 1491895028853,
+    "asset": 1491991729900,
+    "meta": 1492051359355,
     "relativePath": "resources\\textures"
   },
   "7b88c7db-6bfd-42e8-90c2-9aa29efa616f": {
@@ -2425,8 +2425,8 @@
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1491894462006,
-    "meta": 1491895028852,
+    "asset": 1492055296872,
+    "meta": 1492055297025,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
@@ -2435,8 +2435,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1491894461984,
-    "meta": 1491895028766,
+    "asset": 1492053971819,
+    "meta": 1492053971869,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -2445,8 +2445,8 @@
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1491990376564,
-    "meta": 1491990376651,
+    "asset": 1492052070424,
+    "meta": 1492052070560,
     "relativePath": "scripts\\HTTP.js"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {
@@ -2500,8 +2500,8 @@
     "relativePath": "resources\\textures\\images\\title.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1491894462696,
-    "meta": 1491895029503,
+    "asset": 1491991729936,
+    "meta": 1492051359359,
     "relativePath": "resources\\textures\\hall"
   },
   "17b74fcb-dd4f-4164-9e6d-cd6af3f93601": {
@@ -2545,8 +2545,8 @@
     "relativePath": "resources\\textures\\hall\\more.png"
   },
   "eb06336c-973b-4221-8961-4fa276383c56": {
-    "asset": 1491894462696,
-    "meta": 1491905835716,
+    "asset": 1491991729935,
+    "meta": 1492051360682,
     "relativePath": "resources\\textures\\hall\\qiandao.png"
   },
   "cdef6014-6e6f-4016-ba58-a2035008c2fd": {
@@ -2750,13 +2750,13 @@
     "relativePath": "resources\\textures\\utils\\back.png"
   },
   "48d13884-3642-4cd3-bc33-6e6ab91e1879": {
-    "asset": 1491894462278,
-    "meta": 1491895028854,
+    "asset": 1491991729935,
+    "meta": 1492051359358,
     "relativePath": "resources\\textures\\fonts"
   },
   "6f9b3f1f-be87-4188-b68f-cf720f31421e": {
-    "asset": 1491894462277,
-    "meta": 1491905615240,
+    "asset": 1491991729934,
+    "meta": 1492051360006,
     "relativePath": "resources\\textures\\fonts\\youyuan.TTF"
   },
   "29a35884-342d-48ee-a008-f0ac1ae11c35": {
