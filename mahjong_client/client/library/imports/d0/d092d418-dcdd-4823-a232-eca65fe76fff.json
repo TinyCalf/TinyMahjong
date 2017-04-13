@@ -899,8 +899,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": -16
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2822,7 +2822,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "4dfa5XIlD9DUbnCQQHLs7JS",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 100
