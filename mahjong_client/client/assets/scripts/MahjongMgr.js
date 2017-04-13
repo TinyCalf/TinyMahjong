@@ -140,6 +140,35 @@ cc.Class({
         else if(id >= 18 && id < 27){
             realId = id - 7;
         }
+         if(id == 30){
+            realId == 31;
+        }    
+
+        if(id == 31){
+            realId == 41;
+        }    
+
+        if(id == 32){
+            realId == 51;
+        }    
+
+        if(id == 33){
+            realId == 61;
+        }    
+
+        if(id == 27){
+            realId == 71;
+        }    
+
+        if(id == 28){
+            realId == 81;
+        }    
+
+        if(id == 29){
+            realId == 91;
+        }    
+
+
         return "nv/" + realId + ".mp3";
     },
     
