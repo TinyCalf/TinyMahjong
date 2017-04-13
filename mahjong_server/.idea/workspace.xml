@@ -1729,8 +1729,8 @@
       <file leaf-file-name="account_server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account_server/account_server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="128" column="44" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+            <state relative-caret-position="684">
+              <caret line="124" column="50" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
               <folding>
                 <element signature="n#!!block;n#send#0" expanded="false" />
                 <element signature="e#310#492#0" expanded="false" />
@@ -2035,12 +2035,12 @@
       <workItem from="1490347591413" duration="21082000" />
       <workItem from="1490579809347" duration="105643000" />
       <workItem from="1491357572121" duration="35394000" />
-      <workItem from="1491462004177" duration="22400000" />
+      <workItem from="1491462004177" duration="23597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241941000" />
+    <option name="totallyTimeSpent" value="243138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -7006,8 +7006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account_server/account_server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="128" column="44" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+        <state relative-caret-position="684">
+          <caret line="124" column="50" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
           <folding>
             <element signature="n#!!block;n#send#0" expanded="false" />
             <element signature="e#310#492#0" expanded="false" />

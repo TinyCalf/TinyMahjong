@@ -795,8 +795,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1491991729953,
-    "meta": 1492051360006,
+    "asset": 1492055382703,
+    "meta": 1492059424930,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -1275,8 +1275,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1491894462019,
-    "meta": 1491895028738,
+    "asset": 1492055382692,
+    "meta": 1492059424907,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -2320,8 +2320,8 @@
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
-    "asset": 1491894461993,
-    "meta": 1491895028769,
+    "asset": 1492059927228,
+    "meta": 1492059927237,
     "relativePath": "resources\\scenes\\login.fire"
   },
   "81ac8927-5852-4c37-ba91-c9faaad18d20": {
@@ -2425,8 +2425,8 @@
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1492055296872,
-    "meta": 1492055297025,
+    "asset": 1492059848268,
+    "meta": 1492059848421,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
@@ -2435,8 +2435,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1492053971819,
-    "meta": 1492053971869,
+    "asset": 1492055382680,
+    "meta": 1492059424929,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -2445,8 +2445,8 @@
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1492052070424,
-    "meta": 1492052070560,
+    "asset": 1492060088414,
+    "meta": 1492060088492,
     "relativePath": "scripts\\HTTP.js"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {

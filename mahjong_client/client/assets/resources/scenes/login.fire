@@ -244,7 +244,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "3472ebVhP1LhqxOvdUhBWzX",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 6
@@ -385,7 +385,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -159
+      "y": -124
     },
     "_skewX": 0,
     "_skewY": 0,
