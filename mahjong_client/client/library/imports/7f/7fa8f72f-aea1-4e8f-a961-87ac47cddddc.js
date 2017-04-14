@@ -328,7 +328,7 @@ cc.Class({
             }
             var localIndex = self.getLocalIndex(seatData.seatindex);
             self.playEfx(localIndex, "play_chi");
-            //cc.vv.audioMgr.playSFX("nv/peng.mp3");
+            cc.vv.audioMgr.playSFX("nv/chi.mp3");
             self.hideOptions();
         });
 
