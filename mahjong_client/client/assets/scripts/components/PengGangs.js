@@ -96,6 +96,7 @@ cc.Class({
         this.hideSide("right");
         this.hideSide("up");
         this.hideSide("left");
+        this.hidehuas();
     },
     
     hideSide:function(side){
@@ -268,7 +269,6 @@ cc.Class({
     },
     
     onHuaChanged:function(seatData){
-        
         console.log("onHuaChanged!!!");
         console.log(seatData);
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(seatData.seatindex);

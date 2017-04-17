@@ -2375,18 +2375,18 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1492133761828,
-    "meta": 1492133792722,
+    "asset": 1492153680655,
+    "meta": 1492153681038,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1491023219154,
-    "meta": 1491023219325,
+    "asset": 1492150401705,
+    "meta": 1492150401869,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1491894462867,
-    "meta": 1491895031288,
+    "asset": 1492154988395,
+    "meta": 1492154988634,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -2425,8 +2425,8 @@
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1492133766631,
-    "meta": 1492133792689,
+    "asset": 1492149084963,
+    "meta": 1492149085110,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
@@ -2445,8 +2445,8 @@
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1492133766632,
-    "meta": 1492133792770,
+    "asset": 1492139899287,
+    "meta": 1492139899352,
     "relativePath": "scripts\\HTTP.js"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {

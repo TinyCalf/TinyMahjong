@@ -332,6 +332,17 @@ cc.Class({
             self.hideOptions();
         });
 
+        this.node.on('buhua_notify', function (data) {
+            console.log('buhua_notify');
+            console.log(data.detail.holds);
+            var seatData = data.detail;
+            if (seatData.seatindex == cc.vv.gameNetMgr.seatIndex) {
+                self.initMahjongs();
+            } else {
+                self.initOtherMahjongs(seatData);
+            }
+        });
+
         this.node.on('gang_notify', function (data) {
             self.hideChupai();
             var data = data.detail;

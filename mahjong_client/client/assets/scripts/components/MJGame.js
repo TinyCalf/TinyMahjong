@@ -283,6 +283,8 @@ cc.Class({
             cc.vv.audioMgr.playSFX(audioUrl);
         });
         
+        
+        
         this.node.on('guo_notify',function(data){
             self.hideChupai();
             self.hideOptions();
@@ -338,6 +340,18 @@ cc.Class({
             self.playEfx(localIndex,"play_chi");
             cc.vv.audioMgr.playSFX("nv/chi.mp3");
             self.hideOptions();
+        });
+        
+        this.node.on('buhua_notify',function(data){    
+            console.log('buhua_notify');
+            console.log(data.detail.holds);
+            var seatData = data.detail;
+            if(seatData.seatindex == cc.vv.gameNetMgr.seatIndex){
+                self.initMahjongs();
+            }
+            else{
+                self.initOtherMahjongs(seatData);
+            }
         });
         
         this.node.on('gang_notify',function(data){

@@ -16,6 +16,99 @@ var ACTION_ZIMO = 6;
 
 var gameSeatsOfUsers = {};
 
+//Jonathan 新增功能函数 删除手牌中的指定牌 包括 holds 和 countMap
+function removePai(seatData,pai) {
+    var holds = seatData.holds;
+    var countMap = seatData.countMap;
+    for (var i = 0 ; i < holds.length ; i++) {
+        if(holds[i] == pai) {
+            holds.splice(i,1);
+            countMap[pai] --;
+            return true;
+        }
+    }
+    return false;
+}
+
+//Jonathan 新增舟山补花逻辑
+function buhua(game,seatIndex){
+    var data = game.gameSeats[seatIndex];
+    var pai = game.mahjongs[game.currentIndex];
+    var buhuas = [];
+    for (var i = 34 ; i < 42 ; i ++ ) {
+        if(data.countMap[i] > 0) {
+            data.huas.push(i);
+            removePai(data,i);
+            buhuas.push(i);
+        }
+    }
+    if(game.conf.hongzhongdanghua) {
+        if(data.countMap[27] > 0) {
+            while(data.countMap[27]>0){
+                data.huas.push(27);
+                removePai(data,27);
+                buhuas.push(27);
+            }
+        }
+    }
+    var holds = [];
+    for (var i  = 0 ; i < buhuas.length ; i++ ) {
+        if(!game.conf.hongzhongdanghua) {
+            while (pai >= 34 && pai < 42) {
+                //标记刚刚杠过
+                data.ifJustGanged = 1;
+                game.gameSeats[seatIndex].huas.push(pai);
+                buhuas.push(pai);
+                game.currentIndex++;
+                pai = game.mahjongs[game.currentIndex];
+            }
+        }else{
+            while (pai >= 34 && pai < 42 || pai == 27) {
+                game.gameSeats[seatIndex].huas.push(pai);
+                buhuas.push(pai);
+                game.currentIndex++;
+                pai = game.mahjongs[game.currentIndex];
+            }
+        }
+        data.holds.push(pai);
+        (data.countMap[pai] == null)?data.countMap[pai] = 1 : data.countMap[pai] ++;
+        holds.push(pai);
+        game.currentIndex++;
+        pai = game.mahjongs[game.currentIndex];
+    }
+
+    if(buhuas.length>0) {
+        //告诉所有人该玩家补花了
+        userMgr.broacastInRoom('buhua_notify_push', {userid: data.userId, buhuas: buhuas}, data.userId, true);
+        //告诉该玩家现在的增加的手牌是什么
+        userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:holds});
+    }
+}
+
+//单独的摸牌逻辑 专门为舟山补花逻辑所用 只有开局用跳过出花过程的逻辑
+function mopaiforstart(game,seatIndex) {
+    if(game.currentIndex == game.mahjongs.length){
+        return -1;
+    }
+    var data = game.gameSeats[seatIndex];
+    var mahjongs = data.holds;
+    var pai = game.mahjongs[game.currentIndex];
+
+    mahjongs.push(pai);
+    //每次摸牌都要把这个标记减一，用于判断杠上花
+    data.ifJustGanged --;
+
+    //统计牌的数目 ，用于快速判定（空间换时间）
+    var c = data.countMap[pai];
+    if(c == null) {
+        c = 0;
+    }
+    data.countMap[pai] = c + 1;
+    game.currentIndex ++;
+    return pai;
+}
+
+
 function getMJType(id){
     if(id >= 0 && id < 9){
         //筒
@@ -101,14 +194,14 @@ function shuffle(game) {
     //var mjs = [34,35,36,37,38,39,40,41];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    var index = 0 ;
-    var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
-    for (var i =0 ; i < mjs.length ; i++) {
-        for (var j = 0 ; j < 4 ; j++) {
-            game.mahjongs[index] = mjs[i];
-            index++;
-        }
-    }
+    // var index = 0 ;
+    // var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
+    // for (var i =0 ; i < mjs.length ; i++) {
+    //     for (var j = 0 ; j < 4 ; j++) {
+    //         game.mahjongs[index] = mjs[i];
+    //         index++;
+    //     }
+    // }
     //三吃三碰
     // var mjs1 = [0,0,1,1,2,2,3,3,4,4,5,5,6,6];
     // var mjs2 = [0,1,3,4,5,6,7,8,9,10,11,12,13,14];
@@ -132,6 +225,9 @@ function mopai(game,seatIndex) {
     if(game.currentIndex == game.mahjongs.length){
         return -1;
     }
+    //配合舟山补花逻辑 如果手牌里有花就先补花
+    buhua(game,seatIndex);
+
     var data = game.gameSeats[seatIndex];
     var mahjongs = data.holds;
     var pai = game.mahjongs[game.currentIndex];
@@ -171,14 +267,14 @@ function deal(game){
             mahjongs = [];
             game.gameSeats[seatIndex].holds = mahjongs;
         }
-        mopai(game,seatIndex);
+        mopaiforstart(game,seatIndex);
         seatIndex ++;
         seatIndex %= 4;
 
     }
 
     //庄家多摸最后一张
-    mopai(game,game.button);
+    mopaiforstart(game,game.button);
 
     //当前轮设置为庄家
     game.turn = game.button;
@@ -247,6 +343,8 @@ function checkCanChi(game,seatData,targetPai) {
         chitype.left = true;
     }
     seatData.chitype = chitype;
+
+    if(seatData.canChi == true) buhua(game,seatData.seatIndex);
 
     return;
 }
@@ -1970,6 +2068,8 @@ exports.begin = function(roomId) {
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
     }
 
+    //配合舟山补花逻辑 如果手牌里有花就先补花
+    buhua(game,game.button);
     //
     var seatData = gameSeatsOfUsers[seats[1].userId];
     construct_game_base_info(game);
@@ -1989,6 +2089,8 @@ exports.begin = function(roomId) {
             gs.countMap[duoyu] ++;
         }
     }
+
+
 
     var turnSeat = game.gameSeats[game.turn];
     game.state = "playing";
@@ -2317,6 +2419,9 @@ exports.peng = function(userId){
     //广播通知玩家出牌方
     seatData.canChuPai = true;
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+
+    //配合舟山补花逻辑 如果手牌里有花就先补花
+    buhua(game,seatData.seatIndex);
 };
 
 exports.chi = function(userId,data){
