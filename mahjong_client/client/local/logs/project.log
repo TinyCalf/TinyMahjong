@@ -380,3 +380,7 @@
     at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
+2017-04-18T08:51:17.420Z - error: Window "main" unresponsive: [object Object]
+    at BrowserWindow.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\main\window.js:1:3069)
+    at emitOne (events.js:96:13)
+    at BrowserWindow.emit (events.js:188:7)

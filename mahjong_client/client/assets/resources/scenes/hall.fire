@@ -8472,7 +8472,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "af2a4AjnnZAmJW00pZq94lt",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 549
@@ -10173,7 +10173,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "47a46KfsE1FYIhMAPqPPgZI",
-    "_active": false,
+    "_active": true,
     "_components": [],
     "_prefab": null,
     "groupIndex": 0
@@ -17383,7 +17383,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "b5e431s+11GloO8jjH2EDqG",
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "groupIndex": 0
