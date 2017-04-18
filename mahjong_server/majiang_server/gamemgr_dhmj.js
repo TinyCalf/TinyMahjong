@@ -1110,8 +1110,90 @@ function calculateResult(game){
     //计算胡的人的分数
     var seats = game.gameSeats;
     var huseat = seats[huedindex];
-    //50算法
+    //10算法
     if(game.conf.jiesuan==0) {
+        if(huseat.iszimo) {
+            switch(huseat.tai) {
+                case 0: huseat.score = 0 ;  break;
+                case 1: huseat.score = 12 ;  break;
+                case 2: huseat.score = 18 ;  break;
+                case 3: huseat.score = 24;  break;
+                case 4: huseat.score = 30;  break;
+            }
+            //计算其余人的分数
+            var s = huseat.score/3;
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    seats[n].score -= s;
+                }
+            }
+        }
+        else{
+            switch(huseat.tai) {
+                case 0: huseat.score = 6 ; break;
+                case 1: huseat.score = 8 ; break;
+                case 2: huseat.score = 10 ; break;
+                case 3: huseat.score = 14 ; break;
+                case 4: huseat.score = 20; break;
+            }
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    if( game.fangpaoindex == n ) {
+                        switch(huseat.tai) {
+                            case 0:  seats[n].score -= 6 ; break;
+                            case 1: seats[n].score -= 8 ; break;
+                            case 2: seats[n].score -= 10 ; break;
+                            case 3: seats[n].score -= 14 ; break;
+                            case 4: seats[n].score -= 20; break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //25算法
+    else if(game.conf.jiesuan==1) {
+        if(huseat.iszimo) {
+            switch(huseat.tai) {
+                case 0: huseat.score = 0 ;  break;
+                case 1: huseat.score = 30 ;  break;
+                case 2: huseat.score = 45 ;  break;
+                case 3: huseat.score = 60;  break;
+                case 4: huseat.score = 75;  break;
+            }
+            //计算其余人的分数
+            var s = huseat.score/3;
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    seats[n].score -= s;
+                }
+            }
+        }
+        else{
+            switch(huseat.tai) {
+                case 0: huseat.score = 10 ; break;
+                case 1: huseat.score = 15 ; break;
+                case 2: huseat.score = 25 ; break;
+                case 3: huseat.score = 30 ; break;
+                case 4: huseat.score = 50; break;
+            }
+            for (var n = 0 ; n < seats.length ; n++) {
+                if( seats[n].hued != true) {
+                    if( game.fangpaoindex == n ) {
+                        switch(huseat.tai) {
+                            case 0:  seats[n].score -= 10 ; break;
+                            case 1: seats[n].score -= 15 ; break;
+                            case 2: seats[n].score -= 25 ; break;
+                            case 3: seats[n].score -= 30 ; break;
+                            case 4: seats[n].score -= 50; break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //50算法
+    else if(game.conf.jiesuan==2) {
         if(huseat.iszimo) {
             switch(huseat.tai) {
                 case 0: huseat.score = 60 ;  break;
@@ -1151,7 +1233,7 @@ function calculateResult(game){
             }
         }
     }
-    else if(game.conf.jiesuan==1) {
+    else if(game.conf.jiesuan==3) {
         if(huseat.iszimo) {
             switch(huseat.tai) {
                 case 0: huseat.score = 120 ;  break;

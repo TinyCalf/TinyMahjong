@@ -173,6 +173,14 @@ function shuffle(game) {
         }
     }
 
+    if(game.conf.jiesuan == 0){
+        //春夏秋冬梅兰竹菊
+        for(var i = 34; i < 42; ++i){
+            mahjongs[index] = i;
+            index++;
+        }
+    }
+
     //打亂順序
     for(var i = 0; i < mahjongs.length; ++i){
         var lastIndex = mahjongs.length - 1 - i;
@@ -685,11 +693,21 @@ function calculateResult(game){
                 game.gameSeats[i].score -= s;
             }
         }
+        //计算花
+        huseat.score += huseat.huas.length*3;
+        for(var i = 0; i < 4; ++i){
+            if(game.gameSeats[i].hued != true) {
+                game.gameSeats[i].score -= huseat.huas.length;
+            }
+        }
     } else {
         //找到点炮的人
         var poorguy = game.gameSeats[game.fangpaoindex];
         poorguy.score -= 1;
         huseat.score += 1;
+        //计算花
+        huseat.score += huseat.huas.length;
+        poorguy.score -= huseat.huas.length;
     }
 
     //计算每个人明杠暗杠的分数
@@ -920,10 +938,6 @@ function doGameOver(game,userId,forceEnd){
             db.update_next_button(roomId,roomInfo.nextButton);
         }
     }
-
-
-
-
 
     if(forceEnd || game == null){
         fnNoticeResult(true);
@@ -1259,12 +1273,15 @@ exports.begin = function(roomId) {
     }
     var seats = roomInfo.seats;
 
+    var mahjongs = new Array(136);
+    if  (roomInfo.jiesuan == 0) mahjongs = new Array(144);
+
     var game = {
         conf:roomInfo.conf,
         roomInfo:roomInfo,
         gameIndex:roomInfo.numOfGames,
         button:roomInfo.nextButton,
-        mahjongs:new Array(136),
+        mahjongs:mahjongs,
         currentIndex:0,
         gameSeats:new Array(4),
         numOfQue:0,

@@ -1285,8 +1285,8 @@
     "relativePath": "resources\\scenes\\update.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
-    "asset": 1489459342298,
-    "meta": 1489459352001,
+    "asset": 1492501587455,
+    "meta": 1492501776213,
     "relativePath": "resources\\sounds"
   },
   "8f65957d-38ab-47c5-8f52-ab42bb7e9592": {
@@ -2324,16 +2324,6 @@
     "meta": 1492133791862,
     "relativePath": "resources\\scenes\\login.fire"
   },
-  "81ac8927-5852-4c37-ba91-c9faaad18d20": {
-    "asset": 1489459342286,
-    "meta": 1480609964000,
-    "relativePath": "resources\\sounds\\bgFight.mp3"
-  },
-  "ca3cd36e-e121-4a85-9b3f-0daa92af7d54": {
-    "asset": 1489459342299,
-    "meta": 1480609964000,
-    "relativePath": "resources\\sounds\\bgMain.mp3"
-  },
   "eade92b5-ca98-4158-be48-b64beb663745": {
     "asset": 1489459342301,
     "meta": 1489459352182,
@@ -2375,8 +2365,8 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1492153680655,
-    "meta": 1492153681038,
+    "asset": 1492501563790,
+    "meta": 1492501564980,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
@@ -2435,8 +2425,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1492055382680,
-    "meta": 1492059424929,
+    "asset": 1492503105162,
+    "meta": 1492503105214,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -3083,5 +3073,10 @@
     "asset": 1491894462113,
     "meta": 1491895029438,
     "relativePath": "resources\\textures\\Game\\gameover_result.png"
+  },
+  "ca3cd36e-e121-4a85-9b3f-0daa92af7d54": {
+    "asset": 1492502494639,
+    "meta": 1480609964000,
+    "relativePath": "resources\\sounds\\bgMain.mp3"
   }
 }

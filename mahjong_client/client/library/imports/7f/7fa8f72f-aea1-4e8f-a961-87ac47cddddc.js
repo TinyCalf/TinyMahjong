@@ -58,7 +58,7 @@ cc.Class({
         this.prepareRoot.active = true;
         this.initWanfaLabel();
         this.onGameBeign();
-        cc.vv.audioMgr.playBGM("bgFight.mp3");
+        cc.vv.audioMgr.playBGM("bgMain.mp3");
     },
 
     initView: function initView() {
