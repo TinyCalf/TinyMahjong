@@ -801,7 +801,9 @@ function doGameOver(game,userId,forceEnd){
 
     if(game != null){
         if(!forceEnd){
-            calculateResult(game,roomInfo);
+            if(game.currentIndex != game.mahjongs.length){
+                calculateResult(game,roomInfo);
+            }
         }
 
         for(var i = 0; i < roomInfo.seats.length; ++i){

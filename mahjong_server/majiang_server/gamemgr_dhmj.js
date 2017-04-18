@@ -222,7 +222,7 @@ function shuffle(game) {
 }
 
 function mopai(game,seatIndex) {
-    if(game.currentIndex == game.mahjongs.length){
+    if(game.currentIndex >= game.mahjongs.length){
         return -1;
     }
     //配合舟山补花逻辑 如果手牌里有花就先补花
@@ -1193,38 +1193,68 @@ function calculateResult(game){
     }
     //TODO:抢杠胡 一炮多响
     //三吃三碰：
-    for(var i =0 ; i < game.gameSeats[huedindex].sanchisanpeng.length ; i++) {
-        //找到让我三吃三碰的人
-        if(game.gameSeats[huedindex].sanchisanpeng[i] >=3) {
-            var poorguy = game.gameSeats[i];
-            poorguy.actions.push({type:"sanchisanpeng"});
-            //如果自摸了，乘以3
-            if(game.gameSeats[huedindex].iszimo) {
-                if(!game.gameSeats[huedindex].gangshanghua) {
-                    game.gameSeats[huedindex].score -= poorguy.score * 2;
-                    poorguy.score *= 3;
-                }else{
-                    game.gameSeats[huedindex].score -= poorguy.score * 5;
-                    poorguy.score *= 6;
-                }
-            }
-            //不是自摸的情况下
-            else{
-                //如果poorguy是放炮的人，他和胡的人积分乘以2
-                if(poorguy.seatIndex == game.fangpaoindex) {
-                    poorguy.score *= 2;
-                    game.gameSeats[huedindex].score *=2;
-                }
-                //如果poorguy不是放炮的人，胡的人分数乘2，poorguy扣除一倍积分
-                else{
-                    poorguy.score -= game.gameSeats[huedindex].score;
-                    game.gameSeats[huedindex].score *= 2;
-                }
-                //TODO: E：a让b吃或者碰3次，b让c吃或者碰3次，然后1.d把a打到了，那么就是d跟b各一杯  ，如果d打到了b，那么a,c,d各一倍，如果自摸那么就a，3倍，c，3倍 d，1倍
-            }
-        }
-    }
+    // for(var i =0 ; i < game.gameSeats[huedindex].sanchisanpeng.length ; i++) {
+    //     //找到让我三吃三碰的人
+    //     if(game.gameSeats[huedindex].sanchisanpeng[i] >=3) {
+    //         var poorguy = game.gameSeats[i];
+    //         poorguy.actions.push({type:"sanchisanpeng"});
+    //         //如果自摸了，乘以3
+    //         if(game.gameSeats[huedindex].iszimo) {
+    //             if(!game.gameSeats[huedindex].gangshanghua) {
+    //                 var base = -poorguy.score;
+    //                 game.gameSeats[huedindex].score -= poorguy.score * 2;
+    //                 poorguy.score *= 3;
+    //                 //于此同时如果胡的人与其他人有三尺三碰的关系，则有关系的人都扣一倍积分
+    //                 for(var j = 0 ; j < 4 ; j++) {
+    //                     if(j != i && j != huedindex) {
+    //                         (game.gameSeats[j].sanchisanpeng[huedindex] >2
+    //                         || game.gameSeats[huedindex].sanchisanpeng[j] >2)
+    //                             ? game.gameSeats[j].score -= base : {} ;
+    //                     }
+    //
+    //                 }
+    //             }else{
+    //                 var base = -poorguy.score;
+    //                 game.gameSeats[huedindex].score -= poorguy.score * 5;
+    //                 poorguy.score *= 6;
+    //             }
+    //         }
+    //         //不是自摸的情况下
+    //         else{
+    //             //如果poorguy是放炮的人，他和胡的人积分乘以2
+    //             if (poorguy.seatIndex == game.fangpaoindex) {
+    //                 var base = -poorguy.score;
+    //                 poorguy.score *= 2;
+    //                 game.gameSeats[huedindex].score *=2;
+    //                 //于此同时如果胡的人与其他人有三尺三碰的关系，则有关系的人都扣一倍积分
+    //                 for(var j = 0 ; j < 4 ; j++) {
+    //                     if(j != i && j != huedindex) {
+    //                         if (game.gameSeats[j].sanchisanpeng[huedindex] >2
+    //                         || game.gameSeats[huedindex].sanchisanpeng[j] >2) {
+    //                             game.gameSeats[j].score -= base;
+    //                             game.gameSeats[huedindex].score+=base
+    //                         }
+    //
+    //                     }
+    //
+    //                 }
+    //             }
+    //             //如果poorguy不是放炮的人，胡的人分数乘2，poorguy扣除一倍积分
+    //             else{
+    //                 poorguy.score -= game.gameSeats[huedindex].score;
+    //                 game.gameSeats[huedindex].score *= 2;
+    //             }
+    //             //TODO: E：a让b吃或者碰3次，b让c吃或者碰3次，然后1.d把a打到了，那么就是d跟b各一杯  ，如果d打到了b，那么a,c,d各一倍，如果自摸那么就a，3倍，c，3倍 d，1倍
+    //
+    //
+    //         }
+    //     }
+    // }
 
+
+
+    //
+    var isYipaoduoxiang = false;
     //一炮多响
     //如果没人放炮则不计算一炮多响
     if(game.fangpaoindex == -1) return;
@@ -1246,6 +1276,8 @@ function calculateResult(game){
         //判断是否能胡
         if(mjutils.canHu(seatData)) {
             seatData.actions.push({type:"hu"});
+            seatData.hued = true;
+            isYipaoduoxiang = true;
             //重新计算分数：
             //初始化判定
             //排胡、对对胡、混一色、清一色、杠上花
@@ -1286,51 +1318,51 @@ function calculateResult(game){
             //中发白东南西北碰出杠出暗刻为一台
             //东、南、西、北坐着碰出杠出暗刻加一台
             sd.pengs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.angangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.wangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.diangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
-            for ( var n = 27 ; n < 34 ; n++) {
+            for ( var n = 27 ; n < 29 ; n++) {
                 (sd.countMap[n] >=3) ? TAI++ : {};
             }
             for ( var n = 30 ; n < 34 ; n++) {
                 if(sd.countMap[n] >=3) {
                     switch(n) {
-                        case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                        case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                        case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                        case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                        case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                        case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                        case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                        case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                     }
                 }
             }
@@ -1376,8 +1408,6 @@ function calculateResult(game){
             //最多四台
             if(TAI > 4) TAI = 4;
             sd.tai = TAI;
-
-
 
 
 
@@ -1436,6 +1466,65 @@ function calculateResult(game){
         }
     }
 
+    if(!isYipaoduoxiang) {
+        //三吃三碰
+        if (huseat.iszimo) {
+            var base = huseat.score / 3;
+            //所有与胡的人有三尺三碰关系的人 都加三倍
+            for (var i = 0; i < 4; i++) {
+                if (i != huedindex) {
+                    if (seats[i].sanchisanpeng[huedindex] > 2
+                        || seats[huedindex].sanchisanpeng[i] > 2) {
+                        if (huseat.gangshanghua) {
+                            huseat.score += base * 5;
+                            seats[i].score -= base * 5;
+                        } else {
+                            huseat.score += base * 2;
+                            seats[i].score -= base * 2;
+                        }
+                    }
+                }
+            }
+        } else {
+            var base = huseat.score;
+            //所有与胡的人有三尺三碰关系的人 都扣一倍分数
+            for (var i = 0; i < 4; i++) {
+                if (i != huedindex) {
+                    if (seats[i].sanchisanpeng[huedindex] > 2
+                        || seats[huedindex].sanchisanpeng[i] > 2) {
+                        huseat.score += base;
+                        seats[i].score -= base;
+                    }
+                }
+            }
+        }
+    } else {
+        var base = [];
+        base[0] = game.seats[0].score;
+        base[1] = game.seats[1].score;
+        base[2] = game.seats[2].score;
+        base[3] = game.seats[3].score;
+        for(var i = 0 ; i < 4 ; i++) {
+            if(i!= game.fangpaoindex && i!= huedindex && game.seats[i].hued) {
+                for ( var j = 0 ; j < 4 ; j++) {
+                    if(game.seats[i].sanchisanpeng[j]>2
+                    && j!=game.fangpaoindex){
+                        game.seats[i].score += base[i];
+                        game.seats[game.fangpaoindex].score -= base[i];
+                        break;
+                    }
+                }
+                for ( var j = 0 ; j < 4 ; j++) {
+                    if(game.seats[i].sanchisanpeng[j]>2
+                        && j==game.fangpaoindex){
+                        game.seats[i].score += base[i];
+                        game.seats[game.fangpaoindex].score -= base[i];
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }
 
 function doGameOver(game,userId,forceEnd){
@@ -1924,8 +2013,6 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
     //只能放在这里。因为过手就会清除杠牌标记
     seatData.lastFangGangSeat = gameTurn;
 }
-
-
 
 /***********************************************************************
  *

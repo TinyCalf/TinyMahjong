@@ -183,7 +183,7 @@ function shuffle(game) {
 }
 
 function mopai(game,seatIndex) {
-    if(game.currentIndex == game.mahjongs.length){
+    if(game.currentIndex >= game.leftlength){
         return -1;
     }
     //配合舟山补花逻辑 如果手牌里有花就先补花
@@ -1507,7 +1507,9 @@ function doGameOver(game,userId,forceEnd){
 
     if(game != null){
         if(!forceEnd){
-            calculateResult(game,roomInfo);
+            if(game.currentIndex < game.leftlength){
+                calculateResult(game,roomInfo);
+            }
         }
 
         for(var i = 0; i < roomInfo.seats.length; ++i){
@@ -1964,6 +1966,9 @@ exports.begin = function(roomId) {
     }
     var seats = roomInfo.seats;
 
+    var leftlength = 144;
+    (roomInfo.conf.hongzhongdanghua) ? leftlength = 126 : leftlength = 130;
+
     var game = {
         conf:roomInfo.conf,
         roomInfo:roomInfo,
@@ -1983,6 +1988,9 @@ exports.begin = function(roomId) {
         hupaiList:[],
         chupaiCnt:0,
         fangpaoindex:-1,
+
+        //舟山麻将留局计算，需要保留多张牌
+        leftlength:leftlength,
     };
 
     //roomInfo.numOfGames++;
@@ -2624,6 +2632,9 @@ exports.gang = function(userId,pai){
         console.log("invalid pai count.");
         return;
     }
+
+    //沈家门麻将 每一杠扣两张牌
+    game.leftlength -= 2;
     
     game.chuPai = -1;
     clearAllOptions(game);
