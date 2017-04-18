@@ -175,7 +175,7 @@ function shuffle(game) {
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
     // var index = 0 ;
-    // var mjs = [27,0,1,2,27,0,1,2,27];
+    // var mjs = [30,0,1,2,30,0,1,30,27];
     // for (var i =0 ; i < mjs.length ; i++) {
     //         game.mahjongs[index] = mjs[i];
     //         index++;
@@ -668,11 +668,11 @@ function isQingYiSe(gameSeatData){
     if(isSameType(type,gameSeatData.diangangs) == false){
         return false;
     }
-
     //检查碰牌
     if(isSameType(type,gameSeatData.pengs) == false){
         return false;
     }
+    //TODO:判断吃的情况
     return true;
 }
 
@@ -728,7 +728,7 @@ function isTinged(seatData){
     return false;
 }
 
-//判断是否为排胡
+//判断是否为排胡 TODO：换种判断方式
 function isPaiHu(seatData){
 
     if (seatData.pengs.length > 0 ||
@@ -964,9 +964,16 @@ function calculateResult(game){
             if(isBian(sd)) sd.bian = true;
             if(isDan(sd)) sd.dan = true;
             if(isDuidao(sd)) sd.duidao = true;
+
         }
 
-        //沈家门麻将积分逻辑 TODO: 坎边单逻辑 分数追加到前端
+        //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
+        if(sd.hued && !sd.iszimo){
+            var tpai = sd.holds.pop();
+            sd.countMap[tpai] --;
+        }
+
+        //沈家门麻将积分逻辑
 
         //当前风圈 0123 东南西北
         var nowfeng = game.roomInfo.fengxiang;
@@ -1004,45 +1011,49 @@ function calculateResult(game){
 
         //判断是否对应大风 大风加一台
         var judgebigwind = function(nowfeng,nowseat,pai){
-            if(nowfeng == nowseat){
-                switch (nowfeng) {
-                    case 0: if(pai == 30)  return true ; break;
-                    case 1: if(pai == 32)  return true ; break;
-                    case 2: if(pai == 31)  return true ; break;
-                    case 3: if(pai == 33)  return true ; break;
-                }
+            var res= 0;
+            switch (nowfeng) {
+                case 0: if(pai == 30)  res++; break;
+                case 1: if(pai == 32)  res++; break;
+                case 2: if(pai == 31)  res++; break;
+                case 3: if(pai == 33)  res++; break;
             }
-            return false;
+            switch (nowseat) {
+                case 0: if(pai == 30)  res++; break;
+                case 1: if(pai == 32)  res++; break;
+                case 2: if(pai == 31)  res++; break;
+                case 3: if(pai == 33)  res++; break;
+            }
+            return res;
         };
-        //东南西北中发白 碰 杠 暗刻 均为一台
+        //中发白 碰 杠 暗刻 均为一台
         sd.pengs.forEach(function(pai){
-            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
-            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+            ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
+            var res = judgebigwind(nowfeng,nowseat,pai);
+            TAI += res;
         });
 
         sd.angangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
-            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+            var res = judgebigwind(nowfeng,nowseat,pai);
+            TAI += res;
         });
 
         sd.wangangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
-            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+            var res = judgebigwind(nowfeng,nowseat,pai);
+            TAI += res;
         });
 
         sd.diangangs.forEach(function(pai){
             ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
-            if(judgebigwind(nowfeng,nowseat,pai)) TAI++;
+            var res = judgebigwind(nowfeng,nowseat,pai);
+            TAI += res;
         });
 
         for ( var n = 27 ; n < 34 ; n++) {
             (sd.countMap[n] >=3) ? TAI++ : {};
         }
-        // console.log("正在计算字，当前台数为：" + TAI);
-        //
-        // console.log("正在计算字，当前台数为：" + TAI);
-        //
-        // console.log("计算字完成，当前台数为：" + TAI);
 
         //其他胡法加台
         if(sd.iszimo) TAI++;
@@ -1070,13 +1081,14 @@ function calculateResult(game){
         for ( var n = 0 ; n < needed.length ; n++) {
             (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
         }
-        for ( var n = 0 ; n < 26 ; n++) {
+        for ( var n = 0 ; n < 27 ; n++) {
             (sd.countMap[n] >=3) ? SI += 1 : {};
         }
 
         //明杠出为2丝 一九大幺和字再加2丝
         SI += sd.wangangs.length*2;
         SI += sd.diangangs.length*2;
+        SI += sd.angangs.length*4;
         for ( var n = 0 ; n < sd.wangangs.length ; n++) {
             for ( var m = 0 ; m < needed.length ; m++) {
                 if ( needed[m] == sd.wangangs[n]) SI += 2;
@@ -1087,24 +1099,42 @@ function calculateResult(game){
                 if ( needed[m] == sd.diangangs[n]) SI += 2;
             }
         }
+        for ( var n = 0 ; n < sd.angangs.length ; n++) {
+            for ( var m = 0 ; m < needed.length ; m++) {
+                if ( needed[m] == sd.angangs[n]) SI += 4;
+            }
+        }
+
 
 
         //胡的是对倒、单吊、坎挡或边档，则胡数加半丝 自摸再加0.5絲
         if (sd.kan || sd.bian || sd.dan || sd.duidao) {
             SI += 0.5;
-            if (sd.iszimo || sd.gangshanghua) SI+=0.5;
         }
+        if (sd.iszimo || sd.gangshanghua) SI+=0.5;
 
 
         //n模取整函数
         var moquzheng = function(num,mo) {
             var res=0;
+            var isFushu = false;
+            if(num<0){
+                isFushu = true;
+                num = -num;
+            }
+
             if(num % mo >0) {
                 res = (parseInt( num / mo ) + 1 ) * mo;
             } else {
                 res = parseInt( num / mo ) * mo ;
             }
-            return res;
+
+            if(isFushu) {
+                num = -num;
+                return -res;
+            }else{
+                return res;
+            }
         };
 
         //最终胡数计算。
@@ -1123,6 +1153,15 @@ function calculateResult(game){
             sd.tai = TAI;
             sd.si  = SI;
         }
+
+
+        //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上,这里做再加上的操作
+        if(sd.hued && !sd.iszimo){
+            sd.holds.push(tpai);
+            sd.countMap[tpai] ++;
+        }
+
+
     }
 
     //计算最终每家得分
@@ -1308,16 +1347,16 @@ function calculateResult(game){
         }
         else{
             switch(huseat.fan) {
-                case 50:  huseat.score = 20 + 10 * 2 ; break;
-                case 100: huseat.score = 30 + 10 * 2 ; break;
-                case 150: huseat.score = 40 + 20 * 2 ; break;
-                case 200: huseat.score = 50 + 20 * 2 ; break;
-                case 250: huseat.score = 60 + 30 * 2 ; break;
-                case 300: huseat.score = 70 + 30 * 2 ; break;
-                case 350: huseat.score = 80 + 40 * 2 ; break;
-                case 400: huseat.score = 90 + 40 * 2 ; break;
-                case 450: huseat.score = 100 + 50 * 2 ; break;
-                case 500: huseat.score = 110 + 50 * 2 ; break;
+                case 50:  huseat.score = 40 + 10 * 2 ; break;
+                case 100: huseat.score = 60 + 20 * 2 ; break;
+                case 150: huseat.score = 80 + 30 * 2 ; break;
+                case 200: huseat.score = 100 + 40 * 2 ; break;
+                case 250: huseat.score = 120 + 50 * 2 ; break;
+                case 300: huseat.score = 140 + 60 * 2 ; break;
+                case 350: huseat.score = 160 + 70 * 2 ; break;
+                case 400: huseat.score = 180 + 80 * 2 ; break;
+                case 450: huseat.score = 200 + 100 * 2 ; break;
+                case 500: huseat.score = 220 + 100 * 2 ; break;
             }
             for (var n = 0 ; n < seats.length ; n++) {
                 if( seats[n].hued != true) {

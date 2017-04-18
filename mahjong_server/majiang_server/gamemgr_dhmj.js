@@ -227,7 +227,6 @@ function mopai(game,seatIndex) {
     }
     //配合舟山补花逻辑 如果手牌里有花就先补花
     buhua(game,seatIndex);
-
     var data = game.gameSeats[seatIndex];
     var mahjongs = data.holds;
     var pai = game.mahjongs[game.currentIndex];
@@ -836,11 +835,11 @@ function isBian (seatData) {
     var holds = seatData.holds;
     var hupai = holds[holds.length-1];
     if(hupai != 2
-        ||hupai != 11
-        ||hupai != 20
-        ||hupai != 6
-        ||hupai != 15
-        ||hupai != 24) {
+        &&hupai != 11
+        &&hupai != 20
+        &&hupai != 6
+        &&hupai != 15
+        &&hupai != 24) {
         return false;
     }
 
@@ -1003,51 +1002,51 @@ function calculateResult(game){
             //中发白东南西北碰出杠出暗刻为一台
             //东、南、西、北坐着碰出杠出暗刻加一台
             sd.pengs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.angangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.wangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
             sd.diangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
                 switch(pai) {
-                    case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                    case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                    case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                    case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                 }
             });
-            for ( var n = 27 ; n < 34 ; n++) {
+            for ( var n = 27 ; n < 29 ; n++) {
                 (sd.countMap[n] >=3) ? TAI++ : {};
             }
             for ( var n = 30 ; n < 34 ; n++) {
                 if(sd.countMap[n] >=3) {
                     switch(n) {
-                        case 30: (nowseat == 0 && nowfeng == 0 ) ? TAI++ : {};break;
-                        case 32: (nowseat == 1 && nowfeng == 1 ) ? TAI++ : {};break;
-                        case 31: (nowseat == 2 && nowfeng == 2 ) ? TAI++ : {};break;
-                        case 33: (nowseat == 3 && nowfeng == 3 ) ? TAI++ : {};break;
+                        case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
+                        case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
+                        case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
+                        case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
                     }
                 }
             }
@@ -1060,14 +1059,14 @@ function calculateResult(game){
             var flowers = 0;
             sd.huas.forEach(function(pai){
                 switch(pai) {
-                    case 34: (nowseat == 0) ? TAI++ : {}; seasons++; break;
-                    case 35: (nowseat == 1) ? TAI++ : {}; seasons++; break;
-                    case 36: (nowseat == 2) ? TAI++ : {}; seasons++; break;
-                    case 37: (nowseat == 3) ? TAI++ : {}; seasons++; break;
-                    case 38: (nowseat == 0) ? TAI++ : {}; flowers++; break;
-                    case 39: (nowseat == 1) ? TAI++ : {}; flowers++; break;
-                    case 41: (nowseat == 2) ? TAI++ : {}; flowers++; break;
-                    case 40: (nowseat == 3) ? TAI++ : {}; flowers++; break;
+                    case 34: {(nowseat == 0) ? TAI++ : {}; seasons++; break;}
+                    case 35: {(nowseat == 1) ? TAI++ : {}; seasons++; break;}
+                    case 36: {(nowseat == 2) ? TAI++ : {}; seasons++; break;}
+                    case 37: {(nowseat == 3) ? TAI++ : {}; seasons++; break;}
+                    case 38: {(nowseat == 0) ? TAI++ : {}; flowers++; break;}
+                    case 39: {(nowseat == 1) ? TAI++ : {}; flowers++; break;}
+                    case 41: {(nowseat == 2) ? TAI++ : {}; flowers++; break;}
+                    case 40: {(nowseat == 3) ? TAI++ : {}; flowers++; break;}
                 }
             });
             if(seasons > 3 || flowers > 3) TAI++;
@@ -1192,9 +1191,7 @@ function calculateResult(game){
             }
         }
     }
-
     //TODO:抢杠胡 一炮多响
-
     //三吃三碰：
     for(var i =0 ; i < game.gameSeats[huedindex].sanchisanpeng.length ; i++) {
         //找到让我三吃三碰的人
@@ -1203,13 +1200,18 @@ function calculateResult(game){
             poorguy.actions.push({type:"sanchisanpeng"});
             //如果自摸了，乘以3
             if(game.gameSeats[huedindex].iszimo) {
-                game.gameSeats[huedindex].score += poorguy.score * 2;
-                poorguy.score *= 3;
+                if(!game.gameSeats[huedindex].gangshanghua) {
+                    game.gameSeats[huedindex].score -= poorguy.score * 2;
+                    poorguy.score *= 3;
+                }else{
+                    game.gameSeats[huedindex].score -= poorguy.score * 5;
+                    poorguy.score *= 6;
+                }
             }
             //不是自摸的情况下
             else{
                 //如果poorguy是放炮的人，他和胡的人积分乘以2
-                if(poorguy.seatIndex = game.fangpaoindex) {
+                if(poorguy.seatIndex == game.fangpaoindex) {
                     poorguy.score *= 2;
                     game.gameSeats[huedindex].score *=2;
                 }
@@ -1218,7 +1220,6 @@ function calculateResult(game){
                     poorguy.score -= game.gameSeats[huedindex].score;
                     game.gameSeats[huedindex].score *= 2;
                 }
-                //TODO: D：如果上家被我吃或者碰2次第三次出现杠的情况，并且胡牌了，那么支付6倍，剩下的两家支付1倍积分。
                 //TODO: E：a让b吃或者碰3次，b让c吃或者碰3次，然后1.d把a打到了，那么就是d跟b各一杯  ，如果d打到了b，那么a,c,d各一倍，如果自摸那么就a，3倍，c，3倍 d，1倍
             }
         }
