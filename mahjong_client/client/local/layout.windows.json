@@ -73,29 +73,11 @@
         "type": "dock-h"
       }
     },
-    "window-1492596728509": {
-      "x": 298,
-      "y": 198,
+    "window-1492606441441": {
+      "x": 315,
+      "y": 95,
       "width": 1331,
       "height": 858
-    },
-    "window-1492602959303": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "builder"
-            ]
-          }
-        ]
-      },
-      "x": 800,
-      "y": 100,
-      "width": 516,
-      "height": 739
     }
   }
 }

@@ -305,6 +305,11 @@ cc.Class({
             self.dispatchEvent('game_holds');
         });
 
+        cc.vv.net.addHandler("game_feng_push", function (data) {
+            self.fengxiang = data;
+            self.dispatchEvent('game_feng');
+        });
+
         cc.vv.net.addHandler("game_begin_push", function (data) {
             console.log('game_action_push');
             console.log(data);

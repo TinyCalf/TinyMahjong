@@ -2238,6 +2238,8 @@ exports.begin = function(roomId) {
         userMgr.sendMsg(s.userId,'game_num_push',roomInfo.numOfGames);
         //通知游戏开始
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
+        //通知当前风向开始
+        userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
     }
 
     //配合舟山补花逻辑 如果手牌里有花就先补花

@@ -191,6 +191,11 @@ cc.Class({
             console.log("game_action");
         });
 
+        // this.node.on('game_feng',function(data){
+        //     self._gamecount
+        //     console.log("game_feng");
+        // });
+
         this.node.on('hupai', function (data) {
             var data = data.detail;
             //如果不是玩家自己，则将玩家的牌都放倒
@@ -248,7 +253,22 @@ cc.Class({
         });
 
         this.node.on('game_num', function (data) {
-            //self._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
+            //console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
+            // switch(cc.vv.gameNetMgr.fengxiang) {
+            //     case 0:
+            //         self._gamecount.string = "东风圈";break;
+            //     case 1:
+            //         self._gamecount.string = "南风圈";break;
+            //     case 2:
+            //         self._gamecount.string = "西风圈";break;
+            //     case 3:
+            //         self._gamecount.string = "北风圈";break;
+
+            // }
+        });
+
+        this.node.on('game_feng', function (data) {
+            console.log('game_num!!!!!!!!!!' + cc.vv.gameNetMgr.fengxiang);
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     self._gamecount.string = "东风圈";break;

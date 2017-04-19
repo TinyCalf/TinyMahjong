@@ -790,8 +790,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1492505519210,
-    "meta": 1492505740001,
+    "asset": 1492603452716,
+    "meta": 1492603494129,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -820,8 +820,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1492505519221,
-    "meta": 1492505740027,
+    "asset": 1492603452728,
+    "meta": 1492603496608,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -855,13 +855,13 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1492566267241,
-    "meta": 1492566267371,
+    "asset": 1492603452720,
+    "meta": 1492603496905,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
-    "asset": 1492581631195,
-    "meta": 1492581631358,
+    "asset": 1492603452722,
+    "meta": 1492603497500,
     "relativePath": "scripts\\components\\History.js"
   },
   "9a096a00-814e-47c2-bc57-d3964f358b56": {
@@ -975,8 +975,8 @@
     "relativePath": "scripts\\ReplayMgr.js"
   },
   "74d78241-a877-4329-8ea1-72463662e2fe": {
-    "asset": 1492568660299,
-    "meta": 1492568660445,
+    "asset": 1492603452716,
+    "meta": 1492603498416,
     "relativePath": "scripts\\UserMgr.js"
   },
   "b717fcf0-c348-4dcc-8aaf-35b6f5b7dc31": {
@@ -1270,8 +1270,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1492505519171,
-    "meta": 1492505739997,
+    "asset": 1492603452709,
+    "meta": 1492603494087,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -2360,18 +2360,18 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1492598831086,
-    "meta": 1492598831503,
+    "asset": 1492606294444,
+    "meta": 1492606295115,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1492585228226,
-    "meta": 1492585228378,
+    "asset": 1492603452729,
+    "meta": 1492603498318,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1492597174610,
-    "meta": 1492597175076,
+    "asset": 1492605724795,
+    "meta": 1492605725424,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -2405,8 +2405,8 @@
     "relativePath": "resources\\textures\\images\\mahjong_table.jpg"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1492598269119,
-    "meta": 1492598269372,
+    "asset": 1492603452726,
+    "meta": 1492603497931,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
@@ -2415,13 +2415,13 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1492594758649,
-    "meta": 1492594758680,
+    "asset": 1492603452693,
+    "meta": 1492603494127,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1492583612826,
-    "meta": 1492583613465,
+    "asset": 1492603452718,
+    "meta": 1492603496774,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
@@ -3070,8 +3070,8 @@
     "relativePath": "resources\\sounds\\bgMain.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1492598827297,
-    "meta": 1492598827541,
+    "asset": 1492603452710,
+    "meta": 1492603494290,
     "relativePath": "resources\\scenes\\mjgame.fire"
   }
 }
