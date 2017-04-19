@@ -2360,8 +2360,8 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1492590068009,
-    "meta": 1492590068628,
+    "asset": 1492598831086,
+    "meta": 1492598831503,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
@@ -2370,8 +2370,8 @@
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1492569075797,
-    "meta": 1492569076311,
+    "asset": 1492597174610,
+    "meta": 1492597175076,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -2405,14 +2405,9 @@
     "relativePath": "resources\\textures\\images\\mahjong_table.jpg"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1492586411161,
-    "meta": 1492586411394,
+    "asset": 1492598269119,
+    "meta": 1492598269372,
     "relativePath": "scripts\\components\\MJRoom.js"
-  },
-  "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1492588807896,
-    "meta": 1492588808078,
-    "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
     "asset": 1491469528844,
@@ -2420,8 +2415,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1492582980598,
-    "meta": 1492582980679,
+    "asset": 1492594758649,
+    "meta": 1492594758680,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -3073,5 +3068,10 @@
     "asset": 1492505519195,
     "meta": 1480609964000,
     "relativePath": "resources\\sounds\\bgMain.mp3"
+  },
+  "d092d418-dcdd-4823-a232-eca65fe76fff": {
+    "asset": 1492598827297,
+    "meta": 1492598827541,
+    "relativePath": "resources\\scenes\\mjgame.fire"
   }
 }

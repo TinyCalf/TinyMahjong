@@ -251,13 +251,13 @@ cc.Class({
             //self._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
-                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "东风圈";break;
+                    self._gamecount.string = "东风圈";break;
                 case 1:
-                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "南风圈";break;
+                    self._gamecount.string = "南风圈";break;
                 case 2:
-                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "西风圈";break;
+                    self._gamecount.string = "西风圈";break;
                 case 3:
-                    self._gamecount.string = "第" + cc.vv.gameNetMgr.numOfGames + "局 " + "北风圈";break;
+                    self._gamecount.string = "北风圈";break;
 
             }
         });

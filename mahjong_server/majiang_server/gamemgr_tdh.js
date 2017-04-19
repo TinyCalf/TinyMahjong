@@ -1276,6 +1276,8 @@ exports.begin = function(roomId) {
     var mahjongs = new Array(136);
     if  (roomInfo.jiesuan == 0) mahjongs = new Array(144);
 
+    (roomInfo.numOfGames == 0 ) ? roomInfo.numOfGames = 1 : {} ;
+
     var game = {
         conf:roomInfo.conf,
         roomInfo:roomInfo,

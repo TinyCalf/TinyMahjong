@@ -1966,6 +1966,8 @@ exports.begin = function(roomId) {
     }
     var seats = roomInfo.seats;
 
+    (roomInfo.numOfGames == 0 ) ? roomInfo.numOfGames = 1 : {} ;
+
     var leftlength = 144;
     (roomInfo.conf.hongzhongdanghua) ? leftlength = 126 : leftlength = 130;
 

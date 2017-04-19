@@ -105,6 +105,7 @@ cc.Class({
     },
 
     initRoomHistoryList: function initRoomHistoryList(data) {
+        console.log("initRoomHistoryList");
         for (var i = 0; i < data.length; ++i) {
             var node = this.getViewItem(i);
             node.idx = i;
@@ -114,9 +115,13 @@ cc.Class({
             var datetime = this.dateFormat(data[i].time * 1000);
             node.getChildByName("time").getComponent(cc.Label).string = datetime;
 
+            console.log(1);
+
             var btnOp = node.getChildByName("btnOp");
             btnOp.idx = i;
-            btnOp.getChildByName("Label").getComponent(cc.Label).string = "详情";
+            //btnOp.getChildByName("Label").getComponent(cc.Label).string = "详情";
+
+            console.log(2);
 
             for (var j = 0; j < 4; ++j) {
                 var s = data[i].seats[j];
@@ -124,13 +129,17 @@ cc.Class({
                 //console.log(info);
                 node.getChildByName("info" + j).getComponent(cc.Label).string = info;
             }
+
+            console.log(3);
         }
         this._emptyTip.active = data.length == 0;
+        console.log(this._emptyTip.active);
         this.shrinkContent(data.length);
         this._curRoomInfo = null;
     },
 
     initGameHistoryList: function initGameHistoryList(roomInfo, data) {
+        console.log("initGameHistoryList");
         data.sort(function (a, b) {
             return a.create_time < b.create_time;
         });
@@ -146,7 +155,7 @@ cc.Class({
 
             var btnOp = node.getChildByName("btnOp");
             btnOp.idx = idx;
-            btnOp.getChildByName("Label").getComponent(cc.Label).string = "回放";
+            //btnOp.getChildByName("Label").getComponent(cc.Label).string = "回放";
 
             var result = JSON.parse(data[i].result);
             for (var j = 0; j < 4; ++j) {
@@ -199,23 +208,25 @@ cc.Class({
     },
 
     onViewItemClicked: function onViewItemClicked(event) {
-        var idx = event.target.idx;
-        console.log(idx);
-        if (this._curRoomInfo == null) {
-            this.getGameListOfRoom(idx);
-        } else {
-            this.getDetailOfGame(idx);
-        }
+        // var idx = event.target.idx;
+        // console.log(idx);
+        // if(this._curRoomInfo == null){
+        //     this.getGameListOfRoom(idx);
+        // }
+        // else{
+        //     this.getDetailOfGame(idx);     
+        // }
     },
 
     onBtnOpClicked: function onBtnOpClicked(event) {
-        var idx = event.target.parent.idx;
-        console.log(idx);
-        if (this._curRoomInfo == null) {
-            this.getGameListOfRoom(idx);
-        } else {
-            this.getDetailOfGame(idx);
-        }
+        // var idx = event.target.parent.idx;
+        // console.log(idx);
+        // if(this._curRoomInfo == null){
+        //     this.getGameListOfRoom(idx);
+        // }
+        // else{
+        //     this.getDetailOfGame(idx);     
+        // }
     }
 
 });

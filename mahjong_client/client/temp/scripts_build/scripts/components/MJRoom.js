@@ -41,6 +41,10 @@ cc.Class({
 
         this.lblRoomNo = cc.find("Canvas/infobar/shijian/Z_room_txt/New Label").getComponent(cc.Label);
         this._timeLabel = cc.find("Canvas/infobar/shijian/time").getComponent(cc.Label);
+
+        //显示玩法
+        cc.find("Canvas/infobar/wanfa").getComponent(cc.Label).string = cc.vv.gameNetMgr.getWanfa();
+
         this.lblRoomNo.string = cc.vv.gameNetMgr.roomId;
         var gameChild = this.node.getChildByName("game");
         var sides = ["myself", "right", "up", "left"];
@@ -76,7 +80,7 @@ cc.Class({
         var btnDispress = prepare.getChildByName("btnDissolve");
         var btnWeichat = prepare.getChildByName("btnWeichat");
         var btnBack = prepare.getChildByName("btnBack");
-        var isIdle = cc.vv.gameNetMgr.numOfGames == 1;
+        var isIdle = cc.vv.gameNetMgr.numOfGames == 0;
         console.log('isIdle' + isIdle);
         console.log(cc.vv.gameNetMgr.numOfGames);
         btnExit.active = !cc.vv.gameNetMgr.isOwner() && isIdle;
@@ -209,7 +213,7 @@ cc.Class({
             var title = "<推倒胡>";
         }
         //cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
-        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId);
+        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId + "】", "玩法:" + cc.vv.gameNetMgr.getWanfa());
     },
 
     onBtnDissolveClicked: function onBtnDissolveClicked() {

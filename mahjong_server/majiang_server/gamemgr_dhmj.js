@@ -2110,6 +2110,8 @@ exports.begin = function(roomId) {
     }
     var seats = roomInfo.seats;
 
+    (roomInfo.numOfGames == 0 ) ? roomInfo.numOfGames = 1 : {} ;
+
     var game = {
         conf:roomInfo.conf,
         roomInfo:roomInfo,

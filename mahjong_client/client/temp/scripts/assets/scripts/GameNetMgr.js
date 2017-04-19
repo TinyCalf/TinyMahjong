@@ -142,30 +142,43 @@ cc.Class({
         var conf = this.conf;
         if (conf && conf.maxGames != null && conf.maxFan != null) {
             var strArr = [];
-            strArr.push(conf.maxGames + "局");
-            strArr.push(conf.maxFan + "番封顶");
-            if (conf.hsz) {
-                strArr.push("换三张");
+            // strArr.push(conf.maxGames + "局");
+            // strArr.push(conf.maxFan + "番封顶");
+            if (conf.type == "sjmmj") {
+                conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
+                conf.hongzhongdanghua ? strArr.push("红中当花") : {};
+                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
+                if (conf.jiesuan == 0) strArr.push("幺半");else if (conf.jiesuan == 1) strArr.push("一二");else if (conf.jiesuan == 2) strArr.push("二四");
+            } else if (conf.type == "dhmj") {
+                conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
+                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
+                if (conf.jiesuan == 0) strArr.push("10");else if (conf.jiesuan == 1) strArr.push("25");else if (conf.jiesuan == 2) strArr.push("50");else if (conf.jiesuan == 3) strArr.push("120");
+            } else if (conf.type == "tdh") {
+                conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
+                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
+                if (conf.jiesuan == 0) strArr.push("有花");
             }
-            if (conf.zimo == 1) {
-                strArr.push("自摸加番");
-            } else {
-                strArr.push("自摸加底");
-            }
-            if (conf.jiangdui) {
-                strArr.push("将对");
-            }
-            if (conf.dianganghua == 1) {
-                strArr.push("点杠花(自摸)");
-            } else {
-                strArr.push("点杠花(放炮)");
-            }
-            if (conf.menqing) {
-                strArr.push("门清、中张");
-            }
-            if (conf.tiandihu) {
-                strArr.push("天地胡");
-            }
+            // if(conf.zimo == 1){
+            //     strArr.push("自摸加番");
+            // }
+            // else{
+            //     strArr.push("自摸加底");
+            // }
+            // if(conf.jiangdui){
+            //     strArr.push("将对");  
+            // }
+            // if(conf.dianganghua == 1){
+            //     strArr.push("点杠花(自摸)");  
+            // }
+            // else{
+            //     strArr.push("点杠花(放炮)");
+            // }
+            // if(conf.menqing){
+            //     strArr.push("门清、中张");  
+            // }
+            // if(conf.tiandihu){
+            //     strArr.push("天地胡");  
+            // }
             return strArr.join(" ");
         }
         return "";

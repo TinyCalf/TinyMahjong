@@ -680,7 +680,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "af641vYMylDcqAj+h8v8Ami",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 167
@@ -48317,13 +48317,13 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 416.69,
-      "height": 25
+      "width": 129.63,
+      "height": 16
     },
     "_children": [],
     "_rotationX": 0,
@@ -48332,8 +48332,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 16
+      "x": -614,
+      "y": -67
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -48342,7 +48342,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "f8374z9KjFNRI7+r6qULRQu",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1213
@@ -48360,14 +48360,16 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 25,
-    "_fontSize": 25,
-    "_lineHeight": 25,
+    "_actualFontSize": 16,
+    "_fontSize": 16,
+    "_lineHeight": 16,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_N$string": "4番封顶 碰碰胡 将对 自摸加番 换三张",
-    "_N$horizontalAlign": 1,
+    "_N$file": {
+      "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
+    },
+    "_isSystemFontUsed": false,
+    "_N$string": "4番封顶 碰碰胡 将",
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
   },

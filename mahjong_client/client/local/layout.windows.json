@@ -40,9 +40,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 617,
+                "height": 764,
                 "type": "panel",
-                "width": 1188
+                "width": 1238
               },
               {
                 "active": 0,
@@ -50,14 +50,14 @@
                   "console",
                   "timeline"
                 ],
-                "height": 438,
+                "height": 291,
                 "type": "panel",
-                "width": 1188
+                "width": 1238
               }
             ],
             "height": 1058,
             "type": "dock-v",
-            "width": 1188
+            "width": 1238
           },
           {
             "active": 0,
@@ -66,18 +66,36 @@
             ],
             "height": 1058,
             "type": "panel",
-            "width": 350
+            "width": 300
           }
         ],
         "snapshot": true,
         "type": "dock-h"
       }
     },
-    "window-1492586434994": {
-      "x": 225,
-      "y": 137,
+    "window-1492596728509": {
+      "x": 298,
+      "y": 198,
       "width": 1331,
       "height": 858
+    },
+    "window-1492602959303": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 800,
+      "y": 100,
+      "width": 516,
+      "height": 739
     }
   }
 }
