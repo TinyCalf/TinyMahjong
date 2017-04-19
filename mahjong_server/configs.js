@@ -32,7 +32,7 @@ exports.account_server = function(){
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
 		VERSION:'20161227',
-		APP_WEB:'http://fir.im/2f17',
+		APP_WEB:'http://mahjong.chinacloudapp.cn/mahjong_download/download.php',
 	};
 };
 

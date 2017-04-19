@@ -157,7 +157,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 					var roomInfo = {
 						uuid:"",
 						id:roomId,
-						numOfGames:1,
+						numOfGames:0,
 						fengxiang:0,//风向 0123 东南西北
 						createTime:createTime,
 						nextButton:parseInt(Math.random()*4),

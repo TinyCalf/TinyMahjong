@@ -71,13 +71,13 @@ cc.Class({
         this._gamecount = gameChild.getChildByName('gamecount').getComponent(cc.Label);
         switch(cc.vv.gameNetMgr.fengxiang) {
             case 0: 
-                this._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局" + "东风圈";break;
+                this._gamecount.string = "东风圈";break;
             case 1: 
-                this._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局" + "南风圈";break;
+                this._gamecount.string = "南风圈";break;
             case 2: 
-                this._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局" + "西风圈";break;
+                this._gamecount.string = "西风圈";break;
             case 3: 
-                this._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局" + "北风圈";break;
+                this._gamecount.string = "北风圈";break;
         }
         
         
@@ -187,6 +187,11 @@ cc.Class({
             console.log("game_action");
         });
         
+        // this.node.on('game_feng',function(data){
+        //     self._gamecount
+        //     console.log("game_feng");
+        // });
+        
         this.node.on('hupai',function(data){
             var data = data.detail;
             //如果不是玩家自己，则将玩家的牌都放倒
@@ -248,16 +253,31 @@ cc.Class({
         });
         
         this.node.on('game_num',function(data){
-            //self._gamecount.string = "" + cc.vv.gameNetMgr.numOfGames + "/" + cc.vv.gameNetMgr.maxNumOfGames + "局";
+            //console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
+            // switch(cc.vv.gameNetMgr.fengxiang) {
+            //     case 0: 
+            //         self._gamecount.string = "东风圈";break;
+            //     case 1: 
+            //         self._gamecount.string = "南风圈";break;
+            //     case 2: 
+            //         self._gamecount.string = "西风圈";break;
+            //     case 3: 
+            //         self._gamecount.string = "北风圈";break;
+            
+            // }
+        });
+        
+        this.node.on('game_feng',function(data){
+            console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
             switch(cc.vv.gameNetMgr.fengxiang) {
                 case 0: 
-                    self._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局 " + "东风圈";break;
+                    self._gamecount.string = "东风圈";break;
                 case 1: 
-                    self._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局 " + "南风圈";break;
+                    self._gamecount.string = "南风圈";break;
                 case 2: 
-                    self._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局 " + "西风圈";break;
+                    self._gamecount.string = "西风圈";break;
                 case 3: 
-                    self._gamecount.string = "第"+ cc.vv.gameNetMgr.numOfGames + "局 " + "北风圈";break;
+                    self._gamecount.string = "北风圈";break;
             
             }
         });
@@ -532,6 +552,25 @@ cc.Class({
         anim1.play("shaizi");
         var anim2 = this.node.getChildByName("game").getChildByName("shaizi").getChildByName("shaizi2").getComponent(cc.Animation);
         anim2.play("shaizi2");
+        this.onfinished(false);
+        anim2.on("finished",this.onfinished,this);
+    },
+    
+    onfinished:function(isshow) {
+        var show = true;
+        (isshow==false) ? show = false:{};
+        var side =  this.node.getChildByName("game").getChildByName("myself");
+        side.getChildByName("huas").active = show;
+        side.getChildByName("holds").active = show;
+        var side =  this.node.getChildByName("game").getChildByName("left");
+        side.getChildByName("huas").active = show;
+        side.getChildByName("holds").active = show;
+        var side =  this.node.getChildByName("game").getChildByName("up");
+        side.getChildByName("huas").active = show;
+        side.getChildByName("holds").active = show;
+        var side =  this.node.getChildByName("game").getChildByName("right");
+        side.getChildByName("huas").active = show;
+        side.getChildByName("holds").active = show;
     },
     
     onGameBeign:function(){

@@ -175,10 +175,12 @@ function shuffle(game) {
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
     // var index = 0 ;
-    // var mjs = [30,0,1,2,30,0,1,30,27];
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,13,13];
     // for (var i =0 ; i < mjs.length ; i++) {
+    //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
     //         index++;
+    //     }
     // }
 }
 
@@ -285,10 +287,8 @@ function checkCanPeng(game,seatData,targetPai) {
 
 //检查是否可以吃
 function checkCanChi(game,seatData,targetPai) {
-    console.log("检测是否可以吃");
     //当前出牌位置
     var turn = game.turn;
-    console.log("当前出牌位置为="+turn);
     //被检测位置
     var seat_index_now = seatData.seatIndex;
     //检测是否是下家（只有下家可以吃）
@@ -316,9 +316,6 @@ function checkCanChi(game,seatData,targetPai) {
     var ax = ifHas(holds,targetPai-1,type);
     var xa = ifHas(holds,targetPai+1,type);
     var xaa = ifHas(holds,targetPai+2,type);
-    console.log("the chupai is "+targetPai);
-    console.log("this holds are ");
-    console.log(holds);
     var chitype= {
         left     : false,    //XAA
         mid      : false,    //AXA
@@ -1081,7 +1078,7 @@ function calculateResult(game){
         for ( var n = 0 ; n < needed.length ; n++) {
             (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
         }
-        for ( var n = 0 ; n < 27 ; n++) {
+        for ( var n = 0 ; n < 34 ; n++) {
             (sd.countMap[n] >=3) ? SI += 1 : {};
         }
 
@@ -1612,6 +1609,7 @@ function doGameOver(game,userId,forceEnd){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
             }
         }
+        console.log("fengxiang = " + roomInfo.fengxiang);
 
         //如果打一圈：
         if(quanshu==1) {
@@ -1619,7 +1617,7 @@ function doGameOver(game,userId,forceEnd){
         }
         //如果打8局
         else if(quanshu==0){
-            if(roomInfo.numOfGames >= roomInfo.conf.maxGames) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==2) isEnd = true;
         }
 
         roomInfo.numOfGames++;
@@ -1966,6 +1964,8 @@ exports.begin = function(roomId) {
     }
     var seats = roomInfo.seats;
 
+    (roomInfo.numOfGames == 0 ) ? roomInfo.numOfGames = 1 : {} ;
+
     var leftlength = 144;
     (roomInfo.conf.hongzhongdanghua) ? leftlength = 126 : leftlength = 130;
 
@@ -2099,6 +2099,8 @@ exports.begin = function(roomId) {
         userMgr.sendMsg(s.userId,'game_num_push',roomInfo.numOfGames);
         //通知游戏开始
         userMgr.sendMsg(s.userId,'game_begin_push',game.button);
+        //通知当前风向开始
+        userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
     }
 
     //配合舟山补花逻辑 如果手牌里有花就先补花
