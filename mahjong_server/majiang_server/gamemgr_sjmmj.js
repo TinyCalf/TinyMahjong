@@ -174,14 +174,14 @@ function shuffle(game) {
     //var mjs = [34,35,36,37,38,39,40,41];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    var index = 0 ;
-    var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,13,13];
-    for (var i =0 ; i < mjs.length ; i++) {
-        for(var j = 0 ; j < 4 ; j++) {
-            game.mahjongs[index] = mjs[i];
-            index++;
-        }
-    }
+    // var index = 0 ;
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,13,13];
+    // for (var i =0 ; i < mjs.length ; i++) {
+    //     for(var j = 0 ; j < 4 ; j++) {
+    //         game.mahjongs[index] = mjs[i];
+    //         index++;
+    //     }
+    // }
 }
 
 function mopai(game,seatIndex) {
