@@ -1765,7 +1765,7 @@ function doGameOver(game,userId,forceEnd){
         }
         //如果打8局
         else if(quanshu==0){
-            if(roomInfo.numOfGames >= roomInfo.conf.maxGames) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==2) isEnd = true;
         }
 
         roomInfo.numOfGames++;
