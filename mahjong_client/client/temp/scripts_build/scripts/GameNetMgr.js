@@ -8,8 +8,8 @@ cc.Class({
     properties: {
         dataEventHandler: null,
         roomId: null,
-        maxNumOfGames: 0,
-        numOfGames: 0,
+        maxNumOfGames: -1,
+        numOfGames: -1,
         numOfMJ: 0,
         seatIndex: -1,
         seats: null,
@@ -134,7 +134,7 @@ cc.Class({
             type: baseInfo.type
         };
         if (this.conf.type == null) {
-            this.conf.type == "xzdd";
+            this.conf.type == "sjmmmj";
         }
     },
 
@@ -174,6 +174,7 @@ cc.Class({
     initHandlers: function initHandlers() {
         var self = this;
         cc.vv.net.addHandler("login_result", function (data) {
+            console.log("login_result");
             console.log(data);
             if (data.errcode === 0) {
                 var data = data.data;
@@ -494,6 +495,25 @@ cc.Class({
             self.doHua(si, data.pai);
         });
 
+        //开局补花侦听 全局
+        cc.vv.net.addHandler("buhua_notify_push", function (data) {
+            console.log('buhua_notify_push');
+            var userId = data.userid;
+            var buhuas = data.buhuas;
+            var si = self.getSeatIndexByID(userId);
+            self.doBuhua(si, buhuas);
+        });
+
+        //开局补花侦听 自己
+        cc.vv.net.addHandler("game_buhua_push", function (data) {
+            console.log('game_buhua_push');
+            var userId = data.userid;
+            var holds = data.holds;
+            var buhuas = data.buhuas;
+            var si = self.getSeatIndexByID(userId);
+            self.doBuhuaforme(si, holds, buhuas);
+        });
+
         cc.vv.net.addHandler("game_dingque_notify_push", function (data) {
             self.dispatchEvent('game_dingque_notify', data);
         });
@@ -612,6 +632,33 @@ cc.Class({
         var huas = seatData.huas;
         huas.push(pai);
         this.dispatchEvent('gethua_notify', seatData);
+    },
+
+    doBuhua: function doBuhua(seatIndex, buhuas) {
+        console.log("da buhua");
+        var seatData = this.seats[seatIndex];
+        //更新花牌数据
+        if (seatData.huas == undefined || seatData.huas == null) {
+            seatData.huas = [];
+        }
+        var huas = seatData.huas;
+        for (var i = 0; i < buhuas.length; i++) {
+            huas.push(buhuas[i]);
+        }
+        this.dispatchEvent('gethua_notify', seatData);
+    },
+
+    doBuhuaforme: function doBuhuaforme(seatIndex, holds, buhuas) {
+        console.log("da buhua");
+        var seatData = this.seats[seatIndex];
+        for (var i = 0; i < holds.length; i++) {
+            seatData.holds.push(holds[i]);
+        }
+        for (var i = 0; i < buhuas.length; i++) {
+            var idx = seatData.holds.indexOf(buhuas[i]);
+            seatData.holds.splice(idx, 1);
+        }
+        this.dispatchEvent('buhua_notify', seatData);
     },
 
     getGangType: function getGangType(seatData, pai) {

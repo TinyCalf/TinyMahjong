@@ -219,9 +219,15 @@ cc.Class({
         //     return;
         // }
         if (flag == "chi") {
-            mjid.sort(function (a, b) {
+            var mjid1 = [].concat(mjid);
+            var pai = mjid1.pop();
+            mjid1.sort(function (a, b) {
                 return parseInt(a) - parseInt(b);
             });
+
+            mjid1[2] = mjid1[1];
+            mjid1[1] = mjid1[0];
+            mjid1[0] = pai;
         }
         for (var s = 0; s < sprites.length; ++s) {
             console.log("in xunhuan");
@@ -244,7 +250,7 @@ cc.Class({
                 if (flag == "peng") {
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre, mjid);
                 } else if (flag == "chi") {
-                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre, mjid[s]);
+                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre, mjid1[s]);
                 } else {
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre, mjid);
                 }

@@ -1081,7 +1081,7 @@ function calculateResult(game){
         for ( var n = 0 ; n < needed.length ; n++) {
             (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
         }
-        for ( var n = 0 ; n < 27 ; n++) {
+        for ( var n = 0 ; n < 34 ; n++) {
             (sd.countMap[n] >=3) ? SI += 1 : {};
         }
 

@@ -680,7 +680,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "af641vYMylDcqAj+h8v8Ami",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 167
@@ -6860,7 +6860,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -133,
+      "x": -119,
       "y": 318
     },
     "_skewX": 0,
@@ -6954,7 +6954,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 134,
+      "x": 121,
       "y": 318
     },
     "_skewX": 0,
@@ -7038,7 +7038,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 142.06,
+      "width": 74,
       "height": 24
     },
     "_children": [],
@@ -7048,7 +7048,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 8,
+      "x": 1,
       "y": 318
     },
     "_skewX": 0,
@@ -7087,7 +7087,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
-    "_N$string": "第2局 东风圈",
+    "_N$string": "东风圈",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0

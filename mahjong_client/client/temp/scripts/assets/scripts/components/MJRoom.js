@@ -76,8 +76,9 @@ cc.Class({
         var btnDispress = prepare.getChildByName("btnDissolve");
         var btnWeichat = prepare.getChildByName("btnWeichat");
         var btnBack = prepare.getChildByName("btnBack");
-        var isIdle = cc.vv.gameNetMgr.numOfGames == 0;
-
+        var isIdle = cc.vv.gameNetMgr.numOfGames == -1;
+        console.log('isIdle' + isIdle);
+        console.log(cc.vv.gameNetMgr.numOfGames);
         btnExit.active = !cc.vv.gameNetMgr.isOwner() && isIdle;
         btnDispress.active = cc.vv.gameNetMgr.isOwner() && isIdle;
 
@@ -200,11 +201,15 @@ cc.Class({
     onBtnChatClicked: function onBtnChatClicked() {},
 
     onBtnWeichatClicked: function onBtnWeichatClicked() {
-        var title = "<血战到底>";
-        if (cc.vv.gameNetMgr.conf.type == "xlch") {
-            var title = "<血流成河>";
+        if (cc.vv.gameNetMgr.conf.type == "sjmmj") {
+            var title = "<沈家门麻将>";
+        } else if (cc.vv.gameNetMgr.conf.type == "dhmj") {
+            var title = "<定海麻将>";
+        } else if (cc.vv.gameNetMgr.conf.type == "tdh") {
+            var title = "<推倒胡>";
         }
-        cc.vv.anysdkMgr.share("达达麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        //cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId);
     },
 
     onBtnDissolveClicked: function onBtnDissolveClicked() {

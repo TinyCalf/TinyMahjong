@@ -387,7 +387,7 @@ cc.Class({
                 case 3:
                     fengquan = "北风圈";break;
             }
-            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+            numofgames.getComponent(cc.Label).string = fengquan;
 
             //判断东南西北
             if (userData.button) {
@@ -689,7 +689,7 @@ cc.Class({
                 case 3:
                     fengquan = "北风圈";break;
             }
-            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+            numofgames.getComponent(cc.Label).string = fengquan;
 
             //判断东南西北
             if (userData.button) {
@@ -989,7 +989,7 @@ cc.Class({
                 case 3:
                     fengquan = "北风圈";break;
             }
-            numofgames.getComponent(cc.Label).string = "第" + userData.gameindex + "局 " + fengquan;
+            numofgames.getComponent(cc.Label).string = fengquan;
 
             //判断东南西北
             if (userData.button) {

@@ -12,7 +12,6 @@ cc.Class({
         ip: "",
         sex: 0,
         roomData: null,
-
         oldRoomId: null
     },
 

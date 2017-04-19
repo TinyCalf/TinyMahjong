@@ -4,8 +4,8 @@ cc.Class({
     properties: {
         dataEventHandler: null,
         roomId: null,
-        maxNumOfGames: 0,
-        numOfGames: 0,
+        maxNumOfGames: -1,
+        numOfGames: -1,
         numOfMJ: 0,
         seatIndex: -1,
         seats: null,
@@ -130,7 +130,7 @@ cc.Class({
             type: baseInfo.type
         };
         if (this.conf.type == null) {
-            this.conf.type == "xzdd";
+            this.conf.type == "sjmmmj";
         }
     },
 
@@ -170,6 +170,7 @@ cc.Class({
     initHandlers: function initHandlers() {
         var self = this;
         cc.vv.net.addHandler("login_result", function (data) {
+            console.log("login_result");
             console.log(data);
             if (data.errcode === 0) {
                 var data = data.data;
