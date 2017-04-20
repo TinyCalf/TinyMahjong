@@ -1,3 +1,22 @@
+//Jonathan 新增函数 打印手牌 方便测试
+exports.consoleHolds = function (seatData) {
+	var hds = ["1筒","2筒","3筒","4筒","5筒","6筒","7筒","8筒","9筒",
+		"1条","2条","3条","4条","5条","6条","7条","8条","9条",
+		"1万","2万","3万","4万","5万","6万","7万","8万","9万",
+		"中","发","白","东","西","南","北","春","夏","秋","冬","梅","兰","竹","菊"];
+	var holds = seatData.holds;
+	var inZH = [].concat(holds);
+	inZH.sort(function(a,b){
+		return parseInt(a-b);
+	});
+	for (var i = 0; i < inZH.length ; i++) {
+		inZH[i] = hds[inZH[i]];
+	}
+	console.log(inZH);
+	return;
+};
+
+
 function checkTingPai(seatData,begin,end){
 	for(var i = begin; i < end; ++i){
 		//如果这牌已经在和了，就不用检查了
@@ -281,4 +300,6 @@ exports.getMJType = function(pai){
       else if(id >= 18 && id < 27){
           return 2;
       }
-}
+};
+
+

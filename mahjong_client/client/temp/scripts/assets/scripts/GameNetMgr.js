@@ -669,13 +669,14 @@ cc.Class({
     doBuhuaforme: function doBuhuaforme(seatIndex, holds, buhuas) {
         console.log("da buhua");
         var seatData = this.seats[seatIndex];
-        for (var i = 0; i < holds.length; i++) {
-            seatData.holds.push(holds[i]);
-        }
-        for (var i = 0; i < buhuas.length; i++) {
-            var idx = seatData.holds.indexOf(buhuas[i]);
-            seatData.holds.splice(idx, 1);
-        }
+        // for(var i=0 ; i < holds.length ; i++) {
+        //     seatData.holds.push(holds[i]);
+        // }
+        // for(var i=0 ; i < buhuas.length ; i++) {
+        //     var idx = seatData.holds.indexOf(buhuas[i]);
+        //     seatData.holds.splice(idx,1);
+        // }
+        seatData.holds = holds;
         this.dispatchEvent('buhua_notify', seatData);
     },
 

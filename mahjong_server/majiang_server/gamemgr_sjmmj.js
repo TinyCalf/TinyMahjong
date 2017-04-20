@@ -16,6 +16,9 @@ var ACTION_ZIMO = 6;
 
 var gameSeatsOfUsers = {};
 
+
+
+
 //Jonathan 新增功能函数 删除手牌中的指定牌 包括 holds 和 countMap
 function removePai(seatData,pai) {
     var holds = seatData.holds;
@@ -51,8 +54,8 @@ function buhua(game,seatIndex){
             }
         }
     }
-    var holds = [];
-    for (var i  = 0 ; i < buhuas.length ; i++ ) {
+    var num = buhuas.length;
+    for (var i  = 0 ; i < num; i++ ) {
         if(!game.conf.hongzhongdanghua) {
             while (pai >= 34 && pai < 42) {
                 //标记刚刚杠过
@@ -72,7 +75,6 @@ function buhua(game,seatIndex){
         }
         data.holds.push(pai);
         (data.countMap[pai] == null)?data.countMap[pai] = 1 : data.countMap[pai] ++;
-        holds.push(pai);
         game.currentIndex++;
         pai = game.mahjongs[game.currentIndex];
     }
@@ -81,8 +83,9 @@ function buhua(game,seatIndex){
         //告诉所有人该玩家补花了
         userMgr.broacastInRoom('buhua_notify_push', {userid: data.userId, buhuas: buhuas}, data.userId, true);
         //告诉该玩家现在的增加的手牌是什么
-        userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:holds});
+        userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:data.holds});
     }
+
 }
 
 function getMJType(id){
@@ -171,17 +174,23 @@ function shuffle(game) {
 
     //這裡可輸入測試牌型如果不需要則注釋以下代碼
     //測試 找出不顯示的花
-    //var mjs = [34,35,36,37,38,39,40,41];
+    // var mjs = [1,27,35,36,37,2,38,39];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
     // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,13,13];
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
     // for (var i =0 ; i < mjs.length ; i++) {
     //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
     //         index++;
     //     }
     // }
+    // game.mahjongs[index] = 12;
+    // index++;
+    // game.mahjongs[index] = 38;
+    // index++;
+    // game.mahjongs[index] = 39;
+    // index++;
 }
 
 function mopai(game,seatIndex) {
@@ -227,6 +236,7 @@ function mopai(game,seatIndex) {
     }
     data.countMap[pai] = c + 1;
     game.currentIndex ++;
+    mjutils.consoleHolds(data);
     return pai;
 }
 

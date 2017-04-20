@@ -51,8 +51,8 @@ function buhua(game,seatIndex){
             }
         }
     }
-    var holds = [];
-    for (var i  = 0 ; i < buhuas.length ; i++ ) {
+    var num = buhuas.length;
+    for (var i  = 0 ; i < num; i++ ) {
         if(!game.conf.hongzhongdanghua) {
             while (pai >= 34 && pai < 42) {
                 //标记刚刚杠过
@@ -72,7 +72,6 @@ function buhua(game,seatIndex){
         }
         data.holds.push(pai);
         (data.countMap[pai] == null)?data.countMap[pai] = 1 : data.countMap[pai] ++;
-        holds.push(pai);
         game.currentIndex++;
         pai = game.mahjongs[game.currentIndex];
     }
@@ -81,8 +80,9 @@ function buhua(game,seatIndex){
         //告诉所有人该玩家补花了
         userMgr.broacastInRoom('buhua_notify_push', {userid: data.userId, buhuas: buhuas}, data.userId, true);
         //告诉该玩家现在的增加的手牌是什么
-        userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:holds});
+        userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:data.holds});
     }
+
 }
 
 //单独的摸牌逻辑 专门为舟山补花逻辑所用 只有开局用跳过出花过程的逻辑
