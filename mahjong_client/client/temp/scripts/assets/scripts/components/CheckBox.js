@@ -2,8 +2,10 @@
 cc._RFpush(module, 'dc9e5hcegFBFpbh0CwUFw8V', 'CheckBox');
 // scripts\components\CheckBox.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {

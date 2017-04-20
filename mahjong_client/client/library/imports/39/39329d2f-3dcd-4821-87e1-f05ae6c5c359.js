@@ -1,6 +1,10 @@
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 if (!CC_JSB && !cc.sys.isNative) {
 	(function (f) {
-		if (typeof exports === "object" && typeof module !== "undefined") {
+		if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === "object" && typeof module !== "undefined") {
 			module.exports = f();
 		} else if (typeof define === "function" && define.amd) {
 			define([], f);
@@ -16,17 +20,19 @@ if (!CC_JSB && !cc.sys.isNative) {
 			}g.io = f();
 		}
 	})(function () {
-		var define, module, exports;return (function e(t, n, r) {
+		var define, module, exports;return function e(t, n, r) {
 			function s(o, u) {
 				if (!n[o]) {
 					if (!t[o]) {
-						var a = typeof require == "function" && require;if (!u && a) return a(o, !0);if (i) return i(o, !0);var f = new Error("Cannot find module '" + o + "'");throw (f.code = "MODULE_NOT_FOUND", f);
+						var a = typeof require == "function" && require;if (!u && a) return a(o, !0);if (i) return i(o, !0);var f = new Error("Cannot find module '" + o + "'");throw f.code = "MODULE_NOT_FOUND", f;
 					}var l = n[o] = { exports: {} };t[o][0].call(l.exports, function (e) {
 						var n = t[o][1][e];return s(n ? n : e);
 					}, l, l.exports, e, t, n, r);
 				}return n[o].exports;
-			}var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) s(r[o]);return s;
-		})({ 1: [function (_dereq_, module, exports) {
+			}var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) {
+				s(r[o]);
+			}return s;
+		}({ 1: [function (_dereq_, module, exports) {
 
 				module.exports = _dereq_('./lib/');
 			}, { "./lib/": 2 }], 2: [function (_dereq_, module, exports) {
@@ -82,7 +88,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 
 						opts = opts || {};
 
-						if (uri && 'object' == typeof uri) {
+						if (uri && 'object' == (typeof uri === "undefined" ? "undefined" : _typeof(uri))) {
 							opts = uri;
 							uri = null;
 						}
@@ -141,7 +147,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 						this.rejectUnauthorized = opts.rejectUnauthorized === undefined ? true : opts.rejectUnauthorized;
 
 						// other options for Node.js client
-						var freeGlobal = typeof global == 'object' && global;
+						var freeGlobal = (typeof global === "undefined" ? "undefined" : _typeof(global)) == 'object' && global;
 						if (freeGlobal.global === freeGlobal) {
 							if (opts.extraHeaders && Object.keys(opts.extraHeaders).length > 0) {
 								this.extraHeaders = opts.extraHeaders;
@@ -1648,11 +1654,11 @@ if (!CC_JSB && !cc.sys.isNative) {
      * Is XHR2 supported?
      */
 
-				var hasXHR2 = (function () {
+				var hasXHR2 = function () {
 					var XMLHttpRequest = _dereq_('xmlhttprequest-ssl');
 					var xhr = new XMLHttpRequest({ xdomain: false });
 					return null != xhr.responseType;
-				})();
+				}();
 
 				/**
      * Polling interface.
@@ -2345,28 +2351,28 @@ if (!CC_JSB && !cc.sys.isNative) {
       * Check if Blob constructor is supported
       */
 
-					var blobSupported = (function () {
+					var blobSupported = function () {
 						try {
 							var a = new Blob(['hi']);
 							return a.size === 2;
 						} catch (e) {
 							return false;
 						}
-					})();
+					}();
 
 					/**
       * Check if Blob constructor supports ArrayBufferViews
       * Fails in Safari 6, so we need to map to ArrayBuffers there.
       */
 
-					var blobSupportsArrayBufferView = blobSupported && (function () {
+					var blobSupportsArrayBufferView = blobSupported && function () {
 						try {
 							var b = new Blob([new Uint8Array([1, 2])]);
 							return b.size === 2;
 						} catch (e) {
 							return false;
 						}
-					})();
+					}();
 
 					/**
       * Check if BlobBuilder is supported
@@ -2417,7 +2423,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 						return new Blob(ary, options || {});
 					};
 
-					module.exports = (function () {
+					module.exports = function () {
 						if (blobSupported) {
 							return blobSupportsArrayBufferView ? global.Blob : BlobConstructor;
 						} else if (blobBuilderSupported) {
@@ -2425,7 +2431,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 						} else {
 							return undefined;
 						}
-					})();
+					}();
 				}).call(this, typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {});
 			}, {}], 15: [function (_dereq_, module, exports) {
 
@@ -2689,7 +2695,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 				function log() {
 					// this hackery is required for IE8/9, where
 					// the `console.log` function doesn't have 'apply'
-					return 'object' === typeof console && console.log && Function.prototype.apply.call(console.log, console, arguments);
+					return 'object' === (typeof console === "undefined" ? "undefined" : _typeof(console)) && console.log && Function.prototype.apply.call(console.log, console, arguments);
 				}
 
 				/**
@@ -2990,9 +2996,9 @@ if (!CC_JSB && !cc.sys.isNative) {
       */
 
 					var packets = exports.packets = {
-						open: 0, // non-ws
-						close: 1, // non-ws
-						ping: 2,
+						open: 0 // non-ws
+						, close: 1 // non-ws
+						, ping: 2,
 						pong: 3,
 						message: 4,
 						upgrade: 5,
@@ -3596,7 +3602,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 										return true;
 									}
 								}
-							} else if (obj && 'object' == typeof obj) {
+							} else if (obj && 'object' == (typeof obj === "undefined" ? "undefined" : _typeof(obj))) {
 								if (obj.toJSON) {
 									obj = obj.toJSON();
 								}
@@ -3881,14 +3887,14 @@ if (!CC_JSB && !cc.sys.isNative) {
 					;(function (root) {
 
 						// Detect free variables `exports`
-						var freeExports = typeof exports == 'object' && exports;
+						var freeExports = (typeof exports === "undefined" ? "undefined" : _typeof(exports)) == 'object' && exports;
 
 						// Detect free variable `module`
-						var freeModule = typeof module == 'object' && module && module.exports == freeExports && module;
+						var freeModule = (typeof module === "undefined" ? "undefined" : _typeof(module)) == 'object' && module && module.exports == freeExports && module;
 
 						// Detect free variable `global`, from Node.js or Browserified code,
 						// and use it as `root`
-						var freeGlobal = typeof global == 'object' && global;
+						var freeGlobal = (typeof global === "undefined" ? "undefined" : _typeof(global)) == 'object' && global;
 						if (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal) {
 							root = freeGlobal;
 						}
@@ -4096,7 +4102,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 
 						// Some AMD build optimizers, like r.js, check for specific condition patterns
 						// like the following:
-						if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+						if (typeof define == 'function' && _typeof(define.amd) == 'object' && define.amd) {
 							define(function () {
 								return utf8;
 							});
@@ -4179,9 +4185,9 @@ if (!CC_JSB && !cc.sys.isNative) {
 				//
 				// Map each character to its index.
 				//
-				for (; i < length; i++) map[alphabet[i]] = i;
-
-				//
+				for (; i < length; i++) {
+					map[alphabet[i]] = i;
+				} //
 				// Expose the `yeast`, `encode` and `decode` functions.
 				//
 				yeast.encode = encode;
@@ -4224,7 +4230,7 @@ if (!CC_JSB && !cc.sys.isNative) {
      */
 
 				function lookup(uri, opts) {
-					if (typeof uri == 'object') {
+					if ((typeof uri === "undefined" ? "undefined" : _typeof(uri)) == 'object') {
 						opts = uri;
 						uri = undefined;
 					}
@@ -4317,7 +4323,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 
 				function Manager(uri, opts) {
 					if (!(this instanceof Manager)) return new Manager(uri, opts);
-					if (uri && 'object' == typeof uri) {
+					if (uri && 'object' == (typeof uri === "undefined" ? "undefined" : _typeof(uri))) {
 						opts = uri;
 						uri = undefined;
 					}
@@ -4649,7 +4655,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 					}
 
 					function onConnecting() {
-						if (! ~indexOf(self.connecting, socket)) {
+						if (!~indexOf(self.connecting, socket)) {
 							self.connecting.push(socket);
 						}
 					}
@@ -4722,9 +4728,9 @@ if (!CC_JSB && !cc.sys.isNative) {
 					debug('cleanup');
 
 					var sub;
-					while (sub = this.subs.shift()) sub.destroy();
-
-					this.packetBuffer = [];
+					while (sub = this.subs.shift()) {
+						sub.destroy();
+					}this.packetBuffer = [];
 					this.encoding = false;
 					this.lastPing = null;
 
@@ -5656,7 +5662,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 										return true;
 									}
 								}
-							} else if (obj && 'object' == typeof obj) {
+							} else if (obj && 'object' == (typeof obj === "undefined" ? "undefined" : _typeof(obj))) {
 								// see: https://github.com/Automattic/has-binary/pull/4
 								if (obj.toJSON && 'function' == typeof obj.toJSON) {
 									obj = obj.toJSON();
@@ -5721,7 +5727,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 									newData[i] = _deconstructPacket(data[i]);
 								}
 								return newData;
-							} else if ('object' == typeof data && !(data instanceof Date)) {
+							} else if ('object' == (typeof data === "undefined" ? "undefined" : _typeof(data)) && !(data instanceof Date)) {
 								var newData = {};
 								for (var key in data) {
 									newData[key] = _deconstructPacket(data[key]);
@@ -5758,7 +5764,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 									data[i] = _reconstructPacket(data[i]);
 								}
 								return data;
-							} else if (data && 'object' == typeof data) {
+							} else if (data && 'object' == (typeof data === "undefined" ? "undefined" : _typeof(data))) {
 								for (var key in data) {
 									data[key] = _reconstructPacket(data[key]);
 								}
@@ -5808,16 +5814,16 @@ if (!CC_JSB && !cc.sys.isNative) {
 
 								fileReader.readAsArrayBuffer(obj); // blob -> arraybuffer
 							} else if (isArray(obj)) {
-									// handle array
-									for (var i = 0; i < obj.length; i++) {
-										_removeBlobs(obj[i], i, obj);
-									}
-								} else if (obj && 'object' == typeof obj && !isBuf(obj)) {
-									// and object
-									for (var key in obj) {
-										_removeBlobs(obj[key], key, obj);
-									}
+								// handle array
+								for (var i = 0; i < obj.length; i++) {
+									_removeBlobs(obj[i], i, obj);
 								}
+							} else if (obj && 'object' == (typeof obj === "undefined" ? "undefined" : _typeof(obj)) && !isBuf(obj)) {
+								// and object
+								for (var key in obj) {
+									_removeBlobs(obj[key], key, obj);
+								}
+							}
 						}
 
 						var pendingBlobs = 0;
@@ -6255,14 +6261,14 @@ if (!CC_JSB && !cc.sys.isNative) {
 						};
 
 						// Detect the `exports` object exposed by CommonJS implementations.
-						var freeExports = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
+						var freeExports = objectTypes[typeof exports === "undefined" ? "undefined" : _typeof(exports)] && exports && !exports.nodeType && exports;
 
 						// Use the `global` object exposed by Node (including Browserify via
 						// `insert-module-globals`), Narwhal, and Ringo as the default context,
 						// and the `window` object in browsers. Rhino exports a `global` function
 						// instead.
-						var root = objectTypes[typeof window] && window || this,
-						    freeGlobal = freeExports && objectTypes[typeof module] && module && !module.nodeType && typeof global == "object" && global;
+						var root = objectTypes[typeof window === "undefined" ? "undefined" : _typeof(window)] && window || this,
+						    freeGlobal = freeExports && objectTypes[typeof module === "undefined" ? "undefined" : _typeof(module)] && module && !module.nodeType && (typeof global === "undefined" ? "undefined" : _typeof(global)) == "object" && global;
 
 						if (freeGlobal && (freeGlobal["global"] === freeGlobal || freeGlobal["window"] === freeGlobal || freeGlobal["self"] === freeGlobal)) {
 							root = freeGlobal;
@@ -6285,7 +6291,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 							    nativeJSON = context["JSON"] || root["JSON"];
 
 							// Delegate to the native `stringify` and `parse` implementations.
-							if (typeof nativeJSON == "object" && nativeJSON) {
+							if ((typeof nativeJSON === "undefined" ? "undefined" : _typeof(nativeJSON)) == "object" && nativeJSON) {
 								exports.stringify = nativeJSON.stringify;
 								exports.parse = nativeJSON.parse;
 							}
@@ -6293,8 +6299,8 @@ if (!CC_JSB && !cc.sys.isNative) {
 							// Convenience aliases.
 							var objectProto = Object.prototype,
 							    getClass = objectProto.toString,
-							    isProperty,
-							    forEach,
+							    _isProperty,
+							    _forEach,
 							    undef;
 
 							// Test the `Date#getUTC*` methods. Based on work by @Yaffle.
@@ -6334,7 +6340,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 										    stringifySupported = typeof stringify == "function" && isExtended;
 										if (stringifySupported) {
 											// A test function object with a custom `toJSON` method.
-											(value = function () {
+											(value = function value() {
 												return 1;
 											}).toJSON = value;
 											try {
@@ -6466,8 +6472,8 @@ if (!CC_JSB && !cc.sys.isNative) {
 
 								// Internal: Determines if a property is a direct property of the given
 								// object. Delegates to the native `Object#hasOwnProperty` method.
-								if (!(isProperty = objectProto.hasOwnProperty)) {
-									isProperty = function (property) {
+								if (!(_isProperty = objectProto.hasOwnProperty)) {
+									_isProperty = function isProperty(property) {
 										var members = {},
 										    constructor;
 										if ((members.__proto__ = null, members.__proto__ = {
@@ -6477,12 +6483,12 @@ if (!CC_JSB && !cc.sys.isNative) {
 										}, members).toString != getClass) {
 											// Safari <= 2.0.3 doesn't implement `Object#hasOwnProperty`, but
 											// supports the mutable *proto* property.
-											isProperty = function (property) {
+											_isProperty = function isProperty(property) {
 												// Capture and break the object's prototype chain (see section 8.6.2
 												// of the ES 5.1 spec). The parenthesized expression prevents an
 												// unsafe transformation by the Closure Compiler.
 												var original = this.__proto__,
-												    result = (property in (this.__proto__ = null, this));
+												    result = property in (this.__proto__ = null, this);
 												// Restore the original prototype chain.
 												this.__proto__ = original;
 												return result;
@@ -6492,19 +6498,19 @@ if (!CC_JSB && !cc.sys.isNative) {
 											constructor = members.constructor;
 											// Use the `constructor` property to simulate `Object#hasOwnProperty` in
 											// other environments.
-											isProperty = function (property) {
+											_isProperty = function isProperty(property) {
 												var parent = (this.constructor || constructor).prototype;
 												return property in this && !(property in parent && this[property] === parent[property]);
 											};
 										}
 										members = null;
-										return isProperty.call(this, property);
+										return _isProperty.call(this, property);
 									};
 								}
 
 								// Internal: Normalizes the `for...in` iteration algorithm across
 								// environments. Each enumerated key is yielded to a `callback` function.
-								forEach = function (object, callback) {
+								_forEach = function forEach(object, callback) {
 									var size = 0,
 									    Properties,
 									    members,
@@ -6513,7 +6519,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 									// Tests for bugs in the current environment's `for...in` algorithm. The
 									// `valueOf` property inherits the non-enumerable flag from
 									// `Object.prototype` in older versions of IE, Netscape, and Mozilla.
-									(Properties = function () {
+									(Properties = function Properties() {
 										this.valueOf = 0;
 									}).prototype.valueOf = 0;
 
@@ -6521,7 +6527,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 									members = new Properties();
 									for (property in members) {
 										// Ignore all properties inherited from `Object.prototype`.
-										if (isProperty.call(members, property)) {
+										if (_isProperty.call(members, property)) {
 											size++;
 										}
 									}
@@ -6533,11 +6539,11 @@ if (!CC_JSB && !cc.sys.isNative) {
 										members = ["valueOf", "toString", "toLocaleString", "propertyIsEnumerable", "isPrototypeOf", "hasOwnProperty", "constructor"];
 										// IE <= 8, Mozilla 1.0, and Netscape 6.2 ignore shadowed non-enumerable
 										// properties.
-										forEach = function (object, callback) {
+										_forEach = function forEach(object, callback) {
 											var isFunction = getClass.call(object) == functionClass,
 											    property,
 											    length;
-											var hasProperty = !isFunction && typeof object.constructor != "function" && objectTypes[typeof object.hasOwnProperty] && object.hasOwnProperty || isProperty;
+											var hasProperty = !isFunction && typeof object.constructor != "function" && objectTypes[_typeof(object.hasOwnProperty)] && object.hasOwnProperty || _isProperty;
 											for (property in object) {
 												// Gecko <= 1.0 enumerates the `prototype` property of functions under
 												// certain conditions; IE does not.
@@ -6546,11 +6552,11 @@ if (!CC_JSB && !cc.sys.isNative) {
 												}
 											}
 											// Manually invoke the callback for each non-enumerable property.
-											for (length = members.length; property = members[--length]; hasProperty.call(object, property) && callback(property));
+											for (length = members.length; property = members[--length]; hasProperty.call(object, property) && callback(property)) {}
 										};
 									} else if (size == 2) {
 										// Safari <= 2.0.4 enumerates shadowed properties twice.
-										forEach = function (object, callback) {
+										_forEach = function forEach(object, callback) {
 											// Create a set of iterated properties.
 											var members = {},
 											    isFunction = getClass.call(object) == functionClass,
@@ -6559,30 +6565,30 @@ if (!CC_JSB && !cc.sys.isNative) {
 												// Store each property name to prevent double enumeration. The
 												// `prototype` property of functions is not enumerated due to cross-
 												// environment inconsistencies.
-												if (!(isFunction && property == "prototype") && !isProperty.call(members, property) && (members[property] = 1) && isProperty.call(object, property)) {
+												if (!(isFunction && property == "prototype") && !_isProperty.call(members, property) && (members[property] = 1) && _isProperty.call(object, property)) {
 													callback(property);
 												}
 											}
 										};
 									} else {
 										// No bugs detected; use the standard `for...in` algorithm.
-										forEach = function (object, callback) {
+										_forEach = function forEach(object, callback) {
 											var isFunction = getClass.call(object) == functionClass,
 											    property,
 											    isConstructor;
 											for (property in object) {
-												if (!(isFunction && property == "prototype") && isProperty.call(object, property) && !(isConstructor = property === "constructor")) {
+												if (!(isFunction && property == "prototype") && _isProperty.call(object, property) && !(isConstructor = property === "constructor")) {
 													callback(property);
 												}
 											}
 											// Manually invoke the callback for the `constructor` property due to
 											// cross-environment inconsistencies.
-											if (isConstructor || isProperty.call(object, property = "constructor")) {
+											if (isConstructor || _isProperty.call(object, property = "constructor")) {
 												callback(property);
 											}
 										};
 									}
-									return forEach(object, callback);
+									return _forEach(object, callback);
 								};
 
 								// Public: Serializes a JavaScript `value` as a JSON string. The optional
@@ -6650,9 +6656,9 @@ if (!CC_JSB && !cc.sys.isNative) {
 											// Necessary for host object support.
 											value = object[property];
 										} catch (exception) {}
-										if (typeof value == "object" && value) {
+										if ((typeof value === "undefined" ? "undefined" : _typeof(value)) == "object" && value) {
 											className = getClass.call(value);
-											if (className == dateClass && !isProperty.call(value, "toJSON")) {
+											if (className == dateClass && !_isProperty.call(value, "toJSON")) {
 												if (value > -1 / 0 && value < 1 / 0) {
 													// Dates are serialized according to the `Date#toJSON` method
 													// specified in ES 5.1 section 15.9.5.44. See section 15.9.1.15
@@ -6662,8 +6668,8 @@ if (!CC_JSB && !cc.sys.isNative) {
 														// seconds, and milliseconds if the `getUTC*` methods are
 														// buggy. Adapted from @Yaffle's `date-shim` project.
 														date = floor(value / 864e5);
-														for (year = floor(date / 365.2425) + 1970 - 1; getDay(year + 1, 0) <= date; year++);
-														for (month = floor((date - getDay(year, 0)) / 30.42); getDay(year, month + 1) <= date; month++);
+														for (year = floor(date / 365.2425) + 1970 - 1; getDay(year + 1, 0) <= date; year++) {}
+														for (month = floor((date - getDay(year, 0)) / 30.42); getDay(year, month + 1) <= date; month++) {}
 														date = 1 + date - getDay(year, month);
 														// The `time` value specifies the time within the day (see ES
 														// 5.1 section 15.9.1.2). The formula `(A % B + B) % B` is used
@@ -6695,7 +6701,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 												} else {
 													value = null;
 												}
-											} else if (typeof value.toJSON == "function" && (className != numberClass && className != stringClass && className != arrayClass || isProperty.call(value, "toJSON"))) {
+											} else if (typeof value.toJSON == "function" && (className != numberClass && className != stringClass && className != arrayClass || _isProperty.call(value, "toJSON"))) {
 												// Prototype <= 1.6.1 adds non-standard `toJSON` methods to the
 												// `Number`, `String`, `Date`, and `Array` prototypes. JSON 3
 												// ignores all `toJSON` methods on these objects unless they are
@@ -6724,7 +6730,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 											return quote("" + value);
 										}
 										// Recursively serialize objects and arrays.
-										if (typeof value == "object") {
+										if ((typeof value === "undefined" ? "undefined" : _typeof(value)) == "object") {
 											// Check for cyclic structures. This is a linear search; performance
 											// is inversely proportional to the number of unique nested objects.
 											for (length = stack.length; length--;) {
@@ -6750,7 +6756,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 												// Recursively serialize object members. Members are selected from
 												// either a user-specified list of property names, or the object
 												// itself.
-												forEach(properties || value, function (property) {
+												_forEach(properties || value, function (property) {
 													var element = serialize(property, value, callback, properties, whitespace, indentation, stack);
 													if (element !== undef) {
 														// According to ES 5.1 section 15.12.3: "If `gap` {whitespace}
@@ -6773,13 +6779,13 @@ if (!CC_JSB && !cc.sys.isNative) {
 									// Public: `JSON.stringify`. See ES 5.1 section 15.12.3.
 									exports.stringify = function (source, filter, width) {
 										var whitespace, callback, properties, className;
-										if (objectTypes[typeof filter] && filter) {
+										if (objectTypes[typeof filter === "undefined" ? "undefined" : _typeof(filter)] && filter) {
 											if ((className = getClass.call(filter)) == functionClass) {
 												callback = filter;
 											} else if (className == arrayClass) {
 												// Convert the property names array into a makeshift set.
 												properties = {};
-												for (var index = 0, length = filter.length, value; index < length; value = filter[index++], (className = getClass.call(value), className == stringClass || className == numberClass) && (properties[value] = 1));
+												for (var index = 0, length = filter.length, value; index < length; value = filter[index++], (className = getClass.call(value), className == stringClass || className == numberClass) && (properties[value] = 1)) {}
 											}
 										}
 										if (width) {
@@ -6787,7 +6793,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 												// Convert the `width` to an integer and create a string containing
 												// `width` number of space characters.
 												if ((width -= width % 1) > 0) {
-													for (whitespace = "", width > 10 && (width = 10); whitespace.length < width; whitespace += " ");
+													for (whitespace = "", width > 10 && (width = 10); whitespace.length < width; whitespace += " ") {}
 												}
 											} else if (className == stringClass) {
 												whitespace = width.length <= 10 ? width : width.slice(0, 10);
@@ -6934,13 +6940,13 @@ if (!CC_JSB && !cc.sys.isNative) {
 														}
 														isSigned = false;
 														// Parse the integer component.
-														for (; Index < length && (charCode = source.charCodeAt(Index), charCode >= 48 && charCode <= 57); Index++);
+														for (; Index < length && (charCode = source.charCodeAt(Index), charCode >= 48 && charCode <= 57); Index++) {}
 														// Floats cannot contain a leading decimal point; however, this
 														// case is already accounted for by the parser.
 														if (source.charCodeAt(Index) == 46) {
 															position = ++Index;
 															// Parse the decimal component.
-															for (; position < length && (charCode = source.charCodeAt(position), charCode >= 48 && charCode <= 57); position++);
+															for (; position < length && (charCode = source.charCodeAt(position), charCode >= 48 && charCode <= 57); position++) {}
 															if (position == Index) {
 																// Illegal trailing decimal.
 																abort();
@@ -6958,7 +6964,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 																Index++;
 															}
 															// Parse the exponential component.
-															for (position = Index; position < length && (charCode = source.charCodeAt(position), charCode >= 48 && charCode <= 57); position++);
+															for (position = Index; position < length && (charCode = source.charCodeAt(position), charCode >= 48 && charCode <= 57); position++) {}
 															if (position == Index) {
 																// Illegal empty exponent.
 																abort();
@@ -7091,7 +7097,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 									var walk = function walk(source, property, callback) {
 										var value = source[property],
 										    length;
-										if (typeof value == "object" && value) {
+										if ((typeof value === "undefined" ? "undefined" : _typeof(value)) == "object" && value) {
 											// `forEach` can't be used to traverse an array in Opera <= 8.54
 											// because its `Object#hasOwnProperty` implementation returns `false`
 											// for array indices (e.g., `![1, 2, 3].hasOwnProperty("0")`).
@@ -7100,7 +7106,7 @@ if (!CC_JSB && !cc.sys.isNative) {
 													update(value, length, callback);
 												}
 											} else {
-												forEach(value, function (property) {
+												_forEach(value, function (property) {
 													update(value, property, callback);
 												});
 											}

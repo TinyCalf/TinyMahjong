@@ -32,6 +32,27 @@ exports.init = function(config){
     });
 };
 
+exports.mj_login = function(callback){
+     callback = callback == null? nop:callback;
+     var sql = 'SELECT * FROM t_parameter WHERE id = 1';
+    query(sql, function(err, rows, fields) {
+        if (err) {
+            callback(false);
+            throw err;
+        }
+        else{
+            if(rows.length > 0){
+                callback(rows[0]);
+            }
+            else{
+                callback(null);
+            }
+        }
+
+    });
+
+};
+
 exports.is_account_exist = function(account,callback){
     callback = callback == null? nop:callback;
     if(account == null){

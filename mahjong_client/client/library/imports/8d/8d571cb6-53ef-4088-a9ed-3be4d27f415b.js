@@ -1,5 +1,9 @@
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -28,7 +32,7 @@ cc.Class({
             cc.vv.radiogroupmgr = new RadioGroupMgr();
             cc.vv.radiogroupmgr.init();
         }
-        console.log(typeof cc.vv.radiogroupmgr.add);
+        console.log(_typeof(cc.vv.radiogroupmgr.add));
         cc.vv.radiogroupmgr.add(this);
 
         this.refresh();

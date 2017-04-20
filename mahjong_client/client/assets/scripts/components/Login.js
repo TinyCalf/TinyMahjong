@@ -40,6 +40,7 @@ cc.Class({
         // ...
         _mima:null,
         _mimaIndex:0,
+        mjdl:1,  //麻将登录用户协议，只有勾选按钮游客登录和微信登录才可以进去
     },
 
     // use this for initialization
@@ -67,8 +68,75 @@ cc.Class({
         if(!cc.sys.isNative || cc.sys.os == cc.sys.OS_WINDOWS){
             cc.find("Canvas/btn_yk").active = true;    
         }
+
+
+        cc.vv.http.sendRequest("/mj_login", 1, function(data){
+                console.log(data);
+                console.log(data.data);
+                console.log(data.data.youkeorweixin);
+                console.log("datadata");
+                console.log("platform:" + cc.sys.os);
+                // youkeorweixin :0表示是游客登录，1表示是微信登录
+                cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
+                if(cc.sys.os == cc.sys.OS_ANDROID){ 
+                    console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
+                     if(data.data.youkeorweixin == "0"){ //只有游客登录
+                            // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
+                            //  z_weixindenglu.active = false;
+                              cc.find("Canvas/btn_yk").active = true; 
+                            cc.find("Canvas/z_weixindenglu").active = false;   
+                           
+                         console.log("游客登录");
+                             
+                        
+                    }
+                    if(data.data.youkeorweixin == "1"){ //只有微信登录
+                            cc.find("Canvas/z_weixindenglu").active = true;   
+                            cc.find("Canvas/btn_yk").active = false;   
+                            // var btn_yk = this.node.getChildByName("btn_yk");
+                            //  btn_yk.active = false;
+                         console.log("微信登录");
+                        
+                    }
+
+
+                }
+                else if(cc.sys.os == cc.sys.OS_IOS){
+                    console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
+                  if(data.data.youkeorweixin == "0"){ //只有游客登录
+                            // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
+                            //  z_weixindenglu.active = false;
+                            cc.find("Canvas/btn_yk").active = true; 
+                            cc.find("Canvas/z_weixindenglu").active = false;   
+                         console.log("游客登录");
+                             
+                        
+                    }
+                    if(data.data.youkeorweixin == "1"){ //只有微信登录
+                            cc.find("Canvas/z_weixindenglu").active = true; 
+                            cc.find("Canvas/btn_yk").active = false;   
+                            // var btn_yk = this.node.getChildByName("btn_yk");
+                            //  btn_yk.active = false;
+                         console.log("微信登录");
+                        
+                    }
+
+                  
+                }
+                else{
+                    cc.find("Canvas/btn_yk").active = true; 
+                    cc.find("Canvas/z_weixindenglu").active = true;  
+                    console.log("platform:" + cc.sys.os + " dosn't implement share.");
+                }
+                var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+                console.log(youkeorweixin);
+
+        });
+  
+     
+
     },
-    
+   
     start:function(){
         var account =  cc.sys.localStorage.getItem("wx_account");
         var sign = cc.sys.localStorage.getItem("wx_sign");
@@ -81,13 +149,56 @@ cc.Class({
             cc.vv.userMgr.onAuth(ret);
         }   
     },
+    onBtnReturn:function(){
+        var yhxy = this.node.getChildByName("yhxy");
+        yhxy.active = false;
+    },
+    check_mark:function(){
+        var tyyhxy = this.node.getChildByName("tyyhxy");
+        var btn_checkbox = tyyhxy.getChildByName("btn_checkbox");
+        var check_mark = btn_checkbox.getChildByName("check_mark");
+        if(this.mjdl == 1){
+            check_mark.active = false;
+            this.mjdl = 0;
+        }else{
+            check_mark.active = true;
+            this.mjdl = 1;
+        }
+        console.log("this.mjdl:"+this.mjdl)
+    },
+    yonghuxieyi:function(){
     
+        var yhxy = this.node.getChildByName("yhxy");
+        yhxy.active = true;
+
+        console.log(this.node.name);
+        console.log(this.node.name);
+    },
+    prompt:function(){
+        var prompt = this.node.getChildByName("prompt");
+            prompt.active = false;
+    },
     onBtnQuickStartClicked:function(){
+        if(this.mjdl == 0){
+            var prompt = this.node.getChildByName("prompt");
+            prompt.active = true;
+            return;
+        }
+        console.log("ssy")
+        
         cc.vv.userMgr.guestAuth();
     },
+   
     
     onBtnWeichatClicked:function(){
+      
         var self = this;
+        if(self.mjdl == 0){
+            var prompt = this.node.getChildByName("prompt");
+            prompt.active = true;
+            return;
+        }
+        console.log("ss")
         cc.vv.anysdkMgr.login();
     },
     

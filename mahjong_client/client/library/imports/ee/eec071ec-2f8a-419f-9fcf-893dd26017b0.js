@@ -1,5 +1,7 @@
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         _leixingxuanze: null,
@@ -9,7 +11,6 @@ cc.Class({
         _wanfaxuanze: null,
         _types: [] },
 
-    //定义多种游戏类型
     // use this for initialization
     onLoad: function onLoad() {
         //有多种玩法，沈家门麻将 定海麻将 推到胡麻将

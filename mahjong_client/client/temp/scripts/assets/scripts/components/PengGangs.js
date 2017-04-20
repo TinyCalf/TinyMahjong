@@ -2,8 +2,10 @@
 cc._RFpush(module, '279d9pNFGRB3rD/ngr1LIXQ', 'PengGangs');
 // scripts\components\PengGangs.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {

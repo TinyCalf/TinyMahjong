@@ -2,8 +2,10 @@
 cc._RFpush(module, '58f27rxustNsYlRX3fryN8X', 'Chat');
 // scripts\components\Chat.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -60,6 +62,7 @@ cc.Class({
         return this._quickChatInfo[key];
     },
 
+
     onBtnChatClicked: function onBtnChatClicked() {
         this._chatRoot.active = true;
     },
@@ -100,9 +103,5 @@ cc.Class({
     }
 
 });
-// called every frame, uncomment this function to activate update callback
-// update: function (dt) {
-
-// },
 
 cc._RFpop();

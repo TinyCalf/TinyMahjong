@@ -34,6 +34,31 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+app.get('/mj_login',function(req,res){
+	db.mj_login(function(data){
+		console.log("mj_login");
+
+		if(data == null){
+			var ret = {
+				errcode:1,
+				errmsg:"null",
+				data:data,
+			};	
+			console.log(ret);
+			send(res,ret);
+		}else{
+			var ret = {
+				errcode:0,
+				errmsg:"ok",
+				data:data,
+			};
+			console.log(ret);
+			
+			send(res,ret);
+		}
+	})
+});
+
 app.get('/register',function(req,res){
 	var account = req.query.account;
 	var password = req.query.password;

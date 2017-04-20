@@ -1,5 +1,7 @@
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         tipLabel: cc.Label,

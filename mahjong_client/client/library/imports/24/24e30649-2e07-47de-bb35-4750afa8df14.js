@@ -1,5 +1,7 @@
+"use strict";
+
 var Global = cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
     statics: {
         isstarted: false,
         netinited: false,
