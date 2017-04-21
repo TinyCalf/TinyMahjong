@@ -399,6 +399,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -850,6 +851,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 68,
@@ -1174,6 +1176,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 68,
@@ -1350,6 +1353,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 68,
@@ -1798,6 +1802,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -1950,6 +1955,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -2104,6 +2110,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -2187,6 +2194,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -2207,6 +2215,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -3119,6 +3128,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -3271,6 +3281,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -3425,6 +3436,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -3508,6 +3520,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -3528,6 +3541,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -4440,6 +4454,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -4592,6 +4607,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -4746,6 +4762,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -4829,6 +4846,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -4849,6 +4867,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -5761,6 +5780,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -5913,6 +5933,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -6067,6 +6088,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -6150,6 +6172,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -6170,6 +6193,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -6720,6 +6744,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -6900,6 +6925,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "沈家门麻将",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -6994,6 +7020,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "剩余20张",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -7088,6 +7115,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "东风圈",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -7496,6 +7524,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 30,
     "_right": 0,
@@ -7796,6 +7825,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "00",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -12681,6 +12711,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -12764,6 +12795,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -12784,6 +12816,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -13312,6 +13345,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -13464,6 +13498,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -15910,6 +15945,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 1266,
     "_right": 90,
@@ -20433,6 +20469,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -19,
     "_right": -11,
@@ -20516,6 +20553,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
@@ -20536,6 +20574,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好\n了了了了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -20688,6 +20727,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -20760,6 +20800,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -23660,6 +23701,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 0,
     "_left": 640,
     "_right": 640,
@@ -29944,6 +29986,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -30027,6 +30070,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -30047,6 +30091,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -30575,6 +30620,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -30727,6 +30773,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -31343,6 +31390,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -41,
     "_right": 0,
@@ -31475,6 +31523,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 129,
     "_right": 1266,
@@ -31635,6 +31684,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 65,
     "_right": 0,
@@ -36967,6 +37017,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 16,
     "_left": 640,
     "_right": 1197,
@@ -38807,6 +38858,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": -15,
     "_right": -15,
@@ -38890,6 +38942,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -38910,6 +38963,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得太好了了了",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -39438,6 +39492,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -39590,6 +39645,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -40193,6 +40249,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 89,
     "_right": 0,
@@ -40325,6 +40382,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -46146,6 +46204,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "请选择你要缺的花色",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -46238,6 +46297,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "已定缺",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -46330,6 +46390,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "已定缺",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -46422,6 +46483,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "已定缺",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -46776,6 +46838,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -47527,6 +47590,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 281,
@@ -47699,6 +47763,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 221,
@@ -47864,6 +47929,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 32,
     "_left": 0,
     "_right": 40.5,
@@ -48068,6 +48134,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "21:40",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -48082,6 +48149,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 32.5,
     "_right": 0,
@@ -48224,6 +48292,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "123456",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -48244,6 +48313,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "房号",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -48258,6 +48328,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 11.5,
     "_right": 0,
@@ -48369,6 +48440,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "4番封顶 碰碰胡 将",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
@@ -48383,6 +48455,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -48861,9 +48934,9 @@
     "_N$placeholderFontSize": 20,
     "_N$placeholderFontColor": {
       "__type__": "cc.Color",
-      "r": 127.5,
-      "g": 127.5,
-      "b": 127.5,
+      "r": 127,
+      "g": 127,
+      "b": 127,
       "a": 255
     },
     "_N$maxLength": 16,
@@ -49146,6 +49219,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "常用语",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -49401,6 +49475,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "表情",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -49857,6 +49932,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "快点啊，都等到我花儿都谢谢了！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -49952,6 +50028,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -50157,6 +50234,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "怎么又断线了，网络怎么这么差啊！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -50252,6 +50330,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -50457,6 +50536,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "不要走，决战到天亮！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -50552,6 +50632,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -50757,6 +50838,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你的牌打得也太好了！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -50852,6 +50934,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -51057,6 +51140,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "你是妹妹还是哥哥啊？",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -51152,6 +51236,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -51357,6 +51442,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "和你合作真是太愉快了！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -51452,6 +51538,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -51657,6 +51744,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "大家好，很高兴见到各位！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -51752,6 +51840,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -51957,6 +52046,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "各位，真是不好意思，我得离开一会儿。",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -52052,6 +52142,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -52257,6 +52348,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "不要吵了，专心玩游戏吧！",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -52352,6 +52444,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -52471,6 +52564,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 40,
     "_left": 0,
     "_right": 0,
@@ -52496,7 +52590,10 @@
     },
     "_enabled": true,
     "_type": 0,
-    "_segements": 3
+    "_segements": 3,
+    "_N$spriteFrame": null,
+    "_N$alphaThreshold": 1,
+    "_N$inverted": false
   },
   {
     "__type__": "cc.Widget",
@@ -52507,6 +52604,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -52716,6 +52814,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 37,
     "_left": 350.07654921020657,
     "_right": -0.5,
@@ -55101,6 +55200,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -55326,6 +55426,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "请选择三张一样花色的牌",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -55846,6 +55947,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "过胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -56757,6 +56859,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "手指上滑 取消发送",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -56974,6 +57077,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "提示",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -57046,6 +57150,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "语音时间小于1秒，不能发送",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -57520,6 +57625,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -57709,6 +57815,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "洛神科技",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
@@ -57796,6 +57903,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "IP: 171.217.46.219",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
@@ -57883,6 +57991,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "ID: 103",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
@@ -58249,6 +58358,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -58329,7 +58439,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "2b27eWEHTBCI4wr54pS2HSu",
-    "_active": false,
+    "_active": true,
     "_components": [],
     "_prefab": null,
     "groupIndex": 0
@@ -58561,7 +58671,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "39c9anl2d5OL5VGeL5gZ27Z",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1565
@@ -58987,7 +59097,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 430,
+      "width": 390,
       "height": 32
     },
     "_children": [
@@ -59142,7 +59252,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 430,
+      "width": 390,
       "height": 32
     },
     "_children": [
@@ -59156,7 +59266,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -214,
+      "x": -195,
       "y": 0
     },
     "_skewX": 0,
@@ -59200,7 +59310,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 345,
+      "width": 360,
       "height": 17
     },
     "_children": [],
@@ -59210,8 +59320,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 40,
-      "y": -1
+      "x": 13,
+      "y": -2
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -59277,7 +59387,10 @@
     },
     "_enabled": true,
     "_type": 0,
-    "_segements": 64
+    "_segements": 64,
+    "_N$spriteFrame": null,
+    "_N$alphaThreshold": 1,
+    "_N$inverted": false
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -59323,8 +59436,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 1.1368683772161603e-13
+      "x": -1.1368683772161603e-13,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -59948,7 +60061,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 430,
+      "width": 390,
       "height": 32
     },
     "_children": [
@@ -60103,7 +60216,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 430,
+      "width": 390,
       "height": 32
     },
     "_children": [
@@ -60117,7 +60230,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -214,
+      "x": -182,
       "y": 0
     },
     "_skewX": 0,
@@ -60161,7 +60274,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 345,
+      "width": 360,
       "height": 17
     },
     "_children": [],
@@ -60171,7 +60284,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 40,
+      "x": -1,
       "y": -1
     },
     "_skewX": 0,
@@ -60238,7 +60351,10 @@
     },
     "_enabled": true,
     "_type": 0,
-    "_segements": 64
+    "_segements": 64,
+    "_N$spriteFrame": null,
+    "_N$alphaThreshold": 1,
+    "_N$inverted": false
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -60284,8 +60400,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -1.1368683772161603e-13,
-      "y": -5.684341886080802e-14
+      "x": -2.9999999999998863,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -61645,6 +61761,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "同意",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -61856,6 +61973,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "拒绝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -62008,6 +62126,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "3分20秒后房间将自动解散\n[已同意]Alex\n[已同意]Chang\n[待确认]Zhang\n[待确认]Rack",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
@@ -62366,6 +62485,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "4番封顶 碰碰胡 将对 自摸加番 换三张",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -62380,6 +62500,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 3,
     "_right": 0,
@@ -62923,6 +63044,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "第1局 东风圈",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -63697,6 +63819,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -63771,6 +63894,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -63845,6 +63969,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -63919,6 +64044,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -63993,6 +64119,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -66878,6 +67005,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -66952,6 +67080,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -67026,6 +67155,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -67100,6 +67230,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -67174,6 +67305,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -70059,6 +70191,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -70133,6 +70266,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -70207,6 +70341,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -70281,6 +70416,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -70355,6 +70491,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -73240,6 +73377,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -73314,6 +73452,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -73388,6 +73527,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -73462,6 +73602,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -73536,6 +73677,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -75937,6 +76079,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "4番封顶 碰碰胡 将对 自摸加番 换三张",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -75951,6 +76094,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 3,
     "_right": 0,
@@ -76494,6 +76638,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "第1局 东风圈",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -77268,6 +77413,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -77342,6 +77488,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -77416,6 +77563,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -77490,6 +77638,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -77564,6 +77713,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -80449,6 +80599,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -80523,6 +80674,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -80597,6 +80749,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -80671,6 +80824,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -80745,6 +80899,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -83630,6 +83785,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -83704,6 +83860,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -83778,6 +83935,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -83852,6 +84010,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -83926,6 +84085,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -86811,6 +86971,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -86885,6 +87046,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -86959,6 +87121,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -87033,6 +87196,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -87107,6 +87271,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -89508,6 +89673,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_N$string": "4番封顶 碰碰胡 将对 自摸加番 换三张",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -89522,6 +89688,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 3,
     "_right": 0,
@@ -90065,6 +90232,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "第1局 东风圈",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -90839,6 +91007,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -90913,6 +91082,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -90987,6 +91157,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -91061,6 +91232,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -91135,6 +91307,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -94020,6 +94193,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -94094,6 +94268,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -94168,6 +94343,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -94242,6 +94418,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -94316,6 +94493,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -97201,6 +97379,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -97275,6 +97454,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -97349,6 +97529,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -97423,6 +97604,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -97497,6 +97679,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -100382,6 +100565,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -100456,6 +100640,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "点炮和",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -100530,6 +100715,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "2台5丝",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -100604,6 +100790,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1胡",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -100678,6 +100865,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "+1",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -103418,6 +103606,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -115.5,
     "_right": 0,
@@ -103527,6 +103716,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -123.9,
     "_right": 0,
@@ -103624,6 +103814,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -103638,6 +103829,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -11,
     "_right": 0,
@@ -103726,6 +103918,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "id:1003",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -103740,6 +103933,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -12,
     "_right": 0,
@@ -103846,6 +104040,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -16.5,
     "_right": 0,
@@ -104009,6 +104204,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -104693,6 +104889,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -104767,6 +104964,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -104841,6 +105039,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -104915,6 +105114,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -104989,6 +105189,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -105210,6 +105411,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -115.5,
     "_right": 0,
@@ -105319,6 +105521,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -123.5,
     "_right": 0,
@@ -105416,6 +105619,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -105430,6 +105634,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -10,
     "_right": 0,
@@ -105518,6 +105723,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "id:1003",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -105532,6 +105738,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -11,
     "_right": 0,
@@ -105638,6 +105845,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -16.5,
     "_right": 0,
@@ -105801,6 +106009,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -106485,6 +106694,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -106559,6 +106769,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -106633,6 +106844,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -106707,6 +106919,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -106781,6 +106994,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -107002,6 +107216,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -115.5,
     "_right": 0,
@@ -107111,6 +107326,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -123.5,
     "_right": 0,
@@ -107208,6 +107424,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -107222,6 +107439,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -12,
     "_right": 0,
@@ -107310,6 +107528,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "id:1003",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -107324,6 +107543,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -10,
     "_right": 0,
@@ -107430,6 +107650,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -16.5,
     "_right": 0,
@@ -107593,6 +107814,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108277,6 +108499,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108351,6 +108574,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108425,6 +108649,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108499,6 +108724,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108573,6 +108799,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -108794,6 +109021,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -115.5,
     "_right": 0,
@@ -108903,6 +109131,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -122.4,
     "_right": 0,
@@ -109000,6 +109229,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "小叶子",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -109014,6 +109244,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -9,
     "_right": 0,
@@ -109102,6 +109333,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "id:1003",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -109116,6 +109348,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -10,
     "_right": 0,
@@ -109222,6 +109455,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": -16.5,
     "_right": 0,
@@ -109385,6 +109619,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "1000",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110069,6 +110304,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110143,6 +110379,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110217,6 +110454,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110291,6 +110529,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110365,6 +110604,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -110407,6 +110647,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -110568,6 +110809,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 8,
     "_left": 38.5,
     "_right": 1199.5,
@@ -110724,6 +110966,7 @@
     },
     "_enabled": true,
     "isAlignOnce": false,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -111194,6 +111437,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "与服务器断开连接，正在重连...",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -111217,6 +111461,7 @@
     },
     "_enabled": true,
     "isAlignOnce": true,
+    "_target": null,
     "_alignFlags": 45,
     "_left": 0,
     "_right": 0,
@@ -111602,6 +111847,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "提示",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -111689,6 +111935,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -111837,6 +112084,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "确定",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -112072,6 +112320,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "取消",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,

@@ -1,57 +1,1063 @@
-2017-04-20T18:37:12.013Z - normal: Load ~/.CocosCreator/settings.json
-2017-04-20T18:37:12.026Z - normal: checking language setting...
-2017-04-20T18:37:12.027Z - normal: Language: zh
-2017-04-20T18:37:14.513Z - success: protocol editor-framework registered
-2017-04-20T18:37:14.514Z - success: protocol app registered
-2017-04-20T18:37:14.515Z - success: protocol theme registered
-2017-04-20T18:37:14.515Z - success: protocol profile registered
-2017-04-20T18:37:14.515Z - success: protocol packages registered
-2017-04-20T18:37:14.516Z - success: protocol unpack registerred
-2017-04-20T18:37:14.517Z - success: protocol disable-commonjs registerred
-2017-04-20T18:37:14.659Z - normal: connected!
-2017-04-20T18:37:14.664Z - normal: Check project C:\Users\Administrator\ZS\dev\mahjong_client\client
-2017-04-20T18:37:14.674Z - normal: Initializing Cocos2d
-2017-04-20T18:37:15.631Z - normal: Initializing Asset Database
-2017-04-20T18:37:15.727Z - success: protocol uuid registerred
-2017-04-20T18:37:15.728Z - success: protocol db registerred
-2017-04-20T18:37:15.728Z - success: protocol thumbnail registerred
-2017-04-20T18:37:15.728Z - normal: Loading editor/builtin packages
-2017-04-20T18:37:16.191Z - success: assets loaded
-2017-04-20T18:37:16.197Z - success: builder loaded
-2017-04-20T18:37:16.207Z - success: hierarchy loaded
-2017-04-20T18:37:16.217Z - success: inspector loaded
-2017-04-20T18:37:16.221Z - success: keystore loaded
-2017-04-20T18:37:16.230Z - success: node-library loaded
-2017-04-20T18:37:16.237Z - success: preferences loaded
-2017-04-20T18:37:16.285Z - success: project-importer loaded
-2017-04-20T18:37:16.292Z - success: project-settings loaded
-2017-04-20T18:37:16.298Z - success: ui-kit loaded
-2017-04-20T18:37:16.304Z - success: ui-grid loaded
-2017-04-20T18:37:16.314Z - success: scene loaded
-2017-04-20T18:37:16.330Z - success: sprite-editor loaded
-2017-04-20T18:37:16.491Z - success: store loaded
-2017-04-20T18:37:16.508Z - success: timeline loaded
-2017-04-20T18:37:16.510Z - normal: Loading builtin packages
-2017-04-20T18:37:16.520Z - success: anysdk loaded
-2017-04-20T18:37:16.525Z - success: asset-db-debugger loaded
-2017-04-20T18:37:16.530Z - success: code-editor loaded
-2017-04-20T18:37:16.532Z - success: color-picker loaded
-2017-04-20T18:37:16.541Z - success: console loaded
-2017-04-20T18:37:16.548Z - success: package-manager loaded
-2017-04-20T18:37:16.557Z - success: tester loaded
-2017-04-20T18:37:16.562Z - success: ui-kit-preview-extra loaded
-2017-04-20T18:37:16.567Z - success: ui-kit-preview loaded
-2017-04-20T18:37:16.575Z - success: ui-tree loaded
-2017-04-20T18:37:16.766Z - normal: Initializing project C:\Users\Administrator\ZS\dev\mahjong_client\client
-2017-04-20T18:37:16.776Z - normal: Loading packages
-2017-04-20T18:37:16.790Z - normal: Watching packages
-2017-04-20T18:37:16.840Z - normal: Run Application
-2017-04-20T18:37:25.701Z - success: preview server running at http://localhost:7456
-2017-04-20T18:37:39.995Z - normal: 1.4.2
-2017-04-20T18:37:46.651Z - normal: ScaleX != ScaleY. Don't know which one to return
-2017-04-20T18:37:46.653Z - normal: ScaleX != ScaleY. Don't know which one to return
-2017-04-20T19:03:52.926Z - error: Error: Can not get asset url by uuid "27756ebb-3d33-44b0-9b96-e858fadd4dd4", the asset may be deleted.
-    at C:\Cocos\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:125:33
-    at EventEmitter.<anonymous> (C:\Cocos\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5549)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
+2017-04-21T01:52:46.481Z - normal: Load ~/.CocosCreator/settings.json
+2017-04-21T01:52:46.494Z - normal: checking language setting...
+2017-04-21T01:52:46.495Z - normal: Language: zh
+2017-04-21T01:52:49.683Z - success: protocol editor-framework registered
+2017-04-21T01:52:49.684Z - success: protocol app registered
+2017-04-21T01:52:49.684Z - success: protocol theme registered
+2017-04-21T01:52:49.685Z - success: protocol profile registered
+2017-04-21T01:52:49.685Z - success: protocol packages registered
+2017-04-21T01:52:49.686Z - success: protocol unpack registerred
+2017-04-21T01:52:49.687Z - success: protocol disable-commonjs registerred
+2017-04-21T01:52:49.972Z - normal: connected!
+2017-04-21T01:52:49.981Z - normal: Check project C:\Users\Administrator\ZS\dev\mahjong_client\client
+2017-04-21T01:52:49.989Z - normal: Initializing Cocos2d
+2017-04-21T01:52:50.974Z - normal: Initializing Asset Database
+2017-04-21T01:52:51.067Z - success: protocol uuid registerred
+2017-04-21T01:52:51.068Z - success: protocol db registerred
+2017-04-21T01:52:51.068Z - success: protocol thumbnail registerred
+2017-04-21T01:52:51.069Z - normal: Loading editor/builtin packages
+2017-04-21T01:52:51.510Z - success: assets loaded
+2017-04-21T01:52:51.517Z - success: builder loaded
+2017-04-21T01:52:51.527Z - success: hierarchy loaded
+2017-04-21T01:52:51.536Z - success: inspector loaded
+2017-04-21T01:52:51.541Z - success: keystore loaded
+2017-04-21T01:52:51.549Z - success: node-library loaded
+2017-04-21T01:52:51.557Z - success: preferences loaded
+2017-04-21T01:52:51.606Z - success: project-importer loaded
+2017-04-21T01:52:51.614Z - success: project-settings loaded
+2017-04-21T01:52:51.621Z - success: ui-kit loaded
+2017-04-21T01:52:51.627Z - success: ui-grid loaded
+2017-04-21T01:52:51.639Z - success: scene loaded
+2017-04-21T01:52:51.655Z - success: sprite-editor loaded
+2017-04-21T01:52:51.816Z - success: store loaded
+2017-04-21T01:52:51.833Z - success: timeline loaded
+2017-04-21T01:52:51.834Z - normal: Loading builtin packages
+2017-04-21T01:52:51.847Z - success: anysdk loaded
+2017-04-21T01:52:51.852Z - success: asset-db-debugger loaded
+2017-04-21T01:52:51.857Z - success: code-editor loaded
+2017-04-21T01:52:51.859Z - success: color-picker loaded
+2017-04-21T01:52:51.869Z - success: console loaded
+2017-04-21T01:52:51.876Z - success: package-manager loaded
+2017-04-21T01:52:51.885Z - success: tester loaded
+2017-04-21T01:52:51.890Z - success: ui-kit-preview-extra loaded
+2017-04-21T01:52:51.896Z - success: ui-kit-preview loaded
+2017-04-21T01:52:51.904Z - success: ui-tree loaded
+2017-04-21T01:52:52.081Z - normal: Initializing project C:\Users\Administrator\ZS\dev\mahjong_client\client
+2017-04-21T01:52:52.093Z - normal: Loading packages
+2017-04-21T01:52:52.107Z - normal: Watching packages
+2017-04-21T01:52:52.159Z - normal: Run Application
+2017-04-21T01:53:06.142Z - success: preview server running at http://localhost:7456
+2017-04-21T01:53:06.143Z - normal: Compiling scripts...
+2017-04-21T01:53:23.068Z - normal: Compiled project javascript file successfully
+2017-04-21T01:53:36.924Z - normal: 1.4.2
+2017-04-21T01:53:52.961Z - normal: ScaleX != ScaleY. Don't know which one to return
+2017-04-21T01:53:52.963Z - normal: ScaleX != ScaleY. Don't know which one to return
+2017-04-21T02:02:55.484Z - normal: ScaleX != ScaleY. Don't know which one to return
+2017-04-21T02:02:55.492Z - normal: ScaleX != ScaleY. Don't know which one to return
+2017-04-21T02:05:59.606Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_jiaruyouxitangchuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
+
+2017-04-21T02:05:59.616Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.617Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.618Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.619Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.632Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.634Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.647Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.648Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.652Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.654Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.659Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.661Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.666Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:05:59.667Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.673Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T02:05:59.675Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.685Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "af334004-50fa-43e1-973b-a147669ee60a"
+
+2017-04-21T02:05:59.686Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T02:05:59.695Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T02:05:59.697Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.718Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
+
+2017-04-21T02:05:59.727Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T02:05:59.729Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T02:05:59.731Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.735Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
+
+2017-04-21T02:05:59.736Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T02:05:59.743Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T02:05:59.748Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.750Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
+
+2017-04-21T02:05:59.755Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T02:05:59.758Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T02:05:59.759Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.760Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
+
+2017-04-21T02:05:59.761Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T02:05:59.762Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T02:05:59.763Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.764Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
+
+2017-04-21T02:05:59.765Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T02:05:59.766Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T02:05:59.767Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.768Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
+
+2017-04-21T02:05:59.769Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T02:05:59.770Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T02:05:59.772Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.772Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
+
+2017-04-21T02:05:59.773Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T02:05:59.779Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T02:05:59.780Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.782Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
+
+2017-04-21T02:05:59.784Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T02:05:59.786Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T02:05:59.788Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.789Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
+
+2017-04-21T02:05:59.789Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T02:05:59.791Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T02:05:59.792Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.793Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
+
+2017-04-21T02:05:59.793Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T02:05:59.796Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T02:05:59.797Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:05:59.798Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
+
+2017-04-21T02:05:59.799Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T02:05:59.816Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+
+2017-04-21T02:05:59.817Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "37fddc8f-5bf6-41cf-bf17-2e403b1abe08"
+
+2017-04-21T02:05:59.820Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
+
+2017-04-21T02:05:59.826Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+
+2017-04-21T02:35:55.969Z - warn: [timeline] - update dump failed
+2017-04-21T02:37:08.214Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_jiaruyouxitangchuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
+
+2017-04-21T02:37:08.216Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.217Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.218Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.218Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.219Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.220Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.223Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.224Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.226Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.227Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.228Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.229Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.229Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T02:37:08.230Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.231Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T02:37:08.232Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.233Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "af334004-50fa-43e1-973b-a147669ee60a"
+
+2017-04-21T02:37:08.233Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T02:37:08.235Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T02:37:08.236Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.236Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
+
+2017-04-21T02:37:08.237Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T02:37:08.240Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T02:37:08.240Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.241Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
+
+2017-04-21T02:37:08.242Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T02:37:08.245Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T02:37:08.246Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.246Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
+
+2017-04-21T02:37:08.247Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T02:37:08.252Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T02:37:08.253Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.257Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
+
+2017-04-21T02:37:08.259Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T02:37:08.264Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T02:37:08.269Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.271Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
+
+2017-04-21T02:37:08.274Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T02:37:08.277Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T02:37:08.278Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.279Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
+
+2017-04-21T02:37:08.279Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T02:37:08.282Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T02:37:08.283Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.283Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
+
+2017-04-21T02:37:08.284Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T02:37:08.286Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T02:37:08.287Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.294Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
+
+2017-04-21T02:37:08.297Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T02:37:08.300Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T02:37:08.301Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.303Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
+
+2017-04-21T02:37:08.304Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T02:37:08.309Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T02:37:08.310Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.311Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
+
+2017-04-21T02:37:08.311Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T02:37:08.313Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T02:37:08.315Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T02:37:08.316Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
+
+2017-04-21T02:37:08.317Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T02:37:08.333Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+
+2017-04-21T02:37:08.335Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "37fddc8f-5bf6-41cf-bf17-2e403b1abe08"
+
+2017-04-21T02:37:08.337Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
+
+2017-04-21T02:37:08.339Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+
+2017-04-21T03:10:30.837Z - warn: [timeline] - update dump failed
+2017-04-21T03:50:38.741Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_jiaruyouxitangchuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
+
+2017-04-21T03:50:38.749Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.750Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.750Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.751Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.752Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.752Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.753Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.754Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.754Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.755Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.756Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.763Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.764Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
+
+2017-04-21T03:50:38.764Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_shurukuang"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.765Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T03:50:38.766Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.766Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "af334004-50fa-43e1-973b-a147669ee60a"
+
+2017-04-21T03:50:38.767Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_0"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
+
+2017-04-21T03:50:38.768Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T03:50:38.769Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.769Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
+
+2017-04-21T03:50:38.770Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_1"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
+
+2017-04-21T03:50:38.770Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T03:50:38.825Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.826Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
+
+2017-04-21T03:50:38.827Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_2"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
+
+2017-04-21T03:50:38.843Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T03:50:38.845Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.848Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
+
+2017-04-21T03:50:38.849Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_3"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
+
+2017-04-21T03:50:38.851Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T03:50:38.851Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.852Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
+
+2017-04-21T03:50:38.853Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_4"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
+
+2017-04-21T03:50:38.861Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T03:50:38.861Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.863Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
+
+2017-04-21T03:50:38.864Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_5"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
+
+2017-04-21T03:50:38.868Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T03:50:38.869Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.870Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
+
+2017-04-21T03:50:38.874Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_6"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
+
+2017-04-21T03:50:38.878Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T03:50:38.879Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.879Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
+
+2017-04-21T03:50:38.880Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_7"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "355e7152-f826-49ec-a420-538d29892c68"
+
+2017-04-21T03:50:38.882Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T03:50:38.883Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.883Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
+
+2017-04-21T03:50:38.884Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_8"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
+
+2017-04-21T03:50:38.899Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T03:50:38.900Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.901Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
+
+2017-04-21T03:50:38.902Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_9"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
+
+2017-04-21T03:50:38.931Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T03:50:38.933Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.935Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
+
+2017-04-21T03:50:38.943Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_Lose_weight"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
+
+2017-04-21T03:50:38.948Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T03:50:38.953Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "795d004d-0eb0-476f-a28d-9aa6e1c4a84a"
+
+2017-04-21T03:50:38.962Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
+
+2017-04-21T03:50:38.964Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/Z_button_del"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
+
+2017-04-21T03:50:38.976Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+
+2017-04-21T03:50:38.977Z - warn: The Asset used by component "cc.Sprite" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "37fddc8f-5bf6-41cf-bf17-2e403b1abe08"
+
+2017-04-21T03:50:38.983Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
+
+2017-04-21T03:50:38.986Z - warn: The Asset used by component "cc.Button" in prefab "JoinGame.prefab" is missing. Detailed information:
+Node path: "JoinGame/close"
+Asset url: "db://assets/resources/prefabs/JoinGame.prefab"
+Missing uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
+

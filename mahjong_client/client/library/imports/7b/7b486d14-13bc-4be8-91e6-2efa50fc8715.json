@@ -2779,7 +2779,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 9,
       "y": 0
     },
     "_skewX": 0,
@@ -3039,7 +3039,9 @@
     },
     "_N$normalSprite": null,
     "_N$disabledSprite": null,
-    "_N$target": null
+    "_N$target": {
+      "__id__": 72
+    }
   },
   {
     "__type__": "cc.Canvas",
