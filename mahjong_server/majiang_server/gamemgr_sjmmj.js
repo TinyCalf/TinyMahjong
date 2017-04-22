@@ -174,17 +174,17 @@ function shuffle(game) {
 
     //這裡可輸入測試牌型如果不需要則注釋以下代碼
     //測試 找出不顯示的花
-    // var mjs = [1,27,35,36,37,2,38,39];
+    // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
     // game.mahjongs = mjs.concat(mahjongs);
-    //直接胡
-    // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
+    // //直接胡
+    var index = 0 ;
+    var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
     // game.mahjongs[index] = 12;
     // index++;
     // game.mahjongs[index] = 38;
@@ -1112,6 +1112,17 @@ function calculateResult(game){
             }
         }
 
+        //中发白一对加半丝
+        (sd.countMap[27] == 2) ? SI += 0.5 : {} ;
+        (sd.countMap[28] == 2) ? SI += 0.5 : {} ;
+        (sd.countMap[29] == 2) ? SI += 0.5 : {} ;
+
+        //东南西北一对 坐着或者在圈数里 加0.5丝
+        (sd.countMap[30] == 2 && ( nowfeng == 0 || nowseat == 0 ) ) ? SI += 0.5 : {} ;
+        (sd.countMap[32] == 2 && ( nowfeng == 1 || nowseat == 1 ) ) ? SI += 0.5 : {} ;
+        (sd.countMap[31] == 2 && ( nowfeng == 2 || nowseat == 2 ) ) ? SI += 0.5 : {} ;
+        (sd.countMap[33] == 2 && ( nowfeng == 3 || nowseat == 3 ) ) ? SI += 0.5 : {} ;
+
 
 
         //胡的是对倒、单吊、坎挡或边档，则胡数加半丝 自摸再加0.5絲
@@ -1119,6 +1130,17 @@ function calculateResult(game){
             SI += 0.5;
         }
         if (sd.iszimo || sd.gangshanghua) SI+=0.5;
+
+        //如果胡了并且是对到 并且胡的是19字 则追加半丝
+        if(sd.hued && sd.duidao ){
+            var p = sd.holds[sd.holds.length-1];
+            for (var i = 0 ; i < needed.length ; i++) {
+                if (p == needed[i]) {
+                    SI += 0.5;
+                    break;
+                }
+            }
+        }
 
 
         //n模取整函数
@@ -1615,7 +1637,7 @@ function doGameOver(game,userId,forceEnd){
         //風圈 風向變化
         if (game.firstHupai != old) {
             roomInfo.nextButton = (old + 1) % 4;
-            if(roomInfo.nextButton==0){
+            if(roomInfo.nextButton==roomInfo.beginButton){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
             }
         }

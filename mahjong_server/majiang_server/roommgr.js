@@ -139,7 +139,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	var maxgames = 0;
 	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 100;
 
-	var fnCreate = function(){
+	var fnCreate = function() {
 		var roomId = generateRoomId();
 		if(rooms[roomId] != null || creatingRooms[roomId] != null){
 			fnCreate();
@@ -154,13 +154,16 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 				}
 				else{
 					var createTime = Math.ceil(Date.now()/1000);
+					var beginButton = parseInt(Math.random()*4);
 					var roomInfo = {
 						uuid:"",
 						id:roomId,
 						numOfGames:0,
 						fengxiang:0,//风向 0123 东南西北
 						createTime:createTime,
-						nextButton:parseInt(Math.random()*4),
+						//舟山麻将需要记录第一个坐庄的人
+						beginButton:beginButton,
+						nextButton:beginButton,
 						seats:[],
 						//標記是否結算：
 						ifPayed: false,
