@@ -410,8 +410,8 @@
     "relativePath": "resources\\textures\\MJ"
   },
   "c78eb4b1-033c-41b0-b0c4-ff36c198b6dd": {
-    "asset": 1490848512067,
-    "meta": 1490950717192,
+    "asset": 1492738301631,
+    "meta": 1492838816892,
     "relativePath": "resources\\textures\\MJ\\bottom"
   },
   "4be58b20-1dc8-422a-94b2-b4d3882f7133": {
@@ -2420,8 +2420,8 @@
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1492608602815,
-    "meta": 1492608746803,
+    "asset": 1492741841261,
+    "meta": 1492741841722,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {

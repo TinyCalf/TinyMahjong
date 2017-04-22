@@ -481,8 +481,14 @@ cc.Class({
                     actionArr.push("被抢杠");
                 } else if (ac.type == "beichadajiao") {
                     actionArr.push("被查叫");
-                } else if (ac.type == "sanchisanpeng") {
-                    actionArr.push("三吃三碰");
+                } else if (ac.type == "sanchisanpeng0") {
+                    actionArr.push("三吃三碰东");
+                } else if (ac.type == "sanchisanpeng1") {
+                    actionArr.push("三吃三碰南");
+                } else if (ac.type == "sanchisanpeng2") {
+                    actionArr.push("三吃三碰西");
+                } else if (ac.type == "sanchisanpeng3") {
+                    actionArr.push("三吃三碰北");
                 }
             }
 

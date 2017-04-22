@@ -56,6 +56,25 @@ exports.is_account_exist = function(account,callback){
     });
 };
 
+//Jonathan 新增数据库查询 用于保存当前结算的游戏
+exports.save_gamecp = function (game) {
+
+    for (var i = 0 ; i < 4 ; i ++ ) {
+        game.gameSeats[i].game = null;
+    }
+    var binfo = game.baseInfoJson;
+    game.baseInfoJson = null;
+    var json_data = JSON.stringify(game);
+    for (var i = 0 ; i < 4 ; i ++ ) {
+        game.gameSeats[i].game = game;
+    }
+    game.baseInfoJson = binfo;
+    var sql = "INSERT INTO `t_gamecp` (`game`, `create_time`) VALUES ( \'"+json_data+" \', CURRENT_TIMESTAMP)";
+    query(sql, function(err, rows, fields) {
+        //console.log(err);
+    });
+};
+
 exports.create_account = function(account,password,callback){
     callback = callback == null? nop:callback;
     if(account == null || password == null){
