@@ -177,14 +177,14 @@ function shuffle(game) {
     // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
     // game.mahjongs = mjs.concat(mahjongs);
     // //直接胡
-    // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
+    var index = 0 ;
+    var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
     // game.mahjongs[index] = 12;
     // index++;
     // game.mahjongs[index] = 38;
@@ -1637,7 +1637,7 @@ function doGameOver(game,userId,forceEnd){
         //風圈 風向變化
         if (game.firstHupai != old) {
             roomInfo.nextButton = (old + 1) % 4;
-            if(roomInfo.nextButton==0){
+            if(roomInfo.nextButton==roomInfo.beginButton){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
             }
         }

@@ -381,7 +381,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:
@@ -689,7 +689,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:
@@ -989,7 +989,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:
