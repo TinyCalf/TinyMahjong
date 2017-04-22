@@ -1537,6 +1537,8 @@ function doGameOver(game,userId,forceEnd){
     if(game != null){
         if(!forceEnd){
             if(game.currentIndex < game.leftlength){
+                //记录改局
+                db.save_gamecp(game);
                 calculateResult(game,roomInfo);
             }
         }
