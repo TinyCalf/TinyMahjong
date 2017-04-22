@@ -1,7 +1,5 @@
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -73,7 +71,6 @@ cc.Class({
         progress.getComponent(cc.Slider).progress = cc.vv.audioMgr.sfxVolume;
         progress.getChildByName("progress").width = width;
         //yx.getChildByName("btn_progress").x = progress.x + width;
-
 
         this._btnYYClose.active = cc.vv.audioMgr.bgmVolume > 0;
         this._btnYYOpen.active = !this._btnYYClose.active;

@@ -2,10 +2,8 @@
 cc._RFpush(module, 'f58cea6lrpDZJSNs2BGBqxN', 'AnysdkMgr');
 // scripts\AnysdkMgr.js
 
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {

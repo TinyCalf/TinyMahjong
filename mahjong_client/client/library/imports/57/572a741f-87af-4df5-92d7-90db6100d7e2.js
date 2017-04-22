@@ -1,11 +1,7 @@
-"use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 String.prototype.format = function (args) {
     if (arguments.length > 0) {
         var result = this;
-        if (arguments.length == 1 && (typeof args === "undefined" ? "undefined" : _typeof(args)) == "object") {
+        if (arguments.length == 1 && typeof args == "object") {
             for (var key in args) {
                 var reg = new RegExp("({" + key + "})", "g");
                 result = result.replace(reg, args[key]);
@@ -27,7 +23,7 @@ String.prototype.format = function (args) {
 };
 
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -43,6 +39,7 @@ cc.Class({
         _mimaIndex: 0,
         mjdl: 1 },
 
+    //�齫��¼�û�Э�飬ֻ�й�ѡ��ť�ο͵�¼��΢�ŵ�¼�ſ��Խ�ȥ
     // use this for initialization
     onLoad: function onLoad() {
         if (!cc.sys.isNative && cc.sys.isMobile) {

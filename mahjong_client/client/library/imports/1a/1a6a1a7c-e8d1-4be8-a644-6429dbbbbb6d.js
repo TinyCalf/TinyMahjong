@@ -1,5 +1,3 @@
-'use strict';
-
 var ACTION_CHUPAI = 1;
 var ACTION_MOPAI = 2;
 var ACTION_PENG = 3;
@@ -7,7 +5,7 @@ var ACTION_GANG = 4;
 var ACTION_HU = 5;
 
 cc.Class({
-    extends: cc.Component,
+    'extends': cc.Component,
 
     properties: {
         // foo: {

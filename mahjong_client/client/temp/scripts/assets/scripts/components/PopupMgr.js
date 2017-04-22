@@ -2,10 +2,8 @@
 cc._RFpush(module, 'bc0d2VLgL1Avo166tHLsjCJ', 'PopupMgr');
 // scripts\components\PopupMgr.js
 
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {

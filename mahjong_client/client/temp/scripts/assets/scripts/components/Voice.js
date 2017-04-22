@@ -2,10 +2,8 @@
 cc._RFpush(module, 'f6db9z0CxdEzpRVgU569dDu', 'Voice');
 // scripts\components\Voice.js
 
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {

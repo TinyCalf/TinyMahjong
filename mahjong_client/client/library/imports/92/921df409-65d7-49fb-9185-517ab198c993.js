@@ -1,11 +1,9 @@
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         lblRoomNo: {
-            default: null,
+            "default": null,
             type: cc.Label
         },
         _seats: [],
@@ -68,7 +66,7 @@ cc.Class({
             // if(type == null || type == ""){
             //     type = "xzdd";
             // }
-            // titles.getChildByName(type).active = true;   
+            // titles.getChildByName(type).active = true;  
         }
     },
 

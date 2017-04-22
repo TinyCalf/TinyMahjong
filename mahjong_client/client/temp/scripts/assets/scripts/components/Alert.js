@@ -2,10 +2,8 @@
 cc._RFpush(module, 'c12553sxCxG/on0Bz7rkX0f', 'Alert');
 // scripts\components\Alert.js
 
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {

@@ -1,11 +1,9 @@
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         HistoryItemPrefab: {
-            default: null,
+            "default": null,
             type: cc.Prefab
         },
         // foo: {
@@ -212,7 +210,7 @@ cc.Class({
         //     this.getGameListOfRoom(idx);
         // }
         // else{
-        //     this.getDetailOfGame(idx);      
+        //     this.getDetailOfGame(idx);     
         // }
     },
 
@@ -223,8 +221,12 @@ cc.Class({
         //     this.getGameListOfRoom(idx);
         // }
         // else{
-        //     this.getDetailOfGame(idx);      
+        //     this.getDetailOfGame(idx);     
         // }
     }
 
 });
+// called every frame, uncomment this function to activate update callback
+// update: function (dt) {
+
+// },

@@ -1,7 +1,5 @@
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -38,3 +36,7 @@ cc.Class({
     }
 
 });
+// called every frame, uncomment this function to activate update callback
+// update: function (dt) {
+
+// },
