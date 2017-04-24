@@ -927,6 +927,12 @@ function isDuidao (seatData) {
  *
  * ******************************************************************/
 
+//Jonathan 新增函数 开发calculateResult 函数 方便测试
+exports.calculateRes = function (game) {
+    calculateResult(game);
+    return game;
+};
+
 function calculateResult(game){
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
@@ -950,9 +956,12 @@ function calculateResult(game){
 
     }
 
+    //console.log(game.gameSeats.length);
 
     //计算每家的台数丝数胡数
-    for(var i = 0; i < game.gameSeats.length; ++i){
+    for(var i = 0; i < game.gameSeats.length; i++){
+
+
 
         var sd = game.gameSeats[i];
         //统计杠的数目
@@ -972,6 +981,7 @@ function calculateResult(game){
         }
 
         //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
+        var tpai = -1;
         if(sd.hued && !sd.iszimo){
             var tpai = sd.holds.pop();
             sd.countMap[tpai] --;
@@ -1080,7 +1090,6 @@ function calculateResult(game){
                 if ( needed[m] == sd.pengs[n]) SI += 0.5;
             }
         }
-
         //暗刻为1丝 一九大幺和字再加1丝
         for ( var n = 0 ; n < needed.length ; n++) {
             (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
@@ -1088,6 +1097,8 @@ function calculateResult(game){
         for ( var n = 0 ; n < 34 ; n++) {
             (sd.countMap[n] >=3) ? SI += 1 : {};
         }
+
+
 
         //明杠出为2丝 一九大幺和字再加2丝
         SI += sd.wangangs.length*2;
@@ -1120,24 +1131,30 @@ function calculateResult(game){
         (sd.countMap[31] == 2 && ( nowfeng == 2 || nowseat == 2 ) ) ? SI += 0.5 : {} ;
         (sd.countMap[33] == 2 && ( nowfeng == 3 || nowseat == 3 ) ) ? SI += 0.5 : {} ;
 
-
+        (i==1)?console.log(i+"当前丝数" + SI):{};
 
         //胡的是对倒、单吊、坎挡或边档，则胡数加半丝 自摸再加0.5絲
-        if (sd.kan || sd.bian || sd.dan || sd.duidao) {
+        if (sd.kan || sd.bian || sd.dan) {
             SI += 0.5;
         }
         if (sd.iszimo || sd.gangshanghua) SI+=0.5;
+        else if(sd.duidao) SI +=0.5;
+
+        (i==1)?console.log(i+"当前丝数" + SI):{};
 
         //如果胡了并且是对到 并且胡的是19字 则追加半丝
-        if(sd.hued && sd.duidao ){
-            var p = sd.holds[sd.holds.length-1];
-            for (var i = 0 ; i < needed.length ; i++) {
-                if (p == needed[i]) {
+        if(sd.hued && sd.duidao && !sd.iszimo){
+            var p = tpai;
+            for (var J = 0 ; J < needed.length ; J++) {
+                if (p == needed[J]) {
+                    console.log(p);
                     SI += 0.5;
                     break;
                 }
             }
         }
+
+
 
 
         //n模取整函数
@@ -1186,7 +1203,6 @@ function calculateResult(game){
             sd.holds.push(tpai);
             sd.countMap[tpai] ++;
         }
-
 
     }
 

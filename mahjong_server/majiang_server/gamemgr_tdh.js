@@ -653,6 +653,12 @@ function isGangShangHua (seatData) {
  *
  * ******************************************************************/
 
+//Jonathan 新增函数 开发calculateResult 函数 方便测试
+exports.calculateRes = function (game) {
+    calculateResult(game);
+    return game;
+};
+
 function calculateResult(game){
     for(var i = 0; i < game.gameSeats.length; ++i){
         //初始化判定
