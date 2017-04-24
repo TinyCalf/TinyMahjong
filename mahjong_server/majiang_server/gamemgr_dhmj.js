@@ -257,7 +257,6 @@ function deal(game){
     game.turn = game.button;
 }
 
-
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
     var count = seatData.countMap[targetPai];
@@ -912,7 +911,6 @@ exports.calculateRes = function (game) {
 
 function calculateResult(game){
 
-
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
     for(var i = 0; i < game.gameSeats.length; ++i){
@@ -948,16 +946,15 @@ function calculateResult(game){
             if(isQingYiSe(sd)) sd.qingyise = true;
             if(isHunYiSe(sd)) sd.hunyise = true;
             if(isGangShangHua(sd)) sd.gangshanghua = true;
-            if(isKan(sd)) sd.kan = true;
-            if(isBian(sd)) sd.bian = true;
-            if(isDan(sd)) sd.dan = true;
+            if(isKan(sd)) {sd.kan = true;sd.paihu = false;}
+            if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
+            if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
             if(isDuidao(sd)) sd.duidao = true;
 
             //定海麻将 只有胡的人算台数
             var TAI = 0 ;
             //排胡为一台
             if(sd.paihu) TAI++;
-            console.log("1 tai="+TAI);
             //当前风圈 0123 东南西北
             var nowfeng = game.roomInfo.fengxiang;
             // 0123 东南西北
@@ -1014,7 +1011,6 @@ function calculateResult(game){
                 }
             }
 
-            console.log("2 tai="+TAI);
 
             //春夏秋冬，梅兰竹菊坐着为一台
             //春夏秋冬 或者 梅兰竹菊 全拿再加一台
@@ -1034,9 +1030,6 @@ function calculateResult(game){
             });
             if(seasons > 3 || flowers > 3) TAI++;
 
-            console.log(sd.huas);
-            console.log(nowseat);
-            console.log("3 tai="+TAI);
 
 
             //坎边单排胡
@@ -1059,6 +1052,8 @@ function calculateResult(game){
             sd.tai = TAI;
         }
     }
+
+
 
     //边家的位置 和 胡的人的位置
     var bianindex = [];
@@ -1363,9 +1358,9 @@ function calculateResult(game){
                 if (isQingYiSe(sd)) sd.qingyise = true;
                 if (isHunYiSe(sd)) sd.hunyise = true;
                 if (isGangShangHua(sd)) sd.gangshanghua = true;
-                if (isKan(sd)) sd.kan = true;
-                if (isBian(sd)) sd.bian = true;
-                if (isDan(sd)) sd.dan = true;
+                if(isKan(sd)) {sd.kan = true;sd.paihu = false;}
+                if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
+                if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
                 if (isDuidao(sd)) sd.duidao = true;
 
                 //定海麻将 只有胡的人算台数
@@ -1683,7 +1678,6 @@ function calculateResult(game){
 
     if(!isYipaoduoxiang) {
         //三吃三碰
-        console.log("huseat.iszimo "+huseat.iszimo);
         if (huseat.iszimo) {
 
             console.log("自摸");
@@ -1745,6 +1739,11 @@ function calculateResult(game){
             }
         }
     }
+
+    for(var i = 0; i < game.gameSeats.length; ++i){
+        console.log(game.gameSeats[i].score);
+    }
+
 }
 
 function doGameOver(game,userId,forceEnd){
@@ -2979,7 +2978,7 @@ exports.hu = function(userId){
         hupai = game.qiangGangContext.pai;
         notify = hupai;
         var ac = recordUserAction(game,seatData,"qiangganghu",gangSeat.seatIndex);
-        ac.iszimo = false;
+        ac.iszimo = true;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
         game.qiangGangContext.isValid = false;

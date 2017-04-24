@@ -2009,7 +2009,7 @@ exports.hu = function(userId){
         hupai = game.qiangGangContext.pai;
         notify = hupai;
         var ac = recordUserAction(game,seatData,"qiangganghu",gangSeat.seatIndex);
-        ac.iszimo = false;
+        ac.iszimo = true;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
         game.qiangGangContext.isValid = false;

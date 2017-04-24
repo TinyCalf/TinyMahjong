@@ -782,7 +782,7 @@ function isDuiDuiHu (seatData) {
 
 //判断是否杠上花
 function isGangShangHua (seatData) {
-    if (seatData.ifJustGanged == 0 ) {
+    if ( seatData.ifJustGanged == 0 && seatData.iszimo ) {
         return true;
     }
     return false;
@@ -973,9 +973,9 @@ function calculateResult(game){
             if(isQingYiSe(sd)) sd.qingyise = true;
             if(isHunYiSe(sd)) sd.hunyise = true;
             if(isGangShangHua(sd)) sd.gangshanghua = true;
-            if(isKan(sd)) sd.kan = true;
-            if(isBian(sd)) sd.bian = true;
-            if(isDan(sd)) sd.dan = true;
+            if(isKan(sd)) {sd.kan = true;sd.paihu = false;}
+            if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
+            if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
             if(isDuidao(sd)) sd.duidao = true;
 
         }
@@ -1065,8 +1065,13 @@ function calculateResult(game){
             TAI += res;
         });
 
-        for ( var n = 27 ; n < 34 ; n++) {
+        for ( var n = 27 ; n < 30 ; n++) {
             (sd.countMap[n] >=3) ? TAI++ : {};
+        }
+        for ( var n = 30 ; n < 34 ; n++) {
+            var res = 0;
+            (sd.countMap[n] >=3) ? res = judgebigwind(nowfeng,nowseat,n) : {};
+            TAI += res;
         }
 
         //其他胡法加台
@@ -2743,7 +2748,7 @@ exports.hu = function(userId){
         hupai = game.qiangGangContext.pai;
         notify = hupai;
         var ac = recordUserAction(game,seatData,"qiangganghu",gangSeat.seatIndex);    
-        ac.iszimo = false;
+        ac.iszimo = true;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
         game.qiangGangContext.isValid = false;
