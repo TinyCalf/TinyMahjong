@@ -334,6 +334,7 @@ cc.Class({
             console.log(data);
             self.numOfMJ = data.numofmj;
             self.gamestate = data.state;
+            self.fengxiang = data.fengxiang;
             if (self.gamestate == "dingque") {
                 self.isDingQueing = true;
             } else if (self.gamestate == "huanpai") {

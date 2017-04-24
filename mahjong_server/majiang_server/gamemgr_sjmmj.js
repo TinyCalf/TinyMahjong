@@ -16,9 +16,6 @@ var ACTION_ZIMO = 6;
 
 var gameSeatsOfUsers = {};
 
-
-
-
 //Jonathan 新增功能函数 删除手牌中的指定牌 包括 holds 和 countMap
 function removePai(seatData,pai) {
     var holds = seatData.holds;
@@ -176,9 +173,9 @@ function shuffle(game) {
     //測試 找出不顯示的花
     // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
     // game.mahjongs = mjs.concat(mahjongs);
-    // //直接胡
+    //直接胡
     // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,27];
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
     // for (var i =0 ; i < mjs.length ; i++) {
     //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
@@ -1647,11 +1644,11 @@ function doGameOver(game,userId,forceEnd){
 
         //如果打一圈：
         if(quanshu==1) {
-            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==0) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==0) isEnd = true;
         }
         //如果打8局
         else if(quanshu==0){
-            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==2) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==2) isEnd = true;
         }
 
         roomInfo.numOfGames++;
@@ -1767,7 +1764,8 @@ exports.setReady = function(userId,callback){
         if(roomInfo.seats.length == 4){
             for(var i = 0; i < roomInfo.seats.length; ++i){
                 var s = roomInfo.seats[i];
-                if(s.ready == false || userMgr.isOnline(s.userId)==false){
+                if(s.ready == false || userMgr.isOnline(s.userId)==false) {
+
                     return;
                 }
             }
@@ -1780,12 +1778,14 @@ exports.setReady = function(userId,callback){
         var remainingGames = roomInfo.conf.maxGames - roomInfo.numOfGames;
 
         var data = {
+            fengxiang:roomInfo.fengxiang,
             state:game.state,
             numofmj:numOfMJ,
             button:game.button,
             turn:game.turn,
             chuPai:game.chuPai,
-            huanpaimethod:game.huanpaiMethod
+            huanpaimethod:game.huanpaiMethod,
+
         };
 
         data.seats = [];
@@ -1806,6 +1806,7 @@ exports.setReady = function(userId,callback){
                 que:sd.que,
                 hued:sd.hued,
                 iszimo:sd.iszimo,
+
             }
             if(sd.userId == userId){
                 s.holds = sd.holds;

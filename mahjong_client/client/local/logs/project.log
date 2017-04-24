@@ -1,49 +1,49 @@
-2017-04-23T08:57:09.082Z - normal: Load ~/.CocosCreator/settings.json
-2017-04-23T08:57:09.085Z - normal: checking language setting...
-2017-04-23T08:57:09.085Z - normal: Language: zh
-2017-04-23T08:57:10.155Z - success: protocol editor-framework registered
-2017-04-23T08:57:10.155Z - success: protocol app registered
-2017-04-23T08:57:10.155Z - success: protocol packages registered
-2017-04-23T08:57:10.155Z - success: protocol theme registered
-2017-04-23T08:57:10.155Z - success: protocol unpack registerred
-2017-04-23T08:57:10.482Z - normal: connected!
-2017-04-23T08:57:10.495Z - normal: Check project C:\Users\user\Desktop\mahjong\mahjong_client\client
-2017-04-23T08:57:10.495Z - normal: Initializing Cocos Creator Editor
-2017-04-23T08:57:10.738Z - normal: Initializing Cocos2d
-2017-04-23T08:57:10.845Z - normal: Initializing Asset Database
-2017-04-23T08:57:10.865Z - success: protocol uuid registerred
-2017-04-23T08:57:10.865Z - success: protocol db registerred
-2017-04-23T08:57:10.865Z - success: protocol thumbnail registerred
-2017-04-23T08:57:10.865Z - normal: Loading editor/builtin packages
-2017-04-23T08:57:10.954Z - success: assets loaded
-2017-04-23T08:57:10.955Z - success: builder loaded
-2017-04-23T08:57:10.955Z - success: hierarchy loaded
-2017-04-23T08:57:10.955Z - success: inspector loaded
-2017-04-23T08:57:10.955Z - success: keystore loaded
-2017-04-23T08:57:10.955Z - success: node-library loaded
-2017-04-23T08:57:10.955Z - success: preferences loaded
-2017-04-23T08:57:10.976Z - success: project-importer loaded
-2017-04-23T08:57:10.977Z - success: project-settings loaded
-2017-04-23T08:57:10.979Z - success: ui-kit loaded
-2017-04-23T08:57:10.980Z - success: ui-grid loaded
-2017-04-23T08:57:10.982Z - success: scene loaded
-2017-04-23T08:57:10.982Z - success: sprite-editor loaded
-2017-04-23T08:57:10.985Z - success: timeline loaded
-2017-04-23T08:57:10.985Z - normal: Loading builtin packages
-2017-04-23T08:57:10.985Z - success: asset-db-debugger loaded
-2017-04-23T08:57:10.985Z - success: code-editor loaded
-2017-04-23T08:57:10.985Z - success: color-picker loaded
-2017-04-23T08:57:10.985Z - success: console loaded
-2017-04-23T08:57:10.985Z - success: package-manager loaded
-2017-04-23T08:57:10.985Z - success: tester loaded
-2017-04-23T08:57:10.985Z - success: ui-kit-preview-extra loaded
-2017-04-23T08:57:10.985Z - success: ui-kit-preview loaded
-2017-04-23T08:57:10.985Z - success: ui-tree loaded
-2017-04-23T08:57:11.005Z - normal: Initializing project C:\Users\user\Desktop\mahjong\mahjong_client\client
-2017-04-23T08:57:11.023Z - normal: Loading packages
-2017-04-23T08:57:11.028Z - normal: Watching packages
-2017-04-23T08:57:11.037Z - normal: Run Application
-2017-04-23T08:57:18.177Z - success: preview server running at http://localhost:7456
-2017-04-23T08:57:18.178Z - normal: Compiling scripts...
-2017-04-23T08:57:20.064Z - normal: Compiled successfully
-2017-04-23T08:57:22.415Z - normal: 1.3.2
+2017-04-24T01:46:45.117Z - normal: Load ~/.CocosCreator/settings.json
+2017-04-24T01:46:45.122Z - normal: checking language setting...
+2017-04-24T01:46:45.122Z - normal: Language: zh
+2017-04-24T01:46:46.230Z - success: protocol editor-framework registered
+2017-04-24T01:46:46.230Z - success: protocol app registered
+2017-04-24T01:46:46.231Z - success: protocol packages registered
+2017-04-24T01:46:46.231Z - success: protocol theme registered
+2017-04-24T01:46:46.231Z - success: protocol unpack registerred
+2017-04-24T01:46:46.473Z - normal: connected!
+2017-04-24T01:46:46.477Z - normal: Check project C:\Users\user\Desktop\mahjong\mahjong_client\client
+2017-04-24T01:46:46.479Z - normal: Initializing Cocos Creator Editor
+2017-04-24T01:46:46.735Z - normal: Initializing Cocos2d
+2017-04-24T01:46:46.888Z - normal: Initializing Asset Database
+2017-04-24T01:46:46.908Z - success: protocol uuid registerred
+2017-04-24T01:46:46.909Z - success: protocol db registerred
+2017-04-24T01:46:46.909Z - success: protocol thumbnail registerred
+2017-04-24T01:46:46.909Z - normal: Loading editor/builtin packages
+2017-04-24T01:46:47.010Z - success: assets loaded
+2017-04-24T01:46:47.011Z - success: builder loaded
+2017-04-24T01:46:47.013Z - success: hierarchy loaded
+2017-04-24T01:46:47.015Z - success: inspector loaded
+2017-04-24T01:46:47.021Z - success: keystore loaded
+2017-04-24T01:46:47.024Z - success: node-library loaded
+2017-04-24T01:46:47.026Z - success: preferences loaded
+2017-04-24T01:46:47.037Z - success: project-importer loaded
+2017-04-24T01:46:47.039Z - success: project-settings loaded
+2017-04-24T01:46:47.040Z - success: ui-kit loaded
+2017-04-24T01:46:47.042Z - success: ui-grid loaded
+2017-04-24T01:46:47.044Z - success: scene loaded
+2017-04-24T01:46:47.044Z - success: sprite-editor loaded
+2017-04-24T01:46:47.047Z - success: timeline loaded
+2017-04-24T01:46:47.047Z - normal: Loading builtin packages
+2017-04-24T01:46:47.050Z - success: asset-db-debugger loaded
+2017-04-24T01:46:47.051Z - success: code-editor loaded
+2017-04-24T01:46:47.052Z - success: color-picker loaded
+2017-04-24T01:46:47.054Z - success: console loaded
+2017-04-24T01:46:47.056Z - success: package-manager loaded
+2017-04-24T01:46:47.058Z - success: tester loaded
+2017-04-24T01:46:47.059Z - success: ui-kit-preview-extra loaded
+2017-04-24T01:46:47.060Z - success: ui-kit-preview loaded
+2017-04-24T01:46:47.060Z - success: ui-tree loaded
+2017-04-24T01:46:47.092Z - normal: Initializing project C:\Users\user\Desktop\mahjong\mahjong_client\client
+2017-04-24T01:46:47.095Z - normal: Loading packages
+2017-04-24T01:46:47.100Z - normal: Watching packages
+2017-04-24T01:46:47.110Z - normal: Run Application
+2017-04-24T01:46:48.413Z - success: preview server running at http://localhost:7456
+2017-04-24T01:46:51.211Z - normal: 1.3.2
+2017-04-24T01:48:58.160Z - normal: Compiled successfully
+2017-04-24T02:33:10.371Z - normal: Compiled successfully

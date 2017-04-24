@@ -188,35 +188,13 @@ function shuffle(game) {
         mahjongs[lastIndex] = t;
     }
 
-    //這裡可輸入測試牌型如果不需要則注釋以下代碼
-    //測試 找出不顯示的花
-    //var mjs = [34,35,36,37,38,39,40,41];
-    // game.mahjongs = mjs.concat(mahjongs);
-    //直接胡
     // var index = 0 ;
-    // var mjs = [0,0,0,1,1,1,2,2,2,3,3,3,4,4,4];
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
     // for (var i =0 ; i < mjs.length ; i++) {
-    //     for (var j = 0 ; j < 4 ; j++) {
+    //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
     //         index++;
     //     }
-    // }
-    //三吃三碰
-    // var mjs1 = [0,1,2,3,4,5,6,7,8,9,10,12,12];
-    // var mjs2 = [0,1,2,3,4,5,6,7,8,9,10,12,12];
-    // var mjs3 = [0,1,2,3,4,5,6,7,8,9,10,12,12];
-    // var mjs4 = [11,11,11,0,0,0,3,3,3,6,6,6,7];
-    // var mjs =  [];
-    // for (var i = 0 ; i < 13 ; i++) {
-    //     mjs.push(mjs1[i]);
-    //     mjs.push(mjs2[i]);
-    //     mjs.push(mjs3[i]);
-    //     mjs.push(mjs4[i]);
-    // }
-    // var index = 0 ;
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
     // }
 
 }
@@ -1923,11 +1901,11 @@ function doGameOver(game,userId,forceEnd){
 
         //如果打一圈：
         if(quanshu==1) {
-            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==0) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==0) isEnd = true;
         }
         //如果打8局
         else if(quanshu==0){
-            if(game.firstHupai != old && roomInfo.nextButton==0 && roomInfo.fengxiang==2) isEnd = true;
+            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==2) isEnd = true;
         }
 
         roomInfo.numOfGames++;
@@ -2056,6 +2034,7 @@ exports.setReady = function(userId,callback){
         var remainingGames = roomInfo.conf.maxGames - roomInfo.numOfGames;
 
         var data = {
+            fengxiang:roomInfo.fengxiang,
             state:game.state,
             numofmj:numOfMJ,
             button:game.button,

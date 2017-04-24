@@ -5,7 +5,95 @@
       "x": -8,
       "y": -8,
       "width": 1936,
-      "height": 1186
+      "height": 1186,
+      "layout": {
+        "children": [
+          {
+            "children": [
+              {
+                "active": 0,
+                "children": [
+                  "hierarchy"
+                ],
+                "height": 528,
+                "type": "panel",
+                "width": 507
+              },
+              {
+                "active": 0,
+                "children": [
+                  "assets"
+                ],
+                "height": 527,
+                "type": "panel",
+                "width": 507
+              }
+            ],
+            "height": 1058,
+            "type": "dock-v",
+            "width": 507
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "active": 0,
+                    "children": [
+                      "scene"
+                    ],
+                    "height": 796,
+                    "type": "panel",
+                    "width": 819
+                  },
+                  {
+                    "active": 0,
+                    "children": [
+                      "node-library"
+                    ],
+                    "height": 796,
+                    "type": "panel",
+                    "width": 279
+                  }
+                ],
+                "height": 796,
+                "type": "dock-h",
+                "width": 1101
+              },
+              {
+                "active": 0,
+                "children": [
+                  "console",
+                  "timeline"
+                ],
+                "height": 259,
+                "type": "panel",
+                "width": 1101
+              }
+            ],
+            "height": 1058,
+            "type": "dock-v",
+            "width": 1101
+          },
+          {
+            "active": 0,
+            "children": [
+              "inspector"
+            ],
+            "height": 1058,
+            "type": "panel",
+            "width": 300
+          }
+        ],
+        "snapshot": true,
+        "type": "dock-h"
+      }
+    },
+    "window-1493000825123": {
+      "x": 471,
+      "y": 110,
+      "width": 816,
+      "height": 639
     }
   }
 }
