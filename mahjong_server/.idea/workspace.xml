@@ -24,7 +24,7 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
+            <state relative-caret-position="1134">
               <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding />
             </state>
@@ -952,11 +952,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gamemgr_dhmj.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gamemgr_dhmj.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_dhmj.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="1819" column="12" selection-start-line="1819" selection-start-column="12" selection-end-line="1820" selection-end-column="33" />
+            <state relative-caret-position="1269">
+              <caret line="1771" column="41" selection-start-line="1771" selection-start-column="41" selection-end-line="1771" selection-end-column="41" />
               <folding>
                 <element signature="n#!!block;n#removePai#0" expanded="false" />
                 <element signature="e#594#727#0" expanded="false" />
@@ -1282,6 +1282,7 @@
                 <element signature="e#56175#56365#0" expanded="false" />
                 <element signature="e#56431#56749#0" expanded="false" />
                 <element signature="e#56541#56731#0" expanded="false" />
+                <element signature="n#!!block;n#doGameOver#0" expanded="false" />
                 <element signature="e#57104#58095#0" expanded="false" />
                 <element signature="e#57151#57627#0" expanded="false" />
                 <element signature="e#57237#57617#0" expanded="false" />
@@ -1296,11 +1297,6 @@
                 <element signature="e#60285#60402#0" expanded="false" />
                 <element signature="e#60323#60387#0" expanded="false" />
                 <element signature="e#60611#60627#0" expanded="false" />
-                <element signature="e#61140#61336#0" expanded="false" />
-                <element signature="e#61248#61326#0" expanded="false" />
-                <element signature="e#61378#61493#0" expanded="false" />
-                <element signature="e#61537#61652#0" expanded="false" />
-                <element signature="e#61724#61798#0" expanded="false" />
                 <element signature="e#61842#61879#0" expanded="false" />
                 <element signature="e#61888#63596#0" expanded="false" />
                 <element signature="e#61942#63588#0" expanded="false" />
@@ -1543,10 +1539,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roommgr.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="roommgr.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2178">
+            <state relative-caret-position="988">
               <caret line="165" column="47" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
               <folding>
                 <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
@@ -1839,11 +1835,12 @@
       <workItem from="1492570335660" duration="56318000" />
       <workItem from="1492852673845" duration="47000" />
       <workItem from="1492862804720" duration="105000" />
+      <workItem from="1492937781162" duration="714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369413000" />
+    <option name="totallyTimeSpent" value="370127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1855,10 +1852,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1186" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13166311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13272922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.337132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4559,68 +4556,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2178">
-          <caret line="165" column="47" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
-            <element signature="e#368#414#0" expanded="false" />
-            <element signature="e#488#686#0" expanded="false" />
-            <element signature="e#809#1207#0" expanded="false" />
-            <element signature="e#1128#1204#0" expanded="false" />
-            <element signature="e#1158#1199#0" expanded="false" />
-            <element signature="e#2485#2651#0" expanded="false" />
-            <element signature="e#2694#2860#0" expanded="false" />
-            <element signature="e#3958#3990#0" expanded="false" />
-            <element signature="e#4397#4654#0" expanded="false" />
-            <element signature="e#4425#4645#0" expanded="false" />
-            <element signature="e#4845#4990#0" expanded="false" />
-            <element signature="e#5001#5035#0" expanded="false" />
-            <element signature="e#5117#5420#0" expanded="false" />
-            <element signature="e#5171#5185#0" expanded="false" />
-            <element signature="e#5214#5353#0" expanded="false" />
-            <element signature="e#5273#5350#0" expanded="false" />
-            <element signature="e#5456#5479#0" expanded="false" />
-            <element signature="e#5515#5541#0" expanded="false" />
-            <element signature="e#5587#5704#0" expanded="false" />
-            <element signature="e#5641#5661#0" expanded="false" />
-            <element signature="e#5768#6543#0" expanded="false" />
-            <element signature="e#5802#6202#0" expanded="false" />
-            <element signature="e#5847#5874#0" expanded="false" />
-            <element signature="e#5904#6176#0" expanded="false" />
-            <element signature="e#5958#6172#0" expanded="false" />
-            <element signature="e#6039#6083#0" expanded="false" />
-            <element signature="e#6239#6290#0" expanded="false" />
-            <element signature="e#6296#6541#0" expanded="false" />
-            <element signature="e#6340#6536#0" expanded="false" />
-            <element signature="e#6363#6398#0" expanded="false" />
-            <element signature="e#6406#6532#0" expanded="false" />
-            <element signature="e#6587#6872#0" expanded="false" />
-            <element signature="e#6651#6665#0" expanded="false" />
-            <element signature="e#6721#6735#0" expanded="false" />
-            <element signature="e#6805#6819#0" expanded="false" />
-            <element signature="e#6908#7193#0" expanded="false" />
-            <element signature="e#6972#6986#0" expanded="false" />
-            <element signature="e#7042#7056#0" expanded="false" />
-            <element signature="e#7126#7140#0" expanded="false" />
-            <element signature="e#7233#7340#0" expanded="false" />
-            <element signature="e#7294#7324#0" expanded="false" />
-            <element signature="e#7381#7491#0" expanded="false" />
-            <element signature="e#7442#7475#0" expanded="false" />
-            <element signature="e#7531#7556#0" expanded="false" />
-            <element signature="e#7594#8140#0" expanded="false" />
-            <element signature="e#7831#7845#0" expanded="false" />
-            <element signature="e#7984#8043#0" expanded="false" />
-            <element signature="e#8016#8040#0" expanded="false" />
-            <element signature="e#8107#8138#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
+        <state relative-caret-position="1134">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding />
         </state>
@@ -5545,8 +5483,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_dhmj.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="1819" column="12" selection-start-line="1819" selection-start-column="12" selection-end-line="1820" selection-end-column="33" />
+        <state relative-caret-position="1269">
+          <caret line="1771" column="41" selection-start-line="1771" selection-start-column="41" selection-end-line="1771" selection-end-column="41" />
           <folding>
             <element signature="n#!!block;n#removePai#0" expanded="false" />
             <element signature="e#594#727#0" expanded="false" />
@@ -5872,6 +5810,7 @@
             <element signature="e#56175#56365#0" expanded="false" />
             <element signature="e#56431#56749#0" expanded="false" />
             <element signature="e#56541#56731#0" expanded="false" />
+            <element signature="n#!!block;n#doGameOver#0" expanded="false" />
             <element signature="e#57104#58095#0" expanded="false" />
             <element signature="e#57151#57627#0" expanded="false" />
             <element signature="e#57237#57617#0" expanded="false" />
@@ -5886,11 +5825,6 @@
             <element signature="e#60285#60402#0" expanded="false" />
             <element signature="e#60323#60387#0" expanded="false" />
             <element signature="e#60611#60627#0" expanded="false" />
-            <element signature="e#61140#61336#0" expanded="false" />
-            <element signature="e#61248#61326#0" expanded="false" />
-            <element signature="e#61378#61493#0" expanded="false" />
-            <element signature="e#61537#61652#0" expanded="false" />
-            <element signature="e#61724#61798#0" expanded="false" />
             <element signature="e#61842#61879#0" expanded="false" />
             <element signature="e#61888#63596#0" expanded="false" />
             <element signature="e#61942#63588#0" expanded="false" />
@@ -6128,6 +6062,65 @@
             <element signature="e#97274#97491#0" expanded="false" />
             <element signature="e#97324#97481#0" expanded="false" />
             <element signature="e#97504#97555#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="165" column="47" selection-start-line="165" selection-start-column="47" selection-end-line="165" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!block;n#generateRoomId#0" expanded="false" />
+            <element signature="e#368#414#0" expanded="false" />
+            <element signature="e#488#686#0" expanded="false" />
+            <element signature="e#809#1207#0" expanded="false" />
+            <element signature="e#1128#1204#0" expanded="false" />
+            <element signature="e#1158#1199#0" expanded="false" />
+            <element signature="e#2485#2651#0" expanded="false" />
+            <element signature="e#2694#2860#0" expanded="false" />
+            <element signature="e#3958#3990#0" expanded="false" />
+            <element signature="e#4397#4654#0" expanded="false" />
+            <element signature="e#4425#4645#0" expanded="false" />
+            <element signature="e#4845#4990#0" expanded="false" />
+            <element signature="e#5001#5035#0" expanded="false" />
+            <element signature="e#5117#5420#0" expanded="false" />
+            <element signature="e#5171#5185#0" expanded="false" />
+            <element signature="e#5214#5353#0" expanded="false" />
+            <element signature="e#5273#5350#0" expanded="false" />
+            <element signature="e#5456#5479#0" expanded="false" />
+            <element signature="e#5515#5541#0" expanded="false" />
+            <element signature="e#5587#5704#0" expanded="false" />
+            <element signature="e#5641#5661#0" expanded="false" />
+            <element signature="e#5768#6543#0" expanded="false" />
+            <element signature="e#5802#6202#0" expanded="false" />
+            <element signature="e#5847#5874#0" expanded="false" />
+            <element signature="e#5904#6176#0" expanded="false" />
+            <element signature="e#5958#6172#0" expanded="false" />
+            <element signature="e#6039#6083#0" expanded="false" />
+            <element signature="e#6239#6290#0" expanded="false" />
+            <element signature="e#6296#6541#0" expanded="false" />
+            <element signature="e#6340#6536#0" expanded="false" />
+            <element signature="e#6363#6398#0" expanded="false" />
+            <element signature="e#6406#6532#0" expanded="false" />
+            <element signature="e#6587#6872#0" expanded="false" />
+            <element signature="e#6651#6665#0" expanded="false" />
+            <element signature="e#6721#6735#0" expanded="false" />
+            <element signature="e#6805#6819#0" expanded="false" />
+            <element signature="e#6908#7193#0" expanded="false" />
+            <element signature="e#6972#6986#0" expanded="false" />
+            <element signature="e#7042#7056#0" expanded="false" />
+            <element signature="e#7126#7140#0" expanded="false" />
+            <element signature="e#7233#7340#0" expanded="false" />
+            <element signature="e#7294#7324#0" expanded="false" />
+            <element signature="e#7381#7491#0" expanded="false" />
+            <element signature="e#7442#7475#0" expanded="false" />
+            <element signature="e#7531#7556#0" expanded="false" />
+            <element signature="e#7594#8140#0" expanded="false" />
+            <element signature="e#7831#7845#0" expanded="false" />
+            <element signature="e#7984#8043#0" expanded="false" />
+            <element signature="e#8016#8040#0" expanded="false" />
+            <element signature="e#8107#8138#0" expanded="false" />
           </folding>
         </state>
       </provider>
