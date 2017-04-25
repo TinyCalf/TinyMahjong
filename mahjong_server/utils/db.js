@@ -92,7 +92,7 @@ exports.save_gamecp = function (game) {
     game.baseInfoJson = binfo;
     var sql = "INSERT INTO `t_gamecp` (`game`, `create_time`) VALUES ( \'"+json_data+" \', CURRENT_TIMESTAMP)";
     query(sql, function(err, rows, fields) {
-        //console.log(err);
+        console.log(err);
     });
 };
 
