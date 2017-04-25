@@ -197,6 +197,29 @@ function shuffle(game) {
     //     }
     // }
 
+    //抢杠胡
+    // var index = 0 ;
+    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs1 = [0,1,2,3,4,5,6,7,8,13,14,15,15];//胡12
+    // var mjs2 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs3 = [0,1,2,3,4,5,6,7,8,13,16,16,16];//
+    // var mjs = [];
+    // for (var i = 0; i < 13 ; i++ ) {
+    //     mjs.push(mjs0[i]);
+    //     mjs.push(mjs1[i]);
+    //     mjs.push(mjs2[i]);
+    //     mjs.push(mjs3[i]);
+    // }
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(12);
+    // for ( var i =0 ; i < mjs.length ; i++) {
+    //     game.mahjongs[index] = mjs[i];
+    //     index++;
+    // }
+
 }
 
 function mopai(game,seatIndex) {
@@ -941,6 +964,9 @@ function calculateResult(game){
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         sd.tai = -1;//负一表示不是胡的人 没有台数
         if(sd.hued == true) {
+            //如果是点杠胡 则算作自摸
+            (sd.isQiangGangHu)?sd.iszimo=true:{};
+
             if(isPaiHu(sd)) sd.paihu = true;
             if(isDuiDuiHu(sd)) sd.duiduihu = true;
             if(isQingYiSe(sd)) sd.qingyise = true;

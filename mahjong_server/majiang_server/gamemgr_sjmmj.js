@@ -188,6 +188,29 @@ function shuffle(game) {
     // index++;
     // game.mahjongs[index] = 39;
     // index++;
+
+    //抢杠胡
+    // var index = 0 ;
+    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs1 = [0,1,2,3,4,5,6,7,8,13,14,15,15];//胡12
+    // var mjs2 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs3 = [0,1,2,3,4,5,6,7,8,13,16,16,16];//
+    // var mjs = [];
+    // for (var i = 0; i < 13 ; i++ ) {
+    //     mjs.push(mjs0[i]);
+    //     mjs.push(mjs1[i]);
+    //     mjs.push(mjs2[i]);
+    //     mjs.push(mjs3[i]);
+    // }
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(12);
+    // for ( var i =0 ; i < mjs.length ; i++) {
+    //     game.mahjongs[index] = mjs[i];
+    //     index++;
+    // }
 }
 
 function mopai(game,seatIndex) {
@@ -968,6 +991,8 @@ function calculateResult(game){
         sd.numAnGang = sd.angangs.length;
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         if(sd.hued == true) {
+            //如果是点杠胡 则算作自摸
+            (sd.isQiangGangHu)?sd.iszimo=true:{};
             if(isPaiHu(sd)) sd.paihu = true;
             if(isDuiDuiHu(sd)) sd.duiduihu = true;
             if(isQingYiSe(sd)) sd.qingyise = true;
@@ -977,7 +1002,6 @@ function calculateResult(game){
             if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
             if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
             if(isDuidao(sd)) sd.duidao = true;
-
         }
 
         //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
@@ -1230,6 +1254,9 @@ function calculateResult(game){
 
     //胡的人先节分 TODO:杠开还没算进去
     var huseat = seats[huedindex];
+
+
+
     //幺半算法
     if(game.conf.jiesuan==0) {
         if(huseat.iszimo) {
@@ -2748,9 +2775,10 @@ exports.hu = function(userId){
         hupai = game.qiangGangContext.pai;
         notify = hupai;
         var ac = recordUserAction(game,seatData,"qiangganghu",gangSeat.seatIndex);    
-        ac.iszimo = true;
+        ac.iszimo = false;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
+        seatData.iszimo = true;
         game.qiangGangContext.isValid = false;
         
         

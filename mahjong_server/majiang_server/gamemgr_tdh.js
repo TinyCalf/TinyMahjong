@@ -190,13 +190,27 @@ function shuffle(game) {
         mahjongs[lastIndex] = t;
     }
 
+    //抢杠胡
     // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
+    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs1 = [0,1,2,3,4,5,6,7,8,13,14,15,15];//胡12
+    // var mjs2 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
+    // var mjs3 = [0,1,2,3,4,5,6,7,8,13,16,16,16];//
+    // var mjs = [];
+    // for (var i = 0; i < 13 ; i++ ) {
+    //     mjs.push(mjs0[i]);
+    //     mjs.push(mjs1[i]);
+    //     mjs.push(mjs2[i]);
+    //     mjs.push(mjs3[i]);
+    // }
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(18);
+    // mjs.push(12);
+    // for ( var i =0 ; i < mjs.length ; i++) {
+    //     game.mahjongs[index] = mjs[i];
+    //     index++;
     // }
 
 }
@@ -660,6 +674,7 @@ exports.calculateRes = function (game) {
 };
 
 function calculateResult(game){
+
     for(var i = 0; i < game.gameSeats.length; ++i){
         //初始化判定
         var thisseat = game.gameSeats[i];
@@ -684,6 +699,8 @@ function calculateResult(game){
         sd.tai = -1;//负一表示不是胡的人 没有台数
         if(sd.hued == true) {
             if(isGangShangHua(sd)) sd.gangshanghua = true;
+            //如果是点杠胡 则算作自摸
+            (sd.isQiangGangHu)?sd.iszimo=true:{};
         }
     }
 
@@ -699,21 +716,32 @@ function calculateResult(game){
     //TODO:杠上放炮：则杠无分，该付多少分则付多少分
     //TODO:玩法：可分为两种：1、抢杠胡为自摸，三家都需要扣分
     //TODO:2、抢杠胡为自摸，则被抢杠者一人付三家的分数。
+
+    console.log(huseat.iszimo);
+    console.log(huseat.isQiangGangHu);
+    console.log(game.qiangGangContext);
+
+
+
     if(huseat.iszimo) {
         var s = 0;
         (huseat.gangshanghua) ? s = 3 : s = 2 ;
         huseat.score += s * 3;
-        for(var i = 0; i < 4; ++i){
-            if(game.gameSeats[i].hued != true) {
-                game.gameSeats[i].score -= s;
+        huseat.score += huseat.huas.length * 3;
+        if(!huseat.isQiangGangHu) {
+            for (var i = 0; i < 4; ++i) {
+                if (game.gameSeats[i].hued != true) {
+                    game.gameSeats[i].score -= s;
+                }
             }
-        }
-        //计算花
-        huseat.score += huseat.huas.length*3;
-        for(var i = 0; i < 4; ++i){
-            if(game.gameSeats[i].hued != true) {
-                game.gameSeats[i].score -= huseat.huas.length;
+            //计算花
+            for (var i = 0; i < 4; ++i) {
+                if (game.gameSeats[i].hued != true) {
+                    game.gameSeats[i].score -= huseat.huas.length;
+                }
             }
+        }else{
+            game.qiangGangContext.seatData.score -= s*3+huseat.huas.length*3;
         }
     } else {
         //找到点炮的人
@@ -750,12 +778,7 @@ function calculateResult(game){
         }
     }
 
-
-
-
-
     //TODO:抢杠胡
-
 
     //一炮多响
     //如果没人放炮则不计算一炮多响
@@ -2009,9 +2032,10 @@ exports.hu = function(userId){
         hupai = game.qiangGangContext.pai;
         notify = hupai;
         var ac = recordUserAction(game,seatData,"qiangganghu",gangSeat.seatIndex);
-        ac.iszimo = true;
+        ac.iszimo = false;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
+        seatData.iszimo = true;
         game.qiangGangContext.isValid = false;
 
 
