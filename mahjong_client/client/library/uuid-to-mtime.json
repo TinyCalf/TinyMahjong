@@ -790,8 +790,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1493002817590,
-    "meta": 1493006737029,
+    "asset": 1493093400367,
+    "meta": 1493107469822,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -820,8 +820,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1492937771712,
-    "meta": 1492937836086,
+    "asset": 1493093400375,
+    "meta": 1493107470570,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -855,13 +855,13 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1492608602816,
-    "meta": 1492937836536,
+    "asset": 1493093400370,
+    "meta": 1493107470701,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
-    "asset": 1492608602818,
-    "meta": 1492937836573,
+    "asset": 1493093400371,
+    "meta": 1493107470752,
     "relativePath": "scripts\\components\\History.js"
   },
   "9a096a00-814e-47c2-bc57-d3964f358b56": {
@@ -885,8 +885,8 @@
     "relativePath": "scripts\\components\\LoadingLogic.js"
   },
   "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1492937771712,
-    "meta": 1492937836862,
+    "asset": 1493093400372,
+    "meta": 1493107470996,
     "relativePath": "scripts\\components\\Login.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -975,8 +975,8 @@
     "relativePath": "scripts\\ReplayMgr.js"
   },
   "74d78241-a877-4329-8ea1-72463662e2fe": {
-    "asset": 1492608602812,
-    "meta": 1492937837436,
+    "asset": 1493093400367,
+    "meta": 1493107471411,
     "relativePath": "scripts\\UserMgr.js"
   },
   "b717fcf0-c348-4dcc-8aaf-35b6f5b7dc31": {
@@ -1050,8 +1050,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1492937771712,
-    "meta": 1492937832016,
+    "asset": 1493093400316,
+    "meta": 1493107469609,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -1060,8 +1060,8 @@
     "relativePath": "resources\\scenes\\update.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
-    "asset": 1492846160164,
-    "meta": 1492937832046,
+    "asset": 1493093400754,
+    "meta": 1493107469639,
     "relativePath": "resources\\sounds"
   },
   "8f65957d-38ab-47c5-8f52-ab42bb7e9592": {
@@ -2135,23 +2135,23 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1492608602820,
-    "meta": 1492937836918,
+    "asset": 1493093400373,
+    "meta": 1493107471067,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1492608602825,
-    "meta": 1492937837002,
+    "asset": 1493093400375,
+    "meta": 1493107471307,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1493002817590,
-    "meta": 1493006737056,
+    "asset": 1493093400363,
+    "meta": 1493107471328,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
-    "asset": 1492608556392,
-    "meta": 1492937837396,
+    "asset": 1493093400366,
+    "meta": 1493107471410,
     "relativePath": "scripts\\MahjongMgr.js"
   },
   "97daf3f2-bf15-4193-bbac-b526bdde9fa1": {
@@ -2180,8 +2180,8 @@
     "relativePath": "resources\\textures\\images\\mahjong_table.jpg"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1492608602823,
-    "meta": 1492937836925,
+    "asset": 1493093400374,
+    "meta": 1493107471134,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
@@ -2190,18 +2190,18 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1492937771700,
-    "meta": 1492937832046,
+    "asset": 1493173906846,
+    "meta": 1493173906898,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1492846564779,
-    "meta": 1492937836475,
+    "asset": 1493093400368,
+    "meta": 1493107470644,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1493002817590,
-    "meta": 1493006737056,
+    "asset": 1493172954712,
+    "meta": 1493172954810,
     "relativePath": "scripts\\HTTP.js"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {
@@ -2685,8 +2685,8 @@
     "relativePath": "resources\\textures\\hall\\fanhuifangjian.png"
   },
   "801b2051-a975-419b-a2fe-19afcfcda31c": {
-    "asset": 1492937771712,
-    "meta": 1492937833796,
+    "asset": 1493093400751,
+    "meta": 1493107469641,
     "relativePath": "resources\\textures\\utils"
   },
   "a4d3dafb-2979-462b-b2ab-ec38937a1e23": {
@@ -2840,7 +2840,7 @@
     "relativePath": "resources\\textures\\Game\\gameover_result.png"
   },
   "ca3cd36e-e121-4a85-9b3f-0daa92af7d54": {
-    "asset": 1492505519195,
+    "asset": 1493093400361,
     "meta": 1492846824860,
     "relativePath": "resources\\sounds\\bgMain.mp3"
   },
@@ -2980,13 +2980,13 @@
     "relativePath": "prefab\\button.prefab"
   },
   "cdb3363e-7d45-42f3-8604-454587ca7fab": {
-    "asset": 1492937771712,
-    "meta": 1492937833822,
+    "asset": 1493093400361,
+    "meta": 1493107469821,
     "relativePath": "resources\\textures\\utils\\mjdl.png"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
-    "asset": 1492937771702,
-    "meta": 1492937832046,
+    "asset": 1493093400302,
+    "meta": 1493107469637,
     "relativePath": "resources\\scenes\\login.fire"
   },
   "2c937608-2562-40ea-b264-7395df6f0cea": {
@@ -3075,8 +3075,8 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1492937771712,
-    "meta": 1492937832139,
+    "asset": 1493110245611,
+    "meta": 1493110245756,
     "relativePath": "resources\\scenes\\mjgame.fire"
   }
 }
