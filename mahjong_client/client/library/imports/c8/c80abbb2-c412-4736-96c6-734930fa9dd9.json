@@ -7,6 +7,9 @@
     "B_autumn": {
       "__uuid__": "5ea4cbbf-d3ad-469d-8488-e3b5c9e14d66"
     },
+    "B_bamboo": {
+      "__uuid__": "df354090-abd4-44b4-8726-af9b06212696"
+    },
     "B_bamboo_1": {
       "__uuid__": "2a712174-365d-40a5-8c39-85860c809e56"
     },
@@ -61,6 +64,9 @@
     "B_character_9": {
       "__uuid__": "ff112882-d1ec-4ee1-92ad-c2778e6b14e4"
     },
+    "B_chrysanthemum": {
+      "__uuid__": "93c695ae-5530-483a-90a7-221a83648ffd"
+    },
     "B_dot_1": {
       "__uuid__": "815524ef-1c74-45c5-9b08-27960b851e85"
     },
@@ -88,14 +94,20 @@
     "B_dot_9": {
       "__uuid__": "ba318dd9-5759-42a3-9d92-dd5765808651"
     },
-    "B_green": {
-      "__uuid__": "6ed16926-a1df-40e2-b4c0-b9c2bf4a2aeb"
+    "B_orchid": {
+      "__uuid__": "a8645f42-b0c7-4cfa-bcdd-328334a42238"
     },
     "B_plum": {
       "__uuid__": "1cbd6b1a-6cd4-4f59-a49f-53005d224e95"
     },
     "B_red": {
       "__uuid__": "8a1ef75b-231d-4577-aad3-4ccce7a1cd95"
+    },
+    "B_spring": {
+      "__uuid__": "cb246de4-b798-4551-969e-73b5316665e0"
+    },
+    "B_summer": {
+      "__uuid__": "da0576e5-cae3-4abe-805d-72bc1ce1c44a"
     },
     "B_white": {
       "__uuid__": "d0dfc100-c4be-45de-8df6-1c51de881c06"
@@ -117,6 +129,9 @@
     },
     "e_mj_b_up": {
       "__uuid__": "4424c05a-7f85-4e5f-8c8c-a8102270bbf1"
+    },
+    "green": {
+      "__uuid__": "532ee0c8-3821-4794-89b7-6f52e13c9c96"
     }
   }
 }
