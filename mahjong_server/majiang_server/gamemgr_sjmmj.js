@@ -699,7 +699,14 @@ function isQingYiSe(gameSeatData){
     if(isSameType(type,gameSeatData.pengs) == false){
         return false;
     }
-    //TODO:判断吃的情况
+    //判断吃的情况
+    var chis = [];
+    gameSeatData.chis.forEach(function(pais){
+        chis.push(pais[0]);
+    });
+    if(isSameType(type,chis) == false) {
+        return false;
+    }
     return true;
 }
 
@@ -764,6 +771,7 @@ function isPaiHu(seatData){
         seatData.diangangs.length > 0 ) {
         return false;
     }
+
 
     var holds = [].concat(seatData.holds);
     holds.sort(function(a,b){
@@ -1018,6 +1026,15 @@ function calculateResult(game){
         //当前坐位 0123 东南西北
         var nowseat = (i-game.button+4)%4;
 
+        //凡是手里有能加半丝的对子时，牌型不能判定为排胡。
+        if(sd.countMap[27] == 2) sd.paihu = false;
+        if(sd.countMap[28] == 2) sd.paihu = false;
+        if(sd.countMap[29] == 2) sd.paihu = false;
+        if(sd.countMap[30] == 2 && ( nowfeng == 0 || nowseat == 0 ) ) sd.paihu = false;
+        if(sd.countMap[32] == 2 && ( nowfeng == 1 || nowseat == 1 ) ) sd.paihu = false;
+        if(sd.countMap[31] == 2 && ( nowfeng == 2 || nowseat == 2 ) ) sd.paihu = false;
+        if(sd.countMap[33] == 2 && ( nowfeng == 3 || nowseat == 3 ) ) sd.paihu = false;
+
         //台数：
         var TAI = 0;
         //花如果对应风向则加一台 东：春梅 南：夏兰 西：秋菊 北：冬竹
@@ -1098,6 +1115,12 @@ function calculateResult(game){
             TAI += res;
         }
 
+        //特殊加成 对到 点炮 胡东南西北时候 做到就加台
+        if ( sd.hued && !sd.iszimo && sd.duidao ) {
+            res = judgebigwind(nowfeng,nowseat,tpai);
+            TAI += res;
+        }
+
         //其他胡法加台
         if(sd.iszimo) TAI++;
         if(sd.paihu || sd.kan || sd.bian || sd.dan) TAI++;
@@ -1150,17 +1173,16 @@ function calculateResult(game){
         }
 
         //中发白一对加半丝
-        (sd.countMap[27] == 2) ? SI += 0.5 : {} ;
-        (sd.countMap[28] == 2) ? SI += 0.5 : {} ;
-        (sd.countMap[29] == 2) ? SI += 0.5 : {} ;
+        if(sd.countMap[27] == 2) {SI += 0.5; sd.paidu = false;}
+        if(sd.countMap[28] == 2) {SI += 0.5; sd.paidu = false;}
+        if(sd.countMap[29] == 2) {SI += 0.5; sd.paidu = false;}
 
         //东南西北一对 坐着或者在圈数里 加0.5丝
-        (sd.countMap[30] == 2 && ( nowfeng == 0 || nowseat == 0 ) ) ? SI += 0.5 : {} ;
-        (sd.countMap[32] == 2 && ( nowfeng == 1 || nowseat == 1 ) ) ? SI += 0.5 : {} ;
-        (sd.countMap[31] == 2 && ( nowfeng == 2 || nowseat == 2 ) ) ? SI += 0.5 : {} ;
-        (sd.countMap[33] == 2 && ( nowfeng == 3 || nowseat == 3 ) ) ? SI += 0.5 : {} ;
+        if(sd.countMap[30] == 2 && ( nowfeng == 0 || nowseat == 0 ) ) {SI += 0.5; sd.paidu = false; }
+        if(sd.countMap[32] == 2 && ( nowfeng == 1 || nowseat == 1 ) ) {SI += 0.5; sd.paidu = false; }
+        if(sd.countMap[31] == 2 && ( nowfeng == 2 || nowseat == 2 ) ) {SI += 0.5; sd.paidu = false; }
+        if(sd.countMap[33] == 2 && ( nowfeng == 3 || nowseat == 3 ) ) {SI += 0.5; sd.paidu = false; }
 
-        (i==1)?console.log(i+"当前丝数" + SI):{};
 
         //胡的是对倒、单吊、坎挡或边档，则胡数加半丝 自摸再加0.5絲
         if (sd.kan || sd.bian || sd.dan) {
@@ -1169,12 +1191,12 @@ function calculateResult(game){
         if (sd.iszimo || sd.gangshanghua) SI+=0.5;
         else if(sd.duidao) SI +=0.5;
 
-        (i==1)?console.log(i+"当前丝数" + SI):{};
 
         //如果胡了并且是对到 并且胡的是19字 则追加半丝
-        if(sd.hued && sd.duidao && !sd.iszimo){
+        var zi19 = [0,8,9,17,18,26,27,28,29];
+        if (sd.hued && sd.duidao && !sd.iszimo) {
             var p = tpai;
-            for (var J = 0 ; J < needed.length ; J++) {
+            for (var J = 0 ; J < zi19.length ; J++) {
                 if (p == needed[J]) {
                     console.log(p);
                     SI += 0.5;
@@ -1182,9 +1204,6 @@ function calculateResult(game){
                 }
             }
         }
-
-
-
 
         //n模取整函数
         var moquzheng = function(num,mo) {

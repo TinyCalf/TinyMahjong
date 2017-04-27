@@ -676,6 +676,15 @@ function isQingYiSe(gameSeatData){
     if(isSameType(type,gameSeatData.pengs) == false){
         return false;
     }
+
+    //判断吃的情况
+    var chis = [];
+    gameSeatData.chis.forEach(function(pais){
+        chis.push(pais[0]);
+    });
+    if(isSameType(type,chis) == false) {
+        return false;
+    }
     return true;
 }
 
@@ -1055,6 +1064,33 @@ function calculateResult(game){
                 }
             });
             if(seasons > 3 || flowers > 3) TAI++;
+
+
+
+
+
+            //判断是否对应大风 大风加一台
+            var judgebigwind = function(nowfeng,nowseat,pai){
+                var res= 0;
+                switch (nowfeng) {
+                    case 0: if(pai == 30)  res++; break;
+                    case 1: if(pai == 32)  res++; break;
+                    case 2: if(pai == 31)  res++; break;
+                    case 3: if(pai == 33)  res++; break;
+                }
+                switch (nowseat) {
+                    case 0: if(pai == 30)  res++; break;
+                    case 1: if(pai == 32)  res++; break;
+                    case 2: if(pai == 31)  res++; break;
+                    case 3: if(pai == 33)  res++; break;
+                }
+                return res;
+            };
+            //特殊加成 对到 点炮 胡东南西北时候 做到就加台
+            if ( sd.hued && !sd.iszimo && sd.duidao ) {
+                res = judgebigwind(nowfeng,nowseat,tpai);
+                TAI += res;
+            }
 
 
 

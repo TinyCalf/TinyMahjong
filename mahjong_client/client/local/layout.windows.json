@@ -72,24 +72,6 @@
         "snapshot": true,
         "type": "dock-h"
       }
-    },
-    "window-1493258423331": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "sprite-editor"
-            ]
-          }
-        ]
-      },
-      "x": 501,
-      "y": 479,
-      "width": 516,
-      "height": 539
     }
   }
 }
