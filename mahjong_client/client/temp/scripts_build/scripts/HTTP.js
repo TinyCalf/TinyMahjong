@@ -3,11 +3,12 @@ cc._RFpush(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
 // scripts\HTTP.js
 
 //local
-var URL = "http://192.168.1.121:9000";
+
+//var URL = "http://192.168.1.121:9000";
 //DEV SERVER
 //var URL = "http://139.219.224.143:9000";
 //FORMAL SERVER
-//var URL = "http://192.168.1.121:9000";
+var URL = "http://119.23.250.115:9000";
 
 cc.VERSION = 20161227;
 var HTTP = cc.Class({
@@ -39,6 +40,7 @@ var HTTP = cc.Class({
             }
 
             xhr.onreadystatechange = function () {
+                console.log(xhr);
                 if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
                     console.log("http res(" + xhr.responseText.length + "):" + xhr.responseText);
                     try {
@@ -54,7 +56,11 @@ var HTTP = cc.Class({
                             //       cc.vv.wc.hide();   
                         }
                     }
-                }
+                } else {
+                        console.log("status=" + xhr.readyState);
+                        //self.url = "http://139.219.224.143:9000";
+                        //HTTP.url = "http://139.219.224.143:9000";
+                    }
             };
 
             if (cc.vv && cc.vv.wc) {

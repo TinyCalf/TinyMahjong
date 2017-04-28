@@ -309,6 +309,11 @@ cc.Class({
             self.dispatchEvent('game_holds');
         });
 
+        cc.vv.net.addHandler("game_feng_push", function (data) {
+            self.fengxiang = data;
+            self.dispatchEvent('game_feng');
+        });
+
         cc.vv.net.addHandler("game_begin_push", function (data) {
             console.log('game_action_push');
             console.log(data);
@@ -329,6 +334,7 @@ cc.Class({
             console.log(data);
             self.numOfMJ = data.numofmj;
             self.gamestate = data.state;
+            self.fengxiang = data.fengxiang;
             if (self.gamestate == "dingque") {
                 self.isDingQueing = true;
             } else if (self.gamestate == "huanpai") {
@@ -664,13 +670,14 @@ cc.Class({
     doBuhuaforme: function doBuhuaforme(seatIndex, holds, buhuas) {
         console.log("da buhua");
         var seatData = this.seats[seatIndex];
-        for (var i = 0; i < holds.length; i++) {
-            seatData.holds.push(holds[i]);
-        }
-        for (var i = 0; i < buhuas.length; i++) {
-            var idx = seatData.holds.indexOf(buhuas[i]);
-            seatData.holds.splice(idx, 1);
-        }
+        // for(var i=0 ; i < holds.length ; i++) {
+        //     seatData.holds.push(holds[i]);
+        // }
+        // for(var i=0 ; i < buhuas.length ; i++) {
+        //     var idx = seatData.holds.indexOf(buhuas[i]);
+        //     seatData.holds.splice(idx,1);
+        // }
+        seatData.holds = holds;
         this.dispatchEvent('buhua_notify', seatData);
     },
 

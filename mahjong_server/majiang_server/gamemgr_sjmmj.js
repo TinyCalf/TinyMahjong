@@ -202,11 +202,13 @@ function shuffle(game) {
     //     mjs.push(mjs2[i]);
     //     mjs.push(mjs3[i]);
     // }
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(12);
+    // var mjs = [28,29,30,31,28,29,30,31];
+    // mjs.push(28);
+    // mjs.push(28);
+    // mjs.push(28);
+    // mjs.push(28);
+    // mjs.push(27);
+    // index = 0;
     // for ( var i =0 ; i < mjs.length ; i++) {
     //     game.mahjongs[index] = mjs[i];
     //     index++;

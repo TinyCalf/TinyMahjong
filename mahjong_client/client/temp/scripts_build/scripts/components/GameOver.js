@@ -381,7 +381,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:
@@ -485,8 +485,14 @@ cc.Class({
                     actionArr.push("被抢杠");
                 } else if (ac.type == "beichadajiao") {
                     actionArr.push("被查叫");
-                } else if (ac.type == "sanchisanpeng") {
-                    actionArr.push("三吃三碰");
+                } else if (ac.type == "sanchisanpeng0") {
+                    actionArr.push("三吃三碰东");
+                } else if (ac.type == "sanchisanpeng1") {
+                    actionArr.push("三吃三碰南");
+                } else if (ac.type == "sanchisanpeng2") {
+                    actionArr.push("三吃三碰西");
+                } else if (ac.type == "sanchisanpeng3") {
+                    actionArr.push("三吃三碰北");
                 }
             }
 
@@ -683,7 +689,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:
@@ -983,7 +989,7 @@ cc.Class({
             //显示当前风圈和局数
             var numofgames = this._gameover.getChildByName("numofgames");
             var fengquan = "东风圈";
-            switch (userData.fengxiang) {
+            switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
                     fengquan = "东风圈";break;
                 case 1:

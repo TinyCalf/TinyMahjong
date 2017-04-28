@@ -1,47 +1,53 @@
-2017-04-27T04:44:37.841Z - normal: Load ~/.CocosCreator/settings.json
-2017-04-27T04:44:37.844Z - normal: checking language setting...
-2017-04-27T04:44:37.844Z - normal: Language: zh
-2017-04-27T04:44:38.939Z - success: protocol editor-framework registered
-2017-04-27T04:44:38.939Z - success: protocol app registered
-2017-04-27T04:44:38.940Z - success: protocol packages registered
-2017-04-27T04:44:38.940Z - success: protocol theme registered
-2017-04-27T04:44:38.940Z - success: protocol unpack registerred
-2017-04-27T04:44:39.125Z - normal: connected!
-2017-04-27T04:44:39.127Z - normal: Check project C:\Users\user\Desktop\mahjong\mahjong_client\client
-2017-04-27T04:44:39.129Z - normal: Initializing Cocos Creator Editor
-2017-04-27T04:44:39.377Z - normal: Initializing Cocos2d
-2017-04-27T04:44:39.528Z - normal: Initializing Asset Database
-2017-04-27T04:44:39.546Z - success: protocol uuid registerred
-2017-04-27T04:44:39.546Z - success: protocol db registerred
-2017-04-27T04:44:39.546Z - success: protocol thumbnail registerred
-2017-04-27T04:44:39.547Z - normal: Loading editor/builtin packages
-2017-04-27T04:44:39.645Z - success: assets loaded
-2017-04-27T04:44:39.646Z - success: builder loaded
-2017-04-27T04:44:39.648Z - success: hierarchy loaded
-2017-04-27T04:44:39.650Z - success: inspector loaded
-2017-04-27T04:44:39.651Z - success: keystore loaded
-2017-04-27T04:44:39.657Z - success: node-library loaded
-2017-04-27T04:44:39.659Z - success: preferences loaded
-2017-04-27T04:44:39.669Z - success: project-importer loaded
-2017-04-27T04:44:39.670Z - success: project-settings loaded
-2017-04-27T04:44:39.673Z - success: ui-kit loaded
-2017-04-27T04:44:39.674Z - success: ui-grid loaded
-2017-04-27T04:44:39.676Z - success: scene loaded
-2017-04-27T04:44:39.677Z - success: sprite-editor loaded
-2017-04-27T04:44:39.680Z - success: timeline loaded
-2017-04-27T04:44:39.680Z - normal: Loading builtin packages
-2017-04-27T04:44:39.682Z - success: asset-db-debugger loaded
-2017-04-27T04:44:39.683Z - success: code-editor loaded
-2017-04-27T04:44:39.683Z - success: color-picker loaded
-2017-04-27T04:44:39.686Z - success: console loaded
-2017-04-27T04:44:39.688Z - success: package-manager loaded
-2017-04-27T04:44:39.690Z - success: tester loaded
-2017-04-27T04:44:39.692Z - success: ui-kit-preview-extra loaded
-2017-04-27T04:44:39.693Z - success: ui-kit-preview loaded
-2017-04-27T04:44:39.694Z - success: ui-tree loaded
-2017-04-27T04:44:39.722Z - normal: Initializing project C:\Users\user\Desktop\mahjong\mahjong_client\client
-2017-04-27T04:44:39.724Z - normal: Loading packages
-2017-04-27T04:44:39.728Z - normal: Watching packages
-2017-04-27T04:44:39.739Z - normal: Run Application
-2017-04-27T04:44:40.983Z - success: preview server running at http://localhost:7456
-2017-04-27T04:44:43.584Z - normal: 1.3.2
+2017-04-28T08:00:45.316Z - normal: Load ~/.CocosCreator/settings.json
+2017-04-28T08:00:45.320Z - normal: checking language setting...
+2017-04-28T08:00:45.320Z - normal: Language: zh
+2017-04-28T08:00:46.417Z - success: protocol editor-framework registered
+2017-04-28T08:00:46.417Z - success: protocol app registered
+2017-04-28T08:00:46.418Z - success: protocol packages registered
+2017-04-28T08:00:46.418Z - success: protocol theme registered
+2017-04-28T08:00:46.418Z - success: protocol unpack registerred
+2017-04-28T08:00:46.537Z - normal: connected!
+2017-04-28T08:00:46.539Z - normal: Check project C:\Users\user\Desktop\mahjong\mahjong_client\client
+2017-04-28T08:00:46.541Z - normal: Initializing Cocos Creator Editor
+2017-04-28T08:00:46.745Z - normal: Initializing Cocos2d
+2017-04-28T08:00:46.867Z - normal: Initializing Asset Database
+2017-04-28T08:00:46.883Z - success: protocol uuid registerred
+2017-04-28T08:00:46.883Z - success: protocol db registerred
+2017-04-28T08:00:46.883Z - success: protocol thumbnail registerred
+2017-04-28T08:00:46.884Z - normal: Loading editor/builtin packages
+2017-04-28T08:00:46.968Z - success: assets loaded
+2017-04-28T08:00:46.969Z - success: builder loaded
+2017-04-28T08:00:46.971Z - success: hierarchy loaded
+2017-04-28T08:00:46.973Z - success: inspector loaded
+2017-04-28T08:00:46.976Z - success: keystore loaded
+2017-04-28T08:00:46.978Z - success: node-library loaded
+2017-04-28T08:00:46.979Z - success: preferences loaded
+2017-04-28T08:00:46.989Z - success: project-importer loaded
+2017-04-28T08:00:46.990Z - success: project-settings loaded
+2017-04-28T08:00:46.991Z - success: ui-kit loaded
+2017-04-28T08:00:46.992Z - success: ui-grid loaded
+2017-04-28T08:00:46.993Z - success: scene loaded
+2017-04-28T08:00:46.994Z - success: sprite-editor loaded
+2017-04-28T08:00:46.997Z - success: timeline loaded
+2017-04-28T08:00:46.997Z - normal: Loading builtin packages
+2017-04-28T08:00:46.999Z - success: asset-db-debugger loaded
+2017-04-28T08:00:47.000Z - success: code-editor loaded
+2017-04-28T08:00:47.000Z - success: color-picker loaded
+2017-04-28T08:00:47.002Z - success: console loaded
+2017-04-28T08:00:47.003Z - success: package-manager loaded
+2017-04-28T08:00:47.005Z - success: tester loaded
+2017-04-28T08:00:47.005Z - success: ui-kit-preview-extra loaded
+2017-04-28T08:00:47.006Z - success: ui-kit-preview loaded
+2017-04-28T08:00:47.007Z - success: ui-tree loaded
+2017-04-28T08:00:47.031Z - normal: Initializing project C:\Users\user\Desktop\mahjong\mahjong_client\client
+2017-04-28T08:00:47.033Z - normal: Loading packages
+2017-04-28T08:00:47.036Z - normal: Watching packages
+2017-04-28T08:00:47.044Z - normal: Run Application
+2017-04-28T08:00:48.986Z - success: preview server running at http://localhost:7456
+2017-04-28T08:00:51.691Z - normal: 1.3.2
+2017-04-28T08:07:08.206Z - normal: Compiled successfully
+2017-04-28T08:10:08.680Z - info: This is a raw asset, it does not exists in library
+2017-04-28T08:10:28.369Z - info: This is a raw asset, it does not exists in library
+2017-04-28T08:10:31.349Z - info: This is a raw asset, it does not exists in library
+2017-04-28T08:11:23.703Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/resources/textures/MJ/bottom/bottom.meta
+2017-04-28T08:11:23.952Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/resources/textures/MJ/bottom/bottom.rar.meta
