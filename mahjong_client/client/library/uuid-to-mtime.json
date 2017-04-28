@@ -149,11 +149,6 @@
     "meta": 1492937833276,
     "relativePath": "resources\\textures\\images\\history_record.png"
   },
-  "e34ab6be-5473-4435-94e5-e6c24b404352": {
-    "asset": 1480609926000,
-    "meta": 1492937837646,
-    "relativePath": "resources\\textures\\images\\JoinRoom.plist"
-  },
   "3dad14aa-1217-43e2-a654-c22ae3a85d84": {
     "asset": 1480609946000,
     "meta": 1492937837662,
@@ -167,17 +162,7 @@
   "8ef50f39-a422-4106-b3db-752100f6fcac": {
     "asset": 1491894462750,
     "meta": 1492937833276,
-    "relativePath": "resources\\textures\\images\\Login"
-  },
-  "85db6c99-5092-45a3-a8c0-98fb181aa327": {
-    "asset": 1480461642000,
-    "meta": 1492937833295,
-    "relativePath": "resources\\textures\\images\\JoinRoom.png"
-  },
-  "79ca1461-bcce-4e92-a148-bbd4884778f1": {
-    "asset": 1480609926000,
-    "meta": 1492937837676,
-    "relativePath": "resources\\textures\\images\\main_scene.plist"
+    "relativePath": "resources\\textures\\Login"
   },
   "4201ef1f-4abc-4af0-8e84-e9e776943900": {
     "asset": 1480609926000,
@@ -193,11 +178,6 @@
     "asset": 1489393115593,
     "meta": 1492937833346,
     "relativePath": "resources\\textures\\images\\playScenesc"
-  },
-  "67e7e9b0-c5c7-43b0-a0cf-690104c0465b": {
-    "asset": 1480490372000,
-    "meta": 1492937833358,
-    "relativePath": "resources\\textures\\images\\playScenesc\\nvxiongmao001.png"
   },
   "167f10f8-ce98-49d8-8bd8-892a7a8da645": {
     "asset": 1481871124000,
@@ -639,65 +619,15 @@
     "meta": 1492937833769,
     "relativePath": "resources\\textures\\png\\Z_zhunbeizhuangt.png"
   },
-  "4fc373ca-415e-4c11-9776-15f58cc986b8": {
-    "asset": 1489393116382,
-    "meta": 1492937833770,
-    "relativePath": "resources\\textures\\setting"
-  },
   "0b76b4ec-bbc9-4aeb-a1de-cbe665509f05": {
     "asset": 1480609908000,
     "meta": 1492937833773,
     "relativePath": "resources\\textures\\png\\room_num.png"
   },
-  "04175e45-7938-487d-a471-f6b8204c55e1": {
-    "asset": 1480609976000,
-    "meta": 1492937833775,
-    "relativePath": "resources\\textures\\setting\\checkbox_full.png"
-  },
-  "7f59c7ae-665a-4154-8e01-8aca650a6fec": {
-    "asset": 1480609976000,
-    "meta": 1492937833776,
-    "relativePath": "resources\\textures\\setting\\cr_check_bg.png"
-  },
-  "ad87660e-cf3d-4c4a-9058-de8d22700d61": {
-    "asset": 1480609976000,
-    "meta": 1492937833776,
-    "relativePath": "resources\\textures\\setting\\checkbox_void.png"
-  },
-  "88828ec5-c842-43b9-b212-84a48cf424b6": {
-    "asset": 1480609976000,
-    "meta": 1492937833776,
-    "relativePath": "resources\\textures\\setting\\cr_unused.png"
-  },
-  "4b82bfd7-c347-48d7-ae61-519081a158b2": {
-    "asset": 1480609976000,
-    "meta": 1492937833776,
-    "relativePath": "resources\\textures\\setting\\createroom_check.png"
-  },
-  "5bbb5fae-3058-4ae6-8566-2263eecf1305": {
-    "asset": 1480609976000,
-    "meta": 1492937833792,
-    "relativePath": "resources\\textures\\setting\\titlebg.png"
-  },
-  "698f8b0b-3e01-4ee8-aeae-502e71c1d57a": {
-    "asset": 1480609976000,
-    "meta": 1492937833796,
-    "relativePath": "resources\\textures\\setting\\z_fuxuan_off.png"
-  },
-  "76c50036-e629-41dc-9674-e384be20f9de": {
-    "asset": 1480609976000,
-    "meta": 1492937833793,
-    "relativePath": "resources\\textures\\setting\\whitebackground.png"
-  },
   "42e7ba5e-83e8-43a9-ba94-e8059b3f73d9": {
     "asset": 1489393116531,
     "meta": 1492937833856,
     "relativePath": "resources\\textures\\voice"
-  },
-  "5ba85f44-eef1-495c-a091-03ddf1942031": {
-    "asset": 1480609976000,
-    "meta": 1492937833796,
-    "relativePath": "resources\\textures\\setting\\z_fuxuan_on.png"
   },
   "faacbdb0-134f-4cf3-9b59-4e1f06c3db66": {
     "asset": 1480609946000,
@@ -845,8 +775,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1493093400370,
-    "meta": 1493107470701,
+    "asset": 1493374786320,
+    "meta": 1493374786416,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -1499,20 +1429,10 @@
     "meta": 1492937832314,
     "relativePath": "resources\\textures\\chat\\emoji_action_texture.png"
   },
-  "724d46da-53ce-4447-bab5-5f2ef9e75702": {
-    "asset": 1491894462698,
-    "meta": 1492937832714,
-    "relativePath": "resources\\textures\\hall11111"
-  },
   "e7180329-ad86-43c4-871e-6d337895df56": {
     "asset": 1480609908000,
     "meta": 1492937832316,
     "relativePath": "resources\\textures\\chat\\Z_chat_bottom_1.png"
-  },
-  "d4b0d222-3ed9-4e3c-b4ac-e26e001af5d1": {
-    "asset": 1491894462698,
-    "meta": 1492937832721,
-    "relativePath": "resources\\textures\\hall11111\\z_datingtouxiang.png"
   },
   "16d6efd0-000d-4669-8504-01d4a03b9cfc": {
     "asset": 1491894462776,
@@ -1523,11 +1443,6 @@
     "asset": 1480609926000,
     "meta": 1492937837583,
     "relativePath": "resources\\textures\\images\\chat.plist"
-  },
-  "5eec799d-19eb-4553-9382-2ac0e65e63be": {
-    "asset": 1491894462697,
-    "meta": 1492937832731,
-    "relativePath": "resources\\textures\\hall11111\\fangkaxiaobeijing.png"
   },
   "65f60710-5e7a-420b-8be7-50f81c38f9c6": {
     "asset": 1480609926000,
@@ -2094,30 +2009,10 @@
     "meta": 1492937833226,
     "relativePath": "resources\\textures\\images\\GameEnd\\GameEnd9.png"
   },
-  "331ab7b5-5be2-42dd-8ea1-a40274fdfe36": {
-    "asset": 1489459342332,
-    "meta": 1492937833364,
-    "relativePath": "resources\\textures\\images\\main_scene.png"
-  },
-  "3e9045c4-3bb5-4043-9228-a7effa97ec39": {
-    "asset": 1489459342336,
-    "meta": 1492937833496,
-    "relativePath": "resources\\textures\\images\\splash.jpg"
-  },
-  "cdbf24b6-487a-47c4-89c8-a26c904af2d4": {
-    "asset": 1480609938000,
-    "meta": 1492937837726,
-    "relativePath": "resources\\textures\\images\\youqingTip.plist"
-  },
   "2f2ceb8c-9676-47de-8bdc-aaeec566600c": {
     "asset": 1489459342321,
     "meta": 1492937833514,
     "relativePath": "resources\\textures\\images\\PopupScene.png"
-  },
-  "2c9b7b23-1d41-4a46-bb3d-59f276d1d239": {
-    "asset": 1489459342345,
-    "meta": 1492937833551,
-    "relativePath": "resources\\textures\\images\\youqingTip.png"
   },
   "90758d9a-c0d2-459e-86c2-fe664614b06a": {
     "asset": 1489459342352,
@@ -2125,8 +2020,8 @@
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1493093400373,
-    "meta": 1493107471067,
+    "asset": 1493374894428,
+    "meta": 1493374894938,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
@@ -2135,8 +2030,8 @@
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1493093400363,
-    "meta": 1493107471328,
+    "asset": 1493376476904,
+    "meta": 1493376477303,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -2164,11 +2059,6 @@
     "meta": 1492937832744,
     "relativePath": "resources\\textures\\images\\chi.png"
   },
-  "5a6264d0-c33b-46d3-b38f-d526335be99f": {
-    "asset": 1489720495501,
-    "meta": 1492937833324,
-    "relativePath": "resources\\textures\\images\\mahjong_table.jpg"
-  },
   "921df409-65d7-49fb-9185-517ab198c993": {
     "asset": 1493093400374,
     "meta": 1493107471134,
@@ -2180,8 +2070,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1493268624795,
-    "meta": 1493283181912,
+    "asset": 1493376490568,
+    "meta": 1493376490604,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -2202,37 +2092,37 @@
   "0b06e653-7f69-42a1-9892-7b265f6e2a44": {
     "asset": 1491894462724,
     "meta": 1492937833306,
-    "relativePath": "resources\\textures\\images\\Login\\bg.jpg"
+    "relativePath": "resources\\textures\\Login\\bg.jpg"
   },
   "77751ff8-aec3-4571-af26-6c098d3c6b7a": {
     "asset": 1491894462736,
     "meta": 1492937833306,
-    "relativePath": "resources\\textures\\images\\Login\\btn_weixin.png"
+    "relativePath": "resources\\textures\\Login\\btn_weixin.png"
   },
   "49d66b6a-f5c0-46e1-9410-00b119ee9850": {
     "asset": 1491894462734,
     "meta": 1492937833301,
-    "relativePath": "resources\\textures\\images\\Login\\btn_ traveler.png"
+    "relativePath": "resources\\textures\\Login\\btn_ traveler.png"
   },
   "53dd92a5-1fbd-4640-894d-e0beefe3e5b1": {
     "asset": 1491894462747,
     "meta": 1492937833306,
-    "relativePath": "resources\\textures\\images\\Login\\check_mark.png"
+    "relativePath": "resources\\textures\\Login\\check_mark.png"
   },
   "10f8ab8e-1ff0-4f29-9629-6123d7a217f9": {
     "asset": 1491894462750,
     "meta": 1492937833306,
-    "relativePath": "resources\\textures\\images\\Login\\yonghuxieyi.png"
+    "relativePath": "resources\\textures\\Login\\yonghuxieyi.png"
   },
   "e9e283ed-db3a-4a45-926e-561c35529e91": {
     "asset": 1491894462080,
     "meta": 1492937832366,
-    "relativePath": "resources\\textures\\Game\\GameEnd4.jpg"
+    "relativePath": "resources\\textures\\utils\\GameEnd4.jpg"
   },
   "8ebc3ec2-c462-469c-970a-8a89085e7bc2": {
     "asset": 1491894462774,
     "meta": 1492937832752,
-    "relativePath": "resources\\textures\\images\\chuangjianfangjian.png"
+    "relativePath": "resources\\textures\\hall\\chuangjianfangjian.png"
   },
   "2c04277e-8b71-4448-968f-0402e9150261": {
     "asset": 1491894462470,
@@ -2597,7 +2487,7 @@
   "395b8104-1169-423a-b262-8a7e8a51a67e": {
     "asset": 1491894462617,
     "meta": 1492937832656,
-    "relativePath": "resources\\textures\\hall\\shaizi.png"
+    "relativePath": "resources\\textures\\utils\\shaizi.png"
   },
   "82a55f93-1198-4c2d-a942-6774a9609e92": {
     "asset": 1491894462674,

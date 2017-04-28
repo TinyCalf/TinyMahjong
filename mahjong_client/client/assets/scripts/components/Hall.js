@@ -99,6 +99,11 @@ cc.Class({
         this.refreshGemsTip();
         
         cc.vv.audioMgr.playBGM("bgMain.mp3");
+        
+        //预加载麻将游戏界面
+        cc.director.preloadScene('mjgame', function () {
+            cc.log('preload mjgame complete!!!');
+        });
     },
     
     refreshInfo:function(){
@@ -198,7 +203,13 @@ cc.Class({
     },
     
     onReturnGameClicked:function(){
-        cc.director.loadScene("mjgame");  
+        var loadgame = function (){
+            cc.director.loadScene("mjgame");  
+        }
+        var fadeout = cc.fadeOut(0.1);
+        var finish = cc.callFunc(loadgame, this);
+        var seq = cc.sequence(fadeout, finish);
+        this.node.runAction(seq);
     },
     
     onBtnAddGemsClicked:function(){

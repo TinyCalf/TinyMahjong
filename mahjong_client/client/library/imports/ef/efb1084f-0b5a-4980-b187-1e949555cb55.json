@@ -1721,9 +1721,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "b874b9e3-55b7-46b5-911e-46d8e00ae34d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 37
@@ -2812,9 +2810,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "b0737cf8-25e7-4122-a577-66181b3ffbb8"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 65
@@ -2945,9 +2941,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "147fe42f-7640-4b8a-adf2-b4097e0c7e65"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 68
@@ -3013,9 +3007,7 @@
       "__id__": 71
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "52a1abf5-8762-4bb7-82dd-c6c7afc88610"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -3029,9 +3021,7 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": {
-      "__uuid__": "79ca1461-bcce-4e92-a148-bbd4884778f1"
-    }
+    "_atlas": null
   },
   {
     "__type__": "cc.Node",
@@ -3096,9 +3086,7 @@
       "__id__": 73
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "24670f05-f6d6-42a2-b7a4-ef9e463011f7"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -3112,9 +3100,7 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": {
-      "__uuid__": "79ca1461-bcce-4e92-a148-bbd4884778f1"
-    }
+    "_atlas": null
   },
   {
     "__type__": "cc.Button",
@@ -3160,9 +3146,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "24670f05-f6d6-42a2-b7a4-ef9e463011f7"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 73
@@ -4793,9 +4777,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "a856e807-c132-4e91-bda1-b95a0593291b"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 112
@@ -5047,9 +5029,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "9a015ff4-f39b-41a5-bc1f-fff72dafcdb6"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 120
@@ -5301,9 +5281,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "aa33de03-9b55-459d-b5b0-8e7c6fb20b00"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 128
@@ -5555,9 +5533,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "cf7639d5-3f54-4160-94e6-01298d35fd02"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 136
@@ -5809,9 +5785,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "cb10cfc4-0088-4bc5-8f3b-a2af00fb88b1"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 144
@@ -6063,9 +6037,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "aa52ef21-75a9-45ac-9725-afbf473df0b7"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 152
@@ -6317,9 +6289,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "d5119d67-5224-4403-8130-5a1b50128280"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 160
@@ -6571,9 +6541,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "fbd4f585-4b9f-483f-82ab-02085b92b38e"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 168
@@ -6825,9 +6793,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "0d530de2-7c69-407b-a81e-58f8aa35e92a"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 176
@@ -7079,9 +7045,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "b1851886-6654-48f8-bbda-22f762d3e3b3"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 184
@@ -7333,9 +7297,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "59788439-5d0c-4124-842b-44d03e21f1bd"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 192
@@ -7587,9 +7549,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "61b4cc23-12d5-45ee-a302-b15d54acaf4c"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 200
@@ -9336,9 +9296,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 254
@@ -9651,9 +9609,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 263
@@ -9966,9 +9922,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 272
@@ -10503,9 +10457,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 286
@@ -10866,9 +10818,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 296
@@ -11365,9 +11315,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 309
@@ -11728,9 +11676,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 319
@@ -12230,9 +12176,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 332
@@ -12593,9 +12537,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 342
@@ -12956,9 +12898,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 352
@@ -14188,9 +14128,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 386
@@ -14551,9 +14489,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 396
@@ -15050,9 +14986,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 409
@@ -15413,9 +15347,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 419
@@ -15918,9 +15850,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 432
@@ -16281,9 +16211,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 442
@@ -16644,9 +16572,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 452
@@ -17007,9 +16933,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 462
@@ -17713,9 +17637,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 480
@@ -18076,9 +17998,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 490
@@ -18575,9 +18495,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 503
@@ -18938,9 +18856,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 513
@@ -19437,9 +19353,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 526
@@ -19800,9 +19714,7 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": {
-      "__uuid__": "e7b17174-dc37-407e-8cd3-09b440c7d89d"
-    },
+    "_N$normalSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 536

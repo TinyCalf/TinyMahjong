@@ -63,6 +63,10 @@ cc.Class({
         this.initWanfaLabel();
         this.onGameBeign();
         cc.vv.audioMgr.playBGM("bgMain.mp3");
+
+        //淡入
+        var fadein = cc.fadeIn(0.1);
+        this.node.runAction(fadein);
     },
 
     initView: function initView() {

@@ -210,7 +210,20 @@ cc.Class({
                 
         cc.vv.net.addHandler("login_finished",function(data){
             console.log("login_finished");
-            cc.director.loadScene("mjgame");
+            
+            
+            
+            var loadgame = function (){
+                cc.director.loadScene("mjgame");  
+            }
+            var fadeout = cc.fadeOut(0.1);
+            var finish = cc.callFunc(loadgame, this);
+            var seq = cc.sequence(fadeout, finish);
+            cc.director.getScene().getChildByName('Canvas').runAction(seq);
+            
+            
+            
+            //cc.director.loadScene("mjgame");
         });
 
         cc.vv.net.addHandler("exit_result",function(data){
