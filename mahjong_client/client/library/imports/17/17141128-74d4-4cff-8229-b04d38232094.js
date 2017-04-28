@@ -1,21 +1,23 @@
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         updatePanel: {
-            "default": null,
+            default: null,
             type: cc.Node
         },
         manifestUrl: {
-            "default": null,
+            default: null,
             url: cc.RawAsset
         },
         percent: {
-            "default": null,
+            default: null,
             type: cc.Label
         },
         lblErr: {
-            "default": null,
+            default: null,
             type: cc.Label
         }
     },

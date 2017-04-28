@@ -2,8 +2,10 @@
 cc._RFpush(module, '350d3Ry9aVIqJR27fP2H/z1', 'LoadingLogic');
 // scripts\components\LoadingLogic.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         tipLabel: cc.Label,
@@ -25,6 +27,45 @@ cc.Class({
 
         this._splash = cc.find("Canvas/splash");
         this._splash.active = true;
+
+        var self = this;
+        cc.vv.http.sendRequest("/mj_login", 1, function (data) {
+            console.log(data);
+            console.log(data.data);
+            console.log(data.data.youkeorweixin);
+            console.log("datadata");
+            console.log("platform:" + cc.sys.os);
+            // youkeorweixin :0��ʾ���ο͵�¼��1��ʾ��΢�ŵ�¼
+            cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
+            if (cc.sys.os == cc.sys.OS_ANDROID) {
+                console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
+                if (data.data.youkeorweixin == "0") {
+                    //ֻ���ο͵�¼
+                    // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
+                    //  z_weixindenglu.active = false;
+                    console.log("ffz-loading");
+
+                    cc.find("Canvas/New_Label").active = false;
+                }
+                if (data.data.youkeorweixin == "1") {//ֻ��΢�ŵ�¼
+
+
+                }
+            } else if (cc.sys.os == cc.sys.OS_IOS) {
+                console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
+                if (data.data.youkeorweixin == "0") {
+                    //ֻ���ο͵�¼
+                    cc.find("Canvas/New_Label").active = false;
+                }
+                if (data.data.youkeorweixin == "1") {//ֻ��΢�ŵ�¼
+
+                }
+            } else {
+                console.log("platform:" + cc.sys.os + " dosn't implement share.");
+            }
+            var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+            console.log(youkeorweixin);
+        });
     },
 
     start: function start() {

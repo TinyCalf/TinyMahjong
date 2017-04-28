@@ -40,7 +40,7 @@ cc.Class({
         // ...
         _mima:null,
         _mimaIndex:0,
-        mjdl:1,  //Âé½«µÇÂ¼ÓÃ»§Ð­Òé£¬Ö»ÓÐ¹´Ñ¡°´Å¥ÓÎ¿ÍµÇÂ¼ºÍÎ¢ÐÅµÇÂ¼²Å¿ÉÒÔ½øÈ¥
+        mjdl:1,  //ï¿½é½«ï¿½ï¿½Â¼ï¿½Ã»ï¿½Ð­ï¿½é£¬Ö»ï¿½Ð¹ï¿½Ñ¡ï¿½ï¿½Å¥ï¿½Î¿Íµï¿½Â¼ï¿½ï¿½Î¢ï¿½Åµï¿½Â¼ï¿½Å¿ï¿½ï¿½Ô½ï¿½È¥
     },
 
     // use this for initialization
@@ -69,33 +69,44 @@ cc.Class({
             cc.find("Canvas/btn_yk").active = true;    
         }
 
-
+        var self = this;
         cc.vv.http.sendRequest("/mj_login", 1, function(data){
                 console.log(data);
                 console.log(data.data);
                 console.log(data.data.youkeorweixin);
                 console.log("datadata");
                 console.log("platform:" + cc.sys.os);
-                // youkeorweixin :0±íÊ¾ÊÇÓÎ¿ÍµÇÂ¼£¬1±íÊ¾ÊÇÎ¢ÐÅµÇÂ¼
+                // youkeorweixin :0ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Î¿Íµï¿½Â¼ï¿½ï¿½1ï¿½ï¿½Ê¾ï¿½ï¿½Î¢ï¿½Åµï¿½Â¼
                 cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
                 if(cc.sys.os == cc.sys.OS_ANDROID){ 
                     console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
-                     if(data.data.youkeorweixin == "0"){ //Ö»ÓÐÓÎ¿ÍµÇÂ¼
+                     if(data.data.youkeorweixin == "0"){ //Ö»ï¿½ï¿½ï¿½Î¿Íµï¿½Â¼
                             // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
                             //  z_weixindenglu.active = false;
+                          console.log("kkong1");
+                       
+                            cc.find("Canvas/yhxy").active = true; 
+
+                       
+                            cc.find("Canvas/tyyhxy/btn_checkbox/check_mark").active = false; 
+                            self.mjdl = 0;
+                            console.log("mjdl"+self.mjdl);
+
+
+
                               cc.find("Canvas/btn_yk").active = true; 
                             cc.find("Canvas/z_weixindenglu").active = false;   
                            
-                         console.log("ÓÎ¿ÍµÇÂ¼");
+                         console.log("ï¿½Î¿Íµï¿½Â¼");
                              
                         
                     }
-                    if(data.data.youkeorweixin == "1"){ //Ö»ÓÐÎ¢ÐÅµÇÂ¼
+                    if(data.data.youkeorweixin == "1"){ //Ö»ï¿½ï¿½Î¢ï¿½Åµï¿½Â¼
                             cc.find("Canvas/z_weixindenglu").active = true;   
                             cc.find("Canvas/btn_yk").active = false;   
                             // var btn_yk = this.node.getChildByName("btn_yk");
                             //  btn_yk.active = false;
-                         console.log("Î¢ÐÅµÇÂ¼");
+                         console.log("Î¢ï¿½Åµï¿½Â¼");
                         
                     }
 
@@ -103,21 +114,35 @@ cc.Class({
                 }
                 else if(cc.sys.os == cc.sys.OS_IOS){
                     console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
-                  if(data.data.youkeorweixin == "0"){ //Ö»ÓÐÓÎ¿ÍµÇÂ¼
+                  if(data.data.youkeorweixin == "0"){ //Ö»ï¿½ï¿½ï¿½Î¿Íµï¿½Â¼
                             // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
                             //  z_weixindenglu.active = false;
+                           
+                           
+                            console.log("kkong1");
+                       
+                            cc.find("Canvas/yhxy").active = true; 
+
+                       
+                            cc.find("Canvas/tyyhxy/btn_checkbox/check_mark").active = false; 
+                            self.mjdl = 0;
+                             console.log("mjdl"+self.mjdl);
+
+
+
+
                             cc.find("Canvas/btn_yk").active = true; 
                             cc.find("Canvas/z_weixindenglu").active = false;   
-                         console.log("ÓÎ¿ÍµÇÂ¼");
+                         console.log("ï¿½Î¿Íµï¿½Â¼");
                              
                         
                     }
-                    if(data.data.youkeorweixin == "1"){ //Ö»ÓÐÎ¢ÐÅµÇÂ¼
+                    if(data.data.youkeorweixin == "1"){ //Ö»ï¿½ï¿½Î¢ï¿½Åµï¿½Â¼
                             cc.find("Canvas/z_weixindenglu").active = true; 
                             cc.find("Canvas/btn_yk").active = false;   
                             // var btn_yk = this.node.getChildByName("btn_yk");
                             //  btn_yk.active = false;
-                         console.log("Î¢ÐÅµÇÂ¼");
+                         console.log("Î¢ï¿½Åµï¿½Â¼");
                         
                     }
 

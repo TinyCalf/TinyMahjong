@@ -1,9 +1,14 @@
 {
+  "appKey": "",
+  "appSecret": "",
   "excludeScenes": [],
   "includeAnySDK": false,
   "includeSdk": [
     "anysdk"
   ],
+  "inlineSpriteFrames": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
   "orientation": {
     "landscapeLeft": true,
     "landscapeRight": true,
@@ -11,7 +16,9 @@
     "upsideDown": false
   },
   "packageName": "com.vivigames.scmj",
+  "privateKey": "",
+  "renderMode": "0",
   "startScene": "4a1acad9-ce88-4334-aa62-bf23a5ccc79e",
-  "title": "ZSMJ",
+  "title": "ZSMJj",
   "webOrientation": "landscape"
 }

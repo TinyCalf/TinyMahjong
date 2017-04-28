@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'ZSMJ' target in the 'ZSMJ' project
-//
-
-#ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-	#import <UIKit/UIKit.h>
-#endif

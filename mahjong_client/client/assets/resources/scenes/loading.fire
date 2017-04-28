@@ -191,7 +191,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "New_Label",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -258,6 +258,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "正在连接网络...",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -471,6 +472,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "版本过旧\n请下载并安装新版本",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
@@ -621,6 +623,7 @@
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_N$string": "确定",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,

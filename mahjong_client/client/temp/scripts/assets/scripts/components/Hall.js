@@ -2,10 +2,12 @@
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
 // scripts\components\Hall.js
 
+"use strict";
+
 var Net = require("Net");
 var Global = require("Global");
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         lblName: cc.Label,
@@ -23,15 +25,6 @@ cc.Class({
         sprHeadImg: cc.Sprite
     },
 
-    // foo: {
-    //    default: null,
-    //    url: cc.Texture2D,  // optional, default is typeof default
-    //    serializable: true, // optional, default is true
-    //    visible: true,      // optional, default is true
-    //    displayName: 'Foo', // optional
-    //    readonly: false,    // optional, default is false
-    // },
-    // ...
     initNetHandlers: function initNetHandlers() {
         var self = this;
     },
@@ -66,6 +59,25 @@ cc.Class({
         if (roomId != null) {
             cc.vv.userMgr.oldRoomId = null;
             cc.vv.userMgr.enterRoom(roomId);
+        }
+
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        console.log("youkeorweixin:" + youkeorweixin);
+        if (youkeorweixin == 0) {
+
+            cc.find("Canvas/top_left/headinfo/bg").active = false;
+            cc.find("Canvas/top_left/headinfo/gems").active = false;
+            cc.find("Canvas/top_left/headinfo/lblGems").active = false;
+            cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
+
+            cc.find("Canvas/hallBg/fujianmajiang").active = false;
+            cc.find("Canvas/hallBg/anhuimajiang").active = false;
+            cc.find("Canvas/hallBg/qiqibuyu").active = false;
+            cc.find("Canvas/hallBg/qiqipuke").active = false;
+            cc.find("Canvas/hallBg/more").active = false;
+            cc.find("Canvas/hallBg/xixia001").active = false;
+            cc.find("Canvas/right_bottom/btn_share").active = false;
+            cc.find("Canvas/right_bottom/btn_zhanji").active = false;
         }
 
         var imgLoader = this.sprHeadImg.node.getComponent("ImageLoader");

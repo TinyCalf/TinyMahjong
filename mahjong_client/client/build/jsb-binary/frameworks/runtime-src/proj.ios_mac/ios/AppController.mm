@@ -30,7 +30,6 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "platform/ios/CCEAGLView-ios.h"
-#import "VoiceSDK.h"
 
 @implementation AppController
 
@@ -39,7 +38,6 @@
 
 // cocos2d application instance
 static AppDelegate s_sharedApplication;
-static bool __isWxLogin = false;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -57,7 +55,7 @@ static bool __isWxLogin = false;
                                      numberOfSamples: 0 ];
     
     [eaglView setMultipleTouchEnabled:YES];
-    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
     // Use RootViewController manage CCEAGLView
     viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     viewController.wantsFullScreenLayout = YES;
@@ -84,14 +82,6 @@ static bool __isWxLogin = false;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
     
     cocos2d::Application::getInstance()->run();
-    
-    //向微信注册
-    [WXApi registerApp:@"wxcb508816c5c4e2a4" withDescription:@"scmj"];
-    return YES;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary*)options{
-    [WXApi handleOpenURL:url delegate:self];
     return YES;
 }
 
@@ -102,87 +92,6 @@ static bool __isWxLogin = false;
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
     cocos2d::Director::getInstance()->pause();
-}
-
-+(void) share:(NSString*)url shareTitle:(NSString*)title shareDesc:(NSString*)desc
-{
-    WXMediaMessage *message = [WXMediaMessage message];
-    message.title = title;
-    message.description = desc;
-    [message setThumbImage:[UIImage imageNamed:@"Icon-29.png"]];
-    
-    WXWebpageObject *ext = [WXWebpageObject object];
-    ext.webpageUrl = url;
-    
-    message.mediaObject = ext;
-    
-    GetMessageFromWXResp* resp = [[[GetMessageFromWXResp alloc] init] autorelease];
-    resp.message = message;
-    resp.bText = NO;
-    
-    __isWxLogin = false;
-    [WXApi sendResp:resp];
-}
-
-+(void) shareIMG:(NSString*)filePath width:(int)width height:(int)height
-{
-    WXMediaMessage *message = [WXMediaMessage message];
-    [message setThumbImage:[UIImage imageNamed:@"Icon-29.png"]];
-    
-    WXImageObject *ext = [WXImageObject object];
-    ext.imageData = [NSData dataWithContentsOfFile:filePath];
-    message.mediaObject = ext;
-    
-    GetMessageFromWXResp* resp = [[[GetMessageFromWXResp alloc] init] autorelease];
-    resp.message = message;
-    resp.bText = NO;
-    
-    __isWxLogin = false;
-    [WXApi sendResp:resp];
-}
-
-+(void)login
-{
-    __isWxLogin = true;
-    //构造SendAuthReq结构体
-    SendAuthReq* req =[[[SendAuthReq alloc ] init ] autorelease ];
-    req.scope = @"snsapi_userinfo" ;
-    req.state = @"123" ;
-    //第三方向微信终端发送一个SendAuthReq消息结构
-    [WXApi sendReq:req];
-}
-
-#include "ScriptingCore.h"
--(void) onResp:(BaseResp*)resp{
-    NSLog(@"wx resp data code:%d  str:%@",resp.errCode,resp.errStr);
-    if (__isWxLogin) {
-        __isWxLogin = false;
-        SendAuthResp *aresp = (SendAuthResp *)resp;
-        if (aresp.errCode== 0) {
-            NSString *code = aresp.code;
-            char tmp[255]= {0};
-            const char* tcode = [code UTF8String];
-            sprintf(tmp, "cc.vv.anysdkMgr.onLoginResp('%s')",tcode);
-            ScriptingCore::getInstance()->evalString(tmp);
-        }else{
-            //ScriptingCore::getInstance()->executeString("specialModule.nativelogincallback(null)");
-        }
-    }else{
-        switch (resp.errCode) {
-            case 0:{
-                ScriptingCore::getInstance()->executeString("specialModule.wechatShareMsg(0)");
-                break;
-            }
-            case -2:{
-                ScriptingCore::getInstance()->executeString("specialModule.wechatShareMsg(2)");
-                break;
-            }
-            default:
-            ScriptingCore::getInstance()->executeString("specialModule.wechatShareMsg(3)");
-            break;
-        }
-    }
-    __isWxLogin = false;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

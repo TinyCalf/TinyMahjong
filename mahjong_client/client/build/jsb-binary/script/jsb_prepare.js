@@ -31,116 +31,6 @@ var cc = cc || {};
 var jsb = jsb || {};
 
 /**
- * The element contains the game canvas
- * @type {HTMLDivElement}
- */
-cc.container = null;
-
-/**
- * Iterate over an object or an array, executing a function for each matched element.
- * @param {object|array} obj
- * @param {function} iterator
- * @param {object} [context]
- */
-cc.each = function (obj, iterator, context) {
-    if (!obj)
-        return;
-    if (obj instanceof Array) {
-        for (var i = 0, li = obj.length; i < li; i++) {
-            if (iterator.call(context, obj[i], i) === false)
-                return;
-        }
-    } else {
-        for (var key in obj) {
-            if (iterator.call(context, obj[key], key) === false)
-                return;
-        }
-    }
-};
-
-/**
- * Copy all of the properties in source objects to target object and return the target object.
- * @param {object} target
- * @param {object} *sources
- * @returns {object}
- */
-cc.extend = function(target) {
-    var sources = arguments.length >= 2 ? Array.prototype.slice.call(arguments, 1) : [];
-
-    cc.each(sources, function(src) {
-        for(var key in src) {
-            if (src.hasOwnProperty(key)) {
-                target[key] = src[key];
-            }
-        }
-    });
-    return target;
-};
-
-/**
- * Check the obj whether is function or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isFunction = function(obj) {
-    return typeof obj == 'function';
-};
-
-/**
- * Check the obj whether is number or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isNumber = function(obj) {
-    return typeof obj == 'number' || Object.prototype.toString.call(obj) == '[object Number]';
-};
-
-/**
- * Check the obj whether is string or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isString = function(obj) {
-    return typeof obj == 'string' || Object.prototype.toString.call(obj) == '[object String]';
-};
-
-/**
- * Check the obj whether is array or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isArray = function(obj) {
-    return Array.isArray(obj) ||
-        (typeof obj === 'object' && Object.prototype.toString.call(obj) === '[object Array]');
-};
-
-/**
- * Check the obj whether is undefined or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isUndefined = function(obj) {
-    return typeof obj === 'undefined';
-};
-/**
- * Check the obj whether is object or not
- * @param {*} obj
- * @returns {boolean}
- */
-cc.isObject = function(obj) {
-    return ( obj !== null && typeof obj === "object" );
-};
-
-/**
- * Check the url whether cross origin
- * @param {String} url
- * @returns {boolean}
- */
-cc.isCrossOrigin = function (url) {
-    return false;
-};
-
-/**
  * Common getter setter configuration function
  * @function
  * @param {Object}   proto      A class prototype or an object to config
@@ -156,62 +46,49 @@ cc.defineGetterSetter = function (proto, prop, getter, setter){
 };
 
 /**
- * Associates a base class with a native superclass
- * @function
- * @param {object} jsobj subclass
- * @param {object} klass superclass
+ * Create a new object and copy all properties in an exist object to the new object
+ * @method clone
+ * @param {Object|Array} obj - The source object
+ * @return {Array|Object} The created object
  */
-cc.associateWithNative = function( jsobj, superclass_or_instance ) {};
-
-//
-// JSB supports 2 official ways to create subclasses
-//
-// 1) Google "subclasses" borrowed from closure library
-// This is the recommended way to do it
-//
-cc.inherits = function (childCtor, parentCtor) {
-    /** @constructor */
-    function tempCtor() {};
-    tempCtor.prototype = parentCtor.prototype;
-    childCtor.superClass_ = parentCtor.prototype;
-    childCtor.prototype = new tempCtor();
-    childCtor.prototype.constructor = childCtor;
-
-    // Copy "static" method, but doesn't generate subclasses.
-//  for( var i in parentCtor ) {
-//      childCtor[ i ] = parentCtor[ i ];
-//  }
-};
-cc.base = function(me, opt_methodName, var_args) {
-    var caller = arguments.callee.caller;
-    if (caller.superClass_) {
-        // This is a constructor. Call the superclass constructor.
-        ret =  caller.superClass_.constructor.apply( me, Array.prototype.slice.call(arguments, 1));
-        return ret;
-    }
-
-    var args = Array.prototype.slice.call(arguments, 2);
-    var foundCaller = false;
-    for (var ctor = me.constructor;
-        ctor; ctor = ctor.superClass_ && ctor.superClass_.constructor) {
-        if (ctor.prototype[opt_methodName] === caller) {
-            foundCaller = true;
-        } else if (foundCaller) {
-            return ctor.prototype[opt_methodName].apply(me, args);
+cc.clone = function (obj) {
+    // Cloning is better if the new object is having the same prototype chain
+    // as the copied obj (or otherwise, the cloned object is certainly going to
+    // have a different hidden class). Play with C1/C2 of the
+    // PerformanceVirtualMachineTests suite to see how this makes an impact
+    // under extreme conditions.
+    //
+    // Object.create(Object.getPrototypeOf(obj)) doesn't work well because the
+    // prototype lacks a link to the constructor (Carakan, V8) so the new
+    // object wouldn't have the hidden class that's associated with the
+    // constructor (also, for whatever reasons, utilizing
+    // Object.create(Object.getPrototypeOf(obj)) + Object.defineProperty is even
+    // slower than the original in V8). Therefore, we call the constructor, but
+    // there is a big caveat - it is possible that the this.init() in the
+    // constructor would throw with no argument. It is also possible that a
+    // derived class forgets to set "constructor" on the prototype. We ignore
+    // these possibities for and the ultimate solution is a standardized
+    // Object.clone(<object>).
+    var newObj = (obj.constructor) ? new obj.constructor : {};
+    
+    // Assuming that the constuctor above initialized all properies on obj, the
+    // following keyed assignments won't turn newObj into dictionary mode
+    // becasue they're not *appending new properties* but *assigning existing
+    // ones* (note that appending indexed properties is another story). See
+    // CCClass.js for a link to the devils when the assumption fails.
+    for (var key in obj) {
+        var copy = obj[key];
+        // Beware that typeof null == "object" !
+        if (typeof copy === "object" &&
+            copy &&
+            !(copy instanceof _ccsg.Node) &&
+            (CC_JSB || !(copy instanceof HTMLElement))) {
+            newObj[key] = cc.clone(copy);
+        } else {
+            newObj[key] = copy;
         }
     }
-
-    // If we did not find the caller in the prototype chain,
-    // then one of two things happened:
-    // 1) The caller is an instance method.
-    // 2) This method was not called by the right caller.
-    if (me[opt_methodName] === caller) {
-        return me.constructor.prototype[opt_methodName].apply(me, args);
-    } else {
-        throw Error(
-                    'cc.base called from a method of one name ' +
-                    'to a method of a different name');
-    }
+    return newObj;
 };
 
 
@@ -252,7 +129,7 @@ cc.Class.extend = function (prop) {
         prototype[name] = typeof prop[name] == "function" &&
             typeof _super[name] == "function" && fnTest.test(prop[name]) ?
             (function (name, fn) {
-                return function () {
+                return function (...args) {
                     var tmp = this._super;
 
                     // Add a new ._super() method that is the same method
@@ -261,7 +138,7 @@ cc.Class.extend = function (prop) {
 
                     // The method only need to be bound temporarily, so we
                     // remove it when we're done executing
-                    var ret = fn.apply(this, arguments);
+                    var ret = fn.apply(this, args);
                     this._super = tmp;
 
                     return ret;
@@ -270,10 +147,20 @@ cc.Class.extend = function (prop) {
             prop[name];
     }
 
-    Class = function () {
+    Class = function (...args) {
         if (!initializing) {
             this.__instanceId = ClassManager.getNewInstanceId();
-            this.ctor && this.ctor.apply(this, arguments);
+            if (this.ctor) {
+                switch (args.length) {
+                    case 0: this.ctor(); break;
+                    case 1: this.ctor(args[0]); break;
+                    case 2: this.ctor(args[0], args[1]); break;
+                    case 3: this.ctor(args[0], args[1], args[2]); break;
+                    case 4: this.ctor(args[0], args[1], args[2], args[3]); break;
+                    case 5: this.ctor(args[0], args[1], args[2], args[3], args[4]); break;
+                    default: this.ctor.apply(this, args);
+                }
+            }
         }
     };
     // Populate our constructed prototype object

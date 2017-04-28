@@ -53,6 +53,14 @@ cc.Class({
         
         this.initView();
         this.initEventHandlers();
+
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+                console.log("youkeorweixin:"+youkeorweixin);
+                if(youkeorweixin == 0){
+                    
+                        cc.find("Canvas/prepare/btnWeichat").active = false; 
+                   
+            }
         
         this.gameRoot.active = false;
         this.prepareRoot.active = true;

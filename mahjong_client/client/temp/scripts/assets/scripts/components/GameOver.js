@@ -2,8 +2,10 @@
 cc._RFpush(module, 'facfdljnx5F+rFDAq5Qbmqa', 'GameOver');
 // scripts\components\GameOver.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -99,7 +101,6 @@ cc.Class({
             this.onGameOver_TDH(data);
         }
     },
-
     onGameOver_SJMMJ: function onGameOver_SJMMJ(data) {
         console.log(data);
         if (data.length == 0) {
@@ -409,6 +410,7 @@ cc.Class({
             }
         }
     },
+
     onGameOver_DHMJ: function onGameOver_DHMJ(data) {
         console.log(data);
         if (data.length == 0) {

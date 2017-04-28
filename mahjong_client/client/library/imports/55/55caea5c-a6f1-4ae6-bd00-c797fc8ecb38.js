@@ -1,5 +1,7 @@
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -57,13 +59,13 @@ cc.Class({
         }
         this.bgmAudioID = cc.audioEngine.play(audioUrl, true, this.bgmVolume);
     },
-
     playSFX: function playSFX(url) {
         var audioUrl = this.getUrl(url);
         if (this.sfxVolume > 0) {
             var audioId = cc.audioEngine.play(audioUrl, false, this.sfxVolume);
         }
     },
+
 
     setSFXVolume: function setSFXVolume(v) {
         if (this.sfxVolume != v) {

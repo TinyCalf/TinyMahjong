@@ -65,6 +65,28 @@ cc.Class({
             cc.vv.userMgr.enterRoom(roomId);
         }
         
+
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+                console.log("youkeorweixin:"+youkeorweixin);
+                if(youkeorweixin == 0){
+                    
+                        cc.find("Canvas/top_left/headinfo/bg").active = false; 
+                        cc.find("Canvas/top_left/headinfo/gems").active = false; 
+                        cc.find("Canvas/top_left/headinfo/lblGems").active = false; 
+                        cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false; 
+
+
+                        cc.find("Canvas/hallBg/fujianmajiang").active = false; 
+                        cc.find("Canvas/hallBg/anhuimajiang").active = false; 
+                        cc.find("Canvas/hallBg/qiqibuyu").active = false; 
+                        cc.find("Canvas/hallBg/qiqipuke").active = false; 
+                        cc.find("Canvas/hallBg/more").active = false; 
+                        cc.find("Canvas/hallBg/xixia001").active = false; 
+                        cc.find("Canvas/right_bottom/btn_share").active = false; 
+                        cc.find("Canvas/right_bottom/btn_zhanji").active = false; 
+            }
+
+
         var imgLoader = this.sprHeadImg.node.getComponent("ImageLoader");
         imgLoader.setUserID(cc.vv.userMgr.userId);
         cc.vv.utils.addClickEvent(this.sprHeadImg.node,this.node,"Hall","onBtnClicked");

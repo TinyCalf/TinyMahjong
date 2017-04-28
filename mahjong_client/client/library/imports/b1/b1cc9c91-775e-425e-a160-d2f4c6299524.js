@@ -1,9 +1,13 @@
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 if (window.io == null) {
     window.io = require("socket-io");
 }
 
 var Global = cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
     statics: {
         ip: "",
         sio: null,
@@ -98,9 +102,9 @@ var Global = cc.Class({
         },
         send: function send(event, data) {
             if (this.sio.connected) {
-                if (data != null && typeof data == "object") {
+                if (data != null && (typeof data === "undefined" ? "undefined" : _typeof(data)) == "object") {
                     data = JSON.stringify(data);
-                    //console.log(data);            
+                    //console.log(data);              
                 }
                 this.sio.emit(event, data);
             }

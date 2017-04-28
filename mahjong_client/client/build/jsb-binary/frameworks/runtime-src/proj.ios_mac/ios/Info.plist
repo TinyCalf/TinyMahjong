@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>English</string>
     <key>CFBundleDisplayName</key>
-    <string>达达麻将</string>
+    <string>${PRODUCT_NAME}</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIconFile</key>
@@ -58,19 +58,6 @@
     <string>1.0.0</string>
     <key>CFBundleSignature</key>
     <string>????</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-        <key>CFBundleURLName</key>
-        <string>weixin</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>wxcb508816c5c4e2a4</string>
-        </array>
-      </dict>
-    </array>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>LSRequiresIPhoneOS</key>

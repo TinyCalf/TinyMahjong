@@ -1,16 +1,18 @@
 {
   "androidStudio": true,
   "apiLevel": "android-20",
+  "appABIs": [],
   "buildPath": "./build",
   "debug": false,
-  "keystoreAlias": "zsmj",
-  "keystoreAliasPassword": "zsmj007",
-  "keystorePassword": "zsmj007",
-  "keystorePath": "C:\\Users\\user\\Desktop\\mahjong\\mahjong_client\\client\\build\\jsb-binary\\frameworks\\runtime-src\\proj.android\\zsmj.key.jks",
+  "keystoreAlias": "scmj",
+  "keystoreAliasPassword": "123456",
+  "keystorePassword": "123456",
+  "keystorePath": "C:\\Users\\Administrator\\ZSMJ\\ZSmahjong\\mahjong_client\\client\\boyue.keystore",
   "platform": "android",
   "previewHeight": "720",
   "previewWidth": "1280",
   "sourceMaps": false,
   "template": "binary",
-  "useDebugKeystore": false
+  "useDebugKeystore": false,
+  "vsVersion": "auto"
 }

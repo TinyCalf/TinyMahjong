@@ -2,8 +2,10 @@
 cc._RFpush(module, '2b08d8pm0VBDLYlZIdfLuPS', 'GameResult');
 // scripts\components\GameResult.js
 
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
