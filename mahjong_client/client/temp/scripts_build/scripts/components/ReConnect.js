@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7f553G0boRH6KrTE7wACaXx', 'ReConnect');
-// scripts\components\ReConnect.js
+// scripts/components/ReConnect.js
 
 cc.Class({
     "extends": cc.Component,

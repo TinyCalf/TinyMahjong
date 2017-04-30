@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '58f27rxustNsYlRX3fryN8X', 'Chat');
-// scripts\components\Chat.js
+// scripts/components/Chat.js
 
 cc.Class({
     "extends": cc.Component,

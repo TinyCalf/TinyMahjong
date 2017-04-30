@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'df61b4+FzFDvbpO5g8UNVIM', 'NoticeTip');
-// scripts\components\NoticeTip.js
+// scripts/components/NoticeTip.js
 
 cc.Class({
     "extends": cc.Component,

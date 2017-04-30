@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '8d571y2U+9AiKntO+TSf0Fb', 'RadioButton');
-// scripts\components\RadioButton.js
+// scripts/components/RadioButton.js
 
 cc.Class({
     "extends": cc.Component,

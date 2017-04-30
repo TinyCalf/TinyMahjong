@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'dc9e5hcegFBFpbh0CwUFw8V', 'CheckBox');
-// scripts\components\CheckBox.js
+// scripts/components/CheckBox.js
 
 cc.Class({
     "extends": cc.Component,

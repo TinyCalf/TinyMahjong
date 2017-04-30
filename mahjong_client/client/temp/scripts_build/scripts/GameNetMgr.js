@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '9545659TARKZLMoHGqXoY2N', 'GameNetMgr');
-// scripts\GameNetMgr.js
+// scripts/GameNetMgr.js
 
 cc.Class({
     "extends": cc.Component,

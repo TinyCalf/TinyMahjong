@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '572a7Qfh69N9ZLXkNthANfi', 'Login');
-// scripts\components\Login.js
+// scripts/components/Login.js
 
 String.prototype.format = function (args) {
     if (arguments.length > 0) {
