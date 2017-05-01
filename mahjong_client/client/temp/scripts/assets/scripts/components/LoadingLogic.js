@@ -25,6 +25,13 @@ cc.Class({
 
         this._splash = cc.find("Canvas/splash");
         this._splash.active = true;
+
+        cc.vv.http.sendRequest("/mj_login", 1, function (data) {
+            cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
+        });
+        if (cc.sys.localStorage.getItem("youkeorweixin") == "0" && cc.sys.os == cc.sys.OS_IOS) {
+            cc.find("Canvas/New Label").active = false;
+        }
     },
 
     start: function start() {

@@ -40,7 +40,7 @@ cc.Class({
         // ...
         _mima:null,
         _mimaIndex:0,
-        mjdl:1,  //Âé½«µÇÂ¼ÓÃ»§Ğ­Òé£¬Ö»ÓĞ¹´Ñ¡°´Å¥ÓÎ¿ÍµÇÂ¼ºÍÎ¢ĞÅµÇÂ¼²Å¿ÉÒÔ½øÈ¥
+        mjdl:1,  //ï¿½é½«ï¿½ï¿½Â¼ï¿½Ã»ï¿½Ğ­ï¿½é£¬Ö»ï¿½Ğ¹ï¿½Ñ¡ï¿½ï¿½Å¥ï¿½Î¿Íµï¿½Â¼ï¿½ï¿½Î¢ï¿½Åµï¿½Â¼ï¿½Å¿ï¿½ï¿½Ô½ï¿½È¥
     },
 
     // use this for initialization
@@ -69,72 +69,34 @@ cc.Class({
             cc.find("Canvas/btn_yk").active = true;    
         }
 
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        //å®‰å“åªæ˜¾ç¤ºå¾®ä¿¡ç™»é™†
+        if(cc.sys.os == cc.sys.OS_ANDROID){ 
+            console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
+            cc.find("Canvas/btn_yk").active = false; 
+            cc.find("Canvas/z_weixindenglu").active = true;  
+        }
+        //IOSå®¡æ ¸ç‰ˆæœ¬ åªæ˜¾ç¤ºæ¸¸å®¢ç™»å½• è¿‡å®¡ç‰ˆæœ¬ åªæ˜¾ç¤ºå¾®ä¿¡ç™»é™†
+        else if(cc.sys.os == cc.sys.OS_IOS){
+            console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
+            if(youkeorweixin == "0"){
+                cc.find("Canvas/btn_yk").active = true; 
+                cc.find("Canvas/z_weixindenglu").active = false;
+                cc.find("Canvas/yhxy").active = true;
+                
+            }
+            if(youkeorweixin == "1" || youkeorweixin == "null" ){
+                cc.find("Canvas/z_weixindenglu").active = true; 
+                cc.find("Canvas/btn_yk").active = false;  
+            }
+        }
+        else{
+            cc.find("Canvas/btn_yk").active = true; 
+            cc.find("Canvas/z_weixindenglu").active = true;  
+            console.log("platform:" + cc.sys.os + " dosn't implement share.");
+        }
 
-        cc.vv.http.sendRequest("/mj_login", 1, function(data){
-                console.log(data);
-                console.log(data.data);
-                console.log(data.data.youkeorweixin);
-                console.log("datadata");
-                console.log("platform:" + cc.sys.os);
-                // youkeorweixin :0±íÊ¾ÊÇÓÎ¿ÍµÇÂ¼£¬1±íÊ¾ÊÇÎ¢ĞÅµÇÂ¼
-                cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
-                if(cc.sys.os == cc.sys.OS_ANDROID){ 
-                    console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
-                     if(data.data.youkeorweixin == "0"){ //Ö»ÓĞÓÎ¿ÍµÇÂ¼
-                            // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
-                            //  z_weixindenglu.active = false;
-                              cc.find("Canvas/btn_yk").active = true; 
-                            cc.find("Canvas/z_weixindenglu").active = false;   
-                           
-                         console.log("ÓÎ¿ÍµÇÂ¼");
-                             
-                        
-                    }
-                    if(data.data.youkeorweixin == "1"){ //Ö»ÓĞÎ¢ĞÅµÇÂ¼
-                            cc.find("Canvas/z_weixindenglu").active = true;   
-                            cc.find("Canvas/btn_yk").active = false;   
-                            // var btn_yk = this.node.getChildByName("btn_yk");
-                            //  btn_yk.active = false;
-                         console.log("Î¢ĞÅµÇÂ¼");
-                        
-                    }
-
-
-                }
-                else if(cc.sys.os == cc.sys.OS_IOS){
-                    console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
-                  if(data.data.youkeorweixin == "0"){ //Ö»ÓĞÓÎ¿ÍµÇÂ¼
-                            // var z_weixindenglu = this.node.getChildByName("z_weixindenglu");
-                            //  z_weixindenglu.active = false;
-                            cc.find("Canvas/btn_yk").active = true; 
-                            cc.find("Canvas/z_weixindenglu").active = false;   
-                         console.log("ÓÎ¿ÍµÇÂ¼");
-                             
-                        
-                    }
-                    if(data.data.youkeorweixin == "1"){ //Ö»ÓĞÎ¢ĞÅµÇÂ¼
-                            cc.find("Canvas/z_weixindenglu").active = true; 
-                            cc.find("Canvas/btn_yk").active = false;   
-                            // var btn_yk = this.node.getChildByName("btn_yk");
-                            //  btn_yk.active = false;
-                         console.log("Î¢ĞÅµÇÂ¼");
-                        
-                    }
-
-                  
-                }
-                else{
-                    cc.find("Canvas/btn_yk").active = true; 
-                    cc.find("Canvas/z_weixindenglu").active = true;  
-                    console.log("platform:" + cc.sys.os + " dosn't implement share.");
-                }
-                var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
-                console.log(youkeorweixin);
-
-        });
-  
-     
-
+        
     },
    
     start:function(){
@@ -170,9 +132,6 @@ cc.Class({
     
         var yhxy = this.node.getChildByName("yhxy");
         yhxy.active = true;
-
-        console.log(this.node.name);
-        console.log(this.node.name);
     },
     prompt:function(){
         var prompt = this.node.getChildByName("prompt");

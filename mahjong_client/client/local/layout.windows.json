@@ -15,23 +15,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 364,
+                "height": 365,
                 "type": "panel",
-                "width": 321
+                "width": 362
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 364,
+                "height": 363,
                 "type": "panel",
-                "width": 321
+                "width": 362
               }
             ],
             "height": 731,
             "type": "dock-v",
-            "width": 321
+            "width": 362
           },
           {
             "children": [
@@ -40,9 +40,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 415,
+                "height": 528,
                 "type": "panel",
-                "width": 647
+                "width": 606
               },
               {
                 "active": 0,
@@ -50,14 +50,14 @@
                   "console",
                   "timeline"
                 ],
-                "height": 313,
+                "height": 200,
                 "type": "panel",
-                "width": 647
+                "width": 606
               }
             ],
             "height": 731,
             "type": "dock-v",
-            "width": 647
+            "width": 606
           },
           {
             "active": 0,
@@ -73,29 +73,11 @@
         "type": "dock-h"
       }
     },
-    "window-1493528070791": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "builder"
-            ]
-          }
-        ]
-      },
+    "window-1493625095918": {
       "x": 0,
       "y": 24,
       "width": 1280,
       "height": 776
-    },
-    "worker": {
-      "x": 440,
-      "y": 228,
-      "width": 400,
-      "height": 300
     }
   }
 }

@@ -27,6 +27,11 @@ cc.Class({
         this.refresh();
     },
 
+    switchToUnchecked: function switchToUnchecked() {
+        this.checked = false;
+        this.refresh();
+    },
+
     refresh: function refresh() {
         var targetSprite = this.target.getComponent(cc.Sprite);
         if (this.checked) {
