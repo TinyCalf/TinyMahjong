@@ -94,6 +94,10 @@ cc.Class({
                 cc.find("Canvas/z_weixindenglu").active = true;
                 console.log("platform:" + cc.sys.os + " dosn't implement share.");
             }
+
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, function (event) {
+            cc.game.end();
+        }, cc.Game);
     },
 
     start: function start() {
@@ -108,6 +112,7 @@ cc.Class({
             cc.vv.userMgr.onAuth(ret);
         }
     },
+
     onBtnReturn: function onBtnReturn() {
         var yhxy = this.node.getChildByName("yhxy");
         yhxy.active = false;

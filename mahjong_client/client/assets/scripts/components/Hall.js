@@ -121,6 +121,7 @@ cc.Class({
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
         }
+        
     },
     
     refreshInfo:function(){

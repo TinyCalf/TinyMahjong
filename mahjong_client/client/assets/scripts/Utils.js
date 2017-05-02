@@ -13,6 +13,7 @@ cc.Class({
         // },
         // ...
     },
+    
 
     addClickEvent:function(node,target,component,handler){
         console.log(component + ":" + handler);
