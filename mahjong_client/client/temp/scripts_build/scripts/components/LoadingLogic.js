@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '350d3Ry9aVIqJR27fP2H/z1', 'LoadingLogic');
-// scripts/components/LoadingLogic.js
+// scripts\components\LoadingLogic.js
 
 cc.Class({
     "extends": cc.Component,
@@ -25,6 +25,13 @@ cc.Class({
 
         this._splash = cc.find("Canvas/splash");
         this._splash.active = true;
+
+        cc.vv.http.sendRequest("/mj_login", 1, function (data) {
+            cc.sys.localStorage.setItem("youkeorweixin", data.data.youkeorweixin);
+        });
+        if (cc.sys.localStorage.getItem("youkeorweixin") == "0" && cc.sys.os == cc.sys.OS_IOS) {
+            cc.find("Canvas/New Label").active = false;
+        }
     },
 
     start: function start() {

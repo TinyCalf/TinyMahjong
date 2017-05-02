@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '10a1c8jz95Ju4NnpkOWUfin', 'JoinGameInput');
-// scripts/components/JoinGameInput.js
+// scripts\components\JoinGameInput.js
 
 cc.Class({
     "extends": cc.Component,

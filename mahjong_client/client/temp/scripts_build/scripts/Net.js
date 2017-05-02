@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'b1cc9yRd15CXqFg0vTGKZUk', 'Net');
-// scripts/Net.js
+// scripts\Net.js
 
 if (window.io == null) {
     window.io = require("socket-io");

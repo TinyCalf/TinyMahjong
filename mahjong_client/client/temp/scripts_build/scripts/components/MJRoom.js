@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '921dfQJZddJ+5GFUXqxmMmT', 'MJRoom');
-// scripts/components/MJRoom.js
+// scripts\components\MJRoom.js
 
 cc.Class({
     "extends": cc.Component,
@@ -28,6 +28,12 @@ cc.Class({
         this.initView();
         this.initSeats();
         this.initEventHandlers();
+
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0") {
+            //隐藏显示下边按钮
+            cc.find("Canvas/prepare/btnWeichat").active = false;
+        }
     },
 
     initView: function initView() {

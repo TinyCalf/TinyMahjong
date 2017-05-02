@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts/components/Hall.js
+// scripts\components\Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
