@@ -41,6 +41,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+
 public class AppActivity extends Cocos2dxActivity {
 
     private static AppActivity app = null;
@@ -78,6 +86,16 @@ public class AppActivity extends Cocos2dxActivity {
             }
         });
    }
+    
+    public static void openDownloadPage (String url){
+		System.out.println("openDownloadPage...");
+		Intent intent = new Intent();        
+		intent.setAction("android.intent.action.MAIN");    
+		Uri content_url = Uri.parse(url);   
+		intent.setData(content_url);  
+		app.startActivity(intent);
+	}
+
 
     @Override
     protected void onResume() {

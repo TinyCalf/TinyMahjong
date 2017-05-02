@@ -24,9 +24,29 @@ cc.Class({
 
     // },
     
+    
+
+    
     init:function(){
         this.ANDROID_API = "com/vivigames/scmj/WXAPI";
         this.IOS_API = "AppController";
+        this.ANDROID_WEBPAGE_API = "org/cocos2dx/javascript/AppActivity";
+    },
+    
+    openDownloadPage:function () {
+        console.log("open webpage!!!");
+        console.log(cc.sys.os);
+        console.log(cc.sys.OS_ANDROID);
+        if(cc.sys.os == cc.sys.OS_ANDROID){
+            console.log("open webpage OS_ANDROID!!!");
+            jsb.reflection.callStaticMethod(this.ANDROID_WEBPAGE_API, "openDownloadPage", "(Ljava/lang/String;)V",cc.vv.SI.appweb);
+        }
+        else if(cc.sys.os == cc.sys.OS_IOS){
+            jsb.reflection.callStaticMethod(this.IOS_API, "openDownloadPage");
+        }
+        else{
+            console.log("platform:" + cc.sys.os + " dosn't implement share.");
+        }
     },
     
     login:function(){

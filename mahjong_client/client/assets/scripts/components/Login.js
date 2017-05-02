@@ -154,6 +154,10 @@ cc.Class({
         
         cc.vv.userMgr.guestAuth();
     },
+    
+    onBtnDownloadClicked:function(){
+        cc.sys.openURL(cc.vv.SI.appweb);
+    },
    
     
     onBtnWeichatClicked:function(){

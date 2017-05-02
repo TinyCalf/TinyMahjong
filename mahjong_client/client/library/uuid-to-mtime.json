@@ -705,8 +705,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1493689732939,
-    "meta": 1493689767959,
+    "asset": 1493728660140,
+    "meta": 1493728677577,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -720,8 +720,8 @@
     "relativePath": "resources\\textures\\voice\\yyDialog.png"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1493689732977,
-    "meta": 1493689770256,
+    "asset": 1493728660142,
+    "meta": 1493728678026,
     "relativePath": "scripts\\components"
   },
   "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
@@ -785,8 +785,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1493689732846,
-    "meta": 1493689767355,
+    "asset": 1493728660137,
+    "meta": 1493728677575,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -1810,8 +1810,8 @@
     "relativePath": "resources\\scenes\\createrole.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
-    "asset": 1493527136364,
-    "meta": 1493576778705,
+    "asset": 1493728800129,
+    "meta": 1493728800147,
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "eade92b5-ca98-4158-be48-b64beb663745": {
@@ -2750,8 +2750,8 @@
     "relativePath": "scripts\\3rdparty\\socket-io.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
-    "asset": 1492567033101,
-    "meta": 1493689770239,
+    "asset": 1493728870028,
+    "meta": 1493728870177,
     "relativePath": "scripts\\AnysdkMgr.js"
   },
   "55caea5c-a6f1-4ae6-bd00-c797fc8ecb38": {
@@ -2830,13 +2830,13 @@
     "relativePath": "scripts\\components\\JoinGameInput.js"
   },
   "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
-    "asset": 1493689732958,
-    "meta": 1493689770857,
+    "asset": 1493728660142,
+    "meta": 1493728678046,
     "relativePath": "scripts\\components\\LoadingLogic.js"
   },
   "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1493698517156,
-    "meta": 1493698517266,
+    "asset": 1493728785943,
+    "meta": 1493728786124,
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
@@ -2935,8 +2935,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1493689732925,
-    "meta": 1493689771602,
+    "asset": 1493729227792,
+    "meta": 1493729227889,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {

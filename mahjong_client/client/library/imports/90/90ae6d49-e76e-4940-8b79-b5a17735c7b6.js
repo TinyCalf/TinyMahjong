@@ -6,7 +6,7 @@
 //FORMAL SERVER
 var URL = "http://119.23.250.115:9000";
 
-cc.VERSION = 20161227;
+cc.VERSION = 20161226;
 var HTTP = cc.Class({
     "extends": cc.Component,
 

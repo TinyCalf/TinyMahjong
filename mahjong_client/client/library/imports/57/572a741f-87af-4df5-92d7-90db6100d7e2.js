@@ -146,6 +146,10 @@ cc.Class({
         cc.vv.userMgr.guestAuth();
     },
 
+    onBtnDownloadClicked: function onBtnDownloadClicked() {
+        cc.sys.openURL(cc.vv.SI.appweb);
+    },
+
     onBtnWeichatClicked: function onBtnWeichatClicked() {
 
         var self = this;
