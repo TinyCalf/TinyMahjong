@@ -47,7 +47,7 @@
 		<string>Icon-180</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.vivigames.scmj</string>
+	<string>com.99queshen.zsmj</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -63,11 +63,13 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>Icon-152</string>
 			<key>CFBundleURLName</key>
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxcb508816c5c4e2a4</string>
+				<string>wxc3bbc4c270d6a0ba</string>
 			</array>
 		</dict>
 	</array>

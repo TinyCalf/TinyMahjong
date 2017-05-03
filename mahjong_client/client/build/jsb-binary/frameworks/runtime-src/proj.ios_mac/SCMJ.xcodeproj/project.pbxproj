@@ -514,7 +514,8 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					A922753C1517C094001B78AA = {
-						DevelopmentTeam = 9WZ8T2EG9S;
+						DevelopmentTeam = 5Q365USU8R;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -743,8 +744,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: shen dahai (3433MK686P)";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 5Q365USU8R;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -770,6 +772,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "SCMJ-mobile";
+				PROVISIONING_PROFILE = "1884fe96-9e37-4371-b3fc-b94f7d13f4cd";
+				PROVISIONING_PROFILE_SPECIFIER = linzongipad;
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,8 +786,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: shen dahai (3433MK686P)";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 5Q365USU8R;
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -807,8 +812,11 @@
 					"$(PROJECT_DIR)/SDKExport",
 					"$(PROJECT_DIR)/VoiceSDK/lib",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "SCMJ-mobile";
+				PROVISIONING_PROFILE = "1884fe96-9e37-4371-b3fc-b94f7d13f4cd";
+				PROVISIONING_PROFILE_SPECIFIER = linzongipad;
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
