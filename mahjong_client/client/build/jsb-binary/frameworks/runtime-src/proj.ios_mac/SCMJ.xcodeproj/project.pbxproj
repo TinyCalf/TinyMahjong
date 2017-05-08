@@ -80,6 +80,8 @@
 		C0799CBA18BAE62000E9C828 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C0799CB518BAE62000E9C828 /* res */; };
 		D454520C156E22BD00887EB5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D454520B156E22BD00887EB5 /* libz.dylib */; };
 		D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4545215156E28EF00887EB5 /* AppDelegate.cpp */; };
+		D5C2B5E91EB9B73600D1310C /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2B5E81EB9B73600D1310C /* Icon-87.png */; };
+		D5C2B5EB1EB9B74600D1310C /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2B5EA1EB9B74600D1310C /* Icon-180.png */; };
 		D6B061241803AB9F0077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B061231803AB9F0077942B /* CoreMotion.framework */; };
 		EAEBD1FF1DF04C2E00B429E6 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEBD1FC1DF04C2E00B429E6 /* libWeChatSDK.a */; };
 		EAEBD20F1DF04C5400B429E6 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD2031DF04C5400B429E6 /* amrFileCodec.mm */; };
@@ -165,6 +167,8 @@
 		D454520B156E22BD00887EB5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D4545215156E28EF00887EB5 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		D4545216156E28EF00887EB5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D5C2B5E81EB9B73600D1310C /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-87.png"; path = "ios/Icon-87.png"; sourceTree = "<group>"; };
+		D5C2B5EA1EB9B74600D1310C /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-180.png"; path = "ios/Icon-180.png"; sourceTree = "<group>"; };
 		D6B061231803AB9F0077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		DCAA4417880B45A57D3DBA4A /* libjscocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjscocos2d iOS.a"; path = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/prebuilt/ios/libjscocos2d iOS.a"; sourceTree = "<absolute>"; };
 		EAEBD1FC1DF04C2E00B429E6 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				5091731617ECDF7A00D62437 /* Icon-50.png */,
 				5091731717ECDF7A00D62437 /* Icon-58.png */,
 				5091731817ECDF7A00D62437 /* Icon-80.png */,
+				D5C2B5E81EB9B73600D1310C /* Icon-87.png */,
 				5091731917ECDF7A00D62437 /* Icon-100.png */,
 				509D4AB017EBB2AB00697056 /* Icon-57.png */,
 				509D4AB117EBB2AB00697056 /* Icon-72.png */,
@@ -281,6 +286,7 @@
 				509D4AB417EBB2AB00697056 /* Icon-120.png */,
 				509D4AB517EBB2AB00697056 /* Icon-144.png */,
 				509D4AB617EBB2AB00697056 /* Icon-152.png */,
+				D5C2B5EA1EB9B74600D1310C /* Icon-180.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -514,7 +520,8 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					A922753C1517C094001B78AA = {
-						DevelopmentTeam = 9WZ8T2EG9S;
+						DevelopmentTeam = DTV74Y6PV4;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -566,6 +573,7 @@
 				5091731A17ECDF7A00D62437 /* Icon-29.png in Resources */,
 				C03780EB18BEE0E400FE4F13 /* src in Resources */,
 				509D4AC617EBB2AB00697056 /* Icon-152.png in Resources */,
+				D5C2B5E91EB9B73600D1310C /* Icon-87.png in Resources */,
 				C0799CB918BAE62000E9C828 /* res in Resources */,
 				509D4AC517EBB2AB00697056 /* Icon-144.png in Resources */,
 				509D4AC317EBB2AB00697056 /* Icon-114.png in Resources */,
@@ -576,6 +584,7 @@
 				5091731C17ECDF7A00D62437 /* Icon-50.png in Resources */,
 				509D4AC417EBB2AB00697056 /* Icon-120.png in Resources */,
 				5091731D17ECDF7A00D62437 /* Icon-58.png in Resources */,
+				D5C2B5EB1EB9B74600D1310C /* Icon-180.png in Resources */,
 				9BC548CABC4F606F82D43E76 /* script in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,8 +752,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhou yanghua (X8CNBL4RPU)";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = DTV74Y6PV4;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -769,8 +779,11 @@
 					"$(PROJECT_DIR)/VoiceSDK/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.77queshen.zsmj;
 				PRODUCT_NAME = "SCMJ-mobile";
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "3f823fb7-21e3-42f8-9d3f-903e683dfb67";
+				PROVISIONING_PROFILE_SPECIFIER = ZSMJDEGUG2;
+				SDKROOT = iphoneos10.3;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/ios /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/sources /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk";
@@ -782,8 +795,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ningbo Hui Nuo Network Technology Co., Ltd. (DTV74Y6PV4)";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = DTV74Y6PV4;
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -807,9 +821,13 @@
 					"$(PROJECT_DIR)/SDKExport",
 					"$(PROJECT_DIR)/VoiceSDK/lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.77queshen.zsmj;
 				PRODUCT_NAME = "SCMJ-mobile";
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE = "8e46148b-91c5-4983-9134-84d10bb61550";
+				PROVISIONING_PROFILE_SPECIFIER = ZSMJ2;
+				SDKROOT = iphoneos10.3;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/ios /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/sources /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk";
