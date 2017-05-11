@@ -64,6 +64,11 @@ cc.Class({
             cc.vv.utils.addClickEvent(btnWechat,this.node,"MJRoom","onBtnWeichatClicked");
         }
         
+        var btnCopy = cc.find("Canvas/prepare/btnCopy");
+        if(btnCopy){
+            cc.vv.utils.addClickEvent(btnWechat,this.node,"MJRoom","onBtnCopyClicked");
+        }
+        
         
         var titles = cc.find("Canvas/typeTitle");
         for(var i = 0; i < titles.children.length; ++i){
@@ -71,7 +76,6 @@ cc.Class({
         }
         
         if(cc.vv.gameNetMgr.conf){
-            //TODO:换成相应字样
             // var type = cc.vv.gameNetMgr.conf.type;
             // if(type == null || type == ""){
             //     type = "xzdd";
@@ -258,9 +262,13 @@ cc.Class({
         else if(cc.vv.gameNetMgr.conf.type == "tdh"){
             var title = "<推倒胡>";
         }
-        //cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
-        cc.vv.anysdkMgr.share("闲鱼秦皇岛麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】", "玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
     },
+    
+    //复制房间信息
+    onBtnCopyClicked:function() {
+        cc.vv.anysdkMgr.copy("奇奇舟山麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】 玩法:" + cc.vv.gameNetMgr.getWanfa());
+    }
     
     onBtnDissolveClicked:function(){
         cc.vv.alert.show("解散房间","解散房间不扣房卡，是否确定解散？",function(){

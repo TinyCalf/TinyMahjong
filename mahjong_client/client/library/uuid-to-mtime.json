@@ -2266,7 +2266,7 @@
   },
   "3b316d08-49c5-4211-9312-3816888734e8": {
     "asset": 1491894462792,
-    "meta": 1492937833796,
+    "meta": 1494486614285,
     "relativePath": "resources\\textures\\utils\\btn_blue.png"
   },
   "3e3576f7-17a5-444e-b97f-d03d3c3285df": {
@@ -2745,7 +2745,7 @@
     "relativePath": "scripts\\3rdparty\\socket-io.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
-    "asset": 1494248355091,
+    "asset": 1494487464466,
     "meta": 1494386585437,
     "relativePath": "scripts\\AnysdkMgr.js"
   },
@@ -2840,7 +2840,7 @@
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1494484344492,
+    "asset": 1494487389496,
     "meta": 1494484344695,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
@@ -2965,8 +2965,8 @@
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1494483320095,
-    "meta": 1494483320286,
+    "asset": 1494487366750,
+    "meta": 1494487366928,
     "relativePath": "resources\\scenes\\mjgame.fire"
   }
 }
