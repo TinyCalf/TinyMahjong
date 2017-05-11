@@ -13,6 +13,7 @@ cc.Class({
         _lastPlayingSeat:null,
         _playingSeat:null,
         _lastPlayTime:null,
+        _ifshowipwarning:true,
     },
 
     // use this for initialization
@@ -30,6 +31,7 @@ cc.Class({
             //隐藏显示下边按钮
             cc.find("Canvas/prepare/btnWeichat").active = false;
         }
+        //this.addComponent("Alert");
     },
     
     initView:function(){
@@ -94,6 +96,40 @@ cc.Class({
         btnBack.active = isIdle;
     },
     
+    ipWarning:function(){
+        if(!this._ifshowipwarning) return;
+        var seats = cc.vv.gameNetMgr.seats;
+        var nowseat = cc.vv.gameNetMgr.seatIndex;
+        var others = [];
+        for(var i = 0 ; i < 4 ; i ++) {
+            if(i!=nowseat) {
+                others.push([seats[i].name,seats[i].ip]);
+            }
+        }
+        console.log(others);
+        var warnames = [];
+        if ( (others[0][1] == others [1][1] || others[0][1] == others [2][1]) && others[0][1]!=null) {
+            warnames.push(others[0][0]);
+        }
+        if ( (others[1][1] == others [0][1] || others[1][1] == others [2][1]) && others[1][1]!=null) {
+            warnames.push(others[1][0]);
+        }
+        if ( (others[2][1] == others [1][1] || others[2][1] == others [0][1]) && others[1][1]!=null) {
+            warnames.push(others[2][0]);
+        }
+        console.log(warnames);
+        var str = warnames.join("、");
+        
+        console.log("12332132132131321");
+        if(warnames.length > 0 ){
+            cc.vv.alert.show("IP警告","玩家" + str + "来自相同IP，请谨防其他玩家打勾手上当受骗",function(){
+                  console.log("alert back");
+            },false);
+            this._ifshowipwarning = false;
+        }
+        
+    },
+    
     initEventHandlers:function(){
         var self = this;
         this.node.on('new_user',function(data){
@@ -105,11 +141,13 @@ cc.Class({
         });
         
         this.node.on('game_begin',function(data){
+            
             self.refreshBtns();
             self.initSeats();
         });
         
         this.node.on('game_num',function(data){
+            
             self.refreshBtns();
         });
 
@@ -221,7 +259,7 @@ cc.Class({
             var title = "<推倒胡>";
         }
         //cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
-        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】", "玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.share("闲鱼秦皇岛麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】", "玩法:" + cc.vv.gameNetMgr.getWanfa());
     },
     
     onBtnDissolveClicked:function(){
@@ -278,6 +316,7 @@ cc.Class({
         else{
             this.playVoice();
         }
+        this.ipWarning();
     },
     
         

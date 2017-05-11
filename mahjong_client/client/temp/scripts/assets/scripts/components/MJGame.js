@@ -54,7 +54,7 @@ cc.Class({
         this.addComponent("ReConnect");
         this.addComponent("Voice");
         this.addComponent("UserInfoShow");
-
+        this.addComponent("Alert");
         this.initView();
         this.initEventHandlers();
 

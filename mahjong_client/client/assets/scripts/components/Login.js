@@ -92,7 +92,7 @@ cc.Class({
         }
         else{
             cc.find("Canvas/btn_yk").active = true; 
-            cc.find("Canvas/z_weixindenglu").active = true;  
+            cc.find("Canvas/z_weixindenglu").active = false;  
             console.log("platform:" + cc.sys.os + " dosn't implement share.");
         }
 

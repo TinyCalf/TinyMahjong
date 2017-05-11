@@ -50,7 +50,7 @@ cc.Class({
         this.addComponent("ReConnect");
         this.addComponent("Voice");
         this.addComponent("UserInfoShow");
-        
+        this.addComponent("Alert");
         this.initView();
         this.initEventHandlers();
         
@@ -152,6 +152,7 @@ cc.Class({
         this.node.on('game_begin',function(data){
             self.playShazi();
             self.onGameBeign(data);
+            
         });
         
         this.node.on('game_sync',function(data){
@@ -578,6 +579,7 @@ cc.Class({
     },
     
     onGameBeign:function(){
+        
         
         for(var i = 0; i < this._playEfxs.length; ++i){
             this._playEfxs[i].node.active = false;
