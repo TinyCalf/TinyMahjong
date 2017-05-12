@@ -67,13 +67,17 @@ cc.Class({
             cc.vv.utils.addClickEvent(btnWechat, this.node, "MJRoom", "onBtnWeichatClicked");
         }
 
+        var btnCopy = cc.find("Canvas/prepare/btnCopy");
+        if (btnCopy) {
+            cc.vv.utils.addClickEvent(btnCopy, this.node, "MJRoom", "onBtnCopyClicked");
+        }
+
         var titles = cc.find("Canvas/typeTitle");
         for (var i = 0; i < titles.children.length; ++i) {
             titles.children[i].active = false;
         }
 
         if (cc.vv.gameNetMgr.conf) {
-            //TODO:换成相应字样
             // var type = cc.vv.gameNetMgr.conf.type;
             // if(type == null || type == ""){
             //     type = "xzdd";
@@ -108,7 +112,6 @@ cc.Class({
                 others.push([seats[i].name, seats[i].ip]);
             }
         }
-        console.log(others);
         var warnames = [];
         if ((others[0][1] == others[1][1] || others[0][1] == others[2][1]) && others[0][1] != null) {
             warnames.push(others[0][0]);
@@ -119,10 +122,7 @@ cc.Class({
         if ((others[2][1] == others[1][1] || others[2][1] == others[0][1]) && others[1][1] != null) {
             warnames.push(others[2][0]);
         }
-        console.log(warnames);
         var str = warnames.join("、");
-
-        console.log("12332132132131321");
         if (warnames.length > 0) {
             cc.vv.alert.show("IP警告", "玩家" + str + "来自相同IP，请谨防其他玩家打勾手上当受骗", function () {
                 console.log("alert back");
@@ -255,8 +255,23 @@ cc.Class({
         } else if (cc.vv.gameNetMgr.conf.type == "tdh") {
             var title = "<推倒胡>";
         }
-        //cc.vv.anysdkMgr.share("奇奇舟山麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
-        cc.vv.anysdkMgr.share("闲鱼秦皇岛麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId + "】", "玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
+    },
+
+    //复制房间信息
+    onBtnCopyClicked: function onBtnCopyClicked() {
+        if (cc.vv.gameNetMgr.conf.type == "sjmmj") {
+            var title = "<沈家门麻将>";
+        } else if (cc.vv.gameNetMgr.conf.type == "dhmj") {
+            var title = "<定海麻将>";
+        } else if (cc.vv.gameNetMgr.conf.type == "tdh") {
+            var title = "<推倒胡>";
+        }
+        cc.vv.anysdkMgr.copy("奇奇舟山麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId + "】 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.find("Canvas/copysuccess").active = true;
+        setTimeout(function () {
+            cc.find("Canvas/copysuccess").active = false;
+        }, 1000);
     },
 
     onBtnDissolveClicked: function onBtnDissolveClicked() {

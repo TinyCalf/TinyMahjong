@@ -67,6 +67,16 @@ cc.Class({
         }
     },
 
+    copy: function copy(desc) {
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
+            jsb.reflection.callStaticMethod(this.ANDROID_WEBPAGE_API, "Copy", "(Ljava/lang/String;)V", desc);
+        } else if (cc.sys.os == cc.sys.OS_IOS) {
+            //jsb.reflection.callStaticMethod(this.IOS_API, "share:shareTitle:shareDesc:",cc.vv.SI.appweb,title,desc);
+        } else {
+                console.log("platform:" + cc.sys.os + " dosn't implement share.");
+            }
+    },
+
     shareResult: function shareResult() {
         if (this._isCapturing) {
             return;

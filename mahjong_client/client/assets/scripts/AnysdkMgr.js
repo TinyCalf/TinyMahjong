@@ -83,7 +83,7 @@ cc.Class({
         else{
             console.log("platform:" + cc.sys.os + " dosn't implement share.");
         }
-    }
+    },
     
     shareResult:function(){
         if(this._isCapturing){
