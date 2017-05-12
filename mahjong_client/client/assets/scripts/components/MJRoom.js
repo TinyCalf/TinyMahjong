@@ -102,11 +102,12 @@ cc.Class({
     
     ipWarning:function(){
         if(!this._ifshowipwarning) return;
+        if(!nowseat) return;
         var seats = cc.vv.gameNetMgr.seats;
         var nowseat = cc.vv.gameNetMgr.seatIndex;
         var others = [];
         for(var i = 0 ; i < 4 ; i ++) {
-            if(i!=nowseat) {
+            if(nowseat && i!=nowseat) {
                 others.push([seats[i].name,seats[i].ip]);
             }
         }

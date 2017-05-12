@@ -7064,7 +7064,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "91c003upU1AObElNe9/e0SK",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1177
@@ -34839,9 +34839,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 155,
+      "g": 228,
+      "b": 228,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -47995,7 +47995,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "e3861FEr/VEuIEbRgEw5N6H",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 1204

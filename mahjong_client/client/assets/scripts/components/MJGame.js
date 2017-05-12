@@ -659,8 +659,6 @@ cc.Class({
     },
     
     onMJClicked:function(event){
-        console.log("event");
-        console.log(event);
         if(cc.vv.gameNetMgr.isHuanSanZhang){
             this.node.emit("mj_clicked",event.target);
             return;
@@ -679,7 +677,13 @@ cc.Class({
                     this.shoot(this._selectedMJ.mjId); 
                     this._selectedMJ.y = 0;
                     this._selectedMJ = null;
+                    //取消显示桌面上相同的牌
+                    this.hideSameType();
                     return;
+                }
+                //如果不是则显示桌面上相同的牌
+                else{
+                    this.showSameType(event.target);
                 }
                 if(this._selectedMJ != null){
                     this._selectedMJ.y = 0;
@@ -687,6 +691,79 @@ cc.Class({
                 event.target.y = 15;
                 this._selectedMJ = event.target;
                 return;
+            }
+        }
+    },
+    
+    //显示桌面上相同牌的功能
+    showSameType:function(mj){
+        var sprite = mj.getComponent(cc.Sprite); 
+        //提取_之前的内容
+        function getEnd(mainStr,searchStr){  
+            var foundOffset=mainStr.indexOf(searchStr);  
+            if(foundOffset==-1){  
+               return null;  
+            }  
+            return mainStr.substring(foundOffset+searchStr.length,mainStr.length);  
+        } 
+        var mjname = getEnd(sprite.spriteFrame._name,"_");
+        //所有folds
+        var allfolds = [];
+        allfolds = allfolds.concat(cc.find("Canvas/game/right/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/up/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/left/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/folds").children);
+        
+        //var aaa = cc.find("Canvas/game/myself/penggangs").children;
+        
+        //var sprites = cc.find("Canvas/game/myself/penggangs").children[0].children;
+        var pgs = cc.find("Canvas/game/myself/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/right/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/up/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/left/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        
+        
+        
+        for ( var i = 0 ; i < allfolds.length ; i++ ) {
+            var nowsprite = allfolds[i].getComponent(cc.Sprite);
+            if(nowsprite.spriteFrame){
+                var nowname = getEnd(nowsprite.spriteFrame._name,"_");
+                if(nowname == mjname) {
+                    allfolds[i].color = new cc.Color(155, 228, 228);
+                }else {
+                    allfolds[i].color = new cc.Color(255, 255, 255);
+                }
+            }
+        }
+    },
+    
+    //取消显示桌面上相同牌的功能
+    hideSameType:function(){
+        var allfolds = [];
+        allfolds = allfolds.concat(cc.find("Canvas/game/right/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/up/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/left/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/folds").children);
+        for ( var i = 0 ; i < allfolds.length ; i++ ) {
+            var nowsprite = allfolds[i].getComponent(cc.Sprite);
+            if(nowsprite.spriteFrame){
+                allfolds[i].color = new cc.Color(255, 255, 255);
             }
         }
     },

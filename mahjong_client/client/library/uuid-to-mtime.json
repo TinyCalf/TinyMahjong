@@ -2835,13 +2835,13 @@
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1494488105453,
-    "meta": 1494488117220,
+    "asset": 1494568245976,
+    "meta": 1494568246350,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1494553063962,
-    "meta": 1494553064798,
+    "asset": 1494558360652,
+    "meta": 1494558360850,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -2965,8 +2965,8 @@
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1494553248203,
-    "meta": 1494553248398,
+    "asset": 1494568406144,
+    "meta": 1494568407005,
     "relativePath": "resources\\scenes\\mjgame.fire"
   }
 }
