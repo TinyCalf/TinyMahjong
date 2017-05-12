@@ -1850,8 +1850,8 @@
     "relativePath": "resources\\textures\\images\\chi.png"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1493527136363,
-    "meta": 1493576778703,
+    "asset": 1494580607894,
+    "meta": 1494580607939,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {
@@ -1870,8 +1870,8 @@
     "relativePath": "resources\\textures\\images\\title.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1493689732880,
-    "meta": 1493689767441,
+    "asset": 1494576105885,
+    "meta": 1494579461111,
     "relativePath": "resources\\textures\\hall"
   },
   "17b74fcb-dd4f-4164-9e6d-cd6af3f93601": {
@@ -2800,8 +2800,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1494488105451,
-    "meta": 1494488116840,
+    "asset": 1494574640429,
+    "meta": 1494574640583,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2968,5 +2968,35 @@
     "asset": 1494568406144,
     "meta": 1494568407005,
     "relativePath": "resources\\scenes\\mjgame.fire"
+  },
+  "c182e557-5668-4892-9a28-35241a36ab33": {
+    "asset": 1494572827658,
+    "meta": 1494572899403,
+    "relativePath": "resources\\textures\\hall\\checkin_box.png"
+  },
+  "87500ecb-a686-4a9e-a62c-05c000d43f21": {
+    "asset": 1494575284035,
+    "meta": 1494575323505,
+    "relativePath": "resources\\textures\\hall\\checkin_chest.png"
+  },
+  "a547c391-e51a-4510-a1cd-80837899069b": {
+    "asset": 1494575310204,
+    "meta": 1494575310215,
+    "relativePath": "resources\\textures\\hall\\checkin_coins.png"
+  },
+  "e2b48c8c-8c12-4069-a42c-22ce38a0185e": {
+    "asset": 1494576105878,
+    "meta": 1494576105901,
+    "relativePath": "resources\\textures\\hall\\checkin_coin.png"
+  },
+  "1a9f56b0-0aba-41e0-b324-856b02e2b212": {
+    "asset": 1494579535441,
+    "meta": 1494579535455,
+    "relativePath": "resources\\textures\\hall\\checkin_days.png"
+  },
+  "6da2d0b3-1eba-4121-bd52-81ddb084d465": {
+    "asset": 1494579855139,
+    "meta": 1494579855157,
+    "relativePath": "resources\\textures\\hall\\confirm.png"
   }
 }
