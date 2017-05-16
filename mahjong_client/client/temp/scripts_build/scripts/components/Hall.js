@@ -237,6 +237,13 @@ cc.Class({
         this.createRoomWin.active = true;
     },
 
+    onCheckinClicked: function onCheckinClicked() {
+        cc.find("Canvas/CheckinBox").active = true;
+    },
+    onCheckinClose: function onCheckinClose() {
+        cc.find("Canvas/CheckinBox").active = false;
+    },
+
     // called every frame, uncomment this function to activate update callback
     update: function update(dt) {
         var x = this.lblNotice.node.x;

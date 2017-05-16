@@ -705,8 +705,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1494488105449,
-    "meta": 1494488116589,
+    "asset": 1494581630820,
+    "meta": 1494582171954,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -720,8 +720,8 @@
     "relativePath": "resources\\textures\\voice\\yyDialog.png"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1494488105454,
-    "meta": 1494488116765,
+    "asset": 1494581630863,
+    "meta": 1494582172745,
     "relativePath": "scripts\\components"
   },
   "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
@@ -785,8 +785,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1494488105445,
-    "meta": 1494488115988,
+    "asset": 1494581630711,
+    "meta": 1494582171649,
     "relativePath": "resources\\scenes"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -1850,8 +1850,8 @@
     "relativePath": "resources\\textures\\images\\chi.png"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1494580607894,
-    "meta": 1494580607939,
+    "asset": 1494581630651,
+    "meta": 1494582171674,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "d1c87e86-45f2-43bd-828d-ae3fc7e62ccb": {
@@ -1870,8 +1870,8 @@
     "relativePath": "resources\\textures\\images\\title.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1494576105885,
-    "meta": 1494579461111,
+    "asset": 1494581630800,
+    "meta": 1494582171678,
     "relativePath": "resources\\textures\\hall"
   },
   "17b74fcb-dd4f-4164-9e6d-cd6af3f93601": {
@@ -2266,7 +2266,7 @@
   },
   "3b316d08-49c5-4211-9312-3816888734e8": {
     "asset": 1491894462792,
-    "meta": 1494488116187,
+    "meta": 1494582172743,
     "relativePath": "resources\\textures\\utils\\btn_blue.png"
   },
   "3e3576f7-17a5-444e-b97f-d03d3c3285df": {
@@ -2295,8 +2295,8 @@
     "relativePath": "resources\\textures\\hall\\fanhuifangjian.png"
   },
   "801b2051-a975-419b-a2fe-19afcfcda31c": {
-    "asset": 1494488105447,
-    "meta": 1494488115999,
+    "asset": 1494581630801,
+    "meta": 1494582171948,
     "relativePath": "resources\\textures\\utils"
   },
   "a4d3dafb-2979-462b-b2ab-ec38937a1e23": {
@@ -2680,8 +2680,8 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
-    "asset": 1494488105432,
-    "meta": 1494488115998,
+    "asset": 1494581630664,
+    "meta": 1494582171677,
     "relativePath": "resources\\scenes\\login.fire"
   },
   "8ef50f39-a422-4106-b3db-752100f6fcac": {
@@ -2745,8 +2745,8 @@
     "relativePath": "scripts\\3rdparty\\socket-io.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
-    "asset": 1494490237154,
-    "meta": 1494490237204,
+    "asset": 1494581630809,
+    "meta": 1494582172808,
     "relativePath": "scripts\\AnysdkMgr.js"
   },
   "55caea5c-a6f1-4ae6-bd00-c797fc8ecb38": {
@@ -2800,8 +2800,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1494574640429,
-    "meta": 1494574640583,
+    "asset": 1494581630834,
+    "meta": 1494582172867,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2825,23 +2825,23 @@
     "relativePath": "scripts\\components\\JoinGameInput.js"
   },
   "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
-    "asset": 1494488105451,
-    "meta": 1494488116883,
+    "asset": 1494581630845,
+    "meta": 1494582172912,
     "relativePath": "scripts\\components\\LoadingLogic.js"
   },
   "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1494488105453,
-    "meta": 1494488117162,
+    "asset": 1494581630846,
+    "meta": 1494582173296,
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1494568245976,
-    "meta": 1494568246350,
+    "asset": 1494581630853,
+    "meta": 1494582173370,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1494558360652,
-    "meta": 1494558360850,
+    "asset": 1494581630863,
+    "meta": 1494582173390,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -2930,8 +2930,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1494488105449,
-    "meta": 1494488117236,
+    "asset": 1494581630821,
+    "meta": 1494582173391,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -2965,38 +2965,38 @@
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1494568406144,
-    "meta": 1494568407005,
+    "asset": 1494581630711,
+    "meta": 1494582171924,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "c182e557-5668-4892-9a28-35241a36ab33": {
-    "asset": 1494572827658,
-    "meta": 1494572899403,
+    "asset": 1494581630766,
+    "meta": 1494582171929,
     "relativePath": "resources\\textures\\hall\\checkin_box.png"
   },
   "87500ecb-a686-4a9e-a62c-05c000d43f21": {
-    "asset": 1494575284035,
-    "meta": 1494575323505,
+    "asset": 1494581630773,
+    "meta": 1494582171935,
     "relativePath": "resources\\textures\\hall\\checkin_chest.png"
   },
   "a547c391-e51a-4510-a1cd-80837899069b": {
-    "asset": 1494575310204,
-    "meta": 1494575310215,
+    "asset": 1494581630782,
+    "meta": 1494582171947,
     "relativePath": "resources\\textures\\hall\\checkin_coins.png"
   },
   "e2b48c8c-8c12-4069-a42c-22ce38a0185e": {
-    "asset": 1494576105878,
-    "meta": 1494576105901,
+    "asset": 1494581630777,
+    "meta": 1494582171936,
     "relativePath": "resources\\textures\\hall\\checkin_coin.png"
   },
   "1a9f56b0-0aba-41e0-b324-856b02e2b212": {
-    "asset": 1494579535441,
-    "meta": 1494579535455,
+    "asset": 1494581630793,
+    "meta": 1494582171945,
     "relativePath": "resources\\textures\\hall\\checkin_days.png"
   },
   "6da2d0b3-1eba-4121-bd52-81ddb084d465": {
-    "asset": 1494579855139,
-    "meta": 1494579855157,
+    "asset": 1494581630800,
+    "meta": 1494582171953,
     "relativePath": "resources\\textures\\hall\\confirm.png"
   }
 }
