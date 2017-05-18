@@ -107,7 +107,10 @@ app.get('/enter_room',function(req,res){
 			}
 			else if(ret == 2){
 				http.send(res,3,"can't find room.");
-			}	
+			}
+			else if(ret == 5){
+				http.send(res,5,"can't find room.");
+			}
 			return;		
 		}
 

@@ -38,6 +38,9 @@ cc.Class({
                 if (ret.errcode == 4) {
                     content = "房间[" + roomId + "]已满!";
                 }
+                if (ret.errcode == 5) {
+                    content = "钻石不足请充值！";
+                }
                 cc.vv.alert.show("提示", content);
                 this.onResetClicked();
             }

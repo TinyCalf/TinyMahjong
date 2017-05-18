@@ -773,4 +773,49 @@ exports.get_message = function(type,version,callback){
     });
 };
 
+//新增 根据id获取房间信息
+exports.getRoomConfById = function(roomid,callback) {
+    var sql = 'SELECT base_info FROM t_rooms WHERE id = "' + roomid + '"';
+    var res = "";
+    query(sql, function(err, rows, fields) {
+
+        console.log(err);
+        console.log(rows);
+        if (err) {
+            callback(null);
+            return;
+            throw err;
+        }
+
+        if(rows.length == 0){
+            callback(null);
+            return;
+        }
+
+        callback(JSON.parse(rows[0].base_info));
+    });
+};
+//
+//新增 根据id获取用户钻石
+exports.getGemsById = function(userid,callback) {
+    var sql = 'SELECT gems FROM t_users WHERE userid = "' + userid + '"';
+    var res = "";
+    query(sql, function(err, rows, fields) {
+
+
+        if (err) {
+            callback(null);
+            throw err;
+        }
+
+        if(rows.length == 0){
+            callback(null);
+            return;
+        }
+
+        callback(rows[0].gems);
+    });
+    return res;
+};
+
 exports.query = query;

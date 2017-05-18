@@ -147,7 +147,7 @@ exports.enterRoom = function(userId,name,roomId,fnCallback){
 				callback(false);
 			}
 		});
-	}
+	};
 
 	var enterRoomReq = function(serverinfo){
 		http.get(serverinfo.ip,serverinfo.httpPort,"/enter_room",reqdata,function(ret,data){

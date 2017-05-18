@@ -266,49 +266,76 @@ exports.isCreator = function(roomId,userId){
 };
 
 exports.enterRoom = function(roomId,userId,userName,callback){
-	var fnTakeSeat = function(room){
-		if(exports.getUserRoom(userId) == roomId){
-			//已存在
-			return 0;
-		}
+	db.getRoomConfById(roomId,function(conf){
+		if(conf){
+			var koufei = conf.koufei;
+			var quanshu = conf.quanshu;
+			var gems = 0;
+			db.getGemsById(userId,function(data){
+				gems = data;
 
-		for(var i = 0; i < 4; ++i){
-			var seat = room.seats[i];
-			if(seat.userId <= 0){
-				seat.userId = userId;
-				seat.name = userName;
-				userLocation[userId] = {
-					roomId:roomId,
-					seatIndex:i
+				if(koufei==1){
+					if(quanshu==0 && gems < 1){
+						callback(5);
+						return;
+					}
+					if(quanshu==1 && gems < 2){
+						callback(5);
+						return;
+					}
+				}
+
+				var fnTakeSeat = function(room){
+					if(exports.getUserRoom(userId) == roomId){
+						//已存在
+						return 0;
+					}
+
+					for(var i = 0; i < 4; ++i){
+						var seat = room.seats[i];
+						if(seat.userId <= 0){
+							seat.userId = userId;
+							seat.name = userName;
+							userLocation[userId] = {
+								roomId:roomId,
+								seatIndex:i
+							};
+							db.update_seat_info(roomId,i,seat.userId,"",seat.name);
+							//正常
+							return 0;
+						}
+					}
+					//房间已满
+					return 1;
 				};
-				db.update_seat_info(roomId,i,seat.userId,"",seat.name);
-				//正常
-				return 0;
-			}
-		}	
-		//房间已满
-		return 1;	
-	}
-	var room = rooms[roomId];
-	if(room){
-		var ret = fnTakeSeat(room);
-		callback(ret);
-	}
-	else{
-		db.get_room_data(roomId,function(dbdata){
-			if(dbdata == null){
-				//找不到房间
-				callback(2);
-			}
-			else{
-				//construct room.
-				room = constructRoomFromDb(dbdata);
-				//
-				var ret = fnTakeSeat(room);
-				callback(ret);
-			}
-		});
-	}
+				var room = rooms[roomId];
+				if(room){
+					var ret = fnTakeSeat(room);
+					callback(ret);
+				}
+				else{
+					db.get_room_data(roomId,function(dbdata){
+						if(dbdata == null){
+							//找不到房间
+							callback(2);
+						}
+						else{
+							//construct room.
+							room = constructRoomFromDb(dbdata);
+							//
+							var ret = fnTakeSeat(room);
+							callback(ret);
+						}
+					});
+				}
+			});
+		}else{
+			callback(2);
+		}
+	});
+
+
+
 };
 
 exports.setReady = function(userId,value){
