@@ -570,6 +570,34 @@ cc.Class({
 
     onGameBeign: function onGameBeign() {
 
+        //更换gameover界面头像 懒得封装了，反正以后也用不到
+        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
+        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
+        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
+        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s4/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
+
+        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
+        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
+        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
+        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s4/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
+
+        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s1/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
+        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s2/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
+        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s3/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
+        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s4/touxiang").getComponent("ImageLoader");
+        if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
+
         for (var i = 0; i < this._playEfxs.length; ++i) {
             this._playEfxs[i].node.active = false;
         }
