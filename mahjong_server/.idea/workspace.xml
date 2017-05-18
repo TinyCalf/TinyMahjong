@@ -45,11 +45,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="configs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tokenmgr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/tokenmgr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roommgr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="203" column="33" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket_service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/majiang_server/socket_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="389" column="32" selection-start-line="389" selection-start-column="32" selection-end-line="389" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gamemgr_dhmj.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_dhmj.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="3302" column="18" selection-start-line="3302" selection-start-column="8" selection-end-line="3302" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -82,7 +122,6 @@
         <option value="$PROJECT_DIR$/majiang_server/usermgr.js" />
         <option value="$PROJECT_DIR$/hall_server/client_service.js" />
         <option value="$PROJECT_DIR$/majiang_server/http_service.js" />
-        <option value="$PROJECT_DIR$/majiang_server/socket_service.js" />
         <option value="$PROJECT_DIR$/account_server/account_server.js" />
         <option value="$PROJECT_DIR$/majiang_server/mjutils.js" />
         <option value="$PROJECT_DIR$/majiang_server/roommgr.js" />
@@ -92,6 +131,7 @@
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/majiang_server/gamemgr_sjmmj.js" />
         <option value="$PROJECT_DIR$/configs.js" />
+        <option value="$PROJECT_DIR$/majiang_server/socket_service.js" />
       </list>
     </option>
   </component>
@@ -312,12 +352,12 @@
       <workItem from="1493288501327" duration="440000" />
       <workItem from="1493366572567" duration="677000" />
       <workItem from="1493369856477" duration="58000" />
-      <workItem from="1495074499407" duration="5000" />
+      <workItem from="1495074499407" duration="761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="409685000" />
+    <option name="totallyTimeSpent" value="410441000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,9 +370,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.337132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -563,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/majiang_server/socket_service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="94" column="39" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/usermgr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="916">
@@ -626,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/majiang_server/tokenmgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account_server/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -647,24 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_dhmj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="686" column="5" selection-start-line="686" selection-start-column="5" selection-end-line="686" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_tdh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -700,6 +712,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8658">
           <caret line="481" column="9" selection-start-line="481" selection-start-column="9" selection-end-line="481" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/tokenmgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/gamemgr_dhmj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="3302" column="18" selection-start-line="3302" selection-start-column="8" selection-end-line="3302" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/roommgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="203" column="33" selection-start-line="203" selection-start-column="31" selection-end-line="203" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/majiang_server/socket_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="389" column="32" selection-start-line="389" selection-start-column="32" selection-end-line="389" selection-end-column="32" />
           <folding />
         </state>
       </provider>

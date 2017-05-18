@@ -380,15 +380,14 @@ exports.start = function(config,mgr){
 				}
 				userMgr.broacastInRoom('dissolve_notice_push',data,userId,true);
 
-				var doAllAgree = true;
+				var doAllAgree = 0;
 				for(var i = 0; i < dr.states.length; ++i){
-					if(dr.states[i] == false){
-						doAllAgree = false;
-						break;
+					if(dr.states[i] == true){
+						doAllAgree ++;
 					}
 				}
 
-				if(doAllAgree){
+				if(doAllAgree>=3){
 					socket.gameMgr.doDissolve(roomId);					
 				}
 			}
