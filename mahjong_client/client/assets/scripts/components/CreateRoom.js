@@ -8,6 +8,12 @@ cc.Class({
         _jiesuan:null,
         _wanfaxuanze:null,
         _types:[],//定义多种游戏类型 
+        _sjmmj_jifei:0,//房主出资 or 玩家平分
+        _sjmmj_jushu:0,//8盘 or 1圈
+        _dhmj_jifei:0,
+        _dhmj_jushu:0,
+        _tdh_jifei:0,
+        _tdh_jushu:0,
     },
 
     // use this for initialization
@@ -19,6 +25,11 @@ cc.Class({
         for(var i = 1 ; i < this._types.length ; i++) {
             this.node.getChildByName(this._types[i]).active = false;
         }
+        
+        //房主开8局 3砖  平摊每个人1砖
+        //房主开一圈 6砖   平摊每个人 2砖
+        //初始化计费
+        
     },
     
     onBtnBack:function(){
@@ -42,6 +53,117 @@ cc.Class({
     
     onTypeClicked:function(event){
         this.switchType(event.target.parent.children[1].name);
+    },
+    
+    onSJMMJfangzhuClicked:function (event) {
+        this._sjmmj_jifei = 0;
+        var cost = 1;
+        if(this._sjmmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._sjmmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/sjmmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onSJMMJwanjiaClicked:function (event) {
+        this._sjmmj_jifei = 1;
+        var cost = 1;
+        if(this._sjmmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._sjmmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/sjmmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onSJMMJ8panClicked:function (event) {
+        this._sjmmj_jushu = 0;
+        var cost = 1;
+        if(this._sjmmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._sjmmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/sjmmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onSJMMJ1quanClicked:function (event) {
+        this._sjmmj_jushu = 1;
+        var cost = 1;
+        if(this._sjmmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._sjmmj_jushu == 0) cost = cost;
+        else cost = 2 * cost;
+        cc.find("Canvas/CreateRoom/sjmmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    
+    onDHMJfangzhuClicked:function (event) {
+        this._dhmj_jifei = 0;
+        var cost = 1;
+        if(this._dhmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._dhmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/dhmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onDHMJwanjiaClicked:function (event) {
+        this._dhmj_jifei = 1;
+        var cost = 1;
+        if(this._dhmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._dhmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/dhmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onDHMJ8panClicked:function (event) {
+        this._dhmj_jushu = 0;
+        var cost = 1;
+        if(this._dhmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._dhmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/dhmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onDHMJ1quanClicked:function (event) {
+        this._dhmj_jushu = 1;
+        var cost = 1;
+        if(this._dhmj_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._dhmj_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/dhmj/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    
+    onTDHfangzhuClicked:function (event) {
+        this._tdh_jifei = 0;
+        var cost = 1;
+        if(this._tdh_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._tdh_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/tdh/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onTDHwanjiaClicked:function (event) {
+        this._tdh_jifei = 1;
+        var cost = 1;
+        if(this._tdh_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._tdh_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/tdh/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onTDH8panClicked:function (event) {
+        this._tdh_jushu = 0;
+        var cost = 1;
+        if(this._tdh_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._tdh_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/tdh/cost/number").getComponent(cc.Label).string = "×" + cost;
+    },
+    onTDH1quanClicked:function (event) {
+        this._tdh_jushu = 1;
+        var cost = 1;
+        if(this._tdh_jifei == 0 ) cost = 3;
+        else cost = 1;
+        if(this._tdh_jushu == 0) cost = cost;
+        else cost *= 2;
+        cc.find("Canvas/CreateRoom/tdh/cost/number").getComponent(cc.Label).string = "×" + cost;
     },
     
     //tab界面切换

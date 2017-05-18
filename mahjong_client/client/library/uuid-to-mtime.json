@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1495012534083,
-    "meta": 1495074561025,
+    "asset": 1495088880401,
+    "meta": 1495088880453,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -2810,8 +2810,8 @@
     "relativePath": "scripts\\components\\CreateRole.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
-    "asset": 1491469528844,
-    "meta": 1495074574970,
+    "asset": 1495087620790,
+    "meta": 1495087621053,
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "90758d9a-c0d2-459e-86c2-fe664614b06a": {

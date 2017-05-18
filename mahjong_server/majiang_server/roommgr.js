@@ -117,9 +117,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 		return;
 	}
 
-	//房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
-	console.log(roomConf.koufei);
-	console.log(roomConf.quanshu);
+
 	//房主出資
 	if( roomConf.koufei == 0 ) {
 		//8盤
