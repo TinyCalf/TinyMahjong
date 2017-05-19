@@ -818,4 +818,38 @@ exports.getGemsById = function(userid,callback) {
     return res;
 };
 
+//新增 获取玩家的签到信息
+exports.getCheckinStatus = function (userid,callback) {
+    var sql = 'SELECT gems,checkin_data,checkin_days FROM t_users WHERE userid = ' + userid;
+    query(sql, function(err, rows, fields) {
+        if (err) {
+            callback(null);
+            throw err;
+        }
+        else{
+            if(rows.length > 0){
+                callback(rows[0]);
+            }
+            else{
+                callback(null);
+            }
+        }
+
+    });
+};
+//签到
+exports.Checkin = function (data,callback) {
+    var sql = 'UPDATE t_users SET gems = '+data.gems+',checkin_data="'+data.checkin_data+'",checkin_days="'+data.checkin_days+'" WHERE userid = '+data.userid;
+    query(sql, function(err, rows, fields) {
+        if (err) {
+            callback(null);
+            throw err;
+        }
+        else{
+            callback(0);
+        }
+
+    });
+};
+
 exports.query = query;

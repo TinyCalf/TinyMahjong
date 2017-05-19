@@ -310,6 +310,78 @@ app.get('/is_server_online',function(req,res){
 	}); 
 });
 
+app.get('/get_checkin_status',function(req,res){
+	db.getCheckinStatus(req.query.userid,function(data){
+		console.log("get_checkin_status");
+
+		if(data == null){
+			var ret = {
+				errcode:1,
+				errmsg:"null",
+				data:data,
+			};
+			http.send(res,ret);
+		}else{
+			var ret = {
+				errcode:0,
+				errmsg:"ok",
+				data:data,
+			};
+
+			http.send(res,ret);
+		}
+	})
+});
+
+app.get('/checkin',function(req,res){
+	db.getCheckinStatus(req.query.userid,function(data){
+		if (data) {
+			var gems = data.gems;
+			var checkin_data = data.checkin_data;
+			var checkin_days = data.checkin_days;
+			checkin_days = checkin_days % 7;
+			//当前日期
+			var d = new Date();
+			var y = d.getFullYear();
+			var m = d.getMonth() + 1;
+			m = m < 10 ? ("0" + m) : m;
+			var day = d.getDate();
+			day = day < 10 ? ("0" + day) : day;
+			var nowdate = y + "-" + m + "-" + day;
+			if(checkin_data!=nowdate){
+				var addgems = 0;
+				switch(checkin_days){
+					case 0: addgems = 1;break;
+					case 1: addgems = 1;break;
+					case 2: addgems = 2;break;
+					case 3: addgems = 2;break;
+					case 4: addgems = 2;break;
+					case 5: addgems = 2;break;
+					case 6: addgems = parseInt(Math.random()*10+1);break;
+				}
+				var dt = {
+					userid:req.query.userid,
+					gems:gems+addgems,
+					checkin_data:nowdate,
+					checkin_days:data.checkin_days+1,
+				};
+				db.Checkin(dt,function(data){
+					if(data==0){
+						var ret = {
+							errcode:0,
+							errmsg:"ok",
+							data:{
+								gems:addgems,
+							},
+						};
+						http.send(res,ret);
+					}
+				});
+			}
+		}
+	})
+});
+
 exports.start = function($config){
 	config = $config;
 	app.listen(config.CLEINT_PORT);

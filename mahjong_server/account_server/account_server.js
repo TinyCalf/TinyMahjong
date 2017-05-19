@@ -43,7 +43,7 @@ app.get('/mj_login',function(req,res){
 				errcode:1,
 				errmsg:"null",
 				data:data,
-			};	
+			};
 			console.log(ret);
 			send(res,ret);
 		}else{
@@ -53,11 +53,13 @@ app.get('/mj_login',function(req,res){
 				data:data,
 			};
 			console.log(ret);
-			
+
 			send(res,ret);
 		}
 	})
 });
+
+
 
 app.get('/register',function(req,res){
 	var account = req.query.account;
