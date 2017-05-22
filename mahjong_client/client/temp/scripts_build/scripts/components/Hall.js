@@ -102,6 +102,9 @@ cc.Class({
 
         cc.vv.audioMgr.playBGM("bgMain.mp3");
 
+        //初始化签到信息
+        this.initCheckin();
+
         //预加载麻将游戏界面
         cc.director.preloadScene('mjgame', function () {
             cc.log('preload mjgame complete!!!');
@@ -123,6 +126,66 @@ cc.Class({
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
         }
+    },
+
+    //初始化签到信息
+    initCheckin: function initCheckin() {
+        //获取签到信息
+        var data = {
+            userid: cc.vv.userMgr.userId
+        };
+        cc.vv.http.sendRequest("/get_checkin_status", data, function (res) {
+            //当前已签到次数
+            var checkin_days = res.errcode.data.checkin_days;
+            //上次签到时间
+            var checkin_date = res.errcode.data.checkin_data;
+            //当前日期
+            var d = new Date();
+            var y = d.getFullYear();
+            var m = d.getMonth() + 1;
+            m = m < 10 ? "0" + m : m;
+            var day = d.getDate();
+            day = day < 10 ? "0" + day : day;
+            var nowdate = y + "-" + m + "-" + day;
+
+            //获取7天的签到图片
+            var days = cc.find("Canvas/CheckinBox/bg").children;
+            var checkin_days = checkin_days % 7;
+            for (var i = 0; i < checkin_days; i++) {
+                days[i].getChildByName("hascheckin").active = true;
+                days[i].getComponent(cc.Button).interactable = false;
+                days[i].color = new cc.Color(168, 168, 168);
+                days[i].opacity = 255;
+            }
+            for (var i = checkin_days; i < 7; i++) {
+                days[i].getChildByName("hascheckin").active = false;
+                days[i].getComponent(cc.Button).interactable = false;
+                days[i].color = new cc.Color(255, 255, 255);
+                days[i].opacity = 160;
+            }
+            if (checkin_date != nowdate) {
+                days[checkin_days].opacity = 255;
+                days[checkin_days].getComponent(cc.Button).interactable = true;
+            }
+        });
+    },
+
+    onDaysClicked: function onDaysClicked() {
+        console.log("onDaysClicked");
+        //隐藏签到面板
+        cc.find("Canvas/CheckinBox").active = false;
+        //发送请求
+        var data = {
+            userid: cc.vv.userMgr.userId
+        };
+        var self = this;
+        cc.vv.http.sendRequest("/checkin", data, function (res) {
+            var addgems = res.errcode.data.gems;
+            self.initCheckin();
+            cc.vv.alert.show("提示", "签到成功，获得" + addgems + "钻");
+            cc.vv.userMgr.gems += addgems;
+            cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
+        });
     },
 
     refreshInfo: function refreshInfo() {

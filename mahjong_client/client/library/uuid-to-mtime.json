@@ -2860,8 +2860,8 @@
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1495181448758,
-    "meta": 1495419390456,
+    "asset": 1495432773837,
+    "meta": 1495432774401,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
@@ -2900,8 +2900,8 @@
     "relativePath": "scripts\\components\\RadioGroupMgr.js"
   },
   "7f5531b4-6e84-47e8-aad3-13bc0009a5f1": {
-    "asset": 1482759928000,
-    "meta": 1495074575806,
+    "asset": 1495432047906,
+    "meta": 1495432048002,
     "relativePath": "scripts\\components\\ReConnect.js"
   },
   "21e6af9a-8c63-434c-9c03-1db57703bda6": {
@@ -2940,8 +2940,8 @@
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1495012534275,
-    "meta": 1495074576189,
+    "asset": 1495432951868,
+    "meta": 1495432952242,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {

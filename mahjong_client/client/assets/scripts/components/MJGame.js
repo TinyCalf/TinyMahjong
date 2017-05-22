@@ -61,8 +61,8 @@ cc.Class({
         cc.vv.audioMgr.playBGM("bgMain.mp3");
         
         //淡入
-        var fadein = cc.fadeIn(0.1);
-        this.node.runAction(fadein);
+        // var fadein = cc.fadeIn(0.1);
+        // this.node.runAction(fadein);
     },
     
     initView:function(){

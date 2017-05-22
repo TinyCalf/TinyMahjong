@@ -26,7 +26,8 @@ cc.Class({
         var fnTestServerOn = function(){
             cc.vv.net.test(function(ret){
                if(ret){
-                    cc.director.loadScene('hall');                
+                    cc.director.loadScene('hall');  
+                    //cc.director.loadScene('mjgame');  
                }
                else{
                    setTimeout(fnTestServerOn,3000);

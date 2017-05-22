@@ -27,9 +27,10 @@ cc.Class({
             cc.vv.net.test(function (ret) {
                 if (ret) {
                     cc.director.loadScene('hall');
+                    //cc.director.loadScene('mjgame');
                 } else {
-                    setTimeout(fnTestServerOn, 3000);
-                }
+                        setTimeout(fnTestServerOn, 3000);
+                    }
             });
         };
 
