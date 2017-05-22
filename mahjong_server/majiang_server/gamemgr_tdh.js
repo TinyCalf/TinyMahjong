@@ -2024,6 +2024,17 @@ exports.hu = function(userId){
         return;
     }
 
+    //逆时针往前 如果有其他人可以胡，则不能胡
+    var turn = game.turn;
+    var si = (seatIndex+4-1)%4;
+    while(si!=turn) {
+        if(game.gameSeats[si].canHu){
+            console.log('others can hu first');
+            return;
+        }
+        si = (si+4-1)%4;
+    }
+
     //标记为和牌
     seatData.hued = true;
     var hupai = game.chuPai;

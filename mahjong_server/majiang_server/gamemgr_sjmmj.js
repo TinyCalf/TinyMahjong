@@ -174,20 +174,20 @@ function shuffle(game) {
     // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    var index = 0 ;
-    var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
-    for (var i =0 ; i < mjs.length ; i++) {
-        for(var j = 0 ; j < 4 ; j++) {
-            game.mahjongs[index] = mjs[i];
-            index++;
-        }
-    }
-    game.mahjongs[index] = 12;
-    index++;
-    game.mahjongs[index] = 38;
-    index++;
-    game.mahjongs[index] = 39;
-    index++;
+    // var index = 0 ;
+    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+    // for (var i =0 ; i < mjs.length ; i++) {
+    //     for(var j = 0 ; j < 4 ; j++) {
+    //         game.mahjongs[index] = mjs[i];
+    //         index++;
+    //     }
+    // }
+    // game.mahjongs[index] = 12;
+    // index++;
+    // game.mahjongs[index] = 38;
+    // index++;
+    // game.mahjongs[index] = 39;
+    // index++;
 
     //抢杠胡
     // var index = 0 ;
@@ -2788,6 +2788,17 @@ exports.hu = function(userId){
     if(seatData.hued){
         console.log('you have already hued. no kidding plz.');
         return;
+    }
+
+    //逆时针往前 如果有其他人可以胡，则不能胡
+    var turn = game.turn;
+    var si = (seatIndex+4-1)%4;
+    while(si!=turn) {
+        if(game.gameSeats[si].canHu){
+            console.log('others can hu first');
+            return;
+        }
+        si = (si+4-1)%4;
     }
 
     //标记为和牌
