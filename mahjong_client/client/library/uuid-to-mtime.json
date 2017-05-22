@@ -430,8 +430,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1495074479890,
-    "meta": 1495074560885,
+    "asset": 1495181448715,
+    "meta": 1495419388430,
     "relativePath": "resources\\scenes"
   },
   "d5635cb0-01fd-4876-95ea-dd6b7cd3f1b1": {
@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1495181135594,
-    "meta": 1495181135645,
+    "asset": 1495181448701,
+    "meta": 1495419388481,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1495111298809,
-    "meta": 1495111298989,
+    "asset": 1495181448715,
+    "meta": 1495419388576,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -940,8 +940,8 @@
     "relativePath": "resources\\textures\\chat\\emoji_action_texture.png"
   },
   "eeaee859-4622-49b8-820e-9dc018ab8c76": {
-    "asset": 1495110074544,
-    "meta": 1495110081792,
+    "asset": 1495181448726,
+    "meta": 1495419388482,
     "relativePath": "resources\\textures\\Game"
   },
   "e05d1c9d-94bb-4c56-988d-77fb72706044": {
@@ -1150,8 +1150,8 @@
     "relativePath": "resources\\textures\\Game\\shijian.png"
   },
   "7a9391b6-3ed9-4931-8ab8-23d5c2eb4101": {
-    "asset": 1495107866341,
-    "meta": 1495110081900,
+    "asset": 1495181448721,
+    "meta": 1495419388864,
     "relativePath": "resources\\textures\\Game\\table.jpg"
   },
   "4cdc0920-15d0-4246-96f6-c98ab313432f": {
@@ -1160,8 +1160,8 @@
     "relativePath": "resources\\textures\\Game\\touxiangkuang_03.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1495109042918,
-    "meta": 1495110081880,
+    "asset": 1495181448743,
+    "meta": 1495419388814,
     "relativePath": "resources\\textures\\hall"
   },
   "c76b67fd-c7e4-48ac-9f64-a153ab211a2d": {
@@ -2775,8 +2775,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1495074480089,
-    "meta": 1495074573708,
+    "asset": 1495181448758,
+    "meta": 1495419389015,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -2800,8 +2800,8 @@
     "relativePath": "scripts\\components\\CreateRole.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
-    "asset": 1495087620790,
-    "meta": 1495087621053,
+    "asset": 1495181448744,
+    "meta": 1495419390069,
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "90758d9a-c0d2-459e-86c2-fe664614b06a": {
@@ -2825,8 +2825,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1495181400639,
-    "meta": 1495181400787,
+    "asset": 1495181448745,
+    "meta": 1495419390116,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2845,8 +2845,8 @@
     "relativePath": "scripts\\components\\ImageLoader.js"
   },
   "10a1cf23-cfde-49bb-8367-a6439651f8a7": {
-    "asset": 1495100746734,
-    "meta": 1495100746817,
+    "asset": 1495181448747,
+    "meta": 1495419390453,
     "relativePath": "scripts\\components\\JoinGameInput.js"
   },
   "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
@@ -2860,8 +2860,8 @@
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1495078321638,
-    "meta": 1495078322193,
+    "asset": 1495181448758,
+    "meta": 1495419390456,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
@@ -2990,63 +2990,63 @@
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "82406b5b-21a5-48e2-b535-799170b15bd0": {
-    "asset": 1495107098407,
-    "meta": 1495109042949,
+    "asset": 1495181448731,
+    "meta": 1495419388915,
     "relativePath": "resources\\textures\\hall\\checkin_cross.png"
   },
   "0ebc959a-c250-4c93-b3f2-0be3a018055c": {
-    "asset": 1495107314238,
-    "meta": 1495109042952,
+    "asset": 1495181448732,
+    "meta": 1495419388905,
     "relativePath": "resources\\textures\\hall\\checkin_day1.png"
   },
   "eb9b7f2c-c7ec-4d2a-80dc-458021cd16da": {
-    "asset": 1495107098228,
-    "meta": 1495109042964,
+    "asset": 1495181448734,
+    "meta": 1495419388978,
     "relativePath": "resources\\textures\\hall\\checkin_day2.png"
   },
   "64bccdfe-6bcc-4968-ab57-3d6cd4828ff0": {
-    "asset": 1495107098202,
-    "meta": 1495109042968,
+    "asset": 1495181448735,
+    "meta": 1495419388934,
     "relativePath": "resources\\textures\\hall\\checkin_day3.png"
   },
   "20624de5-36b6-4448-90e8-8b6caaf29785": {
-    "asset": 1495107097975,
-    "meta": 1495109042975,
+    "asset": 1495181448737,
+    "meta": 1495419388961,
     "relativePath": "resources\\textures\\hall\\checkin_day4.png"
   },
   "614692b1-be0f-439e-b0bf-22188de1e7c5": {
-    "asset": 1495107097837,
-    "meta": 1495109042978,
+    "asset": 1495181448738,
+    "meta": 1495419388994,
     "relativePath": "resources\\textures\\hall\\checkin_day5.png"
   },
   "01f5a88c-937e-49b2-b54d-56c93cee9457": {
-    "asset": 1495107097750,
-    "meta": 1495109042984,
+    "asset": 1495181448739,
+    "meta": 1495419389014,
     "relativePath": "resources\\textures\\hall\\checkin_day6.png"
   },
   "889bc404-de16-4527-bdcd-30a400d7d8ef": {
-    "asset": 1495107097898,
-    "meta": 1495109042989,
+    "asset": 1495181448741,
+    "meta": 1495419389011,
     "relativePath": "resources\\textures\\hall\\checkin_day7.png"
   },
   "95175295-dfba-444a-b387-9493516744a0": {
-    "asset": 1495107097762,
-    "meta": 1495109042995,
+    "asset": 1495181448742,
+    "meta": 1495419389952,
     "relativePath": "resources\\textures\\hall\\checkin_havechecked.png"
   },
   "c182e557-5668-4892-9a28-35241a36ab33": {
-    "asset": 1495107098581,
-    "meta": 1495109043013,
+    "asset": 1495181448729,
+    "meta": 1495419388885,
     "relativePath": "resources\\textures\\hall\\checkin_box.png"
   },
   "11703faa-9b97-4658-b909-f6f351df8bc7": {
-    "asset": 1495111224066,
-    "meta": 1495111263719,
+    "asset": 1495181448723,
+    "meta": 1495419388782,
     "relativePath": "resources\\textures\\Game\\table.png"
   },
   "9e1b085a-0fdb-435f-bb21-46d7ff1dc12d": {
-    "asset": 1495111224614,
-    "meta": 1495111528031,
+    "asset": 1495181448727,
+    "meta": 1495419388812,
     "relativePath": "resources\\textures\\Game\\title.png"
   }
 }

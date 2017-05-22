@@ -555,8 +555,25 @@ exports.update_seat_info = function(roomId,seatIndex,userId,icon,name,callback){
 
 exports.update_num_of_turns = function(roomId,numOfTurns,callback){
     callback = callback == null? nop:callback;
-    var sql = 'UPDATE t_rooms SET num_of_turns = {0} WHERE id = "{1}"'
+    var sql = 'UPDATE t_rooms SET num_of_turns = {0} WHERE id = "{1}"';
     sql = sql.format(numOfTurns,roomId);
+    //console.log(sql);
+    query(sql,function(err,row,fields){
+        if(err){
+            callback(false);
+            throw err;
+        }
+        else{
+            callback(true);
+        }
+    });
+};
+
+//新增 同步风向信息
+exports.update_fengxiang = function(roomId,fengxiang,callback){
+    callback = callback == null? nop:callback;
+    var sql = 'UPDATE t_rooms SET fengxiang = {0} WHERE id = "{1}"'
+    sql = sql.format(fengxiang,roomId);
     //console.log(sql);
     query(sql,function(err,row,fields){
         if(err){
@@ -573,6 +590,24 @@ exports.update_next_button = function(roomId,nextButton,callback){
     callback = callback == null? nop:callback;
     var sql = 'UPDATE t_rooms SET next_button = {0} WHERE id = "{1}"'
     sql = sql.format(nextButton,roomId);
+    //console.log(sql);
+    query(sql,function(err,row,fields){
+        if(err){
+            callback(false);
+            throw err;
+        }
+        else{
+            callback(true);
+        }
+    });
+};
+
+
+//新增 同步开始的庄信息
+exports.update_begin_button = function(roomId,beginButton,callback){
+    callback = callback == null? nop:callback;
+    var sql = 'UPDATE t_rooms SET begin_button = {0} WHERE id = "{1}"'
+    sql = sql.format(beginButton,roomId);
     //console.log(sql);
     query(sql,function(err,row,fields){
         if(err){
@@ -632,6 +667,7 @@ exports.get_room_data = function(roomId,callback){
         }
     });
 };
+
 
 exports.delete_room = function(roomId,callback){
     callback = callback == null? nop:callback;

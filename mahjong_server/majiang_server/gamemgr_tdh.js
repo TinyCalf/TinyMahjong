@@ -995,6 +995,12 @@ function doGameOver(game,userId,forceEnd){
             //保存游戏局数
             db.update_num_of_turns(roomId,roomInfo.numOfGames);
 
+            //保存游戏风向
+            db.update_fengxiang(roomId,roomInfo.fengxiang);
+
+            //保存开始的庄
+            db.update_begin_button(roomId,roomInfo.beginButton);
+
             //扣除鑽石
             if(roomInfo.ifPayed == false) {
                 roomInfo.ifPayed = true;

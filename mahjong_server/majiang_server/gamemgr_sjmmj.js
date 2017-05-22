@@ -174,20 +174,20 @@ function shuffle(game) {
     // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
     // game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
-    // game.mahjongs[index] = 12;
-    // index++;
-    // game.mahjongs[index] = 38;
-    // index++;
-    // game.mahjongs[index] = 39;
-    // index++;
+    var index = 0 ;
+    var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
+    game.mahjongs[index] = 12;
+    index++;
+    game.mahjongs[index] = 38;
+    index++;
+    game.mahjongs[index] = 39;
+    index++;
 
     //抢杠胡
     // var index = 0 ;
@@ -1709,6 +1709,8 @@ function doGameOver(game,userId,forceEnd){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
             }
         }
+        console.log("nextButton = "+roomInfo.nextButton);
+        console.log("beginButton = "+roomInfo.beginButton);
         console.log("fengxiang = " + roomInfo.fengxiang);
 
         //如果打一圈：
@@ -1746,6 +1748,12 @@ function doGameOver(game,userId,forceEnd){
         
             //保存游戏局数
             db.update_num_of_turns(roomId,roomInfo.numOfGames);
+
+            //保存游戏风向
+            db.update_fengxiang(roomId,roomInfo.fengxiang);
+
+            //保存开始的庄
+            db.update_begin_button(roomId,roomInfo.beginButton);
 
             //扣除鑽石
             if(roomInfo.ifPayed == false) {

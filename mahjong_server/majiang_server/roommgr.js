@@ -30,6 +30,8 @@ function constructRoomFromDb(dbdata){
 		numOfGames:dbdata.num_of_turns,
 		createTime:dbdata.create_time,
 		nextButton:dbdata.next_button,
+		fengxiang:dbdata.fengxiang,
+		beginButton:dbdata.begin_button,
 		seats:new Array(4),
 		conf:JSON.parse(dbdata.base_info)
 	};
