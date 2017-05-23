@@ -1344,6 +1344,7 @@ exports.begin = function(roomId) {
         hupaiList:[],
         chupaiCnt:0,
         fangpaoindex:-1,
+        kanzi:[],
     };
 
     //roomInfo.numOfGames++;

@@ -59,6 +59,7 @@ function debugRecord(pai){
 }
 
 function matchSingle(seatData,selected){
+	var game = seatData.game;
 	//分开匹配 A-2,A-1,A
 	var matched = true;
 	var v = selected % 9;
@@ -94,6 +95,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected - 2);
 			debugRecord(selected - 1);
 			debugRecord(selected);
+			game.kanzi.push([selected - 2,selected - 1,selected]);
 			return true;
 		}		
 	}
@@ -131,6 +133,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected - 1);
 			debugRecord(selected);
 			debugRecord(selected + 1);
+			game.kanzi.push([selected - 1,selected ,selected + 1]);
 			return true;
 		}		
 	}
@@ -169,6 +172,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected);
 			debugRecord(selected + 1);
 			debugRecord(selected + 2);
+			game.kanzi.push([selected,selected + 1 ,selected + 2]);
 			return true;
 		}		
 	}
@@ -176,6 +180,7 @@ function matchSingle(seatData,selected){
 }
 
 function checkSingle(seatData){
+	var game = seatData.game;
 	var holds = seatData.holds;
 	var selected = -1;
 	var c = 0;
@@ -202,6 +207,7 @@ function checkSingle(seatData){
 		//立即恢复对数据的修改
 		seatData.countMap[selected] = c;
 		if(ret == true){
+			game.kanzi.push([selected,selected,selected]);
 			return true;
 		}
 	}
@@ -216,6 +222,7 @@ function checkSingle(seatData){
 		seatData.countMap[selected] = c;
 		//如果作为一坎能够把牌匹配完，直接返回TRUE。
 		if(ret == true){
+			game.kanzi.push([selected,selected,selected]);
 			return true;
 		}
 	}
@@ -267,12 +274,14 @@ exports.checkTingPai = checkTingPai;
 
 //複製了一下checkcanhu函數，防止遞歸調用
 exports.canHu = function (seatData) {
+	var game = seatData.game;
 	for(var k in seatData.countMap){
 		k = parseInt(k);
 		var c = seatData.countMap[k];
 		if(c < 2){
 			continue;
 		}
+
 		//如果当前牌大于等于２，则将它选为将牌
 		seatData.countMap[k] -= 2;
 		//逐个判定剩下的牌是否满足　３Ｎ规则,一个牌会有以下几种情况
@@ -280,10 +289,10 @@ exports.canHu = function (seatData) {
 		//2、2张，则只可能是与其它牌形成匹配关系
 		//3、3张，则可能是单张形成 A-2,A-1,A  A-1,A,A+1  A,A+1,A+2，也可能是直接成为一坎
 		//4、4张，则只可能是一坎+单张
-		kanzi = [];
 		var ret = checkSingle(seatData);
 		seatData.countMap[k] += 2;
 		if(ret){
+			game.kanzi.push([k,k]);
 			return true;
 		}
 	}

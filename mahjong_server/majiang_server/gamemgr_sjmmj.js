@@ -171,23 +171,23 @@ function shuffle(game) {
 
     //這裡可輸入測試牌型如果不需要則注釋以下代碼
     //測試 找出不顯示的花
-    // var mjs = [27,1,1,1,27,2,2,2,27,3,3,3,30,4,4,4,30];
-    // game.mahjongs = mjs.concat(mahjongs);
+    var mjs = [];
+    game.mahjongs = mjs.concat(mahjongs);
     //直接胡
-    // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
-    // game.mahjongs[index] = 12;
-    // index++;
-    // game.mahjongs[index] = 38;
-    // index++;
-    // game.mahjongs[index] = 39;
-    // index++;
+    var index = 0 ;
+    var mjs = [1,1,1,2,2,2,3,4,4,4,5,11,12];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
+    game.mahjongs[index] = 13;
+    index++;
+    game.mahjongs[index] = 13;
+    index++;
+    game.mahjongs[index] = 13;
+    index++;
 
     //抢杠胡
     // var index = 0 ;
@@ -775,19 +775,12 @@ function isPaiHu(seatData){
     }
 
 
-    var holds = [].concat(seatData.holds);
-    holds.sort(function(a,b){
-        return parseInt(a-b);
-    });
-    for (var i = 0; i < holds.length ; i++){
-        var nowhold = holds[i];
-        if(nowhold == holds[i+1]){
-            if(nowhold == holds[i+2]) return false;
-            else { i++;}
-        }else if (nowhold+1 == holds[i+1]&&nowhold+2 == holds[i+2]){
-            i = i + 2;
-            continue;
-        }else return false;
+    //没有刻子
+    var kanzi = seatData.game.kanzi;
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 3 && kanzi[i][0] == kanzi[i][1]) {
+            return false;
+        }
     }
     return true;
 }
@@ -797,18 +790,12 @@ function isDuiDuiHu (seatData) {
     if (seatData.chis.length > 0) {
         return false;
     }
-    var holds = [].concat(seatData.holds);
-    holds.sort(function(a,b){
-        return parseInt(a-b);
-    });
-    for (var i = 0; i < holds.length ; i++){
-        if(holds[i] == holds[i+1] && holds[i] == holds[i+2]){
-            i = i + 2;
-            continue;
-        }else if (holds[i] == holds[i+1]){
-            i++;
-            continue;
-        }else return false;
+    //没有坎子
+    var kanzi = seatData.game.kanzi;
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1]) {
+            return false;
+        }
     }
     return true;
 }
@@ -823,134 +810,51 @@ function isGangShangHua (seatData) {
 
 //判斷坎
 function isKan (seatData) {
-    //去掉 胡的牌 以及 胡的牌左右的牌任然能胡，則為坎
-    var holds = seatData.holds;
-    var hupai = holds[holds.length-1];
-    if (seatData.countMap[hupai-1] == null
-        || seatData.countMap[hupai-1] < 1 )
-        return false;
-    if (seatData.countMap[hupai+1] == null
-        || seatData.countMap[hupai+1] < 1 )
-        return false;
-
-    //克隆對象的低級方法
-    var sd = {};
-    sd.countMap = JSON.parse(JSON.stringify(seatData.countMap));
-    sd.holds = [].concat(seatData.holds);
-    //去掉三張牌
-    for ( var n = 0 ; n < sd.holds.length ; n++ ) {
-        if(sd.holds[n] == hupai-1
-            || sd.holds[n] == hupai+1
-            ||sd.holds[n] == hupai ) {
-            sd.holds.splice(n,1);
+    var kanzi = seatData.game.kanzi;
+    var hupai = seatData.holds[seatData.holds.length-1];
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 3 &&kanzi[i][1]==hupai && kanzi[i][0]!=hupai){
+            return true;
         }
     }
-    sd.countMap[hupai+1] --;
-    sd.countMap[hupai] --;
-    sd.countMap[hupai-1] --;
-    //判斷剩下的牌能否胡
-    var flag = mjutils.canHu(sd);
-    return flag;
+    return false;
 }
 
 //判斷邊
 function isBian (seatData) {
-    //去掉 胡的牌 以及 胡的牌的邊牌任然能胡，則為邊
-    var holds = seatData.holds;
-    var hupai = holds[holds.length-1];
-    if(hupai != 2
-        &&hupai != 11
-        &&hupai != 20
-        &&hupai != 6
-        &&hupai != 15
-        &&hupai != 24) {
-        return false;
-    }
-
-    var pailist = [];
-    pailist.push(hupai);
-    if(hupai == 2)  { pailist.push(0,1)}
-    if(hupai == 11) { pailist.push(10,9)}
-    if(hupai == 20) { pailist.push(19,18)}
-    if(hupai == 6)  { pailist.push(7,8)}
-    if(hupai == 15) { pailist.push(16,17)}
-    if(hupai == 24) { pailist.push(25,26)}
-
-    for (n=0;n<3;n++){
-        if(seatData.countMap[pailist[n]] < 1 || seatData.countMap[pailist[n]] == null) {
-            return false;
+    var kanzi = seatData.game.kanzi;
+    var hupai = seatData.holds[seatData.holds.length-1];
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ){
+            if(kanzi[i][2] == 2 || kanzi[i][2] == 11 || kanzi[i][2] == 20) return true;
+            if(kanzi[i][0] == 6 || kanzi[i][0] == 15 || kanzi[i][0] == 24) return true;
         }
     }
-    //克隆對象的低級方法
-    var sd = {};
-    sd.countMap = JSON.parse(JSON.stringify(seatData.countMap));
-    sd.holds = [].concat(seatData.holds);
-    //去掉三張牌
-    for ( var n = 0 ; n < sd.holds.length ; n++ ) {
-        if(sd.holds[n] == pailist[0]
-            || sd.holds[n] == pailist[1]
-            ||sd.holds[n] == pailist[2] ) {
-            sd.holds.splice(n,1);
-        }
-    }
-    sd.countMap[pailist[0]] --;
-    sd.countMap[pailist[1]] --;
-    sd.countMap[pailist[2]] --;
-    //判斷剩下的牌能否胡
-    var flag = mjutils.canHu(sd);
-    return flag;
+    return false;
 }
 
 //判斷單
 function isDan (seatData) {
-    //把胡的一個對刪除換成 東 如果還能胡則為單
-    var holds = seatData.holds;
-    var hupai = holds[holds.length-1];
-
-    if(seatData.countMap[hupai] < 2) return false;
-
-    //克隆對象的低級方法
-    var sd = {};
-    sd.countMap = JSON.parse(JSON.stringify(seatData.countMap));
-    sd.holds = [].concat(seatData.holds);
-    //去掉兩張牌
-    for ( var n = 0 ; n < sd.holds.length ; n++ ) {
-        if(sd.holds[n] == hupai ) {
-            sd.holds[n] = 30;
+    var kanzi = seatData.game.kanzi;
+    var hupai = seatData.holds[seatData.holds.length-1];
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 2 && kanzi[i][0] == hupai){
+            return true;
         }
     }
-    sd.countMap[hupai] -= 2;
-    if(sd.countMap[30] == null)
-        sd.countMap[30] = 2;
-    else sd.countMap[30] +=2;
-
-    //判斷剩下的牌能否胡
-    var flag = mjutils.canHu(sd);
-    return flag;
+    return false;
 }
 
 //判斷對到
 function isDuidao (seatData) {
-    //去掉 三個胡的牌任然能胡，則對到
-    var holds = seatData.holds;
-    var hupai = holds[holds.length-1];
-    if (seatData.countMap[hupai] <3){
-        return false;
-    }
-    //克隆對象的低級方法
-    var sd = {};
-    sd.countMap = JSON.parse(JSON.stringify(seatData.countMap));
-    sd.holds = [].concat(seatData.holds);
-    //去掉三張牌
-    for ( var n = 0 ; n < sd.holds.length ; n++ ) {
-        if(sd.holds[n] == hupai) {
-            sd.holds.splice(n,1);
+    var kanzi = seatData.game.kanzi;
+    var hupai = seatData.holds[seatData.holds.length-1];
+    for (var i = 0 ; i < kanzi.length ; i++) {
+        if(kanzi[i].length == 3 && kanzi[i][0] == hupai && kanzi[i][1] == hupai){
+            return true;
         }
     }
-    sd.countMap[hupai] -=3;
-    //判斷剩下的牌能否胡
-    var flag = mjutils.canHu(sd);
-    return flag;
+    return false;
 }
 
 
@@ -993,14 +897,17 @@ function calculateResult(game){
 
     //计算每家的台数丝数胡数
     for(var i = 0; i < game.gameSeats.length; i++){
-
-
-
         var sd = game.gameSeats[i];
         //统计杠的数目
         sd.numAnGang = sd.angangs.length;
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         if(sd.hued == true) {
+            //通过胡数算法找到他的坎子们
+            game.kanzi = [];
+            mjutils.canHu(sd);
+            var kanzi = game.kanzi;
+            console.log("KANZI:");
+            console.log(kanzi);
             //如果是点杠胡 则算作自摸
             (sd.isQiangGangHu)?sd.iszimo=true:{};
             if(isPaiHu(sd)) sd.paihu = true;
@@ -1136,6 +1043,9 @@ function calculateResult(game){
         //每只坐花算一丝
         SI += sd.huas.length;
 
+
+
+
         //一九大幺和字碰出算一丝，其他为半丝 （即碰出算半丝，一九大幺和字再加半丝）
         var needed = [0,8,9,17,18,26,27,28,29,30,31,32,33];
         SI += sd.pengs.length/2;
@@ -1144,12 +1054,32 @@ function calculateResult(game){
                 if ( needed[m] == sd.pengs[n]) SI += 0.5;
             }
         }
-        //暗刻为1丝 一九大幺和字再加1丝
-        for ( var n = 0 ; n < needed.length ; n++) {
-            (sd.countMap[needed[n]] >=3) ? SI += 1 : {};
-        }
-        for ( var n = 0 ; n < 34 ; n++) {
-            (sd.countMap[n] >=3) ? SI += 1 : {};
+        if(game.firstHupai != i) {
+            //暗刻为1丝 一九大幺和字再加1丝
+            for (var n = 0; n < needed.length; n++) {
+                (sd.countMap[needed[n]] >= 3) ? SI += 1 : {};
+            }
+            for (var n = 0; n < 34; n++) {
+                (sd.countMap[n] >= 3) ? SI += 1 : {};
+            }
+        }else{
+            //胡牌的人需要用坎子判断暗刻
+            for (var n = 0; n < needed.length; n++) {
+                if(sd.countMap[needed[n]] >= 3){
+                    for(var k = 0 ; k < game.kanzi.length ; k++){
+                        if(game.kanzi[k].length ==3 && game.kanzi[k][0] == needed[n] && game.kanzi[k][1] == needed[n])
+                            SI += 1;
+                    }
+                }
+            }
+            for (var n = 0; n < 34; n++) {
+                if(sd.countMap[n] >= 3){
+                    for(var k = 0 ; k < game.kanzi.length ; k++){
+                        if(game.kanzi[k].length ==3 && game.kanzi[k][0] == n && game.kanzi[k][1] == n)
+                            SI += 1;
+                    }
+                }
+            }
         }
 
 
@@ -2097,6 +2027,7 @@ exports.begin = function(roomId) {
         hupaiList:[],
         chupaiCnt:0,
         fangpaoindex:-1,
+        kanzi:[],
 
         //舟山麻将留局计算，需要保留多张牌
         leftlength:leftlength,
