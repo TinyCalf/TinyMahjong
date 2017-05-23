@@ -404,6 +404,8 @@ exports.update_user_info = function(userid,name,headimg,sex,callback){
     else{
         headimg = 'null';
     }
+    console.log("name = " +name);
+    if(!name) name = "player";
     name = crypto.toBase64(name);
     var sql = 'UPDATE t_users SET name="{0}",headimg={1},sex={2} WHERE account="{3}"';
     sql = sql.format(name,headimg,sex,userid);

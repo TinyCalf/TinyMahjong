@@ -79,11 +79,23 @@
       "width": 816,
       "height": 639
     },
-    "worker": {
-      "x": 760,
-      "y": 435,
-      "width": 400,
-      "height": 300
+    "window-1495435277859": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 744,
+      "y": 129,
+      "width": 516,
+      "height": 922
     }
   }
 }
