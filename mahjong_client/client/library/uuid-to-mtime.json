@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1495181448715,
-    "meta": 1495419388576,
+    "asset": 1495530552189,
+    "meta": 1495530552347,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -2750,8 +2750,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1495074480020,
-    "meta": 1495074565057,
+    "asset": 1495525940929,
+    "meta": 1495527846772,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2775,8 +2775,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1495181448758,
-    "meta": 1495419389015,
+    "asset": 1495525940948,
+    "meta": 1495527847521,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -2860,8 +2860,8 @@
     "relativePath": "scripts\\components\\Login.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1495432773837,
-    "meta": 1495432774401,
+    "asset": 1495525940942,
+    "meta": 1495527847544,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
@@ -2900,8 +2900,8 @@
     "relativePath": "scripts\\components\\RadioGroupMgr.js"
   },
   "7f5531b4-6e84-47e8-aad3-13bc0009a5f1": {
-    "asset": 1495432047906,
-    "meta": 1495432048002,
+    "asset": 1495530451132,
+    "meta": 1495530451211,
     "relativePath": "scripts\\components\\ReConnect.js"
   },
   "21e6af9a-8c63-434c-9c03-1db57703bda6": {
@@ -2940,8 +2940,8 @@
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1495432951868,
-    "meta": 1495432952242,
+    "asset": 1495525940929,
+    "meta": 1495527847754,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {

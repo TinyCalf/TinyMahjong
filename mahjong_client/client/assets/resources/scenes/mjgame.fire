@@ -111343,7 +111343,7 @@
     "node": {
       "__id__": 2808
     },
-    "_enabled": true,
+    "_enabled": false,
     "_spriteFrame": {
       "__uuid__": "15f86f9b-c4ea-4045-a745-8d00e3e0f0fe"
     },
@@ -111378,9 +111378,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 237,
       "g": 255,
-      "b": 255,
+      "b": 105,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -111394,8 +111394,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 482.89,
-      "height": 40
+      "width": 275.94,
+      "height": 20
     },
     "_children": [],
     "_rotationX": 0,
@@ -111404,8 +111404,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -478,
+      "y": -346
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -111434,16 +111434,16 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 35,
-    "_fontSize": 35,
-    "_lineHeight": 40,
+    "_actualFontSize": 20,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
     "_N$string": "与服务器断开连接，正在重连...",
-    "_N$horizontalAlign": 1,
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
   },

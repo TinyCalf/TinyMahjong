@@ -26,11 +26,18 @@ cc.Class({
         var fnTestServerOn = function(){
             cc.vv.net.test(function(ret){
                if(ret){
-                    cc.director.loadScene('hall');  
+                   var roomId = cc.vv.userMgr.oldRoomId 
+                    if( roomId != null){
+                        cc.vv.userMgr.oldRoomId = null;
+                        cc.vv.userMgr.enterRoom(roomId);
+                    }else{
+                        cc.director.loadScene('hall'); 
+                    }
+                    //cc.director.loadScene('hall');  
                     //cc.director.loadScene('mjgame');  
                }
                else{
-                   setTimeout(fnTestServerOn,3000);
+                   setTimeout(fnTestServerOn,10000);
                }
             });
         }

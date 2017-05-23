@@ -169,25 +169,25 @@ function shuffle(game) {
 
 
 
-    //這裡可輸入測試牌型如果不需要則注釋以下代碼
-    //測試 找出不顯示的花
-    var mjs = [];
-    game.mahjongs = mjs.concat(mahjongs);
-    //直接胡
-    var index = 0 ;
-    var mjs = [1,1,1,2,2,2,3,4,4,4,5,11,12];
-    for (var i =0 ; i < mjs.length ; i++) {
-        for(var j = 0 ; j < 4 ; j++) {
-            game.mahjongs[index] = mjs[i];
-            index++;
-        }
-    }
-    game.mahjongs[index] = 13;
-    index++;
-    game.mahjongs[index] = 13;
-    index++;
-    game.mahjongs[index] = 13;
-    index++;
+    // //這裡可輸入測試牌型如果不需要則注釋以下代碼
+    // //測試 找出不顯示的花
+    // var mjs = [];
+    // game.mahjongs = mjs.concat(mahjongs);
+    // //直接胡
+    // var index = 0 ;
+    // var mjs = [1,1,1,2,2,2,3,4,4,4,5,11,12];
+    // for (var i =0 ; i < mjs.length ; i++) {
+    //     for(var j = 0 ; j < 4 ; j++) {
+    //         game.mahjongs[index] = mjs[i];
+    //         index++;
+    //     }
+    // }
+    // game.mahjongs[index] = 13;
+    // index++;
+    // game.mahjongs[index] = 13;
+    // index++;
+    // game.mahjongs[index] = 13;
+    // index++;
 
     //抢杠胡
     // var index = 0 ;
