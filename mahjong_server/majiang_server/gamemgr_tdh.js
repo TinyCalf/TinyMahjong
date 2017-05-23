@@ -956,7 +956,7 @@ function doGameOver(game,userId,forceEnd){
         var isEnd = false;
 
         //風圈 風向變化
-        if (game.firstHupai != old) {
+        if(game.firstHupai != old && game.firstHupai!=-1) {
             roomInfo.nextButton = (old + 1) % 4;
             if(roomInfo.nextButton==roomInfo.beginButton){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
