@@ -876,12 +876,7 @@ function calculateResult(game){
         sd.tai = -1;//负一表示不是胡的人 没有台数
         if(sd.hued == true) {
 
-            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
-            var tpai = -1;
-            if(sd.hued && !sd.iszimo){
-                var tpai = sd.holds.pop();
-                sd.countMap[tpai] --;
-            }
+
 
 
             //通过胡数算法找到他的坎子们
@@ -902,6 +897,13 @@ function calculateResult(game){
             if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
             if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
             if(isDuidao(sd)) sd.duidao = true;
+
+            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
+            var tpai = -1;
+            if(sd.hued && !sd.iszimo){
+                var tpai = sd.holds.pop();
+                sd.countMap[tpai] --;
+            }
 
             //定海麻将 只有胡的人算台数
             var TAI = 0 ;
@@ -1005,7 +1007,7 @@ function calculateResult(game){
             };
             //特殊加成 对到 点炮 胡东南西北时候 做到就加台
             if ( sd.hued && !sd.iszimo && sd.duidao ) {
-                res = judgebigwind(nowfeng,nowseat,tpai);
+                var res = judgebigwind(nowfeng,nowseat,tpai);
                 TAI += res;
             }
 
