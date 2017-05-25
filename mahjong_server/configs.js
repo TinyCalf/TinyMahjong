@@ -1,5 +1,5 @@
 ﻿//local
-var HALL_IP = "192.168.1.121";
+var HALL_IP = "172.17.13.47";
 //dev server
 //var HALL_IP = "139.219.224.143";
 var HALL_CLIENT_PORT = 9001;
@@ -32,7 +32,7 @@ exports.account_server = function(){
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
 		VERSION:'20161227',
-		APP_WEB:'http://zsmj.77queshen.com/mahjong_download/download.php',
+		APP_WEB:'http://zsmj.77queshen.com/mahjong_download/download.php?asd=1544981232321',
 	};
 };
 

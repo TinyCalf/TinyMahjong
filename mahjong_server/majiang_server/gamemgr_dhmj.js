@@ -875,6 +875,15 @@ function calculateResult(game){
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         sd.tai = -1;//负一表示不是胡的人 没有台数
         if(sd.hued == true) {
+
+            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
+            var tpai = -1;
+            if(sd.hued && !sd.iszimo){
+                var tpai = sd.holds.pop();
+                sd.countMap[tpai] --;
+            }
+
+
             //通过胡数算法找到他的坎子们
             game.kanzi = [];
             mjutils.canHu(sd);
@@ -1020,6 +1029,12 @@ function calculateResult(game){
             //最多四台
             if(TAI > 4) TAI = 4;
             sd.tai = TAI;
+
+            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上,这里做再加上的操作
+            if(sd.hued && !sd.iszimo){
+                sd.holds.push(tpai);
+                sd.countMap[tpai] ++;
+            }
         }
     }
 
