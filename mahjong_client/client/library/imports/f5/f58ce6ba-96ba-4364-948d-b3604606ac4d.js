@@ -63,6 +63,16 @@ cc.Class({
         }
     },
 
+    shareOnTimeline: function shareOnTimeline(title, desc) {
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
+            jsb.reflection.callStaticMethod(this.ANDROID_API, "ShareOnTimeline", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", cc.vv.SI.appweb, title, desc);
+        } else if (cc.sys.os == cc.sys.OS_IOS) {
+            //jsb.reflection.callStaticMethod(this.IOS_API, "share:shareTitle:shareDesc:",cc.vv.SI.appweb,title,desc);
+        } else {
+                console.log("platform:" + cc.sys.os + " dosn't implement share.");
+            }
+    },
+
     copy: function copy(desc) {
         if (cc.sys.os == cc.sys.OS_ANDROID) {
             jsb.reflection.callStaticMethod(this.ANDROID_WEBPAGE_API, "Copy", "(Ljava/lang/String;)V", desc);

@@ -35,6 +35,10 @@ cc.Class({
     onShare:function(){
         cc.vv.anysdkMgr.share("舟山麻将","舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");   
     },
+    
+    onTimeline:function(){
+        cc.vv.anysdkMgr.shareOnTimeline("舟山麻将","舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");   
+    },
 
     // use this for initialization
     onLoad: function () {
@@ -169,6 +173,14 @@ cc.Class({
             
             
         });
+    },
+    
+    openShareBox:function(){
+        cc.find("Canvas/ShareBox").active = true;
+    },
+    
+    closeShareBox:function(){
+        cc.find("Canvas/ShareBox").active = false;
     },
     
     onDaysClicked:function(){

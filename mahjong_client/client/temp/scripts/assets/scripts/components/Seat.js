@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '820870ltMZNDYlvzr+qCDEJ', 'Seat');
-// scripts/components/Seat.js
+// scripts\components\Seat.js
 
 cc.Class({
     "extends": cc.Component,

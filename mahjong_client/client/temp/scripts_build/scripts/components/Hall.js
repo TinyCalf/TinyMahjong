@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts/components/Hall.js
+// scripts\components\Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -38,6 +38,10 @@ cc.Class({
 
     onShare: function onShare() {
         cc.vv.anysdkMgr.share("舟山麻将", "舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");
+    },
+
+    onTimeline: function onTimeline() {
+        cc.vv.anysdkMgr.shareOnTimeline("舟山麻将", "舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");
     },
 
     // use this for initialization
@@ -168,6 +172,14 @@ cc.Class({
                 days[checkin_days].getComponent(cc.Button).interactable = true;
             }
         });
+    },
+
+    openShareBox: function openShareBox() {
+        cc.find("Canvas/ShareBox").active = true;
+    },
+
+    closeShareBox: function closeShareBox() {
+        cc.find("Canvas/ShareBox").active = false;
     },
 
     onDaysClicked: function onDaysClicked() {

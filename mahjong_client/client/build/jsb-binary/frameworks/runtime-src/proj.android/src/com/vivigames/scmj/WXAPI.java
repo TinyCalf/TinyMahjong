@@ -3,6 +3,7 @@ package com.vivigames.scmj;
 import java.io.File;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.WindowManager;
@@ -55,6 +56,34 @@ public class WXAPI {
 			req.transaction = buildTransaction("webpage");
 			req.message = msg;
 			req.scene = /*isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : */SendMessageToWX.Req.WXSceneSession;
+			api.sendReq(req);
+			//instance.finish();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	public static void ShareOnTimeline(String url,String title,String desc){
+		try{
+			isLogin = false;
+			WXWebpageObject webpage = new WXWebpageObject();
+			webpage.webpageUrl = url;
+			WXMediaMessage msg = new WXMediaMessage(webpage);
+			msg.title = title;
+			msg.description = desc;
+			
+			
+			Bitmap bmp = BitmapFactory.decodeResource(instance.getResources(), R.drawable.icon);
+			Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, 64, 64, true);
+            bmp.recycle();
+			msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+			
+			
+			SendMessageToWX.Req req = new SendMessageToWX.Req();
+			req.transaction = buildTransaction("webpage");
+			req.message = msg;
+			req.scene = /*isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : */SendMessageToWX.Req.WXSceneTimeline;
 			api.sendReq(req);
 			//instance.finish();
 		}
