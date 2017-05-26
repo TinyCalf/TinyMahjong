@@ -129,6 +129,10 @@ cc.Class({
             cc.find("Canvas/right_bottom/btn_share").active = false;
         }
         
+        if(cc.vv.utils.showAct) {
+            cc.find("Canvas/Activity").active = true;
+        }
+        
     },
     
     //初始化签到信息
@@ -181,6 +185,11 @@ cc.Class({
     
     closeShareBox:function(){
         cc.find("Canvas/ShareBox").active = false;
+    },
+    
+    closeActivity:function(){
+        cc.find("Canvas/Activity").active = false;
+        cc.vv.utils.showAct = false;
     },
     
     onDaysClicked:function(){

@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1495783864491,
-    "meta": 1495783864539,
+    "asset": 1495793189198,
+    "meta": 1495793189263,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -1160,8 +1160,8 @@
     "relativePath": "resources\\textures\\Game\\touxiangkuang_03.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1495778345882,
-    "meta": 1495779916307,
+    "asset": 1495782121877,
+    "meta": 1495790488037,
     "relativePath": "resources\\textures\\hall"
   },
   "c76b67fd-c7e4-48ac-9f64-a153ab211a2d": {
@@ -2365,8 +2365,8 @@
     "relativePath": "resources\\textures\\MJ\\bottom\\e_mj_b_up.png"
   },
   "8a5afedd-b510-4212-9834-6165725e08c9": {
-    "asset": 1489393116041,
-    "meta": 1495779917299,
+    "asset": 1495787005732,
+    "meta": 1495790488038,
     "relativePath": "resources\\textures\\MJ\\left"
   },
   "dc0f12a0-949b-450f-9d67-9f1054b115f8": {
@@ -2390,8 +2390,8 @@
     "relativePath": "resources\\textures\\MJ\\left\\Z_left.png"
   },
   "c80b7e7a-e243-44d6-9fde-f78bef49e696": {
-    "asset": 1490938686054,
-    "meta": 1495779917328,
+    "asset": 1495787017543,
+    "meta": 1495790488039,
     "relativePath": "resources\\textures\\MJ\\my"
   },
   "347575c5-fc00-4b99-9cca-1c89f8e39415": {
@@ -2415,8 +2415,8 @@
     "relativePath": "resources\\textures\\MJ\\my\\M_spring.png"
   },
   "10712ce0-d470-446f-8cc9-5e3d55734cb4": {
-    "asset": 1489393116091,
-    "meta": 1495779917360,
+    "asset": 1495787026763,
+    "meta": 1495790488039,
     "relativePath": "resources\\textures\\MJ\\right"
   },
   "2133eb49-bb89-480b-b451-43becbb3cef2": {
@@ -2825,8 +2825,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1495783835907,
-    "meta": 1495783836065,
+    "asset": 1495793250410,
+    "meta": 1495793250550,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2945,8 +2945,8 @@
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {
-    "asset": 1480609900000,
-    "meta": 1495779921537,
+    "asset": 1495792984989,
+    "meta": 1495792985003,
     "relativePath": "scripts\\Global.js"
   },
   "17141128-74d4-4cff-8229-b04d38232094": {
@@ -2980,8 +2980,8 @@
     "relativePath": "scripts\\UserMgr.js"
   },
   "b717fcf0-c348-4dcc-8aaf-35b6f5b7dc31": {
-    "asset": 1495696401494,
-    "meta": 1495779921677,
+    "asset": 1495793039735,
+    "meta": 1495793039768,
     "relativePath": "scripts\\Utils.js"
   },
   "1f06645b-2c0c-4a18-966d-90314eda4abf": {

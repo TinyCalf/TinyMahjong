@@ -12,6 +12,7 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        showAct:true,
     },
     
 
