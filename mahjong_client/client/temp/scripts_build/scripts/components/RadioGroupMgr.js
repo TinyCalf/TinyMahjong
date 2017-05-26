@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '824eapeRYNKY4RJzg2Z4YA2', 'RadioGroupMgr');
-// scripts\components\RadioGroupMgr.js
+// scripts/components/RadioGroupMgr.js
 
 cc.Class({
     "extends": cc.Component,

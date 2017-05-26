@@ -78,7 +78,7 @@ cc.Class({
             jsb.reflection.callStaticMethod(this.ANDROID_WEBPAGE_API, "Copy", "(Ljava/lang/String;)V",desc);
         }
         else if(cc.sys.os == cc.sys.OS_IOS){
-            //jsb.reflection.callStaticMethod(this.IOS_API, "share:shareTitle:shareDesc:",cc.vv.SI.appweb,title,desc);
+            jsb.reflection.callStaticMethod(this.IOS_API, "copy:",desc);
         }
         else{
             console.log("platform:" + cc.sys.os + " dosn't implement share.");

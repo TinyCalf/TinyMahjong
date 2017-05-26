@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
-// scripts\components\MJGame.js
+// scripts/components/MJGame.js
 
 cc.Class({
     "extends": cc.Component,

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '907582awNJFnobC/mZGFLBq', 'DingQue');
-// scripts\components\DingQue.js
+// scripts/components/DingQue.js
 
 cc.Class({
     "extends": cc.Component,

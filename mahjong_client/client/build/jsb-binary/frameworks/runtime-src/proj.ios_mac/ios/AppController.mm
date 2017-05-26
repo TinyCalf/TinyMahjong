@@ -124,6 +124,13 @@ static bool __isWxLogin = false;
     [WXApi sendResp:resp];
 }
 
++(void) copy:(NSString*)str
+{
+    NSLog(@"copying str str:%@",str);
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:str];
+}
+
 +(void) shareIMG:(NSString*)filePath width:(int)width height:(int)height
 {
     WXMediaMessage *message = [WXMediaMessage message];
