@@ -103,10 +103,13 @@ cc.Class({
     },
 
     ipWarning: function ipWarning() {
+
         if (!this._ifshowipwarning) return;
-        if (!nowseat) return;
+        console.log(nowseat);
+
         var seats = cc.vv.gameNetMgr.seats;
         var nowseat = cc.vv.gameNetMgr.seatIndex;
+        if (!nowseat) return;
         var others = [];
         for (var i = 0; i < 4; i++) {
             if (nowseat && i != nowseat) {
@@ -123,11 +126,12 @@ cc.Class({
         if ((others[2][1] == others[1][1] || others[2][1] == others[0][1]) && others[1][1] != null) {
             warnames.push(others[2][0]);
         }
+        console.log(warnames);
         var str = warnames.join("、");
         if (warnames.length > 0) {
             cc.vv.alert.show("IP警告", "玩家" + str + "来自相同IP，请谨防其他玩家打勾手上当受骗", function () {
-                console.log("alert back");
-            }, false);
+                cc.vv.net.send("dissolve_cause_ip");
+            }, true, "解散", "继续");
             this._ifshowipwarning = false;
         }
     },

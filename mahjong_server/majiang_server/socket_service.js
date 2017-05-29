@@ -388,9 +388,23 @@ exports.start = function(config,mgr){
 				}
 
 				if(doAllAgree>=3){
-					socket.gameMgr.doDissolve(roomId);					
+					socket.gameMgr.doDissolve(roomId);
 				}
 			}
+		});
+
+		socket.on('dissolve_cause_ip',function(){
+			var userId = socket.userId;
+
+			if(userId == null){
+				return;
+			}
+
+			var roomId = roomMgr.getUserRoom(userId);
+			if(roomId == null){
+				return;
+			}
+			socket.gameMgr.doDissolve(roomId);
 		});
 
 		socket.on('dissolve_reject',function(data){

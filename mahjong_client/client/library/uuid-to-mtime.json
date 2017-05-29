@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1495696401210,
-    "meta": 1495779915922,
+    "asset": 1496059765408,
+    "meta": 1496059765821,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -2755,8 +2755,8 @@
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
-    "asset": 1480609900000,
-    "meta": 1495779920102,
+    "asset": 1496059395000,
+    "meta": 1496059395044,
     "relativePath": "scripts\\components\\Alert.js"
   },
   "58f27af1-bacb-4db1-8951-5f77ebc8df17": {
@@ -2840,8 +2840,8 @@
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1495696401609,
-    "meta": 1495779921107,
+    "asset": 1496059286415,
+    "meta": 1496059286620,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {

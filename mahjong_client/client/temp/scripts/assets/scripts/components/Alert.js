@@ -53,7 +53,7 @@ cc.Class({
         this._onok = null;
     },
 
-    show: function show(title, content, onok, needcancel) {
+    show: function show(title, content, onok, needcancel, okstr, cancelstr) {
         this._alert.active = true;
         this._onok = onok;
         this._title.string = title;
@@ -65,6 +65,12 @@ cc.Class({
         } else {
             this._btnCancel.active = false;
             this._btnOK.x = 0;
+        }
+        if (okstr) {
+            this._btnOK.getChildByName("New Label").getComponent(cc.Label).string = okstr;
+        }
+        if (cancelstr) {
+            this._btnCancel.getChildByName("New Label").getComponent(cc.Label).string = cancelstr;
         }
     },
 

@@ -72,18 +72,6 @@
         "snapshot": true,
         "type": "dock-h"
       }
-    },
-    "window-1496033987530": {
-      "x": 267,
-      "y": 147,
-      "width": 1242,
-      "height": 639
-    },
-    "worker": {
-      "x": 760,
-      "y": 435,
-      "width": 400,
-      "height": 300
     }
   }
 }
