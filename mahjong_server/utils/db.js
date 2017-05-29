@@ -891,7 +891,7 @@ exports.Checkin = function (data,callback) {
 };
 
 //fetch players' share status
-exports.getCheckinStatus = function (userid,callback) {
+exports.getShareStatus = function (userid,callback) {
     var sql = 'SELECT last_share_date,last_timeline_date FROM t_users WHERE userid = ' + userid;
     query(sql, function(err, rows, fields) {
         if (err) {

@@ -169,6 +169,8 @@ cc.Class({
             userid: cc.vv.userMgr.userId
         };
         cc.vv.http.sendRequest("/get_checkin_status", data, function (res) {
+            console.log("get_checkin_status");
+            console.log(res);
             //当前已签到次数
             var checkin_days = res.errcode.data.checkin_days;
             //上次签到时间

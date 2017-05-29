@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1495875665224,
-    "meta": 1495875665262,
+    "asset": 1496055335066,
+    "meta": 1496055335100,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -1413,11 +1413,6 @@
     "asset": 1491894462672,
     "meta": 1495779916529,
     "relativePath": "resources\\textures\\hall\\touxiangkuang.png"
-  },
-  "e348b5cc-096f-4fe8-9cc0-47c1f93982d7": {
-    "asset": 1491894462657,
-    "meta": 1495779916531,
-    "relativePath": "resources\\textures\\hall\\title.png"
   },
   "b604ebf0-c253-40cf-ac2d-2114a7744269": {
     "asset": 1491894462673,
@@ -2805,8 +2800,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1496025334471,
-    "meta": 1496025334590,
+    "asset": 1496055637124,
+    "meta": 1496055637359,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -3078,5 +3073,65 @@
     "asset": 1495802087191,
     "meta": 1495802830838,
     "relativePath": "resources\\textures\\MJ\\my\\Z_my.png"
+  },
+  "b0f6afff-b6af-44fa-ada1-b1a30e557c53": {
+    "asset": 1496053867046,
+    "meta": 1496053867104,
+    "relativePath": "resources\\textures\\hall\\hy.png"
+  },
+  "2cfd5bf7-ec18-4bf2-95c2-28061cbcad49": {
+    "asset": 1496053867047,
+    "meta": 1496053867111,
+    "relativePath": "resources\\textures\\hall\\hy_ico.png"
+  },
+  "19ff2d9b-e09a-43a0-a816-e54e1d98ce26": {
+    "asset": 1496053867046,
+    "meta": 1496053867112,
+    "relativePath": "resources\\textures\\hall\\bg.png"
+  },
+  "46fc9ab7-c074-4859-a00d-10942d1c8a04": {
+    "asset": 1496053867046,
+    "meta": 1496053867117,
+    "relativePath": "resources\\textures\\hall\\pyq.png"
+  },
+  "f2a4bca3-e803-41c0-a640-f5bbdf36f01b": {
+    "asset": 1496053867047,
+    "meta": 1496053867118,
+    "relativePath": "resources\\textures\\hall\\pyq_ico.png"
+  },
+  "2eda5af8-31b7-4fd8-8130-33c7963ea3cd": {
+    "asset": 1496053949076,
+    "meta": 1496053949114,
+    "relativePath": "resources\\textures\\hall\\share_wexin.png"
+  },
+  "e348b5cc-096f-4fe8-9cc0-47c1f93982d7": {
+    "asset": 1496054071077,
+    "meta": 1496054090097,
+    "relativePath": "resources\\textures\\hall\\title.png"
+  },
+  "70cd4c13-0232-498f-9cb0-37a1cb74d8b0": {
+    "asset": 1496054938477,
+    "meta": 1496054938574,
+    "relativePath": "resources\\textures\\hall\\share_timeline.png"
+  },
+  "5c2fa467-1d3d-42b3-a3fe-10f073f1f06c": {
+    "asset": 1496054938478,
+    "meta": 1496054938578,
+    "relativePath": "resources\\textures\\hall\\share_pengyouquan.png"
+  },
+  "88fc608d-4b3f-41f0-aa9c-5d282df8ac0a": {
+    "asset": 1496054938478,
+    "meta": 1496054938579,
+    "relativePath": "resources\\textures\\hall\\share_haoyou.png"
+  },
+  "22719fee-8614-4ae2-b070-e29b6f4731b2": {
+    "asset": 1496054938478,
+    "meta": 1496054938581,
+    "relativePath": "resources\\textures\\hall\\share_title.png"
+  },
+  "162c8582-7cc4-49bd-9552-c7b0524ec44a": {
+    "asset": 1496054938478,
+    "meta": 1496054938585,
+    "relativePath": "resources\\textures\\hall\\share_box.png"
   }
 }

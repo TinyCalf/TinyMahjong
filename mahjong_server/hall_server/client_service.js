@@ -386,7 +386,7 @@ app.get('/checkin',function(req,res){
 
 //分享获取钻石
 app.get('/share_get_gems',function(req,res){
-	db.getCheckinStatus(req.query.userid,function(data){
+	db.getShareStatus(req.query.userid,function(data){
 		if (data) {
 			var last_share_date = data.last_share_date;
 			var last_timeline_date = data.last_timeline_date;
