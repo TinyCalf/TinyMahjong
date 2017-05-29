@@ -33,11 +33,41 @@ cc.Class({
     },
 
     onShare: function onShare() {
+        cc.find("Canvas/ShareBox").active = false;
         cc.vv.anysdkMgr.share("舟山麻将", "舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");
+        var data = {
+            userid: cc.vv.userMgr.userId,
+            type: "share"
+        };
+        cc.vv.http.sendRequest("/share_get_gems", data, function (res) {
+            console.log("share_get_gems");
+            if (res.errcode.data.gems > 0) {
+                cc.vv.alert.show("提示", "前往微信分享可获得" + res.errcode.data.gems + "钻");
+                cc.vv.userMgr.gems += res.errcode.data.gems;
+                cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
+            }
+            cc.find("Canvas/ShareBox").active = false;
+            console.log(res);
+        });
     },
 
     onTimeline: function onTimeline() {
+        cc.find("Canvas/ShareBox").active = false;
         cc.vv.anysdkMgr.shareOnTimeline("舟山麻将", "舟山麻将，包含了沈家门麻将、定海麻将、推到胡等多种舟山流行麻将玩法。");
+        var data = {
+            userid: cc.vv.userMgr.userId,
+            type: "timeline"
+        };
+        cc.vv.http.sendRequest("/share_get_gems", data, function (res) {
+            console.log("share_get_gems");
+            if (res.errcode.data.gems > 0) {
+                cc.vv.alert.show("提示", "前往微信分享到朋友圈可获得" + res.errcode.data.gems + "钻");
+                cc.vv.userMgr.gems += res.errcode.data.gems;
+                cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
+            }
+            cc.find("Canvas/ShareBox").active = false;
+            console.log(res);
+        });
     },
 
     // use this for initialization

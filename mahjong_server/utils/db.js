@@ -890,4 +890,40 @@ exports.Checkin = function (data,callback) {
     });
 };
 
+//fetch players' share status
+exports.getCheckinStatus = function (userid,callback) {
+    var sql = 'SELECT last_share_date,last_timeline_date FROM t_users WHERE userid = ' + userid;
+    query(sql, function(err, rows, fields) {
+        if (err) {
+            callback(null);
+            throw err;
+        }
+        else{
+            if(rows.length > 0){
+                callback(rows[0]);
+            }
+            else{
+                callback(null);
+            }
+        }
+
+    });
+};
+
+//add share gems
+exports.add_share_gems = function (data,callback) {
+    var sql = 'UPDATE t_users SET gems = gems+'+data.gems+',last_share_date="'+data.last_share_date+'",last_timeline_date="'+data.last_timeline_date+'" WHERE userid = '+data.userid;
+    query(sql, function(err, rows, fields) {
+        if (err) {
+            callback(null);
+            throw err;
+        }
+        else{
+            callback(0);
+        }
+
+    });
+};
+
+
 exports.query = query;

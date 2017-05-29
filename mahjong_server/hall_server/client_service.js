@@ -310,6 +310,7 @@ app.get('/is_server_online',function(req,res){
 	}); 
 });
 
+//获取签到状态
 app.get('/get_checkin_status',function(req,res){
 	db.getCheckinStatus(req.query.userid,function(data){
 		console.log("get_checkin_status");
@@ -333,6 +334,7 @@ app.get('/get_checkin_status',function(req,res){
 	})
 });
 
+//签到
 app.get('/checkin',function(req,res){
 	db.getCheckinStatus(req.query.userid,function(data){
 		if (data) {
@@ -381,6 +383,86 @@ app.get('/checkin',function(req,res){
 		}
 	})
 });
+
+//分享获取钻石
+app.get('/share_get_gems',function(req,res){
+	db.getCheckinStatus(req.query.userid,function(data){
+		if (data) {
+			var last_share_date = data.last_share_date;
+			var last_timeline_date = data.last_timeline_date;
+			//当前日期
+			var d = new Date();
+			var y = d.getFullYear();
+			var m = d.getMonth() + 1;
+			m = m < 10 ? ("0" + m) : m;
+			var day = d.getDate();
+			day = day < 10 ? ("0" + day) : day;
+			var nowdate = y + "-" + m + "-" + day;
+			if(req.query.type == "share"){
+				if(last_share_date!=nowdate){
+					var dt = {
+						userid:req.query.userid,
+						gems:1,
+						last_share_date:nowdate,
+						last_timeline_date:last_timeline_date
+					};
+					db.add_share_gems(dt,function(data){
+						if(data==0){
+							var ret = {
+								errcode:0,
+								errmsg:"ok",
+								data:{
+									gems:1,
+								},
+							};
+							http.send(res,ret);
+						}
+					});
+				}else{
+					var ret = {
+						errcode:0,
+						errmsg:"ok",
+						data:{
+							gems:0,
+						},
+					};
+					http.send(res,ret);
+				}
+			}else if(req.query.type == "timeline"){
+				if(last_timeline_date!=nowdate){
+					var dt = {
+						userid:req.query.userid,
+						gems:2,
+						last_share_date:last_share_date,
+						last_timeline_date:nowdate
+					};
+					db.add_share_gems(dt,function(data){
+						if(data==0){
+							var ret = {
+								errcode:0,
+								errmsg:"ok",
+								data:{
+									gems:2,
+								},
+							};
+							http.send(res,ret);
+						}
+					});
+				}else{
+					var ret = {
+						errcode:0,
+						errmsg:"ok",
+						data:{
+							gems:0,
+						},
+					};
+					http.send(res,ret);
+				}
+			}
+		}
+	})
+});
+
 
 exports.start = function($config){
 	config = $config;
