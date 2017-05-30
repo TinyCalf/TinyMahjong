@@ -12,6 +12,7 @@ var Global = cc.Class({
         money: 0,
         lv: 0,
         roomId: 0
+
     }
 });
 

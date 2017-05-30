@@ -169,14 +169,14 @@ function shuffle(game) {
 
 
 
-    // var index = 0 ;
-    // var mjs = [28,28,28,28,28,5,6,7,8,9,10,27,27];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     //for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     //}
-    // }
+    var index = 0 ;
+    var mjs = [1,2,0,3,4,5,6,7,8,9,10,27,27];
+    for (var i =0 ; i < mjs.length ; i++) {
+        for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        }
+    }
 }
 
 function mopai(game,seatIndex) {
