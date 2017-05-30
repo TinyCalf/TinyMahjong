@@ -1,0 +1,120 @@
+
+<style>
+
+    html{
+        background-color: #ffffff !important;
+    }
+
+    @media screen and (min-width: 700px) {
+        .header {
+            height:70px !important;
+            background-color: #242F43 !important;
+        }
+        #logo_title{
+            color: #ffffff;
+            padding-top:5px;
+            padding-left:30px;
+            font-size: 22px;
+            /*line-height: 70px;*/
+            font-weight: 500 !important;
+        }
+        #logo_touxiang{
+            border-radius:50% !important;width: 50px;height: auto;
+        }
+        #navbar-brand{
+         width: 500px !important;
+        }
+    }
+    @media screen and (max-width: 700px) {
+
+        #logo_touxiang{
+            border-radius:50% !important;width: 30px;height: auto;
+        }
+        #logo_title{
+            color: #ffffff;
+            margin-top:-5px !important;
+            /*padding-left:30px;*/
+            /*font-size: 22px;*/
+            /*line-height: 70px;*/
+            font-weight: 500 !important;
+        }
+        #navbar-brand{
+            width: 300px !important;
+        }
+    }
+
+</style>
+
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-fixed-top">
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="header-inner">
+        <!-- BEGIN LOGO -->
+        <!--class="col-md-12"-->
+        <a class="navbar-brand" id="navbar-brand" style="">
+            <!--<a class="col-md-5" >-->
+            <!--<img src="__STATIC__/assets/img/logo.png" alt="logo" class="img-responsive"/>-->
+            <!--麻将游戏代理后台管理系统-->
+            <h4 id="logo_title" class="modal-title" style="">麻将游戏代理后台管理系统</h4>
+
+        </a>
+        <!--<span class="title">-->
+        <!--麻将游戏代理后台管理系统-->
+        <!--</span>-->
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <img src="__STATIC__/assets/img/menu-toggler.png" alt=""/>
+        </a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <ul class="nav navbar-nav pull-right">
+            <!-- BEGIN NOTIFICATION DROPDOWN -->
+
+            <!-- END TODO DROPDOWN -->
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <li class="dropdown user">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <img id="logo_touxiang" alt="" src="__STATIC__/assets/img/touxiang.jpg"/>
+                    <span class="username">
+                        {$name}
+
+					</span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{$access_url}public/index/index/logout">
+                            <i class="fa fa-user"></i> 退出
+                        </a>
+                    </li>
+
+                    <!--<li class="divider">-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="__STATIC__/javascript:;" id="trigger_fullscreen">-->
+                    <!--<i class="fa fa-arrows"></i> Full Screen-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="__STATIC__/extra_lock.html">-->
+                    <!--<i class="fa fa-lock"></i> Lock Screen-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="__STATIC__/login.html">-->
+                    <!--<i class="fa fa-key"></i> Log Out-->
+                    <!--</a>-->
+                    <!--</li>-->
+
+                </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>

@@ -1,0 +1,166 @@
+
+<style>
+
+
+    @media screen and (min-width: 700px) {
+        .page-container{
+            margin-top: 70px !important;
+            /*background-color: #324157 !important;*/
+        }
+    }
+    @media screen and (min-width: 700px ) and (max-width:1000px) {
+        .page-container{
+            margin-top: 0px !important;
+            /*background-color: #324157 !important;*/
+        }
+    }
+
+</style>
+
+
+<div class="page-container" >
+
+<div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200" >
+            <!--<li class="sidebar-toggler-wrapper">-->
+                <!--&lt;!&ndash; BEGIN SIDEBAR TOGGLER BUTTON &ndash;&gt;-->
+                <!--<div class="sidebar-toggler hidden-phone">-->
+                <!--</div>-->
+                <!--&lt;!&ndash; BEGIN SIDEBAR TOGGLER BUTTON &ndash;&gt;-->
+            <!--</li>-->
+
+
+
+
+
+            <li class="start <?php if("[active]" == "admin_page"){
+                            echo "active ";
+                            }
+                           ?>">
+            <a href="">
+                <i class="fa fa-home"></i>
+                <span class="title">
+							个人中心
+						</span>
+                <span class="arrow ">
+						</span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="<?php if($privilege_level == 9){
+                                echo $admin_page;
+                              }else{
+                                 echo $dealer_page;
+                                } ?>" >
+                        <i class="fa fa-bullhorn"></i>
+                        用户信息
+                    </a>
+                </li>
+                <li>
+                    <a href="{$alter_pwd}">
+                        <i class="fa fa-shopping-cart"></i>
+                        修改密码
+                    </a>
+                </li>
+
+            </ul>
+            </li>
+
+
+
+
+            <li class=" <?php if("[active]" == "dealers"){
+                                echo "active ";
+                                }
+                                if($privilege_level == 0){
+                                echo "hidden ";
+                                }?>">
+                <a href="">
+                    <i class="fa fa-users"></i>
+                    <span class="title">
+							代理管理
+						</span>
+                    <span class="arrow ">
+						</span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="{$search_dealer}">
+                            <i class="fa fa-bullhorn"></i>
+                            查询代理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{$add_dealer}">
+                            <i class="fa fa-shopping-cart"></i>
+                            新增代理
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="<?php if("[active]" == "player"){
+            echo "active";
+            }  ?>">
+                <a>
+                    <i class="fa fa-user"></i>
+                    <span class="title">
+							玩家管理
+						</span>
+                    <span class="arrow ">
+						</span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="{$player_drilling}">
+                            <i class="fa fa-bullhorn"></i>
+                            玩家充钻
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
+
+            <li class="last  <?php if("[active]" == "notice_manage"){
+                                          echo "active";
+                                        }
+                                        if($privilege_level == 0){
+                                        echo "hidden ";
+                                        }
+                                    ?>">
+            <a>
+                <i class="fa fa-bar-chart-o"></i>
+                <span class="title">
+							公告管理
+						</span>
+                <span class="arrow ">
+						</span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="{$notice_manage}">
+                        <i class="fa fa-bullhorn"></i>
+                        代理公告
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{$game_notice_manage}">
+                        <i class="fa fa-bullhorn"></i>
+                        游戏公告
+                    </a>
+                </li>
+
+            </ul>
+            </li>
+
+        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+</div>

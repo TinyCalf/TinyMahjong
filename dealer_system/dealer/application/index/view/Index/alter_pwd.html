@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.1.1
+Version: 2.0.2
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>麻将游戏代理后台管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/select2/select2.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/select2/select2-metronic.css"/>
+    <link rel="stylesheet" href="__STATIC__/assets/plugins/data-tables/DT_bootstrap.css"/>
+    <!-- END PAGE LEVEL STYLES -->
+
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/bootstrap-fileinput/bootstrap-fileinput.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/jquery-tags-input/jquery.tagsinput.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/assets/plugins/typeahead/typeahead.css">
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link href="__STATIC__/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="__STATIC__/assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="__STATIC__/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME STYLES -->
+   <link rel="shortcut icon" href="__STATIC__/image/ma.ico"/>
+    <style>
+        /*html,body{*/
+        /*background-color: #ffffff !important;*/
+        /*}*/
+
+        @media screen and (min-width: 700px) {
+            #cz_number{
+                width:100px !important;
+            }
+        }
+    </style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-header-fixed">
+<!-- BEGIN HEADER -->
+
+
+{include file="Tpl/header" /}
+
+<!-- BEGIN CONTAINER -->
+
+
+
+{include file="Tpl/left"  active="admin_page"/}
+
+<!-- BEGIN SIDEBAR -->
+
+<!-- END SIDEBAR -->
+<!-- BEGIN CONTENT -->
+<div class="page-content-wrapper">
+    <div class="page-content">
+
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <!-- /.modal -->
+
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="padding-top:150px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">提示</h4>
+                    </div>
+                    <div id="modal_body" style="margin-bottom: 30px;" class="modal-body">
+
+
+
+                    </div>
+                    <div class="modal-footer" style="clear: both;padding-top: 10px;">
+                        <!--<button type="button" class="btn default" data-dismiss="modal">取消</button>-->
+                        <button id="confirm" onclick="window.location.href='{$access_url}public/index/index/alter_pwd';" type="button" class="btn blue">确定</button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <!-- BEGIN STYLE CUSTOMIZER -->
+
+        <!-- END STYLE CUSTOMIZER -->
+        <!-- BEGIN PAGE HEADER-->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                <h3 class="page-title">
+                    个人中心 <small></small>
+                </h3>
+                <ul class="page-breadcrumb breadcrumb">
+
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="javascript:;">
+                            个人中心
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="{$add_dealer}">
+                            修改密码
+                        </a>
+                        <!--<i class="fa fa-angle-right"></i>-->
+                    </li>
+                    <!--<li>-->
+                    <!--<a href="__STATIC__/#">-->
+                    <!--Basic Datatables-->
+                    <!--</a>-->
+                    <!--</li>-->
+                </ul>
+                <!-- END PAGE TITLE & BREADCRUMB-->
+            </div>
+        </div>
+        <!-- END PAGE HEADER-->
+        <!-- BEGIN PAGE CONTENT-->
+
+        <div class="row">
+
+
+            <div class="col-md-12 ">
+                <!-- BEGIN SAMPLE FORM PORTLET-->
+                <div class="portlet box green ">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-reorder"></i> 修改密码
+                        </div>
+                    </div>
+                    <div class="portlet-body form">
+                        <form  class="form-horizontal" role="form">
+                            <div class="form-body">
+
+                                <div class="form-group">
+                                    <label for="old" class="col-md-3 control-label">旧密码</label>
+                                    <div class="col-md-9">
+                                        <div class="input-inline input-medium">
+                                            <div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-lock"></i>
+													</span>
+                                                <input id="old" type="password" class="form-control" placeholder="请输入旧密码">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="new" class="col-md-3 control-label">新密码</label>
+                                    <div class="col-md-9">
+                                        <div class="input-inline input-medium">
+                                            <div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-lock"></i>
+													</span>
+                                                <input id="new" type="password" class="form-control" placeholder="请输入新密码">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="re_new" class="col-md-3 control-label">确认密码</label>
+                                    <div class="col-md-9">
+                                        <div class="input-inline input-medium">
+                                            <div class="input-group">
+													<span class="input-group-addon">
+														<i class="fa fa-lock"></i>
+													</span>
+                                                <input id="re_new" type="password" class="form-control" placeholder="请输入确认密码">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-actions fluid">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="submit" type="button" class="btn green">提交</button>
+                                    <!--<button type="button" class="btn default">取消</button>-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END SAMPLE FORM PORTLET-->
+
+            </div>
+        </div>
+
+        <!-- END PAGE CONTENT-->
+    </div>
+</div>
+<!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<!--<div class="footer">-->
+<!--<div class="footer-inner">-->
+<!--2014 &copy; Metronic by keenthemes.-->
+<!--</div>-->
+<!--<div class="footer-tools">-->
+<!--<span class="go-top">-->
+<!--<i class="fa fa-angle-up"></i>-->
+<!--</span>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">Responsive & Scrollable</h4>
+            </div>
+            <div class="modal-body">
+                <div class="scroller" style="height:300px" data-always-visible="1" data-rail-visible1="1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Some Input</h4>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Some More Input</h4>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                            <p>
+                                <input type="text" class="col-md-12 form-control">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn default">Close</button>
+                <button type="button" class="btn green">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /.modal -->
+
+
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="__STATIC__/assets/plugins/respond.min.js"></script>
+<script src="__STATIC__/assets/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="__STATIC__/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+
+<!--修改位数-->
+<!--<script type="text/javascript" src="__STATIC__/assets/plugins/fuelux/js/spinner.js"></script>-->
+
+<script type="text/javascript" src="__STATIC__/assets/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+<script type="text/javascript" src="__STATIC__/assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+<script type="text/javascript" src="__STATIC__/assets/plugins/jquery.input-ip-address-control-1.0.min.js"></script>
+<script src="__STATIC__/assets/plugins/jquery.pwstrength.bootstrap/src/pwstrength.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/jquery-tags-input/jquery.tagsinput.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/typeahead/handlebars.min.js" type="text/javascript"></script>
+<script src="__STATIC__/assets/plugins/typeahead/typeahead.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="__STATIC__/assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__STATIC__/assets/plugins/data-tables/DT_bootstrap.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script src="__STATIC__/assets/scripts/custom/components-form-tools.js"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="__STATIC__/assets/scripts/core/app.js"></script>
+<!--<script src="__STATIC__/assets/scripts/custom/table-advanced.js"></script>-->
+<script>
+    jQuery(document).ready(function() {
+        App.init();
+
+//        ComponentsFormTools.init();
+
+        $("#submit").click(function () {
+
+            $old = $("#old").val();
+            $new = $("#new").val();
+            $re_new = $("#re_new").val();
+
+            console.log($old);
+            console.log($new);
+            console.log($re_new);
+
+            if($old == ""){
+                $("#modal_body").html("请输入旧密码");
+                $("#modal").modal("show");
+                return false;
+            }
+
+            if( $new == "") {
+                $("#modal_body").html("请输入新密码");
+                $("#modal").modal("show");
+                return false;
+            }
+
+            if($re_new == ""){
+                $("#modal_body").html("请输入确认密码");
+                $("#modal").modal("show");
+                return false;
+            }
+
+            if($re_new != $new){
+                $("#modal_body").html("密码与确认密码必须相同");
+                $("#modal").modal("show");
+                return false;
+            }
+
+            $.ajax({
+                type:"POST",
+                url:"{$access_url}public/index/index/alter_pwd_msg",
+                data:{
+                    old:$old,
+                    new:$new
+                },
+                success:function (data) {
+                    console.log(data);
+
+                    if(data == 1){
+
+                        $("#modal_body").html("密码修改成功");
+                        $("#modal").modal("show");
+                    }
+                    if(data == 2){
+                        $("#modal_body").html("新密码与旧密码相同，请重新输入");
+                        $("#modal").modal("show");
+                    }
+                    if(data == 3){
+                        $("#modal_body").html("密码修改失败");
+                        $("#modal").modal("show");
+                    }
+                    if(data == 4){
+                        $("#modal_body").html("旧密码错误，请重新输入");
+                        $("#modal").modal("show");
+                    }
+
+                }
+            });
+
+
+
+        });
+
+
+
+
+
+
+    });
+</script>
+
+</body>
+<!-- END BODY -->
+</html>
+
+
+
