@@ -59,6 +59,7 @@ function debugRecord(pai){
 }
 
 function matchSingle(seatData,selected){
+	if(selected > 26) return false;
 	var game = seatData.game;
 	//分开匹配 A-2,A-1,A
 	var matched = true;
