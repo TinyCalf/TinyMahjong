@@ -189,7 +189,7 @@ function shuffle(game) {
     }
 
     // var index = 0 ;
-    // var mjs = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+    // var mjs = [30,30,30,30,4,5,6,7,8,9,10,27,27];
     // for (var i =0 ; i < mjs.length ; i++) {
     //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
@@ -797,10 +797,15 @@ function isKan (seatData) {
 function isBian (seatData) {
     var kanzi = seatData.game.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
+
     for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ){
-            if(kanzi[i][2] == 2 || kanzi[i][2] == 11 || kanzi[i][2] == 20) return true;
-            if(kanzi[i][0] == 6 || kanzi[i][0] == 15 || kanzi[i][0] == 24) return true;
+        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ) {
+            if(kanzi[i][2] == 2 && hupai == 2) return true;
+            if(kanzi[i][2] == 11 && hupai == 11) return true;
+            if(kanzi[i][2] == 20 && hupai == 20) return true;
+            if(kanzi[i][0] == 6 && hupai == 6) return true;
+            if(kanzi[i][0] == 15 && hupai == 15) return true;
+            if(kanzi[i][0] == 24 && hupai == 24) return true;
         }
     }
     return false;

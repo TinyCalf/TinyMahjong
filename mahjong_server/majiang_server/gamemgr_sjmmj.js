@@ -169,50 +169,14 @@ function shuffle(game) {
 
 
 
-    // //這裡可輸入測試牌型如果不需要則注釋以下代碼
-    // //測試 找出不顯示的花
-    // var mjs = [];
-    // game.mahjongs = mjs.concat(mahjongs);
-    // //直接胡
-    // var index = 0 ;
-    // var mjs = [1,1,1,2,2,2,3,4,4,4,5,11,12];
-    // for (var i =0 ; i < mjs.length ; i++) {
-    //     for(var j = 0 ; j < 4 ; j++) {
-    //         game.mahjongs[index] = mjs[i];
-    //         index++;
-    //     }
-    // }
-    // game.mahjongs[index] = 13;
-    // index++;
-    // game.mahjongs[index] = 13;
-    // index++;
-    // game.mahjongs[index] = 13;
-    // index++;
-
-    //抢杠胡
-    // var index = 0 ;
-    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
-    // var mjs1 = [0,1,2,3,4,5,6,7,8,13,14,15,15];//胡12
-    // var mjs2 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
-    // var mjs3 = [0,1,2,3,4,5,6,7,8,13,16,16,16];//
-    // var mjs = [];
-    // for (var i = 0; i < 13 ; i++ ) {
-    //     mjs.push(mjs0[i]);
-    //     mjs.push(mjs1[i]);
-    //     mjs.push(mjs2[i]);
-    //     mjs.push(mjs3[i]);
-    // }
-    // var mjs = [28,29,30,31,28,29,30,31];
-    // mjs.push(28);
-    // mjs.push(28);
-    // mjs.push(28);
-    // mjs.push(28);
-    // mjs.push(27);
-    // index = 0;
-    // for ( var i =0 ; i < mjs.length ; i++) {
-    //     game.mahjongs[index] = mjs[i];
-    //     index++;
-    // }
+    var index = 0 ;
+    var mjs = [28,28,28,28,28,5,6,7,8,9,10,27,27];
+    for (var i =0 ; i < mjs.length ; i++) {
+        //for(var j = 0 ; j < 4 ; j++) {
+            game.mahjongs[index] = mjs[i];
+            index++;
+        //}
+    }
 }
 
 function mopai(game,seatIndex) {
@@ -824,10 +788,15 @@ function isKan (seatData) {
 function isBian (seatData) {
     var kanzi = seatData.game.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
+
     for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ){
-            if(kanzi[i][2] == 2 || kanzi[i][2] == 11 || kanzi[i][2] == 20) return true;
-            if(kanzi[i][0] == 6 || kanzi[i][0] == 15 || kanzi[i][0] == 24) return true;
+        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ) {
+            if(kanzi[i][2] == 2 && hupai == 2) return true;
+            if(kanzi[i][2] == 11 && hupai == 11) return true;
+            if(kanzi[i][2] == 20 && hupai == 20) return true;
+            if(kanzi[i][0] == 6 && hupai == 6) return true;
+            if(kanzi[i][0] == 15 && hupai == 15) return true;
+            if(kanzi[i][0] == 24 && hupai == 24) return true;
         }
     }
     return false;
@@ -998,19 +967,19 @@ function calculateResult(game){
         });
 
         sd.angangs.forEach(function(pai){
-            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
             var res = judgebigwind(nowfeng,nowseat,pai);
             TAI += res;
         });
 
         sd.wangangs.forEach(function(pai){
-            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
             var res = judgebigwind(nowfeng,nowseat,pai);
             TAI += res;
         });
 
         sd.diangangs.forEach(function(pai){
-            ( pai >= 27 && pai <= 33 ) ? TAI++ : {};
+            ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
             var res = judgebigwind(nowfeng,nowseat,pai);
             TAI += res;
         });
@@ -1125,7 +1094,7 @@ function calculateResult(game){
 
 
         //如果胡了并且是对到 并且胡的是19字 则追加半丝
-        var zi19 = [0,8,9,17,18,26,27,28,29];
+        var zi19 = [0,8,9,17,18,26];
         if (sd.hued && sd.duidao && !sd.iszimo) {
             var p = tpai;
             for (var J = 0 ; J < zi19.length ; J++) {
@@ -1168,7 +1137,7 @@ function calculateResult(game){
             if(sd.fan>500) sd.fan=500;
             sd.tai = TAI;
             sd.si  = SI;
-        }else {
+        } else {
             sd.fan = SI * 4  * Math.pow(2,TAI) ;
             //边家10摸向上取整
             sd.fan = moquzheng(sd.fan,10);
