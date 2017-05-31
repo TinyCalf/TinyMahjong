@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '5d56bFYy/REb77pQCq9YHh6', 'CreateRole');
-// scripts\components\CreateRole.js
+// scripts/components/CreateRole.js
 
 cc.Class({
     "extends": cc.Component,

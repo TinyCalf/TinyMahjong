@@ -109,7 +109,7 @@ static bool __isWxLogin = false;
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = title;
     message.description = desc;
-    [message setThumbImage:[UIImage imageNamed:@"Icon-29.png"]];
+    [message setThumbImage:[UIImage imageNamed:@"Icon-120.png"]];
     
     WXWebpageObject *ext = [WXWebpageObject object];
     ext.webpageUrl = url;
@@ -122,6 +122,26 @@ static bool __isWxLogin = false;
     
     __isWxLogin = false;
     [WXApi sendResp:resp];
+}
+
++(void) sharetimeline:(NSString*)url shareTitle:(NSString*)title shareDesc:(NSString*)desc
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = title;
+    message.description = desc;
+    [message setThumbImage:[UIImage imageNamed:@"Icon-120.png"]];
+    
+    WXWebpageObject *ext = [WXWebpageObject object];
+    ext.webpageUrl = url;
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* resp = [[[SendMessageToWXReq alloc] init] autorelease];
+    resp.message = message;
+    resp.bText = NO;
+    resp.scene = WXSceneTimeline;
+    __isWxLogin = false;
+    [WXApi sendReq:resp];
 }
 
 +(void) copy:(NSString*)str

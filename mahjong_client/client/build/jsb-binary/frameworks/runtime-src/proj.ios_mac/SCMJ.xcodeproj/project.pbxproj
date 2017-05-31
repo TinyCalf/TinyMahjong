@@ -60,6 +60,8 @@
 		A922754C1517C094001B78AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A922754B1517C094001B78AA /* UIKit.framework */; };
 		A922754E1517C094001B78AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A922754D1517C094001B78AA /* Foundation.framework */; };
 		A92275501517C094001B78AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A922754F1517C094001B78AA /* CoreGraphics.framework */; };
+		AB175B821EDE92E0006FDB7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB175B811EDE92E0006FDB7E /* Images.xcassets */; };
+		AB175B841EDE92F6006FDB7E /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB175B831EDE92F6006FDB7E /* Images-2.xcassets */; };
 		AB2EB9CB1D34F41700695C92 /* jsb_anysdk_basic_conversions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2EB9C31D34F41700695C92 /* jsb_anysdk_basic_conversions.cpp */; };
 		AB2EB9CC1D34F41700695C92 /* jsb_anysdk_protocols_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2EB9C51D34F41700695C92 /* jsb_anysdk_protocols_auto.cpp */; };
 		AB2EB9CD1D34F41700695C92 /* manualanysdkbindings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2EB9C71D34F41700695C92 /* manualanysdkbindings.cpp */; };
@@ -145,6 +147,8 @@
 		A922754B1517C094001B78AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A922754D1517C094001B78AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A922754F1517C094001B78AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB175B811EDE92E0006FDB7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "SCMJ-mobile/Images.xcassets"; sourceTree = "<group>"; };
+		AB175B831EDE92F6006FDB7E /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "SCMJ-mobile/Images-2.xcassets"; sourceTree = "<group>"; };
 		AB2EB9C31D34F41700695C92 /* jsb_anysdk_basic_conversions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsb_anysdk_basic_conversions.cpp; sourceTree = "<group>"; };
 		AB2EB9C41D34F41700695C92 /* jsb_anysdk_basic_conversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsb_anysdk_basic_conversions.h; sourceTree = "<group>"; };
 		AB2EB9C51D34F41700695C92 /* jsb_anysdk_protocols_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsb_anysdk_protocols_auto.cpp; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		15628F5B15F0F5C2000CF24B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB175B831EDE92F6006FDB7E /* Images-2.xcassets */,
+				AB175B811EDE92E0006FDB7E /* Images.xcassets */,
 				C05D1C161923467600B808A4 /* config.json */,
 				1A1A081B18C9DF05005C6854 /* project.json */,
 				1A6BF21418C9DB5900FB0E1C /* main.js */,
@@ -520,7 +526,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					A922753C1517C094001B78AA = {
-						DevelopmentTeam = DTV74Y6PV4;
+						DevelopmentTeam = 5Q365USU8R;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -563,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE159EC18C9DF3600FCA372 /* project.json in Resources */,
+				AB175B821EDE92E0006FDB7E /* Images.xcassets in Resources */,
 				1AD7E0A818C9DB93004817A6 /* main.js in Resources */,
 				509D4ABE17EBB2AB00697056 /* Default.png in Resources */,
 				C05D1C171923467600B808A4 /* config.json in Resources */,
@@ -575,6 +582,7 @@
 				509D4AC617EBB2AB00697056 /* Icon-152.png in Resources */,
 				D5C2B5E91EB9B73600D1310C /* Icon-87.png in Resources */,
 				C0799CB918BAE62000E9C828 /* res in Resources */,
+				AB175B841EDE92F6006FDB7E /* Images-2.xcassets in Resources */,
 				509D4AC517EBB2AB00697056 /* Icon-144.png in Resources */,
 				509D4AC317EBB2AB00697056 /* Icon-114.png in Resources */,
 				509D4ABD17EBB2AB00697056 /* Default-568h@2x.png in Resources */,
@@ -752,6 +760,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = launchimg;
 				CODE_SIGN_IDENTITY = "iPhone Developer: shen dahai (3433MK686P)";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 5Q365USU8R;
@@ -795,6 +805,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = launchimg;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ningbo Hui Nuo Network Technology Co., Ltd. (DTV74Y6PV4)";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = DTV74Y6PV4;

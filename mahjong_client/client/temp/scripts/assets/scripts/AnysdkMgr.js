@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'f58cea6lrpDZJSNs2BGBqxN', 'AnysdkMgr');
-// scripts\AnysdkMgr.js
+// scripts/AnysdkMgr.js
 
 cc.Class({
     "extends": cc.Component,
@@ -71,10 +71,10 @@ cc.Class({
         if (cc.sys.os == cc.sys.OS_ANDROID) {
             jsb.reflection.callStaticMethod(this.ANDROID_API, "ShareOnTimeline", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", cc.vv.SI.appweb, title, desc);
         } else if (cc.sys.os == cc.sys.OS_IOS) {
-            //jsb.reflection.callStaticMethod(this.IOS_API, "share:shareTitle:shareDesc:",cc.vv.SI.appweb,title,desc);
+            jsb.reflection.callStaticMethod(this.IOS_API, "sharetimeline:shareTitle:shareDesc:", cc.vv.SI.appweb, title, desc);
         } else {
-                console.log("platform:" + cc.sys.os + " dosn't implement share.");
-            }
+            console.log("platform:" + cc.sys.os + " dosn't implement share.");
+        }
     },
 
     copy: function copy(desc) {

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'eec07HsL4pBn5/PiT3SYBew', 'CreateRoom');
-// scripts\components\CreateRoom.js
+// scripts/components/CreateRoom.js
 
 cc.Class({
     "extends": cc.Component,

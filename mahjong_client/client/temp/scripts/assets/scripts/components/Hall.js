@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts\components\Hall.js
+// scripts/components/Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -46,7 +46,7 @@ cc.Class({
         cc.vv.http.sendRequest("/share_get_gems", data, function (res) {
             console.log("share_get_gems");
             if (res.errcode.data.gems > 0) {
-                cc.vv.alert.show("提示", "前往微信分享可获得" + res.errcode.data.gems + "钻");
+                cc.vv.alert.show("提示", "微信分享成功，获得" + res.errcode.data.gems + "钻");
                 cc.vv.userMgr.gems += res.errcode.data.gems;
                 cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
             }
@@ -65,7 +65,7 @@ cc.Class({
         cc.vv.http.sendRequest("/share_get_gems", data, function (res) {
             console.log("share_get_gems");
             if (res.errcode.data.gems > 0) {
-                cc.vv.alert.show("提示", "前往微信分享到朋友圈可获得" + res.errcode.data.gems + "钻");
+                cc.vv.alert.show("提示", "微信分享到朋友圈成功，获得" + res.errcode.data.gems + "钻");
                 cc.vv.userMgr.gems += res.errcode.data.gems;
                 cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
             }

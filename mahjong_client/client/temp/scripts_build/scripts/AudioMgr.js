@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '55caepcpvFK5r0Ax5f8jss4', 'AudioMgr');
-// scripts\AudioMgr.js
+// scripts/AudioMgr.js
 
 cc.Class({
     "extends": cc.Component,
