@@ -370,8 +370,8 @@
     "relativePath": "prefab\\webview.prefab"
   },
   "751f29e8-8146-472e-84f3-5d404293f63d": {
-    "asset": 1495778345842,
-    "meta": 1495779915775,
+    "asset": 1496137694640,
+    "meta": 1496137708600,
     "relativePath": "resources"
   },
   "5f41e8be-3282-4aa5-818c-70d7d8a6b0bf": {
@@ -430,8 +430,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1496059827392,
-    "meta": 1496110737341,
+    "asset": 1496137694642,
+    "meta": 1496137708602,
     "relativePath": "resources\\scenes"
   },
   "d5635cb0-01fd-4876-95ea-dd6b7cd3f1b1": {
@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1496135674104,
-    "meta": 1496135674162,
+    "asset": 1496136958466,
+    "meta": 1496137708633,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1496128938081,
-    "meta": 1496128938245,
+    "asset": 1496136958507,
+    "meta": 1496137709166,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -2725,8 +2725,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1496059827623,
-    "meta": 1496110737993,
+    "asset": 1496137694644,
+    "meta": 1496137708634,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2930,8 +2930,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1496122632925,
-    "meta": 1496122633367,
+    "asset": 1496137694644,
+    "meta": 1496137709167,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
