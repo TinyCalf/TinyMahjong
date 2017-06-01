@@ -746,15 +746,26 @@ function isPaiHu(seatData){
         seatData.diangangs.length > 0 ) {
         return false;
     }
-
-
     //没有刻子
     var kanzi = seatData.game.kanzi;
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] == kanzi[i][1]) {
             return false;
         }
+
+        var nowseat = (seatData.seatIndex-game.button+4)%4;
+        var nowfeng = 0;
+        (nowseat==0)?nowfeng=30:{};
+        (nowseat==1)?nowfeng=32:{};
+        (nowseat==2)?nowfeng=31:{};
+        (nowseat==3)?nowfeng=33:{};
+        if(kanzi[i].length == 2 &&
+            ((kanzi[i][0]>26 && kanzi[i][0]<30) || kanzi[i][0]==nowfeng)
+        ){
+            return false;
+        }
     }
+
     return true;
 }
 
@@ -891,7 +902,18 @@ function calculateResult(game){
             console.log("KANZI:");
             console.log(kanzi);
             //如果是点杠胡 则算作自摸
-            (sd.isQiangGangHu)?sd.iszimo=true:{};
+            //标注被抢杠的人
+            var beiqianggangindex = -1;
+            if(sd.isQiangGangHu){
+                sd.iszimo=true;
+                for (var n = 0 ; n < 4 ; n++) {
+                    var s = game.gameSeats[n];
+                    for (var m = 0 ; m < s.actions.length ; m++) {
+                        var na = s.actions[m];
+                        (na.type == "beiqianggang") ? beiqianggangindex = n : {};
+                    }
+                }
+            }
 
             if(isPaiHu(sd)) sd.paihu = true;
             if(isDuiDuiHu(sd)) sd.duiduihu = true;
@@ -1068,12 +1090,17 @@ function calculateResult(game){
                 case 3: huseat.score = 24;  break;
                 case 4: huseat.score = 30;  break;
             }
-            //计算其余人的分数
-            var s = huseat.score/3;
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    seats[n].score -= s;
+            if(!sd.isQiangGangHu) {
+                //计算其余人的分数
+                var s = huseat.score / 3;
+                for (var n = 0; n < seats.length; n++) {
+                    if (seats[n].hued != true) {
+                        seats[n].score -= s;
+                    }
                 }
+            }else{
+                var s = huseat.score;
+                seats[n].score -= s;
             }
         }
         else{
@@ -1109,12 +1136,17 @@ function calculateResult(game){
                 case 3: huseat.score = 60;  break;
                 case 4: huseat.score = 75;  break;
             }
-            //计算其余人的分数
-            var s = huseat.score/3;
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    seats[n].score -= s;
+            if(!sd.isQiangGangHu) {
+                //计算其余人的分数
+                var s = huseat.score/3;
+                for (var n = 0 ; n < seats.length ; n++) {
+                    if( seats[n].hued != true) {
+                        seats[n].score -= s;
+                    }
                 }
+            }else{
+                var s = huseat.score;
+                seats[n].score -= s;
             }
         }
         else{
@@ -1150,12 +1182,17 @@ function calculateResult(game){
                 case 3: huseat.score = 120;  break;
                 case 4: huseat.score = 150;  break;
             }
-            //计算其余人的分数
-            var s = huseat.score/3;
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    seats[n].score -= s;
+            if(!sd.isQiangGangHu) {
+                //计算其余人的分数
+                var s = huseat.score/3;
+                for (var n = 0 ; n < seats.length ; n++) {
+                    if( seats[n].hued != true) {
+                        seats[n].score -= s;
+                    }
                 }
+            }else{
+                var s = huseat.score;
+                seats[n].score -= s;
             }
         }
         else{
@@ -1191,12 +1228,17 @@ function calculateResult(game){
                 case 3: huseat.score = 210 ;  break;
                 case 4: huseat.score = 360 ;  break;
             }
-            //计算其余人的分数
-            var s = huseat.score/3;
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    seats[n].score -= s;
+            if(!sd.isQiangGangHu) {
+                //计算其余人的分数
+                var s = huseat.score/3;
+                for (var n = 0 ; n < seats.length ; n++) {
+                    if( seats[n].hued != true) {
+                        seats[n].score -= s;
+                    }
                 }
+            }else{
+                var s = huseat.score;
+                seats[n].score -= s;
             }
         }
         else{
@@ -1282,13 +1324,12 @@ function calculateResult(game){
     //     }
     // }
 
-
     //记录所有人的三尺三碰状态
     for (var i = 0 ; i < 4 ; i ++) {
         var nowseat = game.gameSeats[i];
         for (var j = 0 ; j < 4 ; j ++) {
             if(nowseat.sanchisanpeng[j]>=3) {
-                var nowzuo = (j - game.button + 4) % 4;
+                var nowzuo = ( j - game.button + 4) % 4 ;
                 var str = "";
                 switch (nowzuo) {
                     case 0 : nowseat.actions.push({type: "sanchisanpeng0"}); break;
@@ -2663,8 +2704,7 @@ exports.peng = function(userId){
         return;
     }
 
-    //记录三吃三碰
-    seatData.sanchisanpeng[game.turn] ++;
+
 
     //如果没有碰的机会，则不能再碰
     if(seatData.canPeng == false){
@@ -2719,6 +2759,9 @@ exports.peng = function(userId){
     seatData.pengs.push(pai);
     game.chuPai = -1;
 
+    //记录三吃三碰
+    seatData.sanchisanpeng[game.turn] ++;
+
     recordGameAction(game,seatData.seatIndex,ACTION_PENG,pai);
 
     //广播通知其它玩家
@@ -2752,8 +2795,7 @@ exports.chi = function(userId,data){
         return;
     }
 
-    //记录三吃三碰
-    seatData.sanchisanpeng[game.turn] ++;
+
 
     //如果没有碰的机会，则不能再吃
     if(seatData.canChi == false){
@@ -2832,7 +2874,8 @@ exports.chi = function(userId,data){
     seatData.chis.push(chigroup);
     game.chuPai = -1;
 
-
+    //记录三吃三碰
+    seatData.sanchisanpeng[game.turn] ++;
 
     recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai);
     //广播通知其它玩家
@@ -2864,9 +2907,6 @@ exports.gang = function(userId,pai){
         console.log("can't find user game data.");
         return;
     }
-
-    //记录三吃三碰
-    seatData.sanchisanpeng[seatData.game.turn] ++;
 
     var seatIndex = seatData.seatIndex;
     var game = seatData.game;
@@ -2935,6 +2975,9 @@ exports.gang = function(userId,pai){
             return;
         }
     }
+
+    //记录三吃三碰
+    seatData.sanchisanpeng[seatData.game.turn] ++;
 
     doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai);
 };
