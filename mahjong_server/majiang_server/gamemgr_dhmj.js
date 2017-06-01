@@ -753,7 +753,7 @@ function isPaiHu(seatData){
             return false;
         }
 
-        var nowseat = (seatData.seatIndex-game.button+4)%4;
+        var nowseat = (seatData.seatIndex-seatData.game.button+4)%4;
         var nowfeng = 0;
         (nowseat==0)?nowfeng=30:{};
         (nowseat==1)?nowfeng=32:{};
