@@ -737,15 +737,26 @@ function isPaiHu(seatData){
         seatData.diangangs.length > 0 ) {
         return false;
     }
-
-
     //没有刻子
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] == kanzi[i][1]) {
             return false;
         }
+
+        var nowseat = (seatData.seatIndex-game.button+4)%4;
+        var nowfeng = 0;
+        (nowseat==0)?nowfeng=30:{};
+        (nowseat==1)?nowfeng=32:{};
+        (nowseat==2)?nowfeng=31:{};
+        (nowseat==3)?nowfeng=33:{};
+        if(kanzi[i].length == 2 &&
+            ((kanzi[i][0]>26 && kanzi[i][0]<30) || kanzi[i][0]==nowfeng)
+        ){
+            return false;
+        }
     }
+
     return true;
 }
 
@@ -755,7 +766,7 @@ function isDuiDuiHu (seatData) {
         return false;
     }
     //没有坎子
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1]) {
             return false;
@@ -774,7 +785,7 @@ function isGangShangHua (seatData) {
 
 //判斷坎
 function isKan (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 &&kanzi[i][1]==hupai && kanzi[i][0]!=hupai){
@@ -786,7 +797,7 @@ function isKan (seatData) {
 
 //判斷邊
 function isBian (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
 
     for (var i = 0 ; i < kanzi.length ; i++) {
@@ -804,7 +815,7 @@ function isBian (seatData) {
 
 //判斷單
 function isDan (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 2 && kanzi[i][0] == hupai){
@@ -816,7 +827,7 @@ function isDan (seatData) {
 
 //判斷對到
 function isDuidao (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] == hupai && kanzi[i][1] == hupai){
@@ -872,9 +883,9 @@ function calculateResult(game){
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         if(sd.hued == true) {
             //通过胡数算法找到他的坎子们
-            game.kanzi = [];
+            sd.kanzi = [];
             mjutils.canHu(sd);
-            var kanzi = game.kanzi;
+            var kanzi = sd.kanzi;
             console.log("KANZI:");
             console.log(kanzi);
             //如果是点杠胡 则算作自摸
@@ -1035,16 +1046,16 @@ function calculateResult(game){
             //胡牌的人需要用坎子判断暗刻
             for (var n = 0; n < needed.length; n++) {
                 if(sd.countMap[needed[n]] >= 3){
-                    for(var k = 0 ; k < game.kanzi.length ; k++){
-                        if(game.kanzi[k].length ==3 && game.kanzi[k][0] == needed[n] && game.kanzi[k][1] == needed[n])
+                    for(var k = 0 ; k < sd.kanzi.length ; k++){
+                        if(sd.kanzi[k].length ==3 && sd.kanzi[k][0] == needed[n] && sd.kanzi[k][1] == needed[n])
                             SI += 1;
                     }
                 }
             }
             for (var n = 0; n < 34; n++) {
                 if(sd.countMap[n] >= 3){
-                    for(var k = 0 ; k < game.kanzi.length ; k++){
-                        if(game.kanzi[k].length ==3 && game.kanzi[k][0] == n && game.kanzi[k][1] == n)
+                    for(var k = 0 ; k < sd.kanzi.length ; k++){
+                        if(sd.kanzi[k].length ==3 && sd.kanzi[k][0] == n && sd.kanzi[k][1] == n)
                             SI += 1;
                     }
                 }
@@ -1996,7 +2007,6 @@ exports.begin = function(roomId) {
         hupaiList:[],
         chupaiCnt:0,
         fangpaoindex:-1,
-        kanzi:[],
 
         //舟山麻将留局计算，需要保留多张牌
         leftlength:leftlength,
@@ -2084,6 +2094,8 @@ exports.begin = function(roomId) {
         data.numAnGang = 0;
         data.numMingGang = 0;
         data.numChaJiao = 0;
+
+        data.kanzi = [];
 
         gameSeatsOfUsers[data.userId] = data;
     }

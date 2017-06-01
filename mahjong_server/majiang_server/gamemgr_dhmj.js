@@ -747,7 +747,7 @@ function isPaiHu(seatData){
         return false;
     }
     //没有刻子
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] == kanzi[i][1]) {
             return false;
@@ -775,7 +775,7 @@ function isDuiDuiHu (seatData) {
         return false;
     }
     //没有坎子
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1]) {
             return false;
@@ -794,7 +794,7 @@ function isGangShangHua (seatData) {
 
 //判斷坎
 function isKan (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 &&kanzi[i][1]==hupai && kanzi[i][0]!=hupai){
@@ -806,7 +806,7 @@ function isKan (seatData) {
 
 //判斷邊
 function isBian (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
 
     for (var i = 0 ; i < kanzi.length ; i++) {
@@ -824,7 +824,7 @@ function isBian (seatData) {
 
 //判斷單
 function isDan (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 2 && kanzi[i][0] == hupai){
@@ -836,7 +836,7 @@ function isDan (seatData) {
 
 //判斷對到
 function isDuidao (seatData) {
-    var kanzi = seatData.game.kanzi;
+    var kanzi = seatData.kanzi;
     var hupai = seatData.holds[seatData.holds.length-1];
     for (var i = 0 ; i < kanzi.length ; i++) {
         if(kanzi[i].length == 3 && kanzi[i][0] == hupai && kanzi[i][1] == hupai){
@@ -896,9 +896,9 @@ function calculateResult(game){
 
 
             //通过胡数算法找到他的坎子们
-            game.kanzi = [];
+            sd.kanzi = [];
             mjutils.canHu(sd);
-            var kanzi = game.kanzi;
+            var kanzi = sd.kanzi;
             console.log("KANZI:");
             console.log(kanzi);
             //如果是点杠胡 则算作自摸
@@ -2308,7 +2308,6 @@ exports.begin = function(roomId) {
         hupaiList:[],
         chupaiCnt:0,
         fangpaoindex:-1,
-        kanzi:[],
     };
 
     //roomInfo.numOfGames++;
@@ -2363,7 +2362,8 @@ exports.begin = function(roomId) {
         };
         //是否可以出牌
         data.canChuPai = false;
-
+        //记录所有坎子
+        data.kanzi = [];
         //如果guoHuFan >=0 表示处于过胡状态，
         //如果过胡状态，那么只能胡大于过胡番数的牌
         data.guoHuFan = -1;

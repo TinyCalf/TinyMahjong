@@ -96,7 +96,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected - 2);
 			debugRecord(selected - 1);
 			debugRecord(selected);
-			game.kanzi.push([selected - 2,selected - 1,selected]);
+			seatData.kanzi.push([selected - 2,selected - 1,selected]);
 			return true;
 		}		
 	}
@@ -134,7 +134,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected - 1);
 			debugRecord(selected);
 			debugRecord(selected + 1);
-			game.kanzi.push([selected - 1,selected ,selected + 1]);
+			seatData.kanzi.push([selected - 1,selected ,selected + 1]);
 			return true;
 		}		
 	}
@@ -173,7 +173,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected);
 			debugRecord(selected + 1);
 			debugRecord(selected + 2);
-			game.kanzi.push([selected,selected + 1 ,selected + 2]);
+			seatData.kanzi.push([selected,selected + 1 ,selected + 2]);
 			return true;
 		}		
 	}
@@ -208,7 +208,7 @@ function checkSingle(seatData){
 		//立即恢复对数据的修改
 		seatData.countMap[selected] = c;
 		if(ret == true){
-			game.kanzi.push([selected,selected,selected]);
+			seatData.kanzi.push([selected,selected,selected]);
 			return true;
 		}
 	}
@@ -223,7 +223,7 @@ function checkSingle(seatData){
 		seatData.countMap[selected] = c;
 		//如果作为一坎能够把牌匹配完，直接返回TRUE。
 		if(ret == true){
-			game.kanzi.push([selected,selected,selected]);
+			seatData.kanzi.push([selected,selected,selected]);
 			return true;
 		}
 	}
@@ -293,7 +293,7 @@ exports.canHu = function (seatData) {
 		var ret = checkSingle(seatData);
 		seatData.countMap[k] += 2;
 		if(ret){
-			game.kanzi.push([k,k]);
+			seatData.kanzi.push([k,k]);
 			return true;
 		}
 	}
