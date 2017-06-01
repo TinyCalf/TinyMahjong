@@ -2,10 +2,10 @@
   "version": "1.1.0",
   "windows": {
     "main": {
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776,
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1186,
       "layout": {
         "children": [
           {
@@ -72,6 +72,12 @@
         "snapshot": true,
         "type": "dock-h"
       }
+    },
+    "window-1496294771342": {
+      "x": 312,
+      "y": 177,
+      "width": 1296,
+      "height": 815
     }
   }
 }

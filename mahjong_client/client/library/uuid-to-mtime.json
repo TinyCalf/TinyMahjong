@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1496218981790,
-    "meta": 1496219381046,
+    "asset": 1496294477304,
+    "meta": 1496294477344,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -2805,8 +2805,8 @@
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
-    "asset": 1493093400371,
-    "meta": 1496219387227,
+    "asset": 1496294468044,
+    "meta": 1496294468233,
     "relativePath": "scripts\\components\\History.js"
   },
   "9a096a00-814e-47c2-bc57-d3964f358b56": {
@@ -2840,8 +2840,8 @@
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1496059827626,
-    "meta": 1496219387954,
+    "asset": 1496289216878,
+    "meta": 1496289217143,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {

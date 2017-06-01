@@ -1204,6 +1204,7 @@ function calculateResult(game){
                 case 500: huseat.score = 180; break;
             }
             //TODO:杠开辣子
+
             //计算其余人的分数
             var s = huseat.score/3;
             for (var n = 0 ; n < seats.length ; n++) {

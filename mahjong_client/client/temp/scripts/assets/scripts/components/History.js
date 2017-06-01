@@ -199,6 +199,10 @@ cc.Class({
         var self = this;
         var roomUUID = this._curRoomInfo.uuid;
         cc.vv.userMgr.getDetailOfGame(roomUUID, idx, function (data) {
+            console.log("getDetailOfGame");
+            console.log(data);
+            console.log(data.base_info);
+            console.log(data.action_records);
             data.base_info = JSON.parse(data.base_info);
             data.action_records = JSON.parse(data.action_records);
             cc.vv.gameNetMgr.prepareReplay(self._curRoomInfo, data);
@@ -208,25 +212,23 @@ cc.Class({
     },
 
     onViewItemClicked: function onViewItemClicked(event) {
-        // var idx = event.target.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);     
-        // }
+        var idx = event.target.idx;
+        console.log(idx);
+        if (this._curRoomInfo == null) {
+            this.getGameListOfRoom(idx);
+        } else {
+            this.getDetailOfGame(idx);
+        }
     },
 
     onBtnOpClicked: function onBtnOpClicked(event) {
-        // var idx = event.target.parent.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);     
-        // }
+        var idx = event.target.parent.idx;
+        console.log(idx);
+        if (this._curRoomInfo == null) {
+            this.getGameListOfRoom(idx);
+        } else {
+            this.getDetailOfGame(idx);
+        }
     }
 
 });

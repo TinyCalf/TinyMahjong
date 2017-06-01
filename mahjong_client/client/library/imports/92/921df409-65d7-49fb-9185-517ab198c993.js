@@ -101,7 +101,6 @@ cc.Class({
     ipWarning: function ipWarning() {
 
         if (!this._ifshowipwarning) return;
-        console.log(nowseat);
 
         var seats = cc.vv.gameNetMgr.seats;
         var nowseat = cc.vv.gameNetMgr.seatIndex;
@@ -122,7 +121,6 @@ cc.Class({
         if ((others[2][1] == others[1][1] || others[2][1] == others[0][1]) && others[1][1] != null) {
             warnames.push(others[2][0]);
         }
-        console.log(warnames);
         var str = warnames.join("、");
         if (warnames.length > 0) {
             cc.vv.alert.show("IP警告", "玩家" + str + "来自相同IP，请谨防其他玩家打勾手上当受骗", function () {
