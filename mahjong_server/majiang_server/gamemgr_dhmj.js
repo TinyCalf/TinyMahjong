@@ -912,8 +912,6 @@ function calculateResult(game){
 
             //定海麻将 只有胡的人算台数
             var TAI = 0 ;
-            //排胡为一台
-            if(sd.paihu) TAI++;
             //当前风圈 0123 东南西北
             var nowfeng = game.roomInfo.fengxiang;
             // 0123 东南西北
@@ -1025,11 +1023,11 @@ function calculateResult(game){
             //杠开 一台
             if(sd.gangshanghua) TAI++;
             //对对胡
-            if(sd.duiduihu) TAI++;
+            if(sd.duiduihu) TAI+=2;
             //清一色
             if(sd.qingyise) TAI += 4;
             //混一色
-            if(sd.hunyise) TAI ++;
+            if(sd.hunyise) TAI +=2;
 
             console.log("4 tai="+TAI);
 

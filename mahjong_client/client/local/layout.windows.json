@@ -15,23 +15,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 349,
+                "height": 523,
                 "type": "panel",
-                "width": 339
+                "width": 510
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 355,
+                "height": 532,
                 "type": "panel",
-                "width": 339
+                "width": 510
               }
             ],
-            "height": 707,
+            "height": 1058,
             "type": "dock-v",
-            "width": 339
+            "width": 510
           },
           {
             "children": [
@@ -40,9 +40,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 399,
+                "height": 598,
                 "type": "panel",
-                "width": 560
+                "width": 843
               },
               {
                 "active": 0,
@@ -50,52 +50,28 @@
                   "console",
                   "timeline"
                 ],
-                "height": 305,
+                "height": 457,
                 "type": "panel",
-                "width": 560
+                "width": 843
               }
             ],
-            "height": 707,
+            "height": 1058,
             "type": "dock-v",
-            "width": 560
+            "width": 843
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 707,
+            "height": 1058,
             "type": "panel",
-            "width": 369
+            "width": 555
           }
         ],
         "snapshot": true,
         "type": "dock-h"
       }
-    },
-    "window-1496202125654": {
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776
-    },
-    "window-1496202135661": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "builder"
-            ]
-          }
-        ]
-      },
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776
     }
   }
 }

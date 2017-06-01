@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '1a6a1p86NFL6KZEZCnbu7tt', 'ReplayMgr');
-// scripts/ReplayMgr.js
+// scripts\ReplayMgr.js
 
 var ACTION_CHUPAI = 1;
 var ACTION_MOPAI = 2;

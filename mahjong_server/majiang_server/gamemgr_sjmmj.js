@@ -1185,12 +1185,12 @@ function calculateResult(game){
                 case 100: huseat.score = 60 ; break;
                 case 150: huseat.score = 75 ; break;
                 case 200: huseat.score = 90 ; break;
-                case 250: huseat.score = 105 ; break;
-                case 300: huseat.score = 120 ; break;
-                case 350: huseat.score = 135 ; break;
-                case 400: huseat.score = 150 ; break;
-                case 450: huseat.score = 165 ; break;
-                case 500: huseat.score = 180 ; break;
+                case 250: huseat.score = 105; break;
+                case 300: huseat.score = 120; break;
+                case 350: huseat.score = 135; break;
+                case 400: huseat.score = 150; break;
+                case 450: huseat.score = 165; break;
+                case 500: huseat.score = 180; break;
             }
             //TODO:杠开辣子
             //计算其余人的分数
@@ -1205,7 +1205,7 @@ function calculateResult(game){
             switch(huseat.fan) {
                 case 50:  huseat.score = 10 + 5 * 2 ; break;
                 case 100: huseat.score = 15 + 5 * 2 ; break;
-                case 150: huseat.score = 15 + 10 * 2 ; break;
+                case 150: huseat.score = 20 + 10 * 2 ; break;
                 case 200: huseat.score = 25 + 10 * 2 ; break;
                 case 250: huseat.score = 30 + 15 * 2 ; break;
                 case 300: huseat.score = 35 + 15 * 2 ; break;
@@ -1220,7 +1220,7 @@ function calculateResult(game){
                         switch(huseat.fan) {
                             case 50:  seats[n].score -= 10; break;
                             case 100: seats[n].score -= 15; break;
-                            case 150: seats[n].score -= 15; break;
+                            case 150: seats[n].score -= 20; break;
                             case 200: seats[n].score -= 25; break;
                             case 250: seats[n].score -= 30; break;
                             case 300: seats[n].score -= 35; break;
