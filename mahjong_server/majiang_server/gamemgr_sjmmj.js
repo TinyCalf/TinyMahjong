@@ -1205,6 +1205,9 @@ function calculateResult(game){
                 case 500: huseat.score = 180; break;
             }
             //TODO:杠开辣子
+            if(huseat.gangshanghua){
+                huseat.score +=15;
+            }
             //计算其余人的分数
             var s = huseat.score/3;
             for (var n = 0 ; n < seats.length ; n++) {
@@ -1274,6 +1277,9 @@ function calculateResult(game){
                 case 500: huseat.score = 360 ; break;
             }
             //TODO:杠开辣子
+            if(huseat.gangshanghua){
+                huseat.score +=30;
+            }
             //计算其余人的分数
             var s = huseat.score/3;
             for (var n = 0 ; n < seats.length ; n++) {
@@ -1343,6 +1349,9 @@ function calculateResult(game){
                 case 500: huseat.score = 720 ; break;
             }
             //TODO:杠开辣子
+            if(huseat.gangshanghua){
+                huseat.score +=60;
+            }
             //计算其余人的分数
             var s = huseat.score/3;
             for (var n = 0 ; n < seats.length ; n++) {
