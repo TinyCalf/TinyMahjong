@@ -13,6 +13,7 @@ var ACTION_GANG = 4;
 var ACTION_CHI = 7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
+var ACTION_BUHUA = 8
 
 var gameSeatsOfUsers = {};
 
@@ -1501,12 +1502,9 @@ function doGameOver(game,userId,forceEnd){
                 if (roomInfo.numOfGames > 1) {
                     store_history(roomInfo);    
                 }
-                
                 userMgr.kickAllInRoom(roomId);
                 roomMgr.destroy(roomId);
-
-
-                db.archive_games(roomInfo.uuid);            
+                db.archive_games(roomInfo.uuid);
             },1500);
         }
     };

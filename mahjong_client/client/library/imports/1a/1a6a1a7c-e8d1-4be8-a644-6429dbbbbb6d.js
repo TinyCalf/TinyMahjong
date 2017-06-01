@@ -5,7 +5,7 @@ var ACTION_GANG = 4;
 var ACTION_HU = 5;
 
 cc.Class({
-    'extends': cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -45,6 +45,10 @@ cc.Class({
     },
 
     getNextAction: function getNextAction() {
+        var actions = [].concat(this._actionRecords);
+        actions.splice(0, this._currentIndex);
+        console.log(actions);
+
         if (this._currentIndex >= this._actionRecords.length) {
             return null;
         }
@@ -68,27 +72,27 @@ cc.Class({
         }
         var nextActionDelay = 1.0;
         if (action.type == ACTION_CHUPAI) {
-            //console.log("chupai");
+            console.log("chupai" + action.pai);
             cc.vv.gameNetMgr.doChupai(action.si, action.pai);
             return 1.0;
         } else if (action.type == ACTION_MOPAI) {
-            //console.log("mopai");
+            console.log("mopai" + action.pai);
             cc.vv.gameNetMgr.doMopai(action.si, action.pai);
             cc.vv.gameNetMgr.doTurnChange(action.si);
             return 0.5;
         } else if (action.type == ACTION_PENG) {
-            //console.log("peng");
+            console.log("peng" + action.pai);
             cc.vv.gameNetMgr.doPeng(action.si, action.pai);
             cc.vv.gameNetMgr.doTurnChange(action.si);
             return 1.0;
         } else if (action.type == ACTION_GANG) {
-            //console.log("gang");
+            console.log("gang" + action.pai);
             cc.vv.gameNetMgr.dispatchEvent('hangang_notify', action.si);
             cc.vv.gameNetMgr.doGang(action.si, action.pai);
             cc.vv.gameNetMgr.doTurnChange(action.si);
             return 1.0;
         } else if (action.type == ACTION_HU) {
-            //console.log("hu");
+            console.log("hu" + action.pai);
             cc.vv.gameNetMgr.doHu({ seatindex: action.si, hupai: action.pai, iszimo: false });
             return 1.5;
         }
