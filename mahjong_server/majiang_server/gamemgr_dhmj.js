@@ -1100,7 +1100,7 @@ function calculateResult(game){
                 }
             }else{
                 var s = huseat.score;
-                seats[n].score -= s;
+                seats[beiqianggangindex].score -= s;
             }
         }
         else{
@@ -1146,7 +1146,7 @@ function calculateResult(game){
                 }
             }else{
                 var s = huseat.score;
-                seats[n].score -= s;
+                seats[beiqianggangindex].score -= s;
             }
         }
         else{
@@ -1192,7 +1192,7 @@ function calculateResult(game){
                 }
             }else{
                 var s = huseat.score;
-                seats[n].score -= s;
+                seats[beiqianggangindex].score -= s;
             }
         }
         else{
@@ -1238,7 +1238,7 @@ function calculateResult(game){
                 }
             }else{
                 var s = huseat.score;
-                seats[n].score -= s;
+                seats[beiqianggangindex].score -= s;
             }
         }
         else{
