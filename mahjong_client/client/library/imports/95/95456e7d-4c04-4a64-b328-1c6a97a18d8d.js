@@ -105,6 +105,9 @@ cc.Class({
     },
 
     prepareReplay: function prepareReplay(roomInfo, detailOfGame) {
+        console.log("prepareReplay!!!");
+        console.log(roomInfo);
+        console.log(detailOfGame);
         this.roomId = roomInfo.id;
         this.seats = roomInfo.seats;
         this.turn = detailOfGame.base_info.button;
@@ -388,14 +391,6 @@ cc.Class({
             self.dispatchEvent('game_action', data);
         });
 
-        cc.vv.net.addHandler("game_chupai_push", function (data) {
-            console.log('game_chupai_push');
-            //console.log(data);
-            var turnUserID = data;
-            var si = self.getSeatIndexByID(turnUserID);
-            self.doTurnChange(si);
-        });
-
         cc.vv.net.addHandler("game_num_push", function (data) {
             self.numOfGames = data;
             self.dispatchEvent('game_num', data);
@@ -424,6 +419,14 @@ cc.Class({
             self.numOfMJ = data;
             //console.log(data);
             self.dispatchEvent('mj_count', data);
+        });
+
+        cc.vv.net.addHandler("game_chupai_push", function (data) {
+            console.log('game_chupai_push');
+            //console.log(data);
+            var turnUserID = data;
+            var si = self.getSeatIndexByID(turnUserID);
+            self.doTurnChange(si);
         });
 
         cc.vv.net.addHandler("hu_push", function (data) {

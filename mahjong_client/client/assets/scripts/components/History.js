@@ -205,25 +205,25 @@ cc.Class({
     },
     
     onViewItemClicked:function(event){
-        // var idx = event.target.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);      
-        // }
+        var idx = event.target.idx;
+        console.log(idx);
+        if(this._curRoomInfo == null){
+            this.getGameListOfRoom(idx);
+        }
+        else{
+            this.getDetailOfGame(idx+1);      
+        }
     },
     
     onBtnOpClicked:function(event){
-        // var idx = event.target.parent.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);      
-        // }
+        var idx = event.target.parent.idx;
+        console.log(idx);
+        if(this._curRoomInfo == null){
+            this.getGameListOfRoom(idx);
+        }
+        else{
+            this.getDetailOfGame(idx+1);      
+        }
     },
 
     // called every frame, uncomment this function to activate update callback
