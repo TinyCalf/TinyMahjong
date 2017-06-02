@@ -13,6 +13,7 @@ var ACTION_GANG = 4;
 var ACTION_CHI = 7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
+var ACTION_BUHUA = 8
 
 var gameSeatsOfUsers = {};
 
@@ -2032,11 +2033,14 @@ function recordUserAction(game,seatData,type,target){
     return d;
 }
 
-function recordGameAction(game,si,action,pai){
+function recordGameAction(game,si,action,pai,other){
     game.actionList.push(si);
     game.actionList.push(action);
     if(pai != null){
         game.actionList.push(pai);
+    }
+    if(other != null){
+        game.actionList.push(other);
     }
 }
 
@@ -2877,7 +2881,7 @@ exports.chi = function(userId,data){
     //记录三吃三碰
     seatData.sanchisanpeng[game.turn] ++;
 
-    recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai);
+    recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai,chigroup);
     //广播通知其它玩家
     userMgr.broacastInRoom('chi_notify_push',{userid:seatData.userId,pai:pai,chigroup:chigroup},seatData.userId,true);
     //吃的玩家打牌
