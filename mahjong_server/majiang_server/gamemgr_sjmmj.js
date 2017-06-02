@@ -13,6 +13,7 @@ var ACTION_GANG = 4;
 var ACTION_CHI = 7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
+var ACTION_BUHUA = 8;
 
 var gameSeatsOfUsers = {};
 
@@ -77,10 +78,12 @@ function buhua(game,seatIndex){
     }
 
     if(buhuas.length>0) {
+
         //告诉所有人该玩家补花了
         userMgr.broacastInRoom('buhua_notify_push', {userid: data.userId, buhuas: buhuas}, data.userId, true);
         //告诉该玩家现在的增加的手牌是什么
         userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:data.holds});
+        recordGameAction(game,seatIndex,ACTION_BUHUA,buhuas,data.holds);
     }
 
 }
@@ -1733,11 +1736,14 @@ function recordUserAction(game,seatData,type,target){
     return d;
 }
 
-function recordGameAction(game,si,action,pai){
+function recordGameAction(game,si,action,pai,other){
     game.actionList.push(si);
     game.actionList.push(action);
     if(pai != null){
         game.actionList.push(pai);
+    }
+    if(other != null){
+        game.actionList.push([].concat(other));
     }
 }
 
@@ -2580,7 +2586,7 @@ exports.chi = function(userId,data){
 
 
 
-    recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai);
+    recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai,chigroup);
     //广播通知其它玩家
     userMgr.broacastInRoom('chi_notify_push',{userid:seatData.userId,pai:pai,chigroup:chigroup},seatData.userId,true);
     //吃的玩家打牌

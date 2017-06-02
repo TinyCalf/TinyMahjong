@@ -80,6 +80,7 @@ cc.Class({
                 }
             }
             self.initRoomHistoryList(data);
+            
         });
     },
     

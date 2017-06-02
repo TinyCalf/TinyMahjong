@@ -82,6 +82,7 @@ function buhua(game,seatIndex){
         userMgr.broacastInRoom('buhua_notify_push', {userid: data.userId, buhuas: buhuas}, data.userId, true);
         //告诉该玩家现在的增加的手牌是什么
         userMgr.sendMsg(data.userId,"game_buhua_push",{userid: data.userId, buhuas: buhuas,holds:data.holds});
+        recordGameAction(game,seatIndex,ACTION_BUHUA,buhuas,data.holds);
     }
 
 }
@@ -1071,7 +1072,7 @@ function recordGameAction(game,si,action,pai,other){
         game.actionList.push(pai);
     }
     if(other != null){
-        game.actionList.push(other);
+        game.actionList.push([].concat(other));
     }
 }
 
