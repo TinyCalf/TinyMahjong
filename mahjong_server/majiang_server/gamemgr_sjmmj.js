@@ -173,7 +173,7 @@ function shuffle(game) {
 
 
     // var index = 0 ;
-    // var mjs = [1,2,0,3,4,5,6,7,8,9,10,27,27];
+    // var mjs = [1,1,1,1,4,5,6,7,8,9,10,27,27];
     // for (var i =0 ; i < mjs.length ; i++) {
     //     for(var j = 0 ; j < 4 ; j++) {
     //         game.mahjongs[index] = mjs[i];
@@ -350,7 +350,7 @@ function checkCanDianGang(game,seatData,targetPai){
         return;
     }
     var count = seatData.countMap[targetPai];
-    if(count != null && count >= 3){
+    if (count != null && count >= 3) {
         seatData.canGang = true;
         seatData.gangPai.push(targetPai);
         return;
@@ -2480,16 +2480,28 @@ exports.peng = function(userId){
     //广播通知其它玩家
     userMgr.broacastInRoom('peng_notify_push',{userid:seatData.userId,pai:pai},seatData.userId,true);
 
-    //碰的玩家打牌
-    moveToNextUser(game,seatData.seatIndex);
-    
-    //广播通知玩家出牌方
-    seatData.canChuPai = true;
-    userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
 
 
-    //配合舟山补花逻辑 如果手牌里有花就先补花
-    buhua(game,seatData.seatIndex);
+    //检查是否有人要胡，要碰 要杠s
+    var hasActions = false;
+    var ddd = seatData;
+    //已经和牌的不再检查
+    if(!ddd.hued){
+        checkCanWanGang(game,ddd);
+        if(hasOperations(ddd)){
+            sendOperations(game,ddd,game.chuPai);
+            hasActions = true;
+        }
+    }
+    if(!hasActions) {
+        //碰的玩家打牌
+        moveToNextUser(game, seatData.seatIndex);
+        //广播通知玩家出牌方
+        seatData.canChuPai = true;
+        userMgr.broacastInRoom('game_chupai_push', seatData.userId, seatData.userId, true);
+        //配合舟山补花逻辑 如果手牌里有花就先补花
+        buhua(game, seatData.seatIndex);
+    }
 };
 
 exports.chi = function(userId,data){
@@ -2589,12 +2601,25 @@ exports.chi = function(userId,data){
     recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai,chigroup);
     //广播通知其它玩家
     userMgr.broacastInRoom('chi_notify_push',{userid:seatData.userId,pai:pai,chigroup:chigroup},seatData.userId,true);
-    //吃的玩家打牌
-    moveToNextUser(game,seatData.seatIndex);   
-    //广播通知玩家出牌方
-    seatData.canChuPai = true;
-    userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
 
+    //检查是否有人要胡，要碰 要杠s
+    var hasActions = false;
+    var ddd = seatData;
+    //已经和牌的不再检查
+    if(!ddd.hued){
+        checkCanWanGang(game,ddd);
+        if(hasOperations(ddd)){
+            sendOperations(game,ddd,game.chuPai);
+            hasActions = true;
+        }
+    }
+    if(!hasActions) {
+        //吃的玩家打牌
+        moveToNextUser(game, seatData.seatIndex);
+        //广播通知玩家出牌方
+        seatData.canChuPai = true;
+        userMgr.broacastInRoom('game_chupai_push', seatData.userId, seatData.userId, true);
+    }
 
 };
 

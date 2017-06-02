@@ -2779,8 +2779,26 @@ exports.peng = function(userId){
     seatData.canChuPai = true;
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
 
-    //配合舟山补花逻辑 如果手牌里有花就先补花
-    buhua(game,seatData.seatIndex);
+    //检查是否有人要胡，要碰 要杠s
+    var hasActions = false;
+    var ddd = seatData;
+    //已经和牌的不再检查
+    if(!ddd.hued){
+        checkCanWanGang(game,ddd);
+        if(hasOperations(ddd)){
+            sendOperations(game,ddd,game.chuPai);
+            hasActions = true;
+        }
+    }
+    if(!hasActions) {
+        //碰的玩家打牌
+        moveToNextUser(game, seatData.seatIndex);
+        //广播通知玩家出牌方
+        seatData.canChuPai = true;
+        userMgr.broacastInRoom('game_chupai_push', seatData.userId, seatData.userId, true);
+        //配合舟山补花逻辑 如果手牌里有花就先补花
+        buhua(game, seatData.seatIndex);
+    }
 };
 
 exports.chi = function(userId,data){
@@ -2885,11 +2903,24 @@ exports.chi = function(userId,data){
     recordGameAction(game,seatData.seatIndex,ACTION_CHI,pai,chigroup);
     //广播通知其它玩家
     userMgr.broacastInRoom('chi_notify_push',{userid:seatData.userId,pai:pai,chigroup:chigroup},seatData.userId,true);
-    //吃的玩家打牌
-    moveToNextUser(game,seatData.seatIndex);
-    //广播通知玩家出牌方
-    seatData.canChuPai = true;
-    userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+    //检查是否有人要胡，要碰 要杠s
+    var hasActions = false;
+    var ddd = seatData;
+    //已经和牌的不再检查
+    if(!ddd.hued){
+        checkCanWanGang(game,ddd);
+        if(hasOperations(ddd)){
+            sendOperations(game,ddd,game.chuPai);
+            hasActions = true;
+        }
+    }
+    if(!hasActions) {
+        //吃的玩家打牌
+        moveToNextUser(game, seatData.seatIndex);
+        //广播通知玩家出牌方
+        seatData.canChuPai = true;
+        userMgr.broacastInRoom('game_chupai_push', seatData.userId, seatData.userId, true);
+    }
 };
 
 exports.isPlaying = function(userId){

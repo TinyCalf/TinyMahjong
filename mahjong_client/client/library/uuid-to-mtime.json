@@ -430,8 +430,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1496366839863,
-    "meta": 1496367105236,
+    "asset": 1496378417815,
+    "meta": 1496383797941,
     "relativePath": "resources\\scenes"
   },
   "d5635cb0-01fd-4876-95ea-dd6b7cd3f1b1": {
@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1496366839863,
-    "meta": 1496367105877,
+    "asset": 1496378417815,
+    "meta": 1496383800021,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -2725,8 +2725,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1496366839865,
-    "meta": 1496367105237,
+    "asset": 1496378417817,
+    "meta": 1496383797944,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2750,8 +2750,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1496366839867,
-    "meta": 1496367105238,
+    "asset": 1496378417819,
+    "meta": 1496383797946,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -2805,8 +2805,8 @@
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
-    "asset": 1496377508136,
-    "meta": 1496377508305,
+    "asset": 1496378417817,
+    "meta": 1496383799053,
     "relativePath": "scripts\\components\\History.js"
   },
   "9a096a00-814e-47c2-bc57-d3964f358b56": {
@@ -2835,8 +2835,8 @@
     "relativePath": "scripts\\components\\Login.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1496366839867,
-    "meta": 1496367106099,
+    "asset": 1496378417819,
+    "meta": 1496383800589,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -2910,8 +2910,8 @@
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1496366839864,
-    "meta": 1496367106133,
+    "asset": 1496378417816,
+    "meta": 1496383800651,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {
@@ -3125,13 +3125,13 @@
     "relativePath": "resources\\textures\\hall\\share_box.png"
   },
   "1a6a1a7c-e8d1-4be8-a644-6429dbbbbb6d": {
-    "asset": 1496366839865,
-    "meta": 1496367106133,
+    "asset": 1496378417817,
+    "meta": 1496383800652,
     "relativePath": "scripts\\ReplayMgr.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1496377918652,
-    "meta": 1496377921972,
+    "asset": 1496378417818,
+    "meta": 1496383800226,
     "relativePath": "scripts\\components\\MJGame.js"
   }
 }
