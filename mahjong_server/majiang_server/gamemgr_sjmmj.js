@@ -914,6 +914,7 @@ function calculateResult(game){
 
         //沈家门麻将积分逻辑
 
+
         //当前风圈 0123 东南西北
         var nowfeng = game.roomInfo.fengxiang;
         //当前坐位 0123 东南西北

@@ -200,27 +200,29 @@ function shuffle(game) {
     // }
 
     //抢杠胡
-    // var index = 0 ;
-    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
-    // var mjs1 = [0,1,2,3,4,5,6,7,8,13,14,15,15];//胡12
-    // var mjs2 = [0,1,2,3,4,5,6,7,8,12,12,14,15];//碰12
-    // var mjs3 = [0,1,2,3,4,5,6,7,8,13,16,16,16];//
-    // var mjs = [];
-    // for (var i = 0; i < 13 ; i++ ) {
-    //     mjs.push(mjs0[i]);
-    //     mjs.push(mjs1[i]);
-    //     mjs.push(mjs2[i]);
-    //     mjs.push(mjs3[i]);
-    // }
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(18);
-    // mjs.push(12);
-    // for ( var i =0 ; i < mjs.length ; i++) {
-    //     game.mahjongs[index] = mjs[i];
-    //     index++;
-    // }
+    var index = 0 ;
+    var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,2,2];//chu 2
+    var mjs1 = [0,1,3,4,5,6,7,8,9,9,9,10,10];//胡2
+    var mjs2 = [2,3,4,5,9,10,11,12,13,14,15,16,17];//hu2
+    var mjs3 = [2,2,3,3,9,10,11,12,13,14,15,16,17];//duidao2
+    var mjs = [];
+    for (var i = 0; i < 13 ; i++ ) {
+        mjs.push(mjs0[i]);
+        mjs.push(mjs1[i]);
+        mjs.push(mjs2[i]);
+        mjs.push(mjs3[i]);
+    }
+    mjs.push(18);
+    mjs.push(35);
+    mjs.push(18);
+    mjs.push(36);
+    mjs.push(12);
+    mjs.push(37);
+    mjs.push(12);
+    for ( var i =0 ; i < mjs.length ; i++) {
+        game.mahjongs[index] = mjs[i];
+        index++;
+    }
 
 }
 
@@ -893,10 +895,6 @@ function calculateResult(game){
         sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
         sd.tai = -1;//负一表示不是胡的人 没有台数
         if(sd.hued == true) {
-
-
-
-
             //通过胡数算法找到他的坎子们
             sd.kanzi = [];
             mjutils.canHu(sd);
@@ -1266,78 +1264,20 @@ function calculateResult(game){
             }
         }
     }
-    //TODO:抢杠胡 一炮多响
-    //三吃三碰：
-    // for(var i =0 ; i < game.gameSeats[huedindex].sanchisanpeng.length ; i++) {
-    //     //找到让我三吃三碰的人
-    //     if(game.gameSeats[huedindex].sanchisanpeng[i] >=3) {
-    //         var poorguy = game.gameSeats[i];
-    //         poorguy.actions.push({type:"sanchisanpeng"});
-    //         //如果自摸了，乘以3
-    //         if(game.gameSeats[huedindex].iszimo) {
-    //             if(!game.gameSeats[huedindex].gangshanghua) {
-    //                 var base = -poorguy.score;
-    //                 game.gameSeats[huedindex].score -= poorguy.score * 2;
-    //                 poorguy.score *= 3;
-    //                 //于此同时如果胡的人与其他人有三尺三碰的关系，则有关系的人都扣一倍积分
-    //                 for(var j = 0 ; j < 4 ; j++) {
-    //                     if(j != i && j != huedindex) {
-    //                         (game.gameSeats[j].sanchisanpeng[huedindex] >2
-    //                         || game.gameSeats[huedindex].sanchisanpeng[j] >2)
-    //                             ? game.gameSeats[j].score -= base : {} ;
-    //                     }
-    //
-    //                 }
-    //             }else{
-    //                 var base = -poorguy.score;
-    //                 game.gameSeats[huedindex].score -= poorguy.score * 5;
-    //                 poorguy.score *= 6;
-    //             }
-    //         }
-    //         //不是自摸的情况下
-    //         else{
-    //             //如果poorguy是放炮的人，他和胡的人积分乘以2
-    //             if (poorguy.seatIndex == game.fangpaoindex) {
-    //                 var base = -poorguy.score;
-    //                 poorguy.score *= 2;
-    //                 game.gameSeats[huedindex].score *=2;
-    //                 //于此同时如果胡的人与其他人有三尺三碰的关系，则有关系的人都扣一倍积分
-    //                 for(var j = 0 ; j < 4 ; j++) {
-    //                     if(j != i && j != huedindex) {
-    //                         if (game.gameSeats[j].sanchisanpeng[huedindex] >2
-    //                         || game.gameSeats[huedindex].sanchisanpeng[j] >2) {
-    //                             game.gameSeats[j].score -= base;
-    //                             game.gameSeats[huedindex].score+=base
-    //                         }
-    //
-    //                     }
-    //
-    //                 }
-    //             }
-    //             //如果poorguy不是放炮的人，胡的人分数乘2，poorguy扣除一倍积分
-    //             else{
-    //                 poorguy.score -= game.gameSeats[huedindex].score;
-    //                 game.gameSeats[huedindex].score *= 2;
-    //             }
-    //             //TODO: E：a让b吃或者碰3次，b让c吃或者碰3次，然后1.d把a打到了，那么就是d跟b各一杯  ，如果d打到了b，那么a,c,d各一倍，如果自摸那么就a，3倍，c，3倍 d，1倍
-    //
-    //
-    //         }
-    //     }
-    // }
 
     //记录所有人的三尺三碰状态
     for (var i = 0 ; i < 4 ; i ++) {
-        var nowseat = game.gameSeats[i];
+        var ns = game.gameSeats[i];
+        console.log(ns.sanchisanpeng);
         for (var j = 0 ; j < 4 ; j ++) {
-            if(nowseat.sanchisanpeng[j]>=3) {
+            if(ns.sanchisanpeng[j]>=3) {
                 var nowzuo = ( j - game.button + 4) % 4 ;
                 var str = "";
                 switch (nowzuo) {
-                    case 0 : nowseat.actions.push({type: "sanchisanpeng0"}); break;
-                    case 1 : nowseat.actions.push({type: "sanchisanpeng1"}); break;
-                    case 2 : nowseat.actions.push({type: "sanchisanpeng2"}); break;
-                    case 3 : nowseat.actions.push({type: "sanchisanpeng3"}); break;
+                    case 0 : ns.actions.push({type: "sanchisanpeng0"}); break;
+                    case 1 : ns.actions.push({type: "sanchisanpeng1"}); break;
+                    case 2 : ns.actions.push({type: "sanchisanpeng2"}); break;
+                    case 3 : ns.actions.push({type: "sanchisanpeng3"}); break;
                 }
 
             }
@@ -1347,7 +1287,7 @@ function calculateResult(game){
     var isYipaoduoxiang = false;
     //一炮多响
     //如果没人放炮则不计算一炮多响
-    if(game.fangpaoindex != -1) {
+    if(1) {
         //找到胡的牌
         var hupai = huseat.holds[huseat.holds.length - 1];
         //找到另外两个既不是放炮又不是胡的人
@@ -1358,7 +1298,8 @@ function calculateResult(game){
             }
         }
         //判断这两个人加上这个胡的牌是否能胡
-        for (var i = 0; i < 2; i++) {
+        for (var i = 0; i < 3; i++) {
+            if(!game.gameSeats[other[i]]) break;
             var seatData = game.gameSeats[other[i]];
             //加上胡的牌
             seatData.holds.push(hupai);
@@ -1391,9 +1332,9 @@ function calculateResult(game){
                 if (isQingYiSe(sd)) sd.qingyise = true;
                 if (isHunYiSe(sd)) sd.hunyise = true;
                 if (isGangShangHua(sd)) sd.gangshanghua = true;
-                if(isKan(sd)) {sd.kan = true;sd.paihu = false;}
-                if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
-                if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
+                if (isKan(sd)) {sd.kan = true;sd.paihu = false;}
+                if (isBian(sd)) {sd.bian = true;sd.paihu = false;}
+                if (isDan(sd)) {sd.dan = true;sd.paihu = false;}
                 if (isDuidao(sd)) sd.duidao = true;
 
                 //定海麻将 只有胡的人算台数
@@ -1537,65 +1478,37 @@ function calculateResult(game){
                     }
                 }
 
-                console.log("2 tai=" + TAI);
-
                 //春夏秋冬，梅兰竹菊坐着为一台
                 //春夏秋冬 或者 梅兰竹菊 全拿再加一台
                 var seasons = 0;
                 var flowers = 0;
-                sd.huas.forEach(function (pai) {
-                    switch (pai) {
-                        case 34:
-                            (nowseat == 0) ? TAI++ : {};
-                            seasons++;
-                            break;
-                        case 35:
-                            (nowseat == 1) ? TAI++ : {};
-                            seasons++;
-                            break;
-                        case 36:
-                            (nowseat == 2) ? TAI++ : {};
-                            seasons++;
-                            break;
-                        case 37:
-                            (nowseat == 3) ? TAI++ : {};
-                            seasons++;
-                            break;
-                        case 38:
-                            (nowseat == 0) ? TAI++ : {};
-                            flowers++;
-                            break;
-                        case 39:
-                            (nowseat == 1) ? TAI++ : {};
-                            flowers++;
-                            break;
-                        case 41:
-                            (nowseat == 2) ? TAI++ : {};
-                            flowers++;
-                            break;
-                        case 40:
-                            (nowseat == 3) ? TAI++ : {};
-                            flowers++;
-                            break;
+                sd.huas.forEach(function(pai){
+                    switch(pai) {
+                        case 34: {(nowseat == 0) ? TAI++ : {}; seasons++; break;}
+                        case 35: {(nowseat == 1) ? TAI++ : {}; seasons++; break;}
+                        case 36: {(nowseat == 2) ? TAI++ : {}; seasons++; break;}
+                        case 37: {(nowseat == 3) ? TAI++ : {}; seasons++; break;}
+                        case 38: {(nowseat == 0) ? TAI++ : {}; flowers++; break;}
+                        case 39: {(nowseat == 1) ? TAI++ : {}; flowers++; break;}
+                        case 41: {(nowseat == 2) ? TAI++ : {}; flowers++; break;}
+                        case 40: {(nowseat == 3) ? TAI++ : {}; flowers++; break;}
                     }
                 });
-                if (seasons > 3 || flowers > 3) TAI++;
-
-                console.log("3 tai=" + TAI);
+                if(seasons > 3 || flowers > 3) TAI++;
 
 
                 //坎边单排胡
-                if (sd.duidao || sd.kan || sd.dan || sd.bian || sd.paihu) TAI++;
+                if(sd.duidao || sd.kan || sd.dan || sd.bian || sd.paihu) TAI++;
                 //自摸 一台
-                if (sd.iszimo) TAI++;
+                if(sd.iszimo) TAI++;
                 //杠开 一台
-                if (sd.gangshanghua) TAI++;
+                if(sd.gangshanghua) TAI++;
                 //对对胡
-                if (sd.duiduihu) TAI++;
+                if(sd.duiduihu) TAI+=2;
                 //清一色
-                if (sd.qingyise) TAI += 4;
+                if(sd.qingyise) TAI += 4;
                 //混一色
-                if (sd.hunyise) TAI++;
+                if(sd.hunyise) TAI +=2;
 
                 console.log("4 tai=" + TAI);
 
