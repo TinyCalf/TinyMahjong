@@ -200,29 +200,29 @@ function shuffle(game) {
     // }
 
     //抢杠胡
-    var index = 0 ;
-    var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,2,2];//chu 2
-    var mjs1 = [0,1,3,4,5,6,7,8,9,9,9,10,10];//胡2
-    var mjs2 = [2,3,4,5,9,10,11,12,13,14,15,16,17];//hu2
-    var mjs3 = [2,2,3,3,9,10,11,12,13,14,15,16,17];//duidao2
-    var mjs = [];
-    for (var i = 0; i < 13 ; i++ ) {
-        mjs.push(mjs0[i]);
-        mjs.push(mjs1[i]);
-        mjs.push(mjs2[i]);
-        mjs.push(mjs3[i]);
-    }
-    mjs.push(18);
-    mjs.push(35);
-    mjs.push(18);
-    mjs.push(36);
-    mjs.push(12);
-    mjs.push(37);
-    mjs.push(12);
-    for ( var i =0 ; i < mjs.length ; i++) {
-        game.mahjongs[index] = mjs[i];
-        index++;
-    }
+    // var index = 0 ;
+    // var mjs0 = [0,1,2,3,4,5,6,7,8,12,12,2,2];//chu 2
+    // var mjs1 = [0,1,3,4,5,6,7,8,9,9,9,10,10];//胡2
+    // var mjs2 = [2,3,4,5,9,10,11,12,13,14,15,16,17];//hu2
+    // var mjs3 = [2,2,3,3,9,10,11,12,13,14,15,16,17];//duidao2
+    // var mjs = [];
+    // for (var i = 0; i < 13 ; i++ ) {
+    //     mjs.push(mjs0[i]);
+    //     mjs.push(mjs1[i]);
+    //     mjs.push(mjs2[i]);
+    //     mjs.push(mjs3[i]);
+    // }
+    // mjs.push(18);
+    // mjs.push(35);
+    // mjs.push(18);
+    // mjs.push(36);
+    // mjs.push(12);
+    // mjs.push(37);
+    // mjs.push(12);
+    // for ( var i =0 ; i < mjs.length ; i++) {
+    //     game.mahjongs[index] = mjs[i];
+    //     index++;
+    // }
 
 }
 
@@ -1090,7 +1090,7 @@ function calculateResult(game){
                 case 3: huseat.score = 24;  break;
                 case 4: huseat.score = 30;  break;
             }
-            if(!sd.isQiangGangHu) {
+            //if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score / 3;
                 for (var n = 0; n < seats.length; n++) {
@@ -1098,10 +1098,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
+            // }else{
+            //     var s = huseat.score;
+            //     seats[beiqianggangindex].score -= s;
+            // }
         }
         else{
             switch(huseat.tai) {
@@ -1136,7 +1136,7 @@ function calculateResult(game){
                 case 3: huseat.score = 60;  break;
                 case 4: huseat.score = 75;  break;
             }
-            if(!sd.isQiangGangHu) {
+            //if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1144,10 +1144,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
+            // }else{
+            //     var s = huseat.score;
+            //     seats[beiqianggangindex].score -= s;
+            // }
         }
         else{
             switch(huseat.tai) {
@@ -1182,7 +1182,7 @@ function calculateResult(game){
                 case 3: huseat.score = 120;  break;
                 case 4: huseat.score = 150;  break;
             }
-            if(!sd.isQiangGangHu) {
+            //if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1190,10 +1190,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
+            // }else{
+            //     var s = huseat.score;
+            //     seats[beiqianggangindex].score -= s;
+            // }
         }
         else{
             switch(huseat.tai) {
@@ -1228,7 +1228,7 @@ function calculateResult(game){
                 case 3: huseat.score = 210 ;  break;
                 case 4: huseat.score = 360 ;  break;
             }
-            if(!sd.isQiangGangHu) {
+            //if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1236,10 +1236,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
+            // }else{
+            //     var s = huseat.score;
+            //     seats[beiqianggangindex].score -= s;
+            // }
         }
         else{
             switch(huseat.tai) {
@@ -1673,6 +1673,9 @@ function calculateResult(game){
                     }else if(ns.iszimo){
                         ns.score += base[i] * 3;
                         poorguy.score -= base[i] * 3;
+                    }else if(ns.isQiangGangHu) {
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
                     }else{
                         ns.score += base[i];
                         poorguy.score -= base[i];
@@ -1688,6 +1691,9 @@ function calculateResult(game){
                     }else if(ns.iszimo){
                         ns.score += base[i] * 3;
                         poorguy.score -= base[i] * 3;
+                    }else if(ns.isQiangGangHu) {
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
                     }else{
                         ns.score += base[i];
                         poorguy.score -= base[i];
@@ -1696,7 +1702,19 @@ function calculateResult(game){
             }
         }
     }
-    // }
+
+    //抢杠胡
+    if(beiqianggangindex>=0) {
+        var bqg = game.gameSeats[beiqianggangindex];
+        for (var i = 0; i < 4; i++) {
+            var ns = game.gameSeats[i];
+            if (ns.hued) {
+                bqg.score -= base[i] * 4;
+                ns.score += base[i] * 4;
+            }
+        }
+    }
+
 
 }
 
