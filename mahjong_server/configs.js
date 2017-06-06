@@ -1,5 +1,5 @@
 ﻿//local
-var HALL_IP = "192.168.0.103";
+var HALL_IP = "192.168.0.115";
 //dev server
 //var HALL_IP = "139.219.224.143";
 var HALL_CLIENT_PORT = 9001;

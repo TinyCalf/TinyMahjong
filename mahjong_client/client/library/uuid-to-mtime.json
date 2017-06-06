@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1496136958507,
-    "meta": 1496219381188,
+    "asset": 1496722895039,
+    "meta": 1496722895198,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -2790,8 +2790,8 @@
     "relativePath": "scripts\\components\\Folds.js"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1495074480049,
-    "meta": 1496219387014,
+    "asset": 1496722926254,
+    "meta": 1496722926630,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "2b08df29-9b45-410c-b625-64875f2ee3d2": {
@@ -2925,8 +2925,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1496137694644,
-    "meta": 1496219388777,
+    "asset": 1496721599055,
+    "meta": 1496721599557,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {

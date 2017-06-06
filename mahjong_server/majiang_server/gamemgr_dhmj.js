@@ -13,7 +13,7 @@ var ACTION_GANG = 4;
 var ACTION_CHI = 7;
 var ACTION_HU = 5;
 var ACTION_ZIMO = 6;
-var ACTION_BUHUA = 8
+var ACTION_BUHUA = 8;
 
 var gameSeatsOfUsers = {};
 
@@ -1279,7 +1279,6 @@ function calculateResult(game){
                     case 2 : ns.actions.push({type: "sanchisanpeng2"}); break;
                     case 3 : ns.actions.push({type: "sanchisanpeng3"}); break;
                 }
-
             }
         }
     }
@@ -1287,7 +1286,7 @@ function calculateResult(game){
     var isYipaoduoxiang = false;
     //一炮多响
     //如果没人放炮则不计算一炮多响
-    if(1) {
+    if(!huseat.iszimo) {
         //找到胡的牌
         var hupai = huseat.holds[huseat.holds.length - 1];
         //找到另外两个既不是放炮又不是胡的人
@@ -1295,10 +1294,11 @@ function calculateResult(game){
         for (var i = 0; i < 4; i++) {
             if (i != huedindex && i != game.fangpaoindex) {
                 other.push(i);
+
             }
         }
         //判断这两个人加上这个胡的牌是否能胡
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 4; i++) {
             if(!game.gameSeats[other[i]]) break;
             var seatData = game.gameSeats[other[i]];
             //加上胡的牌
@@ -1339,13 +1339,12 @@ function calculateResult(game){
 
                 //定海麻将 只有胡的人算台数
                 var TAI = 0;
-                //排胡为一台
-                if (sd.paihu) TAI++;
-                console.log("1 tai=" + TAI);
                 //当前风圈 0123 东南西北
                 var nowfeng = game.roomInfo.fengxiang;
                 // 0123 东南西北
-                var nowseat = (i + game.button) % 4;
+                var nowseat = (seatData.seatIndex + game.button) % 4;
+                console.log("seatindex"+i);
+                console.log(nowseat);
                 //中发白东南西北碰出杠出暗刻为一台
                 //东、南、西、北坐着碰出杠出暗刻加一台
                 sd.pengs.forEach(function (pai) {
@@ -1510,8 +1509,6 @@ function calculateResult(game){
                 //混一色
                 if(sd.hunyise) TAI +=2;
 
-                console.log("4 tai=" + TAI);
-
                 //最多四台
                 if (TAI > 4) TAI = 4;
                 sd.tai = TAI;
@@ -1613,8 +1610,6 @@ function calculateResult(game){
                     }
                 }
 
-
-
             } else {
                 seatData.holds.pop();
                 seatData.countMap[hupai]--;
@@ -1622,73 +1617,86 @@ function calculateResult(game){
         }
     }
 
-    if(!isYipaoduoxiang) {
-        //三吃三碰
-        if (huseat.iszimo) {
+    // if(!isYipaoduoxiang) {
+    //     //三吃三碰
+    //     if (huseat.iszimo) {
+    //
+    //         console.log("自摸");
+    //
+    //         var base = huseat.score / 3;
+    //         //所有与胡的人有三尺三碰关系的人 都加三倍
+    //         for (var i = 0; i < 4; i++) {
+    //             if (i != huedindex) {
+    //                 if (seats[i].sanchisanpeng[huedindex] > 2
+    //                     || seats[huedindex].sanchisanpeng[i] > 2) {
+    //                     if (huseat.gangshanghua) {
+    //                         huseat.score += base * 5;
+    //                         seats[i].score -= base * 5;
+    //                     } else {
+    //                         huseat.score += base * 2;
+    //                         seats[i].score -= base * 2;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     } else {
+    //         var base = huseat.score;
+    //         //所有与胡的人有三尺三碰关系的人 都扣一倍分数
+    //         for (var i = 0; i < 4; i++) {
+    //             if (i != huedindex) {
+    //                 if (seats[i].sanchisanpeng[huedindex] > 2
+    //                     || seats[huedindex].sanchisanpeng[i] > 2) {
+    //                     huseat.score += base;
+    //                     seats[i].score -= base;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // else {
 
-            console.log("自摸");
-
-            var base = huseat.score / 3;
-            //所有与胡的人有三尺三碰关系的人 都加三倍
-            for (var i = 0; i < 4; i++) {
-                if (i != huedindex) {
-                    if (seats[i].sanchisanpeng[huedindex] > 2
-                        || seats[huedindex].sanchisanpeng[i] > 2) {
-                        if (huseat.gangshanghua) {
-                            huseat.score += base * 5;
-                            seats[i].score -= base * 5;
-                        } else {
-                            huseat.score += base * 2;
-                            seats[i].score -= base * 2;
-                        }
+    //计算三尺三碰
+    var base = [];
+    base[0] = game.gameSeats[0].score;
+    base[1] = game.gameSeats[1].score;
+    base[2] = game.gameSeats[2].score;
+    base[3] = game.gameSeats[3].score;
+    for(var i = 0 ; i < 4 ; i++) {
+        var ns = game.gameSeats[i];
+        if(ns.hued) {
+            for ( var j = 0 ; j < 4 ; j++) {
+                if(ns.sanchisanpeng[j]>2){
+                    var poorguy = game.gameSeats[j];
+                    if(ns.gangshanghua){
+                        ns.score += base[i] * 6;
+                        poorguy.score -= base[i] * 6;
+                    }else if(ns.iszimo){
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
+                    }else{
+                        ns.score += base[i];
+                        poorguy.score -= base[i];
                     }
                 }
             }
-        } else {
-            var base = huseat.score;
-            //所有与胡的人有三尺三碰关系的人 都扣一倍分数
-            for (var i = 0; i < 4; i++) {
-                if (i != huedindex) {
-                    if (seats[i].sanchisanpeng[huedindex] > 2
-                        || seats[huedindex].sanchisanpeng[i] > 2) {
-                        huseat.score += base;
-                        seats[i].score -= base;
+            for ( var j = 0 ; j < 4 ; j++) {
+                if(game.gameSeats[j].sanchisanpeng[i]>2 && !game.gameSeats[i].hued){
+                    var poorguy = game.gameSeats[j];
+                    if(ns.gangshanghua){
+                        ns.score += base[i] * 6;
+                        poorguy.score -= base[i] * 6;
+                    }else if(ns.iszimo){
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
+                    }else{
+                        ns.score += base[i];
+                        poorguy.score -= base[i];
                     }
                 }
             }
         }
     }
-    else {
-        var base = [];
-        base[0] = game.gameSeats[0].score;
-        base[1] = game.gameSeats[1].score;
-        base[2] = game.gameSeats[2].score;
-        base[3] = game.gameSeats[3].score;
-        for(var i = 0 ; i < 4 ; i++) {
-            if(i!= game.fangpaoindex && i!= huedindex && game.gameSeats[i].hued) {
-                for ( var j = 0 ; j < 4 ; j++) {
-                    if(game.gameSeats[i].sanchisanpeng[j]>2
-                    && j!=game.fangpaoindex){
-                        game.gameSeats[i].score += base[i];
-                        game.gameSeats[game.fangpaoindex].score -= base[i];
-                        break;
-                    }
-                }
-                for ( var j = 0 ; j < 4 ; j++) {
-                    if(game.gameSeats[i].sanchisanpeng[j]>2
-                        && j==game.fangpaoindex){
-                        game.gameSeats[i].score += base[i];
-                        game.gameSeats[game.fangpaoindex].score -= base[i];
-                        break;
-                    }
-                }
-            }
-        }
-    }
-
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        console.log(game.gameSeats[i].score);
-    }
+    // }
 
 }
 
