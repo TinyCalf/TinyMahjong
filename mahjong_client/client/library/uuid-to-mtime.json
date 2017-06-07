@@ -430,8 +430,8 @@
     "relativePath": "resources\\prefabs\\userinfo.prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1496378417815,
-    "meta": 1496383797941,
+    "asset": 1496751233961,
+    "meta": 1496751423789,
     "relativePath": "resources\\scenes"
   },
   "d5635cb0-01fd-4876-95ea-dd6b7cd3f1b1": {
@@ -440,8 +440,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1496711017831,
-    "meta": 1496711017893,
+    "asset": 1496751233962,
+    "meta": 1496751424553,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -460,8 +460,8 @@
     "relativePath": "resources\\scenes\\login.fire"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1496722895039,
-    "meta": 1496722895198,
+    "asset": 1496751612657,
+    "meta": 1496751612850,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
@@ -2725,8 +2725,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1496378417817,
-    "meta": 1496383797944,
+    "asset": 1496751233962,
+    "meta": 1496751423790,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2750,8 +2750,8 @@
     "relativePath": "scripts\\AudioMgr.js"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1496378417819,
-    "meta": 1496383797946,
+    "asset": 1496751233963,
+    "meta": 1496751423791,
     "relativePath": "scripts\\components"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
@@ -2790,8 +2790,8 @@
     "relativePath": "scripts\\components\\Folds.js"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1496722926254,
-    "meta": 1496722926630,
+    "asset": 1496751233963,
+    "meta": 1496751424500,
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "2b08df29-9b45-410c-b625-64875f2ee3d2": {
@@ -2925,8 +2925,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1496721599055,
-    "meta": 1496721599557,
+    "asset": 1496751602252,
+    "meta": 1496751602368,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {

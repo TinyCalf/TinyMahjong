@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
-// scripts/components/MJGame.js
+// scripts\components\MJGame.js
 
 cc.Class({
     "extends": cc.Component,
@@ -75,7 +75,11 @@ cc.Class({
         var gameChild = this.node.getChildByName("game");
 
         this._mjcount = gameChild.getChildByName('mjcount').getComponent(cc.Label);
-        this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
+        if (this._mjcount > 0) {
+            this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
+        } else {
+            this._mjcount.string = "";
+        }
         this._gamecount = gameChild.getChildByName('gamecount').getComponent(cc.Label);
         switch (cc.vv.gameNetMgr.fengxiang) {
             case 0:
@@ -86,6 +90,8 @@ cc.Class({
                 this._gamecount.string = "西风圈";break;
             case 3:
                 this._gamecount.string = "北风圈";break;
+            default:
+                this._gamecount.string = "";break;
         }
 
         this._gametype = gameChild.getChildByName('gametype');

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'facfdljnx5F+rFDAq5Qbmqa', 'GameOver');
-// scripts/components/GameOver.js
+// scripts\components\GameOver.js
 
 cc.Class({
     "extends": cc.Component,
@@ -131,6 +131,7 @@ cc.Class({
             var actionArr = [];
             var is7pairs = false;
             var ischadajiao = false;
+
             for (var j = 0; j < userData.actions.length; ++j) {
                 var ac = userData.actions[j];
                 if (ac.type == "zimo" || ac.type == "ganghua" || ac.type == "dianganghua" || ac.type == "hu" || ac.type == "gangpaohu" || ac.type == "qiangganghu" || ac.type == "chadajiao") {
@@ -497,6 +498,8 @@ cc.Class({
             }
 
             if (hued) {
+                this._gameover.getChildByName("result_list").getChildByName("s" + (i + 1)).getChildByName("hu").active = true;
+
                 if (userData.qingyise) {
                     actionArr.push("清一色");
                 }
@@ -564,14 +567,16 @@ cc.Class({
                 if (userData.duidao) {
                     actionArr.push("对倒");
                 }
+            } else {
+                this._gameover.getChildByName("result_list").getChildByName("s" + (i + 1)).getChildByName("hu").active = false;
             }
 
-            for (var o = 0; o < 3; ++o) {
-                seatView.hu.children[o].active = false;
-            }
-            if (userData.huorder >= 0) {
-                seatView.hu.children[userData.huorder].active = true;
-            }
+            // for(var o = 0; o < 3;++o){
+            //     seatView.hu.children[o].active = false;   
+            // }
+            // if(userData.huorder >= 0){
+            //     seatView.hu.children[userData.huorder].active = true;   
+            // }
 
             seatView.username.string = cc.vv.gameNetMgr.seats[i].name;
             seatView.zhuang.active = cc.vv.gameNetMgr.button == i;

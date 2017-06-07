@@ -1657,10 +1657,10 @@ function calculateResult(game){
 
     //计算三尺三碰
     var base = [];
-    base[0] = game.gameSeats[0].score;
-    base[1] = game.gameSeats[1].score;
-    base[2] = game.gameSeats[2].score;
-    base[3] = game.gameSeats[3].score;
+    (game.gameSeats[0].iszimo) ? base[0] = game.gameSeats[0].score/3 : base[0] = game.gameSeats[0].score;
+    (game.gameSeats[1].iszimo) ? base[1] = game.gameSeats[1].score/3 : base[1] = game.gameSeats[1].score;
+    (game.gameSeats[2].iszimo) ? base[2] = game.gameSeats[2].score/3 : base[2] = game.gameSeats[2].score;
+    (game.gameSeats[3].iszimo) ? base[3] = game.gameSeats[3].score/3 : base[3] = game.gameSeats[3].score;
     for(var i = 0 ; i < 4 ; i++) {
         var ns = game.gameSeats[i];
         if(ns.hued) {
@@ -1668,14 +1668,14 @@ function calculateResult(game){
                 if(ns.sanchisanpeng[j]>2){
                     var poorguy = game.gameSeats[j];
                     if(ns.gangshanghua){
-                        ns.score += base[i] * 6;
-                        poorguy.score -= base[i] * 6;
+                        ns.score += base[i] * 5;
+                        poorguy.score -= base[i] * 5;
                     }else if(ns.iszimo){
-                        ns.score += base[i] * 3;
-                        poorguy.score -= base[i] * 3;
+                        ns.score += base[i] * 2;
+                        poorguy.score -= base[i] * 2;
                     }else if(ns.isQiangGangHu) {
-                        ns.score += base[i] * 3;
-                        poorguy.score -= base[i] * 3;
+                        ns.score += base[i] * 2;
+                        poorguy.score -= base[i] * 2;
                     }else{
                         ns.score += base[i];
                         poorguy.score -= base[i];
@@ -1683,17 +1683,17 @@ function calculateResult(game){
                 }
             }
             for ( var j = 0 ; j < 4 ; j++) {
-                if(game.gameSeats[j].sanchisanpeng[i]>2 && !game.gameSeats[i].hued){
+                if(game.gameSeats[j].sanchisanpeng[i]>2){
                     var poorguy = game.gameSeats[j];
                     if(ns.gangshanghua){
-                        ns.score += base[i] * 6;
-                        poorguy.score -= base[i] * 6;
+                        ns.score += base[i] * 5;
+                        poorguy.score -= base[i] * 5;
                     }else if(ns.iszimo){
-                        ns.score += base[i] * 3;
-                        poorguy.score -= base[i] * 3;
+                        ns.score += base[i] * 2;
+                        poorguy.score -= base[i] * 2;
                     }else if(ns.isQiangGangHu) {
-                        ns.score += base[i] * 3;
-                        poorguy.score -= base[i] * 3;
+                        ns.score += base[i] * 2;
+                        poorguy.score -= base[i] * 2;
                     }else{
                         ns.score += base[i];
                         poorguy.score -= base[i];

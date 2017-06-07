@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'bc0d2VLgL1Avo166tHLsjCJ', 'PopupMgr');
-// scripts/components/PopupMgr.js
+// scripts\components\PopupMgr.js
 
 cc.Class({
     "extends": cc.Component,

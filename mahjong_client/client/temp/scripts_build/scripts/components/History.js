@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '4d7bci0LUxMT6MJKXJDj89w', 'History');
-// scripts/components/History.js
+// scripts\components\History.js
 
 cc.Class({
     "extends": cc.Component,
@@ -208,25 +208,23 @@ cc.Class({
     },
 
     onViewItemClicked: function onViewItemClicked(event) {
-        // var idx = event.target.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);     
-        // }
+        var idx = event.target.idx;
+        console.log(idx);
+        if (this._curRoomInfo == null) {
+            this.getGameListOfRoom(idx);
+        } else {
+            this.getDetailOfGame(idx + 1);
+        }
     },
 
     onBtnOpClicked: function onBtnOpClicked(event) {
-        // var idx = event.target.parent.idx;
-        // console.log(idx);
-        // if(this._curRoomInfo == null){
-        //     this.getGameListOfRoom(idx);
-        // }
-        // else{
-        //     this.getDetailOfGame(idx);     
-        // }
+        var idx = event.target.parent.idx;
+        console.log(idx);
+        if (this._curRoomInfo == null) {
+            this.getGameListOfRoom(idx);
+        } else {
+            this.getDetailOfGame(idx + 1);
+        }
     }
 
 });
