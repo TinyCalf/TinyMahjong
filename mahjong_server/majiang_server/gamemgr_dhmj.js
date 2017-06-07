@@ -1039,7 +1039,13 @@ function calculateResult(game){
 
 
             //坎边单排胡
-            if(sd.duidao || sd.kan || sd.dan || sd.bian || sd.paihu) TAI++;
+            if(sd.duidao || sd.kan || sd.dan || sd.bian ) TAI++;
+            //
+            if(TAI<1 && sd.paihu){
+                TAI++;
+            }else if(TAI>0 && sd.paihu){
+                sd.paihu = false;
+            }
             //自摸 一台
             if(sd.iszimo) TAI++;
             //杠开 一台
@@ -1090,7 +1096,7 @@ function calculateResult(game){
                 case 3: huseat.score = 24;  break;
                 case 4: huseat.score = 30;  break;
             }
-            //if(!sd.isQiangGangHu) {
+            if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score / 3;
                 for (var n = 0; n < seats.length; n++) {
@@ -1098,10 +1104,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            // }else{
-            //     var s = huseat.score;
-            //     seats[beiqianggangindex].score -= s;
-            // }
+            }else{
+                var s = huseat.score;
+                seats[beiqianggangindex].score -= s;
+            }
         }
         else{
             switch(huseat.tai) {
@@ -1136,7 +1142,7 @@ function calculateResult(game){
                 case 3: huseat.score = 60;  break;
                 case 4: huseat.score = 75;  break;
             }
-            //if(!sd.isQiangGangHu) {
+            if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1144,10 +1150,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            // }else{
-            //     var s = huseat.score;
-            //     seats[beiqianggangindex].score -= s;
-            // }
+            }else{
+                var s = huseat.score;
+                seats[beiqianggangindex].score -= s;
+            }
         }
         else{
             switch(huseat.tai) {
@@ -1176,13 +1182,13 @@ function calculateResult(game){
     else if(game.conf.jiesuan==2) {
         if(huseat.iszimo) {
             switch(huseat.tai) {
-                case 0: huseat.score = 0 ;  break;
+                case 0: huseat.score = 0  ;  break;
                 case 1: huseat.score = 60 ;  break;
                 case 2: huseat.score = 90 ;  break;
                 case 3: huseat.score = 120;  break;
                 case 4: huseat.score = 150;  break;
             }
-            //if(!sd.isQiangGangHu) {
+            if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1190,10 +1196,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            // }else{
-            //     var s = huseat.score;
-            //     seats[beiqianggangindex].score -= s;
-            // }
+            }else{
+                var s = huseat.score;
+                seats[beiqianggangindex].score -= s;
+            }
         }
         else{
             switch(huseat.tai) {
@@ -1228,7 +1234,7 @@ function calculateResult(game){
                 case 3: huseat.score = 210 ;  break;
                 case 4: huseat.score = 360 ;  break;
             }
-            //if(!sd.isQiangGangHu) {
+            if(!sd.isQiangGangHu) {
                 //计算其余人的分数
                 var s = huseat.score/3;
                 for (var n = 0 ; n < seats.length ; n++) {
@@ -1236,10 +1242,10 @@ function calculateResult(game){
                         seats[n].score -= s;
                     }
                 }
-            // }else{
-            //     var s = huseat.score;
-            //     seats[beiqianggangindex].score -= s;
-            // }
+            }else{
+                var s = huseat.score;
+                seats[beiqianggangindex].score -= s;
+            }
         }
         else{
             switch(huseat.tai) {
@@ -1286,24 +1292,28 @@ function calculateResult(game){
     var isYipaoduoxiang = false;
     //一炮多响
     //如果没人放炮则不计算一炮多响
-    if(!huseat.iszimo) {
+    if(!huseat.iszimo || beiqianggangindex!= -1) {
         //找到胡的牌
         var hupai = huseat.holds[huseat.holds.length - 1];
         //找到另外两个既不是放炮又不是胡的人
         var other = [];
         for (var i = 0; i < 4; i++) {
-            if (i != huedindex && i != game.fangpaoindex) {
+            if (i != huedindex && i != game.fangpaoindex && i!=beiqianggangindex) {
                 other.push(i);
 
             }
         }
         //判断这两个人加上这个胡的牌是否能胡
+        console.log("判断两人是否能胡");
+        console.log(other);
         for (var i = 0; i < 4; i++) {
             if(!game.gameSeats[other[i]]) break;
+            if(other[i]==huedindex) break;
             var seatData = game.gameSeats[other[i]];
             //加上胡的牌
             seatData.holds.push(hupai);
             seatData.countMap[hupai]++;
+            console.log(seatData.holds);
             //判断是否能胡
             if (mjutils.canHu(seatData)) {
                 seatData.actions.push({type: "hu"});
@@ -1497,7 +1507,14 @@ function calculateResult(game){
 
 
                 //坎边单排胡
-                if(sd.duidao || sd.kan || sd.dan || sd.bian || sd.paihu) TAI++;
+                if(sd.duidao || sd.kan || sd.dan || sd.bian) TAI++;
+
+                //
+                if(TAI<1 && sd.paihu){
+                    TAI++;
+                }else if(TAI>0 && sd.paihu){
+                    sd.paihu = false;
+                }
                 //自摸 一台
                 if(sd.iszimo) TAI++;
                 //杠开 一台
@@ -1526,18 +1543,27 @@ function calculateResult(game){
                         case 4: huseat.score += 20; break;
                     }
                     for (var n = 0 ; n < seats.length ; n++) {
-                            if( seats[n].hued != true) {
-                                if( game.fangpaoindex == n ) {
-                                    switch(huseat.tai) {
-                                        case 0:  seats[n].score -= 6 ; break;
-                                        case 1: seats[n].score -= 8 ; break;
-                                        case 2: seats[n].score -= 10 ; break;
-                                        case 3: seats[n].score -= 14 ; break;
-                                        case 4: seats[n].score -= 20; break;
-                                    }
+                        if( seats[n].hued != true) {
+                            if( game.fangpaoindex == n ) {
+                                switch(huseat.tai) {
+                                    case 0:  seats[n].score -= 6 ; break;
+                                    case 1: seats[n].score -= 8 ; break;
+                                    case 2: seats[n].score -= 10 ; break;
+                                    case 3: seats[n].score -= 14 ; break;
+                                    case 4: seats[n].score -= 20; break;
                                 }
                             }
                         }
+                        if( beiqianggangindex == n ) {
+                            switch(huseat.tai) {
+                                case 0: seats[n].score -= 6 ; break;
+                                case 1: seats[n].score -= 8 ; break;
+                                case 2: seats[n].score -= 10 ; break;
+                                case 3: seats[n].score -= 14 ; break;
+                                case 4: seats[n].score -= 20; break;
+                            }
+                        }
+                    }
 
                 }
                 //25算法
@@ -1553,7 +1579,16 @@ function calculateResult(game){
                             if( seats[n].hued != true) {
                                 if( game.fangpaoindex == n ) {
                                     switch(huseat.tai) {
-                                        case 0:  seats[n].score -= 10 ; break;
+                                        case 0: seats[n].score -= 10 ; break;
+                                        case 1: seats[n].score -= 15 ; break;
+                                        case 2: seats[n].score -= 25 ; break;
+                                        case 3: seats[n].score -= 30 ; break;
+                                        case 4: seats[n].score -= 50; break;
+                                    }
+                                }
+                                if( beiqianggangindex == n ) {
+                                    switch(huseat.tai) {
+                                        case 0: seats[n].score -= 10 ; break;
                                         case 1: seats[n].score -= 15 ; break;
                                         case 2: seats[n].score -= 25 ; break;
                                         case 3: seats[n].score -= 30 ; break;
@@ -1583,6 +1618,15 @@ function calculateResult(game){
                                         case 4: seats[n].score -= 100; break;
                                     }
                                 }
+                                if( beiqianggangindex == n ) {
+                                    switch(huseat.tai) {
+                                        case 0: seats[n].score -= 30 ; break;
+                                        case 1: seats[n].score -= 40 ; break;
+                                        case 2: seats[n].score -= 50 ; break;
+                                        case 3: seats[n].score -= 70 ; break;
+                                        case 4: seats[n].score -= 100; break;
+                                    }
+                                }
                             }
                         }
                 }
@@ -1598,6 +1642,15 @@ function calculateResult(game){
                     for (var n = 0 ; n < seats.length ; n++) {
                         if( seats[n].hued != true) {
                             if( game.fangpaoindex == n ) {
+                                switch(huseat.tai) {
+                                    case 0:  seats[n].score -= 60 ; break;
+                                    case 1: seats[n].score -= 70 ; break;
+                                    case 2: seats[n].score -= 100 ; break;
+                                    case 3: seats[n].score -= 140 ; break;
+                                    case 4: seats[n].score -= 230; break;
+                                }
+                            }
+                            if(beiqianggangindex == n ) {
                                 switch(huseat.tai) {
                                     case 0:  seats[n].score -= 60 ; break;
                                     case 1: seats[n].score -= 70 ; break;
@@ -1668,15 +1721,17 @@ function calculateResult(game){
                 if(ns.sanchisanpeng[j]>2){
                     var poorguy = game.gameSeats[j];
                     if(ns.gangshanghua){
-                        ns.score += base[i] * 5;
-                        poorguy.score -= base[i] * 5;
+                        ns.score += base[i] * 6;
+                        poorguy.score -= base[i] * 6;
                     }else if(ns.iszimo){
-                        ns.score += base[i] * 2;
-                        poorguy.score -= base[i] * 2;
-                    }else if(ns.isQiangGangHu) {
-                        ns.score += base[i] * 2;
-                        poorguy.score -= base[i] * 2;
-                    }else{
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
+                    }
+                    // else if(ns.isQiangGangHu) {
+                    //     ns.score += base[i] * 2;
+                    //     poorguy.score -= base[i] * 2;
+                    // }
+                    else{
                         ns.score += base[i];
                         poorguy.score -= base[i];
                     }
@@ -1689,12 +1744,14 @@ function calculateResult(game){
                         ns.score += base[i] * 5;
                         poorguy.score -= base[i] * 5;
                     }else if(ns.iszimo){
-                        ns.score += base[i] * 2;
-                        poorguy.score -= base[i] * 2;
-                    }else if(ns.isQiangGangHu) {
-                        ns.score += base[i] * 2;
-                        poorguy.score -= base[i] * 2;
-                    }else{
+                        ns.score += base[i] * 3;
+                        poorguy.score -= base[i] * 3;
+                    }
+                    // else if(ns.isQiangGangHu) {
+                    //     ns.score += base[i] * 2;
+                    //     poorguy.score -= base[i] * 2;
+                    // }
+                    else{
                         ns.score += base[i];
                         poorguy.score -= base[i];
                     }
@@ -1709,8 +1766,8 @@ function calculateResult(game){
         for (var i = 0; i < 4; i++) {
             var ns = game.gameSeats[i];
             if (ns.hued) {
-                bqg.score -= base[i] * 4;
-                ns.score += base[i] * 4;
+                bqg.score -= base[i] * 2;
+                ns.score += base[i] * 2;
             }
         }
     }
