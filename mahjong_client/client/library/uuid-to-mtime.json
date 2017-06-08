@@ -3044,26 +3044,6 @@
     "meta": 1496219382724,
     "relativePath": "resources\\textures\\MJ\\right\\Z_right1.png"
   },
-  "cd29c45b-8029-40d1-82c6-592c23b7d3cb": {
-    "asset": 1496059827484,
-    "meta": 1496219382627,
-    "relativePath": "resources\\textures\\MJ\\left\\Z_left.png"
-  },
-  "11e1e0e7-8f29-4f20-b8c3-63a1df760681": {
-    "asset": 1496059827448,
-    "meta": 1496219382596,
-    "relativePath": "resources\\textures\\MJ\\bottom\\Z_bottom.png"
-  },
-  "059ebe81-c575-49ff-8a71-3d899278040c": {
-    "asset": 1496059827577,
-    "meta": 1496219382721,
-    "relativePath": "resources\\textures\\MJ\\right\\Z_right.png"
-  },
-  "eaf07895-ebbe-4eb1-88e4-c7aa675d15b4": {
-    "asset": 1496059827511,
-    "meta": 1496219382698,
-    "relativePath": "resources\\textures\\MJ\\my\\Z_my.png"
-  },
   "b0f6afff-b6af-44fa-ada1-b1a30e557c53": {
     "asset": 1496059827586,
     "meta": 1496219381715,
@@ -3133,5 +3113,25 @@
     "asset": 1496378417818,
     "meta": 1496383800226,
     "relativePath": "scripts\\components\\MJGame.js"
+  },
+  "cd29c45b-8029-40d1-82c6-592c23b7d3cb": {
+    "asset": 1496888140698,
+    "meta": 1496918852805,
+    "relativePath": "resources\\textures\\MJ\\left\\Z_left.png"
+  },
+  "11e1e0e7-8f29-4f20-b8c3-63a1df760681": {
+    "asset": 1496888229339,
+    "meta": 1496918852806,
+    "relativePath": "resources\\textures\\MJ\\bottom\\Z_bottom.png"
+  },
+  "059ebe81-c575-49ff-8a71-3d899278040c": {
+    "asset": 1496888067837,
+    "meta": 1496918852820,
+    "relativePath": "resources\\textures\\MJ\\right\\Z_right.png"
+  },
+  "eaf07895-ebbe-4eb1-88e4-c7aa675d15b4": {
+    "asset": 1496887940390,
+    "meta": 1496918852837,
+    "relativePath": "resources\\textures\\MJ\\my\\Z_my.png"
   }
 }
