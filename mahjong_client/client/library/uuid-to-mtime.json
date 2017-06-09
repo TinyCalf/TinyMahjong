@@ -2325,13 +2325,13 @@
     "relativePath": "resources\\textures\\Login\\check_mark.png"
   },
   "b3122745-ee39-4358-83d0-93bfa03e06bd": {
-    "asset": 1495778345857,
-    "meta": 1496219382545,
+    "asset": 1496977995787,
+    "meta": 1496978396169,
     "relativePath": "resources\\textures\\MJ"
   },
   "c78eb4b1-033c-41b0-b0c4-ff36c198b6dd": {
-    "asset": 1496059827450,
-    "meta": 1496219382546,
+    "asset": 1496918786042,
+    "meta": 1496978396171,
     "relativePath": "resources\\textures\\MJ\\bottom"
   },
   "10f8ab8e-1ff0-4f29-9629-6123d7a217f9": {
@@ -2360,8 +2360,8 @@
     "relativePath": "resources\\textures\\MJ\\bottom\\e_mj_b_up.png"
   },
   "8a5afedd-b510-4212-9834-6165725e08c9": {
-    "asset": 1496059827485,
-    "meta": 1496219382598,
+    "asset": 1496918803122,
+    "meta": 1496978396171,
     "relativePath": "resources\\textures\\MJ\\left"
   },
   "dc0f12a0-949b-450f-9d67-9f1054b115f8": {
@@ -2375,8 +2375,8 @@
     "relativePath": "resources\\textures\\MJ\\mjEmpty.plist"
   },
   "c80b7e7a-e243-44d6-9fde-f78bef49e696": {
-    "asset": 1496059827535,
-    "meta": 1496219382634,
+    "asset": 1496918817633,
+    "meta": 1496978396172,
     "relativePath": "resources\\textures\\MJ\\my"
   },
   "347575c5-fc00-4b99-9cca-1c89f8e39415": {
@@ -2400,8 +2400,8 @@
     "relativePath": "resources\\textures\\MJ\\my\\M_spring.png"
   },
   "10712ce0-d470-446f-8cc9-5e3d55734cb4": {
-    "asset": 1496059827585,
-    "meta": 1496219382699,
+    "asset": 1496918838729,
+    "meta": 1496978396173,
     "relativePath": "resources\\textures\\MJ\\right"
   },
   "2133eb49-bb89-480b-b451-43becbb3cef2": {
@@ -2925,8 +2925,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1496751602252,
-    "meta": 1496751602368,
+    "asset": 1496978425529,
+    "meta": 1496978426200,
     "relativePath": "scripts\\HTTP.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {

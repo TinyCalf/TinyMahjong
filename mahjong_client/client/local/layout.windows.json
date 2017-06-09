@@ -72,6 +72,12 @@
         "snapshot": true,
         "type": "dock-h"
       }
+    },
+    "window-1496978526000": {
+      "x": 659,
+      "y": 315,
+      "width": 816,
+      "height": 639
     }
   }
 }

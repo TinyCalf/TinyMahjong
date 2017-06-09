@@ -31,8 +31,8 @@ exports.account_server = function(){
 		//
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
-		VERSION:'20161227',
-		APP_WEB:'http://zsmj.77queshen.com/mahjong_download/download.php?asd=1544981232321',
+		VERSION:'20170609',
+		APP_WEB:'http://zsmj.77queshen.com/mahjong_download/download.php?asd=1544982311232222',
 	};
 };
 
