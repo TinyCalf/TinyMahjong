@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '74d78JBqHdDKY6hckY2YuL+', 'UserMgr');
-// scripts\UserMgr.js
+// scripts/UserMgr.js
 
 cc.Class({
     "extends": cc.Component,

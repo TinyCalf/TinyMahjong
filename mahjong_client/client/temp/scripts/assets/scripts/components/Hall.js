@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts\components\Hall.js
+// scripts/components/Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -159,6 +159,7 @@ cc.Class({
             cc.find("Canvas/top_left/headinfo/lblGems").active = false;
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
+            cc.find("Canvas/right_bottom/btn_checkin").active = false;
         }
 
         if (cc.vv.utils.showAct) {

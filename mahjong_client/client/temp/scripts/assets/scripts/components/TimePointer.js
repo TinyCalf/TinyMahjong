@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '5b586erPK1H5bFfrMKWs+Y6', 'TimePointer');
-// scripts\components\TimePointer.js
+// scripts/components/TimePointer.js
 
 cc.Class({
     "extends": cc.Component,

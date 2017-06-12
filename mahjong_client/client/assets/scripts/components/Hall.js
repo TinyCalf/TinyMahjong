@@ -157,6 +157,7 @@ cc.Class({
             cc.find("Canvas/top_left/headinfo/lblGems").active = false;
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
+            cc.find("Canvas/right_bottom/btn_checkin").active = false;
         }
         
         if(cc.vv.utils.showAct) {

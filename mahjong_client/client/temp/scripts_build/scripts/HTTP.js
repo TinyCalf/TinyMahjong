@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
-// scripts\HTTP.js
+// scripts/HTTP.js
 
 //local
 
@@ -11,7 +11,7 @@ var URL = "http://116.62.227.93:9000";
 //FORMAL SERVER
 //var URL = "http://119.23.250.115:9000";
 
-cc.VERSION = 20161227;
+cc.VERSION = 20170609;
 var HTTP = cc.Class({
     "extends": cc.Component,
 
