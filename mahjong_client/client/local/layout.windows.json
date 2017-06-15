@@ -17,7 +17,7 @@
                 ],
                 "height": 364,
                 "type": "panel",
-                "width": 362
+                "width": 200
               },
               {
                 "active": 0,
@@ -26,12 +26,12 @@
                 ],
                 "height": 364,
                 "type": "panel",
-                "width": 362
+                "width": 200
               }
             ],
             "height": 731,
             "type": "dock-v",
-            "width": 362
+            "width": 200
           },
           {
             "children": [
@@ -40,9 +40,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 528,
+                "height": 364,
                 "type": "panel",
-                "width": 606
+                "width": 633.25
               },
               {
                 "active": 0,
@@ -50,14 +50,14 @@
                   "console",
                   "timeline"
                 ],
-                "height": 200,
+                "height": 364,
                 "type": "panel",
-                "width": 606
+                "width": 633.25
               }
             ],
             "height": 731,
             "type": "dock-v",
-            "width": 606
+            "width": 633.25
           },
           {
             "active": 0,
@@ -66,24 +66,36 @@
             ],
             "height": 731,
             "type": "panel",
-            "width": 300
+            "width": 446.765625
           }
         ],
         "snapshot": true,
         "type": "dock-h"
       }
     },
-    "window-1497005899809": {
+    "window-1497422615399": {
       "x": 0,
       "y": 24,
       "width": 1280,
       "height": 776
     },
-    "worker": {
-      "x": 440,
-      "y": 228,
-      "width": 400,
-      "height": 300
+    "window-1497423181399": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 0,
+      "y": 24,
+      "width": 1280,
+      "height": 776
     }
   }
 }

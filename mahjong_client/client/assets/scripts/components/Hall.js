@@ -158,6 +158,11 @@ cc.Class({
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
             cc.find("Canvas/right_bottom/btn_checkin").active = false;
+            cc.find("Canvas/CreateRoom/sjmmj/cost").active = false;
+            cc.find("Canvas/CreateRoom/dhmj/cost").active = false;
+            cc.find("Canvas/CreateRoom/tdh/cost").active = false;
+            cc.find("Canvas/CreateRoom/bg/New Label").active = false;
+            cc.vv.utils.showAct = false;
         }
         
         if(cc.vv.utils.showAct) {

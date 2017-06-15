@@ -1580,8 +1580,8 @@
     "relativePath": "scripts/components/Login.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1496994992000,
-    "meta": 1496998169000,
+    "asset": 1497427095000,
+    "meta": 1497427095000,
     "relativePath": "scripts/components/MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -1965,8 +1965,8 @@
     "relativePath": "resources/scenes/createrole.fire"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1496994992000,
-    "meta": 1496998160000,
+    "asset": 1497427097000,
+    "meta": 1497427097000,
     "relativePath": "resources/scenes/hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
@@ -3130,8 +3130,8 @@
     "relativePath": "resources/textures/images/chat.png"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1497005950000,
-    "meta": 1497007546000,
+    "asset": 1497427028000,
+    "meta": 1497427028000,
     "relativePath": "scripts/components/Hall.js"
   }
 }
