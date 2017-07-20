@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '0bf63eiZEFMWbW03o8heqa5', 'Folds');
+// scripts/components/Folds.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -120,7 +126,5 @@ cc.Class({
     }
 
 });
-// called every frame, uncomment this function to activate update callback
-// update: function (dt) {
 
-// },
+cc._RF.pop();

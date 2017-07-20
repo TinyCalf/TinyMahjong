@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
+// scripts/HTTP.js
+
+"use strict";
+
 //local
 
 // var URL = "http://192.168.0.115:9000";
@@ -9,7 +15,7 @@ var URL = "http://116.62.227.93:9000";
 
 cc.VERSION = 20170609;
 var HTTP = cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     statics: {
         sessionId: 0,
@@ -50,14 +56,14 @@ var HTTP = cc.Class({
                         //handler(null);
                     } finally {
                         if (cc.vv && cc.vv.wc) {
-                            //       cc.vv.wc.hide();   
+                            //       cc.vv.wc.hide();    
                         }
                     }
                 } else {
-                        console.log("status=" + xhr.readyState);
-                        //self.url = "http://139.219.224.143:9000";
-                        //HTTP.url = "http://139.219.224.143:9000";
-                    }
+                    console.log("status=" + xhr.readyState);
+                    //self.url = "http://139.219.224.143:9000";
+                    //HTTP.url = "http://139.219.224.143:9000";
+                }
             };
 
             if (cc.vv && cc.vv.wc) {
@@ -68,3 +74,5 @@ var HTTP = cc.Class({
         }
     }
 });
+
+cc._RF.pop();

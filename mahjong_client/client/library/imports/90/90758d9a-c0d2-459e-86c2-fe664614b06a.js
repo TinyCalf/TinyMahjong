@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '907582awNJFnobC/mZGFLBq', 'DingQue');
+// scripts/components/DingQue.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         queYiMen: null,
@@ -8,15 +14,6 @@ cc.Class({
         dingques: []
     },
 
-    // foo: {
-    //    default: null,
-    //    url: cc.Texture2D,  // optional, default is typeof default
-    //    serializable: true, // optional, default is true
-    //    visible: true,      // optional, default is true
-    //    displayName: 'Foo', // optional
-    //    readonly: false,    // optional, default is false
-    // },
-    // ...
     // use this for initialization
     onLoad: function onLoad() {
         if (cc.vv == null) {
@@ -97,7 +94,7 @@ cc.Class({
             } else {
                 node.getComponent(cc.Animation).stop();
             }
-            //this.queYiMen.getChildByName(arr[i]).getChildByName('jian').active = minIndex == i;  
+            //this.queYiMen.getChildByName(arr[i]).getChildByName('jian').active = minIndex == i;    
         }
 
         this.reset();
@@ -177,3 +174,5 @@ cc.Class({
 
     // },
 });
+
+cc._RF.pop();

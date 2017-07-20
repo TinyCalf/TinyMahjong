@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, '1f066RbLAxKGJZtkDFO2kq/', 'VoiceMgr');
+// scripts/VoiceMgr.js
+
+"use strict";
+
 var radix = 12;
 var base = 128 - radix;
 function crypto(value) {
@@ -70,7 +76,7 @@ function decode(content) {
 }
 
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -246,3 +252,5 @@ cc.Class({
         }
     }
 });
+
+cc._RF.pop();

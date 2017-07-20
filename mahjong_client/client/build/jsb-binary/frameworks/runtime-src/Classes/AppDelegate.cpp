@@ -17,7 +17,6 @@
 
 #include "base/CCDirector.h"
 #include "base/CCEventDispatcher.h"
-#include "SimpleAudioEngine.h"
 
 #include "js_module_register.h"
 
@@ -29,7 +28,6 @@ using namespace anysdk::framework;
 #endif
 
 USING_NS_CC;
-using namespace CocosDenshion;
 
 AppDelegate::AppDelegate()
 {
@@ -61,9 +59,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-        glview = GLViewImpl::create("raphael");
+        glview = GLViewImpl::create("ZSMJ");
 #else
-        glview = GLViewImpl::createWithRect("raphael", Rect(0,0,900,640));
+        glview = GLViewImpl::createWithRect("ZSMJ", Rect(0,0,900,640));
 #endif
         director->setOpenGLView(glview);
     }
@@ -95,8 +93,6 @@ void AppDelegate::applicationDidEnterBackground()
     auto director = Director::getInstance();
     director->stopAnimation();
     director->getEventDispatcher()->dispatchCustomEvent("game_on_hide");
-    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
-    SimpleAudioEngine::getInstance()->pauseAllEffects();
 }
 
 // this function will be called when the app is active again
@@ -105,6 +101,4 @@ void AppDelegate::applicationWillEnterForeground()
     auto director = Director::getInstance();
     director->startAnimation();
     director->getEventDispatcher()->dispatchCustomEvent("game_on_show");
-    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-    SimpleAudioEngine::getInstance()->resumeAllEffects();
 }

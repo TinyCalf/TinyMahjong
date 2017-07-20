@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, '1a6a1p86NFL6KZEZCnbu7tt', 'ReplayMgr');
+// scripts/ReplayMgr.js
+
+"use strict";
+
 var ACTION_CHUPAI = 1;
 var ACTION_MOPAI = 2;
 var ACTION_PENG = 3;
@@ -7,7 +13,7 @@ var ACTION_CHI = 7;
 var ACTION_BUHUA = 8;
 
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -124,3 +130,5 @@ cc.Class({
 
     // },
 });
+
+cc._RF.pop();

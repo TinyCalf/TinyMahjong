@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '2b08d8pm0VBDLYlZIdfLuPS', 'GameResult');
+// scripts/components/GameResult.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -94,3 +100,5 @@ cc.Class({
         cc.vv.anysdkMgr.shareResult();
     }
 });
+
+cc._RF.pop();

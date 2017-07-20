@@ -1,14 +1,20 @@
+"use strict";
+cc._RF.push(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
+// scripts/components/MJGame.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         gameRoot: {
-            "default": null,
+            default: null,
             type: cc.Node
         },
 
         prepareRoot: {
-            "default": null,
+            default: null,
             type: cc.Node
         },
 
@@ -233,7 +239,7 @@ cc.Class({
 
                 if (!(data.iszimo && localIndex == 0)) {
                     //if(cc.vv.replayMgr.isReplay() == false && localIndex != 0){
-                    //    self.initEmptySprites(seatIndex);               
+                    //    self.initEmptySprites(seatIndex);                
                     //}
                     self.initMopai(seatIndex, data.hupai);
                 }
@@ -261,13 +267,13 @@ cc.Class({
         this.node.on('game_num', function (data) {
             //console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
             // switch(cc.vv.gameNetMgr.fengxiang) {
-            //     case 0:
+            //     case 0: 
             //         self._gamecount.string = "东风圈";break;
-            //     case 1:
+            //     case 1: 
             //         self._gamecount.string = "南风圈";break;
-            //     case 2:
+            //     case 2: 
             //         self._gamecount.string = "西风圈";break;
-            //     case 3:
+            //     case 3: 
             //         self._gamecount.string = "北风圈";break;
 
             // }
@@ -785,7 +791,7 @@ cc.Class({
     },
 
     //如果摸到的牌是花，则会调用这个函数
-    chuhua: (function (_chuhua) {
+    chuhua: function (_chuhua) {
         function chuhua(_x) {
             return _chuhua.apply(this, arguments);
         }
@@ -795,7 +801,7 @@ cc.Class({
         };
 
         return chuhua;
-    })(function (mjid) {
+    }(function (mjid) {
         console.log(chuhua);
     }),
 
@@ -1069,3 +1075,5 @@ cc.Class({
         }
     }
 });
+
+cc._RF.pop();

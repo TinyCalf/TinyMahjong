@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '24e30ZJLgdH3rs1R1CvqN8U', 'Global');
+// scripts/Global.js
+
+"use strict";
+
 var Global = cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
     statics: {
         isstarted: false,
         netinited: false,
@@ -11,3 +17,5 @@ var Global = cc.Class({
 
     }
 });
+
+cc._RF.pop();

@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '824eapeRYNKY4RJzg2Z4YA2', 'RadioGroupMgr');
+// scripts/components/RadioGroupMgr.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -65,3 +71,5 @@ cc.Class({
 
     // },
 });
+
+cc._RF.pop();

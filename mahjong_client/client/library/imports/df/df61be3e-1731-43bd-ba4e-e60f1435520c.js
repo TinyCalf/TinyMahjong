@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, 'df61b4+FzFDvbpO5g8UNVIM', 'NoticeTip');
+// scripts/components/NoticeTip.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -43,3 +49,5 @@ cc.Class({
         }
     }
 });
+
+cc._RF.pop();

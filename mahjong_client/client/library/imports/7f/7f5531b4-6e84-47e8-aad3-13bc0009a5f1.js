@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '7f553G0boRH6KrTE7wACaXx', 'ReConnect');
+// scripts/components/ReConnect.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -33,11 +39,11 @@ cc.Class({
                     } else {
                         cc.director.loadScene('hall');
                     }
-                    //cc.director.loadScene('hall'); 
-                    //cc.director.loadScene('mjgame');
+                    //cc.director.loadScene('hall');  
+                    //cc.director.loadScene('mjgame');  
                 } else {
-                        setTimeout(fnTestServerOn, 10000);
-                    }
+                    setTimeout(fnTestServerOn, 10000);
+                }
             });
         };
 
@@ -60,3 +66,5 @@ cc.Class({
         }
     }
 });
+
+cc._RF.pop();

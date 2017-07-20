@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, 'eec07HsL4pBn5/PiT3SYBew', 'CreateRoom');
+// scripts/components/CreateRoom.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         _leixingxuanze: null,
@@ -7,7 +13,7 @@ cc.Class({
         _quanshu: null,
         _jiesuan: null,
         _wanfaxuanze: null,
-        _types: [], //定义多种游戏类型
+        _types: [], //定义多种游戏类型 
         _sjmmj_jifei: 0, //房主出资 or 玩家平分
         _sjmmj_jushu: 0, //8盘 or 1圈
         _dhmj_jifei: 0,
@@ -437,3 +443,5 @@ cc.Class({
     }
 
 });
+
+cc._RF.pop();

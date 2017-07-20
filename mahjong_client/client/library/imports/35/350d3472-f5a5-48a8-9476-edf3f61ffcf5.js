@@ -1,5 +1,11 @@
+"use strict";
+cc._RF.push(module, '350d3Ry9aVIqJR27fP2H/z1', 'LoadingLogic');
+// scripts/components/LoadingLogic.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         tipLabel: cc.Label,
@@ -202,3 +208,5 @@ cc.Class({
         }
     }
 });
+
+cc._RF.pop();

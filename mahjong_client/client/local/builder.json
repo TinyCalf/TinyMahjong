@@ -12,5 +12,7 @@
   "previewWidth": "1280",
   "sourceMaps": false,
   "template": "binary",
-  "useDebugKeystore": false
+  "useDebugKeystore": false,
+  "appABIs": [],
+  "vsVersion": "auto"
 }
