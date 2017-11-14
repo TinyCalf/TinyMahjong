@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '74d78JBqHdDKY6hckY2YuL+', 'UserMgr');
-// scripts/UserMgr.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
     properties: {
         account: null,
         userId: null,
@@ -182,5 +176,3 @@ cc.Class({
         cc.vv.http.sendRequest("/get_detail_of_game", data, onGet);
     }
 });
-
-cc._RF.pop();

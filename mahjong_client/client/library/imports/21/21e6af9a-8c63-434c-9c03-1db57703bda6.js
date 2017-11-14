@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '21e6a+ajGNDTJwDHbV3A72m', 'ReplayCtrl');
-// scripts/components/ReplayCtrl.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -59,5 +53,3 @@ cc.Class({
         }
     }
 });
-
-cc._RF.pop();

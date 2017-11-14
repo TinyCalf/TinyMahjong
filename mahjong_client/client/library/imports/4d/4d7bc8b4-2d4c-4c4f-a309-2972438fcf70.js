@@ -1,15 +1,9 @@
-"use strict";
-cc._RF.push(module, '4d7bci0LUxMT6MJKXJDj89w', 'History');
-// scripts/components/History.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         HistoryItemPrefab: {
-            default: null,
+            "default": null,
             type: cc.Prefab
         },
         // foo: {
@@ -230,5 +224,7 @@ cc.Class({
     }
 
 });
+// called every frame, uncomment this function to activate update callback
+// update: function (dt) {
 
-cc._RF.pop();
+// },

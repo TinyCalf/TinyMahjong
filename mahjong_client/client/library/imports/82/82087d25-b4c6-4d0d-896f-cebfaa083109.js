@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '820870ltMZNDYlvzr+qCDEJ', 'Seat');
-// scripts/components/Seat.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         _sprIcon: null,
@@ -140,7 +134,6 @@ cc.Class({
         this.refresh();
     },
 
-
     setZhuang: function setZhuang(value) {
         if (this._zhuang) {
             this._zhuang.active = value;
@@ -238,5 +231,3 @@ cc.Class({
         }
     }
 });
-
-cc._RF.pop();

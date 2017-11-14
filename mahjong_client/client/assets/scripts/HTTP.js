@@ -1,13 +1,13 @@
 //local
 
 // var URL = "http://192.168.0.115:9000";
-var URL = "http://116.62.227.93:9000";
+var URL = "http://127.0.0.1:9000";
 //DEV SERVER
 //var URL = "http://139.219.224.143:9000";
 //FORMAL SERVER
 //var URL = "http://119.23.250.115:9000";
 
-cc.VERSION = 20170609;
+cc.VERSION = 20171111;
 var HTTP = cc.Class({
     extends: cc.Component,
 
@@ -35,7 +35,7 @@ var HTTP = cc.Class({
             if (cc.sys.isNative){
                 xhr.setRequestHeader("Accept-Encoding","gzip,deflate","text/html;charset=UTF-8");
             }
-            
+
             xhr.onreadystatechange = function() {
                 console.log(xhr);
                 if(xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)){
@@ -51,7 +51,7 @@ var HTTP = cc.Class({
                     }
                     finally{
                         if(cc.vv && cc.vv.wc){
-                        //       cc.vv.wc.hide();    
+                        //       cc.vv.wc.hide();
                         }
                     }
                 }
@@ -61,7 +61,7 @@ var HTTP = cc.Class({
                     //HTTP.url = "http://139.219.224.143:9000";
                 }
             };
-            
+
             if(cc.vv && cc.vv.wc){
                 //cc.vv.wc.show();
             }

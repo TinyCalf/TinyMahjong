@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '9545659TARKZLMoHGqXoY2N', 'GameNetMgr');
-// scripts/GameNetMgr.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         dataEventHandler: null,
@@ -30,6 +24,15 @@ cc.Class({
 
     },
 
+    // foo: {
+    //    default: null,
+    //    url: cc.Texture2D,  // optional, default is typeof default
+    //    serializable: true, // optional, default is true
+    //    visible: true,      // optional, default is true
+    //    displayName: 'Foo', // optional
+    //    readonly: false,    // optional, default is false
+    // },
+    // ...
     reset: function reset() {
         this.turn = -1;
         this.chupai = -1, this.dingque = -1;
@@ -71,7 +74,6 @@ cc.Class({
             this.dataEventHandler.emit(event, data);
         }
     },
-
 
     getSeatIndexByID: function getSeatIndexByID(userId) {
         for (var i = 0; i < this.seats.length; ++i) {
@@ -162,19 +164,19 @@ cc.Class({
             //     strArr.push("自摸加底");
             // }
             // if(conf.jiangdui){
-            //     strArr.push("将对");   
+            //     strArr.push("将对");  
             // }
             // if(conf.dianganghua == 1){
-            //     strArr.push("点杠花(自摸)");   
+            //     strArr.push("点杠花(自摸)");  
             // }
             // else{
             //     strArr.push("点杠花(放炮)");
             // }
             // if(conf.menqing){
-            //     strArr.push("门清、中张");   
+            //     strArr.push("门清、中张");  
             // }
             // if(conf.tiandihu){
-            //     strArr.push("天地胡");   
+            //     strArr.push("天地胡");  
             // }
             return strArr.join(" ");
         }
@@ -207,13 +209,12 @@ cc.Class({
             cc.director.loadScene("mjgame");
 
             // var loadgame = function (){
-            //     cc.director.loadScene("mjgame");  
+            //     cc.director.loadScene("mjgame"); 
             // }
             // var fadeout = cc.fadeOut(0.1);
             // var finish = cc.callFunc(loadgame, this);
             // var seq = cc.sequence(fadeout, finish);
             // cc.director.getScene().getChildByName('Canvas').runAction(seq);
-
 
             //cc.director.loadScene("mjgame");
         });
@@ -785,5 +786,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

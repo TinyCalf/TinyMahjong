@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, 'facfdljnx5F+rFDAq5Qbmqa', 'GameOver');
-// scripts/components/GameOver.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -101,6 +95,7 @@ cc.Class({
             this.onGameOver_TDH(data);
         }
     },
+
     onGameOver_SJMMJ: function onGameOver_SJMMJ(data) {
         console.log(data);
         if (data.length == 0) {
@@ -411,7 +406,6 @@ cc.Class({
             }
         }
     },
-
     onGameOver_DHMJ: function onGameOver_DHMJ(data) {
         console.log(data);
         if (data.length == 0) {
@@ -574,10 +568,10 @@ cc.Class({
             }
 
             // for(var o = 0; o < 3;++o){
-            //     seatView.hu.children[o].active = false;    
+            //     seatView.hu.children[o].active = false;   
             // }
             // if(userData.huorder >= 0){
-            //     seatView.hu.children[userData.huorder].active = true;    
+            //     seatView.hu.children[userData.huorder].active = true;   
             // }
 
             seatView.username.string = cc.vv.gameNetMgr.seats[i].name;
@@ -1081,5 +1075,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

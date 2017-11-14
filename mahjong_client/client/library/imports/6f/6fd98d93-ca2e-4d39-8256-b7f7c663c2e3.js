@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '6fd982Tyi5NOYJWt/fGY8Lj', 'OnBack');
-// scripts/components/OnBack.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -37,5 +31,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

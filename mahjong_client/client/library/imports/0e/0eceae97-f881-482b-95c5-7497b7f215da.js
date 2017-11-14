@@ -1,52 +1,46 @@
-"use strict";
-cc._RF.push(module, '0ecea6X+IFIK5XFdJe38hXa', 'MahjongMgr');
-// scripts/MahjongMgr.js
-
-"use strict";
-
 var mahjongSprites = [];
 
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         leftAtlas: {
-            default: null,
+            "default": null,
             type: cc.SpriteAtlas
         },
 
         rightAtlas: {
-            default: null,
+            "default": null,
             type: cc.SpriteAtlas
         },
 
         bottomAtlas: {
-            default: null,
+            "default": null,
             type: cc.SpriteAtlas
         },
 
         bottomFoldAtlas: {
-            default: null,
+            "default": null,
             type: cc.SpriteAtlas
         },
 
         pengPrefabSelf: {
-            default: null,
+            "default": null,
             type: cc.Prefab
         },
 
         pengPrefabLeft: {
-            default: null,
+            "default": null,
             type: cc.Prefab
         },
 
         emptyAtlas: {
-            default: null,
+            "default": null,
             type: cc.SpriteAtlas
         },
 
         holdsEmpty: {
-            default: [],
+            "default": [],
             type: [cc.SpriteFrame]
         },
 
@@ -95,7 +89,7 @@ cc.Class({
         mahjongSprites.push("autumn");
         mahjongSprites.push("winter");
 
-        //梅兰竹菊 
+        //梅兰竹菊
         mahjongSprites.push("plum");
         mahjongSprites.push("orchid");
         mahjongSprites.push("bamboo");
@@ -224,5 +218,3 @@ cc.Class({
         return this._foldPres[localIndex];
     }
 });
-
-cc._RF.pop();

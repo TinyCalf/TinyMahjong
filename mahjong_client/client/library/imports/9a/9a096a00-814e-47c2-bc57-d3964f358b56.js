@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '9a096oAgU5HwrxX05ZPNYtW', 'HuanSanZhang');
-// scripts/components/HuanSanZhang.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -148,5 +142,7 @@ cc.Class({
     }
 
 });
+// called every frame, uncomment this function to activate update callback
+// update: function (dt) {
 
-cc._RF.pop();
+// },

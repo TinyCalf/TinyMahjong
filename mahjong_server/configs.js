@@ -1,7 +1,4 @@
-﻿//local
-var HALL_IP = "192.168.0.115";
-//dev server
-//var HALL_IP = "139.219.224.143";
+﻿var HALL_IP = "127.0.0.1";
 var HALL_CLIENT_PORT = 9001;
 var HALL_ROOM_PORT = 9002;
 
@@ -14,8 +11,8 @@ exports.mysql = function(){
 	return {
 		HOST:'localhost',
 		USER:'root',
-		PSWD:'',
-		DB:'mahjong_nodejs',
+		PSWD:'123',
+		DB:'tinymahjong',
 		PORT:3306,
 	}
 };
@@ -27,11 +24,11 @@ exports.account_server = function(){
 		HALL_IP:HALL_IP,
 		HALL_CLIENT_PORT:HALL_CLIENT_PORT,
 		ACCOUNT_PRI_KEY:ACCOUNT_PRI_KEY,
-		
+
 		//
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
-		VERSION:'20170609',
+		VERSION:'20171111',
 		APP_WEB:'http://zsmj.77queshen.com/mahjong_download/download.php?asd=1544982311232222',
 	};
 };
@@ -45,14 +42,14 @@ exports.hall_server = function(){
 		ROOM_PORT:HALL_ROOM_PORT,
 		ACCOUNT_PRI_KEY:ACCOUNT_PRI_KEY,
 		ROOM_PRI_KEY:ROOM_PRI_KEY
-	};	
+	};
 };
 
 //游戏服配置
 exports.game_server = function(){
 	return {
 		SERVER_ID:"001",
-		
+
 		//暴露给大厅服的HTTP端口号
 		HTTP_PORT:9003,
 		//HTTP TICK的间隔时间，用于向大厅服汇报情况
@@ -64,7 +61,7 @@ exports.game_server = function(){
 		HALL_PORT:HALL_ROOM_PORT,
 		//与大厅服协商好的通信加密KEY
 		ROOM_PRI_KEY:ROOM_PRI_KEY,
-		
+
 		//暴露给客户端的接口
 		CLIENT_IP:HALL_IP,
 		CLIENT_PORT:10000,

@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '4c04fyd89JAZY7qGjvubi+f', 'Settings');
-// scripts/components/Settings.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -78,7 +72,6 @@ cc.Class({
         progress.getChildByName("progress").width = width;
         //yx.getChildByName("btn_progress").x = progress.x + width;
 
-
         this._btnYYClose.active = cc.vv.audioMgr.bgmVolume > 0;
         this._btnYYOpen.active = !this._btnYYClose.active;
         var yy = this.node.getChildByName("yinyue");
@@ -117,5 +110,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'facfdljnx5F+rFDAq5Qbmqa', 'GameOver');
-// scripts/components/GameOver.js
+// scripts\components\GameOver.js
 
 cc.Class({
     "extends": cc.Component,

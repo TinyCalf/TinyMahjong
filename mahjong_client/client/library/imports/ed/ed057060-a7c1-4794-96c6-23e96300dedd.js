@@ -1,9 +1,3 @@
-"use strict";
-cc._RF.push(module, 'ed057Bgp8FHlJbGI+ljAN7d', 'ImageLoader');
-// scripts/components/ImageLoader.js
-
-"use strict";
-
 function loadImage(url, code, callback) {
     /*
     if(cc.vv.images == null){
@@ -66,7 +60,7 @@ function getBaseInfo(userid, callback) {
 };
 
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
     properties: {
         // foo: {
         //    default: null,      // The default value will be used only when the component attaching
@@ -120,5 +114,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

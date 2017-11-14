@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, 'fe4f16CAmpBlZphnpsH1ETv', 'UserInfoShow');
-// scripts/components/UserInfoShow.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -65,5 +59,3 @@ cc.Class({
 
     // },
 });
-
-cc._RF.pop();

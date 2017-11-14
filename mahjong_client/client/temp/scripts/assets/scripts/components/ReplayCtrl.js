@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '21e6a+ajGNDTJwDHbV3A72m', 'ReplayCtrl');
-// scripts/components/ReplayCtrl.js
+// scripts\components\ReplayCtrl.js
 
 cc.Class({
     "extends": cc.Component,

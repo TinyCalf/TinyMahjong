@@ -1,11 +1,5 @@
-"use strict";
-cc._RF.push(module, '55caepcpvFK5r0Ax5f8jss4', 'AudioMgr');
-// scripts/AudioMgr.js
-
-"use strict";
-
 cc.Class({
-    extends: cc.Component,
+    "extends": cc.Component,
 
     properties: {
         // foo: {
@@ -63,13 +57,13 @@ cc.Class({
         }
         this.bgmAudioID = cc.audioEngine.play(audioUrl, true, this.bgmVolume);
     },
+
     playSFX: function playSFX(url) {
         var audioUrl = this.getUrl(url);
         if (this.sfxVolume > 0) {
             var audioId = cc.audioEngine.play(audioUrl, false, this.sfxVolume);
         }
     },
-
 
     setSFXVolume: function setSFXVolume(v) {
         if (this.sfxVolume != v) {
@@ -102,5 +96,3 @@ cc.Class({
         cc.audioEngine.resumeAll();
     }
 });
-
-cc._RF.pop();

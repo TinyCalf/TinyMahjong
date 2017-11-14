@@ -6,8 +6,7 @@
     "_rawFiles": null,
     "data": {
       "__id__": 1
-    },
-    "asyncLoadAssets": false
+    }
   },
   {
     "__type__": "cc.Node",
