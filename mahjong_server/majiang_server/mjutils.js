@@ -31,14 +31,6 @@ function checkTingPai(seatData,begin,end){
 	}
 }
 
-var kanzi = [];
-var record = false;
-function debugRecord(pai){
-	if(record){
-		kanzi.push(pai);
-	}
-}
-
 function matchSingle(seatData,selected){
 	if(selected > 26) return false;
 	var game = seatData.game;
@@ -74,9 +66,6 @@ function matchSingle(seatData,selected){
 		seatData.countMap[selected - 1] ++;
 		seatData.countMap[selected] ++;
 		if(ret == true){
-			debugRecord(selected - 2);
-			debugRecord(selected - 1);
-			debugRecord(selected);
 			seatData.kanzi.push([selected - 2,selected - 1,selected]);
 			return true;
 		}
@@ -112,9 +101,6 @@ function matchSingle(seatData,selected){
 		seatData.countMap[selected] ++;
 		seatData.countMap[selected + 1] ++;
 		if(ret == true){
-			debugRecord(selected - 1);
-			debugRecord(selected);
-			debugRecord(selected + 1);
 			seatData.kanzi.push([selected - 1,selected ,selected + 1]);
 			return true;
 		}
@@ -151,9 +137,6 @@ function matchSingle(seatData,selected){
 		seatData.countMap[selected + 1] ++;
 		seatData.countMap[selected + 2] ++;
 		if(ret == true){
-			debugRecord(selected);
-			debugRecord(selected + 1);
-			debugRecord(selected + 2);
 			seatData.kanzi.push([selected,selected + 1 ,selected + 2]);
 			return true;
 		}
@@ -182,9 +165,6 @@ function checkSingle(seatData){
 	if(c == 3){
 		//直接作为一坎
 		seatData.countMap[selected] = 0;
-		debugRecord(selected);
-		debugRecord(selected);
-		debugRecord(selected);
 		var ret = checkSingle(seatData);
 		//立即恢复对数据的修改
 		seatData.countMap[selected] = c;
@@ -196,9 +176,6 @@ function checkSingle(seatData){
 	else if(c == 4){
 		//直接作为一坎
 		seatData.countMap[selected] = 1;
-		debugRecord(selected);
-		debugRecord(selected);
-		debugRecord(selected);
 		var ret = checkSingle(seatData);
 		//立即恢复对数据的修改
 		seatData.countMap[selected] = c;
@@ -227,7 +204,6 @@ function checkCanHu(seatData){
 		//2、2张，则只可能是与其它牌形成匹配关系
 		//3、3张，则可能是单张形成 A-2,A-1,A  A-1,A,A+1  A,A+1,A+2，也可能是直接成为一坎
 		//4、4张，则只可能是一坎+单张
-		kanzi = [];
 		var ret = checkSingle(seatData);
 		seatData.countMap[k] += 2;
 		if(ret){
@@ -236,59 +212,6 @@ function checkCanHu(seatData){
 	}
 	return false;
 }
-
-/*
-console.log(Date.now());
-//检查筒子
-checkTingPai(seatData,0,9);
-//检查条子
-checkTingPai(seatData,9,18);
-//检查万字
-checkTingPai(seatData,18,27);
-console.log(Date.now());
-
-for(k in seatData.tingMap){
-	console.log(nameMap[k]);
-}
-*/
 
 exports.checkTingPai = checkTingPai;
-
-//複製了一下checkcanhu函數，防止遞歸調用
-exports.canHu = function (seatData) {
-	var game = seatData.game;
-	for(var k in seatData.countMap){
-		k = parseInt(k);
-		var c = seatData.countMap[k];
-		if(c < 2){
-			continue;
-		}
-
-		//如果当前牌大于等于２，则将它选为将牌
-		seatData.countMap[k] -= 2;
-		//逐个判定剩下的牌是否满足　３Ｎ规则,一个牌会有以下几种情况
-		//1、0张，则不做任何处理
-		//2、2张，则只可能是与其它牌形成匹配关系
-		//3、3张，则可能是单张形成 A-2,A-1,A  A-1,A,A+1  A,A+1,A+2，也可能是直接成为一坎
-		//4、4张，则只可能是一坎+单张
-		var ret = checkSingle(seatData);
-		seatData.countMap[k] += 2;
-		if(ret){
-			seatData.kanzi.push([k,k]);
-			return true;
-		}
-	}
-	return false;
-};
-
-exports.getMJType = function(pai){
-      if(id >= 0 && id < 9){
-          return 0;
-      }
-      else if(id >= 9 && id < 18){
-          return 1;
-      }
-      else if(id >= 18 && id < 27){
-          return 2;
-      }
-};
+exports.checkCanHu = checkCanHu;

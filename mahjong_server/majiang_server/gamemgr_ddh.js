@@ -454,32 +454,19 @@ function isSameType(type,arr){
 //判断是否为清一色
 function isQingYiSe(gameSeatData){
     var type = getMJType(gameSeatData.holds[0]);
-
-    //检查手上的牌
-    if(isSameType(type,gameSeatData.holds) == false){
+    if(!isSameType(type,gameSeatData.holds)){
         return false;
     }
-
-    //检查杠下的牌
-    if(isSameType(type,gameSeatData.angangs) == false){
+    if(!isSameType(type,gameSeatData.angangs)){
         return false;
     }
-    if(isSameType(type,gameSeatData.wangangs) == false){
+    if(!isSameType(type,gameSeatData.wangangs)){
         return false;
     }
-    if(isSameType(type,gameSeatData.diangangs) == false){
+    if(!isSameType(type,gameSeatData.diangangs)){
         return false;
     }
-    //检查碰牌
-    if(isSameType(type,gameSeatData.pengs) == false){
-        return false;
-    }
-    //判断吃的情况
-    var chis = [];
-    gameSeatData.chis.forEach(function(pais){
-        chis.push(pais[0]);
-    });
-    if(isSameType(type,chis) == false) {
+    if(!isSameType(type,gameSeatData.pengs)){
         return false;
     }
     return true;
@@ -537,38 +524,6 @@ function isTinged(seatData){
     return false;
 }
 
-//判断是否为排胡 TODO：换种判断方式
-function isPaiHu(seatData){
-
-    if (seatData.pengs.length > 0 ||
-        seatData.angangs.length > 0 ||
-        seatData.wangangs.length > 0 ||
-        seatData.diangangs.length > 0 ) {
-        return false;
-    }
-    //没有刻子
-    var kanzi = seatData.kanzi;
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] == kanzi[i][1]) {
-            return false;
-        }
-
-        var nowseat = (seatData.seatIndex-seatData.game.button+4)%4;
-        var nowfeng = 0;
-        (nowseat==0)?nowfeng=30:{};
-        (nowseat==1)?nowfeng=32:{};
-        (nowseat==2)?nowfeng=31:{};
-        (nowseat==3)?nowfeng=33:{};
-        if(kanzi[i].length == 2 &&
-            ((kanzi[i][0]>26 && kanzi[i][0]<30) || kanzi[i][0]==nowfeng)
-        ){
-            return false;
-        }
-    }
-
-    return true;
-}
-
 //判断是否为对对胡
 function isDuiDuiHu (seatData) {
     if (seatData.chis.length > 0) {
@@ -582,14 +537,6 @@ function isDuiDuiHu (seatData) {
         }
     }
     return true;
-}
-
-//判断是否杠上花
-function isGangShangHua (seatData) {
-    if ( seatData.ifJustGanged == 0 && seatData.iszimo ) {
-        return true;
-    }
-    return false;
 }
 
 //判斷坎
@@ -652,12 +599,6 @@ function isDuidao (seatData) {
  *
  * ******************************************************************/
 
-//Jonathan 新增函数 开发calculateResult 函数 方便测试
-exports.calculateRes = function (game) {
-    calculateResult(game);
-    return game;
-};
-
 function calculateResult(game){
 
     var baseScore = game.conf.baseScore;
@@ -666,801 +607,22 @@ function calculateResult(game){
         if(game.gameSeats[i].hued == true){
             numOfHued++;
         }
-
         //初始化判定
         var thisseat = game.gameSeats[i];
-        //排胡、对对胡、混一色、清一色、杠上花
-        thisseat.paihu = false;
+        //对对胡 混一色 清一色 炸7对 混7对 qing7队 混龙 清龙
         thisseat.duiduihu = false;
         thisseat.hunyise = false;
         thisseat.qingyise = false;
-        thisseat.gangshanghua = false;
-        thisseat.kan = false;
-        thisseat.bian = false;
-        thisseat.dan = false;
-        thisseat.duidao = false;
+        thisseat.zha7dui = false;
+        thisseat.hun7dui = false;
+        thisseat.qing7dui = false;
+        thisseat.hunlong = false;
+        thisseat.qinglong = false;
         thisseat.score = 0;
     }
 
 
-    //计算每家的台数
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        var sd = game.gameSeats[i];
-        //统计杠的数目
-        sd.numAnGang = sd.angangs.length;
-        sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
-        sd.tai = -1;//负一表示不是胡的人 没有台数
-        if(sd.hued == true) {
-            //通过胡数算法找到他的坎子们
-            sd.kanzi = [];
-            mjutils.canHu(sd);
-            var kanzi = sd.kanzi;
-            console.log("KANZI:");
-            console.log(kanzi);
-            //如果是点杠胡 则算作自摸
-            //标注被抢杠的人
-            var beiqianggangindex = -1;
-            if(sd.isQiangGangHu){
-                sd.iszimo=true;
-                for (var n = 0 ; n < 4 ; n++) {
-                    var s = game.gameSeats[n];
-                    for (var m = 0 ; m < s.actions.length ; m++) {
-                        var na = s.actions[m];
-                        (na.type == "beiqianggang") ? beiqianggangindex = n : {};
-                    }
-                }
-            }
 
-            if(isPaiHu(sd)) sd.paihu = true;
-            if(isDuiDuiHu(sd)) sd.duiduihu = true;
-            if(isQingYiSe(sd)) sd.qingyise = true;
-            if(isHunYiSe(sd)) sd.hunyise = true;
-            if(isGangShangHua(sd)) sd.gangshanghua = true;
-            if(isKan(sd)) {sd.kan = true;sd.paihu = false;}
-            if(isBian(sd)) {sd.bian = true;sd.paihu = false;}
-            if(isDan(sd)) {sd.dan = true;sd.paihu = false;}
-            if(isDuidao(sd)) sd.duidao = true;
-
-            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上
-            var tpai = -1;
-            if(sd.hued && !sd.iszimo){
-                var tpai = sd.holds.pop();
-                sd.countMap[tpai] --;
-            }
-
-            //定海麻将 只有胡的人算台数
-            var TAI = 0 ;
-            //当前风圈 0123 东南西北
-            var nowfeng = game.roomInfo.fengxiang;
-            // 0123 东南西北
-            var nowseat = (i-game.button+4)%4;
-            //中发白东南西北碰出杠出暗刻为一台
-            //东、南、西、北坐着碰出杠出暗刻加一台
-            sd.pengs.forEach(function(pai){
-                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                switch(pai) {
-                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
-                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
-                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
-                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
-                }
-            });
-            sd.angangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                switch(pai) {
-                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
-                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
-                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
-                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
-                }
-            });
-            sd.wangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                switch(pai) {
-                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
-                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
-                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
-                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
-                }
-            });
-            sd.diangangs.forEach(function(pai){
-                ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                switch(pai) {
-                    case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
-                    case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
-                    case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
-                    case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
-                }
-            });
-            for ( var n = 27 ; n < 29 ; n++) {
-                (sd.countMap[n] >=3) ? TAI++ : {};
-            }
-            for ( var n = 30 ; n < 34 ; n++) {
-                if(sd.countMap[n] >=3) {
-                    switch(n) {
-                        case 30: {(nowseat == 0 ) ? TAI++ : {};(nowfeng == 0 ) ? TAI++ : {};break;}
-                        case 32: {(nowseat == 1 ) ? TAI++ : {};(nowfeng == 1 ) ? TAI++ : {};break;}
-                        case 31: {(nowseat == 2 ) ? TAI++ : {};(nowfeng == 2 ) ? TAI++ : {};break;}
-                        case 33: {(nowseat == 3 ) ? TAI++ : {};(nowfeng == 3 ) ? TAI++ : {};break;}
-                    }
-                }
-            }
-
-
-            //春夏秋冬，梅兰竹菊坐着为一台
-            //春夏秋冬 或者 梅兰竹菊 全拿再加一台
-            var seasons = 0;
-            var flowers = 0;
-            sd.huas.forEach(function(pai){
-                switch(pai) {
-                    case 34: {(nowseat == 0) ? TAI++ : {}; seasons++; break;}
-                    case 35: {(nowseat == 1) ? TAI++ : {}; seasons++; break;}
-                    case 36: {(nowseat == 2) ? TAI++ : {}; seasons++; break;}
-                    case 37: {(nowseat == 3) ? TAI++ : {}; seasons++; break;}
-                    case 38: {(nowseat == 0) ? TAI++ : {}; flowers++; break;}
-                    case 39: {(nowseat == 1) ? TAI++ : {}; flowers++; break;}
-                    case 41: {(nowseat == 2) ? TAI++ : {}; flowers++; break;}
-                    case 40: {(nowseat == 3) ? TAI++ : {}; flowers++; break;}
-                }
-            });
-            if(seasons > 3 || flowers > 3) TAI++;
-
-
-
-
-
-            //判断是否对应大风 大风加一台
-            var judgebigwind = function(nowfeng,nowseat,pai){
-                var res= 0;
-                switch (nowfeng) {
-                    case 0: if(pai == 30)  res++; break;
-                    case 1: if(pai == 32)  res++; break;
-                    case 2: if(pai == 31)  res++; break;
-                    case 3: if(pai == 33)  res++; break;
-                }
-                switch (nowseat) {
-                    case 0: if(pai == 30)  res++; break;
-                    case 1: if(pai == 32)  res++; break;
-                    case 2: if(pai == 31)  res++; break;
-                    case 3: if(pai == 33)  res++; break;
-                }
-                return res;
-            };
-            //特殊加成 对到 点炮 胡东南西北时候 做到就加台
-            if ( sd.hued && !sd.iszimo && sd.duidao ) {
-                var res = judgebigwind(nowfeng,nowseat,tpai);
-                TAI += res;
-            }
-
-
-
-            //坎边单排胡
-            if(sd.duidao || sd.kan || sd.dan || sd.bian ) TAI++;
-            //
-            if(TAI<1 && sd.paihu){
-                TAI++;
-            }else if(TAI>0 && sd.paihu){
-                sd.paihu = false;
-            }
-            //自摸 一台
-            if(sd.iszimo) TAI++;
-            //杠开 一台
-            if(sd.gangshanghua) TAI++;
-            //对对胡
-            if(sd.duiduihu) TAI+=2;
-            //清一色
-            if(sd.qingyise) TAI += 4;
-            //混一色
-            if(sd.hunyise) TAI +=2;
-
-            console.log("4 tai="+TAI);
-
-            //最多四台
-            if(TAI > 4) TAI = 4;
-            sd.tai = TAI;
-
-            //如果是胡的人，又不是自摸，那就先去掉手牌里最后一个，到最后再加上,这里做再加上的操作
-            if(sd.hued && !sd.iszimo){
-                sd.holds.push(tpai);
-                sd.countMap[tpai] ++;
-            }
-        }
-    }
-
-
-
-    //边家的位置 和 胡的人的位置
-    var bianindex = [];
-    var huedindex = 0;
-    for(var i = 0; i < game.gameSeats.length; ++i){
-        if(game.gameSeats[i].hued == true) {
-            huedindex = i;
-        }else if (game.gameSeats[i].hued != true) {
-            bianindex.push(i);
-        }
-    }
-    //计算胡的人的分数
-    var seats = game.gameSeats;
-    var huseat = seats[huedindex];
-    //10算法
-    if(game.conf.jiesuan==0) {
-        if(huseat.iszimo) {
-            switch(huseat.tai) {
-                case 0: huseat.score = 0 ;  break;
-                case 1: huseat.score = 12;  break;
-                case 2: huseat.score = 18;  break;
-                case 3: huseat.score = 24;  break;
-                case 4: huseat.score = 30;  break;
-            }
-            if(!sd.isQiangGangHu) {
-                //计算其余人的分数
-                var s = huseat.score / 3;
-                for (var n = 0; n < seats.length; n++) {
-                    if (seats[n].hued != true) {
-                        seats[n].score -= s;
-                    }
-                }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
-        }
-        else{
-            switch(huseat.tai) {
-                case 0: huseat.score = 6 ; break;
-                case 1: huseat.score = 8 ; break;
-                case 2: huseat.score = 10 ; break;
-                case 3: huseat.score = 14 ; break;
-                case 4: huseat.score = 20; break;
-            }
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    if( game.fangpaoindex == n ) {
-                        switch(huseat.tai) {
-                            case 0:  seats[n].score -= 6 ; break;
-                            case 1: seats[n].score -= 8 ; break;
-                            case 2: seats[n].score -= 10 ; break;
-                            case 3: seats[n].score -= 14 ; break;
-                            case 4: seats[n].score -= 20; break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //25算法
-    else if(game.conf.jiesuan==1) {
-        if(huseat.iszimo) {
-            switch(huseat.tai) {
-                case 0: huseat.score = 0 ;  break;
-                case 1: huseat.score = 30 ;  break;
-                case 2: huseat.score = 45 ;  break;
-                case 3: huseat.score = 60;  break;
-                case 4: huseat.score = 75;  break;
-            }
-            if(!sd.isQiangGangHu) {
-                //计算其余人的分数
-                var s = huseat.score/3;
-                for (var n = 0 ; n < seats.length ; n++) {
-                    if( seats[n].hued != true) {
-                        seats[n].score -= s;
-                    }
-                }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
-        }
-        else{
-            switch(huseat.tai) {
-                case 0: huseat.score = 10 ; break;
-                case 1: huseat.score = 15 ; break;
-                case 2: huseat.score = 25 ; break;
-                case 3: huseat.score = 30 ; break;
-                case 4: huseat.score = 50; break;
-            }
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    if( game.fangpaoindex == n ) {
-                        switch(huseat.tai) {
-                            case 0:  seats[n].score -= 10 ; break;
-                            case 1: seats[n].score -= 15 ; break;
-                            case 2: seats[n].score -= 25 ; break;
-                            case 3: seats[n].score -= 30 ; break;
-                            case 4: seats[n].score -= 50; break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //50算法
-    else if(game.conf.jiesuan==2) {
-        if(huseat.iszimo) {
-            switch(huseat.tai) {
-                case 0: huseat.score = 0  ;  break;
-                case 1: huseat.score = 60 ;  break;
-                case 2: huseat.score = 90 ;  break;
-                case 3: huseat.score = 120;  break;
-                case 4: huseat.score = 150;  break;
-            }
-            if(!sd.isQiangGangHu) {
-                //计算其余人的分数
-                var s = huseat.score/3;
-                for (var n = 0 ; n < seats.length ; n++) {
-                    if( seats[n].hued != true) {
-                        seats[n].score -= s;
-                    }
-                }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
-        }
-        else{
-            switch(huseat.tai) {
-                case 0: huseat.score = 30 ; break;
-                case 1: huseat.score = 40 ; break;
-                case 2: huseat.score = 50 ; break;
-                case 3: huseat.score = 70 ; break;
-                case 4: huseat.score = 100; break;
-            }
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    if( game.fangpaoindex == n ) {
-                        switch(huseat.tai) {
-                            case 0:  seats[n].score -= 30 ; break;
-                            case 1: seats[n].score -= 40 ; break;
-                            case 2: seats[n].score -= 50 ; break;
-                            case 3: seats[n].score -= 70 ; break;
-                            case 4: seats[n].score -= 100; break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //120
-    else if(game.conf.jiesuan==3) {
-        if(huseat.iszimo) {
-            switch(huseat.tai) {
-                case 0: huseat.score = 0 ;  break;
-                case 1: huseat.score = 120 ;  break;
-                case 2: huseat.score = 150 ;  break;
-                case 3: huseat.score = 210 ;  break;
-                case 4: huseat.score = 360 ;  break;
-            }
-            if(!sd.isQiangGangHu) {
-                //计算其余人的分数
-                var s = huseat.score/3;
-                for (var n = 0 ; n < seats.length ; n++) {
-                    if( seats[n].hued != true) {
-                        seats[n].score -= s;
-                    }
-                }
-            }else{
-                var s = huseat.score;
-                seats[beiqianggangindex].score -= s;
-            }
-        }
-        else{
-            switch(huseat.tai) {
-                case 0: huseat.score = 60  ; break;
-                case 1: huseat.score = 70  ; break;
-                case 2: huseat.score = 100 ; break;
-                case 3: huseat.score = 140 ; break;
-                case 4: huseat.score = 230 ; break;
-            }
-            for (var n = 0 ; n < seats.length ; n++) {
-                if( seats[n].hued != true) {
-                    if( game.fangpaoindex == n ) {
-                        switch(huseat.tai) {
-                            case 0:  seats[n].score -= 60 ; break;
-                            case 1: seats[n].score -= 70 ; break;
-                            case 2: seats[n].score -= 100 ; break;
-                            case 3: seats[n].score -= 140 ; break;
-                            case 4: seats[n].score -= 230; break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    //
-    var isYipaoduoxiang = false;
-    //一炮多响
-    //如果没人放炮则不计算一炮多响
-    if(!huseat.iszimo || beiqianggangindex!= -1) {
-        //找到胡的牌
-        var hupai = huseat.holds[huseat.holds.length - 1];
-        //找到另外两个既不是放炮又不是胡的人
-        var other = [];
-        for (var i = 0; i < 4; i++) {
-            if (i != huedindex && i != game.fangpaoindex && i!=beiqianggangindex) {
-                other.push(i);
-
-            }
-        }
-        //判断这两个人加上这个胡的牌是否能胡
-        console.log("判断两人是否能胡");
-        console.log(other);
-        for (var i = 0; i < 4; i++) {
-            if(!game.gameSeats[other[i]]) break;
-            if(other[i]==huedindex) break;
-            var seatData = game.gameSeats[other[i]];
-            //加上胡的牌
-            seatData.holds.push(hupai);
-            seatData.countMap[hupai]++;
-            console.log(seatData.holds);
-            //判断是否能胡
-            if (mjutils.canHu(seatData)) {
-                seatData.actions.push({type: "hu"});
-                seatData.hued = true;
-                isYipaoduoxiang = true;
-                //重新计算分数：
-                //初始化判定
-                //排胡、对对胡、混一色、清一色、杠上花
-                seatData.paihu = false;
-                seatData.duiduihu = false;
-                seatData.hunyise = false;
-                seatData.qingyise = false;
-                seatData.gangshanghua = false;
-                seatData.kan = false;
-                seatData.bian = false;
-                seatData.dan = false;
-                seatData.duidao = false;
-                seatData.score = 0;
-                //统计杠的数目
-                var sd = seatData;
-                sd.numAnGang = sd.angangs.length;
-                sd.numMingGang = sd.wangangs.length + sd.diangangs.length;
-                sd.tai = -1;//负一表示不是胡的人 没有台数
-                if (isPaiHu(sd)) sd.paihu = true;
-                if (isDuiDuiHu(sd)) sd.duiduihu = true;
-                if (isQingYiSe(sd)) sd.qingyise = true;
-                if (isHunYiSe(sd)) sd.hunyise = true;
-                if (isGangShangHua(sd)) sd.gangshanghua = true;
-                if (isKan(sd)) {sd.kan = true;sd.paihu = false;}
-                if (isBian(sd)) {sd.bian = true;sd.paihu = false;}
-                if (isDan(sd)) {sd.dan = true;sd.paihu = false;}
-                if (isDuidao(sd)) sd.duidao = true;
-
-                //定海麻将 只有胡的人算台数
-                var TAI = 0;
-                //当前风圈 0123 东南西北
-                var nowfeng = game.roomInfo.fengxiang;
-                // 0123 东南西北
-                var nowseat = (seatData.seatIndex + game.button) % 4;
-                console.log("seatindex"+i);
-                console.log(nowseat);
-                //中发白东南西北碰出杠出暗刻为一台
-                //东、南、西、北坐着碰出杠出暗刻加一台
-                sd.pengs.forEach(function (pai) {
-                    ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                    switch (pai) {
-                        case 30: {
-                            (nowseat == 0 ) ? TAI++ : {};
-                            (nowfeng == 0 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 32: {
-                            (nowseat == 1 ) ? TAI++ : {};
-                            (nowfeng == 1 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 31: {
-                            (nowseat == 2 ) ? TAI++ : {};
-                            (nowfeng == 2 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 33: {
-                            (nowseat == 3 ) ? TAI++ : {};
-                            (nowfeng == 3 ) ? TAI++ : {};
-                            break;
-                        }
-                    }
-                });
-                sd.angangs.forEach(function (pai) {
-                    ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                    switch (pai) {
-                        case 30: {
-                            (nowseat == 0 ) ? TAI++ : {};
-                            (nowfeng == 0 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 32: {
-                            (nowseat == 1 ) ? TAI++ : {};
-                            (nowfeng == 1 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 31: {
-                            (nowseat == 2 ) ? TAI++ : {};
-                            (nowfeng == 2 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 33: {
-                            (nowseat == 3 ) ? TAI++ : {};
-                            (nowfeng == 3 ) ? TAI++ : {};
-                            break;
-                        }
-                    }
-                });
-                sd.wangangs.forEach(function (pai) {
-                    ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                    switch (pai) {
-                        case 30: {
-                            (nowseat == 0 ) ? TAI++ : {};
-                            (nowfeng == 0 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 32: {
-                            (nowseat == 1 ) ? TAI++ : {};
-                            (nowfeng == 1 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 31: {
-                            (nowseat == 2 ) ? TAI++ : {};
-                            (nowfeng == 2 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 33: {
-                            (nowseat == 3 ) ? TAI++ : {};
-                            (nowfeng == 3 ) ? TAI++ : {};
-                            break;
-                        }
-                    }
-                });
-                sd.diangangs.forEach(function (pai) {
-                    ( pai >= 27 && pai <= 29 ) ? TAI++ : {};
-                    switch (pai) {
-                        case 30: {
-                            (nowseat == 0 ) ? TAI++ : {};
-                            (nowfeng == 0 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 32: {
-                            (nowseat == 1 ) ? TAI++ : {};
-                            (nowfeng == 1 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 31: {
-                            (nowseat == 2 ) ? TAI++ : {};
-                            (nowfeng == 2 ) ? TAI++ : {};
-                            break;
-                        }
-                        case 33: {
-                            (nowseat == 3 ) ? TAI++ : {};
-                            (nowfeng == 3 ) ? TAI++ : {};
-                            break;
-                        }
-                    }
-                });
-                for (var n = 27; n < 29; n++) {
-                    (sd.countMap[n] >= 3) ? TAI++ : {};
-                }
-                for (var n = 30; n < 34; n++) {
-                    if (sd.countMap[n] >= 3) {
-                        switch (n) {
-                            case 30: {
-                                (nowseat == 0 ) ? TAI++ : {};
-                                (nowfeng == 0 ) ? TAI++ : {};
-                                break;
-                            }
-                            case 32: {
-                                (nowseat == 1 ) ? TAI++ : {};
-                                (nowfeng == 1 ) ? TAI++ : {};
-                                break;
-                            }
-                            case 31: {
-                                (nowseat == 2 ) ? TAI++ : {};
-                                (nowfeng == 2 ) ? TAI++ : {};
-                                break;
-                            }
-                            case 33: {
-                                (nowseat == 3 ) ? TAI++ : {};
-                                (nowfeng == 3 ) ? TAI++ : {};
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                //春夏秋冬，梅兰竹菊坐着为一台
-                //春夏秋冬 或者 梅兰竹菊 全拿再加一台
-                var seasons = 0;
-                var flowers = 0;
-                sd.huas.forEach(function(pai){
-                    switch(pai) {
-                        case 34: {(nowseat == 0) ? TAI++ : {}; seasons++; break;}
-                        case 35: {(nowseat == 1) ? TAI++ : {}; seasons++; break;}
-                        case 36: {(nowseat == 2) ? TAI++ : {}; seasons++; break;}
-                        case 37: {(nowseat == 3) ? TAI++ : {}; seasons++; break;}
-                        case 38: {(nowseat == 0) ? TAI++ : {}; flowers++; break;}
-                        case 39: {(nowseat == 1) ? TAI++ : {}; flowers++; break;}
-                        case 41: {(nowseat == 2) ? TAI++ : {}; flowers++; break;}
-                        case 40: {(nowseat == 3) ? TAI++ : {}; flowers++; break;}
-                    }
-                });
-                if(seasons > 3 || flowers > 3) TAI++;
-
-
-                //坎边单排胡
-                if(sd.duidao || sd.kan || sd.dan || sd.bian) TAI++;
-
-                //
-                if(TAI<1 && sd.paihu){
-                    TAI++;
-                }else if(TAI>0 && sd.paihu){
-                    sd.paihu = false;
-                }
-                //自摸 一台
-                if(sd.iszimo) TAI++;
-                //杠开 一台
-                if(sd.gangshanghua) TAI++;
-                //对对胡
-                if(sd.duiduihu) TAI+=2;
-                //清一色
-                if(sd.qingyise) TAI += 4;
-                //混一色
-                if(sd.hunyise) TAI +=2;
-
-                //最多四台
-                if (TAI > 4) TAI = 4;
-                sd.tai = TAI;
-
-
-                var huseat = seatData;
-
-                //10算法
-                if(game.conf.jiesuan==0) {
-                    switch(huseat.tai) {
-                        case 0: huseat.score += 6 ; break;
-                        case 1: huseat.score += 8 ; break;
-                        case 2: huseat.score += 10 ; break;
-                        case 3: huseat.score += 14 ; break;
-                        case 4: huseat.score += 20; break;
-                    }
-                    for (var n = 0 ; n < seats.length ; n++) {
-                        if( seats[n].hued != true) {
-                            if( game.fangpaoindex == n ) {
-                                switch(huseat.tai) {
-                                    case 0:  seats[n].score -= 6 ; break;
-                                    case 1: seats[n].score -= 8 ; break;
-                                    case 2: seats[n].score -= 10 ; break;
-                                    case 3: seats[n].score -= 14 ; break;
-                                    case 4: seats[n].score -= 20; break;
-                                }
-                            }
-                        }
-                        if( beiqianggangindex == n ) {
-                            switch(huseat.tai) {
-                                case 0: seats[n].score -= 6 ; break;
-                                case 1: seats[n].score -= 8 ; break;
-                                case 2: seats[n].score -= 10 ; break;
-                                case 3: seats[n].score -= 14 ; break;
-                                case 4: seats[n].score -= 20; break;
-                            }
-                        }
-                    }
-
-                }
-                //25算法
-                else if(game.conf.jiesuan==1) {
-                    switch(huseat.tai) {
-                        case 0: huseat.score += 10 ; break;
-                        case 1: huseat.score += 15 ; break;
-                        case 2: huseat.score += 25 ; break;
-                        case 3: huseat.score += 30 ; break;
-                        case 4: huseat.score += 50 ; break;
-                    }
-                    for (var n = 0 ; n < seats.length ; n++) {
-                            if( seats[n].hued != true) {
-                                if( game.fangpaoindex == n ) {
-                                    switch(huseat.tai) {
-                                        case 0: seats[n].score -= 10 ; break;
-                                        case 1: seats[n].score -= 15 ; break;
-                                        case 2: seats[n].score -= 25 ; break;
-                                        case 3: seats[n].score -= 30 ; break;
-                                        case 4: seats[n].score -= 50; break;
-                                    }
-                                }
-                                if( beiqianggangindex == n ) {
-                                    switch(huseat.tai) {
-                                        case 0: seats[n].score -= 10 ; break;
-                                        case 1: seats[n].score -= 15 ; break;
-                                        case 2: seats[n].score -= 25 ; break;
-                                        case 3: seats[n].score -= 30 ; break;
-                                        case 4: seats[n].score -= 50; break;
-                                    }
-                                }
-                            }
-                        }
-                }
-                //50算法
-                else if(game.conf.jiesuan==2) {
-                    switch(huseat.tai) {
-                        case 0: huseat.score += 30 ; break;
-                        case 1: huseat.score += 40 ; break;
-                        case 2: huseat.score += 50 ; break;
-                        case 3: huseat.score += 70 ; break;
-                        case 4: huseat.score += 100; break;
-                    }
-                    for (var n = 0 ; n < seats.length ; n++) {
-                            if( seats[n].hued != true) {
-                                if( game.fangpaoindex == n ) {
-                                    switch(huseat.tai) {
-                                        case 0:  seats[n].score -= 30 ; break;
-                                        case 1: seats[n].score -= 40 ; break;
-                                        case 2: seats[n].score -= 50 ; break;
-                                        case 3: seats[n].score -= 70 ; break;
-                                        case 4: seats[n].score -= 100; break;
-                                    }
-                                }
-                                if( beiqianggangindex == n ) {
-                                    switch(huseat.tai) {
-                                        case 0: seats[n].score -= 30 ; break;
-                                        case 1: seats[n].score -= 40 ; break;
-                                        case 2: seats[n].score -= 50 ; break;
-                                        case 3: seats[n].score -= 70 ; break;
-                                        case 4: seats[n].score -= 100; break;
-                                    }
-                                }
-                            }
-                        }
-                }
-                //120
-                else if(game.conf.jiesuan==3) {
-                    switch(huseat.tai) {
-                        case 0: huseat.score += 60  ; break;
-                        case 1: huseat.score += 70  ; break;
-                        case 2: huseat.score += 100 ; break;
-                        case 3: huseat.score += 140 ; break;
-                        case 4: huseat.score += 230 ; break;
-                    }
-                    for (var n = 0 ; n < seats.length ; n++) {
-                        if( seats[n].hued != true) {
-                            if( game.fangpaoindex == n ) {
-                                switch(huseat.tai) {
-                                    case 0:  seats[n].score -= 60 ; break;
-                                    case 1: seats[n].score -= 70 ; break;
-                                    case 2: seats[n].score -= 100 ; break;
-                                    case 3: seats[n].score -= 140 ; break;
-                                    case 4: seats[n].score -= 230; break;
-                                }
-                            }
-                            if(beiqianggangindex == n ) {
-                                switch(huseat.tai) {
-                                    case 0:  seats[n].score -= 60 ; break;
-                                    case 1: seats[n].score -= 70 ; break;
-                                    case 2: seats[n].score -= 100 ; break;
-                                    case 3: seats[n].score -= 140 ; break;
-                                    case 4: seats[n].score -= 230; break;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            } else {
-                seatData.holds.pop();
-                seatData.countMap[hupai]--;
-            }
-        }
-    }
-
-
-    //抢杠胡
-    if(beiqianggangindex>=0) {
-        var bqg = game.gameSeats[beiqianggangindex];
-        for (var i = 0; i < 4; i++) {
-            var ns = game.gameSeats[i];
-            if (ns.hued) {
-                bqg.score -= base[i] * 2;
-                ns.score += base[i] * 2;
-            }
-        }
-    }
 
 
 }
@@ -1649,15 +811,15 @@ function doGameOver(game,userId,forceEnd){
                 if (roomInfo.conf.koufei == 0) {
                     //4局 房主扣4鉆
                     if (roomInfo.conf.quanshu == 0) {
-                        db.cost_gems(roomInfo.conf.creator, 4);
+                        db.cost_gems(roomInfo.conf.creator, 3);
                     }
                     //8局
                     if (roomInfo.conf.quanshu == 1) {
-                        db.cost_gems(roomInfo.conf.creator, 8);
+                        db.cost_gems(roomInfo.conf.creator, 7);
                     }
                     //16局
                     if (roomInfo.conf.quanshu == 2) {
-                        db.cost_gems(roomInfo.conf.creator, 16);
+                        db.cost_gems(roomInfo.conf.creator, 15);
                     }
                 }
                 //玩家平分
@@ -1963,7 +1125,7 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
  * ********************************************************************/
 
  //开始新的一局
- exports.begin = function(roomId) {
+exports.begin = function(roomId) {
      var roomInfo = roomMgr.getRoom(roomId);
      if(roomInfo == null) return;
      var seats = roomInfo.seats;
@@ -2102,7 +1264,6 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
      //通知前端
      sendOperations(game,turnSeat,game.chuPai);
  };
-
 
 exports.chuPai = function(userId,pai){
 
