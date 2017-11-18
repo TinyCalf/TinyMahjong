@@ -83,6 +83,8 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 			break;
 	}
 
+	//圈数 012 表示 局数为4局 8局 16局
+
 
 	if(roomConf.koufei < 0 || roomConf.koufei > 1){
 		callback(1,null);

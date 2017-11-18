@@ -1590,40 +1590,27 @@ function doGameOver(game,userId,forceEnd){
         delete games[roomId];
 
         var old = roomInfo.nextButton;
-        //正常的庄家逻辑 、谁赢谁做庄
-        // if(game.yipaoduoxiang >= 0){
-        //     roomInfo.nextButton = game.yipaoduoxiang;
-        // }
-        // else if(game.firstHupai >= 0){
-        //     roomInfo.nextButton = game.firstHupai;
-        // }
-        // else{
-        //     roomInfo.nextButton = (game.turn + 1) % 4;
-        // }
-        //沈家门庄家逻辑 庄家不赢就给下一家坐庄。
         var quanshu = game.conf.quanshu;
-        //判断有没有打完一个风向，打完则改变风向
-
-
         //判斷是否打完一局
         var isEnd = false;
-
         //風圈 風向變化
+        //换庄逻辑 庄家赢或者留局则不换装，firstHupai为-1表示没人胡
         if(game.firstHupai != old && game.firstHupai!=-1) {
             roomInfo.nextButton = (old + 1) % 4;
             if(roomInfo.nextButton==roomInfo.beginButton){
                 roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
+                roomInfo.fengxiangju = 1
+            }else{
+                roomInfo.fengxiangju += 1
             }
         }
 
-        //如果打一圈：
-        if(quanshu==1) {
-            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==0) isEnd = true;
-        }
-        //如果打8局
-        else if(quanshu==0){
-            if(game.firstHupai != old && roomInfo.nextButton==roomInfo.beginButton && roomInfo.fengxiang==2) isEnd = true;
-        }
+        var totaljus = roomInfo.fengxiangju + roomInfo.fengxiang * 4;
+
+        //如果打一圈： 012 4局 8局 16局
+        if(game.conf.quanshu==0 && totaljus>=4) isEnd = true;
+        if(game.conf.quanshu==1 && totaljus>=8) isEnd = true;
+        if(game.conf.quanshu==2 && totaljus>=16) isEnd = true;
 
         roomInfo.numOfGames++;
 
@@ -1631,10 +1618,6 @@ function doGameOver(game,userId,forceEnd){
             db.update_next_button(roomId,roomInfo.nextButton);
         }
     }
-
-
-
-
 
     if(forceEnd || game == null){
         fnNoticeResult(true);
@@ -1664,27 +1647,37 @@ function doGameOver(game,userId,forceEnd){
                 //房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
                 //房主出資
                 if (roomInfo.conf.koufei == 0) {
-                    //8盤 房主扣3鉆
+                    //4局 房主扣4鉆
                     if (roomInfo.conf.quanshu == 0) {
-                        db.cost_gems(roomInfo.conf.creator, 3);
+                        db.cost_gems(roomInfo.conf.creator, 4);
                     }
-                    //一圈
+                    //8局
                     if (roomInfo.conf.quanshu == 1) {
-                        db.cost_gems(roomInfo.conf.creator, 6);
+                        db.cost_gems(roomInfo.conf.creator, 8);
+                    }
+                    //16局
+                    if (roomInfo.conf.quanshu == 2) {
+                        db.cost_gems(roomInfo.conf.creator, 16);
                     }
                 }
                 //玩家平分
                 else if (roomInfo.conf.koufei == 1) {
-                    //8盤 每位1鉆
+                    //4局 每位1鉆
                     if (roomInfo.conf.quanshu == 0) {
                         for (var i = 0; i < 4; i++) {
                             db.cost_gems(game.gameSeats[i].userId, 1);
                         }
                     }
-                    //一圈 每位2鉆
+                    //
                     if (roomInfo.conf.quanshu == 1) {
                         for (var i = 0; i < 4; i++) {
                             db.cost_gems(game.gameSeats[i].userId, 2);
+                        }
+                    }
+                    //
+                    if (roomInfo.conf.quanshu == 2) {
+                        for (var i = 0; i < 4; i++) {
+                            db.cost_gems(game.gameSeats[i].userId, 4);
                         }
                     }
                 }
@@ -1979,6 +1972,8 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
          roomInfo:roomInfo,
          gameIndex:roomInfo.numOfGames,
          button:roomInfo.nextButton,
+         fengxiang:roomInfo.fengxiang,
+         fengxiangju:roomInfo.fengxiangju,
          mahjongs:new Array(136),
          currentIndex:0,
          gameSeats:new Array(4),
@@ -1998,6 +1993,8 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
          data.game = game;
          data.seatIndex = i;
          data.userId = seats[i].userId;
+         //做的风位置
+         data.feng = (4-game.button+i)%4
          //持有的牌
          data.holds= [];
          //打出的牌
