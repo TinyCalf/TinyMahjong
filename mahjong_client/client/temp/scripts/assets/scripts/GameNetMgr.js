@@ -22,9 +22,7 @@ cc.Class({
         gamestate: "",
         isOver: false,
         dissoveData: null,
-
-        //舟山麻将额外属性
-        fengxiang: null
+        fengxiang: -1
 
     },
 
@@ -33,7 +31,7 @@ cc.Class({
     //    url: cc.Texture2D,  // optional, default is typeof default
     //    serializable: true, // optional, default is true
     //    visible: true,      // optional, default is true
-    //    displayName: 'Foo', // optional
+    //    displayName: 'Foo', // optionalhol
     //    readonly: false,    // optional, default is false
     // },
     // ...
@@ -308,9 +306,6 @@ cc.Class({
                 }
                 if (s.diangangs == null) {
                     s.diangangs = [];
-                }
-                if (s.chis == null) {
-                    s.chis = [];
                 }
                 if (s.huas == null) {
                     s.huas = [];

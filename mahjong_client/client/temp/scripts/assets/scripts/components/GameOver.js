@@ -35,12 +35,12 @@ cc.Class({
         //TODO:可能出现不同的计分板
         this._gameover = this.node.getChildByName("game_over_" + cc.vv.gameNetMgr.conf.type);
 
-        for (var n = 0; n < 4; n++) {
-            var hua_node = this._gameover.getChildByName("result_list").getChildByName("s" + (n + 1)).getChildByName("huas");
-            for (var m = 0; m < hua_node.childrenCount; m++) {
-                hua_node.children[m].active = false;
-            }
-        }
+        // for(var n = 0; n < 4; n++){
+        //     var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(n+1)).getChildByName("huas");
+        //     for(var m = 0 ; m < hua_node.childrenCount ; m++) {
+        //         hua_node.children[m].active = false;
+        //     }
+        // }
 
         this._gameover.active = false;
 
@@ -572,10 +572,10 @@ cc.Class({
             }
 
             // for(var o = 0; o < 3;++o){
-            //     seatView.hu.children[o].active = false;   
+            //     seatView.hu.children[o].active = false;
             // }
             // if(userData.huorder >= 0){
-            //     seatView.hu.children[userData.huorder].active = true;   
+            //     seatView.hu.children[userData.huorder].active = true;
             // }
 
             seatView.username.string = cc.vv.gameNetMgr.seats[i].name;

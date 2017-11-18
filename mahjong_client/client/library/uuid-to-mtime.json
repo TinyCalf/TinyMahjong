@@ -1425,8 +1425,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1510160705715,
-    "meta": 1510233215275,
+    "asset": 1510766120507,
+    "meta": 1510836547444,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2330,8 +2330,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1510160704182,
-    "meta": 1510233203275,
+    "asset": 1510851641311,
+    "meta": 1510851641800,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -2954,11 +2954,6 @@
     "meta": 1510233222904,
     "relativePath": "scripts\\components\\Folds.js"
   },
-  "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1510160705735,
-    "meta": 1510233223005,
-    "relativePath": "scripts\\components\\GameOver.js"
-  },
   "2b08df29-9b45-410c-b625-64875f2ee3d2": {
     "asset": 1510160705738,
     "meta": 1510233223244,
@@ -2999,11 +2994,6 @@
     "meta": 1510233224445,
     "relativePath": "scripts\\components\\Login.js"
   },
-  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1510160705763,
-    "meta": 1510233224620,
-    "relativePath": "scripts\\components\\MJGame.js"
-  },
   "921df409-65d7-49fb-9185-517ab198c993": {
     "asset": 1510160705765,
     "meta": 1510233224686,
@@ -3020,8 +3010,8 @@
     "relativePath": "scripts\\components\\OnBack.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1510160705773,
-    "meta": 1510233224974,
+    "asset": 1510851711953,
+    "meta": 1510851712118,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "bc0d254b-80bd-40be-8d7a-ead1cbb23089": {
@@ -3080,8 +3070,8 @@
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1510160705689,
-    "meta": 1510233226127,
+    "asset": 1510851961345,
+    "meta": 1510851961748,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {
@@ -3100,8 +3090,8 @@
     "relativePath": "scripts\\MahjongMgr.js"
   },
   "b1cc9c91-775e-425e-a160-d2f4c6299524": {
-    "asset": 1510160705701,
-    "meta": 1510233226627,
+    "asset": 1510766080621,
+    "meta": 1510766080695,
     "relativePath": "scripts\\Net.js"
   },
   "1a6a1a7c-e8d1-4be8-a644-6429dbbbbb6d": {
@@ -3124,14 +3114,24 @@
     "meta": 1510233226912,
     "relativePath": "scripts\\VoiceMgr.js"
   },
+  "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
+    "asset": 1510756815500,
+    "meta": 1510756834922,
+    "relativePath": "scripts\\components\\CreateRoom.js"
+  },
+  "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
+    "asset": 1510837539241,
+    "meta": 1510837544543,
+    "relativePath": "scripts\\components\\GameOver.js"
+  },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1510664502028,
-    "meta": 1510664520070,
+    "asset": 1510842486135,
+    "meta": 1510842517768,
     "relativePath": "scripts\\HTTP.js"
   },
-  "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
-    "asset": 1510672474389,
-    "meta": 1510672999491,
-    "relativePath": "scripts\\components\\CreateRoom.js"
+  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
+    "asset": 1510851384350,
+    "meta": 1510851384915,
+    "relativePath": "scripts\\components\\MJGame.js"
   }
 }

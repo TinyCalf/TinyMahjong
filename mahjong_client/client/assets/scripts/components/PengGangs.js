@@ -19,9 +19,6 @@ cc.Class({
             return;
         }
         
-        
-        this.hidehuas();
-        
         var gameChild = this.node.getChildByName("game");
         var myself = gameChild.getChildByName("myself");
         var pengangroot = myself.getChildByName("penggangs");
@@ -46,22 +43,6 @@ cc.Class({
             self.onPengGangChanged(data.seatData);
         });
         
-        this.node.on('chi_notify',function(data){
-            //刷新所有的牌
-            console.log("penggang plat");
-            console.log(data.detail);
-            var data = data.detail;
-            self.onPengGangChanged(data);
-        });
-        
-        this.node.on('gethua_notify',function(data){
-            console.log("gethua_notify accept");
-            //刷新所有的牌
-            var data = data.detail;
-            self.onHuaChanged(data);
-            
-        });
-        
         this.node.on('game_begin',function(data){
             self.onGameBein();
         });
@@ -72,31 +53,12 @@ cc.Class({
         }
     },
     
-    //隐藏所有花牌
-    hidehuas:function(){
-        //隐藏所有花牌
-        var gameChild = this.node.getChildByName("game");
-        var sides = new Array(
-            "right",
-            "left",
-            "up",
-            "myself");
-        for(var j= 0; j < 4 ; j++){
-            var side = gameChild.getChildByName(sides[j]);
-            var huasroot = side.getChildByName("huas");
-            for(var i = 0 ; i < huasroot.childrenCount ; i++){
-                huasroot.children[i].active = false;
-            }
-        }
-        
-    },
-    
     onGameBein:function(){
         this.hideSide("myself");
         this.hideSide("right");
         this.hideSide("up");
         this.hideSide("left");
-        this.hidehuas();
+        this.hideSide("huas");
     },
     
     hideSide:function(side){
@@ -112,7 +74,7 @@ cc.Class({
     
     onPengGangChanged:function(seatData){
         
-        if(seatData.angangs == null && seatData.diangangs == null && seatData.wangangs == null && seatData.pengs == null && seatData.chis == null){
+        if(seatData.angangs == null && seatData.diangangs == null && seatData.wangangs == null && seatData.pengs == null){
             return;
         }
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(seatData.seatindex);
@@ -163,30 +125,6 @@ cc.Class({
                 index++;    
             }    
         }  
-        
-        //初始化吃牌
-        console.log("初始化吃牌");
-        console.log(seatData);
-        var chis = seatData.chis;
-        if(chis){
-            for(var i = 0; i < chis.length; ++i){
-                var mjid = chis[i];
-                this.initPengAndGangs(pengangroot,side,pre,index,mjid,"chi");
-                index++;    
-            }    
-        }  
-        
-        //初始化花牌
-        console.log("初始化花牌");
-        console.log(seatData);
-        var huas = seatData.huas;
-        if(huas){
-            for(var i = 0; i < huas.length; ++i){
-                var mjid = huas[i];
-                this.onHuaChanged(seatData);                                     
-                index++;    
-            }    
-        }  
     },
     
     
@@ -223,25 +161,6 @@ cc.Class({
         }
 
         var sprites = pgroot.getComponentsInChildren(cc.Sprite);
-        // if(flag == "chi"){
-        //     console.log("排列吃！");
-        //     console.log(mjid);
-        //     for(var s = 0; s < 3; s++){
-        //         var sprite = sprites[s];
-        //         sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid[s]);
-        //     }
-        //     return;
-        // }
-        if(flag == "chi"){
-            var mjid1 = [].concat(mjid);
-            var pai = mjid1.pop();
-            mjid1.sort(function(a,b){
-            return parseInt(a)- parseInt(b)});
-            
-            mjid1[2] = mjid1[1];
-            mjid1[1] = mjid1[0];
-            mjid1[0] = pai;
-        }
         for(var s = 0; s < sprites.length; ++s){
             console.log("in xunhuan");
             var sprite = sprites[s];
@@ -264,8 +183,6 @@ cc.Class({
             else { 
                 if ( flag == "peng" ) {
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid);
-                }else if (flag == "chi") {
-                    sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid1[s]);
                 }else{
                     sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,mjid);
                 }
@@ -273,34 +190,6 @@ cc.Class({
         }
         
     },
-    
-    onHuaChanged:function(seatData){
-        console.log("onHuaChanged!!!");
-        console.log(seatData);
-        var localIndex = cc.vv.gameNetMgr.getLocalIndex(seatData.seatindex);
-        var side = cc.vv.mahjongmgr.getSide(localIndex);
-        var pre = cc.vv.mahjongmgr.getFoldPre(localIndex);
-        
-        var gameChild = this.node.getChildByName("game");
-        var side = gameChild.getChildByName(side);
-        var huas = side.getChildByName("huas");
-        
-        console.log(side);
-        console.log(huas);
-        
-        for(var i = 0; i < seatData.huas.length; i++){
-            console.log("show hua!"+seatData.huas[i]);
-            var nowchild = huas.children[i];
-            nowchild.active = true;
-            console.log(nowchild.active);
-            var sprite = nowchild.getComponent(cc.Sprite);
-            sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID(pre,seatData.huas[i]);
-        }
-    },
-    
-    initHuas:function(){
-        
-    }
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

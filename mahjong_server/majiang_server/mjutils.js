@@ -1,22 +1,3 @@
-//Jonathan 新增函数 打印手牌 方便测试
-exports.consoleHolds = function (seatData) {
-	var hds = ["1筒","2筒","3筒","4筒","5筒","6筒","7筒","8筒","9筒",
-		"1条","2条","3条","4条","5条","6条","7条","8条","9条",
-		"1万","2万","3万","4万","5万","6万","7万","8万","9万",
-		"中","发","白","东","西","南","北","春","夏","秋","冬","梅","兰","竹","菊"];
-	var holds = seatData.holds;
-	var inZH = [].concat(holds);
-	inZH.sort(function(a,b){
-		return parseInt(a-b);
-	});
-	for (var i = 0; i < inZH.length ; i++) {
-		inZH[i] = hds[inZH[i]];
-	}
-	console.log(inZH);
-	return;
-};
-
-
 function checkTingPai(seatData,begin,end){
 	for(var i = begin; i < end; ++i){
 		//如果这牌已经在和了，就不用检查了
@@ -30,7 +11,7 @@ function checkTingPai(seatData,begin,end){
 			seatData.countMap[i] = 1;
 		}
 		else{
-			seatData.countMap[i] ++;		
+			seatData.countMap[i] ++;
 		}
 
 		seatData.holds.push(i);
@@ -43,11 +24,11 @@ function checkTingPai(seatData,begin,end){
                 fan:0
 			};
 		}
-		
+
 		//搞完以后，撤消刚刚加的牌
 		seatData.countMap[i] = old;
 		seatData.holds.pop();
-	}	
+	}
 }
 
 var kanzi = [];
@@ -79,7 +60,7 @@ function matchSingle(seatData,selected){
 				matched = false;
 				break;
 			}
-		}		
+		}
 	}
 
 
@@ -98,7 +79,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected);
 			seatData.kanzi.push([selected - 2,selected - 1,selected]);
 			return true;
-		}		
+		}
 	}
 
 	//分开匹配 A-1,A,A + 1
@@ -118,7 +99,7 @@ function matchSingle(seatData,selected){
 				matched = false;
 				break;
 			}
-		}		
+		}
 	}
 
 	//匹配成功，扣除相应数值
@@ -136,10 +117,10 @@ function matchSingle(seatData,selected){
 			debugRecord(selected + 1);
 			seatData.kanzi.push([selected - 1,selected ,selected + 1]);
 			return true;
-		}		
+		}
 	}
-	
-	
+
+
 	//分开匹配 A,A+1,A + 2
 	matched = true;
 	if(v > 6){
@@ -157,7 +138,7 @@ function matchSingle(seatData,selected){
 				matched = false;
 				break;
 			}
-		}		
+		}
 	}
 
 	//匹配成功，扣除相应数值
@@ -175,7 +156,7 @@ function matchSingle(seatData,selected){
 			debugRecord(selected + 2);
 			seatData.kanzi.push([selected,selected + 1 ,selected + 2]);
 			return true;
-		}		
+		}
 	}
 	return false;
 }
@@ -227,7 +208,7 @@ function checkSingle(seatData){
 			return true;
 		}
 	}
-	
+
 	//按单牌处理
 	return matchSingle(seatData,selected);
 }
@@ -267,7 +248,7 @@ checkTingPai(seatData,18,27);
 console.log(Date.now());
 
 for(k in seatData.tingMap){
-	console.log(nameMap[k]);	
+	console.log(nameMap[k]);
 }
 */
 
@@ -311,5 +292,3 @@ exports.getMJType = function(pai){
           return 2;
       }
 };
-
-

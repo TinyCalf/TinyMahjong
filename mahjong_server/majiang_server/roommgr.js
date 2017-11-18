@@ -6,13 +6,6 @@ var creatingRooms = {};
 var userLocation = {};
 var totalRooms = 0;
 
-var KOUFEI = [0,1]; // 房主出资 和 玩家平分
-var QUANSHU = [8,1]; // 8局 和 一圈 TODO:区分
-var JIESUAN = [0,1,2]; //幺半 一二 二四
-
-
-
-var JU_SHU = [8,8];	// 8局 和 一圈 TODO:区分
 var JU_SHU_COST = [2,3];
 
 function generateRoomId(){
@@ -69,34 +62,21 @@ function constructRoomFromDb(dbdata){
 exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	//验证创建房间参数合法性 每个游戏需要的选项不一样
 	switch(roomConf.type) {
-		case "sjmmj":
+		case "ddh":
 			if(
 				roomConf.type == null
-				|| roomConf.hongzhongdanghua == null
 				|| roomConf.koufei == null
-				|| roomConf.quanshu == null
-				|| roomConf.jiesuan == null){
+				|| roomConf.quanshu == null){
 				callback(1,null);
 				return;
 			}
 			break;
-		case "dhmj":
+		case "yzmj":
 			if(
 				roomConf.type == null
 				|| roomConf.koufei == null
 				|| roomConf.quanshu == null
-				|| roomConf.jiesuan == null){
-				callback(1,null);
-				return;
-			}
-			break;
-		case "tdh":
-			if(
-				roomConf.type == null
-				|| roomConf.koufei == null //(房主出资 平摊)
-				|| roomConf.quanshu == null// 8局 一圈
-				|| roomConf.jiesuan == null // 平摊 包
-			){
+				|| roomConf.difen == null){
 				callback(1,null);
 				return;
 			}
@@ -104,17 +84,17 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 	}
 
 
-	if(roomConf.koufei < 0 || roomConf.koufei > KOUFEI.length){
+	if(roomConf.koufei < 0 || roomConf.koufei > 1){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.quanshu < 0 || roomConf.quanshu > QUANSHU.length){
+	if(roomConf.quanshu < 0 || roomConf.quanshu > 1){
 		callback(1,null);
 		return;
 	}
 
-	if(roomConf.jiesuan < 0 || roomConf.quanshu > JIESUAN.length){
+	if(roomConf.difen && (roomConf.jiesuan < 0 || roomConf.quanshu > 1)){
 		callback(1,null);
 		return;
 	}
@@ -122,22 +102,18 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 
 	//房主出資
 	if( roomConf.koufei == 0 ) {
-		//8盤
+		//半圈
 		if(roomConf.quanshu == 0 && gems < 3) {callback( 2222 , null );return;}
 		//一圈
 		if(roomConf.quanshu == 1 && gems < 6) {callback( 2222 , null );return;}
 	}
 	//玩家平分
 	else if ( roomConf.koufei == 1 ) {
-		//8盤
+		//半圈
 		if(roomConf.quanshu == 0 && gems < 1) {callback( 2222 , null );return;}
 		//一圈
 		if(roomConf.quanshu == 1 && gems < 2) {callback( 2222 , null );return;}
 	}
-
-	//
-	var maxgames = 0;
-	(roomConf.quanshu == 0)?maxgames = 8 : maxgames = 100;
 
 	var fnCreate = function() {
 		var roomId = generateRoomId();
@@ -153,45 +129,36 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 					fnCreate();
 				}
 				else{
-					var createTime = Math.ceil(Date.now()/1000);
+					//相当于掷色子定庄家
 					var beginButton = parseInt(Math.random()*4);
+					var createTime = Math.ceil(Date.now()/1000);
 					var roomInfo = {
 						uuid:"",
 						id:roomId,
-						numOfGames:0,
+						numOfGames:1,
 						fengxiang:0,//风向 0123 东南西北
+						fengxiangju:1,
 						createTime:createTime,
-						//舟山麻将需要记录第一个坐庄的人
 						beginButton:beginButton,
 						nextButton:beginButton,
 						seats:[],
-						//標記是否結算：
+						//標記是否結算
 						ifPayed: false,
 						conf:{
 							type:roomConf.type,
-							hongzhongdanghua:roomConf.hongzhongdanghua,
 							koufei:roomConf.koufei,
 							quanshu:roomConf.quanshu,
-							jiesuan:roomConf.jiesuan,
-							maxGames:maxgames,
-							//TODO:把下面的属性也去掉
-							baseScore:20,
-							maxFan:10000,
+							difen:roomConf.difen,
 							creator:creator,
 						}
 					};
-					
-					// if(roomConf.type == "sjmmj"){
-					// 	roomInfo.gameMgr = require("./gamemgr_sjmmj");
-					// }else if(roomConf.type == "dhmj"){
-					// 	roomInfo.gameMgr = require("./gamemgr_dhmj");
-					// }else {
-					// 	roomInfo.gameMgr = require("./gamemgr_tdh");
-					// }
 
-					//所需文件 gamemagr_XXXX , XXXXX为游戏简称 如沈家门麻将，使用 gamemgr_sjmmj.js 作为游戏逻辑
-					roomInfo.gameMgr = require("./gamemgr_"+roomConf.type);
-					
+					if(roomConf.type == "ddh"){
+						roomInfo.gameMgr = require("./gamemgr_ddh");
+					}else if(roomConf.type == "yzmj"){
+						roomInfo.gameMgr = require("./gamemgr_yzmj");
+					}
+
 					for(var i = 0; i < 4; ++i){
 						roomInfo.seats.push({
 							userId:0,
@@ -204,10 +171,9 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 							numDianPao:0,
 							numAnGang:0,
 							numMingGang:0,
-							numChaJiao:0,
 						});
 					}
-					
+
 
 					//写入数据库
 					var conf = roomInfo.conf;
@@ -228,7 +194,6 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 			});
 		}
 	}
-
 	fnCreate();
 };
 
@@ -245,7 +210,7 @@ exports.destroy = function(roomId){
 			db.set_room_id_of_user(userId,null);
 		}
 	}
-	
+
 	delete rooms[roomId];
 	totalRooms--;
 	db.delete_room(roomId);
@@ -377,7 +342,7 @@ exports.isReady = function(userId){
 	}
 
 	var s = room.seats[seatIndex];
-	return s.ready;	
+	return s.ready;
 }
 
 exports.getUserRoom = function(userId){
@@ -423,7 +388,7 @@ exports.exitRoom = function(userId){
 			numOfPlayers++;
 		}
 	}
-	
+
 	db.set_room_id_of_user(userId,null);
 
 	if(numOfPlayers == 0){

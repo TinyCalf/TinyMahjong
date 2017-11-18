@@ -11,23 +11,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 464,
+                "height": 296,
                 "type": "panel",
-                "width": 304
+                "width": 303.765625
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 461,
+                "height": 629,
                 "type": "panel",
-                "width": 304
+                "width": 303.765625
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 304
+            "width": 303.765625
           },
           {
             "children": [
@@ -40,7 +40,7 @@
                     ],
                     "height": 464,
                     "type": "panel",
-                    "width": 943
+                    "width": 940.34375
                   },
                   {
                     "active": 0,
@@ -54,7 +54,7 @@
                 ],
                 "height": 464,
                 "type": "dock-h",
-                "width": 1146
+                "width": 1142.765625
               },
               {
                 "active": 0,
@@ -64,12 +64,12 @@
                 ],
                 "height": 461,
                 "type": "panel",
-                "width": 1146
+                "width": 1142.765625
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 1146
+            "width": 1142.765625
           },
           {
             "active": 0,
@@ -78,7 +78,7 @@
             ],
             "height": 928,
             "type": "panel",
-            "width": 458
+            "width": 457.484375
           }
         ],
         "snapshot": true,
@@ -88,12 +88,6 @@
       "y": -8,
       "width": 1936,
       "height": 1056
-    },
-    "worker": {
-      "x": 760,
-      "y": 370,
-      "width": 400,
-      "height": 300
     }
   }
 }

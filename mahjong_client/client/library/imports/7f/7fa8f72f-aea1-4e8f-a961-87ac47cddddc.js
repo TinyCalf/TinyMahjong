@@ -77,27 +77,26 @@ cc.Class({
             this._mjcount.string = "";
         }
         this._gamecount = gameChild.getChildByName('gamecount').getComponent(cc.Label);
+        var numofgame = cc.vv.gameNetMgr.numOfGames;
         switch (cc.vv.gameNetMgr.fengxiang) {
             case 0:
-                this._gamecount.string = "东风圈";break;
+                this._gamecount.string = "东风圈第" + numofgame + "局";break;
             case 1:
-                this._gamecount.string = "南风圈";break;
+                this._gamecount.string = "南风圈第" + numofgame + "局";break;
             case 2:
-                this._gamecount.string = "西风圈";break;
+                this._gamecount.string = "西风圈第" + numofgame + "局";break;
             case 3:
-                this._gamecount.string = "北风圈";break;
+                this._gamecount.string = "北风圈第" + numofgame + "局";break;
             default:
                 this._gamecount.string = "";break;
         }
 
         this._gametype = gameChild.getChildByName('gametype');
         switch (cc.vv.gameNetMgr.conf.type) {
-            case "sjmmj":
-                this._gametype.getComponent(cc.Label).string = "沈家门麻将";break;
-            case "dhmj":
-                this._gametype.getComponent(cc.Label).string = "定海麻将";break;
-            case "tdh":
-                this._gametype.getComponent(cc.Label).string = "推到胡";break;
+            case "ddh":
+                this._gametype.getComponent(cc.Label).string = "跌倒胡";break;
+            case "yzmj":
+                this._gametype.getComponent(cc.Label).string = "扬州麻将";break;
         }
 
         var myselfChild = gameChild.getChildByName("myself");
@@ -233,7 +232,7 @@ cc.Class({
 
                 if (!(data.iszimo && localIndex == 0)) {
                     //if(cc.vv.replayMgr.isReplay() == false && localIndex != 0){
-                    //    self.initEmptySprites(seatIndex);               
+                    //    self.initEmptySprites(seatIndex);
                     //}
                     self.initMopai(seatIndex, data.hupai);
                 }
@@ -341,36 +340,6 @@ cc.Class({
             self.playEfx(localIndex, "play_peng");
             cc.vv.audioMgr.playSFX("nv/peng.mp3");
             self.hideOptions();
-        });
-
-        this.node.on('chi_notify', function (data) {
-            console.log('chi_notify');
-            console.log(data);
-            self.hideChupai();
-
-            var seatData = data.detail;
-
-            console.log(data);
-            if (seatData.seatindex == cc.vv.gameNetMgr.seatIndex) {
-                self.initMahjongs();
-            } else {
-                self.initOtherMahjongs(seatData);
-            }
-            var localIndex = self.getLocalIndex(seatData.seatindex);
-            self.playEfx(localIndex, "play_chi");
-            cc.vv.audioMgr.playSFX("nv/chi.mp3");
-            self.hideOptions();
-        });
-
-        this.node.on('buhua_notify', function (data) {
-            console.log('buhua_notify');
-            console.log(data.detail.holds);
-            var seatData = data.detail;
-            if (seatData.seatindex == cc.vv.gameNetMgr.seatIndex) {
-                self.initMahjongs();
-            } else {
-                self.initOtherMahjongs(seatData);
-            }
         });
 
         this.node.on('gang_notify', function (data) {
@@ -573,31 +542,22 @@ cc.Class({
     onGameBeign: function onGameBeign() {
 
         //更换gameover界面头像 懒得封装了，反正以后也用不到
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s1/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s2/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s3/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s4/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s4/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
 
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s1/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s2/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s3/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s4/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
-
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s1/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s2/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s3/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s4/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s4/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
 
         for (var i = 0; i < this._playEfxs.length; ++i) {
@@ -879,7 +839,7 @@ cc.Class({
         var game = this.node.getChildByName("game");
         var sideRoot = game.getChildByName(side);
         var sideHolds = sideRoot.getChildByName("holds");
-        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length + seatData.chis.length;
+        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length;
         num *= 3;
         for (var i = 0; i < num; ++i) {
             var idx = this.getMJIndex(side, i);
@@ -938,7 +898,7 @@ cc.Class({
         }
         console.log(seats);
         //初始化手牌
-        var lackingNum = (seatData.chis.length + seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
+        var lackingNum = (seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
         for (var i = 0; i < holds.length; ++i) {
             var mjid = holds[i];
             var sprite = this._myMJArr[i + lackingNum];

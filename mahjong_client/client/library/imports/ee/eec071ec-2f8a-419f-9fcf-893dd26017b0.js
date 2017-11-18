@@ -76,6 +76,8 @@ cc.Class({
 
         var self = this;
         var onCreate = function onCreate(ret) {
+            console.log("房间创建完成");
+            console.log(ret);
             if (ret.errcode !== 0) {
                 cc.vv.wc.hide();
                 //console.log(ret.errmsg);
@@ -147,6 +149,7 @@ cc.Class({
 
         var self = this;
         var onCreate = function onCreate(ret) {
+
             if (ret.errcode !== 0) {
                 cc.vv.wc.hide();
                 //console.log(ret.errmsg);
