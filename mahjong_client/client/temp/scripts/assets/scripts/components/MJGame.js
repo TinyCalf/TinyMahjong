@@ -160,7 +160,7 @@ cc.Class({
         });
 
         this.node.on('game_begin', function (data) {
-            self.playShazi();
+            //self.playShazi();
             self.onGameBeign(data);
         });
 
@@ -262,32 +262,34 @@ cc.Class({
         });
 
         this.node.on('game_num', function (data) {
-            //console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
-            // switch(cc.vv.gameNetMgr.fengxiang) {
-            //     case 0:
-            //         self._gamecount.string = "东风圈";break;
-            //     case 1:
-            //         self._gamecount.string = "南风圈";break;
-            //     case 2:
-            //         self._gamecount.string = "西风圈";break;
-            //     case 3:
-            //         self._gamecount.string = "北风圈";break;
-
-            // }
+            var numofgame = cc.vv.gameNetMgr.numOfGames;
+            switch (cc.vv.gameNetMgr.fengxiang) {
+                case 0:
+                    this._gamecount.string = "东风圈第" + numofgame + "局";break;
+                case 1:
+                    this._gamecount.string = "南风圈第" + numofgame + "局";break;
+                case 2:
+                    this._gamecount.string = "西风圈第" + numofgame + "局";break;
+                case 3:
+                    this._gamecount.string = "北风圈第" + numofgame + "局";break;
+                default:
+                    this._gamecount.string = "";break;
+            }
         });
 
         this.node.on('game_feng', function (data) {
-            console.log('game_num!!!!!!!!!!' + cc.vv.gameNetMgr.fengxiang);
+            var numofgame = cc.vv.gameNetMgr.numOfGames;
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
-                    self._gamecount.string = "东风圈";break;
+                    this._gamecount.string = "东风圈第" + numofgame + "局";break;
                 case 1:
-                    self._gamecount.string = "南风圈";break;
+                    this._gamecount.string = "南风圈第" + numofgame + "局";break;
                 case 2:
-                    self._gamecount.string = "西风圈";break;
+                    this._gamecount.string = "西风圈第" + numofgame + "局";break;
                 case 3:
-                    self._gamecount.string = "北风圈";break;
-
+                    this._gamecount.string = "北风圈第" + numofgame + "局";break;
+                default:
+                    this._gamecount.string = "";break;
             }
         });
 
@@ -638,6 +640,8 @@ cc.Class({
         }
 
         this.checkQueYiMen();
+
+        this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
     },
 
     onMJClicked: function onMJClicked(event) {

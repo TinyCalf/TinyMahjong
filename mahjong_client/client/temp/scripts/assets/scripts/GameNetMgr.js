@@ -166,19 +166,19 @@ cc.Class({
             //     strArr.push("自摸加底");
             // }
             // if(conf.jiangdui){
-            //     strArr.push("将对");  
+            //     strArr.push("将对");
             // }
             // if(conf.dianganghua == 1){
-            //     strArr.push("点杠花(自摸)");  
+            //     strArr.push("点杠花(自摸)");
             // }
             // else{
             //     strArr.push("点杠花(放炮)");
             // }
             // if(conf.menqing){
-            //     strArr.push("门清、中张");  
+            //     strArr.push("门清、中张");
             // }
             // if(conf.tiandihu){
-            //     strArr.push("天地胡");  
+            //     strArr.push("天地胡");
             // }
             return strArr.join(" ");
         }
@@ -211,7 +211,7 @@ cc.Class({
             cc.director.loadScene("mjgame");
 
             // var loadgame = function (){
-            //     cc.director.loadScene("mjgame"); 
+            //     cc.director.loadScene("mjgame");
             // }
             // var fadeout = cc.fadeOut(0.1);
             // var finish = cc.callFunc(loadgame, this);
@@ -324,7 +324,7 @@ cc.Class({
         });
 
         cc.vv.net.addHandler("game_begin_push", function (data) {
-            console.log('game_action_push');
+            console.log('game_begin_push');
             console.log(data);
             self.button = data;
             self.turn = self.button;
@@ -373,6 +373,8 @@ cc.Class({
                     self.dingque = sd.que;
                 }
             }
+
+            self.dispatchEvent('game_sync');
         });
 
         cc.vv.net.addHandler("game_huanpai_push", function (data) {
@@ -392,7 +394,6 @@ cc.Class({
 
         cc.vv.net.addHandler("game_num_push", function (data) {
             self.numOfGames = data;
-            self.dispatchEvent('game_num', data);
         });
 
         cc.vv.net.addHandler("game_over_push", function (data) {

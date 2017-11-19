@@ -85,13 +85,28 @@ function shuffle(game) {
     }
 
     //打亂順序
-    for(var i = 0; i < mahjongs.length; ++i){
-        var lastIndex = mahjongs.length - 1 - i;
-        var index = Math.floor(Math.random() * lastIndex);
-        var t = mahjongs[index];
-        mahjongs[index] = mahjongs[lastIndex];
-        mahjongs[lastIndex] = t;
-    }
+    // for(var i = 0; i < mahjongs.length; ++i){
+    //     var lastIndex = mahjongs.length - 1 - i;
+    //     var index = Math.floor(Math.random() * lastIndex);
+    //     var t = mahjongs[index];
+    //     mahjongs[index] = mahjongs[lastIndex];
+    //     mahjongs[lastIndex] = t;
+    // }
+
+    // arr1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
+    // arr2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
+    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
+    // arr4 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
+    //
+    // arr = []
+    // for ( var i = 0 ; i < 14 ; i++ ) {
+    //   arr.push(arr1[i])
+    //   arr.push(arr2[i]);
+    //   arr.push(arr3[i]);
+    //   arr.push(arr4[i]);
+    // }
+    //
+    // mahjongs = arr.concat(mahjongs)
 
 }
 
@@ -916,6 +931,7 @@ exports.setReady = function(userId,callback){
 
         var data = {
             fengxiang:roomInfo.fengxiang,
+            fengxiangju:roomInfo.fengxiangju,
             state:game.state,
             numofmj:numOfMJ,
             button:game.button,

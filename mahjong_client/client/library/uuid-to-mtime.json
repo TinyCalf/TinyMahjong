@@ -2330,8 +2330,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1511074233873,
-    "meta": 1511074234045,
+    "asset": 1511077918612,
+    "meta": 1511077918732,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -3010,8 +3010,8 @@
     "relativePath": "scripts\\components\\OnBack.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
-    "asset": 1510851711953,
-    "meta": 1510851712118,
+    "asset": 1511082590261,
+    "meta": 1511082590459,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "bc0d254b-80bd-40be-8d7a-ead1cbb23089": {
@@ -3069,11 +3069,6 @@
     "meta": 1510233226089,
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
-  "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1510851961345,
-    "meta": 1510851961748,
-    "relativePath": "scripts\\GameNetMgr.js"
-  },
   "24e30649-2e07-47de-bb35-4750afa8df14": {
     "asset": 1510160705691,
     "meta": 1510233226233,
@@ -3130,8 +3125,13 @@
     "relativePath": "scripts\\HTTP.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1511075559893,
-    "meta": 1511075560441,
+    "asset": 1511083701558,
+    "meta": 1511083765001,
     "relativePath": "scripts\\components\\MJGame.js"
+  },
+  "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
+    "asset": 1511083634706,
+    "meta": 1511083765003,
+    "relativePath": "scripts\\GameNetMgr.js"
   }
 }

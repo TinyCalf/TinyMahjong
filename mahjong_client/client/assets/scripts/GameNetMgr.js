@@ -19,8 +19,8 @@ cc.Class({
         isOver:false,
         dissoveData:null,
         fengxiang:-1,
-        
-        
+
+
         // foo: {
         //    default: null,
         //    url: cc.Texture2D,  // optional, default is typeof default
@@ -31,7 +31,7 @@ cc.Class({
         // },
         // ...
     },
-    
+
     reset:function(){
         this.turn = -1;
         this.chupai = -1,
@@ -58,23 +58,23 @@ cc.Class({
             this.huanpaimethod = -1;
         }
     },
-    
+
     clear:function(){
         this.dataEventHandler = null;
         if(this.isOver == null){
             this.seats = null;
             this.roomId = null;
             this.maxNumOfGames = 0;
-            this.numOfGames = 0; 
+            this.numOfGames = 0;
         }
     },
-    
+
     dispatchEvent(event,data){
         if(this.dataEventHandler){
             this.dataEventHandler.emit(event,data);
-        }    
+        }
     },
-    
+
     getSeatIndexByID:function(userId){
         for(var i = 0; i < this.seats.length; ++i){
             var s = this.seats[i];
@@ -84,26 +84,26 @@ cc.Class({
         }
         return -1;
     },
-    
+
     isOwner:function(){
-        return this.seatIndex == 0;   
+        return this.seatIndex == 0;
     },
-    
+
     getSeatByID:function(userId){
         var seatIndex = this.getSeatIndexByID(userId);
         var seat = this.seats[seatIndex];
         return seat;
     },
-    
+
     getSelfData:function(){
         return this.seats[this.seatIndex];
     },
-    
+
     getLocalIndex:function(index){
         var ret = (index - this.seatIndex + 4) % 4;
         return ret;
     },
-    
+
     prepareReplay:function(roomInfo,detailOfGame){
         console.log("prepareReplay!!!");
         console.log(roomInfo);
@@ -136,7 +136,7 @@ cc.Class({
             this.conf.type == "sjmmmj";
         }
     },
-    
+
     getWanfa:function(){
         var conf = this.conf;
         if(conf && conf.maxGames!=null && conf.maxFan!=null){
@@ -169,25 +169,25 @@ cc.Class({
             //     strArr.push("自摸加底");
             // }
             // if(conf.jiangdui){
-            //     strArr.push("将对");   
+            //     strArr.push("将对");
             // }
             // if(conf.dianganghua == 1){
-            //     strArr.push("点杠花(自摸)");   
+            //     strArr.push("点杠花(自摸)");
             // }
             // else{
             //     strArr.push("点杠花(放炮)");
             // }
             // if(conf.menqing){
-            //     strArr.push("门清、中张");   
+            //     strArr.push("门清、中张");
             // }
             // if(conf.tiandihu){
-            //     strArr.push("天地胡");   
+            //     strArr.push("天地胡");
             // }
             return strArr.join(" ");
         }
         return "";
     },
-    
+
     initHandlers:function(){
         var self = this;
         cc.vv.net.addHandler("login_result",function(data){
@@ -205,25 +205,25 @@ cc.Class({
                 self.isOver = false;
             }
             else{
-                console.log(data.errmsg);   
+                console.log(data.errmsg);
             }
         });
-                
+
         cc.vv.net.addHandler("login_finished",function(data){
             console.log("login_finished");
-            
-            cc.director.loadScene("mjgame");  
-            
+
+            cc.director.loadScene("mjgame");
+
             // var loadgame = function (){
-            //     cc.director.loadScene("mjgame");  
+            //     cc.director.loadScene("mjgame");
             // }
             // var fadeout = cc.fadeOut(0.1);
             // var finish = cc.callFunc(loadgame, this);
             // var seq = cc.sequence(fadeout, finish);
             // cc.director.getScene().getChildByName('Canvas').runAction(seq);
-            
-            
-            
+
+
+
             //cc.director.loadScene("mjgame");
         });
 
@@ -234,7 +234,7 @@ cc.Class({
             self.isDingQueing = false;
             self.seats = null;
         });
-        
+
         cc.vv.net.addHandler("exit_notify_push",function(data){
            var userId = data;
            var s = self.getSeatByID(userId);
@@ -244,7 +244,7 @@ cc.Class({
                self.dispatchEvent("user_state_changed",s);
            }
         });
-        
+
         cc.vv.net.addHandler("dispress_push",function(data){
             self.roomId = null;
             self.turn = -1;
@@ -252,7 +252,7 @@ cc.Class({
             self.isDingQueing = false;
             self.seats = null;
         });
-                
+
         cc.vv.net.addHandler("disconnect",function(data){
             if(self.roomId == null){
                 cc.director.loadScene("hall");
@@ -260,14 +260,14 @@ cc.Class({
             else{
                 if(self.isOver == false){
                     cc.vv.userMgr.oldRoomId = self.roomId;
-                    self.dispatchEvent("disconnect");                    
+                    self.dispatchEvent("disconnect");
                 }
                 else{
                     self.roomId = null;
                 }
             }
         });
-        
+
         cc.vv.net.addHandler("new_user_comes_push",function(data){
             //console.log(data);
             var seatIndex = data.seatindex;
@@ -280,7 +280,7 @@ cc.Class({
             }
             self.dispatchEvent('new_user',self.seats[seatIndex]);
         });
-        
+
         cc.vv.net.addHandler("user_state_push",function(data){
             //console.log(data);
             var userId = data.userid;
@@ -288,7 +288,7 @@ cc.Class({
             seat.online = data.online;
             self.dispatchEvent('user_state_changed',seat);
         });
-        
+
         cc.vv.net.addHandler("user_ready_push",function(data){
             //console.log(data);
             var userId = data.userid;
@@ -296,14 +296,14 @@ cc.Class({
             seat.ready = data.ready;
             self.dispatchEvent('user_state_changed',seat);
         });
-        
+
         cc.vv.net.addHandler("game_holds_push",function(data){
-            var seat = self.seats[self.seatIndex]; 
+            var seat = self.seats[self.seatIndex];
             console.log(data);
             seat.holds = data;
-            
+
             for(var i = 0; i < self.seats.length; ++i){
-                var s = self.seats[i]; 
+                var s = self.seats[i];
                 if(s.folds == null){
                     s.folds = [];
                 }
@@ -326,28 +326,28 @@ cc.Class({
             }
             self.dispatchEvent('game_holds');
         });
-        
+
         cc.vv.net.addHandler("game_feng_push",function(data){
             self.fengxiang = data;
             self.dispatchEvent('game_feng');
         });
-        
-         
+
+
         cc.vv.net.addHandler("game_begin_push",function(data){
-            console.log('game_action_push');
+            console.log('game_begin_push');
             console.log(data);
             self.button = data;
             self.turn = self.button;
             self.gamestate = "begin";
             self.dispatchEvent('game_begin');
         });
-        
+
         cc.vv.net.addHandler("game_playing_push",function(data){
-            console.log('game_playing_push'); 
-            self.gamestate = "playing"; 
+            console.log('game_playing_push');
+            self.gamestate = "playing";
             self.dispatchEvent('game_playing');
         });
-        
+
         cc.vv.net.addHandler("game_sync_push",function(data){
             console.log("game_sync_push");
             console.log(data);
@@ -376,7 +376,7 @@ cc.Class({
                 seat.chis = sd.chis;
                 seat.huas = sd.huas;
                 seat.dingque = sd.que;
-                seat.hued = sd.hued; 
+                seat.hued = sd.hued;
                 seat.iszimo = sd.iszimo;
                 seat.huinfo = sd.huinfo;
                 seat.huanpais = sd.huanpais;
@@ -384,29 +384,30 @@ cc.Class({
                     self.dingque = sd.que;
                 }
            }
+
+           self.dispatchEvent('game_sync');
         });
-        
-        
+
+
         cc.vv.net.addHandler("game_huanpai_push",function(data){
             self.isHuanSanZhang = true;
             self.dispatchEvent('game_huanpai');
         });
-        
+
         cc.vv.net.addHandler("hangang_notify_push",function(data){
             self.dispatchEvent('hangang_notify',data);
         });
-        
+
         cc.vv.net.addHandler("game_action_push",function(data){
             self.curaction = data;
             console.log(data);
             self.dispatchEvent('game_action',data);
         });
-        
-        
-        
+
+
+
         cc.vv.net.addHandler("game_num_push",function(data){
             self.numOfGames = data;
-            self.dispatchEvent('game_num',data);
         });
 
         cc.vv.net.addHandler("game_over_push",function(data){
@@ -419,21 +420,21 @@ cc.Class({
             self.dispatchEvent('game_over',results);
             if(data.endinfo){
                 self.isOver = true;
-                self.dispatchEvent('game_end',data.endinfo);    
+                self.dispatchEvent('game_end',data.endinfo);
             }
             self.reset();
             for(var i = 0; i <  self.seats.length; ++i){
-                self.dispatchEvent('user_state_changed',self.seats[i]);    
+                self.dispatchEvent('user_state_changed',self.seats[i]);
             }
         });
-        
+
         cc.vv.net.addHandler("mj_count_push",function(data){
             console.log('mj_count_push');
             self.numOfMJ = data;
             //console.log(data);
             self.dispatchEvent('mj_count',data);
         });
-        
+
         cc.vv.net.addHandler("game_chupai_push",function(data){
             console.log('game_chupai_push');
             //console.log(data);
@@ -441,25 +442,25 @@ cc.Class({
             var si = self.getSeatIndexByID(turnUserID);
             self.doTurnChange(si);
         });
-        
+
         cc.vv.net.addHandler("hu_push",function(data){
             console.log('hu_push');
             console.log(data);
             self.doHu(data);
         });
-        
+
         cc.vv.net.addHandler("game_chupai_notify_push",function(data){
             var userId = data.userId;
             var pai = data.pai;
             var si = self.getSeatIndexByID(userId);
             self.doChupai(si,pai);
         });
-        
+
         cc.vv.net.addHandler("game_mopai_push",function(data){
             console.log('game_mopai_push');
             self.doMopai(self.seatIndex,data);
         });
-        
+
         cc.vv.net.addHandler("guo_notify_push",function(data){
             console.log('guo_notify_push');
             var userId = data.userId;
@@ -467,23 +468,23 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doGuo(si,pai);
         });
-        
+
         cc.vv.net.addHandler("guo_result",function(data){
             console.log('guo_result');
             self.dispatchEvent('guo_result');
         });
-        
+
         cc.vv.net.addHandler("guohu_push",function(data){
             console.log('guohu_push');
             self.dispatchEvent("push_notice",{info:"过胡",time:1.5});
         });
-        
+
         cc.vv.net.addHandler("huanpai_notify",function(data){
             var seat = self.getSeatByID(data.si);
             seat.huanpais = data.huanpais;
             self.dispatchEvent('huanpai_notify',seat);
         });
-        
+
         cc.vv.net.addHandler("game_huanpai_over_push",function(data){
             console.log('game_huanpai_over_push');
             var info = "";
@@ -502,7 +503,7 @@ cc.Class({
             self.dispatchEvent("game_huanpai_over");
             self.dispatchEvent("push_notice",{info:info,time:2});
         });
-        
+
         cc.vv.net.addHandler("peng_notify_push",function(data){
             console.log('peng_notify_push');
             console.log(data);
@@ -511,7 +512,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doPeng(si,data.pai);
         });
-        
+
         cc.vv.net.addHandler("gang_notify_push",function(data){
             console.log('gang_notify_push');
             console.log(data);
@@ -520,7 +521,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doGang(si,pai,data.gangtype);
         });
-        
+
         cc.vv.net.addHandler("chi_notify_push",function(data){
             console.log('chi_notify_push');
             console.log(data);
@@ -530,7 +531,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doChi(si,data.pai,chigroup);
         });
-        
+
         cc.vv.net.addHandler("gethua_notify_push",function(data){
             console.log('gethua_notify_push');
             var userId = data.userid;
@@ -538,7 +539,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doHua(si,data.pai);
         });
-        
+
         //开局补花侦听 全局
         cc.vv.net.addHandler("buhua_notify_push",function(data){
             console.log('buhua_notify_push');
@@ -547,7 +548,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doBuhua(si,buhuas);
         });
-        
+
         //开局补花侦听 自己
         cc.vv.net.addHandler("game_buhua_push",function(data){
             console.log('game_buhua_push');
@@ -557,73 +558,73 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doBuhuaforme(si,holds,buhuas);
         });
-        
+
         cc.vv.net.addHandler("game_dingque_notify_push",function(data){
             self.dispatchEvent('game_dingque_notify',data);
         });
-        
+
         cc.vv.net.addHandler("game_dingque_finish_push",function(data){
             for(var i = 0; i < data.length; ++i){
                 self.seats[i].dingque = data[i];
             }
             self.dispatchEvent('game_dingque_finish',data);
         });
-        
-        
+
+
         cc.vv.net.addHandler("chat_push",function(data){
-            self.dispatchEvent("chat_push",data);    
+            self.dispatchEvent("chat_push",data);
         });
-        
+
         cc.vv.net.addHandler("quick_chat_push",function(data){
             self.dispatchEvent("quick_chat_push",data);
         });
-        
+
         cc.vv.net.addHandler("emoji_push",function(data){
             self.dispatchEvent("emoji_push",data);
         });
-        
+
         cc.vv.net.addHandler("dissolve_notice_push",function(data){
-            console.log("dissolve_notice_push"); 
+            console.log("dissolve_notice_push");
             console.log(data);
             self.dissoveData = data;
             self.dispatchEvent("dissolve_notice",data);
         });
-        
+
         cc.vv.net.addHandler("dissolve_cancel_push",function(data){
             self.dissoveData = null;
             self.dispatchEvent("dissolve_cancel",data);
         });
-        
+
         cc.vv.net.addHandler("voice_msg_push",function(data){
             self.dispatchEvent("voice_msg",data);
         });
     },
-    
+
     doGuo:function(seatIndex,pai){
         var seatData = this.seats[seatIndex];
         var folds = seatData.folds;
         folds.push(pai);
-        this.dispatchEvent('guo_notify',seatData);    
+        this.dispatchEvent('guo_notify',seatData);
     },
-    
+
     doMopai:function(seatIndex,pai){
         var seatData = this.seats[seatIndex];
         if(seatData.holds){
             seatData.holds.push(pai);
-            this.dispatchEvent('game_mopai',{seatIndex:seatIndex,pai:pai});            
+            this.dispatchEvent('game_mopai',{seatIndex:seatIndex,pai:pai});
         }
     },
-    
+
     doChupai:function(seatIndex,pai){
         this.chupai = pai;
         var seatData = this.seats[seatIndex];
-        if(seatData.holds){             
+        if(seatData.holds){
             var idx = seatData.holds.indexOf(pai);
             seatData.holds.splice(idx,1);
         }
-        this.dispatchEvent('game_chupai_notify',{seatData:seatData,pai:pai});    
+        this.dispatchEvent('game_chupai_notify',{seatData:seatData,pai:pai});
     },
-    
+
     doPeng:function(seatIndex,pai){
         console.log(seatIndex);
         var seatData = this.seats[seatIndex];
@@ -638,16 +639,16 @@ cc.Class({
             for(var i = 0; i < 2; ++i){
                 var idx = seatData.holds.indexOf(pai);
                 seatData.holds.splice(idx,1);
-            }                
+            }
         }
-            
+
         //更新碰牌数据
         var pengs = seatData.pengs;
         pengs.push(pai);
-            
+
         this.dispatchEvent('peng_notify',seatData);
     },
-    
+
     doChi:function(seatIndex,pai,chigroup){
         console.log("dochi");
         var seatData = this.seats[seatIndex];
@@ -658,16 +659,16 @@ cc.Class({
                 if(pai == chigroup[i]) continue;
                 var idx = seatData.holds.indexOf(chigroup[i]);
                 seatData.holds.splice(idx,1);
-            }                
+            }
         }
-            
+
         //更新吃牌数据
         var chis = seatData.chis;
         chis.push(chigroup);
-            
+
         this.dispatchEvent('chi_notify',seatData);
     },
-    
+
     doHua:function(seatIndex,pai){
         var seatData = this.seats[seatIndex];
         //更新花牌数据
@@ -678,7 +679,7 @@ cc.Class({
         huas.push(pai);
         this.dispatchEvent('gethua_notify',seatData);
     },
-    
+
     doBuhua:function(seatIndex,buhuas){
         console.log("da buhua");
          var seatData = this.seats[seatIndex];
@@ -692,7 +693,7 @@ cc.Class({
         }
         this.dispatchEvent('gethua_notify',seatData);
     },
-    
+
     doBuhuaforme:function(seatIndex,holds,buhuas){
         console.log("da buhua");
         var seatData = this.seats[seatIndex];
@@ -706,7 +707,7 @@ cc.Class({
         seatData.holds = holds;
         this.dispatchEvent('buhua_notify',seatData);
     },
-    
+
     getGangType:function(seatData,pai){
         if(seatData.pengs.indexOf(pai) != -1){
             return "wangang";
@@ -726,14 +727,14 @@ cc.Class({
             }
         }
     },
-    
+
     doGang:function(seatIndex,pai,gangtype){
         var seatData = this.seats[seatIndex];
-        
+
         if(!gangtype){
             gangtype = this.getGangType(seatData,pai);
         }
-        
+
         if(gangtype == "wangang"){
             if(seatData.pengs.indexOf(pai) != -1){
                 var idx = seatData.pengs.indexOf(pai);
@@ -741,7 +742,7 @@ cc.Class({
                     seatData.pengs.splice(idx,1);
                 }
             }
-            seatData.wangangs.push(pai);      
+            seatData.wangangs.push(pai);
         }
         if(seatData.holds){
             for(var i = 0; i <= 4; ++i){
@@ -761,11 +762,11 @@ cc.Class({
         }
         this.dispatchEvent('gang_notify',{seatData:seatData,gangtype:gangtype});
     },
-    
+
     doHu:function(data){
         this.dispatchEvent('hupai',data);
     },
-    
+
     doTurnChange:function(si){
         var data = {
             last:this.turn,
@@ -774,8 +775,8 @@ cc.Class({
         this.turn = si;
         this.dispatchEvent('game_chupai',data);
     },
-    
-    
+
+
     connectGameServer:function(data){
         this.dissoveData = null;
         cc.vv.net.ip = data.ip + ":" + data.port;
@@ -792,7 +793,7 @@ cc.Class({
             };
             cc.vv.net.send("login",sd);
         };
-        
+
         var onConnectFailed = function(){
             console.log("failed.");
             cc.vv.wc.hide();

@@ -58,7 +58,6 @@ cc.Class({
         this.hideSide("right");
         this.hideSide("up");
         this.hideSide("left");
-        this.hideSide("huas");
     },
 
     hideSide: function hideSide(side) {
