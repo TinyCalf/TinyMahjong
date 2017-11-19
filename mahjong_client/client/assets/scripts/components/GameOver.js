@@ -83,18 +83,15 @@ cc.Class({
 
     onGameOver(data){
         //TODO:多种判定
-        if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
-            this.onGameOver_SJMMJ(data);
+        if(cc.vv.gameNetMgr.conf.type == "ddh"){
+            this.onGameOver_DDH(data);
         }
-        else if(cc.vv.gameNetMgr.conf.type == "dhmj") {
-            this.onGameOver_DHMJ(data);
-        }
-        else if(cc.vv.gameNetMgr.conf.type == "tdh") {
-            this.onGameOver_TDH(data);
+        else if(cc.vv.gameNetMgr.conf.type == "yzmj") {
+            this.onGameOver_YZMJ(data);
         }
     },
 
-    onGameOver_SJMMJ(data){
+    onGameOver_DDH(data){
         console.log(data);
         if(data.length == 0){
             this._gameresult.active = true;
@@ -427,7 +424,7 @@ cc.Class({
             }
         }
     },
-    onGameOver_DHMJ:function(data){
+    onGameOver_YZMJ:function(data){
         console.log(data);
         if(data.length == 0){
             this._gameresult.active = true;

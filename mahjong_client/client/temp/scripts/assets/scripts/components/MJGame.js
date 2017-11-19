@@ -265,15 +265,15 @@ cc.Class({
             var numofgame = cc.vv.gameNetMgr.numOfGames;
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
-                    this._gamecount.string = "东风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "东风圈第" + numofgame + "局";break;
                 case 1:
-                    this._gamecount.string = "南风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "南风圈第" + numofgame + "局";break;
                 case 2:
-                    this._gamecount.string = "西风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "西风圈第" + numofgame + "局";break;
                 case 3:
-                    this._gamecount.string = "北风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "北风圈第" + numofgame + "局";break;
                 default:
-                    this._gamecount.string = "";break;
+                    self._gamecount.string = "";break;
             }
         });
 
@@ -281,15 +281,15 @@ cc.Class({
             var numofgame = cc.vv.gameNetMgr.numOfGames;
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
-                    this._gamecount.string = "东风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "东风圈第" + numofgame + "局";break;
                 case 1:
-                    this._gamecount.string = "南风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "南风圈第" + numofgame + "局";break;
                 case 2:
-                    this._gamecount.string = "西风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "西风圈第" + numofgame + "局";break;
                 case 3:
-                    this._gamecount.string = "北风圈第" + numofgame + "局";break;
+                    self._gamecount.string = "北风圈第" + numofgame + "局";break;
                 default:
-                    this._gamecount.string = "";break;
+                    self._gamecount.string = "";break;
             }
         });
 
