@@ -2330,8 +2330,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1510851641311,
-    "meta": 1510851641800,
+    "asset": 1511074233873,
+    "meta": 1511074234045,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -3130,8 +3130,8 @@
     "relativePath": "scripts\\HTTP.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1510851384350,
-    "meta": 1510851384915,
+    "asset": 1511075559893,
+    "meta": 1511075560441,
     "relativePath": "scripts\\components\\MJGame.js"
   }
 }

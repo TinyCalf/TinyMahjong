@@ -956,7 +956,8 @@ cc.Class({
                 if (sprite.node.mjId != null) {
                     var type = cc.vv.mahjongmgr.getMahjongType(sprite.node.mjId);
                     if (hasQue && type != dingque) {
-                        sprite.node.getComponent(cc.Button).interactable = false;
+                        // sprite.node.getComponent(cc.Button).interactable = false;
+                        sprite.node.getComponent(cc.Button).interactable = true;
                     } else {
                         sprite.node.getComponent(cc.Button).interactable = true;
                     }
@@ -967,7 +968,8 @@ cc.Class({
                 for (var i = 0; i < 14; ++i) {
                     var sprite = this._myMJArr[i];
                     if (sprite.node.active == true) {
-                        sprite.node.getComponent(cc.Button).interactable = i == 13;
+                        // sprite.node.getComponent(cc.Button).interactable = i == 13;
+                        sprite.node.getComponent(cc.Button).interactable = true;
                     }
                 }
             } else {

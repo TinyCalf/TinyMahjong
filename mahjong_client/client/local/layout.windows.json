@@ -11,23 +11,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 296,
+                "height": 432,
                 "type": "panel",
-                "width": 303.765625
+                "width": 357
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 629,
+                "height": 493,
                 "type": "panel",
-                "width": 303.765625
+                "width": 357
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 303.765625
+            "width": 357
           },
           {
             "children": [
@@ -40,7 +40,7 @@
                     ],
                     "height": 464,
                     "type": "panel",
-                    "width": 940.34375
+                    "width": 795
                   },
                   {
                     "active": 0,
@@ -49,12 +49,12 @@
                     ],
                     "height": 464,
                     "type": "panel",
-                    "width": 200
+                    "width": 243
                   }
                 ],
                 "height": 464,
                 "type": "dock-h",
-                "width": 1142.765625
+                "width": 1041
               },
               {
                 "active": 0,
@@ -64,12 +64,12 @@
                 ],
                 "height": 461,
                 "type": "panel",
-                "width": 1142.765625
+                "width": 1041
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 1142.765625
+            "width": 1041
           },
           {
             "active": 0,
@@ -78,7 +78,7 @@
             ],
             "height": 928,
             "type": "panel",
-            "width": 457.484375
+            "width": 510
           }
         ],
         "snapshot": true,
@@ -88,6 +88,18 @@
       "y": -8,
       "width": 1936,
       "height": 1056
+    },
+    "window-1511073092416": {
+      "x": 270,
+      "y": 140,
+      "width": 1296,
+      "height": 815
+    },
+    "worker": {
+      "x": 760,
+      "y": 370,
+      "width": 400,
+      "height": 300
     }
   }
 }
