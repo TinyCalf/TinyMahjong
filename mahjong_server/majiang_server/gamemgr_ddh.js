@@ -815,10 +815,13 @@ function doGameOver(game,userId,forceEnd){
             //保存游戏风向
             db.update_fengxiang(roomId,roomInfo.fengxiang);
 
+            //TODO 增加保存风圈局
+            db.update_fengxiangju(roomId, roomInfo.fengxiangju);
+
             //保存开始的庄
             db.update_begin_button(roomId,roomInfo.beginButton);
 
-            //扣除鑽石
+            //扣除鑽石 TODO：
             if(roomInfo.ifPayed == false) {
                 roomInfo.ifPayed = true;
                 //房主出資 8盤為3鉆 一圈為6鉆； 玩家平分 8盤每位1鉆 一圈每位2鉆
@@ -1905,9 +1908,10 @@ exports.hu = function(userId){
 
     //和牌的下家继续打
     clearAllOptions(game);
-    game.turn = game.lastHuPaiSeat;
-    moveToNextUser(game);
-    doUserMoPai(game);
+    //TODO 这里改成正常逻辑
+    // game.turn = game.lastHuPaiSeat;
+    // moveToNextUser(game);
+    // doUserMoPai(game);
 };
 
 exports.guo = function(userId){

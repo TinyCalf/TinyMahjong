@@ -295,8 +295,12 @@ cc.Class({
         });
 
         this.node.on('game_over',function(data){
+            self.hideOptions();
+            self.hideChupai();
             self.gameRoot.active = false;
             self.prepareRoot.active = true;
+            //隐藏opts
+
         });
 
 

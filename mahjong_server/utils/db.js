@@ -1,4 +1,4 @@
-var mysql=require("mysql");  
+var mysql=require("mysql");
 var crypto = require('./crypto');
 
 var pool = null;
@@ -6,24 +6,24 @@ var pool = null;
 function nop(a,b,c,d,e,f,g){
 
 }
-  
-function query(sql,callback){  
-    pool.getConnection(function(err,conn){  
-        if(err){  
-            callback(err,null,null);  
-        }else{  
-            conn.query(sql,function(qerr,vals,fields){  
-                //释放连接  
-                conn.release();  
-                //事件驱动回调  
-                callback(qerr,vals,fields);  
-            });  
-        }  
-    });  
+
+function query(sql,callback){
+    pool.getConnection(function(err,conn){
+        if(err){
+            callback(err,null,null);
+        }else{
+            conn.query(sql,function(qerr,vals,fields){
+                //释放连接
+                conn.release();
+                //事件驱动回调
+                callback(qerr,vals,fields);
+            });
+        }
+    });
 };
 
 exports.init = function(config){
-    pool = mysql.createPool({  
+    pool = mysql.createPool({
         host: config.HOST,
         user: config.USER,
         password: config.PSWD,
@@ -109,13 +109,13 @@ exports.create_account = function(account,password,callback){
         if (err) {
             if(err.code == 'ER_DUP_ENTRY'){
                 callback(false);
-                return;         
+                return;
             }
             callback(false);
             throw err;
         }
         else{
-            callback(true);            
+            callback(true);
         }
     });
 };
@@ -125,7 +125,7 @@ exports.get_account_info = function(account,password,callback){
     if(account == null){
         callback(null);
         return;
-    }  
+    }
 
     var sql = 'SELECT * FROM t_accounts WHERE account = "' + account + '"';
     query(sql, function(err, rows, fields) {
@@ -133,22 +133,22 @@ exports.get_account_info = function(account,password,callback){
             callback(null);
             throw err;
         }
-        
+
         if(rows.length == 0){
             callback(null);
             return;
         }
-        
+
         if(password != null){
             var psw = crypto.md5(password);
             if(rows[0].password == psw){
                 callback(null);
                 return;
-            }    
+            }
         }
 
         callback(rows[0]);
-    }); 
+    });
 };
 
 exports.is_user_exist = function(account,callback){
@@ -170,7 +170,7 @@ exports.is_user_exist = function(account,callback){
         }
 
         callback(true);
-    });  
+    });
 }
 
 
@@ -227,7 +227,7 @@ exports.add_user_gems = function(userid,gems,callback){
         callback(false);
         return;
     }
-    
+
     var sql = 'UPDATE t_users SET gems = gems +' + gems + ' WHERE userid = ' + userid;
     console.log(sql);
     query(sql,function(err,rows,fields){
@@ -238,8 +238,8 @@ exports.add_user_gems = function(userid,gems,callback){
         }
         else{
             callback(rows.affectedRows > 0);
-            return; 
-        } 
+            return;
+        }
     });
 };
 
@@ -264,7 +264,7 @@ exports.get_gems = function(account,callback){
 
         callback(rows[0]);
     });
-}; 
+};
 
 exports.get_user_history = function(userId,callback){
     callback = callback == null? nop:callback;
@@ -286,13 +286,13 @@ exports.get_user_history = function(userId,callback){
         }
         var history = rows[0].history;
         if(history == null || history == ""){
-            callback(null);    
+            callback(null);
         }
         else{
             console.log(history.length);
             history = JSON.parse(history);
             callback(history);
-        }        
+        }
     });
 };
 
@@ -397,7 +397,7 @@ exports.update_user_info = function(userid,name,headimg,sex,callback){
         callback(null);
         return;
     }
- 
+
     if(headimg){
         headimg = '"' + headimg + '"';
     }
@@ -588,6 +588,23 @@ exports.update_fengxiang = function(roomId,fengxiang,callback){
     });
 };
 
+//新增 同步风向局
+exports.update_fengxiangju = function(roomId,fengxiangju,callback){
+    callback = callback == null? nop:callback;
+    var sql = 'UPDATE t_rooms SET fengxiangju = {0} WHERE id = "{1}"'
+    sql = sql.format(fengxiangju,roomId);
+    //console.log(sql);
+    query(sql,function(err,row,fields){
+        if(err){
+            callback(false);
+            throw err;
+        }
+        else{
+            callback(true);
+        }
+    });
+};
+
 exports.update_next_button = function(roomId,nextButton,callback){
     callback = callback == null? nop:callback;
     var sql = 'UPDATE t_rooms SET next_button = {0} WHERE id = "{1}"'
@@ -710,7 +727,7 @@ exports.delete_games = function(room_uuid,callback){
     callback = callback == null? nop:callback;
     if(room_uuid == null){
         callback(false);
-    }    
+    }
     var sql = "DELETE FROM t_games WHERE room_uuid = '{0}'";
     sql = sql.format(room_uuid);
     console.log(sql);
@@ -766,7 +783,7 @@ exports.update_game_result = function(room_uuid,index,result,callback){
     if(room_uuid == null || result){
         callback(false);
     }
-    
+
     result = JSON.stringify(result);
     var sql = "UPDATE t_games SET result = '"+ result +"' WHERE room_uuid = '" + room_uuid + "' AND game_index = " + index ;
     //console.log(sql);
@@ -783,18 +800,18 @@ exports.update_game_result = function(room_uuid,index,result,callback){
 
 exports.get_message = function(type,version,callback){
     callback = callback == null? nop:callback;
-    
+
     var sql = 'SELECT * FROM t_message WHERE type = "'+ type + '"';
-    
+
     if(version == "null"){
         version = null;
     }
-    
+
     if(version){
         version = '"' + version + '"';
-        sql += ' AND version != ' + version;   
+        sql += ' AND version != ' + version;
     }
-     
+
     query(sql, function(err, rows, fields) {
         if(err){
             callback(false);
@@ -802,7 +819,7 @@ exports.get_message = function(type,version,callback){
         }
         else{
             if(rows.length > 0){
-                callback(rows[0]);    
+                callback(rows[0]);
             }
             else{
                 callback(null);

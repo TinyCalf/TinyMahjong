@@ -256,16 +256,16 @@ cc.Class({
             seatView.reason.string = actionArr.join("、");
 
             //显示丝数台数
-            console.log("显示台和丝");
-            console.log(userData.tai);
-            console.log(userData.si);
-            console.log(seatView.taisi.string);
-            seatView.taisi.string = userData.tai + "台" + userData.si + "丝";
+            // console.log("显示台和丝");
+            // console.log(userData.tai);
+            // console.log(userData.si);
+            // console.log( seatView.taisi.string);
+            // seatView.taisi.string = userData.tai + "台" + userData.si + "丝";
 
             //显示胡数
-            var fan = 0;
-            fan = userData.fan;
-            seatView.fan.string = fan + "胡";
+            // var fan = 0;
+            // fan = userData.fan;
+            // seatView.fan.string = fan + "胡";
 
             //
             if (userData.score > 0) {
@@ -292,7 +292,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -340,14 +340,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 
@@ -480,14 +480,6 @@ cc.Class({
                     actionArr.push("被抢杠");
                 } else if (ac.type == "beichadajiao") {
                     actionArr.push("被查叫");
-                } else if (ac.type == "sanchisanpeng0") {
-                    actionArr.push("三吃三碰东");
-                } else if (ac.type == "sanchisanpeng1") {
-                    actionArr.push("三吃三碰南");
-                } else if (ac.type == "sanchisanpeng2") {
-                    actionArr.push("三吃三碰西");
-                } else if (ac.type == "sanchisanpeng3") {
-                    actionArr.push("三吃三碰北");
                 }
             }
 
@@ -604,7 +596,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -652,14 +644,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 
@@ -904,7 +896,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -952,14 +944,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 

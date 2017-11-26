@@ -1,80 +1,52 @@
-2017-11-19T03:10:01.343Z - normal: Load ~/.CocosCreator/settings.json
-2017-11-19T03:10:01.358Z - normal: checking language setting...
-2017-11-19T03:10:01.358Z - normal: Language: zh
-2017-11-19T03:10:02.408Z - success: protocol editor-framework registered
-2017-11-19T03:10:02.408Z - success: protocol app registered
-2017-11-19T03:10:02.408Z - success: protocol packages registered
-2017-11-19T03:10:02.408Z - success: protocol theme registered
-2017-11-19T03:10:02.408Z - success: protocol unpack registerred
-2017-11-19T03:10:02.717Z - normal: connected!
-2017-11-19T03:10:02.732Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-11-19T03:10:02.732Z - normal: Initializing Cocos Creator Editor
-2017-11-19T03:10:03.577Z - normal: Initializing Cocos2d
-2017-11-19T03:10:04.818Z - normal: Initializing Asset Database
-2017-11-19T03:10:04.975Z - success: protocol uuid registerred
-2017-11-19T03:10:04.975Z - success: protocol db registerred
-2017-11-19T03:10:04.975Z - success: protocol thumbnail registerred
-2017-11-19T03:10:04.975Z - normal: Loading editor/builtin packages
-2017-11-19T03:10:05.170Z - success: assets loaded
-2017-11-19T03:10:05.170Z - success: builder loaded
-2017-11-19T03:10:05.185Z - success: hierarchy loaded
-2017-11-19T03:10:05.185Z - success: inspector loaded
-2017-11-19T03:10:05.185Z - success: keystore loaded
-2017-11-19T03:10:05.185Z - success: node-library loaded
-2017-11-19T03:10:05.201Z - success: preferences loaded
-2017-11-19T03:10:05.201Z - success: project-importer loaded
-2017-11-19T03:10:05.217Z - success: project-settings loaded
-2017-11-19T03:10:05.217Z - success: ui-kit loaded
-2017-11-19T03:10:05.217Z - success: ui-grid loaded
-2017-11-19T03:10:05.232Z - success: scene loaded
-2017-11-19T03:10:05.232Z - success: sprite-editor loaded
-2017-11-19T03:10:05.248Z - success: timeline loaded
-2017-11-19T03:10:05.248Z - normal: Loading builtin packages
-2017-11-19T03:10:05.248Z - success: asset-db-debugger loaded
-2017-11-19T03:10:05.248Z - success: code-editor loaded
-2017-11-19T03:10:05.265Z - success: color-picker loaded
-2017-11-19T03:10:05.268Z - success: console loaded
-2017-11-19T03:10:05.270Z - success: package-manager loaded
-2017-11-19T03:10:05.274Z - success: tester loaded
-2017-11-19T03:10:05.276Z - success: ui-kit-preview-extra loaded
-2017-11-19T03:10:05.277Z - success: ui-kit-preview loaded
-2017-11-19T03:10:05.279Z - success: ui-tree loaded
-2017-11-19T03:10:05.359Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-11-19T03:10:05.375Z - normal: Loading packages
-2017-11-19T03:10:05.375Z - normal: Watching packages
-2017-11-19T03:10:05.391Z - normal: Run Application
-2017-11-19T03:10:09.819Z - success: preview server running at http://localhost:7456
-2017-11-19T03:10:15.476Z - normal: 1.3.2
-2017-11-19T06:50:22.835Z - error: Failed to update asset db://assets/scripts/components/MJGame.js, messages: Compile error: SyntaxError: unknown: Unexpected token (971:8)
-            }
-        }
-        else{
-            if(cc.vv.gameNetMgr.seatIndex == cc.vv.gameNetMgr.turn){
-                for(var i = 0; i < 14; ++i){
-                    var sprite = this._myMJArr[i];
-    at Parser.pp.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\location.js:24:13)
-    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\util.js:82:8)
-    at Parser.pp.expect (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\util.js:76:33)
-    at Parser.pp.parseObj (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:596:12)
-    at Parser.pp.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:392:19)
-    at Parser.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\jsx\index.js:412:22)
-    at Parser.pp.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:236:19)
-    at Parser.pp.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:217:19)
-    at Parser.pp.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:163:19)
-    at Parser.pp.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:145:19)
-    at e.AssetDB.error (D:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2582)
-    at Object.callback (D:\CocosCreator\resources\app.asar\asset-db\core\ipc.js:1:4434)
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
-    at _arrayEach (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
-    at e.<anonymous> (D:\CocosCreator\resources\app.asar\asset-db\index.js:1:1633)
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:20698
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
-2017-11-19T07:11:01.435Z - normal: Compiled successfully
-2017-11-19T07:11:50.552Z - normal: Compiled successfully
-2017-11-19T07:12:43.524Z - normal: Compiled successfully
-2017-11-19T07:48:32.421Z - normal: Compiled successfully
-2017-11-19T09:02:57.356Z - normal: Compiled successfully
-2017-11-19T09:09:53.848Z - normal: Compiled successfully
-2017-11-19T09:29:28.669Z - normal: Compiled successfully
+2017-11-26T22:51:08.556Z - normal: Load ~/.CocosCreator/settings.json
+2017-11-26T22:51:08.563Z - normal: checking language setting...
+2017-11-26T22:51:08.564Z - normal: Language: zh
+2017-11-26T22:51:09.623Z - success: protocol editor-framework registered
+2017-11-26T22:51:09.624Z - success: protocol app registered
+2017-11-26T22:51:09.624Z - success: protocol packages registered
+2017-11-26T22:51:09.624Z - success: protocol theme registered
+2017-11-26T22:51:09.624Z - success: protocol unpack registerred
+2017-11-26T22:51:09.918Z - normal: connected!
+2017-11-26T22:51:09.919Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-11-26T22:51:09.922Z - normal: Initializing Cocos Creator Editor
+2017-11-26T22:51:10.825Z - normal: Initializing Cocos2d
+2017-11-26T22:51:12.727Z - normal: Initializing Asset Database
+2017-11-26T22:51:12.782Z - success: protocol uuid registerred
+2017-11-26T22:51:12.782Z - success: protocol db registerred
+2017-11-26T22:51:12.783Z - success: protocol thumbnail registerred
+2017-11-26T22:51:12.783Z - normal: Loading editor/builtin packages
+2017-11-26T22:51:13.080Z - success: assets loaded
+2017-11-26T22:51:13.082Z - success: builder loaded
+2017-11-26T22:51:13.085Z - success: hierarchy loaded
+2017-11-26T22:51:13.088Z - success: inspector loaded
+2017-11-26T22:51:13.089Z - success: keystore loaded
+2017-11-26T22:51:13.092Z - success: node-library loaded
+2017-11-26T22:51:13.098Z - success: preferences loaded
+2017-11-26T22:51:13.108Z - success: project-importer loaded
+2017-11-26T22:51:13.109Z - success: project-settings loaded
+2017-11-26T22:51:13.112Z - success: ui-kit loaded
+2017-11-26T22:51:13.114Z - success: ui-grid loaded
+2017-11-26T22:51:13.116Z - success: scene loaded
+2017-11-26T22:51:13.117Z - success: sprite-editor loaded
+2017-11-26T22:51:13.122Z - success: timeline loaded
+2017-11-26T22:51:13.123Z - normal: Loading builtin packages
+2017-11-26T22:51:13.142Z - success: asset-db-debugger loaded
+2017-11-26T22:51:13.143Z - success: code-editor loaded
+2017-11-26T22:51:13.144Z - success: color-picker loaded
+2017-11-26T22:51:13.156Z - success: console loaded
+2017-11-26T22:51:13.159Z - success: package-manager loaded
+2017-11-26T22:51:13.161Z - success: tester loaded
+2017-11-26T22:51:13.162Z - success: ui-kit-preview-extra loaded
+2017-11-26T22:51:13.164Z - success: ui-kit-preview loaded
+2017-11-26T22:51:13.165Z - success: ui-tree loaded
+2017-11-26T22:51:13.250Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-11-26T22:51:13.262Z - normal: Loading packages
+2017-11-26T22:51:13.266Z - normal: Watching packages
+2017-11-26T22:51:13.278Z - normal: Run Application
+2017-11-26T22:51:17.638Z - success: preview server running at http://localhost:7456
+2017-11-26T22:51:23.363Z - normal: 1.3.2
+2017-11-26T23:07:46.941Z - normal: Compiled successfully
+2017-11-26T23:17:09.762Z - normal: Compiled successfully
+2017-11-26T23:18:24.391Z - normal: Compiled successfully
+2017-11-26T23:22:41.820Z - normal: Compiled successfully
+2017-11-26T23:30:07.042Z - normal: Compiled successfully

@@ -296,6 +296,9 @@ cc.Class({
         this.node.on('game_over', function (data) {
             self.gameRoot.active = false;
             self.prepareRoot.active = true;
+            //隐藏opts
+            self.hideOptions();
+            self.hideChupai();
         });
 
         this.node.on('game_chupai_notify', function (data) {

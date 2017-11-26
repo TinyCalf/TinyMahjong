@@ -2330,8 +2330,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1511077918612,
-    "meta": 1511077918732,
+    "asset": 1511738564029,
+    "meta": 1511738564161,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -3119,19 +3119,19 @@
     "meta": 1510842517768,
     "relativePath": "scripts\\HTTP.js"
   },
-  "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1511083634706,
-    "meta": 1511083765003,
-    "relativePath": "scripts\\GameNetMgr.js"
-  },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1511101269104,
-    "meta": 1511101469101,
+    "asset": 1511738300611,
+    "meta": 1511738301164,
     "relativePath": "scripts\\components\\MJGame.js"
   },
+  "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
+    "asset": 1511737579729,
+    "meta": 1511737662718,
+    "relativePath": "scripts\\GameNetMgr.js"
+  },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
-    "asset": 1511102044944,
-    "meta": 1511102047586,
+    "asset": 1511739001564,
+    "meta": 1511739003892,
     "relativePath": "scripts\\components\\GameOver.js"
   }
 }
