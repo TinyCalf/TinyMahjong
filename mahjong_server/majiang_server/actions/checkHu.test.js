@@ -184,3 +184,20 @@ var seatData = {
 }
 var ret = checkHu.checkCanHu(seatData,5)
 console.log(ret)
+
+console.log("7pairs")
+var seatData = {
+  countMap:{
+    0:2,
+    1:2,
+    2:2,
+    3:2,
+    4:2,
+    5:3,
+    7:1,
+  },
+  holds:[0,0,1,1,2,2,3,3,4,4,5,5,7,5],
+  kanzi:[],
+}
+var ret = checkHu.check7Pairs(seatData,5)
+console.log(ret)

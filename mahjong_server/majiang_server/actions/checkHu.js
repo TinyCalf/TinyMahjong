@@ -257,6 +257,60 @@ function checkCanHu(seatData, hun){
   return false;
 }
 
+function checkPairs (seatData, hun) {
+  var holds = seatData.holds;
+  var selected = -1;
+  var map = seatData.countMap
+  for(var i = 0; i < holds.length; ++i){
+    var pai = holds[i];
+    c = seatData.countMap[pai];
+    if(c != 0 && pai != hun){
+      selected = pai;
+      break;
+    }
+  }
+  //如果没有找到剩余牌，则表示匹配成功了
+  if(selected == -1){
+    if(map[hun]==2) seatData.kanzi.push([hun,hun])
+    if(map[hun]==4) seatData.kanzi.push([hun,hun],[hun,hun])
+    return true;
+  }
+
+  if(map[selected]>=2) {
+    seatData.countMap[selected] -=2;
+    var ret = checkPairs(seatData,hun);
+    seatData.countMap[selected] +=2;
+    if(ret == true){
+      seatData.kanzi.push([selected,selected]);
+      return true;
+    }
+  }
+  if(map[selected]>=1 && map[hun]>=1) {
+    seatData.countMap[selected] -=1;
+    seatData.countMap[hun] -=1;
+    var ret = checkPairs(seatData,hun);
+    seatData.countMap[selected] +=1;
+    seatData.countMap[hun] -=1;
+    if(ret == true){
+      seatData.kanzi.push([selected,hun]);
+      return true;
+    }
+  }
+  return false
+}
+
+function check7Pairs (seatData,hun) {
+  if(seatData.holds.length != 14) return false
+  //克隆seatData对象
+  var sd = cloneNewSeatData(seatData)
+  var ret = checkPairs(sd, hun)
+  if(ret){
+    return sd.kanzi
+  }else{
+    return false
+  }
+}
+
 function cloneNewSeatData(seatData){
   var sd = {}
   sd.countMap = {}
@@ -268,4 +322,7 @@ function cloneNewSeatData(seatData){
   return sd
 }
 
+
+
 exports.checkCanHu = checkCanHu
+exports.check7Pairs = check7Pairs
