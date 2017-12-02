@@ -322,6 +322,39 @@ function cloneNewSeatData(seatData){
   return sd
 }
 
+// function checkTingPai(seatData,begin,end,hun){
+// 	for(var i = begin; i < end; ++i){
+// 		//如果这牌已经在和了，就不用检查了
+// 		if(seatData.tingMap[i] != null){
+// 			continue;
+// 		}
+// 		//将牌加入到计数中
+// 		var old = seatData.countMap[i];
+// 		if(old == null){
+// 			old = 0;
+// 			seatData.countMap[i] = 1;
+// 		}
+// 		else{
+// 			seatData.countMap[i] ++;
+// 		}
+//
+// 		seatData.holds.push(i);
+// 		//逐个判定手上的牌
+// 		var ret = checkCanHu(seatData);
+// 		if(ret){
+// 			//平胡 0番
+// 			seatData.tingMap[i] = {
+// 				pattern:"normal",
+//         fan:0
+// 			};
+// 		}
+//
+// 		//搞完以后，撤消刚刚加的牌
+// 		seatData.countMap[i] = old;
+// 		seatData.holds.pop();
+// 	}
+// }
+
 
 
 exports.checkCanHu = checkCanHu
