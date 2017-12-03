@@ -3,6 +3,8 @@ var userMgr = require("./usermgr");
 var mjutils = require('./mjutils');
 var db = require("../utils/db");
 var crypto = require("../utils/crypto");
+var checkHu = require("./actions/checkHu")
+var judge = require("./actions/judge")
 
 var games = {};
 var gamesIdBase = 0;
@@ -85,18 +87,18 @@ function shuffle(game) {
     }
 
     //打亂順序
-    // for(var i = 0; i < mahjongs.length; ++i){
-    //     var lastIndex = mahjongs.length - 1 - i;
-    //     var index = Math.floor(Math.random() * lastIndex);
-    //     var t = mahjongs[index];
-    //     mahjongs[index] = mahjongs[lastIndex];
-    //     mahjongs[lastIndex] = t;
-    // }
+    for(var i = 0; i < mahjongs.length; ++i){
+        var lastIndex = mahjongs.length - 1 - i;
+        var index = Math.floor(Math.random() * lastIndex);
+        var t = mahjongs[index];
+        mahjongs[index] = mahjongs[lastIndex];
+        mahjongs[lastIndex] = t;
+    }
 
-    // arr1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
-    // arr2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
-    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
-    // arr4 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
+    // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
+    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
+    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
     //
     // arr = []
     // for ( var i = 0 ; i < 14 ; i++ ) {
@@ -106,8 +108,8 @@ function shuffle(game) {
     //   arr.push(arr4[i]);
     // }
     //
-    // mahjongs = arr.concat(mahjongs)
-
+    // arr = arr.concat(mahjongs)
+    // game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -217,9 +219,6 @@ function checkCanWanGang(game,seatData){
 
 function checkCanHu(game,seatData,targetPai) {
     game.lastHuPaiSeat = -1;
-    if(getMJType(targetPai) == seatData.que){
-        return;
-    }
     seatData.canHu = false;
     for(var k in seatData.tingMap){
         if(targetPai == k){
@@ -287,62 +286,61 @@ function checkCanTingPai(game,seatData){
     //         //如果是，则直接返回咯
     //     }
     // }
-
     //检查是否是对对胡  由于四川麻将没有吃，所以只需要检查手上的牌
     //对对胡叫牌有两种情况
     //1、N坎 + 1张单牌
     //2、N-1坎 + 两对牌
-    var singleCount = 0;
-    var colCount = 0;
-    var pairCount = 0;
-    var arr = [];
-    for(var k in seatData.countMap){
-        var c = seatData.countMap[k];
-        if(c == 1){
-            singleCount++;
-            arr.push(k);
-        }
-        else if(c == 2){
-            pairCount++;
-            arr.push(k);
-        }
-        else if(c == 3){
-            colCount++;
-        }
-        else if(c == 4){
-            //手上有4个一样的牌，在四川麻将中是和不了对对胡的 随便加点东西
-            singleCount++;
-            pairCount+=2;
-        }
-    }
-
-    if((pairCount == 2 && singleCount == 0) || (pairCount == 0 && singleCount == 1) ){
-        for(var i = 0; i < arr.length; ++ i){
-            //对对胡1番
-            var p = arr[i];
-            if(seatData.tingMap[p] == null){
-                seatData.tingMap[p] = {
-                    //pattern:"duidui",
-                    fan:1
-                };
-            }
-        }
-    }
-
+    // var singleCount = 0;
+    // var colCount = 0;
+    // var pairCount = 0;
+    // var arr = [];
+    // for(var k in seatData.countMap){
+    //     var c = seatData.countMap[k];
+    //     if(c == 1){
+    //         singleCount++;
+    //         arr.push(k);
+    //     }
+    //     else if(c == 2){
+    //         pairCount++;
+    //         arr.push(k);
+    //     }
+    //     else if(c == 3){
+    //         colCount++;
+    //     }
+    //     else if(c == 4){
+    //         //手上有4个一样的牌，在四川麻将中是和不了对对胡的 随便加点东西
+    //         singleCount++;
+    //         pairCount+=2;
+    //     }
+    // }
+    //
+    // if((pairCount == 2 && singleCount == 0)
+    // || (pairCount == 0 && singleCount == 1) ){
+    //     for(var i = 0; i < arr.length; ++ i){
+    //         //对对胡1番
+    //         var p = arr[i];
+    //         if(seatData.tingMap[p] == null){
+    //             seatData.tingMap[p] = {
+    //                 //pattern:"duidui",
+    //                 fan:1
+    //             };
+    //         }
+    //     }
+    // }
     //检查是不是平胡
-    if(seatData.que != 0){
-        mjutils.checkTingPai(seatData,0,9);
-    }
+    // if(seatData.que != 0){
+    //     mjutils.checkTingPai(seatData,0,9);
+    // }
+    //
+    // if(seatData.que != 1){
+    //     mjutils.checkTingPai(seatData,9,18);
+    // }
+    //
+    // if(seatData.que != 2){
+    //     mjutils.checkTingPai(seatData,18,27);
+    // }
 
-    if(seatData.que != 1){
-        mjutils.checkTingPai(seatData,9,18);
-    }
-
-    if(seatData.que != 2){
-        mjutils.checkTingPai(seatData,18,27);
-    }
-
-    mjutils.checkTingPai(seatData,28,34);
+    checkHu.checkTingPai(seatData,0,34,game.hun);
 }
 
 function getSeatIndex(userId){
@@ -463,153 +461,6 @@ function isSameType(type,arr){
 
 /*********************************************************************
  *
- * 盘局结束时的各种胡法判断 前提是手牌已经是能胡的牌
- *
- * ********************************************************************/
-//判断是否为清一色
-function isQingYiSe(gameSeatData){
-    var type = getMJType(gameSeatData.holds[0]);
-    if(!isSameType(type,gameSeatData.holds)){
-        return false;
-    }
-    if(!isSameType(type,gameSeatData.angangs)){
-        return false;
-    }
-    if(!isSameType(type,gameSeatData.wangangs)){
-        return false;
-    }
-    if(!isSameType(type,gameSeatData.diangangs)){
-        return false;
-    }
-    if(!isSameType(type,gameSeatData.pengs)){
-        return false;
-    }
-    return true;
-}
-
-//判断混一色
-function isHunYiSe(seatData){
-    var all = [].concat(seatData.holds);
-    all = all.concat(seatData.pengs);
-    all = all.concat(seatData.pengs);
-    all = all.concat(seatData.pengs);
-    all = all.concat(seatData.angangs);
-    all = all.concat(seatData.wangangs);
-    all = all.concat(seatData.diangangs);
-    all = all.concat(seatData.angangs);
-    all = all.concat(seatData.wangangs);
-    all = all.concat(seatData.diangangs);
-    all = all.concat(seatData.angangs);
-    all = all.concat(seatData.wangangs);
-    all = all.concat(seatData.diangangs);
-    all = all.concat(seatData.angangs);
-    all = all.concat(seatData.wangangs);
-    all = all.concat(seatData.diangangs);
-    for (var i = 0 ; i < seatData.chis.length; i++){
-        all = all.concat(seatData.chis[i]);
-    }
-
-    all.sort(function(a,b){
-        return parseInt(a-b);
-    });
-    var type = getMJType(all[0]);
-    if(type == 3){
-        return false;
-    }
-
-    var isHasOther = false;
-    for( var i = 0 ; i < all.length ; i++ ){
-        var mjtype = getMJType(all[i]);
-        if ( mjtype != 3 && mjtype != type){
-            return false;
-        }else if (mjtype == 3 ) {
-            isHasOther = true;
-        }
-    }
-
-    if(isHasOther) return true;
-    else return false;
-}
-
-//判断是否听
-function isTinged(seatData){
-    for(var k in seatData.tingMap){
-        return true;
-    }
-    return false;
-}
-
-//判断是否为对对胡
-function isDuiDuiHu (seatData) {
-    if (seatData.chis.length > 0) {
-        return false;
-    }
-    //没有坎子
-    var kanzi = seatData.kanzi;
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1]) {
-            return false;
-        }
-    }
-    return true;
-}
-
-//判斷坎
-function isKan (seatData) {
-    var kanzi = seatData.kanzi;
-    var hupai = seatData.holds[seatData.holds.length-1];
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 &&kanzi[i][1]==hupai && kanzi[i][0]!=hupai){
-            return true;
-        }
-    }
-    return false;
-}
-
-//判斷邊
-function isBian (seatData) {
-    var kanzi = seatData.kanzi;
-    var hupai = seatData.holds[seatData.holds.length-1];
-
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] != kanzi[i][1] ) {
-            if(kanzi[i][2] == 2 && hupai == 2) return true;
-            if(kanzi[i][2] == 11 && hupai == 11) return true;
-            if(kanzi[i][2] == 20 && hupai == 20) return true;
-            if(kanzi[i][0] == 6 && hupai == 6) return true;
-            if(kanzi[i][0] == 15 && hupai == 15) return true;
-            if(kanzi[i][0] == 24 && hupai == 24) return true;
-        }
-    }
-    return false;
-}
-
-//判斷單
-function isDan (seatData) {
-    var kanzi = seatData.kanzi;
-    var hupai = seatData.holds[seatData.holds.length-1];
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 2 && kanzi[i][0] == hupai){
-            return true;
-        }
-    }
-    return false;
-}
-
-//判斷對到
-function isDuidao (seatData) {
-    var kanzi = seatData.kanzi;
-    var hupai = seatData.holds[seatData.holds.length-1];
-    for (var i = 0 ; i < kanzi.length ; i++) {
-        if(kanzi[i].length == 3 && kanzi[i][0] == hupai && kanzi[i][1] == hupai){
-            return true;
-        }
-    }
-    return false;
-}
-
-/*********************************************************************
- *
  *
  *
  * ******************************************************************/
@@ -619,27 +470,46 @@ function calculateResult(game){
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
     for(var i = 0; i < game.gameSeats.length; ++i){
-        if(game.gameSeats[i].hued == true){
-            numOfHued++;
-        }
-        //初始化判定
         var thisseat = game.gameSeats[i];
         //对对胡 混一色 清一色 炸7对 混7对 qing7队 混龙 清龙
         thisseat.duiduihu = false;
         thisseat.hunyise = false;
         thisseat.qingyise = false;
-        thisseat.zha7dui = false;
-        thisseat.hun7dui = false;
-        thisseat.qing7dui = false;
-        thisseat.hunlong = false;
-        thisseat.qinglong = false;
-        thisseat.score = 0;
+        thisseat.qidui = false;
+        thisseat.zhaqidui = false;
+        thisseat.long = false;
+        thisseat.fengqing = false;
+        if(game.gameSeats[i].hued == true){
+            numOfHued++;
+            var ret = checkHu.checkCanHu(thisseat,game.hun)
+            var ret2 = checkHu.check7Pairs(thisseat,game.hun)
+            var score  = 0
+            if(judge.isQingYiSe(thisseat,game.hun)) {thisseat.qingyise = true;score +=8}
+            if(judge.isHunYiSe(thisseat,game.hun)) {thisseat.hunyise = true;score +=4}
+            if(judge.isLong(thisseat,game.hun)) {thisseat.long = true;score +=4}
+            if(judge.isFengQing(thisseat,game.hun)) {thisseat.fengqing = true;score +=32}
+            if(ret){
+              thisseat.kanzi = ret;
+              if(judge.isDuiDuiHu(thisseat,game.hun)) {thisseat.duiduihu = true;score +=4}
+            }
+            if(ret2) {
+              thisseat.kanzi = ret2;
+              thisseat.qidui = true;
+              score +=4;
+              if(judge.isZha7dui(thisseat,game.hun)) {thisseat.zhaqidui = true;score +=8}
+            }
+            if(score ==0 ) score =2;
+            if(thisseat.iszimo){
+              thisseat.score += score * 4
+              for(var i = 0; i < game.gameSeats.length; ++i){
+                 game.gameSeats[i].score -=score
+              }
+            }else{
+              thisseat.score += score
+              game.gameSeats[game.fangpaoindex].score -=score
+            }
+        }
     }
-
-
-
-
-
 }
 
 function doGameOver(game,userId,forceEnd){
@@ -671,7 +541,10 @@ function doGameOver(game,userId,forceEnd){
                 });
             }
         }
-        userMgr.broacastInRoom('game_over_push',{results:results,endinfo:endinfo},userId,true);
+        userMgr.broacastInRoom('game_over_push',{
+          results:results,
+          endinfo:endinfo
+        },userId,true);
         //如果局数已够，则进行整体结算，并关闭房间
         if(isEnd){
             setTimeout(function(){
@@ -712,38 +585,35 @@ function doGameOver(game,userId,forceEnd){
             var userRT = {
                 userId:sd.userId,
                 pengs:sd.pengs,
-                huas:sd.huas,
                 actions:[],
                 wangangs:sd.wangangs,
                 diangangs:sd.diangangs,
                 angangs:sd.angangs,
                 numofgen:sd.numofgen,
                 holds:sd.holds,
-                tai:sd.tai,
                 score:sd.score,
                 totalscore:rs.score,
                 qingyise:sd.qingyise,
-                paihu :sd.paihu,
                 duiduihu:sd.duiduihu,
                 hunyise:sd.hunyise,
-                gangshanghua:sd.gangshanghua,
-                kan:sd.kan,
-                bian:sd.bian,
-                dan:sd.dan,
-                duidao:sd.duidao,
-                pattern:sd.pattern,
-                isganghu:sd.isGangHu,
-                menqing:sd.isMenQing,
-                zhongzhang:sd.isZhongZhang,
-                jingouhu:sd.isJinGouHu,
-                haidihu:sd.isHaiDiHu,
-                tianhu:sd.isTianHu,
-                dihu:sd.isDiHu,
+                long:sd.long,
+                fengqing : sd.fengqing,
+                qidui:sd.qidui,
+                zhaqidui:sd.zhaqidui,
+                //pattern:sd.pattern,
+                //isganghu:sd.isGangHu,
+                //menqing:sd.isMenQing,
+                //zhongzhang:sd.isZhongZhang,
+                //jingouhu:sd.isJinGouHu,
+                //haidihu:sd.isHaiDiHu,
+                //tianhu:sd.isTianHu,
+                //dihu:sd.isDiHu,
                 huorder:game.hupaiList.indexOf(i),
 
                 //舟山麻将需要发送当前局数 和 圈数
                 gameindex:game.gameIndex,
                 fengxiang:game.conf.fengxiang,
+                fengxiangju:game.conf.fengxiangju,
             };
 
             //推入庄
@@ -816,7 +686,7 @@ function doGameOver(game,userId,forceEnd){
             db.update_fengxiang(roomId,roomInfo.fengxiang);
 
             //TODO 增加保存风圈局
-            db.update_fengxiangju(roomId, roomInfo.fengxiangju);
+            db.update_fengxiangju
 
             //保存开始的庄
             db.update_begin_button(roomId,roomInfo.beginButton);
@@ -1159,6 +1029,7 @@ exports.begin = function(roomId) {
          currentIndex:0,
          gameSeats:new Array(4),
          turn:roomInfo.nextButton,
+         hun:28,
          chuPai:-1,
          state:"idle",
          firstHupai:-1,
@@ -1483,8 +1354,6 @@ exports.peng = function(userId){
         //广播通知玩家出牌方
         seatData.canChuPai = true;
         userMgr.broacastInRoom('game_chupai_push', seatData.userId, seatData.userId, true);
-        //配合舟山补花逻辑 如果手牌里有花就先补花
-        buhua(game, seatData.seatIndex);
     }
 };
 

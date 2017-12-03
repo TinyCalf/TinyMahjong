@@ -36,6 +36,21 @@ Array.prototype.remove = function(val) {
 }
 
 /*
+判断对对胡
+每个坎子去掉混以后都是一种类型
+*/
+exports.isDuiDuiHu = (gameSeatData,hun) => {
+  var kanzi = gameSeatData.kanzi
+  for(var i=0 ; i < kanzi.length ; i++) {
+    var thiskan = [].concat(kanzi[i])
+    if(hun) thiskan.remove(hun)
+    if( thiskan[1] &&  thiskan[1] != thiskan[0] )
+      return false
+  }
+  return true
+}
+
+/*
 判断清一色
 带混去混，其余为同一花色即为清一色
 */
@@ -114,8 +129,6 @@ exports.isLong = (gameSeatData,hun) => {
     if(!ifHas)
     types[getMJType(pais[i])].push(pais[i])
   }
-  console.log(types)
-  console.log(numOfHun)
   if(numOfHun + types[0].length >= 9) return true
   if(numOfHun + types[1].length >= 9) return true
   if(numOfHun + types[2].length >= 9) return true

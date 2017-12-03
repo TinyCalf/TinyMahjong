@@ -1,52 +1,51 @@
-2017-11-26T22:51:08.556Z - normal: Load ~/.CocosCreator/settings.json
-2017-11-26T22:51:08.563Z - normal: checking language setting...
-2017-11-26T22:51:08.564Z - normal: Language: zh
-2017-11-26T22:51:09.623Z - success: protocol editor-framework registered
-2017-11-26T22:51:09.624Z - success: protocol app registered
-2017-11-26T22:51:09.624Z - success: protocol packages registered
-2017-11-26T22:51:09.624Z - success: protocol theme registered
-2017-11-26T22:51:09.624Z - success: protocol unpack registerred
-2017-11-26T22:51:09.918Z - normal: connected!
-2017-11-26T22:51:09.919Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-11-26T22:51:09.922Z - normal: Initializing Cocos Creator Editor
-2017-11-26T22:51:10.825Z - normal: Initializing Cocos2d
-2017-11-26T22:51:12.727Z - normal: Initializing Asset Database
-2017-11-26T22:51:12.782Z - success: protocol uuid registerred
-2017-11-26T22:51:12.782Z - success: protocol db registerred
-2017-11-26T22:51:12.783Z - success: protocol thumbnail registerred
-2017-11-26T22:51:12.783Z - normal: Loading editor/builtin packages
-2017-11-26T22:51:13.080Z - success: assets loaded
-2017-11-26T22:51:13.082Z - success: builder loaded
-2017-11-26T22:51:13.085Z - success: hierarchy loaded
-2017-11-26T22:51:13.088Z - success: inspector loaded
-2017-11-26T22:51:13.089Z - success: keystore loaded
-2017-11-26T22:51:13.092Z - success: node-library loaded
-2017-11-26T22:51:13.098Z - success: preferences loaded
-2017-11-26T22:51:13.108Z - success: project-importer loaded
-2017-11-26T22:51:13.109Z - success: project-settings loaded
-2017-11-26T22:51:13.112Z - success: ui-kit loaded
-2017-11-26T22:51:13.114Z - success: ui-grid loaded
-2017-11-26T22:51:13.116Z - success: scene loaded
-2017-11-26T22:51:13.117Z - success: sprite-editor loaded
-2017-11-26T22:51:13.122Z - success: timeline loaded
-2017-11-26T22:51:13.123Z - normal: Loading builtin packages
-2017-11-26T22:51:13.142Z - success: asset-db-debugger loaded
-2017-11-26T22:51:13.143Z - success: code-editor loaded
-2017-11-26T22:51:13.144Z - success: color-picker loaded
-2017-11-26T22:51:13.156Z - success: console loaded
-2017-11-26T22:51:13.159Z - success: package-manager loaded
-2017-11-26T22:51:13.161Z - success: tester loaded
-2017-11-26T22:51:13.162Z - success: ui-kit-preview-extra loaded
-2017-11-26T22:51:13.164Z - success: ui-kit-preview loaded
-2017-11-26T22:51:13.165Z - success: ui-tree loaded
-2017-11-26T22:51:13.250Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-11-26T22:51:13.262Z - normal: Loading packages
-2017-11-26T22:51:13.266Z - normal: Watching packages
-2017-11-26T22:51:13.278Z - normal: Run Application
-2017-11-26T22:51:17.638Z - success: preview server running at http://localhost:7456
-2017-11-26T22:51:23.363Z - normal: 1.3.2
-2017-11-26T23:07:46.941Z - normal: Compiled successfully
-2017-11-26T23:17:09.762Z - normal: Compiled successfully
-2017-11-26T23:18:24.391Z - normal: Compiled successfully
-2017-11-26T23:22:41.820Z - normal: Compiled successfully
-2017-11-26T23:30:07.042Z - normal: Compiled successfully
+2017-12-03T03:03:29.751Z - normal: Load ~/.CocosCreator/settings.json
+2017-12-03T03:03:29.766Z - normal: checking language setting...
+2017-12-03T03:03:29.766Z - normal: Language: zh
+2017-12-03T03:03:30.860Z - success: protocol editor-framework registered
+2017-12-03T03:03:30.860Z - success: protocol app registered
+2017-12-03T03:03:30.860Z - success: protocol packages registered
+2017-12-03T03:03:30.860Z - success: protocol theme registered
+2017-12-03T03:03:30.860Z - success: protocol unpack registerred
+2017-12-03T03:03:31.107Z - normal: connected!
+2017-12-03T03:03:31.123Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-12-03T03:03:31.123Z - normal: Initializing Cocos Creator Editor
+2017-12-03T03:03:32.095Z - normal: Initializing Cocos2d
+2017-12-03T03:03:33.908Z - normal: Initializing Asset Database
+2017-12-03T03:03:33.955Z - success: protocol uuid registerred
+2017-12-03T03:03:33.955Z - success: protocol db registerred
+2017-12-03T03:03:33.955Z - success: protocol thumbnail registerred
+2017-12-03T03:03:33.955Z - normal: Loading editor/builtin packages
+2017-12-03T03:03:34.236Z - success: assets loaded
+2017-12-03T03:03:34.236Z - success: builder loaded
+2017-12-03T03:03:34.236Z - success: hierarchy loaded
+2017-12-03T03:03:34.236Z - success: inspector loaded
+2017-12-03T03:03:34.251Z - success: keystore loaded
+2017-12-03T03:03:34.251Z - success: node-library loaded
+2017-12-03T03:03:34.251Z - success: preferences loaded
+2017-12-03T03:03:34.267Z - success: project-importer loaded
+2017-12-03T03:03:34.267Z - success: project-settings loaded
+2017-12-03T03:03:34.267Z - success: ui-kit loaded
+2017-12-03T03:03:34.283Z - success: ui-grid loaded
+2017-12-03T03:03:34.283Z - success: scene loaded
+2017-12-03T03:03:34.283Z - success: sprite-editor loaded
+2017-12-03T03:03:34.298Z - success: timeline loaded
+2017-12-03T03:03:34.298Z - normal: Loading builtin packages
+2017-12-03T03:03:34.314Z - success: asset-db-debugger loaded
+2017-12-03T03:03:34.314Z - success: code-editor loaded
+2017-12-03T03:03:34.314Z - success: color-picker loaded
+2017-12-03T03:03:34.330Z - success: console loaded
+2017-12-03T03:03:34.345Z - success: package-manager loaded
+2017-12-03T03:03:34.345Z - success: tester loaded
+2017-12-03T03:03:34.361Z - success: ui-kit-preview-extra loaded
+2017-12-03T03:03:34.361Z - success: ui-kit-preview loaded
+2017-12-03T03:03:34.361Z - success: ui-tree loaded
+2017-12-03T03:03:34.486Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-12-03T03:03:34.501Z - normal: Loading packages
+2017-12-03T03:03:34.501Z - normal: Watching packages
+2017-12-03T03:03:34.517Z - normal: Run Application
+2017-12-03T03:03:39.709Z - success: preview server running at http://localhost:7456
+2017-12-03T03:03:39.709Z - normal: Compiling scripts...
+2017-12-03T03:03:43.099Z - normal: Compiled successfully
+2017-12-03T03:03:48.863Z - normal: 1.3.2
+2017-12-03T07:54:42.201Z - normal: Compiled successfully
+2017-12-03T08:12:30.215Z - normal: Compiled successfully
