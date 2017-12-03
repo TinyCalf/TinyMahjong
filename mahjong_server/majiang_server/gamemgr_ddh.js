@@ -805,6 +805,7 @@ exports.setReady = function(userId,callback){
         var data = {
             fengxiang:roomInfo.fengxiang,
             fengxiangju:roomInfo.fengxiangju,
+            hun:game.hun,
             state:game.state,
             numofmj:numOfMJ,
             button:game.button,
@@ -1029,7 +1030,7 @@ exports.begin = function(roomId) {
          currentIndex:0,
          gameSeats:new Array(4),
          turn:roomInfo.nextButton,
-         hun:28,
+         hun:parseInt(Math.random()*33), //随机混子
          chuPai:-1,
          state:"idle",
          firstHupai:-1,
@@ -1118,6 +1119,8 @@ exports.begin = function(roomId) {
          userMgr.sendMsg(s.userId,'game_begin_push',game.button);
          //通知当前风向开始
          userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
+         //通知当前混子
+         userMgr.sendMsg(s.userId,'game_hun_push',game.hun);
      }
 
      var seatData = gameSeatsOfUsers[seats[1].userId];

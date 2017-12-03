@@ -205,6 +205,11 @@ cc.Class({
         //     console.log("game_feng");
         // });
 
+        this.node.on('game_hun', function () {
+            //self.hun = cc.vv.gameNetMgr.hun
+            self.changeHun();
+        });
+
         this.node.on('hupai', function (data) {
             var data = data.detail;
             //如果不是玩家自己，则将玩家的牌都放倒
@@ -390,6 +395,14 @@ cc.Class({
             sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", pai);
             sprite.node.active = true;
         }
+    },
+
+    changeHun: function changeHun() {
+        var sprite = this.node.getChildByName("game").getChildByName("hun").getComponent(cc.Sprite);
+        var hun = cc.vv.gameNetMgr.hun;
+        sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", hun);
+        console.log("game_hun");
+        console.log(hun);
     },
 
     addOption: function addOption(btnName, pai, chitype) {
@@ -645,6 +658,8 @@ cc.Class({
         this.checkQueYiMen();
 
         this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
+
+        this.changeHun();
     },
 
     onMJClicked: function onMJClicked(event) {

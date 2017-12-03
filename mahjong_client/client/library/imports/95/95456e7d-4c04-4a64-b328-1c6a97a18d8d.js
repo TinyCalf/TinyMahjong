@@ -18,7 +18,8 @@ cc.Class({
         gamestate: "",
         isOver: false,
         dissoveData: null,
-        fengxiang: -1
+        fengxiang: -1,
+        hun: null
 
     },
 
@@ -319,6 +320,11 @@ cc.Class({
             self.dispatchEvent('game_feng');
         });
 
+        cc.vv.net.addHandler("game_hun_push", function (data) {
+            self.hun = data;
+            self.dispatchEvent('game_hun');
+        });
+
         cc.vv.net.addHandler("game_begin_push", function (data) {
             console.log('game_begin_push');
             console.log(data);
@@ -349,6 +355,7 @@ cc.Class({
             self.button = data.button;
             self.chupai = data.chuPai;
             self.huanpaimethod = data.huanpaimethod;
+            self.hun = data.hun;
             for (var i = 0; i < 4; ++i) {
                 var seat = self.seats[i];
                 var sd = data.seats[i];
@@ -371,6 +378,7 @@ cc.Class({
             }
 
             self.dispatchEvent('game_sync');
+            self.dispatchEvent('game_hun');
         });
 
         cc.vv.net.addHandler("game_huanpai_push", function (data) {
