@@ -575,7 +575,7 @@ function doGameOver(game,userId,forceEnd){
 
             //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
-            rs.score += sd.score;
+            rs.score += sd.score + sd.gangscore;
             (sd.iszimo) ? rs.numZiMo ++ :{};
             (sd.hued && !sd.iszimo) ? rs.numJiePao ++ : {};
             (game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
@@ -974,6 +974,18 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         seatData.angangs.push(pai);
         var ac = recordUserAction(game,seatData,"angang");
         ac.score = game.conf.baseScore*2;
+
+        //收每家两份
+        seatData.gangscore += 8
+        for(var i=0; i< 4 ; i++) {
+          game.gameSeats[i].gangscore -= 2
+        }
+        if(pai == game.hun) {
+          seatData.gangscore += 8
+          for(var i=0; i< 4 ; i++) {
+            game.gameSeats[i].gangscore -= 2
+          }
+        }
     }
     else if(gangtype == "diangang"){
         seatData.diangangs.push(pai);
@@ -981,6 +993,9 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         ac.score = game.conf.baseScore*2;
         var fs = turnSeat;
         recordUserAction(game,fs,"fanggang",seatIndex);
+        //收2分
+        seatData.gangscore += 2
+        turnSeat.gangscore -= 2
     }
     else if(gangtype == "wangang"){
         seatData.wangangs.push(pai);
@@ -991,11 +1006,23 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         else{
             recordUserAction(game,seatData,"zhuanshougang");
         }
+        //收每家两份
+        seatData.gangscore += 4
+        for(var i=0; i< 4 ; i++) {
+          game.gameSeats[i].gangscore -= 1
+        }
     }
 
     checkCanTingPai(game,seatData);
     //通知其他玩家，有人杠了牌
     userMgr.broacastInRoom('gang_notify_push',{userid:seatData.userId,pai:pai,gangtype:gangtype},seatData.userId,true);
+    //通知其他玩家，gang分数变化
+    userMgr.broacastInRoom('gang_score_push',{gangscores:[
+      game.gameSeats[0].gangscore,
+      game.gameSeats[1].gangscore,
+      game.gameSeats[2].gangscore,
+      game.gameSeats[3].gangscore,
+    ]},seatData.userId,true);
 
     //变成自己的轮子
     moveToNextUser(game,seatIndex);
@@ -1088,6 +1115,7 @@ exports.begin = function(roomId) {
          data.isGangHu = false;
          data.actions = [];
          data.score = 0;
+         data.gangscore = 0;
          //统计信息
          data.numZiMo = 0;
          data.numJiePao = 0;
@@ -1226,7 +1254,7 @@ exports.chuPai = function(userId,pai){
         if(ddd.hued){
             continue;
         }
-
+        if(!ddd.countMap[game.hun] || ddd.countMap[game.hun] == 0)
         checkCanHu(game,ddd,pai);
         if(seatData.lastFangGangSeat == -1){
             if(ddd.canHu && ddd.guoHuFan >= 0 && ddd.tingMap[pai].fan <= ddd.guoHuFan){
@@ -1339,6 +1367,19 @@ exports.peng = function(userId){
     //广播通知玩家出牌方
     seatData.canChuPai = true;
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+
+
+    if(pai == game.hun) {
+      seatData.gangscore += 2
+      game.gameSeats[game.turn].gangscore -= 2
+    }
+    //通知其他玩家，gang分数变化
+    userMgr.broacastInRoom('gang_score_push',{gangscores:[
+      game.gameSeats[0].gangscore,
+      game.gameSeats[1].gangscore,
+      game.gameSeats[2].gangscore,
+      game.gameSeats[3].gangscore,
+    ]},seatData.userId,true);
 
     //检查是否有人要胡，要碰 要杠s
     var hasActions = false;

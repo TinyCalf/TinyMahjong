@@ -1075,8 +1075,8 @@
     "relativePath": "resources\\textures\\MJ\\bottom\\e_mj_b_up.png"
   },
   "8a5afedd-b510-4212-9834-6165725e08c9": {
-    "asset": 1510160704609,
-    "meta": 1510233212972,
+    "asset": 1512482437028,
+    "meta": 1512487008908,
     "relativePath": "resources\\textures\\MJ\\left"
   },
   "dc0f12a0-949b-450f-9d67-9f1054b115f8": {
@@ -1090,8 +1090,8 @@
     "relativePath": "resources\\textures\\MJ\\mjEmpty.plist"
   },
   "c80b7e7a-e243-44d6-9fde-f78bef49e696": {
-    "asset": 1510160704635,
-    "meta": 1510233213209,
+    "asset": 1512482437028,
+    "meta": 1512487010248,
     "relativePath": "resources\\textures\\MJ\\my"
   },
   "347575c5-fc00-4b99-9cca-1c89f8e39415": {
@@ -1115,8 +1115,8 @@
     "relativePath": "resources\\textures\\MJ\\my\\M_spring.png"
   },
   "10712ce0-d470-446f-8cc9-5e3d55734cb4": {
-    "asset": 1510160704650,
-    "meta": 1510233213580,
+    "asset": 1512482437028,
+    "meta": 1512487010333,
     "relativePath": "resources\\textures\\MJ\\right"
   },
   "2133eb49-bb89-480b-b451-43becbb3cef2": {
@@ -1425,18 +1425,18 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1510766120507,
-    "meta": 1510836547444,
+    "asset": 1512482437043,
+    "meta": 1512487010354,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
-    "asset": 1510160705681,
-    "meta": 1510233215279,
+    "asset": 1512482437028,
+    "meta": 1512487010366,
     "relativePath": "scripts\\3rdparty"
   },
   "8a998931-01bf-4b06-adc1-433bf2a620d8": {
-    "asset": 1510160705803,
-    "meta": 1510233221566,
+    "asset": 1512482437090,
+    "meta": 1512487013677,
     "relativePath": "scripts\\components"
   },
   "824dabd4-6ad7-487f-9c71-01ed2c6a6c40": {
@@ -1590,8 +1590,8 @@
     "relativePath": "resources\\prefabs"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1510160704186,
-    "meta": 1510233202945,
+    "asset": 1512482436950,
+    "meta": 1512487008713,
     "relativePath": "resources\\scenes"
   },
   "5fad28f0-3c44-4f5e-9351-381fe3fb522c": {
@@ -1600,8 +1600,8 @@
     "relativePath": "resources\\scenes\\createrole.fire"
   },
   "2604e275-c862-43e7-b9bf-753c68e40f53": {
-    "asset": 1510160704411,
-    "meta": 1510233203269,
+    "asset": 1512482437028,
+    "meta": 1512487008770,
     "relativePath": "resources\\sounds"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
@@ -1610,18 +1610,18 @@
     "relativePath": "resources\\scenes\\update.fire"
   },
   "a03b520f-431d-4283-9fae-5e86d6519973": {
-    "asset": 1510160704265,
-    "meta": 1510233203412,
+    "asset": 1512482436965,
+    "meta": 1512487008870,
     "relativePath": "resources\\sounds\\guess"
   },
   "0addd383-503d-4080-a207-45b04f509072": {
-    "asset": 1510160704282,
-    "meta": 1510233203440,
+    "asset": 1512482436965,
+    "meta": 1512487008877,
     "relativePath": "resources\\sounds\\horse"
   },
   "9e2e5592-da7f-424d-bfe2-7d14584a86e1": {
-    "asset": 1510160704395,
-    "meta": 1510233203493,
+    "asset": 1512482437012,
+    "meta": 1512487008885,
     "relativePath": "resources\\sounds\\nv"
   },
   "c8b957bd-07ba-4bcc-a956-472c6ecc6d21": {
@@ -2305,13 +2305,13 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1510673035099,
-    "meta": 1510673035146,
+    "asset": 1512482436934,
+    "meta": 1512487008763,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
-    "asset": 1510160704154,
-    "meta": 1510233203059,
+    "asset": 1512482436950,
+    "meta": 1512487008730,
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
@@ -2321,342 +2321,342 @@
   },
   "ca3cd36e-e121-4a85-9b3f-0daa92af7d54": {
     "asset": 1510160704214,
-    "meta": 1510233203298,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\bgMain.mp3"
   },
   "8f65957d-38ab-47c5-8f52-ab42bb7e9592": {
     "asset": 1510160704216,
-    "meta": 1510233203293,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1512295619579,
-    "meta": 1512295619682,
+    "asset": 1512482436950,
+    "meta": 1512487008862,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
     "asset": 1510160704219,
-    "meta": 1510233203303,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\deal.mp3"
   },
   "cba40643-a5b7-47c5-9f55-32fd075e0e0b": {
     "asset": 1510160704222,
-    "meta": 1510233203311,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\dropCoin.mp3"
   },
   "ad5300c1-35eb-448b-b629-095cf4e7411d": {
     "asset": 1510160704226,
-    "meta": 1510233203322,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\fix_msg_1.mp3"
   },
   "25b01ded-55d1-4ea1-a84c-401d10341444": {
     "asset": 1510160704229,
-    "meta": 1510233203331,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\fix_msg_2.mp3"
   },
   "e811c999-f2a8-4aa6-93ea-f0e14f6a71c0": {
     "asset": 1510160704233,
-    "meta": 1510233203343,
+    "meta": 1512482436950,
     "relativePath": "resources\\sounds\\fix_msg_3.mp3"
   },
   "aa9cd25a-64c9-441b-9d24-0c27463ef557": {
     "asset": 1510160704235,
-    "meta": 1510233203353,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_4.mp3"
   },
   "86a1f6eb-e8b7-4949-99c3-7b0dc6636b7c": {
     "asset": 1510160704239,
-    "meta": 1510233203362,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_5.mp3"
   },
   "163dc8fe-8ccf-4eb4-bdd5-d3c2578bb010": {
     "asset": 1510160704241,
-    "meta": 1510233203371,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_6.mp3"
   },
   "5a64ca79-d766-45d2-9797-8315e1c79323": {
     "asset": 1510160704245,
-    "meta": 1510233203380,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_7.mp3"
   },
   "41f357e0-872e-4cf4-a4e4-aa44e7a773e2": {
     "asset": 1510160704248,
-    "meta": 1510233203389,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_8.mp3"
   },
   "fbfde31f-b206-4b60-8120-809d7c51d59b": {
     "asset": 1510160704251,
-    "meta": 1510233203399,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\fix_msg_9.mp3"
   },
   "ff23e3fc-4306-4ac8-8ca6-6a6b8c60a6ba": {
     "asset": 1510160704254,
-    "meta": 1510233203408,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\give.mp3"
   },
   "3a146ece-8553-4d46-a086-3c2fa0e56d51": {
     "asset": 1510160704259,
-    "meta": 1510233203421,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\guess\\bgm.mp3"
   },
   "42c34357-0452-4ce0-95e2-faea1855e74c": {
     "asset": 1510160704262,
-    "meta": 1510233203431,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\guess\\lose.mp3"
   },
   "d61777c9-dc91-434a-af24-e2bcadc24750": {
     "asset": 1510160704265,
-    "meta": 1510233203436,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\guess\\win.mp3"
   },
   "203d3fc3-ed0c-4233-bf82-c7588f4b71c7": {
     "asset": 1510160704269,
-    "meta": 1510233203448,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\horse\\bet.mp3"
   },
   "6638e2d2-85b9-4412-8af4-ce5ab3301f69": {
     "asset": 1510160704273,
-    "meta": 1510233203458,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\horse\\bgBet.mp3"
   },
   "cd0f27e6-0e4d-4008-a435-e5082a00adb9": {
     "asset": 1510160704277,
-    "meta": 1510233203467,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\horse\\bgRace.mp3"
   },
   "7f884842-50bd-4266-b8fd-3e45a9c9fae0": {
     "asset": 1510160704279,
-    "meta": 1510233203477,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\horse\\go.mp3"
   },
   "928345a5-0da5-4d97-8163-59ad46e44302": {
     "asset": 1510160704282,
-    "meta": 1510233203480,
+    "meta": 1512482436965,
     "relativePath": "resources\\sounds\\horse\\shutter.mp3"
   },
   "6e8086d5-006c-4266-b4ca-048ec6b3f9bf": {
     "asset": 1510160704285,
-    "meta": 1510233203484,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\lose.mp3"
   },
   "47c594e7-f9d4-407c-8a53-5baf308ceb2d": {
     "asset": 1510160704289,
-    "meta": 1510233203498,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\1.mp3"
   },
   "67ff2693-da34-4f87-9f97-3d986a209dbe": {
     "asset": 1510160704292,
-    "meta": 1510233203507,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\11.mp3"
   },
   "7af0a870-0cd1-46c2-9240-1743af231fca": {
     "asset": 1510160704295,
-    "meta": 1510233203516,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\12.mp3"
   },
   "6492c6a4-31f6-4832-81dd-1146850fb97e": {
     "asset": 1510160704297,
-    "meta": 1510233203526,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\13.mp3"
   },
   "26aba82d-8cef-45cb-948a-70673550e365": {
     "asset": 1510160704300,
-    "meta": 1510233203536,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\14.mp3"
   },
   "ee6e3fdb-39fd-49a5-a791-f2b6f68defb5": {
     "asset": 1510160704302,
-    "meta": 1510233203545,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\15.mp3"
   },
   "6b0c4811-b2c6-4992-a357-157372a3a3a6": {
     "asset": 1510160704305,
-    "meta": 1510233203554,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\16.mp3"
   },
   "4ea5ae2f-0f9e-47b6-af10-5a78924840c5": {
     "asset": 1510160704307,
-    "meta": 1510233203564,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\17.mp3"
   },
   "39c6e070-9c82-4c49-8cd4-51e9a05d9637": {
     "asset": 1510160704310,
-    "meta": 1510233203573,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\18.mp3"
   },
   "85278faa-c64c-4385-81fc-7f0fb1fc2940": {
     "asset": 1510160704313,
-    "meta": 1510233203583,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\19.mp3"
   },
   "96490529-584d-4ef7-bc25-f52ccf7abc04": {
     "asset": 1510160704316,
-    "meta": 1510233203592,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\2.mp3"
   },
   "2a090963-a3c5-41dd-95c2-62bc2b9ada79": {
     "asset": 1510160704318,
-    "meta": 1510233203602,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\21.mp3"
   },
   "14630a6e-3d97-4fda-ae43-61809774e116": {
     "asset": 1510160704321,
-    "meta": 1510233203611,
+    "meta": 1512482436981,
     "relativePath": "resources\\sounds\\nv\\22.mp3"
   },
   "89f57315-fad5-4b3f-8ecf-1e932886b163": {
     "asset": 1510160704324,
-    "meta": 1510233203620,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\23.mp3"
   },
   "b907c6e6-3d07-4f19-bda2-e06dc9bb0502": {
     "asset": 1510160704327,
-    "meta": 1510233203630,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\24.mp3"
   },
   "2d8d85bc-728f-4add-8508-28eb5e2cb56d": {
     "asset": 1510160704329,
-    "meta": 1510233203639,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\25.mp3"
   },
   "72385906-a05c-4c15-a964-e874c5ca9088": {
     "asset": 1510160704332,
-    "meta": 1510233203651,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\26.mp3"
   },
   "ef96c12a-c070-409f-b419-44632e9f1fac": {
     "asset": 1510160704335,
-    "meta": 1510233203660,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\27.mp3"
   },
   "60d599d0-5883-45ea-9b73-23ee5c908ddd": {
     "asset": 1510160704338,
-    "meta": 1510233203670,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\28.mp3"
   },
   "e6e7ab6b-5d8c-49c8-8546-a1da8a60c9f3": {
     "asset": 1510160704340,
-    "meta": 1510233203679,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\29.mp3"
   },
   "935a4e23-06b6-4669-b00f-feaa68eb7f4e": {
     "asset": 1510160704344,
-    "meta": 1510233203688,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\3.mp3"
   },
   "f24db379-9aa2-49eb-8171-b00f87915ffe": {
     "asset": 1510160704347,
-    "meta": 1510233203693,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\31.mp3"
   },
   "9184bc96-c6d2-4eeb-83b6-11bf6a4c9dad": {
     "asset": 1510160704353,
-    "meta": 1510233203703,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\4.mp3"
   },
   "e80565cc-cf17-4cc3-8fc9-c7a6173f053b": {
     "asset": 1510160704357,
-    "meta": 1510233203712,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\41.mp3"
   },
   "a5ec6867-36f2-406c-b963-6c4f73e7258b": {
     "asset": 1510160704360,
-    "meta": 1510233203722,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\5.mp3"
   },
   "876bb2d1-28a8-491e-8770-21cddfe2863a": {
     "asset": 1510160704362,
-    "meta": 1510233203727,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\51.mp3"
   },
   "021dd735-2275-48c0-88be-3262e61df608": {
     "asset": 1510160704365,
-    "meta": 1510233203737,
+    "meta": 1512482436997,
     "relativePath": "resources\\sounds\\nv\\6.mp3"
   },
   "3484fee3-8d13-4858-9aa5-4eaf5f559510": {
     "asset": 1510160704367,
-    "meta": 1510233203748,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\61.mp3"
   },
   "de08319e-2c5e-4643-9b9c-3da6315eee97": {
     "asset": 1510160704370,
-    "meta": 1510233203758,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\7.mp3"
   },
   "aec3e5d6-af97-4fb9-ac3f-78bc5f919425": {
     "asset": 1510160704373,
-    "meta": 1510233203769,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\71.mp3"
   },
   "be329ec2-31be-4910-a8c6-ffd3361c9f59": {
     "asset": 1510160704375,
-    "meta": 1510233203779,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\8.mp3"
   },
   "e99eaed7-5cfc-4a44-9469-4808ce7edca6": {
     "asset": 1510160704378,
-    "meta": 1510233203790,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\81.mp3"
   },
   "4e416ab2-9204-4d4c-ae0d-1fc7a665a541": {
     "asset": 1510160704381,
-    "meta": 1510233203798,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\9.mp3"
   },
   "64cb6e2b-51b8-4834-a908-ba158a4c2803": {
     "asset": 1510160704383,
-    "meta": 1510233203802,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\91.mp3"
   },
   "a92c6a26-e25e-44d5-bdf5-e71dadf6639d": {
     "asset": 1510160704386,
-    "meta": 1510233203812,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\chi.mp3"
   },
   "bde088bf-fc4d-4b74-8b0b-3599ee306a36": {
     "asset": 1510160704389,
-    "meta": 1510233203821,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\gang.mp3"
   },
   "ecca0b6a-0bc2-4db8-a7f1-6b195c649b9e": {
     "asset": 1510160704391,
-    "meta": 1510233203831,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\hu.mp3"
   },
   "41c5f395-3f6e-4ec1-be02-88f99f4e8376": {
     "asset": 1510160704394,
-    "meta": 1510233203838,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\nv\\peng.mp3"
   },
   "0ebd449f-102f-4aa2-b56d-703942ef38c8": {
     "asset": 1510160704397,
-    "meta": 1510233203847,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\select.mp3"
   },
   "dd3e1879-4f97-44d4-bfca-4eb083547f9b": {
     "asset": 1510160704399,
-    "meta": 1510233203858,
+    "meta": 1512482437012,
     "relativePath": "resources\\sounds\\shuffle.mp3"
   },
   "62c609ef-fa1a-4c27-bbb4-622cbe2331f7": {
     "asset": 1510160704402,
-    "meta": 1510233203866,
+    "meta": 1512482437028,
     "relativePath": "resources\\sounds\\sort.mp3"
   },
   "aa56f9b7-3cd1-44db-ab41-733ad9fcb235": {
     "asset": 1510160704405,
-    "meta": 1510233203876,
+    "meta": 1512482437028,
     "relativePath": "resources\\sounds\\timeup_alarm.mp3"
   },
   "2625c55c-353c-4953-82b7-13472755e8ca": {
     "asset": 1510160704408,
-    "meta": 1510233203887,
+    "meta": 1512482437028,
     "relativePath": "resources\\sounds\\ui_click.mp3"
   },
   "343161f7-49fd-4509-8f56-e5fab266f275": {
     "asset": 1510160704411,
-    "meta": 1510233203896,
+    "meta": 1512482437028,
     "relativePath": "resources\\sounds\\win.mp3"
   },
   "7a9391b6-3ed9-4931-8ab8-23d5c2eb4101": {
@@ -2870,8 +2870,8 @@
     "relativePath": "resources\\textures\\MJ\\left\\Z_left.png"
   },
   "ee393df6-60b2-4253-bd88-0d469974b22b": {
-    "asset": 1510160704608,
-    "meta": 1510233213155,
+    "asset": 1512482437028,
+    "meta": 1512487010322,
     "relativePath": "resources\\textures\\MJ\\left\\Z_left1.png"
   },
   "eaf07895-ebbe-4eb1-88e4-c7aa675d15b4": {
@@ -2880,8 +2880,8 @@
     "relativePath": "resources\\textures\\MJ\\my\\Z_my.png"
   },
   "769c1f95-384a-4119-9e50-7f31765e42c9": {
-    "asset": 1510160704635,
-    "meta": 1510233213574,
+    "asset": 1512482437028,
+    "meta": 1512487010336,
     "relativePath": "resources\\textures\\MJ\\my\\Z_my1.png"
   },
   "059ebe81-c575-49ff-8a71-3d899278040c": {
@@ -2895,8 +2895,8 @@
     "relativePath": "resources\\textures\\utils\\btn_blue.png"
   },
   "d4611940-200b-4a97-bed8-f583b336a18f": {
-    "asset": 1510160704650,
-    "meta": 1510233213723,
+    "asset": 1512482437028,
+    "meta": 1512487013507,
     "relativePath": "resources\\textures\\MJ\\right\\Z_right1.png"
   },
   "395b8104-1169-423a-b262-8a7e8a51a67e": {
@@ -2911,227 +2911,227 @@
   },
   "39329d2f-3dcd-4821-87e1-f05ae6c5c359": {
     "asset": 1510160705681,
-    "meta": 1510233221358,
+    "meta": 1512487013621,
     "relativePath": "scripts\\3rdparty\\socket-io.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
     "asset": 1510160705683,
-    "meta": 1510233221490,
+    "meta": 1512487013654,
     "relativePath": "scripts\\AnysdkMgr.js"
   },
   "55caea5c-a6f1-4ae6-bd00-c797fc8ecb38": {
     "asset": 1510160705686,
-    "meta": 1510233221495,
+    "meta": 1512487013700,
     "relativePath": "scripts\\AudioMgr.js"
   },
   "c1255dec-c42c-46fe-89f4-073eeb917d1f": {
     "asset": 1510160705716,
-    "meta": 1510233221682,
+    "meta": 1512487013776,
     "relativePath": "scripts\\components\\Alert.js"
   },
   "58f27af1-bacb-4db1-8951-5f77ebc8df17": {
     "asset": 1510160705719,
-    "meta": 1510233221754,
+    "meta": 1512487013792,
     "relativePath": "scripts\\components\\Chat.js"
   },
   "dc9e585c-7a01-4116-96e1-d02c14170f15": {
     "asset": 1510160705722,
-    "meta": 1510233221822,
+    "meta": 1512487013849,
     "relativePath": "scripts\\components\\CheckBox.js"
   },
   "5d56b158-cbf4-446f-bee9-402abd60787a": {
     "asset": 1510160705724,
-    "meta": 1510233222063,
+    "meta": 1512487013909,
     "relativePath": "scripts\\components\\CreateRole.js"
   },
   "90758d9a-c0d2-459e-86c2-fe664614b06a": {
     "asset": 1510160705729,
-    "meta": 1510233222338,
+    "meta": 1512487014067,
     "relativePath": "scripts\\components\\DingQue.js"
   },
   "0bf637a2-6441-4c59-b5b4-de8f217aa6b9": {
     "asset": 1510160705732,
-    "meta": 1510233222904,
+    "meta": 1512487014358,
     "relativePath": "scripts\\components\\Folds.js"
   },
   "2b08df29-9b45-410c-b625-64875f2ee3d2": {
     "asset": 1510160705738,
-    "meta": 1510233223244,
+    "meta": 1512487014506,
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1510160705740,
-    "meta": 1510233223365,
+    "asset": 1512482437059,
+    "meta": 1512487014575,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
     "asset": 1510160705743,
-    "meta": 1510233223447,
+    "meta": 1512487014657,
     "relativePath": "scripts\\components\\History.js"
   },
   "9a096a00-814e-47c2-bc57-d3964f358b56": {
     "asset": 1510160705746,
-    "meta": 1510233223516,
+    "meta": 1512487014674,
     "relativePath": "scripts\\components\\HuanSanZhang.js"
   },
   "ed057060-a7c1-4794-96c6-23e96300dedd": {
     "asset": 1510160705749,
-    "meta": 1510233223615,
+    "meta": 1512487014751,
     "relativePath": "scripts\\components\\ImageLoader.js"
   },
   "10a1cf23-cfde-49bb-8367-a6439651f8a7": {
     "asset": 1510160705751,
-    "meta": 1510233223721,
+    "meta": 1512487014791,
     "relativePath": "scripts\\components\\JoinGameInput.js"
   },
   "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
-    "asset": 1510160705754,
-    "meta": 1510233223844,
+    "asset": 1512482437059,
+    "meta": 1512487014870,
     "relativePath": "scripts\\components\\LoadingLogic.js"
   },
   "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1510160705757,
-    "meta": 1510233224445,
+    "asset": 1512482437075,
+    "meta": 1512487015160,
     "relativePath": "scripts\\components\\Login.js"
-  },
-  "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1510160705765,
-    "meta": 1510233224686,
-    "relativePath": "scripts\\components\\MJRoom.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
     "asset": 1510160705768,
-    "meta": 1510233224721,
+    "meta": 1512487015361,
     "relativePath": "scripts\\components\\NoticeTip.js"
   },
   "6fd98d93-ca2e-4d39-8256-b7f7c663c2e3": {
     "asset": 1510160705770,
-    "meta": 1510233224867,
+    "meta": 1512487015401,
     "relativePath": "scripts\\components\\OnBack.js"
   },
   "279d9a4d-1464-41de-b0ff-9e0af52c85d0": {
     "asset": 1511082590261,
-    "meta": 1511082590459,
+    "meta": 1512487015480,
     "relativePath": "scripts\\components\\PengGangs.js"
   },
   "bc0d254b-80bd-40be-8d7a-ead1cbb23089": {
     "asset": 1510160705775,
-    "meta": 1510233225032,
+    "meta": 1512487015495,
     "relativePath": "scripts\\components\\PopupMgr.js"
   },
   "8d571cb6-53ef-4088-a9ed-3be4d27f415b": {
     "asset": 1510160705778,
-    "meta": 1510233225082,
+    "meta": 1512487015557,
     "relativePath": "scripts\\components\\RadioButton.js"
   },
   "824eaa5e-4583-4a63-8449-ce0d99e18036": {
     "asset": 1510160705781,
-    "meta": 1510233225130,
+    "meta": 1512487015572,
     "relativePath": "scripts\\components\\RadioGroupMgr.js"
   },
   "7f5531b4-6e84-47e8-aad3-13bc0009a5f1": {
     "asset": 1510160705783,
-    "meta": 1510233225181,
+    "meta": 1512487015622,
     "relativePath": "scripts\\components\\ReConnect.js"
   },
   "21e6af9a-8c63-434c-9c03-1db57703bda6": {
     "asset": 1510160705786,
-    "meta": 1510233225347,
+    "meta": 1512487015669,
     "relativePath": "scripts\\components\\ReplayCtrl.js"
-  },
-  "82087d25-b4c6-4d0d-896f-cebfaa083109": {
-    "asset": 1510160705788,
-    "meta": 1510233225459,
-    "relativePath": "scripts\\components\\Seat.js"
   },
   "4c04fc9d-f3d2-4065-8eea-1a3bee6e2f9f": {
     "asset": 1510160705791,
-    "meta": 1510233225530,
+    "meta": 1512487015770,
     "relativePath": "scripts\\components\\Settings.js"
   },
   "5b5867ab-3cad-47e5-b15f-acc296b3e63a": {
     "asset": 1510160705794,
-    "meta": 1510233225621,
+    "meta": 1512487015821,
     "relativePath": "scripts\\components\\TimePointer.js"
   },
   "fe4f1e82-026a-4195-9a61-9e9b07d444ef": {
     "asset": 1510160705796,
-    "meta": 1510233225715,
+    "meta": 1512487015851,
     "relativePath": "scripts\\components\\UserInfoShow.js"
   },
   "f6db9cf4-0b17-44ce-9455-814e7af5d0ee": {
     "asset": 1510160705799,
-    "meta": 1510233225758,
+    "meta": 1512487015902,
     "relativePath": "scripts\\components\\Voice.js"
   },
   "10e328c3-b2da-4b84-8187-5ab404ab6bcd": {
     "asset": 1510160705802,
-    "meta": 1510233226089,
+    "meta": 1512487016095,
     "relativePath": "scripts\\components\\WaitingConnection.js"
   },
   "24e30649-2e07-47de-bb35-4750afa8df14": {
     "asset": 1510160705691,
-    "meta": 1510233226233,
+    "meta": 1512487016175,
     "relativePath": "scripts\\Global.js"
   },
   "17141128-74d4-4cff-8229-b04d38232094": {
     "asset": 1510160705696,
-    "meta": 1510233226297,
+    "meta": 1512487016234,
     "relativePath": "scripts\\HotUpdate.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
     "asset": 1510160705698,
-    "meta": 1510233226527,
+    "meta": 1512487016337,
     "relativePath": "scripts\\MahjongMgr.js"
   },
   "b1cc9c91-775e-425e-a160-d2f4c6299524": {
     "asset": 1510766080621,
-    "meta": 1510766080695,
+    "meta": 1512487016371,
     "relativePath": "scripts\\Net.js"
   },
   "1a6a1a7c-e8d1-4be8-a644-6429dbbbbb6d": {
     "asset": 1510160705704,
-    "meta": 1510233226742,
+    "meta": 1512487016447,
     "relativePath": "scripts\\ReplayMgr.js"
   },
   "74d78241-a877-4329-8ea1-72463662e2fe": {
     "asset": 1510160705707,
-    "meta": 1510233226789,
+    "meta": 1512487016458,
     "relativePath": "scripts\\UserMgr.js"
   },
   "b717fcf0-c348-4dcc-8aaf-35b6f5b7dc31": {
     "asset": 1510160705709,
-    "meta": 1510233226901,
+    "meta": 1512487016548,
     "relativePath": "scripts\\Utils.js"
   },
   "1f06645b-2c0c-4a18-966d-90314eda4abf": {
     "asset": 1510160705712,
-    "meta": 1510233226912,
+    "meta": 1512487016556,
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
     "asset": 1510756815500,
-    "meta": 1510756834922,
+    "meta": 1512487014025,
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1510842486135,
-    "meta": 1510842517768,
+    "asset": 1512482437043,
+    "meta": 1512487016265,
     "relativePath": "scripts\\HTTP.js"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
     "asset": 1512288693647,
-    "meta": 1512288746572,
+    "meta": 1512487014383,
     "relativePath": "scripts\\components\\GameOver.js"
   },
+  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
+    "asset": 1512487211580,
+    "meta": 1512487803130,
+    "relativePath": "scripts\\components\\MJGame.js"
+  },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1512296052814,
-    "meta": 1512296059978,
+    "asset": 1512488949865,
+    "meta": 1512488973664,
     "relativePath": "scripts\\GameNetMgr.js"
   },
-  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1512297365915,
-    "meta": 1512297374349,
-    "relativePath": "scripts\\components\\MJGame.js"
+  "82087d25-b4c6-4d0d-896f-cebfaa083109": {
+    "asset": 1512494051530,
+    "meta": 1512494053117,
+    "relativePath": "scripts\\components\\Seat.js"
+  },
+  "921df409-65d7-49fb-9185-517ab198c993": {
+    "asset": 1512567464734,
+    "meta": 1512567474923,
+    "relativePath": "scripts\\components\\MJRoom.js"
   }
 }

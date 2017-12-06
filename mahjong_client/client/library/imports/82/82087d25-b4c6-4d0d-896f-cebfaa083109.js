@@ -18,6 +18,7 @@ cc.Class({
 
         _userName: "",
         _score: 0,
+        _gangscore: 0,
         _dayingjia: false,
         _isOffline: false,
         _isReady: false,
@@ -132,6 +133,15 @@ cc.Class({
         }
 
         this.refresh();
+    },
+
+    setScore: function setScore(gangscore) {
+        console.log("setScore");
+        console.log(gangscore);
+        console.log(this._score + gangscore);
+        this.node.getChildByName("score").getComponent(cc.Label).string = this._score + gangscore;
+        //this._score += gangscore
+        //this.refresh()
     },
 
     setZhuang: function setZhuang(value) {

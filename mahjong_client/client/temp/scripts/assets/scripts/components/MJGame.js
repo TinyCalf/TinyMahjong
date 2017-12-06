@@ -200,11 +200,6 @@ cc.Class({
             console.log("game_action");
         });
 
-        // this.node.on('game_feng',function(data){
-        //     self._gamecount
-        //     console.log("game_feng");
-        // });
-
         this.node.on('game_hun', function () {
             //self.hun = cc.vv.gameNetMgr.hun
             self.changeHun();
