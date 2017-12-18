@@ -82,7 +82,7 @@ cc.Class({
             // if(type == null || type == ""){
             //     type = "xzdd";
             // }
-            // titles.getChildByName(type).active = true;  
+            // titles.getChildByName(type).active = true;
         }
     },
 
@@ -148,6 +148,21 @@ cc.Class({
 
             self.refreshBtns();
             self.initSeats();
+        });
+
+        this.node.on('gang_score', function (data) {
+            console.log('gang_score');
+            console.log(data);
+            var data = data.detail.gangscores;
+            console.log(data);
+            // self._seats[0].setScore(data[0]);
+            // self._seats[1].setScore(data[1]);
+            // self._seats[2].setScore(data[2]);
+            // self._seats[3].setScore(data[3]);
+            self._seats2[cc.vv.gameNetMgr.getLocalIndex(0)].setScore(data[0]);
+            self._seats2[cc.vv.gameNetMgr.getLocalIndex(1)].setScore(data[1]);
+            self._seats2[cc.vv.gameNetMgr.getLocalIndex(2)].setScore(data[2]);
+            self._seats2[cc.vv.gameNetMgr.getLocalIndex(3)].setScore(data[3]);
         });
 
         this.node.on('game_num', function (data) {

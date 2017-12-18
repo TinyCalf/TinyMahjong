@@ -117,6 +117,7 @@ cc.Class({
             var s = this.seats[i];
             s.seatindex = i;
             s.score = null;
+            s.gangscore = 0;
             s.holds = baseInfo.game_seats[i];
             s.pengs = [];
             s.chis = [];
@@ -423,6 +424,7 @@ cc.Class({
             var results = data.results;
             for(var i = 0; i < self.seats.length; ++i){
                 self.seats[i].score = results.length == 0? 0:results[i].totalscore;
+                self.seats[i].gangscore = 0
             }
             self.dispatchEvent('game_over',results);
             if(data.endinfo){
@@ -527,6 +529,12 @@ cc.Class({
             var pai = data.pai;
             var si = self.getSeatIndexByID(userId);
             self.doGang(si,pai,data.gangtype);
+        });
+
+        cc.vv.net.addHandler("gang_score_push",function(data){
+            console.log('gang_score_push');
+            console.log(data);
+            self.dispatchEvent("gang_score",data);
         });
 
         cc.vv.net.addHandler("chi_notify_push",function(data){
