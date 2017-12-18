@@ -5,6 +5,7 @@ var db = require("../utils/db");
 var crypto = require("../utils/crypto");
 var checkHu = require("./actions/checkHu")
 var judge = require("./actions/judge")
+var yangzhou = require("./actions/yangzhou")
 
 var games = {};
 var gamesIdBase = 0;
@@ -1018,6 +1019,12 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
 exports.begin = function(roomId) {
      var roomInfo = roomMgr.getRoom(roomId);
      if(roomInfo == null) return;
+
+     //获取板子和混
+     var ar = yangzhou.getBanZiAndPeiZi();
+     var ban = ar[0]
+     var hun = ar[1]
+
      var seats = roomInfo.seats;
      var game = {
          conf:roomInfo.conf,
@@ -1030,7 +1037,8 @@ exports.begin = function(roomId) {
          currentIndex:0,
          gameSeats:new Array(4),
          turn:roomInfo.nextButton,
-         hun:parseInt(Math.random()*33), //随机混子
+         ban:ban,
+         hun:hun,
          chuPai:-1,
          state:"idle",
          firstHupai:-1,
@@ -1121,6 +1129,8 @@ exports.begin = function(roomId) {
          userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
          //通知当前混子
          userMgr.sendMsg(s.userId,'game_hun_push',game.hun);
+         //通知当前搬子
+         userMgr.sendMsg(s.userId,'game_ban_push',game.ban);
      }
 
      var seatData = gameSeatsOfUsers[seats[1].userId];
