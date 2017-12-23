@@ -20,6 +20,7 @@ cc.Class({
         dissoveData:null,
         fengxiang:-1,
         hun:null,
+        ban:null,
 
 
         // foo: {
@@ -338,6 +339,11 @@ cc.Class({
             self.hun = data;
             self.dispatchEvent('game_hun');
         });
+        
+        cc.vv.net.addHandler("game_ban_push",function(data){
+            self.ban = data;
+            self.dispatchEvent('game_ban');
+        });
 
 
         cc.vv.net.addHandler("game_begin_push",function(data){
@@ -372,6 +378,7 @@ cc.Class({
             self.chupai = data.chuPai;
             self.huanpaimethod = data.huanpaimethod;
             self.hun = data.hun
+            self.ban = data.ban
             for(var i = 0; i < 4; ++i){
                 var seat = self.seats[i];
                 var sd = data.seats[i];

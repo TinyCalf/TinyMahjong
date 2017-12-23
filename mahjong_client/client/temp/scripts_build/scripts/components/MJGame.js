@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
-// scripts/components/MJGame.js
+// scripts\components\MJGame.js
 
 cc.Class({
     "extends": cc.Component,
@@ -81,27 +81,26 @@ cc.Class({
             this._mjcount.string = "";
         }
         this._gamecount = gameChild.getChildByName('gamecount').getComponent(cc.Label);
+        var numofgame = cc.vv.gameNetMgr.numOfGames;
         switch (cc.vv.gameNetMgr.fengxiang) {
             case 0:
-                this._gamecount.string = "东风圈";break;
+                this._gamecount.string = "东风圈第" + numofgame + "局";break;
             case 1:
-                this._gamecount.string = "南风圈";break;
+                this._gamecount.string = "南风圈第" + numofgame + "局";break;
             case 2:
-                this._gamecount.string = "西风圈";break;
+                this._gamecount.string = "西风圈第" + numofgame + "局";break;
             case 3:
-                this._gamecount.string = "北风圈";break;
+                this._gamecount.string = "北风圈第" + numofgame + "局";break;
             default:
                 this._gamecount.string = "";break;
         }
 
         this._gametype = gameChild.getChildByName('gametype');
         switch (cc.vv.gameNetMgr.conf.type) {
-            case "sjmmj":
-                this._gametype.getComponent(cc.Label).string = "沈家门麻将";break;
-            case "dhmj":
-                this._gametype.getComponent(cc.Label).string = "定海麻将";break;
-            case "tdh":
-                this._gametype.getComponent(cc.Label).string = "推到胡";break;
+            case "ddh":
+                this._gametype.getComponent(cc.Label).string = "跌倒胡";break;
+            case "yzmj":
+                this._gametype.getComponent(cc.Label).string = "扬州麻将";break;
         }
 
         var myselfChild = gameChild.getChildByName("myself");
@@ -161,7 +160,7 @@ cc.Class({
         });
 
         this.node.on('game_begin', function (data) {
-            self.playShazi();
+            //self.playShazi();
             self.onGameBeign(data);
         });
 
@@ -201,10 +200,10 @@ cc.Class({
             console.log("game_action");
         });
 
-        // this.node.on('game_feng',function(data){
-        //     self._gamecount
-        //     console.log("game_feng");
-        // });
+        this.node.on('game_ban', function () {
+            //self.hun = cc.vv.gameNetMgr.hun
+            self.changeHun();
+        });
 
         this.node.on('hupai', function (data) {
             var data = data.detail;
@@ -237,7 +236,7 @@ cc.Class({
 
                 if (!(data.iszimo && localIndex == 0)) {
                     //if(cc.vv.replayMgr.isReplay() == false && localIndex != 0){
-                    //    self.initEmptySprites(seatIndex);               
+                    //    self.initEmptySprites(seatIndex);
                     //}
                     self.initMopai(seatIndex, data.hupai);
                 }
@@ -263,38 +262,43 @@ cc.Class({
         });
 
         this.node.on('game_num', function (data) {
-            //console.log('game_num!!!!!!!!!!'+cc.vv.gameNetMgr.fengxiang);
-            // switch(cc.vv.gameNetMgr.fengxiang) {
-            //     case 0:
-            //         self._gamecount.string = "东风圈";break;
-            //     case 1:
-            //         self._gamecount.string = "南风圈";break;
-            //     case 2:
-            //         self._gamecount.string = "西风圈";break;
-            //     case 3:
-            //         self._gamecount.string = "北风圈";break;
-
-            // }
+            var numofgame = cc.vv.gameNetMgr.numOfGames;
+            switch (cc.vv.gameNetMgr.fengxiang) {
+                case 0:
+                    self._gamecount.string = "东风圈第" + numofgame + "局";break;
+                case 1:
+                    self._gamecount.string = "南风圈第" + numofgame + "局";break;
+                case 2:
+                    self._gamecount.string = "西风圈第" + numofgame + "局";break;
+                case 3:
+                    self._gamecount.string = "北风圈第" + numofgame + "局";break;
+                default:
+                    self._gamecount.string = "";break;
+            }
         });
 
         this.node.on('game_feng', function (data) {
-            console.log('game_num!!!!!!!!!!' + cc.vv.gameNetMgr.fengxiang);
+            var numofgame = cc.vv.gameNetMgr.numOfGames;
             switch (cc.vv.gameNetMgr.fengxiang) {
                 case 0:
-                    self._gamecount.string = "东风圈";break;
+                    self._gamecount.string = "东风圈第" + numofgame + "局";break;
                 case 1:
-                    self._gamecount.string = "南风圈";break;
+                    self._gamecount.string = "南风圈第" + numofgame + "局";break;
                 case 2:
-                    self._gamecount.string = "西风圈";break;
+                    self._gamecount.string = "西风圈第" + numofgame + "局";break;
                 case 3:
-                    self._gamecount.string = "北风圈";break;
-
+                    self._gamecount.string = "北风圈第" + numofgame + "局";break;
+                default:
+                    self._gamecount.string = "";break;
             }
         });
 
         this.node.on('game_over', function (data) {
+            self.hideOptions();
+            self.hideChupai();
             self.gameRoot.active = false;
             self.prepareRoot.active = true;
+            //隐藏opts
         });
 
         this.node.on('game_chupai_notify', function (data) {
@@ -347,36 +351,6 @@ cc.Class({
             self.hideOptions();
         });
 
-        this.node.on('chi_notify', function (data) {
-            console.log('chi_notify');
-            console.log(data);
-            self.hideChupai();
-
-            var seatData = data.detail;
-
-            console.log(data);
-            if (seatData.seatindex == cc.vv.gameNetMgr.seatIndex) {
-                self.initMahjongs();
-            } else {
-                self.initOtherMahjongs(seatData);
-            }
-            var localIndex = self.getLocalIndex(seatData.seatindex);
-            self.playEfx(localIndex, "play_chi");
-            cc.vv.audioMgr.playSFX("nv/chi.mp3");
-            self.hideOptions();
-        });
-
-        this.node.on('buhua_notify', function (data) {
-            console.log('buhua_notify');
-            console.log(data.detail.holds);
-            var seatData = data.detail;
-            if (seatData.seatindex == cc.vv.gameNetMgr.seatIndex) {
-                self.initMahjongs();
-            } else {
-                self.initOtherMahjongs(seatData);
-            }
-        });
-
         this.node.on('gang_notify', function (data) {
             self.hideChupai();
             var data = data.detail;
@@ -416,6 +390,16 @@ cc.Class({
             sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", pai);
             sprite.node.active = true;
         }
+    },
+
+    changeHun: function changeHun() {
+        console.log("changeHun!!!!!!!");
+        console.log(cc.vv.gameNetMgr.ban);
+        var sprite = this.node.getChildByName("game").getChildByName("hun").getComponent(cc.Sprite);
+        var hun = cc.vv.gameNetMgr.ban;
+        sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", hun);
+        console.log("game_hun");
+        console.log(hun);
     },
 
     addOption: function addOption(btnName, pai, chitype) {
@@ -577,31 +561,22 @@ cc.Class({
     onGameBeign: function onGameBeign() {
 
         //更换gameover界面头像 懒得封装了，反正以后也用不到
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s1/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s2/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s3/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_sjmmj/result_list/s4/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s4/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
 
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s1/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s1/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s2/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s2/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s3/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s3/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_dhmj/result_list/s4/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
-
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s1/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[0].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[0].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s2/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[1].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[1].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s3/touxiang").getComponent("ImageLoader");
-        if (sprIcon && cc.vv.gameNetMgr.seats[2].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[2].userid);
-        var sprIcon = cc.find("Canvas/game_over_tdh/result_list/s4/touxiang").getComponent("ImageLoader");
+        var sprIcon = cc.find("Canvas/game_over_yzmj/result_list/s4/touxiang").getComponent("ImageLoader");
         if (sprIcon && cc.vv.gameNetMgr.seats[3].userid) sprIcon.setUserID(cc.vv.gameNetMgr.seats[3].userid);
 
         for (var i = 0; i < this._playEfxs.length; ++i) {
@@ -678,6 +653,10 @@ cc.Class({
         }
 
         this.checkQueYiMen();
+
+        this._mjcount.string = "剩余" + cc.vv.gameNetMgr.numOfMJ + "张";
+
+        this.changeHun();
     },
 
     onMJClicked: function onMJClicked(event) {
@@ -883,7 +862,7 @@ cc.Class({
         var game = this.node.getChildByName("game");
         var sideRoot = game.getChildByName(side);
         var sideHolds = sideRoot.getChildByName("holds");
-        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length + seatData.chis.length;
+        var num = seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length;
         num *= 3;
         for (var i = 0; i < num; ++i) {
             var idx = this.getMJIndex(side, i);
@@ -942,7 +921,7 @@ cc.Class({
         }
         console.log(seats);
         //初始化手牌
-        var lackingNum = (seatData.chis.length + seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
+        var lackingNum = (seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
         for (var i = 0; i < holds.length; ++i) {
             var mjid = holds[i];
             var sprite = this._myMJArr[i + lackingNum];
@@ -996,7 +975,8 @@ cc.Class({
                 if (sprite.node.mjId != null) {
                     var type = cc.vv.mahjongmgr.getMahjongType(sprite.node.mjId);
                     if (hasQue && type != dingque) {
-                        sprite.node.getComponent(cc.Button).interactable = false;
+                        // sprite.node.getComponent(cc.Button).interactable = false;
+                        sprite.node.getComponent(cc.Button).interactable = true;
                     } else {
                         sprite.node.getComponent(cc.Button).interactable = true;
                     }
@@ -1007,7 +987,8 @@ cc.Class({
                 for (var i = 0; i < 14; ++i) {
                     var sprite = this._myMJArr[i];
                     if (sprite.node.active == true) {
-                        sprite.node.getComponent(cc.Button).interactable = i == 13;
+                        // sprite.node.getComponent(cc.Button).interactable = i == 13;
+                        sprite.node.getComponent(cc.Button).interactable = true;
                     }
                 }
             } else {
@@ -1064,7 +1045,63 @@ cc.Class({
     },
 
     // called every frame, uncomment this function to activate update callback
-    update: function update(dt) {},
+    update: function update(dt) {
+        if (!cc.vv.gameNetMgr.hun) return;
+        //显示桌面上的混子
+        var spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", cc.vv.gameNetMgr.hun);
+        //提取_之前的内容
+        function getEnd(mainStr, searchStr) {
+            var foundOffset = mainStr.indexOf(searchStr);
+            if (foundOffset == -1) {
+                return null;
+            }
+            return mainStr.substring(foundOffset + searchStr.length, mainStr.length);
+        }
+        console.log(spriteFrame);
+        var mjname = getEnd(spriteFrame._name, "_");
+        //所有folds
+        var allfolds = [];
+        allfolds = allfolds.concat(cc.find("Canvas/game/right/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/up/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/left/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/holds").children);
+
+        //var aaa = cc.find("Canvas/game/myself/penggangs").children;
+
+        //var sprites = cc.find("Canvas/game/myself/penggangs").children[0].children;
+        var pgs = cc.find("Canvas/game/myself/penggangs");
+        for (var i = 0; i < pgs.childrenCount; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/right/penggangs");
+        for (var i = 0; i < pgs.childrenCount; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/up/penggangs");
+        for (var i = 0; i < pgs.childrenCount; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/left/penggangs");
+        for (var i = 0; i < pgs.childrenCount; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        for (var i = 0; i < allfolds.length; i++) {
+            var nowsprite = allfolds[i].getComponent(cc.Sprite);
+            if (nowsprite.spriteFrame) {
+                var nowname = getEnd(nowsprite.spriteFrame._name, "_");
+                if (nowname == mjname) {
+                    allfolds[i].color = new cc.Color(233, 199, 163);
+                } else {
+                    allfolds[i].color = new cc.Color(255, 255, 255);
+                }
+            }
+        }
+    },
 
     onDestroy: function onDestroy() {
         console.log("onDestroy");

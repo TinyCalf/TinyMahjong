@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'ed057Bgp8FHlJbGI+ljAN7d', 'ImageLoader');
-// scripts/components/ImageLoader.js
+// scripts\components\ImageLoader.js
 
 function loadImage(url, code, callback) {
     /*

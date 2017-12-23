@@ -79,8 +79,8 @@ cc.Class({
 
         //东西南北风
         mahjongSprites.push("wind_east");
-        mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_south");
+        mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_north");
 
         //春夏秋冬

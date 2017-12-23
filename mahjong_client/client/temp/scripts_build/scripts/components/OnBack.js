@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6fd982Tyi5NOYJWt/fGY8Lj', 'OnBack');
-// scripts/components/OnBack.js
+// scripts\components\OnBack.js
 
 cc.Class({
     "extends": cc.Component,

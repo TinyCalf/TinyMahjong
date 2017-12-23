@@ -41,6 +41,8 @@ function getMJType(id){
 //洗牌 （已完成）
 function shuffle(game) {
 
+
+
     /*
      * 0-8 為一到九筒
      * 9-17為一到九條
@@ -94,6 +96,12 @@ function shuffle(game) {
         var t = mahjongs[index];
         mahjongs[index] = mahjongs[lastIndex];
         mahjongs[lastIndex] = t;
+    }
+
+    // 有板子的时候去掉一个板子拍
+    if(game.ban) {
+      var index = mahjongs.indexOf(game.ban);
+      if (index > -1) mahjongs.splice(index, 1);
     }
 
     // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
@@ -194,6 +202,10 @@ function checkCanAnGang(game,seatData){
         if(getMJType(pai) != seatData.que){
             var c = seatData.countMap[key];
             if(c != null && c == 4){
+                seatData.canGang = true;
+                seatData.gangPai.push(pai);
+            }
+            if(c != null && c == 3 && pai==game.ban){
                 seatData.canGang = true;
                 seatData.gangPai.push(pai);
             }
@@ -807,6 +819,7 @@ exports.setReady = function(userId,callback){
             fengxiang:roomInfo.fengxiang,
             fengxiangju:roomInfo.fengxiangju,
             hun:game.hun,
+            ban:game.ban,
             state:game.state,
             numofmj:numOfMJ,
             button:game.button,
@@ -1379,7 +1392,7 @@ exports.peng = function(userId){
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
 
 
-    if(pai == game.hun) {
+    if(pai == game.ban) {
       seatData.gangscore += 2
       game.gameSeats[game.turn].gangscore -= 2
     }
@@ -1587,10 +1600,10 @@ exports.gang = function(userId,pai){
     if(numOfCnt == 1){
         gangtype = "wangang"
     }
-    else if(numOfCnt == 3){
+    else if(numOfCnt == 3 && pai!=game.ban){
         gangtype = "diangang"
     }
-    else if(numOfCnt == 4){
+    else if(numOfCnt == 4 || (numOfCnt == 3 && pai==game.ban) ){
         gangtype = "angang";
     }
     else{

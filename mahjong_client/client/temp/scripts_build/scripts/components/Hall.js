@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts/components/Hall.js
+// scripts\components\Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -153,22 +153,22 @@ cc.Class({
             cc.find("Canvas/hallBg/qiqipuke").active = false;
             cc.find("Canvas/hallBg/more").active = false;
             cc.find("Canvas/hallBg/xixia001").active = false;
-            cc.find("Canvas/top_left/headinfo/bg").active = false;
-            cc.find("Canvas/top_left/headinfo/gems").active = false;
-            cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
-            cc.find("Canvas/top_left/headinfo/lblGems").active = false;
+            // cc.find("Canvas/top_left/headinfo/bg").active = false;
+            // cc.find("Canvas/top_left/headinfo/gems").active = false;
+            // cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
+            // cc.find("Canvas/top_left/headinfo/lblGems").active = false;
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
             cc.find("Canvas/right_bottom/btn_checkin").active = false;
-            cc.find("Canvas/CreateRoom/sjmmj/cost").active = false;
-            cc.find("Canvas/CreateRoom/dhmj/cost").active = false;
-            cc.find("Canvas/CreateRoom/tdh/cost").active = false;
+            // cc.find("Canvas/CreateRoom/sjmmj/cost").active = false;
+            // cc.find("Canvas/CreateRoom/dhmj/cost").active = false;
+            // cc.find("Canvas/CreateRoom/tdh/cost").active = false;
             cc.find("Canvas/CreateRoom/bg/New Label").active = false;
             cc.vv.utils.showAct = false;
         }
 
         if (cc.vv.utils.showAct) {
-            cc.find("Canvas/Activity").active = true;
+            cc.find("Canvas/Activity").active = false;
         }
     },
 
@@ -346,8 +346,13 @@ cc.Class({
     },
 
     onBtnAddGemsClicked: function onBtnAddGemsClicked() {
-        cc.vv.alert.show("提示", cc.vv.userMgr.gemstip.msg);
-        this.refreshInfo();
+        // cc.vv.alert.show("提示",cc.vv.userMgr.gemstip.msg);
+        // this.refreshInfo();
+        cc.log("apple 内购");
+
+        if (cc.sys.isNative && cc.sys.os == cc.sys.OS_IOS) {
+            var ret = jsb.reflection.callStaticMethod("AdMaster", "showAd:title:", "apple", "内购");
+        }
     },
 
     onCreateRoomClicked: function onCreateRoomClicked() {

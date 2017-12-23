@@ -190,7 +190,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "e9ecb267-78f5-49b7-be14-60cc9116abe1"
+      "__uuid__": "453b5a18-95da-4427-859f-7d5a1412652e"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -230,8 +230,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 309,
-      "height": 110
+      "width": 286,
+      "height": 109
     },
     "_children": [],
     "_rotationX": 0,
@@ -271,7 +271,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "e35d2605-6a6c-4e32-8086-530b841a53a8"
+      "__uuid__": "cd510f9d-e39a-46f9-b1a0-7fd078bce4fa"
     },
     "_type": 1,
     "_sizeMode": 2,
@@ -380,8 +380,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 309,
-      "height": 112
+      "width": 272,
+      "height": 135
     },
     "_children": [],
     "_rotationX": 0,
@@ -421,10 +421,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "07b178b4-e554-430a-8d6f-732fcac35b6b"
+      "__uuid__": "c7a51b5d-a013-46db-a31a-49e18af5d607"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -524,8 +524,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1194.73,
-      "height": 40
+      "width": 1280,
+      "height": 43
     },
     "_children": [],
     "_rotationX": 0,
@@ -544,7 +544,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "d817bLxl21ESKb+KFfyHi/U",
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 14
@@ -554,24 +554,30 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 13
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 23,
-    "_fontSize": 23,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_N$string": "抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排游戏时间 享受健康生活",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 0
+    "_spriteFrame": {
+      "__uuid__": "a7270767-25bf-46e1-a0f2-ecf1dc999b8e"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
     "__type__": "cc.Node",
@@ -1096,7 +1102,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -346,
+      "x": 382,
       "y": 258
     },
     "_skewX": 0,

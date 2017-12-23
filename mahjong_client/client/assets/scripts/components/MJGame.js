@@ -197,7 +197,7 @@ cc.Class({
             console.log("game_action");
         });
 
-        this.node.on('game_hun',function(){
+        this.node.on('game_ban',function(){
             //self.hun = cc.vv.gameNetMgr.hun
             self.changeHun()
         });
@@ -402,10 +402,12 @@ cc.Class({
     },
 
     changeHun:function(){
+        console.log("changeHun!!!!!!!")
+        console.log(cc.vv.gameNetMgr.ban)
       var sprite = this.node.getChildByName("game")
       .getChildByName("hun")
       .getComponent(cc.Sprite)
-      var hun = cc.vv.gameNetMgr.hun
+      var hun = cc.vv.gameNetMgr.ban
       sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",hun);
       console.log("game_hun");
       console.log(hun)
@@ -1056,6 +1058,61 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+        if(!cc.vv.gameNetMgr.hun) return
+        //显示桌面上的混子
+        var spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",cc.vv.gameNetMgr.hun);
+        //提取_之前的内容
+        function getEnd(mainStr,searchStr){
+            var foundOffset=mainStr.indexOf(searchStr);
+            if(foundOffset==-1){
+               return null;
+            }
+            return mainStr.substring(foundOffset+searchStr.length,mainStr.length);
+        }
+        console.log(spriteFrame)
+        var mjname = getEnd(spriteFrame._name,"_");
+        //所有folds
+        var allfolds = [];
+        allfolds = allfolds.concat(cc.find("Canvas/game/right/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/up/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/left/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/folds").children);
+        allfolds = allfolds.concat(cc.find("Canvas/game/myself/holds").children);
+
+        //var aaa = cc.find("Canvas/game/myself/penggangs").children;
+
+        //var sprites = cc.find("Canvas/game/myself/penggangs").children[0].children;
+        var pgs = cc.find("Canvas/game/myself/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/right/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/up/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        var pgs = cc.find("Canvas/game/left/penggangs");
+        for (var i = 0 ; i < pgs.childrenCount ; i++) {
+            var nowpg = pgs.children[i];
+            allfolds = allfolds.concat(nowpg.children);
+        }
+        for ( var i = 0 ; i < allfolds.length ; i++ ) {
+            var nowsprite = allfolds[i].getComponent(cc.Sprite);
+            if(nowsprite.spriteFrame){
+                var nowname = getEnd(nowsprite.spriteFrame._name,"_");
+                if(nowname == mjname) {
+                    allfolds[i].color = new cc.Color(233, 199, 163);
+                }else {
+                    allfolds[i].color = new cc.Color(255, 255, 255);
+                }
+            }
+        }
     },
 
     onDestroy:function(){

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '9545659TARKZLMoHGqXoY2N', 'GameNetMgr');
-// scripts/GameNetMgr.js
+// scripts\GameNetMgr.js
 
 cc.Class({
     "extends": cc.Component,
@@ -22,9 +22,9 @@ cc.Class({
         gamestate: "",
         isOver: false,
         dissoveData: null,
-
-        //舟山麻将额外属性
-        fengxiang: null
+        fengxiang: -1,
+        hun: null,
+        ban: null
 
     },
 
@@ -33,7 +33,7 @@ cc.Class({
     //    url: cc.Texture2D,  // optional, default is typeof default
     //    serializable: true, // optional, default is true
     //    visible: true,      // optional, default is true
-    //    displayName: 'Foo', // optional
+    //    displayName: 'Foo', // optionalhol
     //    readonly: false,    // optional, default is false
     // },
     // ...
@@ -120,6 +120,7 @@ cc.Class({
             var s = this.seats[i];
             s.seatindex = i;
             s.score = null;
+            s.gangscore = 0;
             s.holds = baseInfo.game_seats[i];
             s.pengs = [];
             s.chis = [];
@@ -168,19 +169,19 @@ cc.Class({
             //     strArr.push("自摸加底");
             // }
             // if(conf.jiangdui){
-            //     strArr.push("将对");  
+            //     strArr.push("将对");
             // }
             // if(conf.dianganghua == 1){
-            //     strArr.push("点杠花(自摸)");  
+            //     strArr.push("点杠花(自摸)");
             // }
             // else{
             //     strArr.push("点杠花(放炮)");
             // }
             // if(conf.menqing){
-            //     strArr.push("门清、中张");  
+            //     strArr.push("门清、中张");
             // }
             // if(conf.tiandihu){
-            //     strArr.push("天地胡");  
+            //     strArr.push("天地胡");
             // }
             return strArr.join(" ");
         }
@@ -213,7 +214,7 @@ cc.Class({
             cc.director.loadScene("mjgame");
 
             // var loadgame = function (){
-            //     cc.director.loadScene("mjgame"); 
+            //     cc.director.loadScene("mjgame");
             // }
             // var fadeout = cc.fadeOut(0.1);
             // var finish = cc.callFunc(loadgame, this);
@@ -309,9 +310,6 @@ cc.Class({
                 if (s.diangangs == null) {
                     s.diangangs = [];
                 }
-                if (s.chis == null) {
-                    s.chis = [];
-                }
                 if (s.huas == null) {
                     s.huas = [];
                 }
@@ -328,8 +326,18 @@ cc.Class({
             self.dispatchEvent('game_feng');
         });
 
+        cc.vv.net.addHandler("game_hun_push", function (data) {
+            self.hun = data;
+            self.dispatchEvent('game_hun');
+        });
+
+        cc.vv.net.addHandler("game_ban_push", function (data) {
+            self.ban = data;
+            self.dispatchEvent('game_ban');
+        });
+
         cc.vv.net.addHandler("game_begin_push", function (data) {
-            console.log('game_action_push');
+            console.log('game_begin_push');
             console.log(data);
             self.button = data;
             self.turn = self.button;
@@ -358,6 +366,8 @@ cc.Class({
             self.button = data.button;
             self.chupai = data.chuPai;
             self.huanpaimethod = data.huanpaimethod;
+            self.hun = data.hun;
+            self.ban = data.ban;
             for (var i = 0; i < 4; ++i) {
                 var seat = self.seats[i];
                 var sd = data.seats[i];
@@ -378,6 +388,9 @@ cc.Class({
                     self.dingque = sd.que;
                 }
             }
+
+            self.dispatchEvent('game_sync');
+            self.dispatchEvent('game_hun');
         });
 
         cc.vv.net.addHandler("game_huanpai_push", function (data) {
@@ -397,15 +410,14 @@ cc.Class({
 
         cc.vv.net.addHandler("game_num_push", function (data) {
             self.numOfGames = data;
-            self.dispatchEvent('game_num', data);
         });
 
         cc.vv.net.addHandler("game_over_push", function (data) {
             console.log('game_over_push');
-            console.log(data);
             var results = data.results;
             for (var i = 0; i < self.seats.length; ++i) {
                 self.seats[i].score = results.length == 0 ? 0 : results[i].totalscore;
+                self.seats[i].gangscore = 0;
             }
             self.dispatchEvent('game_over', results);
             if (data.endinfo) {
@@ -508,6 +520,12 @@ cc.Class({
             var pai = data.pai;
             var si = self.getSeatIndexByID(userId);
             self.doGang(si, pai, data.gangtype);
+        });
+
+        cc.vv.net.addHandler("gang_score_push", function (data) {
+            console.log('gang_score_push');
+            console.log(data);
+            self.dispatchEvent("gang_score", data);
         });
 
         cc.vv.net.addHandler("chi_notify_push", function (data) {

@@ -168,7 +168,7 @@ cc.Class({
         }
 
         if (cc.vv.utils.showAct) {
-            cc.find("Canvas/Activity").active = true;
+            cc.find("Canvas/Activity").active = false;
         }
     },
 

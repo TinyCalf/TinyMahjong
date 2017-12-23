@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'facfdljnx5F+rFDAq5Qbmqa', 'GameOver');
-// scripts/components/GameOver.js
+// scripts\components\GameOver.js
 
 cc.Class({
     "extends": cc.Component,
@@ -35,12 +35,12 @@ cc.Class({
         //TODO:可能出现不同的计分板
         this._gameover = this.node.getChildByName("game_over_" + cc.vv.gameNetMgr.conf.type);
 
-        for (var n = 0; n < 4; n++) {
-            var hua_node = this._gameover.getChildByName("result_list").getChildByName("s" + (n + 1)).getChildByName("huas");
-            for (var m = 0; m < hua_node.childrenCount; m++) {
-                hua_node.children[m].active = false;
-            }
-        }
+        // for(var n = 0; n < 4; n++){
+        //     var hua_node = this._gameover.getChildByName("result_list").getChildByName("s"+(n+1)).getChildByName("huas");
+        //     for(var m = 0 ; m < hua_node.childrenCount ; m++) {
+        //         hua_node.children[m].active = false;
+        //     }
+        // }
 
         this._gameover.active = false;
 
@@ -91,16 +91,14 @@ cc.Class({
 
     onGameOver: function onGameOver(data) {
         //TODO:多种判定
-        if (cc.vv.gameNetMgr.conf.type == "sjmmj") {
-            this.onGameOver_SJMMJ(data);
-        } else if (cc.vv.gameNetMgr.conf.type == "dhmj") {
-            this.onGameOver_DHMJ(data);
-        } else if (cc.vv.gameNetMgr.conf.type == "tdh") {
-            this.onGameOver_TDH(data);
+        if (cc.vv.gameNetMgr.conf.type == "ddh") {
+            this.onGameOver_DDH(data);
+        } else if (cc.vv.gameNetMgr.conf.type == "yzmj") {
+            this.onGameOver_YZMJ(data);
         }
     },
 
-    onGameOver_SJMMJ: function onGameOver_SJMMJ(data) {
+    onGameOver_DDH: function onGameOver_DDH(data) {
         console.log(data);
         if (data.length == 0) {
             this._gameresult.active = true;
@@ -135,86 +133,70 @@ cc.Class({
             for (var j = 0; j < userData.actions.length; ++j) {
                 var ac = userData.actions[j];
                 if (ac.type == "zimo" || ac.type == "ganghua" || ac.type == "dianganghua" || ac.type == "hu" || ac.type == "gangpaohu" || ac.type == "qiangganghu" || ac.type == "chadajiao") {
-                    if (userData.pattern == "7pairs") {
-                        actionArr.push("七对");
-                    } else if (userData.pattern == "l7pairs") {
-                        actionArr.push("龙七对");
-                    } else if (userData.pattern == "j7pairs") {
-                        actionArr.push("将七对");
-                    } else if (userData.pattern == "duidui") {
-                        actionArr.push("碰碰胡");
-                    } else if (userData.pattern == "jiangdui") {
-                        actionArr.push("将对");
-                    }
+                    // if(userData.pattern == "7pairs"){
+                    //     actionArr.push("七对");
+                    // }
+                    // else if(userData.pattern == "l7pairs"){
+                    //     actionArr.push("龙七对");
+                    // }
+                    // else if(userData.pattern == "j7pairs"){
+                    //     actionArr.push("将七对");
+                    // }
+                    // else if(userData.pattern == "duidui"){
+                    //     actionArr.push("碰碰胡");
+                    // }
+                    // else if(userData.pattern == "jiangdui"){
+                    //     actionArr.push("将对");
+                    // }
 
                     if (ac.type == "zimo") {
                         actionArr.push("自摸");
-                    } else if (ac.type == "ganghua") {
-                        actionArr.push("杠上花");
-                    } else if (ac.type == "dianganghua") {
-                        actionArr.push("点杠花");
-                    } else if (ac.type == "gangpaohu") {
-                        actionArr.push("杠炮胡");
-                    } else if (ac.type == "qiangganghu") {
-                        actionArr.push("抢杠胡");
-                    } else if (ac.type == "chadajiao") {
-                        ischadajiao = true;
                     }
+                    // else if(ac.type == "ganghua"){
+                    //     actionArr.push("杠上花");
+                    // }
+                    // else if(ac.type == "dianganghua"){
+                    //     actionArr.push("点杠花");
+                    // }
+                    // else if(ac.type == "gangpaohu"){
+                    //     actionArr.push("杠炮胡");
+                    // }
+                    // else if(ac.type == "qiangganghu"){
+                    //     actionArr.push("抢杠胡");
+                    // }
+                    // else if(ac.type == "chadajiao"){
+                    //     ischadajiao = true;
+                    // }
                     hued = true;
                 } else if (ac.type == "fangpao") {
                     actionArr.push("放炮");
-                } else if (ac.type == "angang") {
-                    actionArr.push("暗杠");
-                } else if (ac.type == "diangang") {
-                    actionArr.push("明杠");
-                } else if (ac.type == "wangang") {
-                    actionArr.push("弯杠");
-                } else if (ac.type == "fanggang") {
-                    actionArr.push("放杠");
-                } else if (ac.type == "zhuanshougang") {
-                    actionArr.push("转手杠");
-                } else if (ac.type == "beiqianggang") {
-                    actionArr.push("被抢杠");
-                } else if (ac.type == "beichadajiao") {
-                    actionArr.push("被查叫");
                 }
+                // else if(ac.type == "angang"){
+                //     actionArr.push("暗杠");
+                // }
+                // else if(ac.type == "diangang"){
+                //     actionArr.push("明杠");
+                // }
+                // else if(ac.type == "wangang"){
+                //     actionArr.push("弯杠");
+                // }
+                // else if(ac.type == "fanggang"){
+                //    actionArr.push("放杠");
+                // }
+                // else if(ac.type == "zhuanshougang"){
+                //     actionArr.push("转手杠");
+                // }
+                else if (ac.type == "beiqianggang") {
+                        actionArr.push("被抢杠");
+                    }
+                // else if(ac.type == "beichadajiao"){
+                //     actionArr.push("被查叫");
+                // }
             }
 
             if (hued) {
                 if (userData.qingyise) {
                     actionArr.push("清一色");
-                }
-
-                if (userData.menqing) {
-                    actionArr.push("门清");
-                }
-
-                if (userData.zhongzhang) {
-                    actionArr.push("中张");
-                }
-
-                if (userData.jingouhu) {
-                    actionArr.push("金钩胡");
-                }
-
-                if (userData.haidihu) {
-                    actionArr.push("海底胡");
-                }
-
-                if (userData.tianhu) {
-                    actionArr.push("天胡");
-                }
-
-                if (userData.dihu) {
-                    actionArr.push("地胡");
-                }
-
-                if (numOfGen > 0) {
-                    actionArr.push("根x" + numOfGen);
-                }
-
-                if (ischadajiao) {
-                    actionArr.push("查大叫");
                 }
 
                 if (userData.hunyise) {
@@ -225,28 +207,20 @@ cc.Class({
                     actionArr.push("对对胡");
                 }
 
-                if (userData.paihu) {
-                    actionArr.push("排胡");
+                if (userData.fengqing) {
+                    actionArr.push("风清");
                 }
 
-                if (userData.gangshanghua) {
-                    actionArr.push("杠上花");
+                if (userData.long) {
+                    actionArr.push("一条龙");
                 }
 
-                if (userData.kan) {
-                    actionArr.push("坎档");
+                if (userData.qidui) {
+                    actionArr.push("七对");
                 }
 
-                if (userData.bian) {
-                    actionArr.push("边档");
-                }
-
-                if (userData.dan) {
-                    actionArr.push("单吊");
-                }
-
-                if (userData.duidao) {
-                    actionArr.push("对倒");
+                if (userData.zhaqidui) {
+                    actionArr.push("炸七对");
                 }
             }
 
@@ -262,16 +236,16 @@ cc.Class({
             seatView.reason.string = actionArr.join("、");
 
             //显示丝数台数
-            console.log("显示台和丝");
-            console.log(userData.tai);
-            console.log(userData.si);
-            console.log(seatView.taisi.string);
-            seatView.taisi.string = userData.tai + "台" + userData.si + "丝";
+            // console.log("显示台和丝");
+            // console.log(userData.tai);
+            // console.log(userData.si);
+            // console.log( seatView.taisi.string);
+            // seatView.taisi.string = userData.tai + "台" + userData.si + "丝";
 
             //显示胡数
-            var fan = 0;
-            fan = userData.fan;
-            seatView.fan.string = fan + "胡";
+            // var fan = 0;
+            // fan = userData.fan;
+            // seatView.fan.string = fan + "胡";
 
             //
             if (userData.score > 0) {
@@ -298,7 +272,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -346,14 +320,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 
@@ -392,6 +366,7 @@ cc.Class({
                 case 3:
                     fengquan = "北风圈";break;
             }
+            fengquan += "第" + cc.vv.gameNetMgr.numOfGames + "局";
             numofgames.getComponent(cc.Label).string = fengquan;
 
             //判断东南西北
@@ -410,7 +385,7 @@ cc.Class({
             }
         }
     },
-    onGameOver_DHMJ: function onGameOver_DHMJ(data) {
+    onGameOver_YZMJ: function onGameOver_YZMJ(data) {
         console.log(data);
         if (data.length == 0) {
             this._gameresult.active = true;
@@ -486,14 +461,6 @@ cc.Class({
                     actionArr.push("被抢杠");
                 } else if (ac.type == "beichadajiao") {
                     actionArr.push("被查叫");
-                } else if (ac.type == "sanchisanpeng0") {
-                    actionArr.push("三吃三碰东");
-                } else if (ac.type == "sanchisanpeng1") {
-                    actionArr.push("三吃三碰南");
-                } else if (ac.type == "sanchisanpeng2") {
-                    actionArr.push("三吃三碰西");
-                } else if (ac.type == "sanchisanpeng3") {
-                    actionArr.push("三吃三碰北");
                 }
             }
 
@@ -572,10 +539,10 @@ cc.Class({
             }
 
             // for(var o = 0; o < 3;++o){
-            //     seatView.hu.children[o].active = false;   
+            //     seatView.hu.children[o].active = false;
             // }
             // if(userData.huorder >= 0){
-            //     seatView.hu.children[userData.huorder].active = true;   
+            //     seatView.hu.children[userData.huorder].active = true;
             // }
 
             seatView.username.string = cc.vv.gameNetMgr.seats[i].name;
@@ -610,7 +577,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -658,14 +625,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 
@@ -910,7 +877,7 @@ cc.Class({
                 n.active = false;
             }
 
-            var lackingNum = (userData.pengs.length + numOfGangs + userData.chis.length) * 3;
+            var lackingNum = (userData.pengs.length + numOfGangs) * 3;
             //显示相关的牌
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
@@ -958,14 +925,14 @@ cc.Class({
             }
 
             //初始化吃牌
-            var chis = userData.chis;
-            if (chis) {
-                for (var k = 0; k < chis.length; ++k) {
-                    var mjid = chis[k];
-                    this.initPengAndGangs(seatView, index, mjid, "chi");
-                    index++;
-                }
-            }
+            // var chis = userData.chis
+            // if(chis){
+            //     for(var k = 0; k < chis.length; ++k){
+            //         var mjid = chis[k];
+            //         this.initPengAndGangs(seatView,index,mjid,"chi");
+            //         index++;
+            //     }
+            // }
 
             //初始化花牌 TODO:和下面一样写初始化函数 并且要首先隐藏所有的花
 

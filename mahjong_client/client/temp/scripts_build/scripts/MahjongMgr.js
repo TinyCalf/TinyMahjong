@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '0ecea6X+IFIK5XFdJe38hXa', 'MahjongMgr');
-// scripts/MahjongMgr.js
+// scripts\MahjongMgr.js
 
 var mahjongSprites = [];
 
@@ -83,8 +83,8 @@ cc.Class({
 
         //东西南北风
         mahjongSprites.push("wind_east");
-        mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_south");
+        mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_north");
 
         //春夏秋冬

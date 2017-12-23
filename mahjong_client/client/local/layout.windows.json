@@ -13,7 +13,7 @@
                 ],
                 "height": 432,
                 "type": "panel",
-                "width": 357
+                "width": 356.65625
               },
               {
                 "active": 0,
@@ -22,39 +22,23 @@
                 ],
                 "height": 493,
                 "type": "panel",
-                "width": 357
+                "width": 356.65625
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 357
+            "width": 356.65625
           },
           {
             "children": [
               {
+                "active": 0,
                 "children": [
-                  {
-                    "active": 0,
-                    "children": [
-                      "scene"
-                    ],
-                    "height": 591,
-                    "type": "panel",
-                    "width": 795
-                  },
-                  {
-                    "active": 0,
-                    "children": [
-                      "node-library"
-                    ],
-                    "height": 591,
-                    "type": "panel",
-                    "width": 243
-                  }
+                  "scene"
                 ],
                 "height": 591,
-                "type": "dock-h",
-                "width": 1041
+                "type": "panel",
+                "width": 1038.046875
               },
               {
                 "active": 0,
@@ -64,12 +48,12 @@
                 ],
                 "height": 334,
                 "type": "panel",
-                "width": 1041
+                "width": 1038.046875
               }
             ],
             "height": 928,
             "type": "dock-v",
-            "width": 1041
+            "width": 1038.046875
           },
           {
             "active": 0,
@@ -78,7 +62,7 @@
             ],
             "height": 928,
             "type": "panel",
-            "width": 510
+            "width": 509.296875
           }
         ],
         "snapshot": true,
@@ -88,12 +72,6 @@
       "y": -8,
       "width": 1932,
       "height": 1056
-    },
-    "worker": {
-      "x": 760,
-      "y": 370,
-      "width": 400,
-      "height": 300
     }
   }
 }
