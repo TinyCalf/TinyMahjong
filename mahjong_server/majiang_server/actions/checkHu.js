@@ -341,7 +341,9 @@ function checkTingPai(seatData,begin,end,hun){
 		seatData.holds.push(i);
 		//逐个判定手上的牌
 		var ret = checkCanHu(seatData,hun);
-		var ret2 = check7Pairs(seatData,hun);
+		if(seatData.game.conf.qidui){
+			var ret2 = check7Pairs(seatData,hun);
+		}
 		if(ret){
 			//平胡
 			seatData.tingMap[i] = {

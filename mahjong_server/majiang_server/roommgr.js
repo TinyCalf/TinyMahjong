@@ -91,7 +91,7 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 		return;
 	}
 
-	if(roomConf.quanshu < 0 || roomConf.quanshu > 1){
+	if(roomConf.quanshu < 0 || roomConf.quanshu > 2){
 		callback(1,null);
 		return;
 	}
@@ -104,10 +104,12 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 
 	//房主出資
 	if( roomConf.koufei == 0 ) {
-		//半圈
+		//4
 		if(roomConf.quanshu == 0 && gems < 3) {callback( 2222 , null );return;}
-		//一圈
+		//8
 		if(roomConf.quanshu == 1 && gems < 6) {callback( 2222 , null );return;}
+		//16
+		if(roomConf.quanshu == 2 && gems < 12) {callback( 2222 , null );return;}
 	}
 	//玩家平分
 	else if ( roomConf.koufei == 1 ) {
@@ -115,6 +117,8 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 		if(roomConf.quanshu == 0 && gems < 1) {callback( 2222 , null );return;}
 		//一圈
 		if(roomConf.quanshu == 1 && gems < 2) {callback( 2222 , null );return;}
+
+		if(roomConf.quanshu == 2 && gems < 3) {callback( 2222 , null );return;}
 	}
 
 	var fnCreate = function() {
@@ -151,6 +155,10 @@ exports.createRoom = function(creator,roomConf,gems,ip,port,callback){
 							koufei:roomConf.koufei,
 							quanshu:roomConf.quanshu,
 							difen:roomConf.difen,
+							peizi:roomConf.peizi,
+							fengqing:roomConf.fengqing,
+							yitiaolong:roomConf.yitiaolong,
+							qidui:roomConf.qidui,
 							creator:creator,
 						}
 					};

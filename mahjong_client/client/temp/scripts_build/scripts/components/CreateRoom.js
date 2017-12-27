@@ -9,6 +9,10 @@ cc.Class({
         _mahjongtype: null,
         _koufei: null,
         _quanshu: null,
+        _peizi: false,
+        _qidui: false,
+        _fengqing: false,
+        _yitiaolong: false,
         _difen: null,
         _types: []
     },
@@ -114,7 +118,11 @@ cc.Class({
         var conf = {
             type: type,
             koufei: koufei,
-            quanshu: quanshu
+            quanshu: quanshu,
+            peizi: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("peizi").getComponent("CheckBox").checked,
+            qidui: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("qidui").getComponent("CheckBox").checked,
+            fengqing: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("fengqing").getComponent("CheckBox").checked,
+            yitiaolong: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("yitiaolong").getComponent("CheckBox").checked
         };
 
         var data = {
@@ -123,6 +131,7 @@ cc.Class({
             conf: JSON.stringify(conf)
         };
         cc.vv.wc.show("正在创建房间");
+        console.log(conf);
         cc.vv.http.sendRequest("/create_private_room", data, onCreate);
     },
 
@@ -151,9 +160,19 @@ cc.Class({
             }
         }
 
+        this._difen = [];
+        var t = this.node.getChildByName(type).getChildByName("difen");
+        for (var i = 0; i < t.childrenCount; ++i) {
+            var n = t.children[i].getComponent("RadioButton");
+            if (n != null) {
+                this._difen.push(n);
+            }
+        }
+
         var self = this;
         var onCreate = function onCreate(ret) {
-
+            console.log("房间创建完成");
+            console.log(ret);
             if (ret.errcode !== 0) {
                 cc.vv.wc.hide();
                 //console.log(ret.errmsg);
@@ -183,10 +202,23 @@ cc.Class({
             }
         }
 
+        var difen = 0;
+        for (var i = 0; i < self._difen.length; ++i) {
+            if (self._difen[i].checked) {
+                difen = i;
+                break;
+            }
+        }
+
         var conf = {
             type: type,
             koufei: koufei,
-            quanshu: quanshu
+            quanshu: quanshu,
+            difen: difen,
+            peizi: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("peizi").getComponent("CheckBox").checked,
+            qidui: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("qidui").getComponent("CheckBox").checked,
+            fengqing: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("fengqing").getComponent("CheckBox").checked,
+            yitiaolong: this.node.getChildByName(type).getChildByName("wanfa").getChildByName("yitiaolong").getComponent("CheckBox").checked
         };
 
         var data = {
@@ -195,6 +227,7 @@ cc.Class({
             conf: JSON.stringify(conf)
         };
         cc.vv.wc.show("正在创建房间");
+        console.log(conf);
         cc.vv.http.sendRequest("/create_private_room", data, onCreate);
     }
 

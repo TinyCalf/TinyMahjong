@@ -1,7 +1,5 @@
-//﻿var HALL_IP = "192.168.0.101";
-var HALL_IP = "192.168.164.1";
-//var HALL_IP = "116.62.227.93";
-//var URL = "http://116.62.227.93:9000";
+var HALL_IP = "192.168.0.102";
+// var HALL_IP = "116.62.227.93";
 var HALL_CLIENT_PORT = 9001;
 var HALL_ROOM_PORT = 9002;
 

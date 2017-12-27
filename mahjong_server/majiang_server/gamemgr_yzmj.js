@@ -581,6 +581,9 @@ function doGameOver(game,userId,forceEnd){
             calculateResult(game,roomInfo);
         }
 
+        //判斷是否打完一局
+        var isEnd = false;
+
         for(var i = 0; i < roomInfo.seats.length; ++i){
             var rs = roomInfo.seats[i];
             var sd = game.gameSeats[i];
@@ -594,6 +597,11 @@ function doGameOver(game,userId,forceEnd){
             (game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
             rs.numAnGang += sd.angangs.length;
             rs.numMingGang += sd.diangangs.length + sd.wangangs.length;
+
+            //扬州麻将底分逻辑
+            if(game.conf.difen == 0 && rs.score <= -20) isEnd = true;
+            if(game.conf.difen == 1 && rs.score <= -30) isEnd = true;
+            if(game.conf.difen == 2 && rs.score <= -50) isEnd = true;
 
             var userRT = {
                 userId:sd.userId,
@@ -651,8 +659,7 @@ function doGameOver(game,userId,forceEnd){
 
         var old = roomInfo.nextButton;
         var quanshu = game.conf.quanshu;
-        //判斷是否打完一局
-        var isEnd = false;
+
         //風圈 風向變化
         //换庄逻辑 庄家赢或者留局则不换装，firstHupai为-1表示没人胡
         if(game.firstHupai != old && game.firstHupai!=-1) {

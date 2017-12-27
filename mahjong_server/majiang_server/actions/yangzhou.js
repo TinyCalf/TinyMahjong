@@ -47,3 +47,6 @@ exports.getBanZiAndPeiZi = () => {
 }
 
 //console.log(this.getBanZiAndPeiZi())
+
+
+//

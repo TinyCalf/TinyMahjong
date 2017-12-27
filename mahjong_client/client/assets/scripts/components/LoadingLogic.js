@@ -179,6 +179,12 @@ cc.Class({
             //console.log("completedCount:" + completedCount + ",totalCount:" + totalCount );
             if(self._isLoading){
                 self._progress = completedCount/totalCount;
+                
+               // var yx = this.node.getChildByName("yinxiao");
+                var width = 368 * self._progress;
+                var progress = self.node.getChildByName("progress")
+                //progress.getComponent(cc.Slider).progress = cc.vv.audioMgr.sfxVolume;
+                progress.getChildByName("progress").width = width;  
             }
         };
         
