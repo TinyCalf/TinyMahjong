@@ -37,7 +37,7 @@ exports.getBanZiAndPeiZi = () => {
     case 27: pei = 28; break;
     case 28: pei = 29; break;
     case 29: pei = 30; break;
-    case 30: pei = 28; break;
+    case 30: pei = 27; break;
 
     case 31: pei = 32; break;
     case 32: pei = 33; break;

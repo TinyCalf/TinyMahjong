@@ -1046,8 +1046,9 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function update(dt) {
-        if (!cc.vv.gameNetMgr.hun) return;
+        if (cc.vv.gameNetMgr.hun < 0) return;
         //显示桌面上的混子
+
         var spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", cc.vv.gameNetMgr.hun);
         //提取_之前的内容
         function getEnd(mainStr, searchStr) {
@@ -1058,6 +1059,7 @@ cc.Class({
             return mainStr.substring(foundOffset + searchStr.length, mainStr.length);
         }
         console.log(spriteFrame);
+        if (!spriteFrame) return;
         var mjname = getEnd(spriteFrame._name, "_");
         //所有folds
         var allfolds = [];

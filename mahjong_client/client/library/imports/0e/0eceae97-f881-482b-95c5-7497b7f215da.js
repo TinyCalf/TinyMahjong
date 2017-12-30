@@ -72,16 +72,16 @@ cc.Class({
             mahjongSprites.push("character_" + i);
         }
 
-        //中、发、白
-        mahjongSprites.push("red");
-        mahjongSprites.push("green");
-        mahjongSprites.push("white");
-
         //东西南北风
         mahjongSprites.push("wind_east");
         mahjongSprites.push("wind_south");
         mahjongSprites.push("wind_west");
         mahjongSprites.push("wind_north");
+
+        //中、发、白
+        mahjongSprites.push("red");
+        mahjongSprites.push("green");
+        mahjongSprites.push("white");
 
         //春夏秋冬
         mahjongSprites.push("spring");

@@ -3,6 +3,7 @@ function checkSingle(seatData, hun){
 	var selected = -1;
 	var c = 0;
   var map = seatData.countMap
+	console.log("start")
 	for(var i = 0; i < holds.length; ++i){
 		var pai = holds[i];
 		c = seatData.countMap[pai];
@@ -11,6 +12,8 @@ function checkSingle(seatData, hun){
 			break;
 		}
 	}
+	console.log(selected)
+	console.log(seatData)
 	//如果没有找到剩余牌，则表示匹配成功了
 	if(selected == -1){
     if(map[hun]>=3) seatData.kanzi.push([hun,hun,hun])
@@ -158,12 +161,12 @@ function checkSingle(seatData, hun){
   if(map[selected]>=1
     && map[selected-1]>=1
     && map[selected-2]>=1
-    && selected != 7
-    && selected != 8
-    && selected != 16
-    && selected != 17
-    && selected != 25
-    && selected != 26
+    && selected != 0
+    && selected != 1
+    && selected != 9
+    && selected != 10
+    && selected != 27
+    && selected != 28
     && selected <27
   ){
     map[selected]   -=1;
@@ -212,7 +215,7 @@ function checkCanHu(seatData, hun){
   //如果有混子
   if(hun){
     //这里讨论混子和拍作为将对的情况
-    //那么有两种  HH | HA
+    //那么有两种  HH | HA |AA
     if(sd.countMap[hun]>=2){
       // HH 混混将对
       sd.countMap[hun] -= 2;
@@ -245,6 +248,7 @@ function checkCanHu(seatData, hun){
     if(c < 2){
       continue;
     }
+		// console.log(k)
     //如果当前牌大于等于２，则将它选为将牌
     sd.countMap[k] -= 2;
     var ret = checkSingle(sd,hun);
@@ -361,6 +365,7 @@ function checkTingPai(seatData,begin,end,hun){
 		seatData.countMap[i] = old;
 		seatData.holds.pop();
 	}
+	console.log(seatData.tingMap)
 }
 
 
@@ -368,3 +373,21 @@ function checkTingPai(seatData,begin,end,hun){
 exports.checkCanHu = checkCanHu
 exports.check7Pairs = check7Pairs
 exports.checkTingPai = checkTingPai
+
+
+// mahjongs = [18,19,20,21,22,23,25,26,27,27,30,30,24,7]
+// mahjongs =  [ 27, 27, 21, 19, 30, 30, 20, 7, 26, 25, 22, 18, 23, 24 ]
+// for(var i = 0; i < mahjongs.length; ++i){
+// 		var lastIndex = mahjongs.length - 1 - i;
+// 		var index = Math.floor(Math.random() * lastIndex);
+// 		var t = mahjongs[index];
+// 		mahjongs[index] = mahjongs[lastIndex];
+// 		mahjongs[lastIndex] = t;
+// }
+// var sd = {
+// 	countMap:{18:1,19:1,20:1,21:1,22:1,23:1,25:1,26:1,27:2,30:2,24:1,7:1},
+// 	holds:mahjongs,
+// 	kanzi:[]
+// }
+// console.log(sd)
+// console.log(checkCanHu(sd,7))

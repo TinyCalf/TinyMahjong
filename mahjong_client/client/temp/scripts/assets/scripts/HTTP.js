@@ -4,8 +4,8 @@ cc._RFpush(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
 
 //local
 
-var URL = "http://192.168.0.102:9000";
-// var URL = "http://116.62.227.93:9000";
+//var URL = "http://192.168.0.102:9000";
+var URL = "http://116.62.227.93:9000";
 
 cc.VERSION = 20171111;
 var HTTP = cc.Class({

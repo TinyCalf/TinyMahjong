@@ -104,10 +104,10 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
-    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
-    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    // arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,7] ; //7dui
+    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,6] ;// fengqing + 7dui
+    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,6] ;
+    // arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,6] ;
     //
     // arr = []
     // for ( var i = 0 ; i < 14 ; i++ ) {
@@ -1064,6 +1064,10 @@ exports.begin = function(roomId) {
      var ar = yangzhou.getBanZiAndPeiZi();
      var ban = ar[0]
      var hun = ar[1]
+
+     // ban=6
+     // hun=7
+
      if(!roomInfo.conf.peizi){
        ban=null;
        hun=null;

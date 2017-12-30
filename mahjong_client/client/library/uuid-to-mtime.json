@@ -1270,8 +1270,8 @@
     "relativePath": "resources\\textures\\png\\Z_zhunbeizhuangt.png"
   },
   "801b2051-a975-419b-a2fe-19afcfcda31c": {
-    "asset": 1514004754175,
-    "meta": 1514027745025,
+    "asset": 1514384203097,
+    "meta": 1514545556651,
     "relativePath": "resources\\textures\\utils"
   },
   "0b76b4ec-bbc9-4aeb-a1de-cbe665509f05": {
@@ -1910,8 +1910,8 @@
     "relativePath": "resources\\textures\\Game\\touxiangkuang_03.png"
   },
   "cd5103e6-8f21-47ce-bbbe-e0286a8ca831": {
-    "asset": 1514019337353,
-    "meta": 1514027745018,
+    "asset": 1514381976786,
+    "meta": 1514545556651,
     "relativePath": "resources\\textures\\hall"
   },
   "c76b67fd-c7e4-48ac-9f64-a153ab211a2d": {
@@ -2085,8 +2085,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1514384357857,
-    "meta": 1514384357925,
+    "asset": 1514546879143,
+    "meta": 1514546879218,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
@@ -2790,8 +2790,8 @@
     "relativePath": "scripts\\HotUpdate.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
-    "asset": 1513606114794,
-    "meta": 1513606114946,
+    "asset": 1514388200032,
+    "meta": 1514388200213,
     "relativePath": "scripts\\MahjongMgr.js"
   },
   "b1cc9c91-775e-425e-a160-d2f4c6299524": {
@@ -2825,8 +2825,8 @@
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1514381920394,
-    "meta": 1514381920542,
+    "asset": 1514546446689,
+    "meta": 1514546446867,
     "relativePath": "scripts\\HTTP.js"
   },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
@@ -2835,8 +2835,8 @@
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1513606941414,
-    "meta": 1513606942061,
+    "asset": 1514546632593,
+    "meta": 1514546633256,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {

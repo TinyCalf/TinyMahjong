@@ -59,9 +59,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-        glview = GLViewImpl::create("ZSMJ");
+        glview = GLViewImpl::create("llyzmj");
 #else
-        glview = GLViewImpl::createWithRect("ZSMJ", Rect(0,0,900,640));
+        glview = GLViewImpl::createWithRect("llyzmj", Rect(0,0,900,640));
 #endif
         director->setOpenGLView(glview);
     }

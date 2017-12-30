@@ -36,7 +36,7 @@
                 "children": [
                   "scene"
                 ],
-                "height": 591,
+                "height": 590,
                 "type": "panel",
                 "width": 1016
               },
@@ -46,7 +46,7 @@
                   "console",
                   "timeline"
                 ],
-                "height": 334,
+                "height": 335,
                 "type": "panel",
                 "width": 1016
               }
@@ -73,11 +73,23 @@
       "width": 1932,
       "height": 1056
     },
-    "window-1514383062911": {
-      "x": 385,
-      "y": 135,
-      "width": 1263,
-      "height": 787
+    "window-1514644680398": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 540,
+      "y": 109,
+      "width": 516,
+      "height": 739
     },
     "worker": {
       "x": 760,

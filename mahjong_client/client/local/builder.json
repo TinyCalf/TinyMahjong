@@ -1,6 +1,6 @@
 {
-  "androidStudio": true,
-  "apiLevel": "",
+  "androidStudio": false,
+  "apiLevel": "android-20",
   "buildPath": "./build",
   "debug": false,
   "keystoreAlias": "zsmj",
