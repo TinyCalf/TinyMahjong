@@ -20,8 +20,6 @@
  * THE SOFTWARE.
  */
 
-'use strict';
-
 ccui.Widget.prototype.init = ccui.Widget.prototype._init;
 ccui.RichText.prototype.init = function(){
     ccui.Widget.prototype.init.call(this);
@@ -40,7 +38,7 @@ ccui.Widget.prototype._ctor
     = ccui.ScrollView.prototype._ctor
     = function(){
         this.init();
-    };
+    }
 
 ccui.Button.prototype._ctor = function (normalImage, selectedImage, disableImage, texType) {
     if(texType !== undefined)
@@ -82,7 +80,7 @@ ccui.ImageView.prototype._ctor = function(imageFileName, texType){
     }
     else
         ccui.Widget.prototype.init.call(this);
-};
+}
 
 ccui.LoadingBar.prototype._ctor = function(textureName, percentage){
     ccui.Widget.prototype.init.call(this);
@@ -151,7 +149,8 @@ if (ccui.WebView)
 {
     ccui.WebView.prototype._ctor = function(url){
         this.init();
-        url !== undefined && this.loadURL(url);
+        if(url)
+            this.loadURL(url);
     };
 }
 
@@ -159,7 +158,8 @@ if (ccui.VideoPlayer)
 {
     ccui.VideoPlayer.prototype._ctor = function(url){
         this.init();
-        url !== undefined && this.setURL(url);
+        if(url)
+            this.setURL(url);
     };
 }
 

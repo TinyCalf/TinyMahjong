@@ -239,7 +239,6 @@ gl.DEPTH_COMPONENT32_OES	= 0x81a7;
 gl.DEPTH_EXT	= 0x1801;
 gl.DEPTH_FUNC	= 0xb74;
 gl.DEPTH_RANGE	= 0xb70;
-gl.DEPTH_STENCIL = 0x84f9;
 gl.DEPTH_STENCIL_OES	= 0x84f9;
 gl.DEPTH_TEST	= 0xb71;
 gl.DEPTH_WRITEMASK	= 0xb72;
@@ -829,3 +828,45 @@ gl.WRITEONLY_RENDERING_QCOM	= 0x8823;
 gl.WRITE_ONLY_OES	= 0x88b9;
 gl.Z400_BINARY_AMD	= 0x8740;
 gl.ZERO	= 0x0;
+
+//------------Shader Name---------------
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_TEXTURECOLOR = "ShaderPositionTextureColor";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_TEXTURECOLORALPHATEST = "ShaderPositionTextureColorAlphaTest";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_COLOR = "ShaderPositionColor";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_TEXTURE = "ShaderPositionTexture";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_TEXTURE_UCOLOR = "ShaderPositionTexture_uColor";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_TEXTUREA8COLOR = "ShaderPositionTextureA8Color";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_UCOLOR = "ShaderPosition_uColor";
+/**
+ * @constant
+ * @type {String}
+ */
+cc.SHADER_POSITION_LENGTHTEXTURECOLOR = "ShaderPositionLengthTextureColor";

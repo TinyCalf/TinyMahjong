@@ -91,13 +91,8 @@ public final class Cocos2dxBitmap {
         int length = text.length();
 
         while(index < length) {
-            int numOfChars = paint.breakText(text, index, length, true, maxWidth, null);
-            index += numOfChars;
+            index += paint.breakText(text, index, length, true, maxWidth, null);
             lineCount++;
-            //in andriod 4.4.2, the breakText will return 0, which would lead to infinite loop
-            if (numOfChars == 0) {
-                break;
-            }
         }
 
         float actualHeight = (Math.abs(paint.ascent()) + Math.abs(paint.descent()));

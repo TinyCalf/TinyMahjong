@@ -29,19 +29,46 @@ package org.cocos2dx.javascript;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
+// For JS and JAVA reflection test, you can delete it if it's your own project
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+// -------------------------------------
 import org.cocos2dx.javascript.SDKWrapper;
 
+import com.vivigames.scmj.WXAPI;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.ClipboardManager;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Toast;
 
 public class AppActivity extends Cocos2dxActivity {
+
+    private static AppActivity app = null;
+    private static Context context = null;
+    public static Handler mHandler;
+    public static String desc = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SDKWrapper.getInstance().init(this);
+        app = this;
+        
+        //SDKWrapper.getInstance().init(this);
+        System.out.println("about to init wxapi!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        WXAPI.Init(this);
     }
     
     @Override
@@ -55,6 +82,44 @@ public class AppActivity extends Cocos2dxActivity {
         return glSurfaceView;
     }
 
+    // For JS and JAVA reflection test, you can delete it if it's your own project
+    public static void showAlertDialog(final String title,final String message) {
+        // Here be sure to use runOnUiThread
+        app.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                AlertDialog alertDialog = new AlertDialog.Builder(app).create();
+                alertDialog.setTitle(title);
+                alertDialog.setMessage(message);
+                alertDialog.show();
+            }
+        });
+   }
+    
+    public static void openDownloadPage (String url){
+		System.out.println("openDownloadPage...");
+		Intent intent = new Intent();        
+		intent.setAction("android.intent.action.MAIN");    
+		Uri content_url = Uri.parse(url);   
+		intent.setData(content_url);  
+		app.startActivity(intent);
+	}
+    
+    public static void Copy (String desc){
+    	mHandler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message message) {
+                // This is where you do your work in the UI thread.
+                // Your worker tells you in the message what to do.
+            	ClipboardManager cmb = (ClipboardManager) app.getSystemService(Context.CLIPBOARD_SERVICE);  
+            	cmb.setText(app.desc.trim());
+            }
+        };
+    	app.desc = desc;
+        Message message = mHandler.obtainMessage();
+        message.sendToTarget();
+    }
+    
     @Override
     protected void onResume() {
         super.onResume();

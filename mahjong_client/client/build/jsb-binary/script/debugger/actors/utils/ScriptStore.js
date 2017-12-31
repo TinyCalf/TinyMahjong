@@ -94,7 +94,7 @@ ScriptStore.prototype = {
   /**
    * Get all scripts produced from the given source.
    *
-   * @param Debugger.Source source
+   * @oaram Debugger.Source source
    * @returns Array of Debugger.Script
    */
   getScriptsBySource: function(source) {
@@ -113,7 +113,7 @@ ScriptStore.prototype = {
    * Get all scripts produced from the given source whose source code definition
    * spans the given line.
    *
-   * @param Debugger.Source source
+   * @oaram Debugger.Source source
    * @param Number line
    * @returns Array of Debugger.Script
    */

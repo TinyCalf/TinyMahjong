@@ -20,8 +20,6 @@
  * THE SOFTWARE.
  */
 
-'use strict';
-
 function _safeExtend(obj, list) {
     for (var key in list)
         if(!obj[key])
@@ -37,7 +35,7 @@ function _customUndefined(message) {
         cc.log("Not implemented yet in JSB");
         message && cc.log(message);
         return undefined;
-    };
+    }
 }
 
 var _undefined = {
@@ -47,7 +45,7 @@ var _undefined = {
     },
     _shadowUndefined: _customUndefined("Please use enableShadow function"),
     _strokeUndefined: _customUndefined("Please use enableStroke function")
-};
+}
 
 _safeExtend(cc.Node.prototype, {
     _getWidth: function() {
@@ -136,6 +134,14 @@ _safeExtend(cc.Sprite.prototype, {
     }
 });
 
+_safeExtend(cc.LabelBMFont.prototype, {
+    _getAlignment: _undefined._jsbUndefined,
+    _getBoundingWidth: _undefined._jsbUndefined,
+    setBoundingWidth: function (width) {
+        this.setWidth(width);
+    }
+});
+
 _safeExtend(cc.TMXLayer.prototype, {
     _getLayerWidth: function() {
         return this.getLayerSize().width;
@@ -203,6 +209,8 @@ _safeExtend(cc.TMXTiledMap.prototype, {
         this.setTileSize(size);
     }
 });
+
+
 
 _safeExtend(cc.Texture2D.prototype, {
     _getWidth : function(){

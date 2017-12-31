@@ -1,6 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2017 Chukong Technologies Inc.
+Copyright (c) 2013-2016 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -51,7 +51,6 @@ public class Cocos2dxMusic {
     private boolean mPaused; // whether music is paused state.
     private boolean mIsLoop = false;
     private boolean mManualPaused = false; // whether music is paused manually before the program is switched to the background.
-    private boolean mIsAudioFocus = true;
     private String mCurrentPath;
 
     // ===========================================================
@@ -138,7 +137,7 @@ public class Cocos2dxMusic {
         if (this.mBackgroundMediaPlayer != null) {
             mBackgroundMediaPlayer.release();
             mBackgroundMediaPlayer = createMediaPlayer(mCurrentPath);
-            
+
             /**
              * should set the state, if not, the following sequence will be error
              * play -> pause -> stop -> resume
@@ -227,7 +226,7 @@ public class Cocos2dxMusic {
         }
 
         this.mLeftVolume = this.mRightVolume = volume;
-        if (this.mBackgroundMediaPlayer != null && mIsAudioFocus) {
+        if (this.mBackgroundMediaPlayer != null) {
             this.mBackgroundMediaPlayer.setVolume(this.mLeftVolume, this.mRightVolume);
         }
     }
@@ -242,7 +241,7 @@ public class Cocos2dxMusic {
             Log.e(TAG, "onEnterBackground, IllegalStateException was triggered!");
         }
     }
-    
+
     public void onEnterForeground(){
         try {
             if (!this.mManualPaused) {
@@ -255,7 +254,7 @@ public class Cocos2dxMusic {
             Log.e(TAG, "onEnterForeground, IllegalStateException was triggered!");
         }
     }
-    
+
     private void initData() {
         this.mLeftVolume = 0.5f;
         this.mRightVolume = 0.5f;
@@ -297,16 +296,6 @@ public class Cocos2dxMusic {
         }
 
         return mediaPlayer;
-    }
-
-    void setAudioFocus(boolean isFocus) {
-        mIsAudioFocus = isFocus;
-
-        if (mBackgroundMediaPlayer != null) {
-            float lVolume = mIsAudioFocus ? mLeftVolume : 0.0f;
-            float rVolume = mIsAudioFocus ? mRightVolume : 0.0f;
-            mBackgroundMediaPlayer.setVolume(lVolume, rVolume);
-        }
     }
 
     // ===========================================================

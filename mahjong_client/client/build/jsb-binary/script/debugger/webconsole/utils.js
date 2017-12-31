@@ -452,7 +452,7 @@ var WebConsoleUtils = {
   /**
    * Helper function to deduce the name of the provided function.
    *
-   * @param function aFunction
+   * @param funtion aFunction
    *        The function whose name will be returned.
    * @return string
    *         Function name.
@@ -1527,7 +1527,7 @@ var WebConsoleCommands = {
 
   /**
    * Register a new command.
-   * @param {string} name The command name (example: "$")
+   * @param {string} name The command name (exemple: "$")
    * @param {(function|object)} command The command to register.
    *  It can be a function so the command is a function (like "$()"),
    *  or it can also be a property descriptor to describe a getter / value (like
