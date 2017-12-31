@@ -1,1745 +1,528 @@
-2017-12-30T13:09:20.646Z - normal: Load ~/.CocosCreator/settings.json
-2017-12-30T13:09:20.652Z - normal: checking language setting...
-2017-12-30T13:09:20.652Z - normal: Language: zh
-2017-12-30T13:09:21.762Z - success: protocol editor-framework registered
-2017-12-30T13:09:21.762Z - success: protocol app registered
-2017-12-30T13:09:21.762Z - success: protocol packages registered
-2017-12-30T13:09:21.762Z - success: protocol theme registered
-2017-12-30T13:09:21.762Z - success: protocol unpack registerred
-2017-12-30T13:09:22.090Z - normal: connected!
-2017-12-30T13:09:22.091Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-12-30T13:09:22.094Z - normal: Initializing Cocos Creator Editor
-2017-12-30T13:09:22.945Z - normal: Initializing Cocos2d
-2017-12-30T13:09:24.303Z - normal: Initializing Asset Database
-2017-12-30T13:09:24.342Z - success: protocol uuid registerred
-2017-12-30T13:09:24.342Z - success: protocol db registerred
-2017-12-30T13:09:24.342Z - success: protocol thumbnail registerred
-2017-12-30T13:09:24.342Z - normal: Loading editor/builtin packages
-2017-12-30T13:09:24.509Z - success: assets loaded
-2017-12-30T13:09:24.511Z - success: builder loaded
-2017-12-30T13:09:24.515Z - success: hierarchy loaded
-2017-12-30T13:09:24.519Z - success: inspector loaded
-2017-12-30T13:09:24.524Z - success: keystore loaded
-2017-12-30T13:09:24.527Z - success: node-library loaded
-2017-12-30T13:09:24.529Z - success: preferences loaded
-2017-12-30T13:09:24.541Z - success: project-importer loaded
-2017-12-30T13:09:24.542Z - success: project-settings loaded
-2017-12-30T13:09:24.544Z - success: ui-kit loaded
-2017-12-30T13:09:24.551Z - success: ui-grid loaded
-2017-12-30T13:09:24.554Z - success: scene loaded
-2017-12-30T13:09:24.555Z - success: sprite-editor loaded
-2017-12-30T13:09:24.566Z - success: timeline loaded
-2017-12-30T13:09:24.567Z - normal: Loading builtin packages
-2017-12-30T13:09:24.580Z - success: asset-db-debugger loaded
-2017-12-30T13:09:24.581Z - success: code-editor loaded
-2017-12-30T13:09:24.582Z - success: color-picker loaded
-2017-12-30T13:09:24.585Z - success: console loaded
-2017-12-30T13:09:24.587Z - success: package-manager loaded
-2017-12-30T13:09:24.590Z - success: tester loaded
-2017-12-30T13:09:24.591Z - success: ui-kit-preview-extra loaded
-2017-12-30T13:09:24.593Z - success: ui-kit-preview loaded
-2017-12-30T13:09:24.594Z - success: ui-tree loaded
-2017-12-30T13:09:24.680Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2017-12-30T13:09:24.691Z - normal: Loading packages
-2017-12-30T13:09:24.694Z - normal: Watching packages
-2017-12-30T13:09:24.703Z - normal: Run Application
-2017-12-30T13:09:29.336Z - success: preview server running at http://localhost:7456
-2017-12-30T13:09:34.521Z - normal: 1.3.2
-2017-12-30T13:09:36.811Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:04.985Z - normal: Load ~/.CocosCreator/settings.json
+2017-12-31T12:56:04.995Z - normal: checking language setting...
+2017-12-31T12:56:04.996Z - normal: Language: zh
+2017-12-31T12:56:06.096Z - success: protocol editor-framework registered
+2017-12-31T12:56:06.096Z - success: protocol app registered
+2017-12-31T12:56:06.096Z - success: protocol packages registered
+2017-12-31T12:56:06.096Z - success: protocol theme registered
+2017-12-31T12:56:06.096Z - success: protocol unpack registerred
+2017-12-31T12:56:06.434Z - normal: connected!
+2017-12-31T12:56:06.436Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-12-31T12:56:06.439Z - normal: Initializing Cocos Creator Editor
+2017-12-31T12:56:06.735Z - normal: Initializing Cocos2d
+2017-12-31T12:56:06.887Z - normal: Initializing Asset Database
+2017-12-31T12:56:06.906Z - success: protocol uuid registerred
+2017-12-31T12:56:06.906Z - success: protocol db registerred
+2017-12-31T12:56:06.906Z - success: protocol thumbnail registerred
+2017-12-31T12:56:06.906Z - normal: Loading editor/builtin packages
+2017-12-31T12:56:07.015Z - success: assets loaded
+2017-12-31T12:56:07.017Z - success: builder loaded
+2017-12-31T12:56:07.019Z - success: hierarchy loaded
+2017-12-31T12:56:07.022Z - success: inspector loaded
+2017-12-31T12:56:07.023Z - success: keystore loaded
+2017-12-31T12:56:07.030Z - success: node-library loaded
+2017-12-31T12:56:07.033Z - success: preferences loaded
+2017-12-31T12:56:07.046Z - success: project-importer loaded
+2017-12-31T12:56:07.047Z - success: project-settings loaded
+2017-12-31T12:56:07.049Z - success: ui-kit loaded
+2017-12-31T12:56:07.050Z - success: ui-grid loaded
+2017-12-31T12:56:07.053Z - success: scene loaded
+2017-12-31T12:56:07.054Z - success: sprite-editor loaded
+2017-12-31T12:56:07.058Z - success: timeline loaded
+2017-12-31T12:56:07.058Z - normal: Loading builtin packages
+2017-12-31T12:56:07.061Z - success: asset-db-debugger loaded
+2017-12-31T12:56:07.062Z - success: code-editor loaded
+2017-12-31T12:56:07.062Z - success: color-picker loaded
+2017-12-31T12:56:07.065Z - success: console loaded
+2017-12-31T12:56:07.066Z - success: package-manager loaded
+2017-12-31T12:56:07.069Z - success: tester loaded
+2017-12-31T12:56:07.071Z - success: ui-kit-preview-extra loaded
+2017-12-31T12:56:07.072Z - success: ui-kit-preview loaded
+2017-12-31T12:56:07.073Z - success: ui-tree loaded
+2017-12-31T12:56:07.105Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2017-12-31T12:56:07.116Z - normal: Loading packages
+2017-12-31T12:56:07.121Z - normal: Watching packages
+2017-12-31T12:56:07.133Z - normal: Run Application
+2017-12-31T12:56:08.593Z - success: preview server running at http://localhost:7456
+2017-12-31T12:56:11.229Z - normal: 1.3.2
+2017-12-31T12:56:13.117Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.812Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.812Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.812Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.812Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.118Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.813Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.119Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.120Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.814Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.120Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.815Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.120Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.815Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.816Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.121Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.817Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.122Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.818Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.123Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.819Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.820Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.124Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.821Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.822Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.822Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.125Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.823Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.823Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.823Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.823Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.823Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:36.824Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
+2017-12-31T12:56:13.126Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
+    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2017-12-30T13:09:56.985Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:10:01.844Z - normal: Compiled successfully
-2017-12-30T13:10:03.275Z - normal: 1.3.2
-2017-12-30T13:10:08.082Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:25.698Z - normal: Compiled successfully
+2017-12-31T12:56:27.184Z - normal: 1.3.2
+2017-12-31T12:56:31.139Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
 Node path: "Canvas/hall_list_bg"
 Used in Component: "cc.Sprite"
 uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:10:08.090Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.216Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
 Node path: "Canvas/bg"
 Used in Component: "cc.Sprite"
 uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:10:08.172Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.217Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_jiaruyouxitangchuang"
 Used in Component: "cc.Sprite"
 uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:10:08.173Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.218Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_shurukuang"
 Used in Component: "cc.Sprite"
 uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:10:08.173Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.219Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_0"
 Used in Component: "cc.Sprite"
 uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:10:08.174Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.219Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_0"
 Used in Component: "cc.Button"
 uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:10:08.175Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.221Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_1"
 Used in Component: "cc.Sprite"
 uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:10:08.175Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.222Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_1"
 Used in Component: "cc.Button"
 uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:10:08.176Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.222Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_2"
 Used in Component: "cc.Sprite"
 uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:10:08.176Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.223Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_2"
 Used in Component: "cc.Button"
 uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:10:08.177Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.223Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_3"
 Used in Component: "cc.Sprite"
 uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:10:08.177Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.224Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_3"
 Used in Component: "cc.Button"
 uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:10:08.178Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.224Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_4"
 Used in Component: "cc.Sprite"
 uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:10:08.179Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.225Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_4"
 Used in Component: "cc.Button"
 uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:10:08.180Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.226Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_5"
 Used in Component: "cc.Sprite"
 uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:10:08.181Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.229Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_5"
 Used in Component: "cc.Button"
 uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:10:08.182Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.230Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_6"
 Used in Component: "cc.Sprite"
 uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:10:08.183Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.231Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_6"
 Used in Component: "cc.Button"
 uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:10:08.183Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.232Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_7"
 Used in Component: "cc.Sprite"
 uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:10:08.183Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.232Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_7"
 Used in Component: "cc.Button"
 uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:10:08.184Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.234Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_8"
 Used in Component: "cc.Sprite"
 uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:10:08.184Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.235Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_8"
 Used in Component: "cc.Button"
 uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:10:08.185Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.235Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_9"
 Used in Component: "cc.Sprite"
 uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:10:08.185Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.236Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_9"
 Used in Component: "cc.Button"
 uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:10:08.186Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.237Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_Lose_weight"
 Used in Component: "cc.Sprite"
 uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:10:08.186Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.238Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_Lose_weight"
 Used in Component: "cc.Button"
 uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:10:08.186Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.240Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_del"
 Used in Component: "cc.Sprite"
 uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:10:08.187Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.241Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/Z_button_del"
 Used in Component: "cc.Button"
 uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:10:08.189Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.242Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/close"
 Used in Component: "cc.Sprite"
 uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:10:08.190Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
+2017-12-31T12:56:31.242Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
 Node path: "JoinGame/close"
 Used in Component: "cc.Button"
 uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:10:12.103Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:10:14.925Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:10:14.926Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:10:19.479Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
+2017-12-31T12:56:34.616Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
+2017-12-31T12:56:37.180Z - normal: Start to compile native project. Please wait...
+2017-12-31T12:56:37.181Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
+2017-12-31T12:57:27.282Z - normal: Compile native project successfully.
+2017-12-31T12:57:56.046Z - normal: Start to compile native project. Please wait...
+2017-12-31T12:57:56.046Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
+2017-12-31T12:58:44.092Z - normal: Compile native project successfully.
+2017-12-31T12:58:48.638Z - normal: Start to run project
+2017-12-31T12:58:49.751Z - normal: Start to run project. Please wait...
+2017-12-31T12:58:49.752Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
+2017-12-31T12:59:34.827Z - normal: Start to run project
+2017-12-31T12:59:34.996Z - failed: Error: Failed to run project. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
+    at ChildProcess.<anonymous> (C:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:18982)
+    at ChildProcess.<anonymous> (C:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
     at emitTwo (events.js:106:13)
     at ChildProcess.emit (events.js:191:7)
     at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:10:23.626Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:10:27.790Z - normal: Compiled successfully
-2017-12-30T13:10:29.404Z - normal: 1.3.2
-2017-12-30T13:10:32.145Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:10:32.203Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:10:32.204Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:10:32.204Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:10:32.204Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:10:32.205Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:10:32.205Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:10:32.206Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:10:32.206Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:10:32.206Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:10:32.207Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:10:32.207Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:10:32.208Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:10:32.209Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:10:32.210Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:10:32.210Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:10:32.211Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:10:32.211Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:10:32.212Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:10:32.213Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:10:32.214Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:10:32.214Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:10:32.215Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:10:32.215Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:10:32.216Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:10:32.216Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:10:32.217Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:10:32.218Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:10:32.219Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:10:32.221Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:10:34.638Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:10:37.275Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:10:37.275Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:10:38.842Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:16:16.932Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:16:21.211Z - normal: Compiled successfully
-2017-12-30T13:16:23.003Z - normal: 1.3.2
-2017-12-30T13:16:26.059Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:16:26.118Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:16:26.119Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:16:26.120Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:16:26.121Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:16:26.122Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:16:26.122Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:16:26.123Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:16:26.124Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:16:26.125Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:16:26.126Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:16:26.129Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:16:26.130Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:16:26.130Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:16:26.131Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:16:26.131Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:16:26.132Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:16:26.132Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:16:26.133Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:16:26.134Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:16:26.134Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:16:26.135Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:16:26.135Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:16:26.136Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:16:26.137Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:16:26.138Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:16:26.138Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:16:26.139Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:16:26.140Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:16:26.142Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:16:28.610Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:16:31.036Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:16:31.036Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:16:33.537Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:21:17.978Z - error: Error: ENOENT: no such file or directory, open 'C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary\frameworks\runtime-src\proj.android\ant.properties'
-    at Error (native)
-    at Object.fs.openSync (fs.js:640:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:185:20)
-    at Object.fs.writeFileSync (fs.js:1343:33)
-    at updateKeystorePath (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:8511)
-    at D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:15569
-    at D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:4137
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:726:13
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:269:32
-    at process.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\editor-init.js:1:199)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:188:7)
-    at process._fatalException (bootstrap_node.js:262:26)
-2017-12-30T13:22:03.234Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:22:03.237Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:22:04.660Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:22:06.915Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:22:11.048Z - normal: Compiled successfully
-2017-12-30T13:22:12.713Z - normal: 1.3.2
-2017-12-30T13:22:16.513Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:22:16.583Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:22:16.584Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:22:16.585Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:22:16.585Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:22:16.586Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:22:16.586Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:22:16.587Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:22:16.587Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:22:16.588Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:22:16.588Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:22:16.589Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:22:16.589Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:22:16.590Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:22:16.590Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:22:16.591Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:22:16.591Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:22:16.591Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:22:16.592Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:22:16.593Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:22:16.594Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:22:16.594Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:22:16.595Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:22:16.595Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:22:16.596Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:22:16.596Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:22:16.597Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:22:16.598Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:22:16.599Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:22:16.600Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:22:19.690Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:22:27.623Z - normal: Creating native cocos project to  C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary
-2017-12-30T13:22:36.505Z - normal: Compiled successfully
-2017-12-30T13:22:37.921Z - normal: 1.3.2
-2017-12-30T13:22:41.513Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:22:41.537Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:22:41.618Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:22:41.619Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:22:41.620Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:22:41.621Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:22:41.621Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:22:41.622Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:22:41.623Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:22:41.623Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:22:41.624Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:22:41.624Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:22:41.625Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:22:41.627Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:22:41.628Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:22:41.628Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:22:41.629Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:22:41.629Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:22:41.629Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:22:41.630Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:22:41.630Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:22:41.630Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:22:41.631Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:22:41.631Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:22:41.632Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:22:41.632Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:22:41.633Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:22:41.634Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:22:41.635Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:22:41.636Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:22:44.711Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:22:50.000Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:22:50.001Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:22:52.237Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:24:25.655Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:24:29.834Z - normal: Compiled successfully
-2017-12-30T13:24:31.112Z - normal: 1.3.2
-2017-12-30T13:24:34.457Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:24:34.458Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:24:34.523Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:24:34.524Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:24:34.526Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:24:34.528Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:24:34.528Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:24:34.529Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:24:34.530Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:24:34.530Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:24:34.531Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:24:34.532Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:24:34.532Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:24:34.533Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:24:34.534Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:24:34.534Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:24:34.534Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:24:34.535Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:24:34.535Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:24:34.536Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:24:34.536Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:24:34.536Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:24:34.537Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:24:34.538Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:24:34.538Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:24:34.539Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:24:34.539Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:24:34.541Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:24:34.541Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:24:34.542Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:24:37.697Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:24:40.253Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:24:40.253Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:24:41.675Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:25:43.404Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:25:43.404Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:25:44.821Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:29:48.955Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:29:48.958Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:29:50.557Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:34:07.042Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:34:11.343Z - normal: Compiled successfully
-2017-12-30T13:34:12.627Z - normal: 1.3.2
-2017-12-30T13:34:15.930Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:34:15.996Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:34:16.001Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:34:16.002Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:34:16.002Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:34:16.003Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:34:16.003Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:34:16.003Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:34:16.004Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:34:16.004Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:34:16.005Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:34:16.005Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:34:16.006Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:34:16.006Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:34:16.007Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:34:16.007Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:34:16.008Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:34:16.008Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:34:16.009Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:34:16.009Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:34:16.010Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:34:16.010Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:34:16.011Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:34:16.013Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:34:16.014Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:34:16.014Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:34:16.015Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:34:16.016Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:34:16.017Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:34:16.018Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:34:18.901Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:34:38.760Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:34:38.760Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:34:40.301Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:36:48.394Z - normal: Creating native cocos project to  C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary
-2017-12-30T13:36:55.470Z - normal: Compiled successfully
-2017-12-30T13:36:56.831Z - normal: 1.3.2
-2017-12-30T13:37:00.652Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:37:00.750Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:37:00.752Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:37:00.753Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:37:00.754Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:37:00.755Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:37:00.757Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:37:00.758Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:37:00.760Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:37:00.761Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:37:00.762Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:37:00.763Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:37:00.764Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:37:00.765Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:37:00.766Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:37:00.769Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:37:00.770Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:37:00.771Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:37:00.772Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:37:00.773Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:37:00.774Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:37:00.774Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:37:00.776Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:37:00.777Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:37:00.777Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:37:00.778Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:37:00.779Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:37:00.780Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:37:00.781Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:37:00.782Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:37:03.811Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:37:06.646Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:37:06.646Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:37:08.164Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T13:38:44.208Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T13:38:48.352Z - normal: Compiled successfully
-2017-12-30T13:38:51.157Z - normal: 1.3.2
-2017-12-30T13:38:54.470Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T13:38:54.472Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T13:38:54.530Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T13:38:54.532Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T13:38:54.537Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T13:38:54.538Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T13:38:54.539Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T13:38:54.540Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T13:38:54.541Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T13:38:54.541Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T13:38:54.542Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T13:38:54.542Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T13:38:54.544Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T13:38:54.545Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T13:38:54.546Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T13:38:54.546Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T13:38:54.547Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T13:38:54.547Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T13:38:54.547Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T13:38:54.548Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T13:38:54.548Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T13:38:54.549Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T13:38:54.549Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T13:38:54.549Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T13:38:54.550Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T13:38:54.550Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T13:38:54.551Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T13:38:54.551Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T13:38:54.552Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T13:38:54.552Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T13:38:57.505Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T13:39:00.087Z - normal: Start to compile native project. Please wait...
-2017-12-30T13:39:00.088Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T13:39:01.512Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-2017-12-30T14:38:09.946Z - failed: Project version [1.5.2] not match cocos2d-x-lite version [1.3.2-lite]. Please delete your build path, then rebuild project.
-2017-12-30T14:38:16.236Z - normal: Compiled successfully
-2017-12-30T14:38:17.919Z - normal: 1.3.2
-2017-12-30T14:38:25.033Z - warn: The referenced asset used in "db://assets/resources/scenes/createrole.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/hall_list_bg"
-Used in Component: "cc.Sprite"
-uuid: "ddc55175-3bf0-484a-8b12-34651c953305"
-2017-12-30T14:38:25.035Z - warn: The referenced asset used in "db://assets/resources/scenes/update.fire" is not found, it may have been deleted. Detailed information:
-Node path: "Canvas/bg"
-Used in Component: "cc.Sprite"
-uuid: "e9ecb267-78f5-49b7-be14-60cc9116abe1"
-2017-12-30T14:38:25.164Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_jiaruyouxitangchuang"
-Used in Component: "cc.Sprite"
-uuid: "f5874d5c-9a65-4a06-880a-0043be4f2c06"
-2017-12-30T14:38:25.165Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_shurukuang"
-Used in Component: "cc.Sprite"
-uuid: "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709"
-2017-12-30T14:38:25.166Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Sprite"
-uuid: "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8"
-2017-12-30T14:38:25.167Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_0"
-Used in Component: "cc.Button"
-uuid: "af334004-50fa-43e1-973b-a147669ee60a"
-2017-12-30T14:38:25.168Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Sprite"
-uuid: "064b5b9d-a9bf-42f1-ab9c-c52e1344020a"
-2017-12-30T14:38:25.169Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_1"
-Used in Component: "cc.Button"
-uuid: "01837e08-19f9-4659-8771-54601c5bdfa5"
-2017-12-30T14:38:25.170Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Sprite"
-uuid: "0e1d368f-c425-4cf4-8940-fbe51871faf1"
-2017-12-30T14:38:25.171Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_2"
-Used in Component: "cc.Button"
-uuid: "83799f0c-d1fd-4677-8c29-1c52dba3fa48"
-2017-12-30T14:38:25.172Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Sprite"
-uuid: "c9738638-07b3-43de-9af7-2f976027c1ea"
-2017-12-30T14:38:25.173Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_3"
-Used in Component: "cc.Button"
-uuid: "8082cd90-cfdd-426b-a90a-79c89571e9aa"
-2017-12-30T14:38:25.174Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Sprite"
-uuid: "c0cd928a-d91f-47bf-a403-f992be0029e2"
-2017-12-30T14:38:25.175Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_4"
-Used in Component: "cc.Button"
-uuid: "784d5335-d254-4a6d-9623-7f981d368b52"
-2017-12-30T14:38:25.175Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Sprite"
-uuid: "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad"
-2017-12-30T14:38:25.176Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_5"
-Used in Component: "cc.Button"
-uuid: "1e434256-876a-4b4e-a328-fe0de69dca2d"
-2017-12-30T14:38:25.177Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Sprite"
-uuid: "d7d9a863-10b1-4120-ac8c-3d41520bf293"
-2017-12-30T14:38:25.178Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_6"
-Used in Component: "cc.Button"
-uuid: "226b5110-c62a-4d73-bd1d-4b9b94193ed2"
-2017-12-30T14:38:25.179Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Sprite"
-uuid: "355e7152-f826-49ec-a420-538d29892c68"
-2017-12-30T14:38:25.179Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_7"
-Used in Component: "cc.Button"
-uuid: "29d7b689-2ab9-4296-8ac7-0990a3b26cec"
-2017-12-30T14:38:25.180Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Sprite"
-uuid: "f5edc715-8115-4589-ab36-ce07e6fcbf72"
-2017-12-30T14:38:25.181Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_8"
-Used in Component: "cc.Button"
-uuid: "8cefaecf-6e05-408b-add4-f63fbafd4e8a"
-2017-12-30T14:38:25.182Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Sprite"
-uuid: "04dfcd16-5d12-4d31-847e-c1b18acc4726"
-2017-12-30T14:38:25.183Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_9"
-Used in Component: "cc.Button"
-uuid: "c7580807-2bed-4bac-8b59-adcd94a81b75"
-2017-12-30T14:38:25.185Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Sprite"
-uuid: "966a5156-2ba8-4406-a21b-bb44485e9303"
-2017-12-30T14:38:25.186Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_Lose_weight"
-Used in Component: "cc.Button"
-uuid: "6dcaeae5-a151-4609-a3c9-84952da5adb4"
-2017-12-30T14:38:25.187Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Sprite"
-uuid: "69c40dc5-64d6-4140-bd79-11cbbadbb00d"
-2017-12-30T14:38:25.189Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/Z_button_del"
-Used in Component: "cc.Button"
-uuid: "1535fcc4-f084-45e7-a482-10323db81e44"
-2017-12-30T14:38:25.191Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Sprite"
-uuid: "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1"
-2017-12-30T14:38:25.192Z - warn: The referenced asset used in "db://assets/resources/prefabs/JoinGame.prefab" is not found, it may have been deleted. Detailed information:
-Node path: "JoinGame/close"
-Used in Component: "cc.Button"
-uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
-2017-12-30T14:38:30.071Z - normal: Built to "C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client\build\jsb-binary" successfully
-2017-12-30T14:38:33.124Z - normal: Start to compile native project. Please wait...
-2017-12-30T14:38:33.124Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-2017-12-30T14:38:38.879Z - failed: Error: Compile failed. The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:17940)
-    at ChildProcess.<anonymous> (D:\CocosCreator\resources\app.asar\editor\core\native-utils.js:1:7252)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:852:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+    at Socket.<anonymous> (internal/child_process.js:323:11)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at Pipe._handle.close [as _onclose] (net.js:492:12)
+2017-12-31T12:59:35.954Z - normal: Start to run project. Please wait...
+2017-12-31T12:59:35.954Z - normal: The log file path [ C:\Users\Jonathan\.CocosCreator\logs\native.log ]
+2017-12-31T13:05:05.899Z - info: shutdown preview server

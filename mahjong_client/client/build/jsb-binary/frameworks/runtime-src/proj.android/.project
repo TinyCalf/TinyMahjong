@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ZSMJ</name>
+	<name>llyzmj</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -60,7 +60,7 @@
 		<link>
 			<name>Classes</name>
 			<type>2</type>
-			<locationURI>COCOS2DX/projects/ZSMJ/Classes</locationURI>
+			<locationURI>COCOS2DX/projects/llyzmj/Classes</locationURI>
 		</link>
 		<link>
 			<name>cocos2dx</name>
