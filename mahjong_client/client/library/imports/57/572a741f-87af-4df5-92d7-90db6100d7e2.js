@@ -70,8 +70,8 @@ cc.Class({
         //安卓只显示微信登陆
         if (cc.sys.os == cc.sys.OS_ANDROID) {
             console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
-            cc.find("Canvas/btn_yk").active = false;
-            cc.find("Canvas/z_weixindenglu").active = true;
+            cc.find("Canvas/btn_yk").active = true;
+            cc.find("Canvas/z_weixindenglu").active = false;
         }
         //IOS审核版本 只显示游客登录 过审版本 只显示微信登陆
         else if (cc.sys.os == cc.sys.OS_IOS) {

@@ -1270,8 +1270,8 @@
     "relativePath": "resources\\textures\\png\\Z_zhunbeizhuangt.png"
   },
   "801b2051-a975-419b-a2fe-19afcfcda31c": {
-    "asset": 1514721866577,
-    "meta": 1514722112360,
+    "asset": 1514777235168,
+    "meta": 1514896422672,
     "relativePath": "resources\\textures\\utils"
   },
   "0b76b4ec-bbc9-4aeb-a1de-cbe665509f05": {
@@ -1994,11 +1994,6 @@
     "meta": 1514722109390,
     "relativePath": "resources\\textures\\hall\\TDH.png"
   },
-  "44117de5-67ce-4d00-8a3d-dfbe57f09c4c": {
-    "asset": 1510160705030,
-    "meta": 1514722109453,
-    "relativePath": "resources\\textures\\hall\\wanfa.png"
-  },
   "97365972-166e-466e-a57e-16641b6b1296": {
     "asset": 1510160705035,
     "meta": 1514722109484,
@@ -2085,13 +2080,13 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1514721866030,
-    "meta": 1514722107422,
+    "asset": 1514896609310,
+    "meta": 1514896609361,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
-    "asset": 1514721866030,
-    "meta": 1514722107437,
+    "asset": 1514777553238,
+    "meta": 1514777553278,
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
@@ -2110,8 +2105,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1514721866046,
-    "meta": 1514722107531,
+    "asset": 1514778224466,
+    "meta": 1514778224630,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -2705,13 +2700,13 @@
     "relativePath": "scripts\\components\\JoinGameInput.js"
   },
   "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
-    "asset": 1514721866593,
-    "meta": 1514722117001,
+    "asset": 1514777494779,
+    "meta": 1514777494950,
     "relativePath": "scripts\\components\\LoadingLogic.js"
   },
   "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1512482437075,
-    "meta": 1514722117313,
+    "asset": 1514778330907,
+    "meta": 1514778331060,
     "relativePath": "scripts\\components\\Login.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
@@ -2858,26 +2853,6 @@
     "asset": 1514721866530,
     "meta": 1514722112453,
     "relativePath": "resources\\textures\\utils\\GameEnd4-1.jpg"
-  },
-  "60ef1498-b751-46cc-8e13-d4ba5f0becb0": {
-    "asset": 1514721866280,
-    "meta": 1514722108844,
-    "relativePath": "resources\\textures\\hall\\fenxiang.png"
-  },
-  "77dcdbfb-5208-4da3-b9b5-0eb05026667d": {
-    "asset": 1514721866186,
-    "meta": 1514722108515,
-    "relativePath": "resources\\textures\\hall\\bangzhu.png"
-  },
-  "8457f84c-90fc-4858-b467-63a6dbb1d5b8": {
-    "asset": 1514721866436,
-    "meta": 1514722109359,
-    "relativePath": "resources\\textures\\hall\\shezhi.png"
-  },
-  "cdef6014-6e6f-4016-ba58-a2035008c2fd": {
-    "asset": 1514721866499,
-    "meta": 1514722109516,
-    "relativePath": "resources\\textures\\hall\\zhanji.png"
   },
   "e348b5cc-096f-4fe8-9cc0-47c1f93982d7": {
     "asset": 1514721866452,
@@ -3114,21 +3089,6 @@
     "meta": 1514722108765,
     "relativePath": "resources\\textures\\hall\\create_room_btn.png"
   },
-  "bd32858e-d814-458e-8461-536c785b72f6": {
-    "asset": 1514721866265,
-    "meta": 1514722108781,
-    "relativePath": "resources\\textures\\hall\\ddh.png"
-  },
-  "80e8c118-ecb6-4180-82c8-b9e1e23f955c": {
-    "asset": 1514721866483,
-    "meta": 1514722109500,
-    "relativePath": "resources\\textures\\hall\\yzmj.png"
-  },
-  "eb06336c-973b-4221-8961-4fa276383c56": {
-    "asset": 1514721866390,
-    "meta": 1514722109187,
-    "relativePath": "resources\\textures\\hall\\qiandao.png"
-  },
   "89037367-6938-402c-a74f-10ca658b90ce": {
     "asset": 1514721866421,
     "meta": 1514722109265,
@@ -3188,5 +3148,45 @@
     "asset": 1514721866249,
     "meta": 1514722108703,
     "relativePath": "resources\\textures\\hall\\checkin_day7.png"
+  },
+  "5a109080-7992-4f7e-bfcf-c01bb899f17d": {
+    "asset": 1514777173207,
+    "meta": 1514777235202,
+    "relativePath": "resources\\textures\\utils\\pc.png"
+  },
+  "80e8c118-ecb6-4180-82c8-b9e1e23f955c": {
+    "asset": 1514896548107,
+    "meta": 1514896570769,
+    "relativePath": "resources\\textures\\hall\\yzmj.png"
+  },
+  "bd32858e-d814-458e-8461-536c785b72f6": {
+    "asset": 1514896558319,
+    "meta": 1514896570774,
+    "relativePath": "resources\\textures\\hall\\ddh.png"
+  },
+  "60ef1498-b751-46cc-8e13-d4ba5f0becb0": {
+    "asset": 1514896649312,
+    "meta": 1514896731420,
+    "relativePath": "resources\\textures\\hall\\fenxiang.png"
+  },
+  "eb06336c-973b-4221-8961-4fa276383c56": {
+    "asset": 1514896638757,
+    "meta": 1514896731430,
+    "relativePath": "resources\\textures\\hall\\qiandao.png"
+  },
+  "8457f84c-90fc-4858-b467-63a6dbb1d5b8": {
+    "asset": 1514896710347,
+    "meta": 1514896731444,
+    "relativePath": "resources\\textures\\hall\\shezhi.png"
+  },
+  "cdef6014-6e6f-4016-ba58-a2035008c2fd": {
+    "asset": 1514896687180,
+    "meta": 1514896731477,
+    "relativePath": "resources\\textures\\hall\\zhanji.png"
+  },
+  "77dcdbfb-5208-4da3-b9b5-0eb05026667d": {
+    "asset": 1514896678484,
+    "meta": 1514896765124,
+    "relativePath": "resources\\textures\\hall\\bangzhu.png"
   }
 }

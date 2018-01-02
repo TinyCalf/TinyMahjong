@@ -28,6 +28,9 @@ cc.Class({
                 cc.find("Canvas/New Label").active = false;
             }
         });
+
+        var progress = this.node.getChildByName("progress");
+        progress.getChildByName("progress").width = 0;
     },
 
     start: function start() {
@@ -173,7 +176,7 @@ cc.Class({
                 self._progress = completedCount / totalCount;
 
                 // var yx = this.node.getChildByName("yinxiao");
-                var width = 368 * self._progress;
+                var width = 790 * self._progress;
                 var progress = self.node.getChildByName("progress");
                 //progress.getComponent(cc.Slider).progress = cc.vv.audioMgr.sfxVolume;
                 progress.getChildByName("progress").width = width;
