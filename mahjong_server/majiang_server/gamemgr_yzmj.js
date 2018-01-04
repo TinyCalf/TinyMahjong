@@ -511,15 +511,20 @@ function calculateResult(game){
               score +=4;
               if(judge.isZha7dui(thisseat,game.hun)) {thisseat.zhaqidui = true;score +=8}
             }
-            if(score ==0 ) score =2;
+            if(score == 0 ) score = 2;
             if(thisseat.iszimo){
-              thisseat.score += score * 4
-              for(var i = 0; i < game.gameSeats.length; ++i){
-                 game.gameSeats[i].score -=score
+              // thisseat.score += score * 4
+              // for(var i = 0; i < game.gameSeats.length; ++i){
+              //    game.gameSeats[i].score -=score
+              // }
+              for(var j=0;j<4;i++){
+                if(j!=i) yangzhou.koufen(game,i,j,score);
               }
+
             }else{
-              thisseat.score += score
-              game.gameSeats[game.fangpaoindex].score -=score
+              // thisseat.score += score
+              // game.gameSeats[game.fangpaoindex].score -=score
+              yangzhou.koufen(game,i,game.fangpaoindex,score);
             }
         }
     }
@@ -583,25 +588,21 @@ function doGameOver(game,userId,forceEnd){
 
         //判斷是否打完一局
         var isEnd = false;
+        //记录所有人的总分以计算是否满足2家分数小于底分
+        var alltotalscores = [];
 
         for(var i = 0; i < roomInfo.seats.length; ++i){
             var rs = roomInfo.seats[i];
             var sd = game.gameSeats[i];
-
-
             //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
-            rs.score += sd.score + sd.gangscore;
+            rs.score += sd.totalscore;
+            alltotalscores.push(rs.score)
             (sd.iszimo) ? rs.numZiMo ++ :{};
             (sd.hued && !sd.iszimo) ? rs.numJiePao ++ : {};
             (game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
             rs.numAnGang += sd.angangs.length;
             rs.numMingGang += sd.diangangs.length + sd.wangangs.length;
-
-            //扬州麻将底分逻辑
-            if(game.conf.difen == 0 && rs.score <= -20) isEnd = true;
-            if(game.conf.difen == 1 && rs.score <= -30) isEnd = true;
-            if(game.conf.difen == 2 && rs.score <= -50) isEnd = true;
 
             var userRT = {
                 userId:sd.userId,
@@ -655,6 +656,9 @@ function doGameOver(game,userId,forceEnd){
             dbresult[i] = sd.score;
             delete gameSeatsOfUsers[sd.userId];
         }
+        //扬州麻将底分逻辑
+        if(yangzhou.isEndofDifen(game.conf.difen, alltotalscores)) isEnd = true;
+
         delete games[roomId];
 
         var old = roomInfo.nextButton;
@@ -672,6 +676,8 @@ function doGameOver(game,userId,forceEnd){
             }
         }
 
+
+
         var totaljus = roomInfo.fengxiangju + roomInfo.fengxiang * 4;
 
         //如果打一圈： 012 4局 8局 16局
@@ -680,7 +686,7 @@ function doGameOver(game,userId,forceEnd){
         if(game.conf.quanshu==2 && totaljus>=16) isEnd = true;
 
         roomInfo.numOfGames++;
-
+//庄家赢或者留局则不换装，firstHupai为
         if(old != roomInfo.nextButton){
             db.update_next_button(roomId,roomInfo.nextButton);
         }
@@ -997,15 +1003,8 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         ac.score = game.conf.baseScore*2;
 
         //收每家两份
-        seatData.gangscore += 8
-        for(var i=0; i< 4 ; i++) {
-          game.gameSeats[i].gangscore -= 2
-        }
-        if(pai == game.hun) {
-          seatData.gangscore += 8
-          for(var i=0; i< 4 ; i++) {
-            game.gameSeats[i].gangscore -= 2
-          }
+        for(var i=0;i<4;i++){
+          if(i!=seatIndex) yangzhou.koufen(game,seatIndex,i,2);
         }
     }
     else if(gangtype == "diangang"){
@@ -1014,9 +1013,8 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         ac.score = game.conf.baseScore*2;
         var fs = turnSeat;
         recordUserAction(game,fs,"fanggang",seatIndex);
-        //收2分
-        seatData.gangscore += 2
-        turnSeat.gangscore -= 2
+        //收2分-
+        yangzhou.koufen(game,seatIndex,gameTurn,2);
     }
     else if(gangtype == "wangang"){
         seatData.wangangs.push(pai);
@@ -1027,22 +1025,26 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         else{
             recordUserAction(game,seatData,"zhuanshougang");
         }
-        //收每家两份
-        seatData.gangscore += 4
-        for(var i=0; i< 4 ; i++) {
-          game.gameSeats[i].gangscore -= 1
+        //收每家1份
+        for(var i=0;i<4;i++){
+          if(i!=seatIndex) yangzhou.koufen(game,seatIndex,i,1);
         }
+    }
+
+    //到达底分则结算解散
+    if(yangzhou.isEndofDifen0(game)){
+      return doGameOver(game,game.roomInfo.seats[0].userId,true);
     }
 
     checkCanTingPai(game,seatData);
     //通知其他玩家，有人杠了牌
     userMgr.broacastInRoom('gang_notify_push',{userid:seatData.userId,pai:pai,gangtype:gangtype},seatData.userId,true);
     //通知其他玩家，gang分数变化
-    userMgr.broacastInRoom('gang_score_push',{gangscores:[
-      game.gameSeats[0].gangscore,
-      game.gameSeats[1].gangscore,
-      game.gameSeats[2].gangscore,
-      game.gameSeats[3].gangscore,
+    userMgr.broacastInRoom('total_score_push',{totalscores:[
+      game.gameSeats[0].totalscore,
+      game.gameSeats[1].totalscore,
+      game.gameSeats[2].totalscore,
+      game.gameSeats[3].totalscore,
     ]},seatData.userId,true);
 
     //变成自己的轮子
@@ -1147,7 +1149,7 @@ exports.begin = function(roomId) {
          data.isGangHu = false;
          data.actions = [];
          data.score = 0;
-         data.gangscore = 0;
+         data.totalscore = 0;
          //统计信息
          data.numZiMo = 0;
          data.numJiePao = 0;
@@ -1404,15 +1406,18 @@ exports.peng = function(userId){
 
 
     if(pai == game.ban) {
-      seatData.gangscore += 2
-      game.gameSeats[game.turn].gangscore -= 2
+      yangzhou.koufen(game,seatData.seatIndex,game.turn,2)
+    }
+    //到达底分则结算解散
+    if(yangzhou.isEndofDifen0(game)){
+      return doGameOver(game,game.roomInfo.seats[0].userId,true);
     }
     //通知其他玩家，gang分数变化
-    userMgr.broacastInRoom('gang_score_push',{gangscores:[
-      game.gameSeats[0].gangscore,
-      game.gameSeats[1].gangscore,
-      game.gameSeats[2].gangscore,
-      game.gameSeats[3].gangscore,
+    userMgr.broacastInRoom('total_score_push',{totalscore:[
+      game.gameSeats[0].totalscore,
+      game.gameSeats[1].totalscore,
+      game.gameSeats[2].totalscore,
+      game.gameSeats[3].totalscore,
     ]},seatData.userId,true);
 
     //检查是否有人要胡，要碰 要杠s
@@ -1942,7 +1947,6 @@ exports.doDissolve = function(roomId){
     if(roomInfo == null){
         return null;
     }
-
     var game = games[roomId];
     doGameOver(game,roomInfo.seats[0].userId,true);
 };

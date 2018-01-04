@@ -49,4 +49,70 @@ exports.getBanZiAndPeiZi = () => {
 //console.log(this.getBanZiAndPeiZi())
 
 
-//
+//计算是否符合底分2人条件(结束时)
+exports.isEndofDifen = (difentype, scores) => {
+  var poorguynum = 0
+  if(difentype == 0) {
+    for(var i=0;i<4;i++){
+      if(scores[i]<=-20) poorguynum++
+    }
+  }
+  if(difentype == 1) {
+    for(var i=0;i<4;i++){
+      if(scores[i]<=-30) poorguynum++
+    }
+  }
+  if(difentype == 2) {
+    for(var i=0;i<4;i++){
+      if(scores[i]<=-50) poorguynum++
+    }
+  }
+  if(poorguynum>=2) return true;
+  return false;
+}
+
+//计算是否符合底分2人条件(中途)
+exports.isEndofDifen0 = (game) => {
+  var poorguynum = 0
+  var difentype = game.conf.difen
+  if(difentype == 0) {
+    for(var i=0;i<4;i++){
+      if(game.seats[i].totalscore<=-20) poorguynum++
+    }
+  }
+  if(difentype == 1) {
+    for(var i=0;i<4;i++){
+      if(game.seats[i].totalscore<=-30) poorguynum++
+    }
+  }
+  if(difentype == 2) {
+    for(var i=0;i<4;i++){
+      if(game.seats[i].totalscore<=-50) poorguynum++
+    }
+  }
+  if(poorguynum>=2) return true;
+  return false;
+}
+
+//有底分情况下的扣分
+exports.koufen = (game, addindex, reduceindex, score) => {
+  var difen = -20;
+  if(game.conf.difen==1) difen=-30;
+  if(game.conf.difen==2) difen=-40;
+  var add = game.seats[addindex];
+  var reduce = game.seats[reduceindex];
+  //扣分的人的分数与底分之间的差距
+  var distance = reduce.totalscore - difen
+  if(distance < score){
+    add.totalscore += distance
+    reduce.totalscore -= distance
+    add.score += distance
+    reduce.score -= distance
+  }else{
+    add.totalscore += score
+    reduce.totalscore -= score
+    add.score += score
+    reduce.score -= score
+  }
+
+}
