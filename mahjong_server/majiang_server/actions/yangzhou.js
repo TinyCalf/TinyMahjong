@@ -77,17 +77,17 @@ exports.isEndofDifen0 = (game) => {
   var difentype = game.conf.difen
   if(difentype == 0) {
     for(var i=0;i<4;i++){
-      if(game.seats[i].totalscore<=-20) poorguynum++
+      if(game.gameSeats[i].totalscore<=-20) poorguynum++
     }
   }
   if(difentype == 1) {
     for(var i=0;i<4;i++){
-      if(game.seats[i].totalscore<=-30) poorguynum++
+      if(game.gameSeats[i].totalscore<=-30) poorguynum++
     }
   }
   if(difentype == 2) {
     for(var i=0;i<4;i++){
-      if(game.seats[i].totalscore<=-50) poorguynum++
+      if(game.gameSeats[i].totalscore<=-50) poorguynum++
     }
   }
   if(poorguynum>=2) return true;
@@ -99,8 +99,8 @@ exports.koufen = (game, addindex, reduceindex, score) => {
   var difen = -20;
   if(game.conf.difen==1) difen=-30;
   if(game.conf.difen==2) difen=-40;
-  var add = game.seats[addindex];
-  var reduce = game.seats[reduceindex];
+  var add = game.gameSeats[addindex];
+  var reduce = game.gameSeats[reduceindex];
   //扣分的人的分数与底分之间的差距
   var distance = reduce.totalscore - difen
   if(distance < score){

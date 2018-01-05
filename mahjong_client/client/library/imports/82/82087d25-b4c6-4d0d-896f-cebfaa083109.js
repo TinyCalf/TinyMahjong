@@ -135,11 +135,9 @@ cc.Class({
         this.refresh();
     },
 
-    setScore: function setScore(gangscore) {
+    setScore: function setScore(totalscore) {
         console.log("setScore");
-        console.log(gangscore);
-        console.log(this._score + gangscore);
-        this.node.getChildByName("score").getComponent(cc.Label).string = this._score + gangscore;
+        this.node.getChildByName("score").getComponent(cc.Label).string = totalscore;
         //this._score += gangscore
         //this.refresh()
     },

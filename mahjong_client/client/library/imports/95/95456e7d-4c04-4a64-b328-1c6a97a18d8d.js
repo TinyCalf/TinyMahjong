@@ -518,10 +518,10 @@ cc.Class({
             self.doGang(si, pai, data.gangtype);
         });
 
-        cc.vv.net.addHandler("gang_score_push", function (data) {
-            console.log('gang_score_push');
+        cc.vv.net.addHandler("total_score_push", function (data) {
+            console.log('total_score_push');
             console.log(data);
-            self.dispatchEvent("gang_score", data);
+            self.dispatchEvent("total_score", data);
         });
 
         cc.vv.net.addHandler("chi_notify_push", function (data) {

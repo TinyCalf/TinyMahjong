@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
-    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
-    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    //
-    // arr = []
-    // for ( var i = 0 ; i < 14 ; i++ ) {
-    //   arr.push(arr1[i])
-    //   arr.push(arr2[i]);
-    //   arr.push(arr3[i]);
-    //   arr.push(arr4[i]);
-    // }
-    //
-    // arr = arr.concat(mahjongs)
-    // game.mahjongs = arr
+    arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
+    arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
+    arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+
+    arr = []
+    for ( var i = 0 ; i < 14 ; i++ ) {
+      arr.push(arr1[i])
+      arr.push(arr2[i]);
+      arr.push(arr3[i]);
+      arr.push(arr4[i]);
+    }
+
+    arr = arr.concat(mahjongs)
+    game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -517,7 +517,7 @@ function calculateResult(game){
               // for(var i = 0; i < game.gameSeats.length; ++i){
               //    game.gameSeats[i].score -=score
               // }
-              for(var j=0;j<4;i++){
+              for(var j=0;j<4;j++){
                 if(j!=i) yangzhou.koufen(game,i,j,score);
               }
 
@@ -596,8 +596,10 @@ function doGameOver(game,userId,forceEnd){
             var sd = game.gameSeats[i];
             //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
-            rs.score += sd.totalscore;
-            alltotalscores.push(rs.score)
+            rs.score = sd.totalscore;
+            console.log(alltotalscores);
+            console.log(rs.score)
+            alltotalscores.push(rs.score);
             (sd.iszimo) ? rs.numZiMo ++ :{};
             (sd.hued && !sd.iszimo) ? rs.numJiePao ++ : {};
             (game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
@@ -686,7 +688,7 @@ function doGameOver(game,userId,forceEnd){
         if(game.conf.quanshu==2 && totaljus>=16) isEnd = true;
 
         roomInfo.numOfGames++;
-//庄家赢或者留局则不换装，firstHupai为
+        //庄家赢或者留局则不换装，firstHupai为
         if(old != roomInfo.nextButton){
             db.update_next_button(roomId,roomInfo.nextButton);
         }
@@ -1149,7 +1151,7 @@ exports.begin = function(roomId) {
          data.isGangHu = false;
          data.actions = [];
          data.score = 0;
-         data.totalscore = 0;
+         data.totalscore = roomInfo.seats[i].score;
          //统计信息
          data.numZiMo = 0;
          data.numJiePao = 0;
