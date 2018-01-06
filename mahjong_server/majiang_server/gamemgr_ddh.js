@@ -1959,6 +1959,18 @@ exports.dissolveRequest = function(roomId,userId){
         return null;
     }
 
+    //不满4人直接结束
+    console.log(roomInfo.seats)
+    var readys = 0
+    for(var i=0;i<roomInfo.seats.length;i++){
+      if(roomInfo.seats[i].ready) readys++
+    }
+    console.log(readys)
+    if(readys < 4){
+      this.doDissolve(roomId);
+      return
+    }
+
     roomInfo.dr = {
         endTime:Date.now() + 30000,
         states:[false,false,false,false]

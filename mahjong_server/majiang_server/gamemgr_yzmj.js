@@ -1970,6 +1970,7 @@ exports.doDissolve = function(roomId){
 };
 
 exports.dissolveRequest = function(roomId,userId){
+  console.log("dissolveRequest")
     var roomInfo = roomMgr.getRoom(roomId);
     if(roomInfo == null){
         return null;
@@ -1982,6 +1983,18 @@ exports.dissolveRequest = function(roomId,userId){
     var seatIndex = roomMgr.getUserSeat(userId);
     if(seatIndex == null){
         return null;
+    }
+
+    //不满4人直接结束
+    console.log(roomInfo.seats)
+    var readys = 0
+    for(var i=0;i<roomInfo.seats.length;i++){
+      if(roomInfo.seats[i].ready) readys++
+    }
+    console.log(readys)
+    if(readys < 4){
+      this.doDissolve(roomId);
+      return
     }
 
     roomInfo.dr = {
