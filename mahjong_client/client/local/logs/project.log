@@ -1,1725 +1,1388 @@
-2018-01-05T12:18:52.031Z - normal: Load ~/.CocosCreator/settings.json
-2018-01-05T12:18:52.031Z - normal: checking language setting...
-2018-01-05T12:18:52.031Z - normal: Language: zh
-2018-01-05T12:18:53.091Z - success: protocol editor-framework registered
-2018-01-05T12:18:53.091Z - success: protocol app registered
-2018-01-05T12:18:53.091Z - success: protocol packages registered
-2018-01-05T12:18:53.091Z - success: protocol theme registered
-2018-01-05T12:18:53.091Z - success: protocol unpack registerred
-2018-01-05T12:18:53.419Z - normal: connected!
-2018-01-05T12:18:53.419Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2018-01-05T12:18:53.419Z - normal: Initializing Cocos Creator Editor
-2018-01-05T12:18:53.731Z - normal: Initializing Cocos2d
-2018-01-05T12:18:55.013Z - normal: Initializing Asset Database
-2018-01-05T12:18:55.028Z - success: protocol uuid registerred
-2018-01-05T12:18:55.028Z - success: protocol db registerred
-2018-01-05T12:18:55.028Z - success: protocol thumbnail registerred
-2018-01-05T12:18:55.028Z - normal: Loading editor/builtin packages
-2018-01-05T12:18:55.153Z - success: assets loaded
-2018-01-05T12:18:55.153Z - success: builder loaded
-2018-01-05T12:18:55.153Z - success: hierarchy loaded
-2018-01-05T12:18:55.153Z - success: inspector loaded
-2018-01-05T12:18:55.153Z - success: keystore loaded
-2018-01-05T12:18:55.169Z - success: node-library loaded
-2018-01-05T12:18:55.169Z - success: preferences loaded
-2018-01-05T12:18:55.185Z - success: project-importer loaded
-2018-01-05T12:18:55.185Z - success: project-settings loaded
-2018-01-05T12:18:55.185Z - success: ui-kit loaded
-2018-01-05T12:18:55.185Z - success: ui-grid loaded
-2018-01-05T12:18:55.185Z - success: scene loaded
-2018-01-05T12:18:55.185Z - success: sprite-editor loaded
-2018-01-05T12:18:55.185Z - success: timeline loaded
-2018-01-05T12:18:55.185Z - normal: Loading builtin packages
-2018-01-05T12:18:55.200Z - success: asset-db-debugger loaded
-2018-01-05T12:18:55.200Z - success: code-editor loaded
-2018-01-05T12:18:55.200Z - success: color-picker loaded
-2018-01-05T12:18:55.200Z - success: console loaded
-2018-01-05T12:18:55.200Z - success: package-manager loaded
-2018-01-05T12:18:55.200Z - success: tester loaded
-2018-01-05T12:18:55.200Z - success: ui-kit-preview-extra loaded
-2018-01-05T12:18:55.200Z - success: ui-kit-preview loaded
-2018-01-05T12:18:55.216Z - success: ui-tree loaded
-2018-01-05T12:18:55.278Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2018-01-05T12:18:55.294Z - normal: Loading packages
-2018-01-05T12:18:55.294Z - normal: Watching packages
-2018-01-05T12:18:55.310Z - normal: Run Application
-2018-01-05T12:18:58.873Z - success: preview server running at http://localhost:7456
-2018-01-05T12:19:03.157Z - normal: 1.3.2
-2018-01-05T12:19:05.238Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
+2018-01-05T23:47:18.297Z - normal: Load ~/.CocosCreator/settings.json
+2018-01-05T23:47:18.297Z - normal: checking language setting...
+2018-01-05T23:47:18.297Z - normal: Language: zh
+2018-01-05T23:47:19.390Z - success: protocol editor-framework registered
+2018-01-05T23:47:19.390Z - success: protocol app registered
+2018-01-05T23:47:19.390Z - success: protocol packages registered
+2018-01-05T23:47:19.390Z - success: protocol theme registered
+2018-01-05T23:47:19.390Z - success: protocol unpack registerred
+2018-01-05T23:47:19.702Z - normal: connected!
+2018-01-05T23:47:19.702Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2018-01-05T23:47:19.718Z - normal: Initializing Cocos Creator Editor
+2018-01-05T23:47:20.046Z - normal: Initializing Cocos2d
+2018-01-05T23:47:21.436Z - normal: Initializing Asset Database
+2018-01-05T23:47:21.451Z - success: protocol uuid registerred
+2018-01-05T23:47:21.451Z - success: protocol db registerred
+2018-01-05T23:47:21.451Z - success: protocol thumbnail registerred
+2018-01-05T23:47:21.451Z - normal: Loading editor/builtin packages
+2018-01-05T23:47:21.607Z - success: assets loaded
+2018-01-05T23:47:21.607Z - success: builder loaded
+2018-01-05T23:47:21.607Z - success: hierarchy loaded
+2018-01-05T23:47:21.623Z - success: inspector loaded
+2018-01-05T23:47:21.623Z - success: keystore loaded
+2018-01-05T23:47:21.623Z - success: node-library loaded
+2018-01-05T23:47:21.623Z - success: preferences loaded
+2018-01-05T23:47:21.639Z - success: project-importer loaded
+2018-01-05T23:47:21.639Z - success: project-settings loaded
+2018-01-05T23:47:21.639Z - success: ui-kit loaded
+2018-01-05T23:47:21.654Z - success: ui-grid loaded
+2018-01-05T23:47:21.654Z - success: scene loaded
+2018-01-05T23:47:21.654Z - success: sprite-editor loaded
+2018-01-05T23:47:21.654Z - success: timeline loaded
+2018-01-05T23:47:21.654Z - normal: Loading builtin packages
+2018-01-05T23:47:21.670Z - success: asset-db-debugger loaded
+2018-01-05T23:47:21.670Z - success: code-editor loaded
+2018-01-05T23:47:21.670Z - success: color-picker loaded
+2018-01-05T23:47:21.670Z - success: console loaded
+2018-01-05T23:47:21.670Z - success: package-manager loaded
+2018-01-05T23:47:21.670Z - success: tester loaded
+2018-01-05T23:47:21.670Z - success: ui-kit-preview-extra loaded
+2018-01-05T23:47:21.686Z - success: ui-kit-preview loaded
+2018-01-05T23:47:21.686Z - success: ui-tree loaded
+2018-01-05T23:47:21.764Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2018-01-05T23:47:21.764Z - normal: Loading packages
+2018-01-05T23:47:21.779Z - normal: Watching packages
+2018-01-05T23:47:21.779Z - normal: Run Application
+2018-01-05T23:47:25.327Z - success: preview server running at http://localhost:7456
+2018-01-05T23:47:29.494Z - normal: 1.3.2
+2018-01-05T23:47:31.517Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.238Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.518Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.518Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.518Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.239Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.519Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.240Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
+2018-01-05T23:47:31.520Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-05T23:47:31.521Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-05T23:47:31.521Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.521Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.241Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
+2018-01-05T23:47:31.521Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.522Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.242Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-05T23:47:31.523Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.243Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-05T23:47:31.524Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.244Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-05T23:47:31.525Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.245Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.246Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.246Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.246Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:19:05.246Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-05T23:47:31.526Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.116Z - normal: Compiled successfully
-2018-01-05T12:24:52.863Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
+2018-01-06T00:01:42.667Z - normal: Compiled successfully
+2018-01-06T00:01:45.295Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.864Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.296Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.864Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.297Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.864Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.297Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.864Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.297Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.865Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.298Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.865Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.298Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.865Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.298Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.865Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.298Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.865Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.298Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:01:45.299Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.300Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.866Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
+2018-01-06T00:01:45.300Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:01:45.300Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:01:45.300Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.300Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
+2018-01-06T00:01:45.301Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:01:45.301Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:01:45.304Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.304Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
+2018-01-06T00:01:45.304Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.867Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:01:45.306Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.307Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.868Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:01:45.308Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:01:45.309Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.309Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
+2018-01-06T00:01:45.309Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:01:45.309Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.869Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.310Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
+2018-01-06T00:01:45.311Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:01:45.311Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:01:45.312Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.870Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.312Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:01:45.313Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.871Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:01:45.314Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.872Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:01:45.314Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.872Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
+2018-01-06T00:01:45.314Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.872Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:01:45.315Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.872Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:01:45.315Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.873Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
+2018-01-06T00:01:45.315Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.873Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
+2018-01-06T00:01:45.316Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:24:52.873Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:01:45.317Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:03.354Z - normal: Compiled successfully
-2018-01-05T12:27:04.265Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
+2018-01-06T00:02:09.590Z - normal: Compiled successfully
+2018-01-06T00:02:11.300Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.265Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.300Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.300Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.301Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.301Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.301Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.301Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.301Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.266Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:02:11.302Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.267Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.303Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.268Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.269Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.269Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.269Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.304Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.269Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.269Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:02:11.305Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.270Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
+2018-01-06T00:02:11.306Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:02:11.307Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:02:11.307Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.271Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.307Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
+2018-01-06T00:02:11.307Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:02:11.308Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.272Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:02:11.309Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
+2018-01-06T00:02:11.310Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:02:11.310Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.273Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:02:11.311Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.274Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
+2018-01-06T00:02:11.311Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.274Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
+2018-01-06T00:02:11.311Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:04.274Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:02:11.312Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:34.458Z - normal: Compiled successfully
-2018-01-05T12:27:35.154Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
+2018-01-06T00:07:53.748Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.155Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.155Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.155Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.155Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.750Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.156Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.157Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.751Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
+2018-01-06T00:07:53.752Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
+2018-01-06T00:07:53.752Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:07:53.752Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.752Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
+2018-01-06T00:07:53.752Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
+2018-01-06T00:07:53.753Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:07:53.753Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.753Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.158Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
+2018-01-06T00:07:53.753Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
+2018-01-06T00:07:53.754Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:07:53.754Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.754Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
+2018-01-06T00:07:53.755Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
+2018-01-06T00:07:53.755Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.159Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
+2018-01-06T00:07:53.756Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.160Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:07:53.757Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.161Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.162Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:07:53.758Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.162Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.162Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.162Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.164Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.164Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.164Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)
     at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:27:35.164Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:48.496Z - normal: Compiled successfully
-2018-01-05T12:28:49.342Z - error: Error: Can not get asset url by uuid "f5874d5c-9a65-4a06-880a-0043be4f2c06", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.343Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.343Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.343Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.343Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.344Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.344Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.344Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.345Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.345Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.346Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.346Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.346Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.347Z - error: Error: Can not get asset url by uuid "95d4ffb9-3393-4d7e-844e-5b1dd6f6b709", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.347Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.347Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.348Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.349Z - error: Error: Can not get asset url by uuid "af334004-50fa-43e1-973b-a147669ee60a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.349Z - error: Error: Can not get asset url by uuid "661a7cb2-f216-4a8c-8dbd-a8242a6dd0d8", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.350Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.350Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.350Z - error: Error: Can not get asset url by uuid "01837e08-19f9-4659-8771-54601c5bdfa5", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.351Z - error: Error: Can not get asset url by uuid "064b5b9d-a9bf-42f1-ab9c-c52e1344020a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.351Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.351Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.352Z - error: Error: Can not get asset url by uuid "83799f0c-d1fd-4677-8c29-1c52dba3fa48", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.352Z - error: Error: Can not get asset url by uuid "0e1d368f-c425-4cf4-8940-fbe51871faf1", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.352Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.353Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.353Z - error: Error: Can not get asset url by uuid "8082cd90-cfdd-426b-a90a-79c89571e9aa", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.353Z - error: Error: Can not get asset url by uuid "c9738638-07b3-43de-9af7-2f976027c1ea", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.354Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.354Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.355Z - error: Error: Can not get asset url by uuid "784d5335-d254-4a6d-9623-7f981d368b52", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.355Z - error: Error: Can not get asset url by uuid "c0cd928a-d91f-47bf-a403-f992be0029e2", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.355Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.355Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.356Z - error: Error: Can not get asset url by uuid "1e434256-876a-4b4e-a328-fe0de69dca2d", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.356Z - error: Error: Can not get asset url by uuid "f60d7d65-5d3f-46e5-8a4d-3fa6871a68ad", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.356Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.357Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.357Z - error: Error: Can not get asset url by uuid "226b5110-c62a-4d73-bd1d-4b9b94193ed2", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.357Z - error: Error: Can not get asset url by uuid "d7d9a863-10b1-4120-ac8c-3d41520bf293", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.358Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.358Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.358Z - error: Error: Can not get asset url by uuid "29d7b689-2ab9-4296-8ac7-0990a3b26cec", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.358Z - error: Error: Can not get asset url by uuid "355e7152-f826-49ec-a420-538d29892c68", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.359Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.359Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.359Z - error: Error: Can not get asset url by uuid "8cefaecf-6e05-408b-add4-f63fbafd4e8a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.359Z - error: Error: Can not get asset url by uuid "f5edc715-8115-4589-ab36-ce07e6fcbf72", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.360Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.360Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.360Z - error: Error: Can not get asset url by uuid "c7580807-2bed-4bac-8b59-adcd94a81b75", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.360Z - error: Error: Can not get asset url by uuid "04dfcd16-5d12-4d31-847e-c1b18acc4726", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.361Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.361Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.361Z - error: Error: Can not get asset url by uuid "6dcaeae5-a151-4609-a3c9-84952da5adb4", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.362Z - error: Error: Can not get asset url by uuid "966a5156-2ba8-4406-a21b-bb44485e9303", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.362Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.364Z - error: Error: Can not get asset url by uuid "795d004d-0eb0-476f-a28d-9aa6e1c4a84a", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.365Z - error: Error: Can not get asset url by uuid "1535fcc4-f084-45e7-a482-10323db81e44", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.366Z - error: Error: Can not get asset url by uuid "69c40dc5-64d6-4140-bd79-11cbbadbb00d", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.367Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.367Z - error: Error: Can not get asset url by uuid "37fddc8f-5bf6-41cf-bf17-2e403b1abe08", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.368Z - error: Error: Can not get asset url by uuid "bd846dd2-64ff-4c89-b165-d959c83c0f8d", the asset may be deleted.
-    at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
-    at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:191:7)
-2018-01-05T12:28:49.369Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
+2018-01-06T00:07:53.759Z - error: Error: Can not get asset url by uuid "d19d6a19-15d0-4e01-8c78-0cdd1cf140c1", the asset may be deleted.
     at C:\CocosCreator\resources\engine\cocos2d\core\platform\CCAssetLibrary.js:128:30
     at EventEmitter.<anonymous> (C:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:5427)
     at emitTwo (events.js:106:13)

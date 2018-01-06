@@ -150,10 +150,10 @@ cc.Class({
             self.initSeats();
         });
 
-        this.node.on('gang_score', function (data) {
-            console.log('gang_score');
+        this.node.on('total_score', function (data) {
+            console.log('total_score');
             console.log(data);
-            var data = data.detail.gangscores;
+            var data = data.detail.totalscores;
             console.log(data);
             // self._seats[0].setScore(data[0]);
             // self._seats[1].setScore(data[1]);

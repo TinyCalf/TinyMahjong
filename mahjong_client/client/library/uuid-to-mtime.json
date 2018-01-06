@@ -2080,8 +2080,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1514896609310,
-    "meta": 1514896609361,
+    "asset": 1515197075812,
+    "meta": 1515197075908,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
@@ -2819,11 +2819,6 @@
     "meta": 1514722116344,
     "relativePath": "scripts\\components\\CreateRoom.js"
   },
-  "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1515155325316,
-    "meta": 1515155325418,
-    "relativePath": "scripts\\HTTP.js"
-  },
   "facfd963-9f1e-45fa-b143-02ae506e6a9a": {
     "asset": 1514721866593,
     "meta": 1514722116641,
@@ -3188,5 +3183,10 @@
     "asset": 1514896678484,
     "meta": 1514896765124,
     "relativePath": "resources\\textures\\hall\\bangzhu.png"
+  },
+  "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
+    "asset": 1515196925744,
+    "meta": 1515196925812,
+    "relativePath": "scripts\\HTTP.js"
   }
 }

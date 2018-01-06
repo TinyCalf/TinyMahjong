@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
-    arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
-    arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-
-    arr = []
-    for ( var i = 0 ; i < 14 ; i++ ) {
-      arr.push(arr1[i])
-      arr.push(arr2[i]);
-      arr.push(arr3[i]);
-      arr.push(arr4[i]);
-    }
-
-    arr = arr.concat(mahjongs)
-    game.mahjongs = arr
+    // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
+    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
+    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    //
+    // arr = []
+    // for ( var i = 0 ; i < 14 ; i++ ) {
+    //   arr.push(arr1[i])
+    //   arr.push(arr2[i]);
+    //   arr.push(arr3[i]);
+    //   arr.push(arr4[i]);
+    // }
+    //
+    // arr = arr.concat(mahjongs)
+    // game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -231,6 +231,22 @@ function checkCanWanGang(game,seatData){
 }
 
 function checkCanHu(game,seatData,targetPai) {
+    //如果放炮的人低于底分则不能胡
+    if(seatData.seatIndex != game.turn) {
+      if(game.conf.difen==0
+      && game.gameSeats[game.turn].totalscore < -20){
+        return
+      }
+      if(game.conf.difen==1
+      && game.gameSeats[game.turn].totalscore < -30){
+        return
+      }
+      if(game.conf.difen==2
+      && game.gameSeats[game.turn].totalscore < -50){
+        return
+      }
+    }
+
     game.lastHuPaiSeat = -1;
     seatData.canHu = false;
     for(var k in seatData.tingMap){
