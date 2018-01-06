@@ -94,9 +94,9 @@ cc.Class({
         this._gametype = gameChild.getChildByName('gametype');
         switch (cc.vv.gameNetMgr.conf.type) {
             case "ddh":
-                this._gametype.getComponent(cc.Label).string = "跌倒胡";break;
+                this._gametype.getComponent(cc.Label).string = "淌紧";break;
             case "yzmj":
-                this._gametype.getComponent(cc.Label).string = "扬州麻将";break;
+                this._gametype.getComponent(cc.Label).string = "园子";break;
         }
 
         var myselfChild = gameChild.getChildByName("myself");

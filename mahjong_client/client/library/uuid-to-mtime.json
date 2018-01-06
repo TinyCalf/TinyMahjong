@@ -1405,8 +1405,8 @@
     "relativePath": "resources\\textures\\voice\\yuyin_bg.png"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1514721866577,
-    "meta": 1514722112781,
+    "asset": 1515196838747,
+    "meta": 1515207116759,
     "relativePath": "scripts"
   },
   "187ece21-fb00-4bd5-a93a-61573f5f1a4c": {
@@ -2090,8 +2090,8 @@
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
-    "asset": 1514721866046,
-    "meta": 1514722107437,
+    "asset": 1515217719477,
+    "meta": 1515217719500,
     "relativePath": "resources\\scenes\\login.fire"
   },
   "ca3cd36e-e121-4a85-9b3f-0daa92af7d54": {
@@ -2825,13 +2825,13 @@
     "relativePath": "scripts\\components\\GameOver.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1514721866593,
-    "meta": 1514722117407,
+    "asset": 1515217782792,
+    "meta": 1515217783876,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1515200538742,
-    "meta": 1515200539150,
+    "asset": 1515207170267,
+    "meta": 1515207171109,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "82087d25-b4c6-4d0d-896f-cebfaa083109": {
@@ -3185,8 +3185,8 @@
     "relativePath": "resources\\textures\\hall\\bangzhu.png"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1515200935466,
-    "meta": 1515200935603,
+    "asset": 1515217847176,
+    "meta": 1515217847304,
     "relativePath": "scripts\\HTTP.js"
   }
 }
