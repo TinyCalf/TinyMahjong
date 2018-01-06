@@ -8,7 +8,7 @@
     "landscapeLeft": true,
     "landscapeRight": true,
     "portrait": false,
-    "upsideDown": false
+    "upsideDown": true
   },
   "packageName": "com.lailai.yzmj",
   "startScene": "4a1acad9-ce88-4334-aa62-bf23a5ccc79e",
