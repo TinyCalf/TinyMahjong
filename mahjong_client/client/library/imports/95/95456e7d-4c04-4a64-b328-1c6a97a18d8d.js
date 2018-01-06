@@ -140,23 +140,41 @@ cc.Class({
 
     getWanfa: function getWanfa() {
         var conf = this.conf;
-        if (conf && conf.maxGames != null && conf.maxFan != null) {
+        if (conf) {
             var strArr = [];
             // strArr.push(conf.maxGames + "局");
             // strArr.push(conf.maxFan + "番封顶");
-            if (conf.type == "sjmmj") {
+            //             _mahjongtype:null,
+            // _koufei:null,
+            // _quanshu:null,
+            // _peizi:false,
+            // _qidui:false,
+            // _fengqing:false,
+            // _yitiaolong:false,
+            // _difen:null,
+            // _types:[],
+            if (conf.type == "ddh") {
+                strArr.push("紧淌");
                 conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
-                conf.hongzhongdanghua ? strArr.push("红中当花") : {};
-                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
-                if (conf.jiesuan == 0) strArr.push("幺半");else if (conf.jiesuan == 1) strArr.push("一二");else if (conf.jiesuan == 2) strArr.push("二四");
-            } else if (conf.type == "dhmj") {
-                conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
-                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
-                if (conf.jiesuan == 0) strArr.push("10");else if (conf.jiesuan == 1) strArr.push("25");else if (conf.jiesuan == 2) strArr.push("50");else if (conf.jiesuan == 3) strArr.push("120");
-            } else if (conf.type == "tdh") {
-                conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
-                conf.quanshu == 0 ? strArr.push("8局") : strArr.push("一圈");
-                if (conf.jiesuan == 0) strArr.push("有花");
+                if (conf.quanshu == 0) strArr.push("4局");
+                if (conf.quanshu == 1) strArr.push("8局");
+                if (conf.quanshu == 2) strArr.push("16局");
+                if (conf.peizi) strArr.push("配子");
+                if (conf.qidui) strArr.push("七对");
+                if (conf.fengqing) strArr.push("风清");
+                if (conf.yitiaolong) strArr.push("一条龙");
+            } else if (conf.type == "yzmj") {
+                strArr.push("园子")(conf.koufei == 0) ? strArr.push("房主出资") : strArr.push("玩家平分");
+                if (conf.quanshu == 0) strArr.push("4局");
+                if (conf.quanshu == 1) strArr.push("8局");
+                if (conf.quanshu == 2) strArr.push("16局");
+                if (conf.peizi) strArr.push("配子");
+                if (conf.qidui) strArr.push("七对");
+                if (conf.fengqing) strArr.push("风清");
+                if (conf.yitiaolong) strArr.push("一条龙");
+                if (conf.difen == 0) strArr.push("底分20");
+                if (conf.difen == 1) strArr.push("底分30");
+                if (conf.difen == 2) strArr.push("底分50");
             }
             // if(conf.zimo == 1){
             //     strArr.push("自摸加番");

@@ -48565,8 +48565,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 129.63,
-      "height": 16
+      "width": 152,
+      "height": 56
     },
     "_children": [],
     "_rotationX": 0,
@@ -48575,8 +48575,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -614,
-      "y": -67
+      "x": -613,
+      "y": -103
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -48605,16 +48605,16 @@
     "_useOriginalSize": false,
     "_actualFontSize": 16,
     "_fontSize": 16,
-    "_lineHeight": 16,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "6f9b3f1f-be87-4188-b68f-cf720f31421e"
     },
     "_isSystemFontUsed": false,
-    "_N$string": "4番封顶 碰碰胡 将",
+    "_N$string": "4番封顶 碰碰胡 将 4番封顶 碰碰胡 将 4番封顶 碰碰胡 将",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
-    "_N$overflow": 0
+    "_N$overflow": 1
   },
   {
     "__type__": "cc.Widget",
