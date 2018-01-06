@@ -39,7 +39,7 @@ import android.content.DialogInterface;
 // -------------------------------------
 import org.cocos2dx.javascript.SDKWrapper;
 
-import com.vivigames.scmj.WXAPI;
+import com.lailai.yzmj.WXAPI;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;

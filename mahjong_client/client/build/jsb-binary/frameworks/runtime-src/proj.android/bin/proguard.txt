@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:17
+-keep class com.lailai.yzmj.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class org.cocos2dx.javascript.AppActivity { <init>(...); }
+

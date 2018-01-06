@@ -1,4 +1,4 @@
-package com.vivigames.voicesdk;
+package com.lailai.voicesdk;
 
 import java.io.File;
 import java.io.IOException;

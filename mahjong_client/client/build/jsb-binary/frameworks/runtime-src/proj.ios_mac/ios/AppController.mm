@@ -85,8 +85,8 @@ static bool __isWxLogin = false;
     
     cocos2d::Application::getInstance()->run();
     
-    //向微信注册
-    [WXApi registerApp:@"wxc3bbc4c270d6a0ba" withDescription:@"scmj"];
+    //锟斤拷微锟斤拷注锟斤拷
+    [WXApi registerApp:@"wxc3bbc4c270d6a0ba" withDescription:@"yzmj"];
     return YES;
 }
 
@@ -171,11 +171,11 @@ static bool __isWxLogin = false;
 +(void)login
 {
     __isWxLogin = true;
-    //构造SendAuthReq结构体
+    //锟斤拷锟斤拷SendAuthReq锟结构锟斤拷
     SendAuthReq* req =[[[SendAuthReq alloc ] init ] autorelease ];
     req.scope = @"snsapi_userinfo" ;
     req.state = @"123" ;
-    //第三方向微信终端发送一个SendAuthReq消息结构
+    //锟斤拷锟斤拷锟斤拷锟斤拷微锟斤拷锟秸端凤拷锟斤拷一锟斤拷SendAuthReq锟斤拷息锟结构
     [WXApi sendReq:req];
 }
 

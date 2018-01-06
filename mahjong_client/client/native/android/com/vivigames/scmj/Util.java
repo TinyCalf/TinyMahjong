@@ -1,4 +1,4 @@
-package com.vivigames.scmj;
+package com.lailai.yzmj;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -109,7 +109,7 @@ public class Util {
 		byte[] b = null;
 		try {
 			RandomAccessFile in = new RandomAccessFile(fileName, "r");
-			b = new byte[len]; // ´´½¨ºÏÊÊÎÄ¼þ´óÐ¡µÄÊý×é
+			b = new byte[len]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			in.seek(offset);
 			in.readFully(b);
 			in.close();

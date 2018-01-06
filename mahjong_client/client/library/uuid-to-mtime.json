@@ -2629,11 +2629,6 @@
     "meta": 1514722115969,
     "relativePath": "scripts\\3rdparty\\socket-io.js"
   },
-  "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
-    "asset": 1510160705683,
-    "meta": 1514722116032,
-    "relativePath": "scripts\\AnysdkMgr.js"
-  },
   "55caea5c-a6f1-4ae6-bd00-c797fc8ecb38": {
     "asset": 1510160705686,
     "meta": 1514722116032,
@@ -2808,11 +2803,6 @@
     "asset": 1510160705709,
     "meta": 1514722118313,
     "relativePath": "scripts\\Utils.js"
-  },
-  "1f06645b-2c0c-4a18-966d-90314eda4abf": {
-    "asset": 1510160705712,
-    "meta": 1514722118313,
-    "relativePath": "scripts\\VoiceMgr.js"
   },
   "eec071ec-2f8a-419f-9fcf-893dd26017b0": {
     "asset": 1514721866593,
@@ -3188,5 +3178,15 @@
     "asset": 1515223170758,
     "meta": 1515223170937,
     "relativePath": "scripts\\HTTP.js"
+  },
+  "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
+    "asset": 1515238364193,
+    "meta": 1515238371999,
+    "relativePath": "scripts\\AnysdkMgr.js"
+  },
+  "1f06645b-2c0c-4a18-966d-90314eda4abf": {
+    "asset": 1515238280412,
+    "meta": 1515238372005,
+    "relativePath": "scripts\\VoiceMgr.js"
   }
 }

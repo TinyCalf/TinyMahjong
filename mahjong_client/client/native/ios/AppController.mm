@@ -85,7 +85,7 @@ static bool __isWxLogin = false;
     cocos2d::Application::getInstance()->run();
     
     //向微信注册
-    [WXApi registerApp:@"wxcb508816c5c4e2a4" withDescription:@"scmj"];
+    [WXApi registerApp:@"wxcb508816c5c4e2a4" withDescription:@"yzmj"];
     return YES;
 }
 

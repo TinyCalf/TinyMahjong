@@ -1,4 +1,4 @@
-package com.vivigames.scmj;
+package com.lailai.yzmj;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,7 +16,7 @@ public class WXAPI {
 	public static boolean isLogin = false;
 	public static void Init(Activity context){
 		WXAPI.instance = context;
-        // Í¨¹ýWXAPIFactory¹¤³§£¬»ñÈ¡IWXAPIµÄÊµÀý
+        // Í¨ï¿½ï¿½WXAPIFactoryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡IWXAPIï¿½ï¿½Êµï¿½ï¿½
 		api = WXAPIFactory.createWXAPI(context, Constants.APP_ID, true);
         api.registerApp(Constants.APP_ID);		
 	}

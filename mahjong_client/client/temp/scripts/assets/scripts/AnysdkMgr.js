@@ -28,7 +28,7 @@ cc.Class({
     // },
 
     init: function init() {
-        this.ANDROID_API = "com/vivigames/scmj/WXAPI";
+        this.ANDROID_API = "com/lailai/yzmj/WXAPI";
         this.IOS_API = "AppController";
         this.ANDROID_WEBPAGE_API = "org/cocos2dx/javascript/AppActivity";
     },

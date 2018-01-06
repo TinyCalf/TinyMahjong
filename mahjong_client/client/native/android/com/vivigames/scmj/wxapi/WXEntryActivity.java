@@ -1,4 +1,4 @@
-package com.vivigames.scmj.wxapi;
+package com.lailai.yzmj.wxapi;
 
 
 import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
@@ -13,12 +13,12 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.SendAuth;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.vivigames.scmj.Constants;
-import com.vivigames.scmj.WXAPI;
+import com.lailai.yzmj.Constants;
+import com.lailai.yzmj.WXAPI;
 
 public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 	
-	// IWXAPI ÊÇµÚÈý·½appºÍÎ¢ÐÅÍ¨ÐÅµÄopenapi½Ó¿Ú
+	// IWXAPI ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½appï¿½ï¿½Î¢ï¿½ï¿½Í¨ï¿½Åµï¿½openapiï¿½Ó¿ï¿½
     private IWXAPI _api;
 	
     @Override
@@ -37,7 +37,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
         _api.handleIntent(intent, this);
 	}
 
-	// Î¢ÐÅ·¢ËÍÇëÇóµ½µÚÈý·½Ó¦ÓÃÊ±£¬»á»Øµ÷µ½¸Ã·½·¨
+	// Î¢ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½óµ½µï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
 	@Override
 	public void onReq(BaseReq req) {
 		/*
@@ -55,7 +55,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 		this.finish();
 	}
 
-	// µÚÈý·½Ó¦ÓÃ·¢ËÍµ½Î¢ÐÅµÄÇëÇó´¦ÀíºóµÄÏìÓ¦½á¹û£¬»á»Øµ÷µ½¸Ã·½·¨
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã·ï¿½ï¿½Íµï¿½Î¢ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
 	@Override
 	public void onResp(BaseResp resp) {
 		int result = 0;

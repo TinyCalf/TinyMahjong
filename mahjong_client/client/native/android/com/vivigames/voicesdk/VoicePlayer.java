@@ -1,4 +1,4 @@
-package com.vivigames.voicesdk;
+package com.lailai.voicesdk;
 
 
 
