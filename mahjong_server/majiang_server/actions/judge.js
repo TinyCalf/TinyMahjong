@@ -135,6 +135,16 @@ exports.isLong = (gameSeatData,hun) => {
   return false
 }
 
+// var data = {
+//   holds:[0,0,0,1,2,3,4,5,6,7,8],
+//   angangs:[],
+//   wangangs:[],
+//   diangangs:[],
+//   pengs:[32],
+// }
+//
+// console.log(this.isLong(data))
+
 
 /*
 风清，只有风
@@ -191,15 +201,3 @@ exports.isZha7dui = (gameSeatData,hun) => {
   if(totalcount >=4) return true
   return false
 }
-
-
-
-// var data = {
-//   holds:[31,28,28,28,29,5],
-//   angangs:[28],
-//   wangangs:[],
-//   diangangs:[5],
-//   pengs:[],
-// }
-//
-// console.log(this.isZha7dui(data))
