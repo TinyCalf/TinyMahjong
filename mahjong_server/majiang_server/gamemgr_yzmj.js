@@ -105,9 +105,9 @@ function shuffle(game) {
     }
 
     // arr1 = [9,9,10,10,11,11,12,12,13,13,14,14,15,28] ; //7dui
-    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,30] ;// fengqing + 7dui
-    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    // arr2 =[0,0,0,1,2,3,4,5,6,7,8,31,31,15] ;// fengqing + 7dui
+    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,15] ;
+    // arr4 =[9,9,9,10,10,10,11,11,11,12,12,12,13,15] ;
     //
     // arr = []
     // for ( var i = 0 ; i < 14 ; i++ ) {
@@ -234,15 +234,15 @@ function checkCanHu(game,seatData,targetPai) {
     //如果放炮的人低于底分则不能胡
     if(seatData.seatIndex != game.turn) {
       if(game.conf.difen==0
-      && game.gameSeats[game.turn].totalscore < -20){
+      && game.gameSeats[game.turn].totalscore <= -20){
         return
       }
       if(game.conf.difen==1
-      && game.gameSeats[game.turn].totalscore < -30){
+      && game.gameSeats[game.turn].totalscore <= -30){
         return
       }
       if(game.conf.difen==2
-      && game.gameSeats[game.turn].totalscore < -50){
+      && game.gameSeats[game.turn].totalscore <= -50){
         return
       }
     }
@@ -495,7 +495,7 @@ function isSameType(type,arr){
  * ******************************************************************/
 
 function calculateResult(game){
-
+    console.log('calculateResult')
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
     for(var i = 0; i < game.gameSeats.length; ++i){
