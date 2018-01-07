@@ -33,7 +33,15 @@ function loadImage(url, code, callback) {
     else{
         imageInfo.queue.push({code:code,callback:callback});
     }*/
+    // cc.loader.load(url,function (err,tex) {
+    //     console.log("tex")
+    //     console.log(tex)
+    //     var spriteFrame = new cc.SpriteFrame(tex, cc.Rect(0, 0, tex.width, tex.height));
+    //     callback(code,spriteFrame);
+    // });
     cc.loader.load(url, function (err, tex) {
+        console.log("tex");
+        console.log(tex);
         var spriteFrame = new cc.SpriteFrame(tex, cc.Rect(0, 0, tex.width, tex.height));
         callback(code, spriteFrame);
     });
@@ -50,7 +58,7 @@ function getBaseInfo(userid, callback) {
         cc.vv.http.sendRequest('/base_info', { userid: userid }, function (ret) {
             var url = null;
             if (ret.headimgurl) {
-                url = ret.headimgurl + ".jpg";
+                url = ret.headimgurl + "?a=a.jpg";
             }
             var info = {
                 name: ret.name,
@@ -96,9 +104,17 @@ cc.Class({
 
         var self = this;
         getBaseInfo(userid, function (code, info) {
+            console.log("headimg");
+            console.log(info);
+            console.log(info.url);
             if (info && info.url) {
+
+                // var info = {};
+                // info.url="http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLmtjiaJlQy9ExibjicIlwHOZJpibrNxaYwRjFPKD7wqe6uQeUH1Npicn0RnGfSqzIuQvHrh7DhCyJDKnQ/0?aa=aa.jpg"
                 loadImage(info.url, userid, function (err, spriteFrame) {
                     self._spriteFrame = spriteFrame;
+                    console.log("fuck you!");
+                    console.log(spriteFrame);
                     self.setupSpriteFrame();
                 });
             }

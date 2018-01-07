@@ -28,7 +28,7 @@ exports.account_server = function(){
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
 		VERSION:'20171111',
-		APP_WEB:'http://116.62.227.93/download/?asd=1544982311232222',
+		APP_WEB:'http://fir.im/qlx3',
 	};
 };
 

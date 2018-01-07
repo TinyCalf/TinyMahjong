@@ -2685,8 +2685,8 @@
     "relativePath": "scripts\\components\\HuanSanZhang.js"
   },
   "ed057060-a7c1-4794-96c6-23e96300dedd": {
-    "asset": 1510160705749,
-    "meta": 1514722116907,
+    "asset": 1515308842586,
+    "meta": 1515308842700,
     "relativePath": "scripts\\components\\ImageLoader.js"
   },
   "10a1cf23-cfde-49bb-8367-a6439651f8a7": {
@@ -2814,11 +2814,6 @@
     "meta": 1515220007806,
     "relativePath": "scripts\\components\\GameOver.js"
   },
-  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1515217782792,
-    "meta": 1515217783876,
-    "relativePath": "scripts\\components\\MJGame.js"
-  },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
     "asset": 1515298340199,
     "meta": 1515298340621,
@@ -2830,8 +2825,8 @@
     "relativePath": "scripts\\components\\Seat.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1515298279350,
-    "meta": 1515298279659,
+    "asset": 1515309438909,
+    "meta": 1515309439203,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "060d2a6e-164f-4c00-99cb-38af0d73ef54": {
@@ -3188,5 +3183,10 @@
     "asset": 1515238280412,
     "meta": 1515238372005,
     "relativePath": "scripts\\VoiceMgr.js"
+  },
+  "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
+    "asset": 1515309597687,
+    "meta": 1515309608768,
+    "relativePath": "scripts\\components\\MJGame.js"
   }
 }

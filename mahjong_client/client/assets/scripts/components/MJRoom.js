@@ -268,7 +268,7 @@ cc.Class({
 
     onBtnWeichatClicked:function(){
         if(cc.vv.gameNetMgr.conf.type == "ddh"){
-            var title = "<淌紧>";
+            var title = "<紧淌>";
         }
         else if(cc.vv.gameNetMgr.conf.type == "yzmj"){
             var title = "<园子>";
@@ -278,16 +278,13 @@ cc.Class({
 
     //复制房间信息
     onBtnCopyClicked:function() {
-        if(cc.vv.gameNetMgr.conf.type == "sjmmj"){
-            var title = "<沈家门麻将>";
+        if(cc.vv.gameNetMgr.conf.type == "ddh"){
+            var title = "<紧淌>";
         }
-        else if(cc.vv.gameNetMgr.conf.type == "dhmj"){
-            var title = "<定海麻将>";
+        else if(cc.vv.gameNetMgr.conf.type == "yzmj"){
+            var title = "<园子>";
         }
-        else if(cc.vv.gameNetMgr.conf.type == "tdh"){
-            var title = "<推倒胡>";
-        }
-        cc.vv.anysdkMgr.copy("奇奇舟山麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.copy("莱莱扬州麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】 玩法:" + cc.vv.gameNetMgr.getWanfa());
         cc.find("Canvas/copysuccess").active = true;
         setTimeout(function() {cc.find("Canvas/copysuccess").active = false;}, 1000);
 

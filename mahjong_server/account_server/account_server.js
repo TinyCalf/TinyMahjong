@@ -239,7 +239,7 @@ app.get('/base_info',function(req,res){
 	        errmsg:"ok",
 			name:data.name,
 			sex:data.sex,
-	        headimgurl:data.headimg
+	    headimgurl:data.headimg
 	    };
 	    send(res,ret);
 	});
