@@ -158,7 +158,6 @@ cc.Class({
             // _difen:null,
             // _types:[],
             if (conf.type == "ddh") {
-                strArr.push("紧淌");
                 conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
                 if (conf.quanshu == 0) strArr.push("4局");
                 if (conf.quanshu == 1) strArr.push("8局");
@@ -168,7 +167,6 @@ cc.Class({
                 if (conf.fengqing) strArr.push("风清");
                 if (conf.yitiaolong) strArr.push("一条龙");
             } else if (conf.type == "yzmj") {
-                strArr.push("园子");
                 conf.koufei == 0 ? strArr.push("房主出资") : strArr.push("玩家平分");
                 if (conf.quanshu == 0) strArr.push("4局");
                 if (conf.quanshu == 1) strArr.push("8局");

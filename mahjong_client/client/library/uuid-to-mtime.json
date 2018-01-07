@@ -2080,8 +2080,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1515200671063,
-    "meta": 1515200671146,
+    "asset": 1515298316209,
+    "meta": 1515298316270,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
@@ -2670,8 +2670,8 @@
     "relativePath": "scripts\\components\\GameResult.js"
   },
   "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1514721866593,
-    "meta": 1514722116798,
+    "asset": 1515296703944,
+    "meta": 1515296704776,
     "relativePath": "scripts\\components\\Hall.js"
   },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
@@ -2820,8 +2820,8 @@
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
-    "asset": 1515207170267,
-    "meta": 1515207171109,
+    "asset": 1515298340199,
+    "meta": 1515298340621,
     "relativePath": "scripts\\GameNetMgr.js"
   },
   "82087d25-b4c6-4d0d-896f-cebfaa083109": {
@@ -2830,8 +2830,8 @@
     "relativePath": "scripts\\components\\Seat.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1515155220049,
-    "meta": 1515155220373,
+    "asset": 1515298279350,
+    "meta": 1515298279659,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "060d2a6e-164f-4c00-99cb-38af0d73ef54": {

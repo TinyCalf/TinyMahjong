@@ -262,14 +262,12 @@ cc.Class({
     onBtnChatClicked: function onBtnChatClicked() {},
 
     onBtnWeichatClicked: function onBtnWeichatClicked() {
-        if (cc.vv.gameNetMgr.conf.type == "sjmmj") {
-            var title = "<沈家门麻将>";
-        } else if (cc.vv.gameNetMgr.conf.type == "dhmj") {
-            var title = "<定海麻将>";
-        } else if (cc.vv.gameNetMgr.conf.type == "tdh") {
-            var title = "<推倒胡>";
+        if (cc.vv.gameNetMgr.conf.type == "ddh") {
+            var title = "<淌紧>";
+        } else if (cc.vv.gameNetMgr.conf.type == "yzmj") {
+            var title = "<园子>";
         }
-        cc.vv.anysdkMgr.share("奇奇舟山麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.share("莱莱扬州麻将" + title, "房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
     },
 
     //复制房间信息

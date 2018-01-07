@@ -11,7 +11,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 224,
+                "height": 476,
                 "type": "panel",
                 "width": 311
               },
@@ -20,7 +20,7 @@
                 "children": [
                   "assets"
                 ],
-                "height": 701,
+                "height": 449,
                 "type": "panel",
                 "width": 311
               }
@@ -73,7 +73,7 @@
       "width": 1932,
       "height": 1056
     },
-    "window-1515294232111": {
+    "window-1515299199702": {
       "layout": {
         "type": "dock-v",
         "children": [
@@ -90,6 +90,12 @@
       "y": 76,
       "width": 516,
       "height": 739
+    },
+    "worker": {
+      "x": 760,
+      "y": 370,
+      "width": 400,
+      "height": 300
     }
   }
 }
