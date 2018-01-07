@@ -70,7 +70,7 @@ app.get('/register',function(req,res){
 	};
 
 	var fnSucceed = function(){
-		send(res,{errcode:0,errmsg:"ok"});	
+		send(res,{errcode:0,errmsg:"ok"});
 	};
 
 	db.is_user_exist(account,function(exist){
@@ -86,7 +86,7 @@ app.get('/register',function(req,res){
 		}
 		else{
 			fnFailed();
-			console.log("account has been used.");			
+			console.log("account has been used.");
 		}
 	});
 });
@@ -144,12 +144,12 @@ app.get('/auth',function(req,res){
 
 var appInfo = {
 	Android:{
-		appid:"wxc3bbc4c270d6a0ba",
-		secret:"88fd68a1f77ee031c5493b760663c0f1",
+		appid:"wx6f7e778c919b10ca",
+		secret:"860f803ef5b5d2dc6421cfffcc7ff53b",
 	},
 	iOS:{
-		appid:"wxc3bbc4c270d6a0ba",
-		secret:"88fd68a1f77ee031c5493b760663c0f1",
+		appid:"wx6f7e778c919b10ca",
+		secret:"860f803ef5b5d2dc6421cfffcc7ff53b",
 	}
 };
 
@@ -221,7 +221,7 @@ app.get('/wechat_auth',function(req,res){
 					        sign:sign
 					    };
 					    send(res,ret);
-					});						
+					});
 				}
 			});
 		}
