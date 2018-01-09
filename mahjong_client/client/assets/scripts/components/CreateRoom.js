@@ -22,6 +22,64 @@ cc.Class({
         for(var i = 1 ; i < this._types.length ; i++) {
             this.node.getChildByName(this._types[i]).active = false;
         }
+        
+        //读取开房历史
+        var history = JSON.parse(cc.sys.localStorage.getItem("roomhistory"));
+        if(!history) return;
+        console.log(history)
+        if(history.type=="yzmj") this.switchType("yzmj");
+        var t = this.node.getChildByName(history.type);
+        if(history.koufei==0){
+            t.getChildByName("koufei").getChildByName("fangzhuchuzi").getComponent("RadioButton").check(true);
+            t.getChildByName("koufei").getChildByName("wanjiapinfen").getComponent("RadioButton").check(false);
+        }else{
+            t.getChildByName("koufei").getChildByName("fangzhuchuzi").getComponent("RadioButton").check(false);
+            t.getChildByName("koufei").getChildByName("wanjiapinfen").getComponent("RadioButton").check(true);
+        }
+        
+        if(history.quanshu==0){
+            t.getChildByName("quanshu").getChildByName("4ju").getComponent("RadioButton").check(true);
+            t.getChildByName("quanshu").getChildByName("8ju").getComponent("RadioButton").check(false);
+            t.getChildByName("quanshu").getChildByName("16ju").getComponent("RadioButton").check(false);
+        }else if(history.quanshu==1){
+            t.getChildByName("quanshu").getChildByName("4ju").getComponent("RadioButton").check(false);
+            t.getChildByName("quanshu").getChildByName("8ju").getComponent("RadioButton").check(true);
+            t.getChildByName("quanshu").getChildByName("16ju").getComponent("RadioButton").check(false);
+        }else{
+            t.getChildByName("quanshu").getChildByName("4ju").getComponent("RadioButton").check(false);
+            t.getChildByName("quanshu").getChildByName("8ju").getComponent("RadioButton").check(false);
+            t.getChildByName("quanshu").getChildByName("16ju").getComponent("RadioButton").check(true);
+        }
+        
+        if(history.peizi==true){
+            t.getChildByName("wanfa").getChildByName("peizi").getComponent("CheckBox").check(true);
+        }
+        if(history.qidui==true){
+            t.getChildByName("wanfa").getChildByName("qidui").getComponent("CheckBox").check(true);
+        }
+        if(history.fengqing==true){
+            t.getChildByName("wanfa").getChildByName("fengqing").getComponent("CheckBox").check(true);
+        }
+        if(history.yitiaolong==true){
+            t.getChildByName("wanfa").getChildByName("yitiaolong").getComponent("CheckBox").check(true);
+        }
+        
+        if(history.difen==0){
+            t.getChildByName("difen").getChildByName("4ju").getComponent("RadioButton").check(true);
+            t.getChildByName("difen").getChildByName("8ju").getComponent("RadioButton").check(false);
+            t.getChildByName("difen").getChildByName("16ju").getComponent("RadioButton").check(false);
+        }else if(history.difen==1){
+            t.getChildByName("difen").getChildByName("4ju").getComponent("RadioButton").check(false);
+            t.getChildByName("difen").getChildByName("8ju").getComponent("RadioButton").check(true);
+            t.getChildByName("difen").getChildByName("16ju").getComponent("RadioButton").check(false);
+        }else if(history.difen==2){
+            t.getChildByName("difen").getChildByName("4ju").getComponent("RadioButton").check(false);
+            t.getChildByName("difen").getChildByName("8ju").getComponent("RadioButton").check(false);
+            t.getChildByName("difen").getChildByName("16ju").getComponent("RadioButton").check(true);
+        }
+        
+
+        
     },
 
     onBtnBack:function () {
@@ -123,6 +181,8 @@ cc.Class({
             fengqing:this.node.getChildByName(type).getChildByName("wanfa").getChildByName("fengqing").getComponent("CheckBox").checked,
             yitiaolong:this.node.getChildByName(type).getChildByName("wanfa").getChildByName("yitiaolong").getComponent("CheckBox").checked,
         };
+        
+        cc.sys.localStorage.setItem("roomhistory", JSON.stringify(conf));
 
         var data = {
             account:cc.vv.userMgr.account,
@@ -222,6 +282,8 @@ cc.Class({
             fengqing:this.node.getChildByName(type).getChildByName("wanfa").getChildByName("fengqing").getComponent("CheckBox").checked,
             yitiaolong:this.node.getChildByName(type).getChildByName("wanfa").getChildByName("yitiaolong").getComponent("CheckBox").checked,
         };
+        
+        cc.sys.localStorage.setItem("roomhistory", JSON.stringify(conf));
 
         var data = {
             account:cc.vv.userMgr.account,

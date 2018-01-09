@@ -32,6 +32,11 @@ cc.Class({
         this.refresh();
     },
     
+    check:function (value) {
+        this.checked = value;
+        this.refresh();
+    },
+    
     refresh:function(){
         var targetSprite = this.target.getComponent(cc.Sprite);
         if(this.checked){

@@ -90,7 +90,7 @@ cc.Class({
         var btnDispress = prepare.getChildByName("btnDissolve");
         var btnWeichat = prepare.getChildByName("btnWeichat");
         var btnBack = prepare.getChildByName("btnBack");
-        var isIdle = cc.vv.gameNetMgr.numOfGames == 0;
+        var isIdle = cc.vv.gameNetMgr.numOfGames == 1;
         console.log('isIdle'+isIdle);
         console.log(cc.vv.gameNetMgr.numOfGames);
         btnExit.active = !cc.vv.gameNetMgr.isOwner() && isIdle;

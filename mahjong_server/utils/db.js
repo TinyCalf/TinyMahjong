@@ -451,19 +451,21 @@ exports.is_room_exist = function(roomId,callback){
 };
 
 exports.cost_gems = function(userid,cost,callback){
-    console.log("is costing " + cost + " gems of " + userid);
+    // console.log("is costing " + cost + " gems of " + userid);
+    // callback = callback == null? nop:callback;
+    // var sql = 'UPDATE t_users SET gems = gems -' + cost + ' WHERE userid = ' + userid;
+    // console.log(sql);
+    // query(sql, function(err, rows, fields) {
+    //     if(err){
+    //         callback(false);
+    //         throw err;
+    //     }
+    //     else{
+    //         callback(rows.length > 0);
+    //     }
+    // });
     callback = callback == null? nop:callback;
-    var sql = 'UPDATE t_users SET gems = gems -' + cost + ' WHERE userid = ' + userid;
-    console.log(sql);
-    query(sql, function(err, rows, fields) {
-        if(err){
-            callback(false);
-            throw err;
-        }
-        else{
-            callback(rows.length > 0);
-        }
-    });
+    callback(true);
 };
 
 exports.set_room_id_of_user = function(userId,roomId,callback){
