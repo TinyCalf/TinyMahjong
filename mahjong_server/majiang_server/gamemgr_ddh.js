@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,13] ; //7dui
-    // arr3 =[27,27,27,27,28,28,28,28,29,29,29,29,30,13] ;// fengqing + 7dui
-    // arr2 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
-    // arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,13] ;
-    //
-    // arr = []
-    // for ( var i = 0 ; i < 14 ; i++ ) {
-    //   arr.push(arr1[i])
-    //   arr.push(arr2[i]);
-    //   arr.push(arr3[i]);
-    //   arr.push(arr4[i]);
-    // }
-    //
-    // arr = arr.concat(mahjongs)
-    // game.mahjongs = arr
+    arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,13] ; //7dui
+    arr3 =[27,27,27,27,28,28,28,28,29,29,29,29,30,13] ;// fengqing + 7dui
+    arr2 = [9,9,9,10,10,10,11,11,11,12,12,13,13,13] ;
+    arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,13] ;
+
+    arr = []
+    for ( var i = 0 ; i < 14 ; i++ ) {
+      arr.push(arr1[i])
+      arr.push(arr2[i]);
+      arr.push(arr3[i]);
+      arr.push(arr4[i]);
+    }
+
+    arr = arr.concat(mahjongs)
+    game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -587,7 +587,7 @@ function doGameOver(game,userId,forceEnd){
 
             //rs为全局数据 sd为当前局数据 需要做加法。TODO：逻辑写完以后这里都需要加上
             rs.ready = false;
-            rs.score += sd.score + sd.gangscore;
+            rs.score = sd.totalscore + sd.score;
             (sd.iszimo) ? rs.numZiMo ++ :{};
             (sd.hued && !sd.iszimo) ? rs.numJiePao ++ : {};
             (game.fangpaoindex == sd.seatIndex) ? rs.numDianPao ++ : {} ;
@@ -989,14 +989,14 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         ac.score = game.conf.baseScore*2;
 
         //收每家两份
-        seatData.gangscore += 8
+        seatData.totalscore += 8
         for(var i=0; i< 4 ; i++) {
-          game.gameSeats[i].gangscore -= 2
+          game.gameSeats[i].totalscore -= 2
         }
-        if(pai == game.hun) {
-          seatData.gangscore += 8
+        if(pai == game.ban) {
+          seatData.totalscore += 8
           for(var i=0; i< 4 ; i++) {
-            game.gameSeats[i].gangscore -= 2
+            game.gameSeats[i].totalscore -= 2
           }
         }
     }
@@ -1007,8 +1007,8 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         var fs = turnSeat;
         recordUserAction(game,fs,"fanggang",seatIndex);
         //收2分
-        seatData.gangscore += 2
-        turnSeat.gangscore -= 2
+        seatData.totalscore += 2
+        turnSeat.totalscore -= 2
     }
     else if(gangtype == "wangang"){
         seatData.wangangs.push(pai);
@@ -1020,9 +1020,9 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
             recordUserAction(game,seatData,"zhuanshougang");
         }
         //收每家两份
-        seatData.gangscore += 4
+        seatData.totalscore += 4
         for(var i=0; i< 4 ; i++) {
-          game.gameSeats[i].gangscore -= 1
+          game.gameSeats[i].totalscore -= 1
         }
     }
 
@@ -1030,11 +1030,11 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
     //通知其他玩家，有人杠了牌
     userMgr.broacastInRoom('gang_notify_push',{userid:seatData.userId,pai:pai,gangtype:gangtype},seatData.userId,true);
     //通知其他玩家，gang分数变化
-    userMgr.broacastInRoom('gang_score_push',{gangscores:[
-      game.gameSeats[0].gangscore,
-      game.gameSeats[1].gangscore,
-      game.gameSeats[2].gangscore,
-      game.gameSeats[3].gangscore,
+    userMgr.broacastInRoom('total_score_push',{totalscores:[
+      game.gameSeats[0].totalscore,
+      game.gameSeats[1].totalscore,
+      game.gameSeats[2].totalscore,
+      game.gameSeats[3].totalscore,
     ]},seatData.userId,true);
 
     //变成自己的轮子
@@ -1064,8 +1064,8 @@ exports.begin = function(roomId) {
      var ban = ar[0]
      var hun = ar[1]
 
-     // ban=6
-     // hun=7
+     ban=13
+     hun=14
 
      if(!roomInfo.conf.peizi){
        ban=null;
@@ -1143,7 +1143,7 @@ exports.begin = function(roomId) {
          data.isGangHu = false;
          data.actions = [];
          data.score = 0;
-         data.gangscore = 0;
+         data.totalscore = roomInfo.seats[i].score;
          //统计信息
          data.numZiMo = 0;
          data.numJiePao = 0;
@@ -1400,15 +1400,15 @@ exports.peng = function(userId){
 
 
     if(pai == game.ban) {
-      seatData.gangscore += 2
-      game.gameSeats[game.turn].gangscore -= 2
+      seatData.totalscore += 2
+      game.gameSeats[game.turn].totalscore -= 2
     }
     //通知其他玩家，gang分数变化
-    userMgr.broacastInRoom('gang_score_push',{gangscores:[
-      game.gameSeats[0].gangscore,
-      game.gameSeats[1].gangscore,
-      game.gameSeats[2].gangscore,
-      game.gameSeats[3].gangscore,
+    userMgr.broacastInRoom('total_score_push',{totalscores:[
+      game.gameSeats[0].totalscore,
+      game.gameSeats[1].totalscore,
+      game.gameSeats[2].totalscore,
+      game.gameSeats[3].totalscore,
     ]},seatData.userId,true);
 
     //检查是否有人要胡，要碰 要杠s

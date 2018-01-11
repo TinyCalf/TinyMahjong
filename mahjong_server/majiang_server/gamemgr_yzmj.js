@@ -1024,6 +1024,9 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
         for(var i=0;i<4;i++){
           if(i!=seatIndex) yangzhou.koufen(game,seatIndex,i,2);
         }
+        if(pai == game.ban) {
+          yangzhou.koufen(game,seatIndex,i,2);
+        }
     }
     else if(gangtype == "diangang"){
         seatData.diangangs.push(pai);
