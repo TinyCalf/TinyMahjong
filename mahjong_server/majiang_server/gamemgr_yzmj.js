@@ -699,9 +699,9 @@ function doGameOver(game,userId,forceEnd){
         var totaljus = roomInfo.fengxiangju + roomInfo.fengxiang * 4;
 
         //如果打一圈： 012 4局 8局 16局
-        if(game.conf.quanshu==0 && totaljus>=4) isEnd = true;
-        if(game.conf.quanshu==1 && totaljus>=8) isEnd = true;
-        if(game.conf.quanshu==2 && totaljus>=16) isEnd = true;
+        if(game.conf.quanshu==0 && totaljus>4) isEnd = true;
+        if(game.conf.quanshu==1 && totaljus>8) isEnd = true;
+        if(game.conf.quanshu==2 && totaljus>16) isEnd = true;
 
         roomInfo.numOfGames++;
         //庄家赢或者留局则不换装，firstHupai为

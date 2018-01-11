@@ -70,26 +70,14 @@
       },
       "x": -8,
       "y": -8,
-      "width": 1936,
+      "width": 1932,
       "height": 1056
     },
-    "window-1515419224322": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "builder"
-            ]
-          }
-        ]
-      },
-      "x": 460,
-      "y": 81,
-      "width": 516,
-      "height": 739
+    "window-1515672581336": {
+      "x": 292,
+      "y": 155,
+      "width": 1252,
+      "height": 710
     }
   }
 }

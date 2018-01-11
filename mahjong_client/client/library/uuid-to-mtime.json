@@ -1600,8 +1600,8 @@
     "relativePath": "resources\\sounds\\horse"
   },
   "9e2e5592-da7f-424d-bfe2-7d14584a86e1": {
-    "asset": 1514713082548,
-    "meta": 1514722107562,
+    "asset": 1515421247125,
+    "meta": 1515496355630,
     "relativePath": "resources\\sounds\\nv"
   },
   "c8b957bd-07ba-4bcc-a956-472c6ecc6d21": {
@@ -3135,8 +3135,8 @@
     "relativePath": "resources\\textures\\hall\\bangzhu.png"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1515223170758,
-    "meta": 1515223170937,
+    "asset": 1515672591536,
+    "meta": 1515672592281,
     "relativePath": "scripts\\HTTP.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {

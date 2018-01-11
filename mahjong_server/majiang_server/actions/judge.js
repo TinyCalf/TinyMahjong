@@ -1,3 +1,5 @@
+var checkHu = require("./checkHu")
+
 function isSameType(type,arr){
     for(var i = 0; i < arr.length; ++i){
         var t = getMJType(arr[i]);
@@ -129,10 +131,51 @@ exports.isLong = (gameSeatData,hun) => {
     if(!ifHas)
     types[getMJType(pais[i])].push(pais[i])
   }
-  if(numOfHun + types[0].length >= 9) return true
-  if(numOfHun + types[1].length >= 9) return true
-  if(numOfHun + types[2].length >= 9) return true
-  return false
+  var longtype = -1;
+  if(numOfHun + types[0].length >= 9) longtype = 0
+  if(numOfHun + types[1].length >= 9) longtype = 1
+  if(numOfHun + types[2].length >= 9) longtype = 2
+  if(longtype==-1) return false
+  var sd = {};
+  sd.holds = [].concat(gameSeatData.holds)
+  for(var i=0;i<3;i++){
+    if(gameSeatData.angangs) sd.holds = sd.holds.concat(gameSeatData.angangs)
+    if(gameSeatData.wangangs) sd.holds = sd.holds.concat(gameSeatData.wangangs)
+    if(gameSeatData.diangangs) sd.holds = sd.holds.concat(gameSeatData.diangangs)
+    if(gameSeatData.pengs) sd.holds = sd.holds.concat(gameSeatData.pengs)
+  }
+  sd.countMap = {}
+  for(i in sd.holds) {
+    if(!sd.countMap[sd.holds[i]]){
+      sd.countMap[sd.holds[i]] = 1;
+    }else{
+      sd.countMap[sd.holds[i]] ++
+    }
+  }
+  console.log(sd)
+  //
+  if(longtype==0){
+    for(var i = 0 ; i < 9 ; i++) {
+      sd.holds.remove(i)
+      sd.countMap[i] --
+    }
+  }
+  if(longtype==1){
+    for(var i = 9 ; i < 18 ; i++) {
+      sd.holds.remove(i)
+      sd.countMap[i] --
+    }
+  }
+  if(longtype==2){
+    for(var i = 18 ; i < 27 ; i++) {
+      sd.holds.remove(i)
+      sd.countMap[i] --
+    }
+  }
+  //
+  //
+  if(checkHu.checkCanHu(sd)) return true
+  return false;
 }
 
 // var data = {

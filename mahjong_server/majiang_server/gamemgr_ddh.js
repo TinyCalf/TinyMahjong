@@ -104,10 +104,10 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,7] ; //7dui
-    // arr2 =[27,27,27,27,28,28,28,28,29,29,29,29,30,6] ;// fengqing + 7dui
-    // arr3 = [9,9,9,10,10,10,11,11,11,12,12,12,13,6] ;
-    // arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,6] ;
+    // arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,13] ; //7dui
+    // arr3 =[27,27,27,27,28,28,28,28,29,29,29,29,30,13] ;// fengqing + 7dui
+    // arr2 = [9,9,9,10,10,10,11,11,11,12,12,12,13,13] ;
+    // arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,13] ;
     //
     // arr = []
     // for ( var i = 0 ; i < 14 ; i++ ) {
@@ -479,7 +479,6 @@ function isSameType(type,arr){
  * ******************************************************************/
 
 function calculateResult(game){
-
     var baseScore = game.conf.baseScore;
     var numOfHued = 0;
     for(var i = 0; i < game.gameSeats.length; ++i){
@@ -668,9 +667,9 @@ function doGameOver(game,userId,forceEnd){
         var totaljus = roomInfo.fengxiangju + roomInfo.fengxiang * 4;
 
         //如果打一圈： 012 4局 8局 16局
-        if(game.conf.quanshu==0 && totaljus>=4) isEnd = true;
-        if(game.conf.quanshu==1 && totaljus>=8) isEnd = true;
-        if(game.conf.quanshu==2 && totaljus>=16) isEnd = true;
+        if(game.conf.quanshu==0 && totaljus>4) isEnd = true;
+        if(game.conf.quanshu==1 && totaljus>8) isEnd = true;
+        if(game.conf.quanshu==2 && totaljus>16) isEnd = true;
 
         roomInfo.numOfGames++;
 
