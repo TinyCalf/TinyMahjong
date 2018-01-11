@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,13] ; //7dui
-    arr3 =[27,27,27,27,28,28,28,28,29,29,29,29,30,13] ;// fengqing + 7dui
-    arr2 = [9,9,9,10,10,10,11,11,11,12,12,13,13,13] ;
-    arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,13] ;
-
-    arr = []
-    for ( var i = 0 ; i < 14 ; i++ ) {
-      arr.push(arr1[i])
-      arr.push(arr2[i]);
-      arr.push(arr3[i]);
-      arr.push(arr4[i]);
-    }
-
-    arr = arr.concat(mahjongs)
-    game.mahjongs = arr
+    // arr1 = [18,19,20,21,22,23,25,26,27,27,30,30,24,13] ; //7dui
+    // arr3 =[27,27,27,27,28,28,28,28,29,29,29,29,30,13] ;// fengqing + 7dui
+    // arr2 = [9,9,9,10,10,10,11,11,11,12,12,13,13,13] ;
+    // arr4 =[0,1,2,3,4,5,7,8,12,16,16,17,17,13] ;
+    //
+    // arr = []
+    // for ( var i = 0 ; i < 14 ; i++ ) {
+    //   arr.push(arr1[i])
+    //   arr.push(arr2[i]);
+    //   arr.push(arr3[i]);
+    //   arr.push(arr4[i]);
+    // }
+    //
+    // arr = arr.concat(mahjongs)
+    // game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -1063,13 +1063,9 @@ exports.begin = function(roomId) {
      var ar = yangzhou.getBanZiAndPeiZi();
      var ban = ar[0]
      var hun = ar[1]
-
-     ban=13
-     hun=14
-
      if(!roomInfo.conf.peizi){
-       ban=null;
-       hun=null;
+       ban=-1;
+       hun=-1;
      }
 
      var seats = roomInfo.seats;

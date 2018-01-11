@@ -241,6 +241,6 @@ exports.isZha7dui = (gameSeatData,hun) => {
     if(hds[key] > max) max = hds[key]
   }
   var totalcount = max + numOfHun
-  if(totalcount >=4) return true
+  if(totalcount >=4 && max >1) return true
   return false
 }

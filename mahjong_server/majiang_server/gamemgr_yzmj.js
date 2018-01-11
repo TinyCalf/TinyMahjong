@@ -1095,8 +1095,8 @@ exports.begin = function(roomId) {
      var ban = ar[0]
      var hun = ar[1]
      if(!roomInfo.conf.peizi){
-       ban=null;
-       hun=null;
+       ban=-1;
+       hun=-1;
      }
 
      var seats = roomInfo.seats;
