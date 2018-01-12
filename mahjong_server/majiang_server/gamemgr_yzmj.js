@@ -1730,6 +1730,7 @@ exports.hu = function(userId){
         ac.iszimo = true;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
+        game.fangpaoindex = game.turn
         game.qiangGangContext.isValid = false;
 
 

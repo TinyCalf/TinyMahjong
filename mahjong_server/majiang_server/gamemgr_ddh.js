@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ; //7dui
-    // arr3 =[0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;// fengqing + 7dui
-    // arr2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
-    // arr4 =[0,1,2,3,4,5,6,7,8,9,10,11,12,12] ;
-    //
-    // arr = []
-    // for ( var i = 0 ; i < 14 ; i++ ) {
-    //   arr.push(arr1[i])
-    //   arr.push(arr2[i]);
-    //   arr.push(arr3[i]);
-    //   arr.push(arr4[i]);
-    // }
-    //
-    // arr = arr.concat(mahjongs)
-    // game.mahjongs = arr
+    arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,12] ; //7dui
+    arr2 =[0,1,2,3,4,5,6,7,8,9,10,12,12,13] ;// fengqing + 7dui
+    arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] ;
+    arr4 =[0,1,2,3,4,5,6,7,8,9,12,12,12,13] ;
+
+    arr = []
+    for ( var i = 0 ; i < 14 ; i++ ) {
+      arr.push(arr1[i])
+      arr.push(arr2[i]);
+      arr.push(arr3[i]);
+      arr.push(arr4[i]);
+    }
+  arr.push(12);
+    arr = arr.concat(mahjongs)
+    game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -1696,6 +1696,7 @@ exports.hu = function(userId){
         ac.iszimo = true;
         recordGameAction(game,seatIndex,ACTION_HU,hupai);
         seatData.isQiangGangHu = true;
+        game.fangpaoindex = game.turn
         game.qiangGangContext.isValid = false;
 
 
