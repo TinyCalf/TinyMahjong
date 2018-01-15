@@ -28,13 +28,24 @@ function getMJType(id){
     }
 }
 
-Array.prototype.remove = function(val) {
-  for(var i=0 ; i < this.length ; i++) {
-    if(this[i] == val){
-      this.splice(i, 1)
+remove = function(arr, val) {
+  for(var i=0 ; i < arr.length ; i++) {
+    if(arr[i] == val){
+      arr.splice(i, 1)
       i--;
     }
   }
+}
+
+removeOne = function(arr,val) {
+  for(var i=0 ; i < arr.length ; i++) {
+    if(arr[i] == val){
+      arr.splice(i, 1)
+      i--;
+      return true
+    }
+  }
+  return false
 }
 
 /*
@@ -45,7 +56,7 @@ exports.isDuiDuiHu = (gameSeatData,hun) => {
   var kanzi = gameSeatData.kanzi
   for(var i=0 ; i < kanzi.length ; i++) {
     var thiskan = [].concat(kanzi[i])
-    if(hun) thiskan.remove(hun)
+    if(hun) remove(thiskan,hun)
     if( thiskan[1] &&  thiskan[1] != thiskan[0] )
       return false
   }
@@ -63,7 +74,7 @@ exports.isQingYiSe = (gameSeatData,hun) => {
     .concat(gameSeatData.wangangs)
     .concat(gameSeatData.diangangs)
     .concat(gameSeatData.pengs)
-  if(hun) pais.remove(hun)
+  if(hun) remove(pais,hun)
   if( isSameType(getMJType(pais[0]),pais) )
     return true
   return false
@@ -82,7 +93,7 @@ exports.isHunYiSe = (gameSeatData,hun) => {
     .concat(gameSeatData.wangangs)
     .concat(gameSeatData.diangangs)
     .concat(gameSeatData.pengs)
-  if(hun) pais.remove(hun)
+  if(hun) remove(pais,hun)
   var types = [ [],[],[],[] ];
   for (var i = 0 ; i < pais.length ; i ++ ){
     types[getMJType(pais[i])].push(pais[i])
@@ -108,10 +119,10 @@ exports.isHunYiSe = (gameSeatData,hun) => {
 exports.isLong = (gameSeatData,hun) => {
   var pais = []
     .concat(gameSeatData.holds)
-    .concat(gameSeatData.angangs)
-    .concat(gameSeatData.wangangs)
-    .concat(gameSeatData.diangangs)
-    .concat(gameSeatData.pengs)
+    // .concat(gameSeatData.angangs)
+    // .concat(gameSeatData.wangangs)
+    // .concat(gameSeatData.diangangs)
+    // .concat(gameSeatData.pengs)
   //提取混的数量
   var numOfHun = 0
   if(hun){
@@ -119,7 +130,7 @@ exports.isLong = (gameSeatData,hun) => {
       if(pais[i] == hun ) numOfHun++
     }
   }
-  if(hun) pais.remove(hun)
+  //if(hun) remove(pais,hun)
   //分类
   var types = [ [],[],[],[] ];
   for (var i = 0 ; i < pais.length ; i ++ ){
@@ -138,12 +149,12 @@ exports.isLong = (gameSeatData,hun) => {
   if(longtype==-1) return false
   var sd = {};
   sd.holds = [].concat(gameSeatData.holds)
-  for(var i=0;i<3;i++){
-    if(gameSeatData.angangs) sd.holds = sd.holds.concat(gameSeatData.angangs)
-    if(gameSeatData.wangangs) sd.holds = sd.holds.concat(gameSeatData.wangangs)
-    if(gameSeatData.diangangs) sd.holds = sd.holds.concat(gameSeatData.diangangs)
-    if(gameSeatData.pengs) sd.holds = sd.holds.concat(gameSeatData.pengs)
-  }
+  // for(var i=0;i<3;i++){
+  //   if(gameSeatData.angangs) sd.holds = sd.holds.concat(gameSeatData.angangs)
+  //   if(gameSeatData.wangangs) sd.holds = sd.holds.concat(gameSeatData.wangangs)
+  //   if(gameSeatData.diangangs) sd.holds = sd.holds.concat(gameSeatData.diangangs)
+  //   if(gameSeatData.pengs) sd.holds = sd.holds.concat(gameSeatData.pengs)
+  // }
   sd.countMap = {}
   for(i in sd.holds) {
     if(!sd.countMap[sd.holds[i]]){
@@ -153,37 +164,47 @@ exports.isLong = (gameSeatData,hun) => {
     }
   }
   console.log(sd)
-  //
   if(longtype==0){
     for(var i = 0 ; i < 9 ; i++) {
-      sd.holds.remove(i)
-      sd.countMap[i] --
+      if(!removeOne(sd.holds,i)) {removeOne(sd.holds,hun); sd.countMap[hun] --;}
+      if(sd.countMap[i]>0) sd.countMap[i] --
     }
   }
   if(longtype==1){
     for(var i = 9 ; i < 18 ; i++) {
-      sd.holds.remove(i)
-      sd.countMap[i] --
+      if(!removeOne(sd.holds,i)) {removeOne(sd.holds,hun); sd.countMap[hun] --;}
+      if(sd.countMap[i]>0) sd.countMap[i] --
     }
   }
   if(longtype==2){
     for(var i = 18 ; i < 27 ; i++) {
-      sd.holds.remove(i)
-      sd.countMap[i] --
+      if(!removeOne(sd.holds,i)) {removeOne(sd.holds,hun); sd.countMap[hun] --;}
+      if(sd.countMap[i]>0) sd.countMap[i] --
     }
   }
-  //
-  //
-  if(checkHu.checkCanHu(sd)) return true
+  console.log(sd)
+  if(checkHu.checkCanHu(sd,hun)) {
+    return true
+  }
   return false;
 }
 
 // var data = {
-//   holds:[0,0,0,1,2,3,4,5,6,7,8],
+//   holds:[0,1,2,3,4,5,7,7,7,9,9],
 //   angangs:[],
 //   wangangs:[],
 //   diangangs:[],
-//   pengs:[32],
+//   pengs:[],
+//   // countMap:{
+//   //   1:2,
+//   //   2:1,
+//   //   3:2,
+//   //   4:1,
+//   //   5:1,
+//   //   6:1,
+//   //   8:1,
+//   //   32:3
+//   // }
 // }
 //
 // console.log(this.isLong(data))
@@ -199,7 +220,7 @@ exports.isFengQing = (gameSeatData,hun) => {
     .concat(gameSeatData.wangangs)
     .concat(gameSeatData.diangangs)
     .concat(gameSeatData.pengs)
-  if(hun) pais.remove(hun)
+  if(hun) remove(pais, hun)
   var types = [ [],[],[],[] ];
   for (var i = 0 ; i < pais.length ; i ++ ){
     if(pais[i]>=31) return false
@@ -229,7 +250,7 @@ exports.isZha7dui = (gameSeatData,hun) => {
       if(pais[i] == hun ) numOfHun++
     }
   }
-  if(hun) pais.remove(hun)
+  if(hun) remove(pais,hun)
   //分类
   var hds = {}
   for(var i = 0 ; i < pais.length; i++) {
