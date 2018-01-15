@@ -168,6 +168,7 @@ cc.Class({
                     //     ischadajiao = true;
                     // }
                     hued = true;
+                    userData.huorder = 0;
                 } else if (ac.type == "fangpao") {
                     actionArr.push("放炮");
                 }
@@ -277,6 +278,8 @@ cc.Class({
             for (var k = 0; k < userData.holds.length; ++k) {
                 var pai = userData.holds[k];
                 var n = seatView.mahjongs.children[k + lackingNum];
+                console.log(seatView.mahjongs.children);
+                console.log(k, lackingNum);
                 n.active = true;
                 var sprite = n.getComponent(cc.Sprite);
                 sprite.spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", pai);
@@ -455,6 +458,7 @@ cc.Class({
                     //     ischadajiao = true;
                     // }
                     hued = true;
+                    userData.huorder = 0;
                 } else if (ac.type == "fangpao") {
                     actionArr.push("放炮");
                 }
