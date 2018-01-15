@@ -1,11 +1,45 @@
-2018-01-13T01:31:08.171Z - normal: Load ~/.CocosCreator/settings.json
-2018-01-13T01:31:08.178Z - normal: checking language setting...
-2018-01-13T01:31:08.179Z - normal: Language: zh
-2018-01-13T01:31:09.283Z - success: protocol editor-framework registered
-2018-01-13T01:31:09.283Z - success: protocol app registered
-2018-01-13T01:31:09.283Z - success: protocol packages registered
-2018-01-13T01:31:09.283Z - success: protocol theme registered
-2018-01-13T01:31:09.283Z - success: protocol unpack registerred
-2018-01-13T01:31:09.569Z - normal: connected!
-2018-01-13T01:31:09.571Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
-2018-01-13T01:31:09.576Z - normal: Initializing Cocos Creator Editor
+2018-01-15T10:50:33.113Z - normal: Load ~/.CocosCreator/settings.json
+2018-01-15T10:50:33.119Z - normal: checking language setting...
+2018-01-15T10:50:33.120Z - normal: Language: zh
+2018-01-15T10:50:34.195Z - success: protocol editor-framework registered
+2018-01-15T10:50:34.195Z - success: protocol app registered
+2018-01-15T10:50:34.195Z - success: protocol packages registered
+2018-01-15T10:50:34.195Z - success: protocol theme registered
+2018-01-15T10:50:34.195Z - success: protocol unpack registerred
+2018-01-15T10:50:34.464Z - normal: connected!
+2018-01-15T10:50:34.465Z - normal: Check project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2018-01-15T10:50:34.468Z - normal: Initializing Cocos Creator Editor
+2018-01-15T10:50:34.828Z - normal: Initializing Cocos2d
+2018-01-15T10:50:36.467Z - normal: Initializing Asset Database
+2018-01-15T10:50:36.495Z - success: protocol uuid registerred
+2018-01-15T10:50:36.495Z - success: protocol db registerred
+2018-01-15T10:50:36.495Z - success: protocol thumbnail registerred
+2018-01-15T10:50:36.495Z - normal: Loading editor/builtin packages
+2018-01-15T10:50:36.628Z - success: assets loaded
+2018-01-15T10:50:36.630Z - success: builder loaded
+2018-01-15T10:50:36.634Z - success: hierarchy loaded
+2018-01-15T10:50:36.638Z - success: inspector loaded
+2018-01-15T10:50:36.639Z - success: keystore loaded
+2018-01-15T10:50:36.646Z - success: node-library loaded
+2018-01-15T10:50:36.648Z - success: preferences loaded
+2018-01-15T10:50:36.663Z - success: project-importer loaded
+2018-01-15T10:50:36.664Z - success: project-settings loaded
+2018-01-15T10:50:36.666Z - success: ui-kit loaded
+2018-01-15T10:50:36.668Z - success: ui-grid loaded
+2018-01-15T10:50:36.671Z - success: scene loaded
+2018-01-15T10:50:36.673Z - success: sprite-editor loaded
+2018-01-15T10:50:36.679Z - success: timeline loaded
+2018-01-15T10:50:36.679Z - normal: Loading builtin packages
+2018-01-15T10:50:36.683Z - success: asset-db-debugger loaded
+2018-01-15T10:50:36.684Z - success: code-editor loaded
+2018-01-15T10:50:36.685Z - success: color-picker loaded
+2018-01-15T10:50:36.690Z - success: console loaded
+2018-01-15T10:50:36.692Z - success: package-manager loaded
+2018-01-15T10:50:36.696Z - success: tester loaded
+2018-01-15T10:50:36.697Z - success: ui-kit-preview-extra loaded
+2018-01-15T10:50:36.699Z - success: ui-kit-preview loaded
+2018-01-15T10:50:36.701Z - success: ui-tree loaded
+2018-01-15T10:50:36.794Z - normal: Initializing project C:\Users\Jonathan\Desktop\TinyMahjong\mahjong_client\client
+2018-01-15T10:50:36.809Z - normal: Loading packages
+2018-01-15T10:50:36.815Z - normal: Watching packages
+2018-01-15T10:50:36.825Z - normal: Run Application

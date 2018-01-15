@@ -190,24 +190,14 @@ exports.isLong = (gameSeatData,hun) => {
 }
 
 // var data = {
-//   holds:[0,1,2,3,4,5,7,7,7,9,9],
+//   holds:[9,10,11,30,31,31,0,1,2,4,5,6,7,8],
 //   angangs:[],
 //   wangangs:[],
 //   diangangs:[],
 //   pengs:[],
-//   // countMap:{
-//   //   1:2,
-//   //   2:1,
-//   //   3:2,
-//   //   4:1,
-//   //   5:1,
-//   //   6:1,
-//   //   8:1,
-//   //   32:3
-//   // }
 // }
 //
-// console.log(this.isLong(data))
+// console.log(this.isLong(data,31))
 
 
 /*
@@ -221,6 +211,7 @@ exports.isFengQing = (gameSeatData,hun) => {
     .concat(gameSeatData.diangangs)
     .concat(gameSeatData.pengs)
   if(hun) remove(pais, hun)
+  console.log(pais)
   var types = [ [],[],[],[] ];
   for (var i = 0 ; i < pais.length ; i ++ ){
     if(pais[i]>=31) return false
@@ -236,32 +227,57 @@ exports.isFengQing = (gameSeatData,hun) => {
   return false
 }
 
+var data = {
+  holds:[27,27,27,2,2],
+  angangs:[],
+  wangangs:[],
+  diangangs:[],
+  pengs:[],
+}
+
+console.log(this.isFengQing(data,2))
 
 /*
 判断炸7对 7对本身由胡法来判定 该算法基于7对的基础上使用
+混子数量 - 落单牌的数量 >= 2 才是混
+或者有四张一样的排
 */
 exports.isZha7dui = (gameSeatData,hun) => {
-  var pais = []
-    .concat(gameSeatData.holds)
   //提取混的数量
   var numOfHun = 0
   if(hun){
-    for(var i=0 ; i<pais.length ; i ++) {
-      if(pais[i] == hun ) numOfHun++
+    for(var i=0 ; i<gameSeatData.holds.length ; i ++) {
+      if(gameSeatData.holds[i] == hun ) numOfHun++
+    }
+    for(var key in gameSeatData.countMap){
+      if(key!=hun && gameSeatData.countMap[key]==1) numOfHun--
     }
   }
-  if(hun) remove(pais,hun)
-  //分类
-  var hds = {}
-  for(var i = 0 ; i < pais.length; i++) {
-    if(hds[pais[i]]) hds[pais[i]]++
-    else hds[pais[i]] = 1
+  for(var key in gameSeatData.countMap){
+    if( gameSeatData.countMap[key]==4) return true;
+    if( gameSeatData.countMap[key]==3 && numOfHun>=1) return true;
+    if( gameSeatData.countMap[key]==2 && numOfHun>=2) return true;
+    if( gameSeatData.countMap[key]==1 && numOfHun>=3) return true;
   }
-  var max = 0;
-  for(key in hds) {
-    if(hds[key] > max) max = hds[key]
-  }
-  var totalcount = max + numOfHun
-  if(totalcount >=4 && max >1) return true
   return false
 }
+
+
+// var data = {
+//   holds:[5,5,8,8,11,11,13,13,14,14,17,17,31,31],
+//   angangs:[],
+//   wangangs:[],
+//   diangangs:[],
+//   pengs:[],
+//   countMap:{
+//     5:2,
+//     8:2,
+//     11:2,
+//     13:2,
+//     14:2,
+//     17:2,
+//     31:2,
+//   }
+// }
+//
+// console.log(this.isZha7dui(data,5))
