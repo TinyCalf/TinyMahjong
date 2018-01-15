@@ -227,15 +227,15 @@ exports.isFengQing = (gameSeatData,hun) => {
   return false
 }
 
-var data = {
-  holds:[27,27,27,2,2],
-  angangs:[],
-  wangangs:[],
-  diangangs:[],
-  pengs:[],
-}
-
-console.log(this.isFengQing(data,2))
+// var data = {
+//   holds:[27,27,27,2,2],
+//   angangs:[],
+//   wangangs:[],
+//   diangangs:[],
+//   pengs:[],
+// }
+//
+// console.log(this.isFengQing(data,2))
 
 /*
 判断炸7对 7对本身由胡法来判定 该算法基于7对的基础上使用

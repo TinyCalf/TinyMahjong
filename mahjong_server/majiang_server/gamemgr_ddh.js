@@ -104,21 +104,21 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,12] ; //7dui
-    arr2 =[0,1,2,3,4,5,6,7,8,9,10,12,12,13] ;// fengqing + 7dui
-    arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] ;
-    arr4 =[0,1,2,3,4,5,6,7,8,9,12,12,12,13] ;
-
-    arr = []
-    for ( var i = 0 ; i < 14 ; i++ ) {
-      arr.push(arr1[i])
-      arr.push(arr2[i]);
-      arr.push(arr3[i]);
-      arr.push(arr4[i]);
-    }
-  arr.push(12);
-    arr = arr.concat(mahjongs)
-    game.mahjongs = arr
+    // arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,12] ; //7dui
+    // arr2 =[0,1,2,3,4,5,6,7,8,9,10,12,12,13] ;// fengqing + 7dui
+    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,11,13] ;
+    // arr4 =[0,1,2,3,4,5,6,7,8,9,11,11,11,13] ;
+    //
+    // arr = []
+    // for ( var i = 0 ; i < 14 ; i++ ) {
+    //   arr.push(arr1[i])
+    //   arr.push(arr2[i]);
+    //   arr.push(arr3[i]);
+    //   arr.push(arr4[i]);
+    // }
+    // arr.push(12);
+    // arr = arr.concat(mahjongs)
+    // game.mahjongs = arr
 }
 
 //摸牌 （已完成）
@@ -167,6 +167,9 @@ function deal(game){
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
     var count = seatData.countMap[targetPai];
+    if(count != null && count == 2 && targetPai == game.ban){
+        return
+    }
     if(count != null && count >= 2){
         seatData.canPeng = true;
     }
@@ -183,7 +186,12 @@ function checkCanDianGang(game,seatData,targetPai){
         return;
     }
     var count = seatData.countMap[targetPai];
-    if(count != null && count >= 3){
+    if( count != null && count >= 3 ){
+        seatData.canGang = true;
+        seatData.gangPai.push(targetPai);
+        return;
+    }
+    if( count != null && count >= 2 && targetPai == game.ban ){
         seatData.canGang = true;
         seatData.gangPai.push(targetPai);
         return;
@@ -1067,6 +1075,8 @@ exports.begin = function(roomId) {
        ban=-1;
        hun=-1;
      }
+     // ban=12
+     // hun=13
 
      var seats = roomInfo.seats;
      var game = {
@@ -1604,6 +1614,9 @@ exports.gang = function(userId,pai){
         gangtype = "wangang"
     }
     else if(numOfCnt == 3 && pai!=game.ban){
+        gangtype = "diangang"
+    }
+    else if(numOfCnt == 2 && pai==game.ban){
         gangtype = "diangang"
     }
     else if(numOfCnt == 4 || (numOfCnt == 3 && pai==game.ban) ){
