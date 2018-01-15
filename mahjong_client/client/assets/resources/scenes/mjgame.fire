@@ -1163,7 +1163,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "MJRoom",
+    "component": "MJGame",
     "handler": "onBtnDissolveClicked",
     "customEventData": ""
   },
@@ -1339,8 +1339,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "MJRoom",
-    "handler": "onBtnExit",
+    "component": "MJGame",
+    "handler": "onBtnDissolveClicked",
     "customEventData": ""
   },
   {
@@ -60525,8 +60525,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -1.1368683772161603e-13,
-      "y": -5.684341886080802e-14
+      "x": -2.2737367544323206e-13,
+      "y": -1.1368683772161603e-13
     },
     "_skewX": 0,
     "_skewY": 0,

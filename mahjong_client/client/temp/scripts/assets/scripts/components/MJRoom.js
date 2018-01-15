@@ -292,13 +292,14 @@ cc.Class({
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
         if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0") {
             cc.vv.alert.show("解散房间", "是否确定解散？", function () {
-                cc.vv.net.send("dispress");
+                cc.vv.net.send("dissolve_request");
             }, true);
             return;
         }
 
         cc.vv.alert.show("解散房间", "解散房间不扣房卡，是否确定解散？", function () {
-            cc.vv.net.send("dispress");
+            console.log("dissolveingiggggggggggggggggggggggggggggggggggggg");
+            cc.vv.net.send("dissolve_request");
         }, true);
     },
 

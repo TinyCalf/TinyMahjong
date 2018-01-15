@@ -2105,8 +2105,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1515774619629,
-    "meta": 1515774619893,
+    "asset": 1516030785958,
+    "meta": 1516030786162,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -2790,8 +2790,8 @@
     "relativePath": "scripts\\components\\Seat.js"
   },
   "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1515414320273,
-    "meta": 1515414321122,
+    "asset": 1516030309476,
+    "meta": 1516030309862,
     "relativePath": "scripts\\components\\MJRoom.js"
   },
   "060d2a6e-164f-4c00-99cb-38af0d73ef54": {
@@ -3150,8 +3150,8 @@
     "relativePath": "scripts\\VoiceMgr.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1515309597687,
-    "meta": 1515309608768,
+    "asset": 1516030714789,
+    "meta": 1516030715525,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "f24db379-9aa2-49eb-8171-b00f87915ffe": {
