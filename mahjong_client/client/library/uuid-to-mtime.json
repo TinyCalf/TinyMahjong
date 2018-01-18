@@ -1,14 +1,4 @@
 {
-  "5358a9ff-eb7e-4760-968b-8121aee1ef43": {
-    "asset": 1510160704101,
-    "meta": 1510160704103,
-    "relativePath": "project.manifest"
-  },
-  "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
-    "asset": 1510160705805,
-    "meta": 1510160705806,
-    "relativePath": "version.manifest"
-  },
   "f8e6b000-5643-4b86-9080-aa680ce1f599": {
     "asset": 1514712600410,
     "meta": 1514722106234,
@@ -1585,8 +1575,8 @@
     "relativePath": "resources\\sounds"
   },
   "0363491c-9b17-44d1-96e4-0c954f35c399": {
-    "asset": 1514005454459,
-    "meta": 1514722107453,
+    "asset": 1516194621085,
+    "meta": 1516194621099,
     "relativePath": "resources\\scenes\\update.fire"
   },
   "a03b520f-431d-4283-9fae-5e86d6519973": {
@@ -2080,13 +2070,13 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1515419247902,
-    "meta": 1515419247966,
+    "asset": 1516192416602,
+    "meta": 1516192416668,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
-    "asset": 1514777553238,
-    "meta": 1514777553278,
+    "asset": 1516277304887,
+    "meta": 1516277304908,
     "relativePath": "resources\\scenes\\loading.fire"
   },
   "7b486d14-13bc-4be8-91e6-2efa50fc8715": {
@@ -2740,8 +2730,8 @@
     "relativePath": "scripts\\Global.js"
   },
   "17141128-74d4-4cff-8229-b04d38232094": {
-    "asset": 1510160705696,
-    "meta": 1514722118079,
+    "asset": 1516277484926,
+    "meta": 1516277485685,
     "relativePath": "scripts\\HotUpdate.js"
   },
   "0eceae97-f881-482b-95c5-7497b7f215da": {
@@ -3135,8 +3125,8 @@
     "relativePath": "resources\\textures\\hall\\bangzhu.png"
   },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
-    "asset": 1516026888918,
-    "meta": 1516026888959,
+    "asset": 1516031480727,
+    "meta": 1516031480854,
     "relativePath": "scripts\\HTTP.js"
   },
   "f58ce6ba-96ba-4364-948d-b3604606ac4d": {
@@ -3188,5 +3178,15 @@
     "asset": 1510160704367,
     "meta": 1514713082548,
     "relativePath": "resources\\sounds\\nv\\91.mp3"
+  },
+  "5358a9ff-eb7e-4760-968b-8121aee1ef43": {
+    "asset": 1516276946462,
+    "meta": 1510160704103,
+    "relativePath": "project.manifest"
+  },
+  "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
+    "asset": 1516276946462,
+    "meta": 1510160705806,
+    "relativePath": "version.manifest"
   }
 }

@@ -392,6 +392,21 @@ cc.Class({
         }
     },
 
+    onBtnDissolveClicked: function onBtnDissolveClicked() {
+        // var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        // if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0"){
+        //     cc.vv.alert.show("解散房间","是否确定解散？",function(){
+        //         cc.vv.net.send("dissolve_request");
+        //     },true);
+        //     return;
+        // }
+
+        // cc.vv.alert.show("解散房间","解散房间不扣房卡，是否确定解散？",function(){
+        //     console.log("dissolveingiggggggggggggggggggggggggggggggggggggg")
+        cc.vv.net.send("dissolve_request");
+        // },true);
+    },
+
     changeHun: function changeHun() {
         console.log("changeHun!!!!!!!");
         console.log(cc.vv.gameNetMgr.ban);

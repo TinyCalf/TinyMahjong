@@ -58,6 +58,7 @@ cc.Class({
         {
             case jsb.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
                 cc.log('No local manifest file found, hot update skipped.');
+                this.lblErr.string += 'No local manifest file found, hot update skipped.\n';
                 failed = true;
                 break;
             case jsb.EventAssetsManager.UPDATE_PROGRESSION:
@@ -74,20 +75,22 @@ cc.Class({
             case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
             case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
                 cc.log('Fail to download manifest file, hot update skipped.');
+                this.lblErr.string += 'Fail to download manifest file, hot update skipped.\n';
                 failed = true;
                 break;
             case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
                 cc.log('Already up to date with the latest remote version.');
+                this.lblErr.string += 'Already up to date with the latest remote version.\n';
                 failed = true;
                 break;
             case jsb.EventAssetsManager.UPDATE_FINISHED:
                 cc.log('Update finished. ' + event.getMessage());
-
+                this.lblErr.string += 'Update finished. ' + event.getMessage() + '\n';
                 needRestart = true;
                 break;
             case jsb.EventAssetsManager.UPDATE_FAILED:
                 cc.log('Update failed. ' + event.getMessage());
-
+                 this.lblErr.string += 'Update failed. ' + event.getMessage()  + '\n';
                 this._failCount ++;
                 if (this._failCount < 5)
                 {
@@ -96,20 +99,23 @@ cc.Class({
                 else
                 {
                     cc.log('Reach maximum fail count, exit update process');
+                     this.lblErr.string += 'Reach maximum fail count, exit update process\n';
                     this._failCount = 0;
                     failed = true;
                 }
                 break;
             case jsb.EventAssetsManager.ERROR_UPDATING:
                 cc.log('Asset update error: ' + event.getAssetId() + ', ' + event.getMessage());
+                this.lblErr.string += 'Asset update error: ' + event.getAssetId() + ', ' + event.getMessage() + '\n';
                 break;
             case jsb.EventAssetsManager.ERROR_DECOMPRESS:
                 cc.log(event.getMessage());
+                this.lblErr.string += event.getMessage() + '\n';
                 break;
             default:
                 break;
         }
-
+        this.lblErr.string += 'failed is '+ failed + "and needRestart is " + needRestart;
         if (failed) {
             cc.eventManager.removeListener(this._updateListener);
             this.updatePanel.active = false;
