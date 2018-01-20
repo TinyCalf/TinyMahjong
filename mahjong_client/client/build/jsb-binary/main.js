@@ -1,6 +1,12 @@
 (function () {
 
     'use strict';
+    if (cc.sys.isNative) {
+        var hotUpdateSearchPaths = cc.sys.localStorage.getItem('HotUpdateSearchPaths');
+        if (hotUpdateSearchPaths) {
+            jsb.fileUtils.setSearchPaths(JSON.parse(hotUpdateSearchPaths));
+        }
+    }
 
     function boot () {
 
@@ -55,7 +61,7 @@
                 cc.view.enableRetina(true);
             }
             //cc.view.setDesignResolutionSize(settings.designWidth, settings.designHeight, cc.ResolutionPolicy.SHOW_ALL);
-        
+
             if (cc.sys.isBrowser) {
                 setLoadingDisplay();
             }

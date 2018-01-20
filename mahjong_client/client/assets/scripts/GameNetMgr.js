@@ -351,7 +351,7 @@ cc.Class({
             self.hun = data;
             self.dispatchEvent('game_hun');
         });
-        
+
         cc.vv.net.addHandler("game_ban_push",function(data){
             self.ban = data;
             self.dispatchEvent('game_ban');

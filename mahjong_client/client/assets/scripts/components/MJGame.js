@@ -400,7 +400,7 @@ cc.Class({
             sprite.node.active = true;
         }
     },
-    
+
     onBtnDissolveClicked:function(){
         // var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
         // if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0"){
@@ -409,8 +409,8 @@ cc.Class({
         //     },true);
         //     return;
         // }
-    
-    
+
+
         // cc.vv.alert.show("解散房间","解散房间不扣房卡，是否确定解散？",function(){
         //     console.log("dissolveingiggggggggggggggggggggggggggggggggggggg")
             cc.vv.net.send("dissolve_request");
@@ -586,6 +586,32 @@ cc.Class({
     },
 
     onGameBeign:function(){
+      //获取位置信息
+        // function getip(seat) {
+        //   var xhr = cc.loader.getXMLHttpRequest();
+        //   xhr.timeout = 5000;
+        //   xhr.open("GET","http://ip.taobao.com/service/getIpInfo.php?ip="+  seat.ip, true);
+        //   // if (cc.sys.isNative){
+        //   //     xhr.setRequestHeader("Accept-Encoding","gzip,deflate","application/json;charset=UTF-8");
+        //   // }
+        //   xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+        //   xhr.onreadystatechange = function() {
+        //       console.log("checklocation!!!!")
+        //       console.log(xhr.responseText);
+        //       if(xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)){
+        //           var ret = JSON.parse(xhr.responseText);
+        //           seat.location=ret
+        //           console.log("location!!!")
+        //           console.log(ret)
+        //       }
+        //   };
+        //   xhr.send();
+        // }
+        // for(var i=0;i<4;i++) {
+        //   getip(cc.vv.gameNetMgr.seats[i])
+        // }
+
+
 
         //更换gameover界面头像 懒得封装了，反正以后也用不到
         var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s1/touxiang").getComponent("ImageLoader");
@@ -1076,7 +1102,7 @@ cc.Class({
     update: function (dt) {
         if(cc.vv.gameNetMgr.hun<0) return
         //显示桌面上的混子
-       
+
         var spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",cc.vv.gameNetMgr.hun);
         //提取_之前的内容
         function getEnd(mainStr,searchStr){

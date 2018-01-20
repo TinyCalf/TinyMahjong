@@ -73,29 +73,11 @@
       "width": 1932,
       "height": 1056
     },
-    "window-1516277427456": {
-      "x": 338,
+    "window-1516427380458": {
+      "x": 345,
       "y": 183,
-      "width": 1093,
-      "height": 695
-    },
-    "window-1516277510919": {
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "builder"
-            ]
-          }
-        ]
-      },
-      "x": 722,
-      "y": 195,
-      "width": 516,
-      "height": 739
+      "width": 1020,
+      "height": 639
     },
     "worker": {
       "x": 760,

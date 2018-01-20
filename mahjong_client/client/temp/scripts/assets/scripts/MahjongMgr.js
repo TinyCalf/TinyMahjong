@@ -208,6 +208,14 @@ cc.Class({
             }
             return a - b;
         });
+        if (cc.vv.gameNetMgr.hun) {
+            for (var i = 0; i < mahjongs.length; i++) {
+                if (mahjongs[i] === cc.vv.gameNetMgr.hun) {
+                    mahjongs.splice(i, 1);
+                    mahjongs.unshift(cc.vv.gameNetMgr.hun);
+                }
+            }
+        }
     },
 
     getSide: function getSide(localIndex) {

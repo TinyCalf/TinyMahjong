@@ -284,10 +284,9 @@ cc.Class({
         else if(cc.vv.gameNetMgr.conf.type == "yzmj"){
             var title = "<园子>";
         }
-        cc.vv.anysdkMgr.copy("莱莱扬州麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId+"】 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        cc.vv.anysdkMgr.copy("莱莱扬州麻将" + title + " 房号:【" + cc.vv.gameNetMgr.roomId + "】 玩法:" + cc.vv.gameNetMgr.getWanfa());
         cc.find("Canvas/copysuccess").active = true;
         setTimeout(function() {cc.find("Canvas/copysuccess").active = false;}, 1000);
-
     },
 
     onBtnDissolveClicked:function(){

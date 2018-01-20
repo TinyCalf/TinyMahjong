@@ -57,7 +57,8 @@ cc.Class({
     updateCb: function updateCb(event) {
         var needRestart = false;
         var failed = false;
-        switch (event.getEventCode()) {
+        var code = event.getEventCode();
+        switch (code) {
             case jsb.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
                 cc.log('No local manifest file found, hot update skipped.');
                 this.lblErr.string += 'No local manifest file found, hot update skipped.\n';
@@ -75,6 +76,7 @@ cc.Class({
                 this.percent.string = percent + '%';
                 break;
             case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
+                this.lblErr.string += 'ERROR_DOWNLOAD_MANIFEST\n';
             case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
                 cc.log('Fail to download manifest file, hot update skipped.');
                 this.lblErr.string += 'Fail to download manifest file, hot update skipped.\n';
@@ -109,12 +111,13 @@ cc.Class({
                 break;
             case jsb.EventAssetsManager.ERROR_DECOMPRESS:
                 cc.log(event.getMessage());
-                this.lblErr.string += event.getMessage() + '\n';
+                this.lblErr.string += event.getMessage() + 'ERROR_DECOMPRESS\n';
                 break;
             default:
+                this.lblErr.string += 'CODE is ' + code + '\n';
                 break;
         }
-        this.lblErr.string += 'failed is ' + failed + "and needRestart is " + needRestart;
+        //this.lblErr.string += 'failed is '+ failed + "and needRestart is " + needRestart;
         if (failed) {
             cc.eventManager.removeListener(this._updateListener);
             this.updatePanel.active = false;
@@ -156,6 +159,7 @@ cc.Class({
         }
         this.lblErr.string += "检查游戏资源...\n";
         var storagePath = (jsb.fileUtils ? jsb.fileUtils.getWritablePath() : '/') + 'tiantianqipai-asset';
+        // var storagePath = ((jsb.fileUtils ? jsb.fileUtils.getWritablePath() : './'));
         cc.log('Storage path for remote asset : ' + storagePath);
         this.lblErr.string += storagePath + "\n";
         cc.log('Local manifest URL : ' + this.manifestUrl);
