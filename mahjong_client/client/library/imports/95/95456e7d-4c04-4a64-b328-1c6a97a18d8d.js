@@ -450,6 +450,12 @@ cc.Class({
             self.dispatchEvent('mj_count', data);
         });
 
+        cc.vv.net.addHandler("game_tingmap_push", function (data) {
+            console.log('game_tingmap_push');
+            console.log(data);
+            self.dispatchEvent('game_tingmap', data);
+        });
+
         cc.vv.net.addHandler("game_chupai_push", function (data) {
             console.log('game_chupai_push');
             //console.log(data);

@@ -378,6 +378,7 @@ function checkCanTingPai(game,seatData){
     // }
 
     checkHu.checkTingPai(seatData,0,34,game.hun);
+    userMgr.sendMsg(seatData.userId,'game_tingmap_push',seatData.tingMap);
 }
 
 function getSeatIndex(userId){

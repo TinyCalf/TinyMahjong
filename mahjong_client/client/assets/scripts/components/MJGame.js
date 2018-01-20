@@ -175,6 +175,23 @@ cc.Class({
                 self.initMopai(data.turn,-1);
             }
         });
+        
+        this.node.on('game_tingmap',function(data){
+            data = data.detail;
+            var pais = self.node.getChildByName("game").getChildByName("tingmap")
+            pais.active=true
+            var mahjongs = [];
+            for (var key in data){
+                mahjongs.push(key)
+            }
+            console.log(mahjongs)
+            for(var i=0;i<8;i++){
+                pais.children[i].getComponent(cc.Sprite).spriteFrame=cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mahjongs[i]);
+            }
+            setInterval(function(){
+                pais.active=false;
+            },3000)
+        });
 
         this.node.on('game_mopai',function(data){
             self.hideChupai();

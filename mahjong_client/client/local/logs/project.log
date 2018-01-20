@@ -2533,3 +2533,100 @@ uuid: "bd846dd2-64ff-4c89-b165-d959c83c0f8d"
 2018-01-20T05:23:02.655Z - normal: Compiled successfully
 2018-01-20T05:25:53.193Z - normal: Compiled successfully
 2018-01-20T05:39:01.241Z - normal: Compiled successfully
+2018-01-20T05:46:49.480Z - normal: Compiled successfully
+2018-01-20T05:53:38.316Z - normal: Compiled successfully
+2018-01-20T05:53:51.086Z - normal: Compiled successfully
+2018-01-20T05:54:55.283Z - normal: Compiled successfully
+2018-01-20T06:04:23.543Z - normal: Compiled successfully
+2018-01-20T06:06:46.782Z - normal: Compiled successfully
+2018-01-20T06:07:09.353Z - normal: Compiled successfully
+2018-01-20T06:07:27.150Z - normal: Compiled successfully
+2018-01-20T06:10:18.910Z - normal: Compiled successfully
+2018-01-20T06:12:17.160Z - normal: Compiled successfully
+2018-01-20T06:17:31.030Z - normal: Compiled successfully
+2018-01-20T06:43:17.594Z - normal: Compiled successfully
+2018-01-20T06:44:32.010Z - normal: Compiled successfully
+2018-01-20T06:49:27.655Z - error: Failed to update asset db://assets/scripts/components/MJGame.js, messages: Compile error: SyntaxError: unknown: Assigning to rvalue (187:16)
+            }
+            for(var i=0;i<8;i++){
+                pais.children[i].getComponent(cc.Sprite)=cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",hun);
+            }
+        });
+
+    at Parser.pp.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\location.js:24:13)
+    at Parser.pp.toAssignable (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\lval.js:58:14)
+    at Parser.pp.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:117:61)
+    at Parser.pp.parseExpression (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:79:19)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:137:23)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseBlock (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:442:21)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:105:19)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseFor (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:465:20)
+    at e.AssetDB.error (C:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2582)
+    at Object.callback (C:\CocosCreator\resources\app.asar\asset-db\core\ipc.js:1:4434)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at e.<anonymous> (C:\CocosCreator\resources\app.asar\asset-db\index.js:1:1633)
+    at C:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:20698
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+2018-01-20T06:49:36.365Z - error: Failed to update asset db://assets/scripts/components/MJGame.js, messages: Compile error: SyntaxError: unknown: Assigning to rvalue (187:16)
+            }
+            for(var i=0;i<8;i++){
+                pais.children[i].getComponent(cc.Sprite)=cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mahjongs[i]);
+            }
+        });
+
+    at Parser.pp.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\location.js:24:13)
+    at Parser.pp.toAssignable (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\lval.js:58:14)
+    at Parser.pp.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:117:61)
+    at Parser.pp.parseExpression (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:79:19)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:137:23)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseBlock (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:442:21)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:105:19)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseFor (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:465:20)
+    at e.AssetDB.error (C:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2582)
+    at Object.callback (C:\CocosCreator\resources\app.asar\asset-db\core\ipc.js:1:4434)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at e.<anonymous> (C:\CocosCreator\resources\app.asar\asset-db\index.js:1:1633)
+    at C:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:20698
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+2018-01-20T06:50:03.665Z - error: Failed to update asset db://assets/scripts/components/MJGame.js, messages: Compile error: SyntaxError: unknown: Assigning to rvalue (186:16)
+            }
+            for(var i=0;i<8;i++){
+                pais.children[i].getComponent(cc.Sprite)=cc.vv.mahjongmgr.getSpriteFrameByMJID("M_",mahjongs[i]);
+            }
+        });
+
+    at Parser.pp.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\location.js:24:13)
+    at Parser.pp.toAssignable (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\lval.js:58:14)
+    at Parser.pp.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:117:61)
+    at Parser.pp.parseExpression (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\expression.js:79:19)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:137:23)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseBlock (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:442:21)
+    at Parser.pp.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:105:19)
+    at Parser.parseStatement (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\plugins\flow.js:655:22)
+    at Parser.pp.parseFor (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\parser\statement.js:465:20)
+    at e.AssetDB.error (C:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2582)
+    at Object.callback (C:\CocosCreator\resources\app.asar\asset-db\core\ipc.js:1:4434)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:906:35
+    at _arrayEach (C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:85:13)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:898:17
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:44:16
+    at e.<anonymous> (C:\CocosCreator\resources\app.asar\asset-db\index.js:1:1633)
+    at C:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:20698
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+2018-01-20T06:53:14.653Z - normal: Compiled successfully
+2018-01-20T06:59:53.118Z - normal: Compiled successfully
+2018-01-20T07:01:11.098Z - normal: Compiled successfully
+2018-01-20T07:02:36.063Z - normal: Compiled successfully
+2018-01-20T07:11:24.218Z - normal: Compiled successfully
+2018-01-20T07:13:50.485Z - normal: Compiled successfully
