@@ -432,10 +432,6 @@ cc.Class({
             self.dispatchEvent('game_action',data);
         });
         
-
-
-
-
         cc.vv.net.addHandler("game_num_push",function(data){
             self.numOfGames = data;
         });
@@ -464,7 +460,7 @@ cc.Class({
             //console.log(data);
             self.dispatchEvent('mj_count',data);
         });
-        
+
         cc.vv.net.addHandler("game_tingmap_push",function(data){
             console.log('game_tingmap_push');
             console.log(data)

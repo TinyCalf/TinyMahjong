@@ -188,9 +188,11 @@ cc.Class({
             for (var i = 0; i < 8; i++) {
                 pais.children[i].getComponent(cc.Sprite).spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", mahjongs[i]);
             }
-            setInterval(function () {
+            var cb = function cb() {
+                clearInterval(set);
                 pais.active = false;
-            }, 3000);
+            };
+            var set = setInterval(cb, 3000);
         });
 
         this.node.on('game_mopai', function (data) {
@@ -974,6 +976,7 @@ cc.Class({
         console.log(seats);
         //初始化手牌
         var lackingNum = (seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
+        console.log(holds, seatData.pengs, seatData.angangs, seatData.diangangs, seatData.wangangs);
         for (var i = 0; i < holds.length; ++i) {
             var mjid = holds[i];
             var sprite = this._myMJArr[i + lackingNum];
@@ -1151,7 +1154,7 @@ cc.Class({
                 if (nowname == mjname) {
                     allfolds[i].color = new cc.Color(233, 199, 163);
                 } else {
-                    allfolds[i].color = new cc.Color(255, 255, 255);
+                    // allfolds[i].color = new cc.Color(255, 255, 255);
                 }
             }
         }

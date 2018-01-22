@@ -1,5 +1,5 @@
-var HALL_IP = "192.168.0.104";//
-//var HALL_IP = "116.62.227.93";
+//var HALL_IP = "192.168.0.104";//
+var HALL_IP = "116.62.227.93";
 var HALL_CLIENT_PORT = 9001;
 var HALL_ROOM_PORT = 9002;
 
@@ -27,7 +27,7 @@ exports.account_server = function(){
 		ACCOUNT_PRI_KEY:ACCOUNT_PRI_KEY,
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
-		VERSION:'20180000',
+		VERSION:'20180002',
 		APP_WEB:'http://fir.im/qlx3',
 	};
 };

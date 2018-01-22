@@ -104,9 +104,9 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,12] ; //7dui
-    // arr2 =[0,1,2,3,4,5,6,7,8,9,10,12,12,13] ;// fengqing + 7dui
-    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,11,13] ;
+    // arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,10] ; //7dui
+    // arr2 =[0,1,2,3,4,5,6,7,8,10,10,12,12,13] ;// fengqing + 7dui
+    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] ;
     // arr4 =[0,1,2,3,4,5,6,7,8,9,11,11,11,13] ;
     //
     // arr = []
@@ -167,9 +167,9 @@ function deal(game){
 //检查是否可以碰
 function checkCanPeng(game,seatData,targetPai) {
     var count = seatData.countMap[targetPai];
-    if(count != null && count == 2 && targetPai == game.ban){
-        return
-    }
+    // if(count != null && count == 2 && targetPai == game.ban){
+    //     return
+    // }
     if(count != null && count >= 2){
         seatData.canPeng = true;
     }
@@ -191,11 +191,11 @@ function checkCanDianGang(game,seatData,targetPai){
         seatData.gangPai.push(targetPai);
         return;
     }
-    if( count != null && count >= 2 && targetPai == game.ban ){
-        seatData.canGang = true;
-        seatData.gangPai.push(targetPai);
-        return;
-    }
+    // if( count != null && count >= 2 && targetPai == game.ban ){
+    //     seatData.canGang = true;
+    //     seatData.gangPai.push(targetPai);
+    //     return;
+    // }
 }
 
 //检查是否可以暗杠
@@ -1082,7 +1082,12 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
     //标记刚刚杠过
     seatData.ifJustGanged = 1;
     //再次摸牌
-    doUserMoPai(game);
+    if(numOfCnt!=3 || pai!=game.ban) { doUserMoPai(game); }
+    else {
+      //广播通知玩家出牌方
+      seatData.canChuPai = true;
+      userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
+    }
 
     //只能放在这里。因为过手就会清除杠牌标记
     seatData.lastFangGangSeat = gameTurn;
@@ -1107,7 +1112,7 @@ exports.begin = function(roomId) {
        ban=-1;
        hun=-1;
      }
-
+     //
      // ban=12
      // hun=13
 
@@ -1206,6 +1211,12 @@ exports.begin = function(roomId) {
          var s = seats[i];
          //通知玩家手牌
          console.log(game.gameSeats[i].holds)
+         //通知当前搬子
+         userMgr.sendMsg(s.userId,'game_ban_push',game.ban);
+         //通知当前混子
+         userMgr.sendMsg(s.userId,'game_hun_push',game.hun);
+         //通知当前风向开始
+         userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
          userMgr.sendMsg(s.userId,'game_holds_push',game.gameSeats[i].holds);
          //通知还剩多少张牌
          userMgr.sendMsg(s.userId,'mj_count_push',numOfMJ);
@@ -1213,12 +1224,7 @@ exports.begin = function(roomId) {
          userMgr.sendMsg(s.userId,'game_num_push',roomInfo.fengxiangju);
          //通知游戏开始
          userMgr.sendMsg(s.userId,'game_begin_push',game.button);
-         //通知当前风向开始
-         userMgr.sendMsg(s.userId,'game_feng_push',game.roomInfo.fengxiang);
-         //通知当前混子
-         userMgr.sendMsg(s.userId,'game_hun_push',game.hun);
-         //通知当前搬子
-         userMgr.sendMsg(s.userId,'game_ban_push',game.ban);
+
      }
 
      var seatData = gameSeatsOfUsers[seats[1].userId];
@@ -1426,6 +1432,21 @@ exports.peng = function(userId){
     seatData.pengs.push(pai);
     game.chuPai = -1;
 
+    if(pai == game.ban) {
+      yangzhou.koufen(game,seatData.seatIndex,game.turn,2)
+    }
+    //到达底分则结算解散
+    if(yangzhou.isEndofDifen0(game)){
+      return doGameOver(game,game.roomInfo.seats[0].userId,true);
+    }
+    //通知其他玩家，gang分数变化
+    userMgr.broacastInRoom('total_score_push',{totalscores:[
+      game.gameSeats[0].totalscore,
+      game.gameSeats[1].totalscore,
+      game.gameSeats[2].totalscore,
+      game.gameSeats[3].totalscore,
+    ]},seatData.userId,true);
+
     recordGameAction(game,seatData.seatIndex,ACTION_PENG,pai);
 
     //广播通知其它玩家
@@ -1439,20 +1460,7 @@ exports.peng = function(userId){
     userMgr.broacastInRoom('game_chupai_push',seatData.userId,seatData.userId,true);
 
 
-    if(pai == game.ban) {
-      yangzhou.koufen(game,seatData.seatIndex,game.turn,2)
-    }
-    //到达底分则结算解散
-    if(yangzhou.isEndofDifen0(game)){
-      return doGameOver(game,game.roomInfo.seats[0].userId,true);
-    }
-    //通知其他玩家，gang分数变化
-    userMgr.broacastInRoom('total_score_push',{totalscore:[
-      game.gameSeats[0].totalscore,
-      game.gameSeats[1].totalscore,
-      game.gameSeats[2].totalscore,
-      game.gameSeats[3].totalscore,
-    ]},seatData.userId,true);
+
 
     //检查是否有人要胡，要碰 要杠s
     var hasActions = false;
@@ -1650,10 +1658,7 @@ exports.gang = function(userId,pai){
     if(numOfCnt == 1){
         gangtype = "wangang"
     }
-    else if(numOfCnt == 3 && pai!=game.ban){
-        gangtype = "diangang"
-    }
-    else if(numOfCnt == 2 && pai==game.ban){
+    else if(numOfCnt == 3  && pai!=game.ban){
         gangtype = "diangang"
     }
     else if(numOfCnt == 4 || (numOfCnt == 3 && pai==game.ban) ){

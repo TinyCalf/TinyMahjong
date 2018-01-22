@@ -180,6 +180,25 @@ cc.Class({
             }
         });
 
+        this.node.on('game_tingmap', function (data) {
+            data = data.detail;
+            var pais = self.node.getChildByName("game").getChildByName("tingmap");
+            pais.active = true;
+            var mahjongs = [];
+            for (var key in data) {
+                mahjongs.push(key);
+            }
+            console.log(mahjongs);
+            for (var i = 0; i < 8; i++) {
+                pais.children[i].getComponent(cc.Sprite).spriteFrame = cc.vv.mahjongmgr.getSpriteFrameByMJID("M_", mahjongs[i]);
+            }
+            var cb = function cb() {
+                clearInterval(set);
+                pais.active = false;
+            };
+            var set = setInterval(cb, 3000);
+        });
+
         this.node.on('game_mopai', function (data) {
             self.hideChupai();
             data = data.detail;
@@ -574,6 +593,30 @@ cc.Class({
     },
 
     onGameBeign: function onGameBeign() {
+        //获取位置信息
+        // function getip(seat) {
+        //   var xhr = cc.loader.getXMLHttpRequest();
+        //   xhr.timeout = 5000;
+        //   xhr.open("GET","http://ip.taobao.com/service/getIpInfo.php?ip="+  seat.ip, true);
+        //   // if (cc.sys.isNative){
+        //   //     xhr.setRequestHeader("Accept-Encoding","gzip,deflate","application/json;charset=UTF-8");
+        //   // }
+        //   xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+        //   xhr.onreadystatechange = function() {
+        //       console.log("checklocation!!!!")
+        //       console.log(xhr.responseText);
+        //       if(xhr.readyState === 4 && (xhr.status >= 200 && xhr.status < 300)){
+        //           var ret = JSON.parse(xhr.responseText);
+        //           seat.location=ret
+        //           console.log("location!!!")
+        //           console.log(ret)
+        //       }
+        //   };
+        //   xhr.send();
+        // }
+        // for(var i=0;i<4;i++) {
+        //   getip(cc.vv.gameNetMgr.seats[i])
+        // }
 
         //更换gameover界面头像 懒得封装了，反正以后也用不到
         var sprIcon = cc.find("Canvas/game_over_ddh/result_list/s1/touxiang").getComponent("ImageLoader");
@@ -1114,7 +1157,7 @@ cc.Class({
                 if (nowname == mjname) {
                     allfolds[i].color = new cc.Color(233, 199, 163);
                 } else {
-                    allfolds[i].color = new cc.Color(255, 255, 255);
+                    // allfolds[i].color = new cc.Color(255, 255, 255);
                 }
             }
         }
