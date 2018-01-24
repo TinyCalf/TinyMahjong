@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '4c04fyd89JAZY7qGjvubi+f', 'Settings');
-// scripts\components\Settings.js
+// scripts/components/Settings.js
 
 cc.Class({
     "extends": cc.Component,

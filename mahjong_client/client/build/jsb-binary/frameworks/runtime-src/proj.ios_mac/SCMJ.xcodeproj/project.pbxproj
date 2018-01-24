@@ -329,6 +329,7 @@
 				15628F5B15F0F5C2000CF24B /* Resources */,
 				2AD041EE962E3A28F304B9CE /* ios-libs */,
 				75264C2AB6D33733DA5855F2 /* mac-libs */,
+				ABD368982018D26700931F2A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +373,14 @@
 				A922754F1517C094001B78AA /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABD368982018D26700931F2A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BA4E718619EB6E7900932425 /* MediaPlayer.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		C06D18B718C02D4A003D1A65 /* JS Common */ = {
@@ -526,12 +535,12 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					A922753C1517C094001B78AA = {
-						DevelopmentTeam = DTV74Y6PV4;
+						DevelopmentTeam = UA9F7J9J73;
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "yzmj" */;
+			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "SCMJ" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -761,8 +770,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhou yanghua (X8CNBL4RPU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = DTV74Y6PV4;
+				DEVELOPMENT_TEAM = UA9F7J9J73;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -787,10 +798,10 @@
 					"$(PROJECT_DIR)/VoiceSDK/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.77queshen.zsmj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lailai.test;
 				PRODUCT_NAME = "yzmj-mobile";
-				PROVISIONING_PROFILE = "3f823fb7-21e3-42f8-9d3f-903e683dfb67";
-				PROVISIONING_PROFILE_SPECIFIER = ZSMJDEGUG2;
+				PROVISIONING_PROFILE = "e98a8ac0-238e-4dc7-944f-e9e0a89ff0ae";
+				PROVISIONING_PROFILE_SPECIFIER = llyzmjtest;
 				SDKROOT = iphoneos10.3;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -804,8 +815,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ningbo Hui Nuo Network Technology Co., Ltd. (DTV74Y6PV4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = DTV74Y6PV4;
+				DEVELOPMENT_TEAM = UA9F7J9J73;
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -831,10 +844,10 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.77queshen.zsmj;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lailai.test;
 				PRODUCT_NAME = "yzmj-mobile";
-				PROVISIONING_PROFILE = "8e46148b-91c5-4983-9134-84d10bb61550";
-				PROVISIONING_PROFILE_SPECIFIER = ZSMJ2;
+				PROVISIONING_PROFILE = "205abd89-b5d4-4c16-86b5-c15c00d63377";
+				PROVISIONING_PROFILE_SPECIFIER = llyzmjprofile;
 				SDKROOT = iphoneos10.3;
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -855,7 +868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A92275371517C094001B78AA /* Build configuration list for PBXProject "yzmj" */ = {
+		A92275371517C094001B78AA /* Build configuration list for PBXProject "SCMJ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92276FE1517C097001B78AA /* Debug */,

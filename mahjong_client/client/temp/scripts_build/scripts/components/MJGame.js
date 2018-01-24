@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
-// scripts\components\MJGame.js
+// scripts/components/MJGame.js
 
 cc.Class({
     "extends": cc.Component,
@@ -980,6 +980,7 @@ cc.Class({
         console.log(seats);
         //初始化手牌
         var lackingNum = (seatData.pengs.length + seatData.angangs.length + seatData.diangangs.length + seatData.wangangs.length) * 3;
+        console.log(holds, seatData.pengs, seatData.angangs, seatData.diangangs, seatData.wangangs);
         for (var i = 0; i < holds.length; ++i) {
             var mjid = holds[i];
             var sprite = this._myMJArr[i + lackingNum];

@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ios/Prefix.pch \
+  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/Classes/SDKManager.cpp \
+  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/../Classes/SDKManager.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/AgentManager.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/PluginManager.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/PluginProtocol.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/PluginParam.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/PluginFactory.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolIAP.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolAnalytics.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolShare.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolAds.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolSocial.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolUser.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolPush.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolCrash.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolREC.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolCustom.h \
+  /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/anysdk/ProtocolAdTracking.h

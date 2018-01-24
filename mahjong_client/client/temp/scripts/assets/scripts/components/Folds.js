@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '0bf63eiZEFMWbW03o8heqa5', 'Folds');
-// scripts\components\Folds.js
+// scripts/components/Folds.js
 
 cc.Class({
     "extends": cc.Component,

@@ -11,23 +11,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 472,
+                "height": 357,
                 "type": "panel",
-                "width": 399
+                "width": 327
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 453,
+                "height": 347,
                 "type": "panel",
-                "width": 399
+                "width": 327
               }
             ],
-            "height": 928,
+            "height": 707,
             "type": "dock-v",
-            "width": 399
+            "width": 327
           },
           {
             "children": [
@@ -36,9 +36,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 553,
+                "height": 504,
                 "type": "panel",
-                "width": 1000
+                "width": 641
               },
               {
                 "active": 0,
@@ -46,38 +46,56 @@
                   "console",
                   "timeline"
                 ],
-                "height": 372,
+                "height": 200,
                 "type": "panel",
-                "width": 1000
+                "width": 641
               }
             ],
-            "height": 928,
+            "height": 707,
             "type": "dock-v",
-            "width": 1000
+            "width": 641
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 928,
+            "height": 707,
             "type": "panel",
-            "width": 505
+            "width": 300
           }
         ],
         "snapshot": true,
         "type": "dock-h"
       },
-      "x": -8,
-      "y": -8,
-      "width": 1932,
-      "height": 1056
+      "x": 0,
+      "y": 24,
+      "width": 1280,
+      "height": 776
     },
-    "window-1516627624487": {
-      "x": 474,
-      "y": 179,
-      "width": 1020,
-      "height": 639
+    "window-1516803755589": {
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "builder"
+            ]
+          }
+        ]
+      },
+      "x": 0,
+      "y": 24,
+      "width": 1280,
+      "height": 776
+    },
+    "window-1516805318440": {
+      "x": 0,
+      "y": 24,
+      "width": 1280,
+      "height": 776
     }
   }
 }
