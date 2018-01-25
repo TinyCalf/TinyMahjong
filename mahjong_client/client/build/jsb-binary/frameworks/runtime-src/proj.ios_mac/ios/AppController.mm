@@ -86,7 +86,7 @@ static bool __isWxLogin = false;
     cocos2d::Application::getInstance()->run();
     
     //��΢��ע��
-    [WXApi registerApp:@"wxc3bbc4c270d6a0ba" withDescription:@"yzmj"];
+    [WXApi registerApp:@"wx6f7e778c919b10ca" withDescription:@"yzmj"];
     return YES;
 }
 
