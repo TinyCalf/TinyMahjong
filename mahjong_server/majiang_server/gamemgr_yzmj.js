@@ -534,7 +534,7 @@ function calculateResult(game){
               thisseat.kanzi = ret2;
               thisseat.qidui = true;
               score +=4;
-              if(judge.isZha7dui(thisseat,game.hun)) {thisseat.zhaqidui = true;score +=8}
+              if(judge.isZha7dui(thisseat,game.hun)) {thisseat.zhaqidui = true;  thisseat.qidui = false;score +=4}
             }
             if(score == 0 ) score = 2;
             if(thisseat.iszimo){
