@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '10e32jDstpLhIGHWrQEq2vN', 'WaitingConnection');
-// scripts/components/WaitingConnection.js
+// scripts\components\WaitingConnection.js
 
 cc.Class({
     "extends": cc.Component,

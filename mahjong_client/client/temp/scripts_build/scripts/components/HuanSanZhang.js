@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '9a096oAgU5HwrxX05ZPNYtW', 'HuanSanZhang');
-// scripts/components/HuanSanZhang.js
+// scripts\components\HuanSanZhang.js
 
 cc.Class({
     "extends": cc.Component,

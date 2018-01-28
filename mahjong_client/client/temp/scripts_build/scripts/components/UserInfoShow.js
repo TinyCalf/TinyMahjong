@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'fe4f16CAmpBlZphnpsH1ETv', 'UserInfoShow');
-// scripts/components/UserInfoShow.js
+// scripts\components\UserInfoShow.js
 
 cc.Class({
     "extends": cc.Component,

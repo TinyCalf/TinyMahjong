@@ -3,7 +3,7 @@
 //var URL = "http://192.168.0.104:9000";
 var URL = "http://116.62.227.93:9000";
 
-cc.VERSION = 20180002;
+cc.VERSION = 20180003;
 var HTTP = cc.Class({
     extends: cc.Component,
 

@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '1f066RbLAxKGJZtkDFO2kq/', 'VoiceMgr');
-// scripts/VoiceMgr.js
+// scripts\VoiceMgr.js
 
 var radix = 12;
 var base = 128 - radix;

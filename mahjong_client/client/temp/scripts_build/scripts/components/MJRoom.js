@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '921dfQJZddJ+5GFUXqxmMmT', 'MJRoom');
-// scripts/components/MJRoom.js
+// scripts\components\MJRoom.js
 
 cc.Class({
     "extends": cc.Component,

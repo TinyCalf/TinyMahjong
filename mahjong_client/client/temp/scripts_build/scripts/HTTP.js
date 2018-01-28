@@ -1,13 +1,13 @@
 "use strict";
 cc._RFpush(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
-// scripts/HTTP.js
+// scripts\HTTP.js
 
 //local
 
 //var URL = "http://192.168.0.104:9000";
 var URL = "http://116.62.227.93:9000";
 
-cc.VERSION = 20180002;
+cc.VERSION = 20180003;
 var HTTP = cc.Class({
     "extends": cc.Component,
 
