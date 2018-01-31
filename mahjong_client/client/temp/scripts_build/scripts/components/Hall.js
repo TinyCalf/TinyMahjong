@@ -145,7 +145,7 @@ cc.Class({
         });
 
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
-        if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0") {
+        if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION) {
             //隐藏显示下边按钮
             cc.find("Canvas/hallBg/fujianmajiang").active = false;
             cc.find("Canvas/hallBg/anhuimajiang").active = false;

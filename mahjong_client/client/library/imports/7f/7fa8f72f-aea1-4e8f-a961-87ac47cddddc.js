@@ -63,6 +63,10 @@ cc.Class({
         //淡入
         // var fadein = cc.fadeIn(0.1);
         // this.node.runAction(fadein);
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION) {
+            cc.find("Canvas/game_result/btnShare").active = false;
+        }
     },
 
     initView: function initView() {

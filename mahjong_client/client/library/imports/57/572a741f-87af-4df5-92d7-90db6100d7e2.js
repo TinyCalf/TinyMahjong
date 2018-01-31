@@ -76,12 +76,12 @@ cc.Class({
         //IOS审核版本 只显示游客登录 过审版本 只显示微信登陆
         else if (cc.sys.os == cc.sys.OS_IOS) {
                 console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
-                if (youkeorweixin == "0") {
+                if (youkeorweixin == cc.VERSION) {
                     cc.find("Canvas/btn_yk").active = true;
                     cc.find("Canvas/z_weixindenglu").active = false;
                     cc.find("Canvas/yhxy").active = true;
                 }
-                if (youkeorweixin == "1" || youkeorweixin == "null") {
+                if (youkeorweixin != cc.VERSION || youkeorweixin == "null") {
                     cc.find("Canvas/z_weixindenglu").active = true;
                     cc.find("Canvas/btn_yk").active = false;
                 }

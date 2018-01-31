@@ -1,30 +1,30 @@
-String.prototype.format = function(args) { 
-    if (arguments.length>0) { 
-        var result = this; 
-        if (arguments.length == 1 && typeof (args) == "object") { 
-            for (var key in args) { 
-                var reg=new RegExp ("({"+key+"})","g"); 
-                result = result.replace(reg, args[key]); 
-            } 
-        } 
-        else { 
-            for (var i = 0; i < arguments.length; i++) { 
-                if(arguments[i]==undefined) { 
-                    return ""; 
-                } 
-                else { 
-                    var reg=new RegExp ("({["+i+"]})","g"); 
-                    result = result.replace(reg, arguments[i]); 
-                } 
-            } 
-        } 
-        return result; 
-    } 
-    else { 
-        return this; 
-    } 
+String.prototype.format = function(args) {
+    if (arguments.length>0) {
+        var result = this;
+        if (arguments.length == 1 && typeof (args) == "object") {
+            for (var key in args) {
+                var reg=new RegExp ("({"+key+"})","g");
+                result = result.replace(reg, args[key]);
+            }
+        }
+        else {
+            for (var i = 0; i < arguments.length; i++) {
+                if(arguments[i]==undefined) {
+                    return "";
+                }
+                else {
+                    var reg=new RegExp ("({["+i+"]})","g");
+                    result = result.replace(reg, arguments[i]);
+                }
+            }
+        }
+        return result;
+    }
+    else {
+        return this;
+    }
 };
- 
+
 cc.Class({
     extends: cc.Component,
 
@@ -50,7 +50,7 @@ cc.Class({
             cvs.fitHeight = true;
             cvs.fitWidth = true;
         }
-        
+
         if(!cc.vv){
             cc.director.loadScene("loading");
             return;
@@ -60,51 +60,51 @@ cc.Class({
             console.log("onLoad:push_need_create_role");
             cc.director.loadScene("createrole");
         });
-        
+
         cc.vv.audioMgr.playBGM("bgMain.mp3");
-        
+
         this._mima = ["A","A","B","B","A","B","A","B","A","A","A","B","B","B"];
-        
+
         if(!cc.sys.isNative || cc.sys.os == cc.sys.OS_WINDOWS){
-            cc.find("Canvas/btn_yk").active = true;    
+            cc.find("Canvas/btn_yk").active = true;
         }
 
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
         //安卓只显示微信登陆
-        if(cc.sys.os == cc.sys.OS_ANDROID){ 
+        if(cc.sys.os == cc.sys.OS_ANDROID){
             console.log("platform:" + cc.sys.OS_ANDROID + " OS_ANDROID.");
-            cc.find("Canvas/btn_yk").active = false; 
-            cc.find("Canvas/z_weixindenglu").active = true;  
+            cc.find("Canvas/btn_yk").active = false;
+            cc.find("Canvas/z_weixindenglu").active = true;
         }
         //IOS审核版本 只显示游客登录 过审版本 只显示微信登陆
         else if(cc.sys.os == cc.sys.OS_IOS){
             console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
-            if(youkeorweixin == "0"){
-                cc.find("Canvas/btn_yk").active = true; 
+            if(youkeorweixin == cc.VERSION){
+                cc.find("Canvas/btn_yk").active = true;
                 cc.find("Canvas/z_weixindenglu").active = false;
                 cc.find("Canvas/yhxy").active = true;
-                
+
             }
-            if(youkeorweixin == "1" || youkeorweixin == "null" ){
-                cc.find("Canvas/z_weixindenglu").active = true; 
-                cc.find("Canvas/btn_yk").active = false;  
+            if(youkeorweixin != cc.VERSION || youkeorweixin == "null" ){
+                cc.find("Canvas/z_weixindenglu").active = true;
+                cc.find("Canvas/btn_yk").active = false;
             }
         }
         else{
-            cc.find("Canvas/btn_yk").active = true; 
-            cc.find("Canvas/z_weixindenglu").active = false;  
+            cc.find("Canvas/btn_yk").active = true;
+            cc.find("Canvas/z_weixindenglu").active = false;
             console.log("platform:" + cc.sys.os + " dosn't implement share.");
         }
 
 
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, function(event){
-            cc.game.end (); 
+            cc.game.end ();
         }, cc.Game);
-    
-        
+
+
     },
 
-   
+
     start:function(){
         var account =  cc.sys.localStorage.getItem("wx_account");
         var sign = cc.sys.localStorage.getItem("wx_sign");
@@ -115,9 +115,9 @@ cc.Class({
                 sign:sign
             }
             cc.vv.userMgr.onAuth(ret);
-        }   
+        }
     },
-    
+
     onBtnReturn:function(){
         var yhxy = this.node.getChildByName("yhxy");
         yhxy.active = false;
@@ -136,7 +136,7 @@ cc.Class({
         console.log("this.mjdl:"+this.mjdl)
     },
     yonghuxieyi:function(){
-    
+
         var yhxy = this.node.getChildByName("yhxy");
         yhxy.active = true;
     },
@@ -151,17 +151,17 @@ cc.Class({
             return;
         }
         console.log("ssy")
-        
+
         cc.vv.userMgr.guestAuth();
     },
-    
+
     onBtnDownloadClicked:function(){
         cc.sys.openURL(cc.vv.SI.appweb);
     },
-   
-    
+
+
     onBtnWeichatClicked:function(){
-      
+
         var self = this;
         if(self.mjdl == 0){
             var prompt = this.node.getChildByName("prompt");
@@ -171,7 +171,7 @@ cc.Class({
         console.log("ss")
         cc.vv.anysdkMgr.login();
     },
-    
+
     onBtnMIMAClicked:function(event){
         if(this._mima[this._mimaIndex] == event.target.name){
             this._mimaIndex++;

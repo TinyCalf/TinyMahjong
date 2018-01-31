@@ -27,14 +27,14 @@ cc.Class({
         // },
         // ...
     },
-    
+
     initNetHandlers:function(){
         var self = this;
     },
-    
+
     onShare:function(){
         cc.find("Canvas/ShareBox").active = false;
-        cc.vv.anysdkMgr.share("莱莱扬州麻将","扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将将"); 
+        cc.vv.anysdkMgr.share("莱莱扬州麻将","扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将将");
         var data = {
             userid:cc.vv.userMgr.userId,
             type:"share"
@@ -50,10 +50,10 @@ cc.Class({
             console.log(res);
         });
     },
-    
+
     onTimeline:function(){
         cc.find("Canvas/ShareBox").active = false;
-        cc.vv.anysdkMgr.shareOnTimeline("莱莱扬州麻将","扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将");  
+        cc.vv.anysdkMgr.shareOnTimeline("莱莱扬州麻将","扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将");
         var data = {
             userid:cc.vv.userMgr.userId,
             type:"timeline"
@@ -82,7 +82,7 @@ cc.Class({
             return;
         }
         this.initLabels();
-        
+
         if(cc.vv.gameNetMgr.roomId == null){
             this.btnJoinGame.active = true;
             this.btnReturnGame.active = false;
@@ -91,86 +91,84 @@ cc.Class({
             this.btnJoinGame.active = false;
             this.btnReturnGame.active = true;
         }
-        
+
         //var params = cc.vv.args;
-        var roomId = cc.vv.userMgr.oldRoomId 
+        var roomId = cc.vv.userMgr.oldRoomId
         if( roomId != null){
             cc.vv.userMgr.oldRoomId = null;
             cc.vv.userMgr.enterRoom(roomId);
         }
-        
+
         var imgLoader = this.sprHeadImg.node.getComponent("ImageLoader");
         imgLoader.setUserID(cc.vv.userMgr.userId);
         cc.vv.utils.addClickEvent(this.sprHeadImg.node,this.node,"Hall","onBtnClicked");
-        
-        
+
+
         this.addComponent("UserInfoShow");
-        
+
         this.initButtonHandler("Canvas/right_bottom/btn_shezhi");
         this.initButtonHandler("Canvas/right_bottom/btn_help");
         this.initButtonHandler("Canvas/right_bottom/btn_xiaoxi");
         this.helpWin.addComponent("OnBack");
         this.xiaoxiWin.addComponent("OnBack");
-        
+
         if(!cc.vv.userMgr.notice){
             cc.vv.userMgr.notice = {
                 version:null,
                 msg:"数据请求中...",
             }
         }
-        
+
         if(!cc.vv.userMgr.gemstip){
             cc.vv.userMgr.gemstip = {
                 version:null,
                 msg:"数据请求中...",
             }
         }
-        
+
         this.lblNotice.string = cc.vv.userMgr.notice.msg;
-        
+
         this.refreshInfo();
         this.refreshNotice();
         this.refreshGemsTip();
-        
+
         cc.vv.audioMgr.playBGM("bgMain.mp3");
-        
+
         //初始化签到信息
         this.initCheckin();
-        
+
         //预加载麻将游戏界面
         cc.director.preloadScene('mjgame', function () {
             cc.log('preload mjgame complete!!!');
         });
-        
+
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
-        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0"){
+        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION){
             //隐藏显示下边按钮
-            cc.find("Canvas/hallBg/fujianmajiang").active = false;
-            cc.find("Canvas/hallBg/anhuimajiang").active = false;
-            cc.find("Canvas/hallBg/qiqibuyu").active = false;
-            cc.find("Canvas/hallBg/qiqipuke").active = false;
-            cc.find("Canvas/hallBg/more").active = false;
-            cc.find("Canvas/hallBg/xixia001").active = false;
-            // cc.find("Canvas/top_left/headinfo/bg").active = false;
-            // cc.find("Canvas/top_left/headinfo/gems").active = false;
-            // cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
-            // cc.find("Canvas/top_left/headinfo/lblGems").active = false;
+            //cc.find("Canvas/hallBg/xixia001").active = false;
+            cc.find("Canvas/top_left/headinfo/bg").active = false;
+            cc.find("Canvas/top_left/headinfo/gems").active = false;
+            cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
+            cc.find("Canvas/top_left/headinfo/lblGems").active = false;
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
             cc.find("Canvas/right_bottom/btn_checkin").active = false;
-            // cc.find("Canvas/CreateRoom/sjmmj/cost").active = false;
+            cc.find("Canvas/CreateRoom/ddh/btn_ok/fangka").active = false;
+            cc.find("Canvas/CreateRoom/ddh/btn_ok/num").active = false;
+            cc.find("Canvas/CreateRoom/yzmj/btn_ok/fangka").active = false;
+            cc.find("Canvas/CreateRoom/yzmj/btn_ok/num").active = false;
             // cc.find("Canvas/CreateRoom/dhmj/cost").active = false;
             // cc.find("Canvas/CreateRoom/tdh/cost").active = false;
             cc.find("Canvas/CreateRoom/bg/New Label").active = false;
             cc.vv.utils.showAct = false;
         }
-        
+
         if(cc.vv.utils.showAct) {
             cc.find("Canvas/Activity").active = false;
         }
-        
+
     },
-    
+
     //初始化签到信息
     initCheckin:function(){
         //获取签到信息
@@ -192,7 +190,7 @@ cc.Class({
             var day = d.getDate();
             day = day < 10 ? ("0" + day) : day;
             var nowdate = y+"-"+m+"-"+day;
-            
+
             //获取7天的签到图片
             var days = cc.find("Canvas/CheckinBox/bg").children;
             var checkin_days = checkin_days % 7;
@@ -212,24 +210,24 @@ cc.Class({
                 days[checkin_days].opacity = 255;
                 days[checkin_days].getComponent(cc.Button).interactable = true;
             }
-            
-            
+
+
         });
     },
-    
+
     openShareBox:function(){
         cc.find("Canvas/ShareBox").active = true;
     },
-    
+
     closeShareBox:function(){
         cc.find("Canvas/ShareBox").active = false;
     },
-    
+
     closeActivity:function(){
         cc.find("Canvas/Activity").active = false;
         cc.vv.utils.showAct = false;
     },
-    
+
     onDaysClicked:function(){
         console.log("onDaysClicked");
         //隐藏签到面板
@@ -246,9 +244,9 @@ cc.Class({
             cc.vv.userMgr.gems += addgems;
             cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
         });
-        
+
     },
-    
+
     refreshInfo:function(){
         var self = this;
         var onGet = function(ret){
@@ -257,18 +255,18 @@ cc.Class({
             }
             else{
                 if(ret.gems != null){
-                    this.lblGems.string = ret.gems;    
+                    this.lblGems.string = ret.gems;
                 }
             }
         };
-        
+
         var data = {
             account:cc.vv.userMgr.account,
             sign:cc.vv.userMgr.sign,
         };
         cc.vv.http.sendRequest("/get_user_status",data,onGet.bind(this));
     },
-    
+
     refreshGemsTip:function(){
         var self = this;
         var onGet = function(ret){
@@ -280,7 +278,7 @@ cc.Class({
                 cc.vv.userMgr.gemstip.msg = ret.msg.replace("<newline>","\n");
             }
         };
-        
+
         var data = {
             account:cc.vv.userMgr.account,
             sign:cc.vv.userMgr.sign,
@@ -289,7 +287,7 @@ cc.Class({
         };
         cc.vv.http.sendRequest("/get_message",data,onGet.bind(this));
     },
-    
+
     refreshNotice:function(){
         var self = this;
         var onGet = function(ret){
@@ -302,7 +300,7 @@ cc.Class({
                 this.lblNotice.string = ret.msg;
             }
         };
-        
+
         var data = {
             account:cc.vv.userMgr.account,
             sign:cc.vv.userMgr.sign,
@@ -311,25 +309,25 @@ cc.Class({
         };
         cc.vv.http.sendRequest("/get_message",data,onGet.bind(this));
     },
-    
+
     initButtonHandler:function(btnPath){
         var btn = cc.find(btnPath);
-        cc.vv.utils.addClickEvent(btn,this.node,"Hall","onBtnClicked");        
+        cc.vv.utils.addClickEvent(btn,this.node,"Hall","onBtnClicked");
     },
-    
-    
-    
+
+
+
     initLabels:function(){
         this.lblName.string = cc.vv.userMgr.userName;
         this.lblMoney.string = cc.vv.userMgr.coins;
         this.lblGems.string = cc.vv.userMgr.gems;
         this.lblID.string = "ID:" + cc.vv.userMgr.userId;
     },
-    
+
     onBtnClicked:function(event){
         if(event.target.name == "btn_shezhi"){
             this.settingsWin.active = true;
-        }   
+        }
         else if(event.target.name == "btn_help"){
             this.helpWin.active = true;
         }
@@ -340,42 +338,42 @@ cc.Class({
             cc.vv.userinfoShow.show(cc.vv.userMgr.userName,cc.vv.userMgr.userId,this.sprHeadImg,cc.vv.userMgr.sex,cc.vv.userMgr.ip);
         }
     },
-    
+
     onJoinGameClicked:function(){
         this.joinGameWin.active = true;
     },
-    
+
     onReturnGameClicked:function(){
         var loadgame = function (){
-            cc.director.loadScene("mjgame");  
+            cc.director.loadScene("mjgame");
         }
         var fadeout = cc.fadeOut(0.1);
         var finish = cc.callFunc(loadgame, this);
         var seq = cc.sequence(fadeout, finish);
         this.node.runAction(seq);
     },
-    
+
     onBtnAddGemsClicked:function(){
         // cc.vv.alert.show("提示",cc.vv.userMgr.gemstip.msg);
         // this.refreshInfo();
          cc.log("apple 内购");
-      
+
         if (cc.sys.isNative&&cc.sys.os==cc.sys.OS_IOS) {
         let ret = jsb.reflection.callStaticMethod("AdMaster","showAd:title:","apple","内购");
         }
- 
-        
+
+
     },
-    
+
     onCreateRoomClicked:function(){
         if(cc.vv.gameNetMgr.roomId != null){
             cc.vv.alert.show("提示","房间已经创建!\n必须解散当前房间才能创建新的房间");
             return;
         }
         console.log("onCreateRoomClicked");
-        this.createRoomWin.active = true;   
+        this.createRoomWin.active = true;
     },
-    
+
     onCheckinClicked:function(){
         cc.find("Canvas/CheckinBox").active = true;
     },
@@ -391,7 +389,7 @@ cc.Class({
             x = 500;
         }
         this.lblNotice.node.x = x;
-        
+
         if(cc.vv && cc.vv.userMgr.roomData != null){
             cc.vv.userMgr.enterRoom(cc.vv.userMgr.roomData);
             cc.vv.userMgr.roomData = null;

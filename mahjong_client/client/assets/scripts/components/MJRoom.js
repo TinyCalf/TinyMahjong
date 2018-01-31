@@ -27,7 +27,7 @@ cc.Class({
         this.initEventHandlers();
 
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
-        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0"){
+        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION){
             //隐藏显示下边按钮
             cc.find("Canvas/prepare/btnWeichat").active = false;
         }
@@ -291,7 +291,7 @@ cc.Class({
 
     onBtnDissolveClicked:function(){
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
-        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == "0"){
+        if(cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION){
             cc.vv.alert.show("解散房间","是否确定解散？",function(){
                 cc.vv.net.send("dissolve_request");
             },true);

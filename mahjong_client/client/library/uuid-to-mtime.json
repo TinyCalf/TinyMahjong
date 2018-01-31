@@ -2070,8 +2070,8 @@
     "relativePath": "resources\\prefabs\\WaitingConnection.prefab"
   },
   "efb1084f-0b5a-4980-b187-1e949555cb55": {
-    "asset": 1516192416602,
-    "meta": 1517025413868,
+    "asset": 1517387073019,
+    "meta": 1517387073073,
     "relativePath": "resources\\scenes\\hall.fire"
   },
   "4a1acad9-ce88-4334-aa62-bf23a5ccc79e": {
@@ -2095,8 +2095,8 @@
     "relativePath": "resources\\sounds\\btnClick.mp3"
   },
   "d092d418-dcdd-4823-a232-eca65fe76fff": {
-    "asset": 1516434431005,
-    "meta": 1517025414053,
+    "asset": 1517387530866,
+    "meta": 1517387531043,
     "relativePath": "resources\\scenes\\mjgame.fire"
   },
   "b71386fb-c7cd-4a3c-ac2b-0ac0f43e8d73": {
@@ -2624,11 +2624,6 @@
     "meta": 1517025425576,
     "relativePath": "scripts\\components\\GameResult.js"
   },
-  "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
-    "asset": 1515296703944,
-    "meta": 1517025425725,
-    "relativePath": "scripts\\components\\Hall.js"
-  },
   "4d7bc8b4-2d4c-4c4f-a309-2972438fcf70": {
     "asset": 1510160705743,
     "meta": 1517025425763,
@@ -2648,16 +2643,6 @@
     "asset": 1510160705751,
     "meta": 1517025425864,
     "relativePath": "scripts\\components\\JoinGameInput.js"
-  },
-  "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
-    "asset": 1514777494779,
-    "meta": 1517025425921,
-    "relativePath": "scripts\\components\\LoadingLogic.js"
-  },
-  "572a741f-87af-4df5-92d7-90db6100d7e2": {
-    "asset": 1515241197103,
-    "meta": 1517025426493,
-    "relativePath": "scripts\\components\\Login.js"
   },
   "df61be3e-1731-43bd-ba4e-e60f1435520c": {
     "asset": 1510160705768,
@@ -2768,11 +2753,6 @@
     "asset": 1515155251416,
     "meta": 1517025427094,
     "relativePath": "scripts\\components\\Seat.js"
-  },
-  "921df409-65d7-49fb-9185-517ab198c993": {
-    "asset": 1516421038106,
-    "meta": 1517025426698,
-    "relativePath": "scripts\\components\\MJRoom.js"
   },
   "060d2a6e-164f-4c00-99cb-38af0d73ef54": {
     "asset": 1514721866530,
@@ -3165,8 +3145,8 @@
     "relativePath": "scripts\\HTTP.js"
   },
   "7fa8f72f-aea1-4e8f-a961-87ac47cddddc": {
-    "asset": 1517024145486,
-    "meta": 1517025426687,
+    "asset": 1517387605638,
+    "meta": 1517387606226,
     "relativePath": "scripts\\components\\MJGame.js"
   },
   "95456e7d-4c04-4a64-b328-1c6a97a18d8d": {
@@ -3188,5 +3168,25 @@
     "asset": 1517384268722,
     "meta": 1517384273300,
     "relativePath": "scripts\\HotUpdate.js"
+  },
+  "350d3472-f5a5-48a8-9476-edf3f61ffcf5": {
+    "asset": 1517386064079,
+    "meta": 1517386458884,
+    "relativePath": "scripts\\components\\LoadingLogic.js"
+  },
+  "572a741f-87af-4df5-92d7-90db6100d7e2": {
+    "asset": 1517386121494,
+    "meta": 1517386459050,
+    "relativePath": "scripts\\components\\Login.js"
+  },
+  "921df409-65d7-49fb-9185-517ab198c993": {
+    "asset": 1517386217376,
+    "meta": 1517386459051,
+    "relativePath": "scripts\\components\\MJRoom.js"
+  },
+  "6edb38e3-c7e1-417a-94b5-9a4d71283176": {
+    "asset": 1517387061289,
+    "meta": 1517387061543,
+    "relativePath": "scripts\\components\\Hall.js"
   }
 }
