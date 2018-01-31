@@ -3159,21 +3159,6 @@
     "meta": 1514713082548,
     "relativePath": "resources\\sounds\\nv\\91.mp3"
   },
-  "5358a9ff-eb7e-4760-968b-8121aee1ef43": {
-    "asset": 1516289325412,
-    "meta": 1510160704103,
-    "relativePath": "project.manifest"
-  },
-  "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
-    "asset": 1516289325412,
-    "meta": 1510160705806,
-    "relativePath": "version.manifest"
-  },
-  "17141128-74d4-4cff-8229-b04d38232094": {
-    "asset": 1516290732055,
-    "meta": 1517025427538,
-    "relativePath": "scripts\\HotUpdate.js"
-  },
   "90ae6d49-e76e-4940-8b79-b5a17735c7b6": {
     "asset": 1517025856326,
     "meta": 1517025856455,
@@ -3188,5 +3173,20 @@
     "asset": 1516538353613,
     "meta": 1517025427469,
     "relativePath": "scripts\\GameNetMgr.js"
+  },
+  "5358a9ff-eb7e-4760-968b-8121aee1ef43": {
+    "asset": 1517381299553,
+    "meta": 1510160704103,
+    "relativePath": "project.manifest"
+  },
+  "ef9b020a-633e-4a2f-835a-6c446ed76ecb": {
+    "asset": 1517381299553,
+    "meta": 1510160705806,
+    "relativePath": "version.manifest"
+  },
+  "17141128-74d4-4cff-8229-b04d38232094": {
+    "asset": 1517384268722,
+    "meta": 1517384273300,
+    "relativePath": "scripts\\HotUpdate.js"
   }
 }

@@ -29,16 +29,16 @@ cc.Class({
         switch (event.getEventCode()) {
             case jsb.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
                 cc.log("No local manifest file found, hot update skipped.");
-                cc.eventManager.removeListener(this._checkListener);
+                // cc.eventManager.removeListener(this._checkListener);
                 break;
             case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
             case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
                 cc.log("Fail to download manifest file, hot update skipped.");
-                cc.eventManager.removeListener(this._checkListener);
+                // cc.eventManager.removeListener(this._checkListener);
                 break;
             case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
                 cc.log("Already up to date with the latest remote version.");
-                cc.eventManager.removeListener(this._checkListener);
+                // cc.eventManager.removeListener(this._checkListener);
                 this.lblErr.string += "游戏不需要更新\n";
                 cc.director.loadScene("loading");
                 break;
@@ -46,7 +46,7 @@ cc.Class({
                 this._needUpdate = true;
                 this.updatePanel.active = true;
                 this.percent.string = '00.00%';
-                cc.eventManager.removeListener(this._checkListener);
+                // cc.eventManager.removeListener(this._checkListener);
                 break;
             default:
                 break;
@@ -58,73 +58,94 @@ cc.Class({
         var needRestart = false;
         var failed = false;
         var code = event.getEventCode();
+        this.lblErr.string = 'CODE is ' + code + '\n';
         switch (code) {
             case jsb.EventAssetsManager.ERROR_NO_LOCAL_MANIFEST:
-                cc.log('No local manifest file found, hot update skipped.');
-                this.lblErr.string += 'No local manifest file found, hot update skipped.\n';
-                failed = true;
-                break;
-            case jsb.EventAssetsManager.UPDATE_PROGRESSION:
-                var percent = event.getPercent();
-                var percentByFile = event.getPercentByFile();
-
-                var msg = event.getMessage();
-                if (msg) {
-                    cc.log(msg);
-                }
-                cc.log(percent.toFixed(2) + '%');
-                this.percent.string = percent + '%';
-                break;
-            case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
-                this.lblErr.string += 'ERROR_DOWNLOAD_MANIFEST\n';
-            case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
-                cc.log('Fail to download manifest file, hot update skipped.');
-                this.lblErr.string += 'Fail to download manifest file, hot update skipped.\n';
-                failed = true;
-                break;
-            case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
-                cc.log('Already up to date with the latest remote version.');
-                this.lblErr.string += 'Already up to date with the latest remote version.\n';
-                failed = true;
-                break;
-            case jsb.EventAssetsManager.UPDATE_FINISHED:
-                cc.log('Update finished. ' + event.getMessage());
-                this.lblErr.string += 'Update finished. ' + event.getMessage() + '\n';
-                needRestart = true;
-                break;
-            case jsb.EventAssetsManager.UPDATE_FAILED:
-                cc.log('Update failed. ' + event.getMessage());
-                this.lblErr.string += 'Update failed. ' + event.getMessage() + '\n';
-                this._failCount++;
-                if (this._failCount < 5) {
-                    this._am.downloadFailedAssets();
-                } else {
-                    cc.log('Reach maximum fail count, exit update process');
-                    this.lblErr.string += 'Reach maximum fail count, exit update process\n';
-                    this._failCount = 0;
+                {
+                    cc.log('No local manifest file found, hot update skipped.');
+                    this.lblErr.string += 'No local manifest file found, hot update skipped.\n';
                     failed = true;
+                    break;
                 }
-                break;
+            case jsb.EventAssetsManager.UPDATE_PROGRESSION:
+                {
+                    var percent = event.getPercent();
+                    var percentByFile = event.getPercentByFile();
+
+                    var msg = event.getMessage();
+                    if (msg) {
+                        cc.log(msg);
+                    }
+                    cc.log(percent.toFixed(2) + '%');
+                    this.percent.string = percent + '%';
+                    break;
+                }
+            case jsb.EventAssetsManager.ERROR_DOWNLOAD_MANIFEST:
+                {
+                    this.lblErr.string += 'ERROR_DOWNLOAD_MANIFEST\n';
+                }
+            case jsb.EventAssetsManager.ERROR_PARSE_MANIFEST:
+                {
+                    cc.log('Fail to download manifest file, hot update skipped.');
+                    this.lblErr.string += 'Fail to download manifest file, hot update skipped.\n';
+                    failed = true;
+                    break;
+                }
+            case jsb.EventAssetsManager.ALREADY_UP_TO_DATE:
+                {
+                    cc.log('Already up to date with the latest remote version.');
+                    this.lblErr.string += 'Already up to date with the latest remote version.\n';
+                    failed = true;
+                    break;
+                }
+            case jsb.EventAssetsManager.UPDATE_FINISHED:
+                {
+                    cc.log('Update finished. ' + event.getMessage());
+                    this.lblErr.string += 'Update finished. ' + event.getMessage() + '\n';
+                    needRestart = true;
+                    break;
+                }
+            case jsb.EventAssetsManager.UPDATE_FAILED:
+                {
+                    cc.log('Update failed. ' + event.getMessage());
+                    this.lblErr.string += 'Update failed. ' + event.getMessage() + '\n';
+                    this._failCount++;
+                    if (this._failCount < 5) {
+                        this._am.downloadFailedAssets();
+                    } else {
+                        cc.log('Reach maximum fail count, exit update process');
+                        this.lblErr.string += 'Reach maximum fail count, exit update process\n';
+                        this._failCount = 0;
+                        failed = true;
+                    }
+                    break;
+                }
             case jsb.EventAssetsManager.ERROR_UPDATING:
-                cc.log('Asset update error: ' + event.getAssetId() + ', ' + event.getMessage());
-                this.lblErr.string += 'Asset update error: ' + event.getAssetId() + ', ' + event.getMessage() + '\n';
-                break;
+                {
+                    cc.log('Asset update error: ' + event.getAssetId() + ', ' + event.getMessage());
+                    this.lblErr.string += 'Asset update error: ' + event.getAssetId() + ', ' + event.getMessage() + '\n';
+                    break;
+                }
             case jsb.EventAssetsManager.ERROR_DECOMPRESS:
-                cc.log(event.getMessage());
-                this.lblErr.string += event.getMessage() + 'ERROR_DECOMPRESS\n';
-                break;
+                {
+                    cc.log(event.getMessage());
+                    this.lblErr.string += event.getMessage() + 'ERROR_DECOMPRESS\n';
+                    break;
+                }
             default:
-                this.lblErr.string += 'CODE is ' + code + '\n';
-                break;
+                {
+
+                    break;
+                }
         }
         //this.lblErr.string += 'failed is '+ failed + "and needRestart is " + needRestart;
         if (failed) {
-            cc.eventManager.removeListener(this._updateListener);
+            // cc.eventManager.removeListener(this._updateListener);
             this.updatePanel.active = false;
         }
 
         if (needRestart) {
-            cc.eventManager.removeListener(this._updateListener);
+            // cc.eventManager.removeListener(this._updateListener);
             // Prepend the manifest's search path
             var searchPaths = jsb.fileUtils.getSearchPaths();
             var newPaths = this._am.getLocalManifest().getSearchPaths();
@@ -176,7 +197,7 @@ cc.Class({
     },
 
     onDestroy: function onDestroy() {
-        this._am && this._am.release();
+        // this._am && this._am.release();
     }
 });
 
