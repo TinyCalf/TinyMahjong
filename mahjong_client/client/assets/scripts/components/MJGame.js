@@ -219,6 +219,8 @@ cc.Class({
             self.showAction(data.detail);
             console.log("game_action");
         });
+        
+       
 
         this.node.on('game_ban',function(){
             //self.hun = cc.vv.gameNetMgr.hun

@@ -104,9 +104,9 @@ function shuffle(game) {
       if (index > -1) mahjongs.splice(index, 1);
     }
 
-    // arr1 = [0,1,2,3,4,5,6,7,8,9,13,12,12,12] ; //7dui
-    // arr2 =[0,1,2,3,4,5,6,7,8,9,10,12,12,13] ;// fengqing + 7dui
-    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,12,12,12] ;
+    // arr1 = [0,1,2,3,4,5,6,7,8,9,13,14,15,10] ; //7dui
+    // arr2 =[0,1,2,3,4,5,6,7,8,10,10,12,12,13] ;// fengqing + 7dui
+    // arr3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13] ;
     // arr4 =[0,1,2,3,4,5,6,7,8,9,11,11,11,13] ;
     //
     // arr = []
@@ -666,7 +666,7 @@ function doGameOver(game,userId,forceEnd){
         if(game.firstHupai != old && game.firstHupai!=-1) {
             roomInfo.nextButton = (old + 1) % 4;
             if(roomInfo.nextButton==roomInfo.beginButton){
-                roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
+                roomInfo.fengxiang = roomInfo.fengxiang+1;
                 roomInfo.fengxiangju = 1
             }else{
                 roomInfo.fengxiangju += 1
@@ -707,7 +707,7 @@ function doGameOver(game,userId,forceEnd){
             db.update_fengxiang(roomId,roomInfo.fengxiang);
 
             //TODO 增加保存风圈局
-            db.update_fengxiangju
+            db.update_fengxiangju(roomId,roomInfo.fengxiangju);
 
             //保存开始的庄
             db.update_begin_button(roomId,roomInfo.beginButton);
@@ -1213,8 +1213,6 @@ exports.begin = function(roomId) {
              gs.countMap[duoyu] ++;
          }
      }
-
-
 
      var turnSeat = game.gameSeats[game.turn];
      game.state = "playing";

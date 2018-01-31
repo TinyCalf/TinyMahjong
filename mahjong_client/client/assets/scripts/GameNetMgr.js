@@ -434,6 +434,7 @@ cc.Class({
         
         cc.vv.net.addHandler("game_num_push",function(data){
             self.numOfGames = data;
+            self.dispatchEvent('game_num',data);
         });
 
         cc.vv.net.addHandler("game_over_push",function(data){

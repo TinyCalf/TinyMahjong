@@ -696,7 +696,7 @@ function doGameOver(game,userId,forceEnd){
         if(game.firstHupai != old && game.firstHupai!=-1) {
             roomInfo.nextButton = (old + 1) % 4;
             if(roomInfo.nextButton==roomInfo.beginButton){
-                roomInfo.fengxiang = (roomInfo.fengxiang+1)%4;
+                roomInfo.fengxiang = roomInfo.fengxiang+1;
                 roomInfo.fengxiangju = 1
             }else{
                 roomInfo.fengxiangju += 1
@@ -739,7 +739,7 @@ function doGameOver(game,userId,forceEnd){
             db.update_fengxiang(roomId,roomInfo.fengxiang);
 
             //TODO 增加保存风圈局
-            db.update_fengxiangju
+            db.update_fengxiangju(roomId,roomInfo.fengxiangju);
 
             //保存开始的庄
             db.update_begin_button(roomId,roomInfo.beginButton);
@@ -1103,9 +1103,11 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
 
  //开始新的一局
 exports.begin = function(roomId) {
+
      var roomInfo = roomMgr.getRoom(roomId);
      if(roomInfo == null) return;
-
+     console.log("game begin")
+     console.log(roomInfo)
      //获取板子和混
      var ar = yangzhou.getBanZiAndPeiZi();
      var ban = ar[0]

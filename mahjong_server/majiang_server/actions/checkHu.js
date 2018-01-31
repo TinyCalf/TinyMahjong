@@ -12,8 +12,6 @@ function checkSingle(seatData, hun){
 			break;
 		}
 	}
-	console.log(selected)
-	console.log(seatData)
 	//如果没有找到剩余牌，则表示匹配成功了
 	if(selected == -1){
     if(map[hun]>=3) seatData.kanzi.push([hun,hun,hun])
@@ -365,7 +363,6 @@ function checkTingPai(seatData,begin,end,hun){
 		seatData.countMap[i] = old;
 		seatData.holds.pop();
 	}
-	console.log(seatData.tingMap)
 }
 
 
