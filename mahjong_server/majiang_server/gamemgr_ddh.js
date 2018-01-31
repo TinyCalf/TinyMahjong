@@ -1029,9 +1029,11 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
             recordUserAction(game,seatData,"zhuanshougang");
         }
         //收每家两份
-        seatData.totalscore += 4
-        for(var i=0; i< 4 ; i++) {
-          game.gameSeats[i].totalscore -= 1
+        if(!isZhuanShouGang) {
+          seatData.totalscore += 4
+          for(var i=0; i< 4 ; i++) {
+            game.gameSeats[i].totalscore -= 1
+          }
         }
     }
 

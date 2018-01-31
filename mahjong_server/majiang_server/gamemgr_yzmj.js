@@ -1056,8 +1056,10 @@ function doGang(game,turnSeat,seatData,gangtype,numOfCnt,pai){
             recordUserAction(game,seatData,"zhuanshougang");
         }
         //收每家1份
-        for(var i=0;i<4;i++){
-          if(i!=seatIndex) yangzhou.koufen(game,seatIndex,i,1);
+        if(!isZhuanShouGang) {
+          for(var i=0;i<4;i++){
+            if(i!=seatIndex) yangzhou.koufen(game,seatIndex,i,1);
+          }
         }
     }
 
