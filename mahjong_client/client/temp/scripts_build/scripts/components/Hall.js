@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts\components\Hall.js
+// scripts/components/Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -147,20 +147,18 @@ cc.Class({
         var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
         if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION) {
             //隐藏显示下边按钮
-            cc.find("Canvas/hallBg/fujianmajiang").active = false;
-            cc.find("Canvas/hallBg/anhuimajiang").active = false;
-            cc.find("Canvas/hallBg/qiqibuyu").active = false;
-            cc.find("Canvas/hallBg/qiqipuke").active = false;
-            cc.find("Canvas/hallBg/more").active = false;
-            cc.find("Canvas/hallBg/xixia001").active = false;
-            // cc.find("Canvas/top_left/headinfo/bg").active = false;
-            // cc.find("Canvas/top_left/headinfo/gems").active = false;
-            // cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
-            // cc.find("Canvas/top_left/headinfo/lblGems").active = false;
+            //cc.find("Canvas/hallBg/xixia001").active = false;
+            cc.find("Canvas/top_left/headinfo/bg").active = false;
+            cc.find("Canvas/top_left/headinfo/gems").active = false;
+            cc.find("Canvas/top_left/headinfo/btn_add_gems").active = false;
+            cc.find("Canvas/top_left/headinfo/lblGems").active = false;
             cc.find("Canvas/right_bottom/btn_zhanji").active = false;
             cc.find("Canvas/right_bottom/btn_share").active = false;
             cc.find("Canvas/right_bottom/btn_checkin").active = false;
-            // cc.find("Canvas/CreateRoom/sjmmj/cost").active = false;
+            cc.find("Canvas/CreateRoom/ddh/btn_ok/fangka").active = false;
+            cc.find("Canvas/CreateRoom/ddh/btn_ok/num").active = false;
+            cc.find("Canvas/CreateRoom/yzmj/btn_ok/fangka").active = false;
+            cc.find("Canvas/CreateRoom/yzmj/btn_ok/num").active = false;
             // cc.find("Canvas/CreateRoom/dhmj/cost").active = false;
             // cc.find("Canvas/CreateRoom/tdh/cost").active = false;
             cc.find("Canvas/CreateRoom/bg/New Label").active = false;

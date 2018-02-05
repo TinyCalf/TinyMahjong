@@ -800,7 +800,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lailai.test;
 				PRODUCT_NAME = "yzmj-mobile";
-				PROVISIONING_PROFILE = "e98a8ac0-238e-4dc7-944f-e9e0a89ff0ae";
+				PROVISIONING_PROFILE = "b308568e-fb16-4c51-a3da-2a4407532eab";
 				PROVISIONING_PROFILE_SPECIFIER = llyzmjtest;
 				SDKROOT = iphoneos10.3;
 				STRIP_PNG_TEXT = NO;

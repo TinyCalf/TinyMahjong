@@ -52,6 +52,7 @@ cc.Class({
             cc.director.loadScene("loading");
             return;
         }
+
         cc.vv.http.url = cc.vv.http.master_url;
         cc.vv.net.addHandler('push_need_create_role', function () {
             console.log("onLoad:push_need_create_role");
@@ -73,23 +74,34 @@ cc.Class({
             cc.find("Canvas/btn_yk").active = false;
             cc.find("Canvas/z_weixindenglu").active = true;
         }
-        //IOS审核版本 只显示游客登录 过审版本 只显示微信登陆
-        else if (cc.sys.os == cc.sys.OS_IOS) {
-                console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
-                if (youkeorweixin == cc.VERSION) {
-                    cc.find("Canvas/btn_yk").active = true;
-                    cc.find("Canvas/z_weixindenglu").active = false;
-                    cc.find("Canvas/yhxy").active = true;
-                }
-                if (youkeorweixin != cc.VERSION || youkeorweixin == "null") {
-                    cc.find("Canvas/z_weixindenglu").active = true;
-                    cc.find("Canvas/btn_yk").active = false;
-                }
-            } else {
-                cc.find("Canvas/btn_yk").active = true;
-                cc.find("Canvas/z_weixindenglu").active = false;
-                console.log("platform:" + cc.sys.os + " dosn't implement share.");
-            }
+        // //IOS审核版本 只显示游客登录 过审版本 只显示微信登陆
+        // else if(cc.sys.os == cc.sys.OS_IOS){
+        //     console.log("platform:" + cc.sys.OS_IOS + " OS_IOS.");
+        //     if(youkeorweixin == cc.VERSION){
+        //         cc.find("Canvas/btn_yk").active = true;
+        //         cc.find("Canvas/z_weixindenglu").active = false;
+        //         cc.find("Canvas/yhxy").active = true;
+
+        //     }
+        //     if(youkeorweixin != cc.VERSION || youkeorweixin == "null" ){
+        //         cc.find("Canvas/z_weixindenglu").active = true;
+        //         cc.find("Canvas/btn_yk").active = false;
+        //     }
+        // }
+        // else{
+        //     cc.find("Canvas/btn_yk").active = true;
+        //     cc.find("Canvas/z_weixindenglu").active = false;
+        //     console.log("platform:" + cc.sys.os + " dosn't implement share.");
+        // }
+        console.log("oh ho~~~");
+        console.log(cc.vv.anysdkMgr.ifHasWechat());
+        if (cc.sys.os == cc.sys.OS_IOS && cc.vv.anysdkMgr.ifHasWechat()) {
+            cc.find("Canvas/btn_yk").active = false;
+            cc.find("Canvas/z_weixindenglu").active = true;
+        } else if (cc.sys.os == cc.sys.OS_IOS && !cc.vv.anysdkMgr.ifHasWechat()) {
+            cc.find("Canvas/btn_yk").active = true;
+            cc.find("Canvas/z_weixindenglu").active = false;
+        }
 
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, function (event) {
             cc.game.end();

@@ -151,6 +151,12 @@ static bool __isWxLogin = false;
     [pasteboard setString:str];
 }
 
++(bool) ifHasWechat
+{
+    if ([WXApi isWXAppInstalled]) return true;
+        else return false;
+}
+
 +(void) shareIMG:(NSString*)filePath width:(int)width height:(int)height
 {
     WXMediaMessage *message = [WXMediaMessage message];

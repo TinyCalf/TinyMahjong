@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, 'f58cea6lrpDZJSNs2BGBqxN', 'AnysdkMgr');
-// scripts\AnysdkMgr.js
+// scripts/AnysdkMgr.js
 
 cc.Class({
     "extends": cc.Component,
@@ -85,6 +85,16 @@ cc.Class({
         } else {
             console.log("platform:" + cc.sys.os + " dosn't implement share.");
         }
+    },
+
+    ifHasWechat: function ifHasWechat() {
+        if (cc.sys.os == cc.sys.OS_IOS) {
+            console.log("ifHasWechat");
+            var res = jsb.reflection.callStaticMethod(this.IOS_API, "ifHasWechat");
+            console.log(res);
+            return res;
+        }
+        return true;
     },
 
     shareResult: function shareResult() {

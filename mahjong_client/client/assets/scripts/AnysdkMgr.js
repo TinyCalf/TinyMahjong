@@ -97,6 +97,16 @@ cc.Class({
         }
     },
     
+    ifHasWechat:function () {
+        if(cc.sys.os == cc.sys.OS_IOS){
+            console.log("ifHasWechat");
+            var res = jsb.reflection.callStaticMethod(this.IOS_API, "ifHasWechat");
+            console.log(res);
+            return res;
+        }
+        return true;
+    },
+    
     shareResult:function(){
         if(this._isCapturing){
             return;

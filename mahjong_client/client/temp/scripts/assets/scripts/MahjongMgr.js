@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '0ecea6X+IFIK5XFdJe38hXa', 'MahjongMgr');
-// scripts\MahjongMgr.js
+// scripts/MahjongMgr.js
 
 var mahjongSprites = [];
 

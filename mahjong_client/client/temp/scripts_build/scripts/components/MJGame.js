@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '7fa8fcvrqFOj6lhh6xHzd3c', 'MJGame');
-// scripts\components\MJGame.js
+// scripts/components/MJGame.js
 
 cc.Class({
     "extends": cc.Component,
@@ -67,6 +67,10 @@ cc.Class({
         //淡入
         // var fadein = cc.fadeIn(0.1);
         // this.node.runAction(fadein);
+        var youkeorweixin = cc.sys.localStorage.getItem("youkeorweixin");
+        if (cc.sys.os == cc.sys.OS_IOS && youkeorweixin == cc.VERSION) {
+            cc.find("Canvas/game_result/btnShare").active = false;
+        }
     },
 
     initView: function initView() {

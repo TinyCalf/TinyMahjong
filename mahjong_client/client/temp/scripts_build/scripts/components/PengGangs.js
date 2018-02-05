@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '279d9pNFGRB3rD/ngr1LIXQ', 'PengGangs');
-// scripts\components\PengGangs.js
+// scripts/components/PengGangs.js
 
 cc.Class({
     "extends": cc.Component,

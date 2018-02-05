@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '17141EodNRM/4IpsE04IyCU', 'HotUpdate');
-// scripts\HotUpdate.js
+// scripts/HotUpdate.js
 
 cc.Class({
     "extends": cc.Component,

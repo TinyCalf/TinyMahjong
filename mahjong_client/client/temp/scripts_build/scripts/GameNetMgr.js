@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '9545659TARKZLMoHGqXoY2N', 'GameNetMgr');
-// scripts\GameNetMgr.js
+// scripts/GameNetMgr.js
 
 cc.Class({
     "extends": cc.Component,
@@ -427,6 +427,7 @@ cc.Class({
 
         cc.vv.net.addHandler("game_num_push", function (data) {
             self.numOfGames = data;
+            self.dispatchEvent('game_num', data);
         });
 
         cc.vv.net.addHandler("game_over_push", function (data) {

@@ -1,7 +1,7 @@
 //local
 
-var URL = "http://10.3.4.211:9000";
-//var URL = "http://116.62.227.93:9000";
+//var URL = "http://10.3.4.211:9000";
+var URL = "http://116.62.227.93:9000";
 
 cc.VERSION = 20180003;
 var HTTP = cc.Class({
