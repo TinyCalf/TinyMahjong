@@ -342,11 +342,30 @@ cc.Class({
     onBtnAddGemsClicked: function onBtnAddGemsClicked() {
         // cc.vv.alert.show("提示",cc.vv.userMgr.gemstip.msg);
         // this.refreshInfo();
-        cc.log("apple 内购");
 
         if (cc.sys.isNative && cc.sys.os == cc.sys.OS_IOS) {
-            var ret = jsb.reflection.callStaticMethod("AdMaster", "showAd:title:", "apple", "内购");
+
+            var ret = jsb.reflection.callStaticMethod("ApplePlay", "PayGems:", "内购买");
+            console.log("点击了内购按钮");
+            console.log(ret);
         }
+    },
+    applePaySuccess: function applePaySuccess() {
+        //内购支付成功回掉
+        var that = this;
+        var data = {
+            userid: cc.vv.userMgr.userId,
+            type: "neigou",
+            gems: 10
+        };
+        cc.vv.http.sendRequest("/neigou_get_gems", data, function (res) {
+            console.log("内购增加钻石");
+            if (res.errcode.data.gems > 0) {
+                cc.vv.userMgr.gems += res.errcode.data.gems;
+                cc.find("Canvas/top_left/headinfo/lblGems").getComponent(cc.Label).string = cc.vv.userMgr.gems;
+            }
+            console.log(res);
+        });
     },
 
     onCreateRoomClicked: function onCreateRoomClicked() {

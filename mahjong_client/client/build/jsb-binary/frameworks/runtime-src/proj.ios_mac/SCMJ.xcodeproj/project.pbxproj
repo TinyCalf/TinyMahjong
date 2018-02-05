@@ -71,6 +71,8 @@
 		AB2EB9D41D34F4C400695C92 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2EB9D31D34F4C400695C92 /* MobileCoreServices.framework */; };
 		AB2EB9D61D34F4D700695C92 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2EB9D51D34F4D700695C92 /* SystemConfiguration.framework */; };
 		AB2EB9D81D34F4ED00695C92 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2EB9D71D34F4ED00695C92 /* GameController.framework */; };
+		AB3745F220284B6E002229A1 /* ApplePlay.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3745F120284B6E002229A1 /* ApplePlay.mm */; };
+		AB3745F420284B88002229A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3745F320284B88002229A1 /* StoreKit.framework */; };
 		ABE457031D35198000F1F400 /* libPluginProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE457021D35198000F1F400 /* libPluginProtocol.a */; };
 		BA4E718719EB6E7900932425 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4E718619EB6E7900932425 /* MediaPlayer.framework */; };
 		C03780EB18BEE0E400FE4F13 /* src in Resources */ = {isa = PBXBuildFile; fileRef = C03780EA18BEE0E400FE4F13 /* src */; };
@@ -162,6 +164,9 @@
 		AB2EB9D31D34F4C400695C92 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		AB2EB9D51D34F4D700695C92 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		AB2EB9D71D34F4ED00695C92 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		AB3745F020284B6E002229A1 /* ApplePlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplePlay.h; path = "../../../../../../../../../../gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ApplePlay.h"; sourceTree = "<group>"; };
+		AB3745F120284B6E002229A1 /* ApplePlay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ApplePlay.mm; path = "../../../../../../../../../../gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ApplePlay.mm"; sourceTree = "<group>"; };
+		AB3745F320284B88002229A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		ABE457021D35198000F1F400 /* libPluginProtocol.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginProtocol.a; path = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/libs/libPluginProtocol.a"; sourceTree = "<absolute>"; };
 		BA4E718619EB6E7900932425 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		C03780EA18BEE0E400FE4F13 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../src; sourceTree = "<group>"; };
@@ -219,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3745F420284B88002229A1 /* StoreKit.framework in Frameworks */,
 				AB2EB9D81D34F4ED00695C92 /* GameController.framework in Frameworks */,
 				AB2EB9D61D34F4D700695C92 /* SystemConfiguration.framework in Frameworks */,
 				EAEBD1FF1DF04C2E00B429E6 /* libWeChatSDK.a in Frameworks */,
@@ -345,6 +351,7 @@
 		A92275401517C094001B78AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB3745F320284B88002229A1 /* StoreKit.framework */,
 				AB2EB9D71D34F4ED00695C92 /* GameController.framework */,
 				AB2EB9D51D34F4D700695C92 /* SystemConfiguration.framework */,
 				AB2EB9D31D34F4C400695C92 /* MobileCoreServices.framework */,
@@ -394,6 +401,8 @@
 		D45446CC156DE73F00887EB5 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				AB3745F020284B6E002229A1 /* ApplePlay.h */,
+				AB3745F120284B6E002229A1 /* ApplePlay.mm */,
 				EAEBD2001DF04C5400B429E6 /* VoiceSDK */,
 				EAEBD1FB1DF04C2E00B429E6 /* SDKExport */,
 				509D4AAB17EBB2AB00697056 /* AppController.h */,
@@ -645,6 +654,7 @@
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				AB2EB9CD1D34F41700695C92 /* manualanysdkbindings.cpp in Sources */,
 				EAEBD20F1DF04C5400B429E6 /* amrFileCodec.mm in Sources */,
+				AB3745F220284B6E002229A1 /* ApplePlay.mm in Sources */,
 				EAEBD2121DF04C5400B429E6 /* VoiceSDK.mm in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
