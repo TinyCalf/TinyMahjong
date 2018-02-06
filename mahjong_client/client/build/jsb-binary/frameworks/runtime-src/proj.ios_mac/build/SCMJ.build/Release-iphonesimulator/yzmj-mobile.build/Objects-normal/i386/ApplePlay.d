@@ -1,6 +1,6 @@
 dependencies: \
   /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ios/Prefix.pch \
-  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ios/ApplePlay.mm \
+  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ApplePlay.mm \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/manual/ScriptingCore.h \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey/jsapi.h \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey/mozilla/FloatingPoint.h \
@@ -161,4 +161,4 @@ dependencies: \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/base/CCEventMouse.h \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/renderer/CCGLProgram.h \
   /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/manual/js-BindingsExport.h \
-  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ios/ApplePlay.h
+  /Users/gannicus/Desktop/TinyMahjong/mahjong_client/client/build/jsb-binary/frameworks/runtime-src/proj.ios_mac/ApplePlay.h

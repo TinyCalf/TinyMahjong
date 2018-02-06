@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>UA9F7J9J73.com.lailai.test</string>
+	<string>3W8A2FURF4.com.lailai.test</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>UA9F7J9J73.com.lailai.test</string>
+		<string>3W8A2FURF4.com.lailai.test</string>
 	</array>
 </dict>
 </plist>

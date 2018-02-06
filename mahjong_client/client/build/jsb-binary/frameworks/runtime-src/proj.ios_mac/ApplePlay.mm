@@ -11,7 +11,7 @@
 #import <StoreKit/StoreKit.h>
 
 
-#define PRODUCTID @"llyzmjfk" //商品ID（请填写你商品的id）
+#define PRODUCTID @"llyzmj_ticket" //商品ID（请填写你商品的id）
 @interface ApplePlay () <SKPaymentTransactionObserver, SKProductsRequestDelegate>
 @property (strong, nonatomic) SKPayment *payment;
 @property (strong, nonatomic) SKMutablePayment *g_payment;
@@ -50,7 +50,7 @@ int count;
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     
     
-    NSLog(@"点击了按钮");
+    NSLog(@"testPay");
     //判断是否可进行支付
     if ([SKPaymentQueue canMakePayments]) {
         [self requestProductData:PRODUCTID];
@@ -59,6 +59,7 @@ int count;
     }
 }
 - (void)requestProductData:(NSString *)type {
+    NSLog(@"requestProductData");
     //根据商品ID查找商品信息
     NSArray *product = [[NSArray alloc] initWithObjects:type, nil];
     NSSet *nsset = [NSSet setWithArray:product];
@@ -69,9 +70,11 @@ int count;
     [request start];
 }
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
+    NSLog(@"productsRequest");
     //接收商品信息
     NSArray *product = response.products;
     if ([product count] == 0) {
+        NSLog(@"没有商品");
         return;
     }
     // SKProduct对象包含了在App Store上注册的商品的本地化信息。
