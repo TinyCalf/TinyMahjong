@@ -68,12 +68,12 @@
         "snapshot": true,
         "type": "dock-h"
       },
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1056
     },
-    "window-1517559582460": {
+    "window-1517966365329": {
       "layout": {
         "type": "dock-v",
         "children": [
@@ -86,20 +86,14 @@
           }
         ]
       },
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776
-    },
-    "window-1517798081499": {
-      "x": 0,
-      "y": 24,
-      "width": 1280,
-      "height": 776
+      "x": 766,
+      "y": 110,
+      "width": 516,
+      "height": 739
     },
     "worker": {
-      "x": 440,
-      "y": 228,
+      "x": 760,
+      "y": 370,
       "width": 400,
       "height": 300
     }

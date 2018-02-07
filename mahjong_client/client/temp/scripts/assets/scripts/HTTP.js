@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '90ae61J525JQIt5taF3Nce2', 'HTTP');
-// scripts/HTTP.js
+// scripts\HTTP.js
 
 //local
 

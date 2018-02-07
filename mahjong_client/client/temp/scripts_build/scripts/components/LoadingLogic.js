@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '350d3Ry9aVIqJR27fP2H/z1', 'LoadingLogic');
-// scripts/components/LoadingLogic.js
+// scripts\components\LoadingLogic.js
 
 cc.Class({
     "extends": cc.Component,

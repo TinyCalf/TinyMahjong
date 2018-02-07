@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '6edb3jjx+FBepS1mk1xKDF2', 'Hall');
-// scripts/components/Hall.js
+// scripts\components\Hall.js
 
 var Net = require("Net");
 var Global = require("Global");
@@ -38,7 +38,7 @@ cc.Class({
 
     onShare: function onShare() {
         cc.find("Canvas/ShareBox").active = false;
-        cc.vv.anysdkMgr.share("莱莱扬州麻将", "扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将将");
+        cc.vv.anysdkMgr.share("莱莱扬州麻将", "扬州麻将，园子紧淌，玩法齐全！快点约上你们的小伙伴一起来玩莱莱扬州麻将");
         var data = {
             userid: cc.vv.userMgr.userId,
             type: "share"

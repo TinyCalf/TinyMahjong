@@ -1,6 +1,6 @@
 "use strict";
 cc._RFpush(module, '393290vPc1IIYfh8FrmxcNZ', 'socket-io');
-// scripts/3rdparty/socket-io.js
+// scripts\3rdparty\socket-io.js
 
 if (!CC_JSB && !cc.sys.isNative) {
 	(function (f) {
